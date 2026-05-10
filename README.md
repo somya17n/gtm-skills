@@ -129,7 +129,7 @@ Claude Cowork is Anthropic's desktop agent. This repo includes a plugin manifest
 **Setup:**
 1. Open the Claude Desktop app → switch to the **Cowork** tab
 2. Select the downloaded `gtm-skills` folder as your working directory
-3. The 20 skills activate automatically
+3. The 21 skills activate automatically
 
 Once set up, just ask for what you need.
 
