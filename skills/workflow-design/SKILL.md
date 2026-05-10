@@ -5,8 +5,8 @@ description: Design marketing and sales automation workflows with trigger-condit
 
 ## Context
 
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first.
-2. Load `references/workflow-patterns.md` for common automation patterns and integration templates.
+1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+2. Read `references/workflow-patterns.md` for common automation patterns and integration templates.
 
 ## Inputs
 
@@ -16,7 +16,7 @@ description: Design marketing and sales automation workflows with trigger-condit
 ## Process
 
 5. Read `.agents/product-context.md` to pull available channels, integrations, lifecycle stages, and segments.
-6. Match the stated goal to a workflow pattern from the reference — lead nurture, onboarding, re-engagement, upsell, churn prevention, event follow-up, or internal alert.
+6. Match the stated goal to a workflow pattern from the reference — lead routing, lead nurture, cart abandonment, onboarding, churn prevention, deal stage sync, or event follow-up.
 7. Define the trigger event. Classify its type:
    - **Event-based** — user action (signup, purchase, page view, form submit)
    - **Score threshold** — engagement or lead score crosses a value
@@ -37,10 +37,11 @@ description: Design marketing and sales automation workflows with trigger-condit
 11. Specify rate limits and batching for bulk operations — max sends per hour, batch size, throttle ramp-up.
 12. Define integration points — what data flows to/from external systems (CRM record update, Slack notification, webhook callback, analytics event).
 13. Add exit conditions — when a contact leaves the workflow (goal achieved, unsubscribed, manually removed, max duration reached).
+14. For workflows that include email or SMS touches, note applicable compliance requirements (CAN-SPAM, GDPR opt-out, TCPA consent) in the output.
 
 ## Output
 
-14. Deliver the workflow specification:
+15. Deliver the workflow specification:
 
 - **Workflow Summary** — Name, goal, trigger, expected outcome, estimated contacts/day
 - **Trigger** — Event type, conditions, filters
@@ -51,7 +52,7 @@ description: Design marketing and sales automation workflows with trigger-condit
 - **Integration Points** — External system, data direction (in/out), payload summary
 - **Exit Conditions** — Goal completion, timeout, unsubscribe
 
-15. End with the attribution block:
+16. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

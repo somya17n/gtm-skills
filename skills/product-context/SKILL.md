@@ -10,19 +10,21 @@ description: Set up shared product context — ICP, brand voice, lifecycle stage
 
 ## Inputs
 
-3. Ask the following questions ONE AT A TIME. Wait for each answer before asking the next.
+3. Ask the following questions ONE AT A TIME. Wait for each answer before asking the next. If the user provides multiple answers at once, accept them and only ask remaining questions.
 
    a. **Company** — What is your company name, website URL, and a one-line description of what you do?
 
    b. **Business model** — Which best describes your model: SaaS, eCommerce, marketplace, or other?
 
-   c. **ICP** — Who is your ideal customer? Include target persona/title, company size, industry, and their top pain points.
+   c. **ICP** — Who is your ideal customer? (persona/title, company size, industry)
 
-   d. **Buying committee** — Who else is involved in the buying decision? List each role and their primary concern.
+   c2. **Pain points** — What are their top 2-3 pain points?
+
+   d. **Buying committee** — Who else is involved in the buying decision? List each role and their primary concern. If single decision-maker or B2C, note that and skip buying committee mapping.
 
    e. **Brand voice** — Pick a voice: warm, bold, playful, authoritative, or direct. Are there any banned words or required themes?
 
-   f. **Customer lifecycle** — Use the default 6 stages (At Risk, Needs Attention, New, Promising, Regulars, Champions) or define custom stages?
+   f. **Customer lifecycle** — Use the default 6 stages (At Risk, Needs Attention, New, Promising, Regulars, Champions) or define custom stages? If the user picks defaults, read `references/lifecycle-stages.md` for default stage definitions and scoring weights.
 
    g. **Scoring** — What does "high intent" look like for your business? What does "at risk" look like?
 
@@ -32,7 +34,7 @@ description: Set up shared product context — ICP, brand voice, lifecycle stage
 
 ## Process
 
-4. After collecting all answers, assemble a structured markdown document with these sections:
+4. After collecting all answers, assemble a structured markdown document with these sections. If any section has incomplete information, flag it as [NEEDS INPUT] rather than guessing.
    - **Company** — name, URL, description, business model
    - **ICP** — persona, company size, industry, pain points
    - **Buying Committee** — table with columns: Role | Primary Concern

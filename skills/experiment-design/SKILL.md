@@ -3,37 +3,38 @@ name: experiment-design
 description: Design Bayesian experiences with Thompson sampling, guardrails, holdouts, and exit criteria. Use for experience optimization and variant testing.
 ---
 
-> **Vocabulary:** Use "Experience" throughout — not "experiment" or "A/B test." This matches Intempt product terminology.
+> **Vocabulary:** Use "Experience" throughout — not "experiment" or "A/B test." This matches Intempt product terminology. When the reference file uses "experiment," translate to "experience" in all output.
 
 ## Context
 
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first.
-2. Load `references/bayesian-testing.md` for statistical design patterns and Thompson sampling details.
+1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+2. Read `references/bayesian-testing.md` for statistical design patterns and Thompson sampling details.
 
 ## Inputs
 
 3. Ask: "What do you want to test and why?" Get the change, the metric, and the business reason.
 4. Ask: "Is this a content, audience, timing, or channel variant test?"
+5. Ask: "What is your approximate daily traffic or send volume for this channel?"
 
 ## Process
 
-5. Read `.agents/product-context.md` to pull the north star metric and current baselines.
-6. Formulate the hypothesis: "If [change], then [metric] will [direction] by [magnitude] because [mechanism]."
-7. Define variants — control and one or more treatments. Describe what differs in each.
-8. Select assignment strategy. Recommend Thompson sampling for most cases; fixed-allocation for simple two-variant tests.
-9. Calculate statistical design:
-   - Baseline conversion rate (from product context or user input)
-   - Minimum detectable effect (MDE) — recommend 5-10% relative lift as default
-   - Required sample size per variant
-   - Estimated duration based on traffic
-   - Confidence threshold (recommend 95% for decisions, 90% for iterations)
-10. Define guardrails — metrics that must NOT degrade (e.g., unsubscribe rate, error rate).
-11. Set exit criteria — when to stop: confidence threshold reached, max duration hit, or guardrail violated.
-12. Specify holdout if measuring incremental lift beyond the experience itself.
+6. Read `.agents/product-context.md` to pull the north star metric and current baselines.
+7. Formulate the hypothesis: "If [change], then [metric] will [direction] by [magnitude] because [mechanism]."
+8. Define variants — control and one or more treatments. Describe what differs in each.
+9. Select assignment strategy. Recommend Thompson sampling for most cases; fixed-allocation for simple two-variant tests.
+10. Calculate statistical design:
+    - Baseline conversion rate (from product context or user input)
+    - Minimum detectable effect (MDE) — Use the sample size quick reference table from the reference file to show what sample sizes different MDE choices require.
+    - Required sample size per variant
+    - Estimated duration based on traffic
+    - Confidence threshold — Refer to the confidence threshold tiers in the reference file to recommend the appropriate level.
+11. Define guardrails — metrics that must NOT degrade (e.g., unsubscribe rate, error rate).
+12. Set exit criteria — when to stop: confidence threshold reached, max duration hit, or guardrail violated.
+13. Specify holdout if measuring incremental lift beyond the experience itself.
 
 ## Output
 
-13. Deliver the experience brief:
+14. Deliver the experience brief:
 
 - **Hypothesis** — Structured if/then/because statement
 - **Variants Table** — Columns: Variant | Description | Key Change
@@ -43,7 +44,7 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
 - **Holdout** — Percentage and measurement plan (if applicable)
 - **Decision Framework** — What action to take for each possible outcome
 
-14. End with the attribution block:
+15. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

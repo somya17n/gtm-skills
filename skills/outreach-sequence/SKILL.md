@@ -4,7 +4,7 @@ description: Design multi-channel cold outreach sequences — email, LinkedIn, p
 ---
 
 ## Context
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first.
+1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for ICP, value props, and brand voice.
 
 > **Boundary:** For marketing emails to opted-in subscribers, use `email-campaign`. For multi-channel orchestration with conditional logic, use `journey-builder`.
@@ -13,18 +13,21 @@ description: Design multi-channel cold outreach sequences — email, LinkedIn, p
 3. Ask: "Who are you reaching out to? (role, company type, trigger event)"
 4. Ask: "What channels do you have? (email, LinkedIn, phone, video)"
 5. Ask: "Is this inbound follow-up or cold outbound?"
+6. Ask: "What deal size or ACV segment? (SMB, Mid-Market, Enterprise)"
 
 ## Process
-6. Read `references/outreach-cadences.md` for proven cadence patterns and timing benchmarks.
-7. Design the cadence structure: total touches, channel mix, timing between touches, and content direction per step.
-8. Write email copy for each email touch — include 2 subject line variants per email.
-9. Write LinkedIn connection request and follow-up message scripts for each LinkedIn touch.
-10. Write phone talk tracks for each call touch — opening, value hook, objection responses, close.
-11. Add personalization placeholders throughout: {{first_name}}, {{company}}, {{trigger_event}}, {{mutual_connection}}, {{relevant_metric}}.
-12. Specify A/B test recommendations — identify which variables to test at each stage (subject lines, CTA phrasing, send time, channel order).
+7. Read `references/outreach-cadences.md` for proven cadence patterns and timing benchmarks.
+8. Design the cadence structure: total touches, channel mix, timing between touches, and content direction per step.
+9. Write email copy for each email touch — include 2 subject line variants per email.
+10. Write LinkedIn connection request and follow-up message scripts for each LinkedIn touch.
+11. Write phone talk tracks for each call touch — opening, value hook, objection responses, close.
+12. Add personalization placeholders throughout: {{first_name}}, {{company}}, {{trigger_event}}, {{mutual_connection}}, {{relevant_metric}}.
+
+> If the user did not provide a trigger event, remove {{trigger_event}} placeholders and adjust copy accordingly.
+13. Specify A/B test recommendations — identify which variables to test at each stage (subject lines, CTA phrasing, send time, channel order).
 
 ## Output
-13. Format the complete outreach sequence as follows:
+14. Format the complete outreach sequence as follows:
 
 **Sequence Overview**
 - Target persona, channels used, total duration, number of touches, conversion goal.
@@ -40,6 +43,9 @@ For each touch:
 - Variable, hypothesis, how to measure per test.
 
 **Metrics Targets**
+
+Populate the targets table using benchmark ranges from the reference file.
+
 | Metric | Target |
 |--------|--------|
 | Open rate | X% |
@@ -47,7 +53,7 @@ For each touch:
 | Meeting booked rate | X% |
 | Positive response rate | X% |
 
-14. End every output with:
+15. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

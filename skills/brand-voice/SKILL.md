@@ -4,11 +4,11 @@ description: Analyze content samples to extract brand voice profile — dimensio
 ---
 
 ## Context
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first.
+1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for any existing brand voice notes.
 
 ## Inputs
-3. Ask: "Paste 3-5 examples of your best content — the pieces that sound most like you."
+3. Ask: "Paste 3-5 examples of your best content — the pieces that sound most like you." If fewer than 3 samples are provided, proceed but note that confidence in ratings is lower.
 
 ## Process
 4. Read `references/brand-voice-dimensions.md` for the 6 voice dimensions and their rating scales.

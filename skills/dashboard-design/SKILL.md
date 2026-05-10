@@ -5,8 +5,8 @@ description: Design KPI dashboards with metric formulas, visualization types, al
 
 ## Context
 
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first.
-2. Load `references/dashboard-templates.md` for template patterns and metric catalog.
+1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+2. Read `references/dashboard-templates.md` for template patterns and metric catalog.
 
 ## Inputs
 
@@ -47,7 +47,7 @@ description: Design KPI dashboards with metric formulas, visualization types, al
 
 - **Purpose** — Who uses it, how often, what decisions it informs
 - **Metrics Table** — Columns: Metric | Formula | Data Source | Visualization Type | Alert Threshold
-- **Layout Wireframe** — Section-by-section description with metric placement (Row 1: KPI cards, Row 2: main charts, etc.)
+- **Layout Wireframe** — Row-by-row structure (Row 1: KPI summary cards, Row 2: primary trend charts, Row 3: breakdown tables/secondary charts, Row 4: detail tables)
 - **Alert Configuration** — Warning and critical thresholds per KPI with notification routing
 - **Filters & Interactivity** — Available filters, drill-down paths, comparison modes
 - **Data Sources** — Summary of where each metric originates

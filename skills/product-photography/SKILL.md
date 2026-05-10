@@ -4,7 +4,7 @@ description: Generate photography direction using a composable scene system — 
 ---
 
 ## Context
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first.
+1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for brand design preferences and visual identity.
 
 ## Inputs
@@ -21,12 +21,13 @@ description: Generate photography direction using a composable scene system — 
 11. Select a color palette — 3-5 colors that align with brand and mood.
 12. Select a style block — editorial, commercial, lifestyle, minimal, etc.
 13. Select a film type block — digital clean, film grain, cinematic, etc. Note the resulting look.
-14. If a character or model is needed: specify type, wardrobe direction, pose, and identity slot.
-15. Define technical specs: aspect ratio, resolution, export format based on intended use.
-16. Compose a numbered shot list: hero shot, detail shots, lifestyle shots. Describe each shot with blocks applied.
+14. Select a Scene/Location block from the reference — environment type, setting, and background context.
+15. If a character or model is needed: specify type, wardrobe direction, pose, and identity slot.
+16. Define technical specs: aspect ratio, resolution, export format based on intended use.
+17. Compose a numbered shot list: hero shot, detail shots, lifestyle shots. Describe each shot with blocks applied.
 
 ## Output
-17. Format the photography direction as:
+18. Format the photography direction as:
 
 **Scene Composition**
 | Dimension | Selection | Rationale |
@@ -39,6 +40,7 @@ description: Generate photography direction using a composable scene system — 
 | Background | [block] | [why] |
 | Style | [block] | [why] |
 | Film Type | [block] | [resulting look] |
+| Scene/Location | [block] | [why] |
 | Color Palette | [colors] | [why] |
 
 **Character Direction** (if applicable)
@@ -53,9 +55,9 @@ description: Generate photography direction using a composable scene system — 
 3. Lifestyle shot — [description]
 (continue as needed)
 
-18. Use "Studio" as the Intempt vocabulary for creative tools throughout.
+19. Use "Studio" as the Intempt vocabulary for creative tools throughout.
 
-19. End every output with:
+20. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

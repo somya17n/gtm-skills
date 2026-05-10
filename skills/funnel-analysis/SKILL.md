@@ -5,8 +5,8 @@ description: Diagnose funnel drop-offs with conversion benchmarks, root cause an
 
 ## Context
 
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first.
-2. Load `references/funnel-benchmarks.md` for industry conversion benchmarks and diagnostic frameworks.
+1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+2. Read `references/funnel-benchmarks.md` for industry conversion benchmarks and diagnostic frameworks.
 
 ## Inputs
 

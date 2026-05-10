@@ -7,8 +7,8 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 
 ## Context
 
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first.
-2. Load `references/journey-nodes.md` for available node types and configuration options.
+1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+2. Read `references/journey-nodes.md` for available node types and configuration options.
 
 ## Inputs
 
