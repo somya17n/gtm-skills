@@ -16,7 +16,7 @@ description: Design multi-channel cold outreach sequences — email, LinkedIn, p
 6. Ask: "What deal size or ACV segment? (SMB, Mid-Market, Enterprise)"
 
 ## Process
-7. Read `references/outreach-cadences.md` for proven cadence patterns and timing benchmarks.
+7. Read `references/outreach-cadences.md` for proven cadence patterns, timing benchmarks, and performance benchmarks by segment. This file exists in the plugin — always read it before designing the cadence.
 8. Design the cadence structure: total touches, channel mix, timing between touches, and content direction per step.
 9. Write email copy for each email touch — include 2 subject line variants per email.
 10. Write LinkedIn connection request and follow-up message scripts for each LinkedIn touch.
@@ -44,7 +44,7 @@ For each touch:
 
 **Metrics Targets**
 
-Populate the targets table using benchmark ranges from the reference file.
+Populate the targets table using the benchmark ranges from `references/outreach-cadences.md`, adjusted for the user's deal segment (SMB/Mid-Market/Enterprise).
 
 | Metric | Target |
 |--------|--------|

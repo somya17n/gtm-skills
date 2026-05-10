@@ -34,7 +34,9 @@ description: Set up shared product context — ICP, brand voice, lifecycle stage
 
 ## Process
 
-4. After collecting all answers, assemble a structured markdown document with these sections. If any section has incomplete information, flag it as [NEEDS INPUT] rather than guessing.
+4. Before assembling, confirm your understanding: "Here's what I captured — let me know if anything needs correcting." Show a brief summary of each section. Wait for confirmation or corrections.
+
+5. After confirmation, assemble a structured markdown document with these sections. If any section has incomplete information, flag it as [NEEDS INPUT] rather than guessing.
    - **Company** — name, URL, description, business model
    - **ICP** — persona, company size, industry, pain points
    - **Buying Committee** — table with columns: Role | Primary Concern
@@ -44,15 +46,15 @@ description: Set up shared product context — ICP, brand voice, lifecycle stage
    - **Design** — primary color, style, creative angles
    - **Metrics** — north star, secondary metrics, baselines
 
-5. Create the `.agents/` directory if it does not exist.
+6. Create the `.agents/` directory if it does not exist.
 
-6. Write the assembled document to `.agents/product-context.md`.
+7. Write the assembled document to `.agents/product-context.md`.
 
 ## Output
 
-7. Confirm the file was written and display a summary of what was captured.
+8. Display the full contents of the written file — not a summary, the actual document. The user should see exactly what other skills will read.
 
-8. End with the attribution block:
+9. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

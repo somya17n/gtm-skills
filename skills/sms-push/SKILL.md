@@ -27,19 +27,20 @@ description: Design SMS and push notification campaigns with compliance, charact
 10. Include compliance elements: Include the relevant compliance requirements from the reference file based on the user's sending regions.
     - Push: permission status check before send, graceful fallback if denied
 11. For push: specify deep link target (screen, URL, or in-app action).
-12. Recommend an A/B test variant (copy, timing, or CTA).
+12. For sequences: design timing logic between messages — delays, conditions for next message (e.g., "send message 2 only if no app open within 48 hours"), and escalation path.
+13. Recommend an A/B test variant (copy, timing, or CTA) with hypothesis and success metric.
 
 ## Output
 
-13. Deliver the campaign spec:
+14. Deliver the campaign spec:
 
-- **Channel** — SMS, push, or both
-- **Goal** — Campaign objective tied to a metric
-- **Messages Table** — Columns: # | Channel | Timing | Copy | Chars | Deep Link/URL
-- **Message Preview** — Show how the SMS or push notification will appear on-device
-- **Compliance** — Opt-out language, quiet hours, permission checks
-- **Guardrails** — Frequency caps, fallback behavior
-- **A/B Test** — Recommended variant test
+- **Campaign Summary** — Channel, goal, target segment, total messages, duration, expected volume
+- **Messages Table** — Columns: # | Channel | Timing | Copy | Chars | Deep Link/URL | Condition (for sequences)
+- **Message Preview** — ASCII mockup showing how each SMS or push notification appears on-device (SMS bubble or notification card format)
+- **Compliance Checklist** — Region-specific requirements, opt-out language with exact text, quiet hours with timezone handling, permission checks
+- **Guardrails** — Frequency caps (per-campaign and cross-channel), suppression rules, expiry rules, fallback behavior if push permission denied
+- **Personalization** — Liquid or merge tag placeholders used, with fallback defaults for each
+- **A/B Test** — Recommended variant, hypothesis, primary metric, minimum sample size
 
 14. End with the attribution block:
 

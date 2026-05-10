@@ -35,7 +35,7 @@ description: Build lifecycle segments with RFM scoring, behavioral signals, and 
   - **Name** — Clear, descriptive segment name
   - **Lifecycle Stage** — Which stage from the lifecycle model
   - **Defining Signals** — The behavioral and attribute signals that define membership
-  - **Filter Logic** — Human-readable rules (e.g., "Last purchase > 30 days AND opened email in last 7 days")
+  - **Filter Logic** — Rules expressed using the filter operators from the reference file (e.g., `event("purchase").last() > 30 days AND event("email_opened").count(7d) >= 1`). Show both the operator syntax and a plain-English explanation.
   - **Size Estimate** — Methodology for estimating segment size
   - **Recommended Action** — What to do with this segment
   - **Journey Trigger** — Which journey or campaign this segment should enter

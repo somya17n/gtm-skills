@@ -11,6 +11,8 @@ description: Generate photography direction using a composable scene system — 
 3. Ask: "What product? What's the intended use? (e-commerce listing, ad creative, social post, email hero)"
 4. Ask: "What mood? (or I can recommend based on your brand and product type)"
 
+> For digital products (SaaS, apps, platforms): treat the product as a screen/device showing the product UI. Select environment, surface, and props that frame the device in a lifestyle or workspace context. The photography direction describes the scene around the screen, not the UI itself.
+
 ## Process
 5. Read `references/scene-composition.md` for the full block library across all 10 dimensions.
 6. Select a lighting block — match to mood and product type. Explain the rationale.

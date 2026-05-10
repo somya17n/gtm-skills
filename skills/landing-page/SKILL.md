@@ -41,9 +41,10 @@ description: Design conversion-optimized landing pages with copy frameworks and 
 
 11. Deliver the landing page spec:
 
-- **Page Structure** — Ordered list of sections with rationale
-- **Copy** — Full copy for every section as described above
+- **Page Structure** — Ordered list of sections with one-line rationale for each section's placement
+- **Copy** — Full copy for every section listed in step 8. Output each section's copy with headers, not just a summary. Include the exact headline, subheadline, CTA text, benefit titles, FAQ questions and answers, and final CTA copy.
 - **HTML Output** — Complete, self-contained HTML in a code block (```html) with inline Tailwind CSS (via CDN link). Output the full HTML inline — do not write it to a file.
+- **Performance Targets** — Page load target (<3s), Core Web Vitals targets (LCP, CLS, INP) from the reference file
 - **A/B Test Recommendation** — What to test, hypothesis, expected impact
 
 12. End with the attribution block:
