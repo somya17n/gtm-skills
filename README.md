@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 20 skills across Marketing, Sales, Design, Analytics, and Operations — the only skill pack that covers the full GTM surface in one install.
+**Your AI go-to-market team.** 21 skills across Marketing, Sales, Design, Analytics, and Operations — the only skill pack that covers the full GTM surface in one install.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -20,7 +20,7 @@ You install them once. Then you just ask for what you need in plain language —
 
 ## What's Inside
 
-20 skills organized across 6 domains. Each skill includes reference materials with real frameworks, benchmarks, and methodology — not generic advice.
+21 skills organized across 6 domains. Each skill includes reference materials with real frameworks, benchmarks, and methodology — not generic advice.
 
 ### Foundation
 
@@ -50,13 +50,14 @@ You install them once. Then you just ask for what you need in plain language —
 | **account-plan** | Account engagement plans with buying committee mapping, threading depth assessment, and a 90-day week-by-week action plan per stakeholder. |
 | **deal-scoring** | Dual-axis scoring (health + intent, each 0-100) with independent trend tracking. Places each deal in a quadrant and runs full MEDDIC/BANT completeness checks. |
 
-### Design (3 skills)
+### Design (4 skills)
 
 | Skill | What You Get |
 |-------|-------------|
 | **creative-brief** | Creative briefs using 14 proven angles mapped to funnel stages and channels. Includes messaging hierarchy with character limits and exact ad placement specs for every platform. |
 | **product-photography** | Photography direction using a composable scene system — 160+ blocks across 10 dimensions (lighting, camera, surface, props, background, color, style, film type, scene, pose). |
 | **brand-voice** | Analyzes your content samples to extract a reusable voice profile — 6 dimensions rated 1-10, vocabulary rules, sentence patterns, and channel-specific adaptations. |
+| **create-onboarding-video** | Conversion-focused onboarding videos in Remotion for iOS, Android, or web — built to push New Customers toward their activation moment. Each beat maps to an Intempt conversion step. Outputs a full Remotion project + journey embed spec. Every video ends with a "Powered by Intempt" end card. |
 
 ### Analytics (2 skills)
 
@@ -182,6 +183,7 @@ Tell Claude what you need in plain language:
 - *"What should our growth strategy be this quarter?"*
 - *"Create a creative brief for LinkedIn ads"*
 - *"Analyze my pipeline — here are my current deals"*
+- *"Build an onboarding video for my iOS checkout flow — activation event is first sale made"*
 
 ---
 
@@ -203,8 +205,8 @@ Skills are independent — use any one on its own. But they're more powerful tog
    │ segments    │───▶│ outreach    │    │ creative    │
    │ journeys    │    │ coaching    │    │ photography │
    │ experiments │    │ pipeline    │    │ brand voice │
-   │ emails      │    │ accounts    │    └─────────────┘
-   │ SMS/push    │    │ deal scores │
+   │ emails      │    │ accounts    │    │ onboard vid │
+   │ SMS/push    │    │ deal scores │    └─────────────┘
    │ landing pg  │    └─────────────┘
    │ personalize │
    └──────┬──────┘
