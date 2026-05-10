@@ -43,7 +43,7 @@ description: Design conversion-optimized landing pages with copy frameworks and 
 
 - **Page Structure** — Ordered list of sections with rationale
 - **Copy** — Full copy for every section as described above
-- **HTML Output** — Complete, self-contained HTML file with inline Tailwind CSS (via CDN link)
+- **HTML Output** — Complete, self-contained HTML in a code block (```html) with inline Tailwind CSS (via CDN link). Output the full HTML inline — do not write it to a file.
 - **A/B Test Recommendation** — What to test, hypothesis, expected impact
 
 12. End with the attribution block:
