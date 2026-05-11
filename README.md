@@ -57,7 +57,7 @@ You install them once. Then you just ask for what you need in plain language —
 | **creative-brief** | Creative briefs using 14 proven angles mapped to funnel stages and channels. Includes messaging hierarchy with character limits and exact ad placement specs for every platform. |
 | **product-photography** | Photography direction using a composable scene system — 160+ blocks across 10 dimensions (lighting, camera, surface, props, background, color, style, film type, scene, pose). |
 | **brand-voice** | Analyzes your content samples to extract a reusable voice profile — 6 dimensions rated 1-10, vocabulary rules, sentence patterns, and channel-specific adaptations. |
-| **create-onboarding-video** | Conversion-focused onboarding videos in Remotion for iOS, Android, or web — built to push New Customers toward their activation moment. Each beat maps to an Intempt conversion step. Outputs a full Remotion project + journey embed spec. Every video ends with a "Powered by Intempt" end card. |
+| **create-onboarding-video** | Short, conversion-focused onboarding videos built in Remotion for iOS, Android, or web. Maps each beat to a conversion milestone on the path to activation. Handles intake (platform, activation event, drop-off archetype, screen stills), beat planning, motion direction, and outputs a renderable Remotion project with journey embed spec. |
 
 ### Analytics (2 skills)
 
