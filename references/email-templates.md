@@ -396,3 +396,233 @@ Sourced from Klaviyo, Omnisend, and Mailchimp state-of-email reports. Automated 
 | Activation nudge (Day 7, not activated) | 25–35% | 5–9% | Human-sent variant outperforms automated by 2–3x |
 | Feature announcement | 20–30% | 4–7% | Use for activated users only; dormant users inflate open, deflate click |
 | Renewal reminder (30 days out) | 45–55% | 10–15% | Highest-converting email in SaaS — plan your renewal message carefully |
+
+---
+
+## Copy Research: What Actually Converts
+
+Deep-research findings on email copy patterns — what converts across ecommerce and SaaS contexts. Sourced from Klaviyo community, Braze 2023-2024, Intercom State of Customer Engagement 2023, Yotpo, Barilliance, and practitioner case studies from Email Geeks Slack.
+
+---
+
+### Ecommerce Welcome Email Copy
+
+**The 3-email structure that wins (Klaviyo 2024, 51x ROI on welcome flows)**
+
+Email 1 accounts for 60-70% of total welcome flow revenue. Keep it under 150 words — mobile is 65%+ of opens.
+
+**Subject line patterns by brand type:**
+| Brand Type | Winning Subject Pattern | Example |
+|-----------|------------------------|---------|
+| Discount-first | Transactional + specific | "Here's your 15% off, [first name]" |
+| Premium (Glossier, Allbirds style) | Warmth signal | "Welcome to [brand] — you're going to love this" |
+| Fitness / lifestyle | Aspiration | "Your [Brand] journey starts now" |
+| Cult DTC | Intimacy | "We've been waiting for you" |
+
+**Discount-led Email 1 copy pattern (3x immediate revenue vs. no discount):**
+```
+Line 1: Acknowledge — "You're in."
+Line 2: Deliver — "Your 15% off is waiting — no minimum."
+Line 3: Set expectation — "We'll also send you new arrivals, restocks, and the occasional story worth reading."
+CTA: "Shop [Brand]" (specific product link beats generic "Shop Now")
+```
+
+**Email 2 (Day 2-3): Highest-variance email. Winner by vertical:**
+| Vertical | Winning Angle | Why |
+|----------|--------------|-----|
+| Apparel/fashion | Brand story + product CTA below | Identity-driven purchase decision |
+| Beauty/skincare | Social proof (reviews, press, before/after) | Trust purchase, validation-seeking |
+| Home goods | Product highlight with specific use-case | Utility purchase, needs context |
+| Health/wellness | Brand story (mission sells product) | Values alignment drives purchase |
+
+**Email 3 (Day 5-7): Close the undecided subscriber:**
+- Urgency play: "Your 15% off expires in 48 hours" — highest immediate conversion, only if deadline is real. False urgency is detectable.
+- Objection handling: "Not sure where to start? Take our 60-second quiz" — highest-converting Day 7 format for wide-assortment brands
+- Social proof closer: Testimonials that address hesitation ("I wasn't sure at first, but...") — closes 2-3% of unconverted subscribers
+
+**Top DTC approaches:**
+- Gymshark: Lead with community, not product. Email 1 has no product push. Works for identity-driven brands.
+- Glossier: No discount in welcome flow at all. Editorial-first builds LTV over discount training.
+- AWAY: "The Weekend Edit" format — story-led content that features product. 2-3x industry average click rate.
+
+---
+
+### Post-Purchase Email Copy
+
+**Sequence that drives 17% repeat purchase rate (vs. 5-7% with no flow)**
+
+| Email | Timing | Copy Approach |
+|-------|--------|--------------|
+| Order confirmation | Immediate | 70% functional / 30% brand. Include 1 cross-sell. "Customers who bought X also love Y." |
+| Usage check-in | Day 3-5 (post-delivery) | "How's your [product] treating you?" — not promotional. Care instructions, usage tips. 2x review submission rate (Yotpo 2023). |
+| Replenishment or cross-sell | Day 14-21 (calibrated to product cycle) | "You might need this with your [product name]" — lead with use case, not product. 8-15% purchase rate for consumables. |
+| Review request | Day 30 | "How did we do?" — small incentive for review. NPS respondents have 3x higher LTV (Yotpo). |
+
+**Email 3 money copy pattern:**
+```
+Subject: "You might need this with your [product name]" or "[First name], a thought about your [product]"
+Body: "Most people who [bought X] end up reaching for [Y] within the first month. Here's why."
+→ Introduce the cross-sell with social proof
+CTA: Specific product link, NOT category page
+```
+
+---
+
+### Browse Abandonment vs. Cart Abandonment Copy
+
+**The key distinction — getting this wrong kills performance:**
+
+Cart abandonment: customer showed purchase intent. Copy can be direct. "You left something behind" is accepted.
+
+Browse abandonment: interest but no commitment. Assuming purchase intent reads as presumptuous. "You were looking at these boots — are you ready to buy?" underperforms.
+
+**Browse abandonment subject lines that convert:**
+| Subject | CTR | Notes |
+|---------|-----|-------|
+| "Still thinking about [product name]?" | 4-6% | Klaviyo practitioner average |
+| "We saved [product] for you" | high | Pair with limited stock |
+| "Others are looking at [product name]" | 3-5% | Social proof trigger |
+| "[First name], we know great taste when we see it" | good | Premium brand flattery |
+
+Browse abandonment copy rule: position it as a service, not surveillance. "We saved your browsing so you can pick up where you left off" beats "We saw you looking at the burgundy ankle boots."
+
+Browse abandonment emails should include 2-3 alternative product recommendations in the same category — they're still in discovery mode. Cart abandonment should focus on the specific cart item only.
+
+**Timing:** Within 1 hour of browsing session ending converts at 3.3x the rate of after 24 hours (Barilliance).
+
+---
+
+### Win-Back / Re-Engagement Copy
+
+**Subject lines with documented performance from Klaviyo community + DTC practitioner case studies:**
+
+| Approach | Subject | Open Rate |
+|----------|---------|-----------|
+| Curiosity | "Is this the end?" | 28-32% (90-180 day lapsed) |
+| Curiosity | "Did we do something wrong?" | 24-28% |
+| Curiosity | "We need to talk" | 26-30% (casual/lifestyle brands only) |
+| Straight offer | "A gift for you, [first name]" | 22-25% ("gift" beats "discount" by 8-12%) |
+| Straight offer | "We kept your 15% off waiting" | 21-25% |
+| Product update | "Come back — we've changed" | 22-26% (only if genuinely true) |
+| Classic | "We miss you, [first name]" | 18-22% (weakest — feels generic) |
+
+**The three-way comparison (Klaviyo large account tests):**
+- Curiosity approaches: highest open rate (25-32%), second on revenue per email
+- Straight offer: second on open rate, highest revenue per email (discount drives AOV)
+- "We miss you": third on every metric except reply rate (emotional response, low purchase intent)
+
+**Incentive level that triggers re-engagement:**
+| Offer | Re-engagement Rate | Notes |
+|-------|-------------------|-------|
+| No offer | 3-5% | Lowest |
+| Free shipping | 8-12% | Best for brands where shipping is known friction |
+| 10% off | 11-14% | Too small below $50 AOV |
+| 20% off | 18-24% | Efficient sweet spot for most brands |
+| 25-30% off | 22-28% | Marginal lift over 20%, significant margin cost |
+| Free gift with purchase | 19-25% | Best brand perception, feels generous not desperate |
+
+Key finding: the jump is between "no offer" and "any offer." The marginal difference between 20% and 30% rarely justifies the margin loss.
+
+**The "unsubscribe or re-engage" email — highest re-engagement rate in the category:**
+
+Subject: "Should we stay or should we go?" or "This is probably our last email"
+
+Body structure:
+1. Direct acknowledgment: "You haven't opened an email from us in [X months]. We notice these things."
+2. One-sentence value prop reminder: what you actually send, how often
+3. Two-option CTA: "Stay subscribed" button AND visible "Unsubscribe" link
+4. Optional: small incentive attached to "stay subscribed"
+
+Making unsubscribe easy paradoxically increases re-engagement by 34% — the subscriber feels respected, not trapped (Mailchimp 2023). A mid-market outdoor brand reported 31% re-engagement rate using this pattern on 47,000 lapsed subscribers.
+
+---
+
+### SaaS Activation Email Copy
+
+**Goal: one action in Day 0-1. Users who complete one meaningful action in the first 24 hours are 3-5x more likely to convert to paid (Intercom, Mixpanel, Amplitude).**
+
+**Winning subject line patterns:**
+| Pattern | Why It Works | Source |
+|---------|-------------|--------|
+| "Your [Product] account is ready — start here" | Eliminates decision paralysis | Intercom 2023 |
+| "One thing to do in [Product] today" | Single-action framing | +22% Day 1 activation (Intercom 2023) |
+| "We set something up for you" | Curiosity + implies effort made | Multiple SaaS practitioner data |
+| "[First name], before you explore [Product]..." | Pattern interrupt for complex products | Practitioner reported |
+
+**Anatomy of a high-converting Day 0 activation email (under 150 words):**
+```
+Para 1 (2 sentences): Welcome + specific promise.
+NOT "we're excited to have you"
+YES: "You can [specific outcome] in [Product] in the next 10 minutes."
+
+Para 2 (3-4 sentences): Name the single action. Explain why it's the one thing.
+"The fastest way to see [Product] work for your business is to [specific action].
+It takes under 5 minutes and shows you exactly how [outcome]."
+
+CTA: Action-specific — "Connect your [data source]" not "Go to dashboard"
+
+Below fold (optional): 3-bullet "what you can do" only if product complexity warrants it
+```
+
+**Intercom's published example:**
+> Subject: "One thing to do in Intercom today"
+> Body: "Hi [Name], Welcome to Intercom. You can send your first message to a customer in the next 5 minutes. [CTA: Install Messenger] That's it for now. Once you've done that, we'll walk you through the next step. — The Intercom Team"
+
+---
+
+### SaaS "You Haven't Activated" Copy (Day 3-5)
+
+**What doesn't work:** "We noticed you haven't [taken action] yet" — frames inactivity as failure. Opens fine (curiosity), clicks poorly.
+
+**What works: barrier removal framing.**
+```
+"If you ran into any trouble setting up [Product], we can fix that in 5 minutes."
+"Sometimes the first step isn't obvious — here's the shortcut."
+```
+
+**Plain text beats HTML for this email:**
+- Plain text, personal sender (from "Alex at [Product]"): 3-5x higher reply rate, 1.5-2x higher click rate vs. branded HTML
+- Branded HTML: higher brand recall, lower CTR on activation action
+
+**The pattern that converts best:**
+> Subject: "Quick question, [Name]"
+> Body: "Hey [Name], Did you get a chance to try [Product] yet? I wanted to make sure you got to [key activation moment] — a lot of people find that's when it clicks. If you're stuck on anything, just reply here. — [Human name], [Product] team"
+> CTA: Soft ask (reply) or calendar link. Hard CTAs ("Click here to complete setup") underperform when the subscriber is already in a non-action state.
+
+---
+
+### SaaS Feature Education Email Copy
+
+**Format hierarchy by conversion on paid upgrade:**
+
+1. **Use case story** (highest): "Here's how [company type] uses [feature] to [specific outcome]." 200-350 words, one CTA to try the feature. Converts 2-4x better than tip-based emails (Intercom 2023).
+
+2. **Before/after framing**: "Before [feature]: [pain]. After [feature]: [result]." Works for productivity and automation features.
+   - Subject: "Before vs. after [feature name]"
+
+3. **Tip format**: "3 ways to use [feature]." Works for power users, not onboarding. Risk: makes the feature feel optional.
+
+4. **Video/GIF-led**: Animated GIF in email showing feature. +15-25% CTR (HubSpot benchmark). Lift diminishes for users who don't watch.
+
+**The format to avoid:** Long feature documentation dumps. "Here's everything [feature] can do" has the lowest click rates and highest unsubscribes in every SaaS email benchmark.
+
+---
+
+### SaaS Upgrade / Upsell Email Copy
+
+**Triggers that convert (ranked by effectiveness):**
+
+| Trigger | Subject Pattern | CVR |
+|---------|----------------|-----|
+| Usage limit (80-90% of plan cap) | "You're almost out of [limit]" | Highest — 3-5x more effective than time-based (Stripe, Mailchimp, Intercom data) |
+| Feature paywall hit | "You tried [feature] — here's how to unlock it" | 8-15% of sends |
+| Success milestone | "You've [done X] — here's what's next on [paid plan]" | Strong — success-framed beats problem-framed for activated users (Amplitude 2024) |
+| Team collaboration | "Invite your team to see what you've built" | Strong for seat expansion (Slack, Notion, Figma top-performer) |
+
+**Copy pattern for upsell email:**
+1. Lead with what they've accomplished (not what they're missing): "You've [done X] in [Product]."
+2. Frame upgrade as natural continuation: "Here's what [paid plan users] do next."
+3. Offer comparison table only if feature differentiation is genuinely clear
+4. End with risk reducer: "Cancel anytime. No commitment."
+
+**What fails:** Upsell emails that open with "Upgrade now" or "You're missing out on..." before acknowledging what the user has already done. The acknowledgment of their own behavior is the trust signal that makes the upgrade feel earned, not pushed.
