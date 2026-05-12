@@ -328,6 +328,8 @@ Poses a question the reader wants answered.
 
 ## Performance Benchmarks by Industry
 
+**Critical note on open rates:** Apple Mail Privacy Protection (MPP), active since iOS 15 in 2021, prefetches email images and inflates open rates by 30–50% for lists with significant Apple Mail users. Open rate benchmarks below are distorted by this. **Use click rate and click-to-open rate as your primary engagement signals — these are not affected by MPP.**
+
 ### SaaS
 
 | Metric | Poor | Average | Good | Excellent |
@@ -357,3 +359,40 @@ Poses a question the reader wants answered.
 | Click-to-open rate | < 9% | 11-15% | 15-20% | > 20% |
 | Reply rate | < 0.5% | 1-3% | 3-5% | > 5% |
 | Meeting booked rate | < 0.1% | 0.2-0.5% | 0.5-1% | > 1% |
+
+### Real-World Email Flow Benchmarks (2024–2025)
+
+Sourced from Klaviyo, Omnisend, and Mailchimp state-of-email reports. Automated flows vs. manual campaigns have dramatically different performance profiles.
+
+#### Ecommerce Flow Performance (Klaviyo / Omnisend 2024)
+
+| Flow Type | Open Rate | Click Rate | CVR | Revenue per Email | Source |
+|-----------|----------|-----------|-----|------------------|--------|
+| Welcome series (email 1) | 45–55% | 8–12% | 3–5% | $0.40–0.80 | Klaviyo 2024 |
+| Abandoned cart (email 1, 1hr) | 38–45% | 7–10% | 3.33% avg / 7.69% top 10% | $1.00–2.50 | Klaviyo + Omnisend 2024 |
+| Browse abandonment | 25–35% | 4–7% | 1.5–2.5% | $0.30–0.60 | Omnisend 2024 |
+| Post-purchase upsell | 35–45% | 5–9% | 2–4% | $0.50–1.20 | Klaviyo 2024 |
+| Win-back (30-day lapsed) | 20–30% | 3–6% | 1.5–2.5% | $0.20–0.50 | Omnisend 2024 |
+| Birthday / anniversary | 40–55% | 7–12% | 5–8% | $0.80–1.50 | Klaviyo 2024 |
+
+**Key finding from Omnisend 2024:** Automated email flows deliver **27x higher CVR** than broadcast campaigns (3.33% automated vs. 0.12% broadcast). The leverage is in flows, not blasts.
+
+#### Segmentation Impact (Klaviyo 2024)
+
+| Approach | Revenue per Recipient (RPR) | Relative Lift |
+|----------|-----------------------------|--------------|
+| Unsegmented broadcast | $0.08 | Baseline |
+| Basic segmentation (engaged vs. unengaged) | $0.18 | +125% |
+| Advanced segmentation (lifecycle + behavior) | $0.26 | **+225% (3.2x)** |
+
+**Segmented emails generate 3.2x higher revenue per recipient than unsegmented lists.** Source: Klaviyo 2024 (n=130,000+ ecommerce accounts).
+
+#### SaaS Email Benchmarks (2024)
+
+| Flow Type | Open Rate | Click Rate | Notes |
+|-----------|----------|-----------|-------|
+| Trial activation (Day 1) | 40–55% | 12–18% | Highest open rate in any SaaS sequence — maximize CTA clarity |
+| Onboarding Day 3 | 30–45% | 8–12% | Feature-specific, link to in-app action |
+| Activation nudge (Day 7, not activated) | 25–35% | 5–9% | Human-sent variant outperforms automated by 2–3x |
+| Feature announcement | 20–30% | 4–7% | Use for activated users only; dormant users inflate open, deflate click |
+| Renewal reminder (30 days out) | 45–55% | 10–15% | Highest-converting email in SaaS — plan your renewal message carefully |

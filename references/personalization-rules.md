@@ -328,6 +328,34 @@ Use the same Bayesian methodology as experiment testing:
 
 ---
 
+## Real-World Personalization Lift Benchmarks (2024–2025)
+
+How much does personalization actually move the needle? Data from McKinsey, Klaviyo, Dynamic Yield, Monetate, and Epsilon.
+
+| Personalization Type | Lift | Metric | Source |
+|---------------------|------|--------|--------|
+| Any personalization vs. generic | **5–15% revenue increase** | Revenue per session | McKinsey 2024 |
+| Personalized homepage vs. generic | 10–15% | Conversion rate | Dynamic Yield 2024 |
+| Segmented email vs. unsegmented | **3.2x higher RPR** | Revenue per recipient | Klaviyo 2024 |
+| Behavioral triggers vs. time-based sends | **27x higher CVR** | Conversion rate | Omnisend 2024 |
+| Product recommendations (collaborative filter) | 15–35% | AOV / revenue per session | Monetate 2024 |
+| Personalized CTAs vs. generic CTAs | **202% higher CVR** | Click-to-convert | HubSpot 2023 |
+| Loyalty-tier personalized messaging | 2–4x | Repeat purchase rate | Klaviyo 2024 |
+| Post-purchase upsell (1:1 product recs) | 20–30% | Add-on attach rate | Dynamic Yield 2024 |
+| ICP-matched personalization (B2B SaaS) | 40–60% | Demo request rate | 6Sense / Demandbase 2024 |
+
+### Personalization Failure Points
+
+Where personalization goes wrong in practice (Forrester + CXL research):
+
+| Failure | Frequency | Cause | Fix |
+|---------|-----------|-------|-----|
+| Personalization based on stale data | 45% of cases | No data freshness rules | Require recency constraint on all conditions |
+| Wrong persona segment (mis-attribution) | 30% of cases | Relying on job title alone | Use behavioral signals + title together |
+| Showing the same personalization > 10x | 40% of cases | No impression cap or refresh | Cap impressions and rotate variants |
+| Personalization that doesn't match expectation | 25% of cases | Cookie data vs. current session | Blend persistent + session-level signals |
+| No holdout group → can't prove lift | 60% of companies | Never set up control | Always hold 10% as unexposed control group |
+
 ## Progressive Personalization
 
 Personalization depth increases as you learn more about the visitor.

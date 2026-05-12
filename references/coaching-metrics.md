@@ -26,6 +26,25 @@ The percentage of time the sales rep talks versus listens during a conversation.
 | Follow-up | 35-45% | Checking understanding, addressing questions |
 | Closing | 40-55% | Summarizing, handling last objections, asking for the deal |
 
+### Real-World Benchmark: Gong Labs Data (2024)
+
+The most comprehensive conversation intelligence research available. Based on analysis of millions of recorded B2B sales calls.
+
+| Metric | Gong Finding | Context |
+|--------|-------------|---------|
+| Top performer talk ratio | **46%** rep talking | Top quartile reps talk slightly less than average reps (who talk 55–65%) |
+| Discovery call optimal | **43–49%** rep talking | Most effective discovery calls land in this range |
+| Demo call optimal | **55–65%** rep talking | Presenting is expected — but questions must break up monologues |
+| Average (all reps) talk ratio | 55–65% | Most reps talk too much |
+| Optimal questions per call | **11–14 questions** | Top performers ask more questions per call than average reps |
+| Questions per call (average rep) | 6–8 | Significantly fewer than top performers |
+| Longest monologue — top performers | < 76 seconds | Best reps break up their talk with questions frequently |
+| Longest monologue — average reps | 120–180 seconds | Average reps run longer monologues that lose prospect attention |
+| Patience score (pause after question) | **3–5 seconds** optimal | Top performers wait longer after asking questions |
+| Multi-threading impact (>$50K deals) | **2x win rate** | Deals with 3+ engaged contacts vs. single-threaded |
+| Collaborative language lift | **5x more** "we/us/together" | Top performers use collaborative language vs. "I/you/they" framing |
+| Pricing discussed late vs. early | 35% higher win rate | Top reps introduce pricing only after establishing strong value |
+
 ---
 
 ## Patience Score

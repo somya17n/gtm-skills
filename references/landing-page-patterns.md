@@ -290,6 +290,40 @@ Collect additional information over time rather than in a single form:
 
 ---
 
+## Real-World Landing Page Conversion Benchmarks (2024–2025)
+
+Sourced from WordStream, Unbounce, Instapage, CXL Institute, and HubSpot.
+
+### Conversion Rate Benchmarks by Page Type
+
+| Page Type | Low | Median | Good | Top 10% | Source |
+|-----------|-----|--------|------|---------|--------|
+| SaaS free trial signup | 2–5% | 7–10% | 12–18% | 25%+ | Unbounce 2024 |
+| Demo request (B2B SaaS) | 3–8% | 8–12% | 15–22% | 30%+ | Unbounce 2024 |
+| Lead magnet (gated content) | 10–20% | 20–30% | 30–45% | 55%+ | HubSpot 2024 |
+| Webinar registration | 15–25% | 25–40% | 40–55% | 65%+ | ON24 2024 |
+| Ecommerce product page | 1.5–3% | 3–5% | 5–8% | 12%+ | Dynamic Yield 2024 |
+| Ecommerce checkout initiation | 45–55% | 55–65% | 65–75% | 80%+ | Baymard 2024 |
+| Paid ad landing page (general) | 2–5% | 5–8% | 8–15% | 20%+ | WordStream 2024 |
+
+**Important context:** The averages above are for all traffic. High-intent, pre-qualified traffic (retargeting, high-score MQLs, branded search) typically converts 2–5x higher than cold traffic.
+
+### Factors That Most Impact Landing Page CVR
+
+Research from CXL and Optimizely on what actually moves conversion:
+
+| Factor | Typical Lift | Evidence |
+|--------|------------|---------|
+| Removing navigation menu | +10–30% | VWO case studies 2024 |
+| Personalized headline (vs. generic) | +10–15% | Dynamic Yield 2024 |
+| Video in hero section | +20–80% | Wistia 2024 (varies by product complexity) |
+| First-person CTA text ("Start MY trial") | +5–15% | HubSpot CTA research |
+| Social proof near CTA | +10–25% | CXL Institute 2024 |
+| Reducing form from 4 to 2 fields | +30–50% | HubSpot 2024 |
+| Adding "no credit card" microcopy | +10–15% | For SaaS trial pages |
+| Page load time: 1s vs. 3s | +2% CVR per 1s improvement | Google 2024 |
+| Mobile optimization | +15–40% for mobile traffic | Google 2024 |
+
 ## Performance Targets
 
 | Metric | Target | Tool |

@@ -319,15 +319,34 @@ Embed proof points in your sequence that proactively address the top objections 
 
 ### Benchmarks by Metric
 
+**Important:** Published benchmarks are often inflated (companies share top-performer numbers, not medians). The numbers below reflect real population averages from large-scale studies. Use the "Average" column as your starting baseline, not the "Good" column.
+
 | Metric | Poor | Average | Good | Excellent |
 |--------|------|---------|------|-----------|
 | **Open rate** | < 25% | 30-40% | 40-55% | > 55% |
-| **Reply rate (total)** | < 3% | 5-8% | 8-12% | > 12% |
-| **Positive reply rate** | < 1% | 2-4% | 4-8% | > 8% |
-| **Meeting booked rate** | < 1% | 1.5-3% | 3-5% | > 5% |
+| **Reply rate (total)** | < 1% | 3–3.5% | 5-8% | > 8% |
+| **Positive reply rate** | < 0.5% | 1–1.5% | 2-4% | > 4% |
+| **Meeting booked rate** | < 0.5% | 1–1.5% | 2-3% | > 3% |
 | **Sequence completion rate** | < 40% | 50-65% | 65-80% | > 80% |
 | **Bounce rate** | > 5% | 2-5% | 1-2% | < 1% |
 | **Unsubscribe rate** | > 2% | 1-2% | 0.5-1% | < 0.5% |
+
+### Real-World Outreach Performance Data (2024–2025)
+
+Sourced from Instantly, Belkins, Salesloft, Apollo, and Gong Labs. These are population averages across millions of sequences — not best-in-class cherry-picked numbers.
+
+| Metric | Real Average | Top 10% | Source | Notes |
+|--------|-------------|---------|--------|-------|
+| Cold email reply rate | 3–3.43% | 8–10% | Instantly 2024 (5B+ emails) | Across all industries and ICPs |
+| Cold email positive reply rate | 1–1.5% | 3–5% | Belkins 2024 | "Interested in learning more" or similar |
+| Meeting booked rate (per prospect) | 1–1.5% | 3–5% | Apollo / Salesloft 2024 | Meetings per total prospects in sequence |
+| Open rate (B2B cold) | 32–45% | 55%+ | Instantly 2024 | Inflated by Apple MPP — click rate is more reliable |
+| Multi-channel vs. email-only lift | +287% more replies | — | Salesloft 2024 (n=millions of sequences) | Email + LinkedIn + phone vs. email only |
+| Response timing — 5-min vs. 30-min | 21x more likely to qualify | — | InsideSales / Velocify | Speed to respond is #1 predictor for inbound |
+| Touch count before response | Touch 3–5 most likely | — | Salesloft 2024 | Don't give up after touch 1–2 |
+| Personalized L3-L4 vs. L1 reply lift | 80–150% higher | — | Woodpecker 2024 research | Deep research personalization vs. name/company only |
+| Phone connect rate (cold) | 8–12% | 15–20% | Gong Labs 2024 | Of dials that reach a human |
+| LinkedIn InMail response rate | 10–25% | 35%+ | LinkedIn Marketing Solutions 2024 | 3x higher than email; drops fast if InMail quality is poor |
 
 ### Metric Definitions
 
