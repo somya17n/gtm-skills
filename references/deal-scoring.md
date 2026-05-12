@@ -140,6 +140,26 @@ The probability of winning a deal given it has reached a particular stage.
 | Proposal | 50-60% | 45-55% | 40-50% |
 | Negotiation | 70-80% | 65-75% | 60-70% |
 
+### Real-World Win Rate Data (2024–2025)
+
+Sourced from Gong Labs, Salesloft, and CSO Insights. Win rates have compressed significantly since 2022 due to economic pressure and increased competition.
+
+| Metric | Real Benchmark | Source | Notes |
+|--------|---------------|--------|-------|
+| Overall B2B SaaS win rate | 19–21% | Gong Labs 2024 | Down from 23% in 2022 — 3-year trend of compression |
+| SMB win rate | 22–27% | Gong Labs 2024 | Shorter cycle, fewer stakeholders |
+| Mid-Market win rate | 17–22% | Gong Labs 2024 | |
+| Enterprise win rate | 15–18% | Gong Labs 2024 | Most competitive, longest cycle |
+| Demo → close rate (average) | 25% | Gong Labs 2024 | Across all B2B SaaS verticals |
+| Demo → close rate (SaaS-specific) | 30% | Gong 2024 | SaaS products have slightly higher demo conversion |
+| Competitive win rate (vs. identified competitor) | 47–54% | Gong Labs 2024 | When a competitor is named in the deal |
+| Uncontested win rate (no competitor) | 71–78% | Gong Labs 2024 | When no alternative is being evaluated |
+| Win rate — multi-threaded deals | 2x vs. single-threaded | Gong Labs 2024 | For deals >$50K ACV, 3+ contacts engaged |
+| Average sales cycle — SMB | 21–45 days | Gong Labs 2024 | |
+| Average sales cycle — Mid-Market | 45–90 days | Gong Labs 2024 | |
+| Average sales cycle — Enterprise | 90–180+ days | Gong Labs 2024 | |
+| Average sales cycle — overall SaaS | 84 days | Gong Labs 2024 | Median across all deal sizes |
+
 ### Win Rate Trend Analysis
 
 Track win rates by:

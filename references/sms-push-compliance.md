@@ -315,6 +315,47 @@ CTA: See What's New
 
 ---
 
+## Real-World SMS and Push Performance Benchmarks (2024–2025)
+
+Sourced from Omnisend, Klaviyo, OneSignal, and Braze state-of-messaging reports.
+
+### SMS Performance Benchmarks
+
+| Metric | Average | Good | Top 10% | Source |
+|--------|---------|------|---------|--------|
+| SMS open rate | 90–98% | — | — | Omnisend 2024 |
+| SMS CTR — campaigns | **7.6%** | 10–15% | 20%+ | Omnisend 2024 (n=2B+ messages) |
+| SMS CTR — automations | **9.4%** | 12–18% | 25%+ | Omnisend 2024 |
+| SMS CVR (click → purchase, 24hr) | 29% | 40%+ | — | Klaviyo 2024 |
+| SMS vs. email CVR | SMS 5–10x higher | — | — | Omnisend 2024 |
+| Opt-out rate (healthy) | < 0.1% | — | — | Omnisend / CTIA |
+| Cart abandonment SMS CVR | 5–8% | 10–15% | — | Klaviyo 2024 |
+| Revenue per SMS sent | $0.45–0.70 | $1.00+ | — | Klaviyo 2024 |
+
+**Key insight:** SMS automations (triggered by behavior) outperform SMS campaigns (scheduled broadcasts) by 24% on CTR. Trigger your SMS, don't schedule it.
+
+### Push Notification Performance Benchmarks
+
+| Metric | iOS Average | Android Average | Source |
+|--------|------------|----------------|--------|
+| Opt-in rate | **44%** | **91%** | OneSignal 2024 |
+| Open/CTR (mobile app push) | 4–6% | 5–8% | OneSignal 2024 |
+| Open/CTR (web push) | 2–4% | 2–4% | OneSignal 2024 |
+| Permission revoke rate (monthly) | 0.5–1.5% | 0.3–0.8% | OneSignal 2024 |
+| Personalized push CTR vs. generic | +2.2x | — | Braze 2024 |
+| Triggered push (behavioral) vs. broadcast | 3x higher CTR | — | Braze 2024 |
+
+**Push opt-in reality:** iOS requires explicit permission prompt — only 44% of iOS users say yes. Android grants permission automatically (91%). This creates a large gap in addressable audience. On iOS, how and when you show the permission prompt matters enormously — apps that pre-condition users with a "why" before the system prompt achieve 60%+ opt-in rates.
+
+### SMS vs. Push vs. Email: Channel Comparison
+
+| Channel | Open/CTR | CVR | Cost | Best For |
+|---------|---------|-----|------|----------|
+| Email | 2–4% CTR | 0.5–3% | Very low ($0.001–0.005/send) | Nurture, education, long-form content |
+| SMS | 7–9% CTR | 5–10% | Medium ($0.01–0.05/send) | Urgency, time-sensitive offers, transactional |
+| Push (app) | 4–6% CTR | 2–5% | Very low ($0.001/send) | Real-time triggers, re-engagement, updates |
+| Push (web) | 2–4% CTR | 1–3% | Free | Lightweight retargeting, cart recovery |
+
 ## Frequency Capping
 
 ### SMS Frequency Limits

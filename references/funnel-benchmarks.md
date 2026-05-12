@@ -111,6 +111,73 @@ Signup → Activation → Retention → Expansion → Referral
 
 ---
 
+## Real-World Benchmark Data (2024–2025)
+
+Sourced from published research by Userpilot, ChartMogul, OpenView Partners, Lenny's Newsletter, Baymard Institute, Klaviyo, Omnisend, Amplitude, Mixpanel, and Gong. Use these numbers when evaluating performance — not the generic industry ranges above.
+
+### SaaS Product Funnel — Actual Benchmarks
+
+| Metric | Real Benchmark | Source | Notes |
+|--------|---------------|--------|-------|
+| Activation rate (average) | 37.5% | Userpilot 2024 (n=500+ SaaS companies) | "Activated" = first meaningful action, not just login |
+| Activation rate — PLG products | 34.6% | Userpilot 2024 | Lower because self-serve has more casual signups |
+| Activation rate — Sales-led | 41.6% | Userpilot 2024 | Higher because sales-assisted onboarding drives completion |
+| Activation rate — PMF threshold | 40%+ | Lenny Rachitsky benchmark | Companies below 40% should fix activation before adding acquisition spend |
+| Free trial → paid (opt-in trial) | 18.2% | ProfitWell / Totango 2024 | Opt-in = credit card required upfront |
+| Free trial → paid (opt-out trial) | 48.8% | ProfitWell / Totango 2024 | Opt-out = no card required, charged after trial |
+| Freemium → paid | 2–5% | OpenView Partners 2024 | Varies significantly by product category and price point |
+| Week-1 retention (Day 7) | 25–40% | Amplitude 2024 | Users still active on Day 7 of signup cohort |
+| Month-1 retention (Day 30) | 15–25% | Amplitude 2024 | Typical SaaS without a strong onboarding flow |
+| Net Revenue Retention (NRR) | 106% median | ChartMogul 2024 | Median across $1M–$30M ARR companies |
+| NRR — top quartile | 120%+ | ChartMogul 2024 | Strong expansion revenue offsetting churn |
+| CAC payback period | 15 months median | OpenView Partners 2024 | Time to recoup acquisition cost from MRR |
+| DAU/MAU ratio (B2B SaaS) | 31% | Mixpanel 2024 benchmark | How "sticky" the product is. 25%+ is good. |
+| DAU/MAU ratio — median | 16% | Amplitude 2024 | Most B2B products skew weekly, not daily |
+
+### E-commerce Funnel — Actual Benchmarks
+
+| Metric | Real Benchmark | Source | Notes |
+|--------|---------------|--------|-------|
+| Cart abandonment rate | 70.19% average | Baymard Institute 2024 (n=49 studies) | 70.19% of carts are abandoned before purchase |
+| Cart abandonment — mobile | 85.65% | Baymard Institute 2024 | Mobile has significantly higher abandonment |
+| Overall ecommerce CVR (desktop) | 2.5–3% | Dynamic Yield 2024 | Varies widely by traffic quality and category |
+| Overall ecommerce CVR (mobile) | 1.5–2% | Dynamic Yield 2024 | Mobile converts at roughly 60% of desktop rate |
+| Abandoned cart email CVR (average) | 3.33% | Omnisend 2024 (n=20B+ emails) | Conversion rate of abandoned cart email recipients |
+| Abandoned cart email CVR (top 10%) | 7.69% | Klaviyo 2024 | Top performers using segmentation and timing |
+| Welcome flow CVR | 3–5% | Klaviyo 2024 benchmarks | Purchases within 30 days of welcome email |
+| Win-back email CVR | 1.5–2.5% | Omnisend 2024 | Industry average for lapsed customer reactivation |
+| Average Order Value (global) | $144 | Triple Whale 2024 (ecommerce merchants) | Benchmark for DTC / Shopify ecosystem |
+
+### E-commerce CVR by Industry
+
+| Industry | CVR (Desktop) | CVR (Mobile) | Source |
+|----------|--------------|--------------|--------|
+| Beauty & Personal Care | 3.3% | 2.2% | Dynamic Yield 2024 |
+| Fashion & Apparel | 2.7% | 1.8% | Dynamic Yield 2024 |
+| Home & Garden | 2.8% | 1.6% | Dynamic Yield 2024 |
+| Electronics | 2.3% | 1.2% | Dynamic Yield 2024 |
+| Food & Beverage | 4.6% | 3.2% | Dynamic Yield 2024 |
+| Sporting Goods | 2.5% | 1.5% | Dynamic Yield 2024 |
+| Automotive Parts | 2.0% | 1.1% | Dynamic Yield 2024 |
+
+### B2B Sales Funnel — Actual Benchmarks
+
+| Metric | Real Benchmark | Source | Notes |
+|--------|---------------|--------|-------|
+| Overall B2B win rate | 19–21% | Gong Labs 2024 | Down from 23% in 2022 — win rates are compressing |
+| Win rate — SMB deals | 22–27% | Gong Labs 2024 | Shorter cycle, lower complexity |
+| Win rate — Enterprise deals | 15–18% | Gong Labs 2024 | Longer cycle, more competition |
+| Demo → close rate (overall) | 25% | Gong Labs 2024 | Across all B2B SaaS |
+| Demo → close rate (SaaS) | 30% | Gong 2024 | SaaS products slightly higher than overall B2B |
+| Lead → MQL conversion | 13% average | Forrester B2B Research 2024 | Much lower than theoretical benchmarks suggest |
+| MQL → SQL conversion | 50% | SiriusDecisions 2024 | Of MQLs that are reviewed by sales |
+| Average sales cycle | 84–120 days | Gong Labs 2024 | Varies heavily by ACV |
+| Sales cycle — SMB (<$10K ACV) | 21–45 days | Gong Labs 2024 | |
+| Sales cycle — Mid-Market ($10–50K) | 45–90 days | Gong Labs 2024 | |
+| Sales cycle — Enterprise ($50K+) | 90–180+ days | Gong Labs 2024 | |
+
+---
+
 ## Drop-Off Diagnosis Framework
 
 When conversion drops between stages, diagnose the root cause using these four categories.

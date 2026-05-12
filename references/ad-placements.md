@@ -330,6 +330,69 @@ Google automatically generates ad combinations from uploaded assets:
 
 ---
 
+## Paid Ad Performance Benchmarks (2024–2025)
+
+Real-world performance data from WordStream, NAV43, Triple Whale, Madgicx, and LinkedIn Marketing Solutions. These are population averages — not top-performer cherry-picks.
+
+### LinkedIn Ads
+
+| Format | CTR (Average) | CPL (SaaS) | CPC (Average) | Source |
+|--------|-------------|------------|--------------|--------|
+| Single Image Ad | **0.40–0.60%** | $100–160 | $8–15 | LinkedIn Marketing Solutions 2024 |
+| Carousel Ad | 0.30–0.50% | $120–180 | $10–18 | LinkedIn Marketing Solutions 2024 |
+| Video Ad | 0.20–0.40% | $130–200 | $12–20 | NAV43 LinkedIn Benchmark 2024 |
+| Conversation Ad | 1.5–3% open rate | $60–100 | N/A (per send) | LinkedIn 2024 |
+| Thought Leader Ad | 0.50–1.0% | $80–130 | $6–12 | LinkedIn Marketing Solutions 2024 |
+| Document Ad | 0.60–0.90% | $90–140 | $7–14 | NAV43 2024 |
+
+**LinkedIn SaaS benchmarks:**
+- Average CPL: $100–160 (high-value leads, justifiable for $500+ ACV products)
+- Average CPC: $8–15 (higher than all other platforms due to B2B audience premium)
+- Average CTR: 0.44% across all formats
+- Conversion rate (click → demo request): 5–12% for strong landing pages
+- LinkedIn ads best for: ACV $5,000+ products targeting VP/Director+ personas
+
+### Meta (Facebook + Instagram) Ads
+
+| Metric | Average (All Industries) | Ecommerce | SaaS / B2B | Source |
+|--------|------------------------|-----------|-----------|--------|
+| CTR (Feed) | **0.89%** | 0.85–1.2% | 0.55–0.80% | WordStream 2024 |
+| CPC | $1.01–1.72 | $0.50–1.50 | $2.50–4.00 | WordStream 2024 |
+| CPM | $8–14 | $6–12 | $12–20 | Madgicx Q1 2025 |
+| CPM YoY change | +19.2% (Q1 2025 vs Q1 2024) | — | — | Madgicx 2025 |
+| ROAS (ecommerce) | **1.93–2.87x** | 2.5–4.0x (top 25%) | — | Triple Whale 2024 |
+| ROAS — top quartile | 4.0–6.0x | — | — | Triple Whale 2024 |
+| CVR (click → purchase) | 2.8–3.3% | 2.0–5.0% by category | — | Meta Ads 2024 |
+| CPL (lead gen) | $12–30 | — | $50–120 | WordStream 2024 |
+
+**What's happening in Meta in 2025:**
+- CPMs rising steadily — creative quality gap between top and average advertisers is widening
+- Reels/video placements typically 20–30% cheaper CPM than feed placements
+- Broad targeting is outperforming narrow interest targeting for ecommerce (Meta's AI has better data than most interest stacks)
+- For SaaS/B2B: Meta works well for retargeting and brand awareness; LinkedIn better for cold outbound to high-ACV prospects
+
+### Google Ads
+
+| Format | CVR (Average) | CTR | CPC | Source |
+|--------|-------------|-----|-----|--------|
+| Search (all industries) | **4.2–6.1%** | 4.1–6.3% | $2.69 | WordStream 2024 |
+| Search (SaaS) | 3.8–5.5% | 3.5–5.5% | $3.50–8.00 | WordStream 2024 |
+| Search (ecommerce) | 2.0–3.5% | 2.0–4.0% | $1.00–2.50 | WordStream 2024 |
+| Shopping | **2.69%** average CVR | 0.86% | $0.66 | WordStream 2024 |
+| Display | 0.57% CVR | 0.35% | $0.63 | WordStream 2024 |
+| Performance Max | 3.5–7.5% CVR | varies | varies by goal | Google 2024 |
+
+### TikTok Ads
+
+| Metric | Average | Source |
+|--------|---------|--------|
+| CTR | 0.7–1.2% | TikTok for Business 2024 |
+| CPM | $3.50–10 | TikTok 2024 |
+| CVR (click → purchase) | 1.0–2.5% (ecommerce) | TikTok 2024 |
+| Best performing length | 21–34 seconds | TikTok internal data |
+
+---
+
 ## Universal Best Practices
 
 ### File Optimization

@@ -283,6 +283,31 @@ Exit rules are condition-based and can reference any experiment metric or Bayesi
 
 ---
 
+## Real-World A/B Testing Performance Data (2024–2025)
+
+The gap between theoretical testing and what actually happens in practice is significant. These numbers come from Optimizely, VWO, Kameleoon, and CXL Institute research.
+
+| Finding | Real Benchmark | Source | Implication |
+|---------|---------------|--------|-------------|
+| Tests that produce a significant winner | **1 in 7–8** | Optimizely 2024 (n=millions of tests) | Most tests will be inconclusive — that is normal, not failure |
+| False positive rate (peeking at 90% confidence) | **771/1000** A/A tests hit significance at some point | Kohavi et al., Microsoft Research | Never stop a test just because it crossed a significance threshold |
+| Average test duration needed | **2–4 weeks** | CXL Institute research | Shorter tests systematically underestimate winner rates and overclaim |
+| Winning test results that persist after 6 months | ~50% | Optimizely longitudinal analysis | Roughly half of A/B wins don't hold long-term — novelty effect inflates initial results |
+| Personalization tests winning rate | 1 in 3–4 | Dynamic Yield benchmark (ecommerce) | Personalization wins more often than generic copy tests |
+| Email subject line tests | 1 in 4–5 produce significant lift | Mailchimp internal data | Open rate tests especially noisy due to Apple MPP |
+| Minimum sample for reliable results | **1,000 per variant** | Industry consensus | 500 is the floor; 1,000 is where posterior estimates stabilize |
+| Novelty effect duration | 7–14 days | Optimizely research | New experiences see inflated metrics in first 1–2 weeks; wait for steady state |
+
+### Note on Apple Mail Privacy Protection (MPP)
+
+As of iOS 15+ (2021), Apple prefetches email content for ~50% of all email opens, inflating open rates by 30–50% in most B2B email lists. This makes email open rate A/B tests unreliable for users on Apple Mail.
+
+**What this means for testing:**
+- Do not use open rate as a primary optimization metric for A/B tests
+- Use **click rate** and **conversion rate** instead — these are not affected by MPP
+- If your list is >40% Apple Mail (check your ESP analytics), email A/B tests on subject lines may show false wins/losses
+- Click-to-open rate (CTOR) and click rate remain the most reliable email engagement signals
+
 ## Sample Size Calculator
 
 ### Formula for Required Sample Size (per variant)

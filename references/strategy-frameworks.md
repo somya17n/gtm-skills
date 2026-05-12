@@ -268,6 +268,34 @@ Conference/Event → Booth/Session → Follow-Up → Nurture → Convert
 | Gross margin | > 60% | > 65% | > 70% | > 75% |
 | Rule of 40 | N/A | N/A | > 30 | > 40 |
 
+### Real-World SaaS Benchmarks by ARR Stage (2024)
+
+Sourced from ChartMogul 2024 SaaS Benchmark Report (n=1,800+ companies) and OpenView Partners 2024 SaaS Benchmarks.
+
+| Metric | $1M–$5M ARR | $5M–$20M ARR | $20M–$100M ARR | Source |
+|--------|------------|-------------|---------------|--------|
+| Median ARR growth (YoY) | 148% | 89% | 56% | ChartMogul 2024 |
+| Top quartile ARR growth | 200%+ | 130%+ | 85%+ | ChartMogul 2024 |
+| NRR median | 106% | 110% | 116% | ChartMogul 2024 |
+| Logo churn (annual) | 12–20% | 8–14% | 5–10% | ChartMogul 2024 |
+| CAC payback median | 18 months | 15 months | 12 months | OpenView 2024 |
+| LTV:CAC median | 3.0x | 3.8x | 5.2x | OpenView 2024 |
+| Gross margin median | 68% | 72% | 76% | OpenView 2024 |
+| Sales & Marketing as % of ARR | 45–65% | 35–50% | 25–40% | OpenView 2024 |
+| Activation rate median | 34–38% | 38–44% | 40–50% | Userpilot 2024 |
+
+### PLG vs. Sales-Led Growth: By the Numbers
+
+| Metric | PLG Average | Sales-Led Average | Source |
+|--------|------------|------------------|--------|
+| Activation rate | 34.6% | 41.6% | Userpilot 2024 |
+| CAC payback | 13 months | 18 months | OpenView 2024 |
+| NRR | 108% | 105% | OpenView 2024 |
+| ARR per employee | $180K+ | $140K | OpenView 2024 |
+| Trial → paid CVR (opt-out) | 48.8% | N/A (demo-led) | ProfitWell |
+| Trial → paid CVR (opt-in) | 18.2% | N/A | ProfitWell |
+| Median time to PMF | 22 months | 27 months | First Round Capital |
+
 ---
 
 ## Quarterly Planning Template

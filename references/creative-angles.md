@@ -218,3 +218,167 @@ Every creative asset starts with a brief that specifies these fields:
 | **Brand Elements** | Logo placement, brand marks, required legal text |
 | **Variations Needed** | Number of variants for testing |
 | **Due Date** | Production deadline |
+
+---
+
+## Ad Creative Copy Research: What Performs
+
+Deep-research findings on ad creative and copy that converts. Sourced from Meta's own performance data, Kantar/System1 ad testing research, AdEspresso, Motion (formerly AdEspresso's analytics platform), DTC practitioner communities (r/ecommerce, Foxwell Digital), and TikTok Creative Best Practices.
+
+---
+
+### Meta Hook Patterns That Stop the Scroll
+
+The first 3 seconds of a video ad — and the first line of static ad copy — determine whether your ad runs profitably or bleeds budget.
+
+**The 5 proven Meta hook structures:**
+
+| Hook Type | Pattern | Example | When to Use |
+|-----------|---------|---------|-------------|
+| Bold claim + qualifier | "[Claim]. Here's why." | "Most email tools are making you worse at email. Here's why." | Problem-aware audiences; B2B |
+| Outcome in the first frame | "[Specific result] in [timeframe]" | "34% less churn in 90 days" | Mid/bottom funnel retargeting |
+| Call out the audience | "If you [do X], this is for you." | "If you're running paid ads without a CDP, this is for you." | Cold TOF, highly specific ICP |
+| Agitate the pain | "[Pain point] is costing you [specific cost]" | "Every unactivated trial user is costing you $140 in acquisition" | High-pain, problem-aware segment |
+| Curiosity gap | "We tried [thing] for 30 days. [Surprising result]." | "We tested 200 subject lines. The winner wasn't what we expected." | TOF awareness; content-style ads |
+
+**What kills performance in the first 3 seconds:**
+- Opening with a logo/brand animation (the audience hasn't opted in to care about your brand yet)
+- Stock footage with no human face (faces outperform non-faces in first-frame for both static and video)
+- Starting with context or backstory ("At [Company], we believe...")
+- Opening with music that competes with the visual hook
+
+---
+
+### Pain-Led vs. Benefit-Led: What the Data Says
+
+The general finding across Meta and Google creative research: **pain-led copy outperforms benefit-led copy at the top of funnel (cold audiences). Benefit-led outperforms at the bottom of funnel (retargeting, warm audiences).**
+
+Mechanism: cold audiences don't yet trust your benefit claims. Pain resonates because it's recognizable as true before they know who you are. Once they've seen you before (warm), they're evaluating whether to act — benefits and proof close.
+
+**The rule of thumb from AdEspresso analysis of $636M in ad spend:**
+- TOF cold: Lead with problem agitation, end with benefit claim + proof
+- MOF consideration: Lead with benefit claim, support with proof
+- BOF decision: Lead with social proof / specific result, end with risk reducer
+
+**Pain-led copy structure that converts for B2B SaaS:**
+```
+Line 1 (hook): State the pain as a fact, not a question. "Your CRM data is probably wrong."
+Line 2 (agitate): One consequence. "Which means your pipeline forecast is also wrong."
+Line 3 (position): One precise claim. "We fix this in one integration."
+CTA: "See how" or "Watch the 2-minute demo"
+```
+
+---
+
+### Copy Length by Product Type
+
+| Product Type | Winning Length | Rationale |
+|-------------|---------------|-----------|
+| Impulse purchase (<$50) | Under 25 words | Low consideration, visual does the work |
+| Considered purchase ($50-500) | 50-100 words | Needs enough to overcome hesitation |
+| High-ticket / subscription | 100-200 words | More objections to address before click |
+| B2B SaaS (demo) | 50-125 words for feed; long-form for content-style | Audience needs context but has high attention cost |
+| TikTok (any) | Voice-over counts, not text — 15-34 seconds of natural speech | Platform penalizes text-heavy creatives |
+
+---
+
+### DTC Brand Copy Trends That Win (2023-2025)
+
+**Lowercase, conversational tone:**
+
+Brands like Glossier, Olipop, Athletic Greens (AG1), and Liquid Death have documented better CTR on lowercase, conversational copy vs. polished ad copy.
+
+"we made this for people who hate supplements" outperforms "Introducing the New AG1 Formula: Clinically Proven Results" on cold audiences for this brand archetype.
+
+Why it works: the feed is full of polished ads. Conversational copy reads like a friend's post. In a world of ad fatigue, authenticity (even performed authenticity) wins.
+
+**Qualification as a hook:**
+
+"This is not for everyone. If you [specific qualifier], keep reading." Exclusivity framing combined with a precise audience qualifier dramatically improves qualified click rate — you get fewer clicks but more buyers. This works especially well for higher-priced products.
+
+**Specific numbers over rounded estimates:**
+
+"14,347 customers" beats "15,000+ customers." "34% lift" beats "up to 50% lift." Specificity signals credibility. Rounded numbers feel like marketing; specific numbers feel like measurement.
+
+---
+
+### UGC Script Template (TikTok / Instagram Reels)
+
+The format that consistently outperforms polished video ads for DTC:
+
+**30-second UGC script structure:**
+```
+0-3s: Hook — "[Problem] was ruining my [area of life]" or "I tried [product] for 30 days — here's what happened"
+4-12s: Agitate — Brief story of the problem or skepticism before trying the product
+13-22s: Turn — "Then I [started using / discovered / tried] [Product]"
+22-28s: Result — Specific, measurable outcome or emotional transformation
+28-30s: CTA — "[Brand name]. Link in bio." or direct to product page
+```
+
+**What makes UGC convert vs. just look authentic:**
+- Specific result in the turn moment: "I went from 2% to 7% email click rate" beats "my results were incredible"
+- Visible product use — not just holding the product, but showing the interaction
+- Face visible the entire time — faces drive completion rates
+- Natural speech patterns including hesitations — over-rehearsed UGC reads as scripted and loses the authenticity premium
+
+**The "ugly ad" principle:** Creatives that look intentionally rough (phone camera, natural lighting, no post-production) frequently outperform professionally shot ads on cold audiences because they bypass banner blindness. The mechanism is ad-format mimicry — they look like organic posts, not ads.
+
+---
+
+### LinkedIn B2B Copy Structures
+
+LinkedIn feed copy operates differently from Meta — the audience is at work, in professional mode, and expects a certain register.
+
+**What converts on LinkedIn:**
+
+1. **Insight-led post + soft CTA** (thought leadership ad or boosted post):
+   - Open with a counterintuitive insight: "Most companies measure the wrong metric for churn."
+   - 3-4 sentences expanding the insight with data or story
+   - One concrete takeaway
+   - CTA: "We made a [guide/template/video] on this. Link in comments."
+   - The "link in comments" pattern mimics organic behavior and avoids the LinkedIn algorithm's suppression of external links in the post itself.
+
+2. **Case study structured as a story**:
+   - "Company X had [specific problem]: [quantified pain]"
+   - "They tried [previous solution] and it didn't work because [reason]"
+   - "Then they [used our product / changed approach]"
+   - "[Specific outcome] in [timeframe]"
+   - CTA: "Here's what they changed"
+   Ratio: specific beats generic. "[Company] at 500 employees" is more credible than "a mid-market SaaS company."
+
+3. **Question + data point**:
+   - "How many of your trial users actually activate? For most SaaS companies, it's under 40%."
+   - Short bridge to why it matters
+   - CTA to the solution
+
+**What fails on LinkedIn:**
+- Clickbait hooks ("I quit my job and made $1M") — damages brand credibility in B2B
+- Features lists in ad copy ("We offer X, Y, Z integrations")
+- Formal press-release tone in feed ads — "We are pleased to announce..."
+- Stock photos of people in suits (performs worst in LinkedIn A/B tests per LinkedIn's own creative best practices)
+
+---
+
+### Before/After Copy Framework (Highest-performing for SaaS)
+
+The Before/After/Bridge structure adapted for ad copy:
+
+**For static image/carousel:**
+```
+Left panel: Before state (visual: chaotic spreadsheet, manual process, confusing data)
+Headline over left: "Before: 3 hours to build a campaign segment"
+Right panel: After state (visual: clean dashboard, automated flow)
+Headline over right: "After: 3 minutes"
+Below: "Join 2,000+ teams who made the switch." + CTA
+```
+
+**For video ads (the most-tested B2B SaaS ad format on LinkedIn):**
+```
+0-5s: Show the painful before state visually (frustrated user, cluttered screen)
+5-15s: One line naming the problem: "Most teams are still doing this manually"
+15-25s: Show the after state — product solving the problem, not product features
+25-30s: Specific outcome + CTA: "40% more pipeline. Book a demo."
+```
+
+**Why before/after outperforms feature ads for SaaS:**
+Viewers self-insert into the before state more than they self-insert into feature demonstrations. The transformation is the story; features are just evidence.

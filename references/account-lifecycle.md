@@ -248,6 +248,53 @@ Signals that an existing customer is ready for upsell, cross-sell, or expansion.
 
 ---
 
+## Real-World Account Health Benchmarks (2024–2025)
+
+Sourced from Gainsight, ChurnZero, Totango, and Pendo benchmarks.
+
+### Account Health Distribution
+
+In a typical B2B SaaS customer base, health scores cluster in predictable bands:
+
+| Health Band | Typical % of Accounts | Revenue Risk | Action |
+|-------------|----------------------|-------------|--------|
+| Healthy (70-100) | 45–60% | Low | Prioritize expansion plays |
+| Watch (40-69) | 25–35% | Medium | Proactive check-ins, engagement campaigns |
+| At Risk (0-39) | 10–20% | High | Immediate intervention required |
+
+Source: Gainsight 2024 Customer Success Benchmark Report (n=500+ CS teams).
+
+### Churn Prediction Windows
+
+| Signal | Average Days to Churn | Source |
+|--------|----------------------|--------|
+| No login for 21+ days | 45–60 days | Pendo 2024 |
+| Support escalation (critical) | 30–45 days | Gainsight 2024 |
+| Declining feature usage (3 consecutive weeks) | 60–90 days | Amplitude 2024 |
+| NPS drop below 6 | 90–120 days | ChurnZero 2024 |
+| Champion departure | 30–90 days | Gainsight 2024 |
+
+**Key insight from Pendo 2024:** 20–30% of your active customer base shows early churn signals at any given moment. The accounts that get proactive outreach before they reach the 60-day no-login mark renew at 2.3x the rate of those reached after.
+
+### Expansion Revenue Benchmarks
+
+| Metric | SMB | Mid-Market | Enterprise | Source |
+|--------|-----|-----------|-----------|--------|
+| % of ARR from expansion | 15–25% | 25–40% | 35–55% | SaaS Capital 2024 |
+| Upsell close rate | 30–40% | 40–50% | 45–55% | Gainsight 2024 |
+| Cross-sell attach rate | 15–25% | 20–30% | 25–40% | Gainsight 2024 |
+| Expansion ARR growth (healthy) | 20–30% YoY | 30–45% YoY | 40–60% YoY | ChartMogul 2024 |
+| Avg months to first expansion | 9–12 | 6–9 | 12–18 | Totango 2024 |
+
+### Customer Success Impact on Retention
+
+| CS Coverage Model | Net Retention Rate | Gross Revenue Churn | Source |
+|------------------|-------------------|--------------------|-|
+| No CS (product-led only) | 94–100% | 10–18% | Gainsight 2024 |
+| Reactive CS (ticket-driven) | 99–104% | 8–12% | Gainsight 2024 |
+| Proactive CS (health score-driven) | 104–110% | 5–8% | Gainsight 2024 |
+| High-touch enterprise CS | 110–125% | 3–5% | Gainsight 2024 |
+
 ## Churn Risk Indicators
 
 Signals that a customer may not renew or may cancel.

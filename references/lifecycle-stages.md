@@ -198,6 +198,60 @@ To prevent stage flapping, a minimum dwell time of 7 days is enforced before a c
 
 ---
 
+## Real-World Lifecycle Benchmarks (2024–2025)
+
+Data from Mixpanel, Amplitude, Pendo, and Braze. These help calibrate what healthy, average, and at-risk look like in practice.
+
+### Engagement Benchmarks — SaaS
+
+| Metric | Low | Average | Good | Best-in-Class | Source |
+|--------|-----|---------|------|--------------|--------|
+| DAU/MAU (stickiness ratio) | < 10% | 16% median | 25–35% | 40%+ | Amplitude 2024 |
+| DAU/MAU — B2B SaaS | — | **31%** | — | 50%+ | Mixpanel 2024 benchmark |
+| WAU/MAU (weekly active) | < 30% | 40–50% | 55–65% | 75%+ | Amplitude 2024 |
+| Day 7 retention | < 20% | 25–35% | 35–45% | 55%+ | Amplitude / Mixpanel 2024 |
+| Day 30 retention | < 10% | 15–25% | 25–35% | 45%+ | Amplitude 2024 |
+| Month 3 retention | < 5% | 10–20% | 20–30% | 40%+ | Lenny's Newsletter 2024 |
+
+**Context:** DAU/MAU of 25% is the "good" threshold for B2B SaaS. Products below 16% (the median) have a product-market fit or engagement problem, not just a marketing problem.
+
+### Lifecycle Stage Distribution — Typical SaaS
+
+What a healthy vs. struggling distribution looks like across a customer base:
+
+| Stage | Healthy Distribution | Struggling Distribution | Notes |
+|-------|---------------------|------------------------|-------|
+| New Customers | 10–15% | 25–35% | High % = churning customers, need replacement |
+| Promising | 15–20% | 10–15% | Low % = poor activation, users not progressing |
+| Regulars | 30–40% | 15–25% | Core revenue base — low % = retention problem |
+| Champions | 10–20% | 5–10% | Advocacy engine — low % = upsell/expansion stalled |
+| Needs Attention | 10–15% | 20–30% | High % = product-market fit signal to investigate |
+| At Risk | 5–10% | 15–25% | High % = active churn risk — win-back urgently |
+
+Source: Pendo 2024 SaaS Benchmark Report, Mixpanel 2024.
+
+### Churn Benchmarks — SaaS
+
+| Metric | Early-Stage | Growth-Stage | Mature-Stage | Source |
+|--------|------------|-------------|-------------|--------|
+| Annual gross revenue churn | 10–20% | 5–10% | 3–7% | ChartMogul 2024 |
+| Annual logo churn (customer count) | 15–25% | 8–15% | 5–10% | ChartMogul 2024 |
+| Monthly churn — SMB-heavy | 3–5% | 2–4% | 1.5–3% | Baremetrics 2024 |
+| Monthly churn — Enterprise-heavy | 0.5–1.5% | 0.5–1% | 0.25–0.75% | ChartMogul 2024 |
+| At-risk user % at any time | — | **20–30%** | — | Pendo 2024 |
+
+**20–30% of your active users show early churn signals at any given time** (Pendo 2024). This is the segment that automated lifecycle campaigns should target first.
+
+### Ecommerce Lifecycle Benchmarks
+
+| Metric | Average | Good | Source |
+|--------|---------|------|--------|
+| Repeat purchase rate (90 days) | 27–35% | 40%+ | Klaviyo 2024 |
+| Average orders per customer per year | 2.1 | 3.5+ | Triple Whale 2024 |
+| Customer lifetime value at 12 months | $185–220 | $300+ | Triple Whale 2024 |
+| Win-back rate (lapsed 90+ days) | 5–10% | 15–20% | Klaviyo 2024 |
+| Champions % of revenue contribution | 40–60% | — | Pareto rule in ecommerce |
+
 ## Default Scoring Weights
 
 When no custom configuration is provided, these weights apply:
