@@ -41,6 +41,7 @@ description: Design personalization rules mapping audiences to content variants 
    - A default experience is defined for non-matched visitors
    - Any overlapping or conflicting conditions between rules are flagged with a resolution, not left unresolved
    - The measurement plan states a minimum sample size and a primary metric, not just "run an A/B test"
+   - Every condition's behavioral signal or attribute traces to a segment definition the user actually gave, or to the lifecycle stages and scoring definitions in product context, with no invented customer detail, firmographic fact, or behavioral signal presented as something the user's data already shows. If a needed attribute isn't confirmed, flag it as an assumption to verify against the user's real data.
 
    If any check fails, fix the relevant rule or section before delivering.
 

@@ -49,6 +49,7 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 - Does every message node specify channel, timing, and content direction, not just a label?
 - If incremental lift is being measured, is a holdout percentage stated (10% recommended)?
 - Does every condition node have a defined branch for each outcome, with no dangling path?
+- Do the success metrics and any timing or channel figures come only from what the user provided, with no invented conversion rate, timing benchmark, or channel performance number? If the journey logic needs one the user hasn't given, is it flagged as an assumption rather than stated as fact?
 
 If any check fails, correct it before returning the output.
 

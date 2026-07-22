@@ -52,6 +52,7 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
 - Is the hypothesis structured as if/then/because, with a real mechanism stated, not just a direction?
 - Does the sample size and duration trace to the MDE and confidence threshold actually chosen, not a generic estimate?
 - Does at least one guardrail metric appear, and does the exit criteria cover all three cases (win, loss, inconclusive)?
+- Does the baseline conversion rate, MDE, and sample size come from product context or the user's actual input, with no invented statistical assumption? If a number the calculation needs wasn't provided, is it flagged as an assumption needing the user's real number rather than presented as fact?
 
 If any check fails, correct it before returning the output.
 

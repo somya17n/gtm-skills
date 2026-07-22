@@ -22,6 +22,8 @@ Intempt's SaaS product funnel benchmark:
 | Signup → Activated | 30–40% | 40–50% | >50% |
 | Activated → Week 2 Retention | 40–50% | 50–60% | >60% |
 
+These are illustrative example figures for reasoning about the video's motion register, not verified real benchmarks pulled from Intempt's live data. Confirm the actual numbers against the user's own funnel data before treating them as fact.
+
 Most drop-off happens in the **Signup → Activated** gap. The root causes map to three Intempt drop-off archetypes:
 - **Friction**: the user cannot find or complete the key action → animate fast, effortless motion
 - **Motivation**: the user does not see why the feature matters → linger on the result/payoff state

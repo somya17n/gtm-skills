@@ -60,6 +60,7 @@ description: Design KPI dashboards with metric formulas, visualization types, al
 - Is the primary KPI count between 4-8 and the supporting metric count between 4-8, not an unbounded list?
 - Does every primary KPI have both a warning and a critical alert threshold defined?
 - Does the layout follow the four-row structure (KPI cards, main charts, supporting charts, detail table) top to bottom?
+- Does every baseline value, target threshold, or historical comparison number trace to data the user or product context actually provided, with none invented? If a baseline is needed but not provided, is it marked "TBD, needs your real number" instead of a guessed figure?
 
 If any check fails, correct it before returning the output.
 

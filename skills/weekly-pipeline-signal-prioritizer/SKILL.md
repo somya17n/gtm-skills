@@ -54,7 +54,7 @@ If the user does not specify, use this order:
 
 Before returning the output, verify:
 
-- Does every row's "Why This Week" reason actually explain why now, not just restate the signal?
+- Does every row's "Why This Week" reason actually explain why now, using only the signal, detail, and date the user pasted, not just restate the signal, and never inventing a stat, timeline, or stakeholder detail not present in that input?
 - Are accounts with no ICP fit or no actionable signal moved to "Accounts to remove" rather than left ranked in the main table?
 - Are accounts inactive for more than two weeks with no signal flagged in "Signal gaps," not silently dropped?
 - Does each of the Top 3 accounts get a first-touch line specific to its actual signal, not a generic opener?

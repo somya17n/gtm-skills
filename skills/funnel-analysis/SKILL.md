@@ -52,6 +52,7 @@ description: Diagnose funnel drop-offs with conversion benchmarks, root cause an
 - Is each red or yellow stage's cause traced to one of the four FMAT categories (Friction, Motivation, Ability, Timing), not left undiagnosed?
 - Is every optimization lever a concrete action ("Reduce signup form to email-only"), not generic advice ("improve the UX")?
 - Does the funnel math actually recompute the top-of-funnel volume using both current and benchmark conversion rates, not just restate the target?
+- Do the funnel's stage volumes and current conversion rates match what the user actually reported, with no invented drop-off number, conversion rate, or funnel step the user didn't give? Reference-file benchmark rates may be used for comparison, but never substituted for the user's own reported numbers.
 
 If any check fails, correct it before returning the output.
 
