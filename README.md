@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 21 skills across Marketing, Sales, Design, Analytics, and Operations — the only skill pack that covers the full GTM surface in one install.
+**Your AI go-to-market team.** 46 skills across Marketing, Sales, Design, Analytics, and Operations — the only skill pack that covers the full GTM surface in one install.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -20,7 +20,7 @@ You install them once. Then you just ask for what you need in plain language —
 
 ## What's Inside
 
-21 skills organized across 6 domains. Each skill includes reference materials with real frameworks, benchmarks, and methodology — not generic advice.
+46 skills organized across 6 domains. Each skill includes reference materials with real frameworks, benchmarks, and methodology — not generic advice.
 
 ### Foundation
 
@@ -28,7 +28,7 @@ You install them once. Then you just ask for what you need in plain language —
 |-------|-------------|
 | **product-context** | Set up once — your ICP, brand voice, lifecycle stages, scoring model, and design preferences. Every other skill reads this automatically, so output is always tailored to your business. |
 
-### Marketing (7 skills)
+### Marketing (16 skills)
 
 | Skill | What You Get |
 |-------|-------------|
@@ -39,8 +39,17 @@ You install them once. Then you just ask for what you need in plain language —
 | **sms-push** | SMS and push notification campaigns with character limits, TCPA/GDPR compliance, quiet hours, frequency caps, and deep link specs. |
 | **landing-page** | Conversion-optimized landing pages. Outputs deployable HTML + Tailwind CSS — not a wireframe, a working page. |
 | **personalization** | Rules that map audience segments to content variants. Condition → experience → measurement plan. Priority-ordered with a default fallback. |
+| **post-writer** | Two LinkedIn post variants per topic — educational and operator-punchy angles — written in your brand voice. For organic authority-building, not ads or outbound. |
+| **hook-optimizer** | Four scored hook variants for any post draft, each using a distinct psychological framework, with a recommendation and rug-pull check. |
+| **marketing-plan** | A full AARRR-structured marketing plan — current-state audit, funnel strategy, budget math, and a phased 90-day roadmap. For when the deliverable needs to be a shareable document, not just a recommendation. |
+| **customer-research** | Turns transcripts, reviews, tickets, and surveys into confidence-scored themes, quote banks, and evidence-based personas. |
+| **pricing** | Value metric selection, tier structure, price points, and price-increase timing — refuses to guess at your churn or conversion numbers. |
+| **onboarding** | Designs the post-signup activation flow — what happens before the "aha moment," in what order, and how drop-off gets diagnosed. |
+| **churn-prevention** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences — the systemic retention layer, not a one-off email. |
+| **marketing-loops** | Recurring, scheduled marketing motions with cadence matched to how fast the underlying signal actually changes. |
+| **ai-seo** | Audits how citable your content is for ChatGPT, Perplexity, and AI Overviews — structure, authority signals, and machine-readable files. |
 
-### Sales (5 skills)
+### Sales (21 skills)
 
 | Skill | What You Get |
 |-------|-------------|
@@ -49,6 +58,22 @@ You install them once. Then you just ask for what you need in plain language —
 | **pipeline-review** | Full pipeline health analysis — stuck deals, risk signals, forecast by category, coverage ratio. Flags problems and recommends next actions per deal. |
 | **account-plan** | Account engagement plans with buying committee mapping, threading depth assessment, and a 90-day week-by-week action plan per stakeholder. |
 | **deal-scoring** | Dual-axis scoring (health + intent, each 0-100) with independent trend tracking. Places each deal in a quadrant and runs full MEDDIC/BANT completeness checks. |
+| **account-research-digest** | Researches any company and produces a 90-second rep brief — what they do, what changed recently, and the strongest outreach angle. |
+| **linkedin-personalization-brief** | Turns a prospect's LinkedIn profile text into three distinct, specific personalization angles for a cold email or LinkedIn opener. |
+| **competitor-displacement-framer** | Maps a prospect's current tool stack to the exact inefficiency it creates, two questions to surface it on a call, and a one-line displacement hook. |
+| **cold-email-writer** | Turns prospect research, a trigger signal, and a value prop into a complete cold email body under 120 words. |
+| **cold-email-subject-line-tester** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
+| **outbound-sequence-auditor** | Audits a full cold email sequence, diagnoses each email's specific weakness, and rewrites the three worst-performing ones. |
+| **icp-signal-scorer** | Scores an account list against your ICP criteria and returns priority tiers with a one-sentence outreach rationale per account. |
+| **weekly-pipeline-signal-prioritizer** | Turns a week of intent signals — funding, hires, job posts, stack changes — into a ranked Monday-morning outreach list. |
+| **call-transcript-signal-extractor** | Extracts deal signals, objections, confirmed pain points, and a stakeholder map from a raw sales call transcript. |
+| **objection-pre-handler** | Outputs the five most likely objections for a persona, each with an acknowledgment, response, and follow-up question. |
+| **re-engagement-rewriter** | Turns notes from a lost or gone-dark deal into a re-engagement email under 100 words that addresses the original objection directly. |
+| **topic-briefer** | Turns one piece of content — an article, transcript, or announcement — into a sales brief: pain points, trigger events, and ranked outreach hooks for your ICP. |
+| **prospecting** | Builds and qualifies a prospect list from your ICP, sourced from data you provide or public research — every lead scored Hot/Warm/Cold/Skip with cited evidence, not just fit. |
+| **revops** | Designs the lead-to-opportunity layer — MQL scoring model, routing rules, and speed-to-lead SLAs — so marketing and sales agree on what "qualified" means. |
+| **sales-enablement** | One-pagers, ROI calculators, proposal templates, and playbooks mapped to persona and deal stage — the enablement assets outside objection handling. |
+| **competitor-profiling** | Deep-dives one competitor's public site into a structured profile — positioning, pricing, strengths/weaknesses, and competitive implications. |
 
 ### Design (4 skills)
 
@@ -129,7 +154,7 @@ Claude Cowork is Anthropic's desktop agent. This repo includes a plugin manifest
 **Setup:**
 1. Open the Claude Desktop app → switch to the **Cowork** tab
 2. Select the downloaded `gtm-skills` folder as your working directory
-3. The 21 skills activate automatically
+3. The 46 skills activate automatically
 
 Once set up, just ask for what you need.
 
@@ -286,6 +311,16 @@ Each skill is backed by detailed reference documents in `references/`. These con
 | `funnel-benchmarks.md` | Conversion benchmarks by industry, drop-off diagnosis framework |
 | `workflow-patterns.md` | 7 automation patterns, error handling, integration points |
 | `strategy-frameworks.md` | Growth frameworks by maturity, ICE scoring, quarterly planning |
+| `prospecting-sources.md` | Data sources by motion, qualification rubric, compliance boundaries |
+| `revenue-lifecycle.md` | Lifecycle stage definitions, MQL scoring model, routing logic, speed-to-lead curve |
+| `sales-enablement-assets.md` | Sales deck framework, case study brief format, buyer persona card template |
+| `competitor-profile-guide.md` | Page-type extraction guide, multi-competitor comparison table format |
+| `marketing-plan-framework.md` | Maturity stages, growth lever hierarchy, engagement archetypes, Big Bet/Medium Bet structure |
+| `customer-research-methods.md` | Signal extraction methods, sourcing when no assets exist, evidence-based persona building |
+| `pricing-frameworks.md` | Value metric selection, tier structure, pricing research methods, price-increase timing |
+| `churn-retention-playbook.md` | Cancel flow design, save-offer strategy, churn health scoring, dunning sequencing |
+| `loop-cadence-guide.md` | Signal-speed-to-cadence rule, 9-part loop anatomy, common failure modes |
+| `ai-search-optimization.md` | Citability mechanics for AI Overviews, ChatGPT, Perplexity, Claude, Gemini, Copilot |
 
 ---
 

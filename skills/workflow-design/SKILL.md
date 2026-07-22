@@ -23,6 +23,10 @@ description: Design marketing and sales automation workflows with trigger-condit
    - **Schedule-based** — recurring time trigger (daily digest, weekly report)
    - **Webhook** — external system fires an event
    - **Manual** — operator initiates the workflow
+
+   If the trigger is a **score threshold** (e.g. "health score < 40," "lead score > 80"), do not treat the score as a given. Ask what signals compose it and how they're weighted. A workflow built on an uninterrogated score can't be debugged when it misfires — if engagement drops because of a seasonal dip rather than real risk, you need to know that's baked into the number before you automate on top of it.
+
+   If the trigger is **schedule-based**, check whether the underlying signal it's watching has seasonal or cyclical variation (e.g. B2B activity dropping over holidays, usage spiking at fiscal quarter-end). If it does, flag this explicitly in the output and adjust the cadence or add a seasonal-baseline comparison rather than applying one fixed schedule year-round.
 8. Design the workflow steps in sequence. For each step specify:
    - **Step number**
    - **Type** — trigger, condition, action, delay, branch, or loop
@@ -44,7 +48,7 @@ description: Design marketing and sales automation workflows with trigger-condit
 15. Deliver the workflow specification:
 
 - **Workflow Summary** — Name, goal, trigger, expected outcome, estimated contacts/day
-- **Trigger** — Event type, conditions, filters
+- **Trigger** — Event type, conditions, filters. If score-based: the signals composing the score. If schedule-based: a one-line seasonality check (does the underlying signal vary seasonally, and if so, how the cadence accounts for it)
 - **Flow Diagram** — Step-by-step numbered sequence with branching indicated
 - **Steps Table** — Columns: # | Type | Action | Condition | Timing
 - **Error Handling** — Retry policy, fallback actions, failure notifications
