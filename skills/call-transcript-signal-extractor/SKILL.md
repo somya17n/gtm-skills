@@ -9,7 +9,7 @@ Read a sales call transcript and extract every signal a rep needs to write the r
 
 ## How to run
 
-Ask the user to paste the raw transcript. Any format works — timestamps optional.
+Ask the user to paste the raw transcript. Any format works: timestamps optional.
 
 Also ask (optional but improves accuracy):
 - Their product in one sentence
@@ -19,7 +19,7 @@ Also ask (optional but improves accuracy):
 ## Output format
 
 **1. Deal signals**
-3-5 bullets. Specific phrases or moments indicating buying intent, urgency, budget authority, or strong fit. Quote directly from the transcript. Do not include neutral statements — only things that meaningfully signal forward motion.
+3-5 bullets. Specific phrases or moments indicating buying intent, urgency, budget authority, or strong fit. Quote directly from the transcript. Do not include neutral statements: only things that meaningfully signal forward motion.
 
 **2. Objections raised**
 List every objection in any form (direct pushback, uncertainty, competitor comparison, implementation concern). For each:
@@ -28,7 +28,7 @@ List every objection in any form (direct pushback, uncertainty, competitor compa
 - If unresolved: flag as a follow-up item
 
 **3. Pain points confirmed** *(in the prospect's own words)*
-Quote directly. Do not paraphrase. If the prospect repeated a pain point more than once, flag it — repetition signals priority.
+Quote directly. Do not paraphrase. If the prospect repeated a pain point more than once, flag it: repetition signals priority.
 
 **4. Stakeholder map**
 Everyone mentioned from the prospect's side:

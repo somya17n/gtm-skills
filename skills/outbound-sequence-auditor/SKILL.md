@@ -15,11 +15,11 @@ Ask the user for:
 3. Their ICP (company size, industry, core pain point)
 4. The persona they are targeting (job title, what they care about)
 5. Their top 2-3 competitors (optional but improves differentiation analysis)
-6. Reply rate per email if they have it (optional — helps prioritize the audit)
+6. Reply rate per email if they have it (optional; helps prioritize the audit)
 
 ## Output format
 
-**Output 1 — Gap analysis**
+**Output 1: Gap analysis**
 
 One paragraph per email. For each, identify the specific structural problem using one of these diagnoses:
 - Vague value prop (what you do is unclear after reading)
@@ -32,11 +32,11 @@ One paragraph per email. For each, identify the specific structural problem usin
 
 Explain why each problem reduces reply rates. Be direct.
 
-**Output 2 — Rewrites**
+**Output 2: Rewrites**
 
-Identify the three weakest emails. Rewrite each one in full. Keep the send day and sequence position the same. Fix the structural problem — do not just polish the original wording.
+Identify the three weakest emails. Rewrite each one in full. Keep the send day and sequence position the same. Fix the structural problem. Do not just polish the original wording.
 
-**Output 3 — Missing step**
+**Output 3: Missing step**
 
 Review the sequence as a whole. Recommend any follow-up type that is missing:
 - LinkedIn touch between emails

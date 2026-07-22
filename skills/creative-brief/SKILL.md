@@ -4,7 +4,7 @@ description: Generate creative briefs with 14 creative angles, channel-to-funnel
 ---
 
 ## Context
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for brand voice and design preferences.
 
 ## Inputs
@@ -20,7 +20,7 @@ description: Generate creative briefs with 14 creative angles, channel-to-funnel
    - Proof point or social proof element
    - CTA (primary and secondary)
 8. Write visual direction for each angle: composition, color guidance, imagery style, typography notes.
-9. Write channel-specific adaptations — adjust tone, length, and format per channel.
+9. Write channel-specific adaptations: adjust tone, length, and format per channel.
 10. Read `references/ad-placements.md` for exact placement sizes, aspect ratios, and character limits.
 11. Map each angle to specific placements with specs: dimensions, file format, max file size, headline character limit, description character limit.
 12. Specify A/B test recommendations: which creative element to vary, hypothesis, and success metric.

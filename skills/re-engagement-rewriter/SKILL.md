@@ -1,11 +1,11 @@
 ---
 name: re-engagement-rewriter
-description: Takes notes from a lost deal or gone-dark prospect and writes a re-engagement email that addresses the original objection directly, references the first conversation, and asks one question — in under 100 words. Use when the user wants to reactivate a closed-lost account or a prospect who went silent.
+description: Takes notes from a lost deal or gone-dark prospect and writes a re-engagement email that addresses the original objection directly, references the first conversation, and asks one question, in under 100 words. Use when the user wants to reactivate a closed-lost account or a prospect who went silent.
 ---
 
 # Re-Engagement Rewriter
 
-Write a re-engagement email for a gone-dark prospect or closed-lost account — specific, under 100 words, with one question at the end.
+Write a re-engagement email for a gone-dark prospect or closed-lost account: specific, under 100 words, with one question at the end.
 
 ## How to run
 
@@ -14,7 +14,7 @@ Ask the user for:
 2. When they last spoke (approximate date or timeframe)
 3. Why the prospect went dark or said no (stated reason or best inference)
 4. One specific thing the prospect said in the original conversation (a quote, concern, or goal)
-5. What has changed since then — at the prospect's company (funding, hire, job posting, product change) or at the user's company (new feature, pricing change, relevant case study)
+5. What has changed since then: at the prospect's company (funding, hire, job posting, product change) or at the user's company (new feature, pricing change, relevant case study)
 6. Their product in one sentence
 
 If there is no real trigger (nothing changed), tell the user: a re-engagement email without a specific reason to reach out now will not land differently than the original pitch. Ask them to wait for a real signal before sending.
@@ -24,7 +24,7 @@ If there is no real trigger (nothing changed), tell the user: a re-engagement em
 **Subject line:** [one line, under 50 characters]
 
 **Email:**
-[Full email text — under 100 words, not counting subject line]
+[Full email text: under 100 words, not counting subject line]
 
 ---
 
@@ -36,9 +36,9 @@ After the email, add:
 
 ## Rules
 
-- Open by acknowledging time has passed — do not apologize, do not pretend the gap did not happen
+- Open by acknowledging time has passed; do not apologize, do not pretend the gap did not happen
 - Reference one specific thing from the original conversation
-- Introduce the change (at their company or yours) as the reason for reaching out now — this must be a real, specific change
+- Introduce the change (at their company or yours) as the reason for reaching out now; this must be a real, specific change
 - End with one question about the change, not a scheduling ask
 - No pitch, no feature list, no case study link in this first email
 

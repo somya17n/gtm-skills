@@ -1,14 +1,14 @@
 ---
 name: brand-voice
-description: Analyze content samples to extract brand voice profile — dimensions, vocabulary, sentence patterns, channel adaptations.
+description: Analyze content samples to extract a brand voice profile, dimensions, vocabulary, sentence patterns, channel adaptations.
 ---
 
 ## Context
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for any existing brand voice notes.
 
 ## Inputs
-3. Ask: "Paste 3-5 examples of your best content — the pieces that sound most like you." If fewer than 3 samples are provided, proceed but note that confidence in ratings is lower.
+3. Ask: "Paste 3-5 examples of your best content, the pieces that sound most like you." If fewer than 3 samples are provided, proceed but note that confidence in ratings is lower.
 
 ## Process
 4. Read `references/brand-voice-dimensions.md` for the 6 voice dimensions and their rating scales.
@@ -19,12 +19,12 @@ description: Analyze content samples to extract brand voice profile — dimensio
    - Authority (1 = peer-level, 10 = expert)
    - Warmth (1 = detached, 10 = personal)
    - Complexity (1 = simple, 10 = technical)
-6. Rate each dimension 1-10 with a descriptive label (e.g., "7 — Confident expert").
+6. Rate each dimension 1-10 with a descriptive label (for example, a 7 paired with the label "Confident expert"). Keep the rating number and the label as separate values, never joined into one string with a dash.
 7. Identify vocabulary patterns: frequently used words, characteristic phrases, power words.
 8. Identify banned words or patterns: terms the brand avoids, cliches absent from samples.
 9. Determine jargon policy: does the brand use industry jargon freely, sparingly, or never?
 10. Analyze sentence structure: average sentence length, active vs. passive voice ratio, question frequency, use of fragments.
-11. Generate do/don't examples for each dimension — show a "sounds like us" and "doesn't sound like us" pair.
+11. Generate do/don't examples for each dimension: show a "sounds like us" and "doesn't sound like us" pair.
 12. Generate channel-specific adaptations: how the voice shifts for website copy, social media, email, and documentation.
 
 ## Output

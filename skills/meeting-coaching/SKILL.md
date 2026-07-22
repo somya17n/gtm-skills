@@ -1,10 +1,10 @@
 ---
 name: meeting-coaching
-description: Pre-meeting prep and post-meeting coaching — talk ratio, BANT/MEDDIC scoring, objection tracking, drills.
+description: Pre-meeting prep and post-meeting coaching: talk ratio, BANT/MEDDIC scoring, objection tracking, drills.
 ---
 
 ## Context
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 
 ## Modes
 This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coaching?"
@@ -44,10 +44,10 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 ## Process
 12. Read `references/coaching-metrics.md` for scoring benchmarks.
 13. Analyze the conversation against coaching metrics: talk ratio, monologue length, question quality, patience score, interactivity.
-14. Run BANT qualification check — score each element (Budget, Authority, Need, Timeline) as confirmed / partially confirmed / missing.
-15. Run MEDDIC qualification check — score each element (Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion).
+14. Run BANT qualification check: score each element (Budget, Authority, Need, Timeline) as confirmed / partially confirmed / missing.
+15. Run MEDDIC qualification check: score each element (Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion).
 16. Identify specific phrases or moments that were strong or weak.
-17. Write concrete rewrites for weak moments — show the original and improved version.
+17. Write concrete rewrites for weak moments: show the original and improved version.
 18. Recommend 2-3 specific drills to improve identified weaknesses.
 
 ## Output
@@ -66,9 +66,9 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 | Element | Status | Evidence | Score |
 |---------|--------|----------|-------|
 
-**Strengths** — what went well with specific examples.
-**Improvements** — what to change with original vs. rewritten phrasing.
-**Recommended Drills** — named exercises with instructions.
+**Strengths**: what went well with specific examples.
+**Improvements**: what to change with original vs. rewritten phrasing.
+**Recommended Drills**: named exercises with instructions.
 
 20. Before returning either mode's output, verify:
    - Every quoted phrase or "strong/weak moment" actually appears in the pasted transcript or notes, not invented to fill the Improvements section

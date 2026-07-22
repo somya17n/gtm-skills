@@ -18,7 +18,7 @@ Ask the user for:
 6. Their pricing model (especially if structurally different from competitors)
 7. Their single strongest differentiator with a number if possible
 
-If the user also has specific objections they hear repeatedly, ask them to paste those too — add tailored responses for each.
+If the user also has specific objections they hear repeatedly, ask them to paste those too, and add tailored responses for each.
 
 ## Output format
 

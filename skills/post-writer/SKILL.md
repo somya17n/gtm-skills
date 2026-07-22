@@ -1,13 +1,13 @@
 ---
 name: post-writer
-description: Draft two distinct LinkedIn post variants on a topic — an educational angle and an operator/contrarian angle — written in the brand's voice. Use when the user wants organic LinkedIn content to build authority or warm up a list before outbound.
+description: Draft two distinct LinkedIn post variants on a topic: an educational angle and an operator/contrarian angle, written in the brand's voice. Use when the user wants organic LinkedIn content to build authority or warm up a list before outbound.
 ---
 
 > **Boundary:** For ad creative, use `creative-brief`. For cold outreach copy, use `cold-email-writer` or `outreach-sequence`. This skill is for organic, unpaid posts.
 
 ## Context
 
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first, or run `brand-voice` if they have content samples to build a voice profile from. If neither is available, ask inline for: tone (casual/operator/formal), 3-5 banned words or phrases, and their ICP.
+1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first, or run `brand-voice` if they have content samples to build a voice profile from. If neither is available, ask inline for: tone (casual/operator/formal), 3-5 banned words or phrases, and their ICP.
 2. Read `.agents/product-context.md` for brand voice, ICP, and product one-liner.
 
 ## Inputs
@@ -19,10 +19,10 @@ description: Draft two distinct LinkedIn post variants on a topic — an educati
 
 5. Write two variants of the same post:
 
-**Variant 1 — Educational**
+**Variant 1: Educational**
 Hook: a curiosity gap or a specific stat. Body: step-by-step breakdown or a numbered list. CTA: soft resource ask (comment for a keyword, or a low-friction question). Best for top-of-funnel awareness.
 
-**Variant 2 — Operator-Punchy**
+**Variant 2: Operator-Punchy**
 Hook: a pattern interrupt or a direct opinion. Body: short paragraphs, one idea per line, no hedging. CTA: a direct ask or a comment-trigger. Best for engagement and audience-building.
 
 6. Constraints for both variants:

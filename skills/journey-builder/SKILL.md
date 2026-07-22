@@ -7,7 +7,7 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 
 ## Context
 
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `references/journey-nodes.md` for available node types and configuration options.
 
 ## Inputs
@@ -18,7 +18,7 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 ## Process
 
 5. Read `.agents/product-context.md` to pull ICP, lifecycle stages, and brand voice.
-6. Design the entry trigger — which segment or event causes a user to enter the journey.
+6. Design the entry trigger: which segment or event causes a user to enter the journey.
 7. Map the journey as a node sequence: trigger → delay → message → condition → branch.
 8. For each message node, specify: channel, timing (delay from previous node), and content direction (theme and intent, not full copy).
 9. Add condition nodes for behavioral signals (opened email, visited pricing, used feature, etc.).
@@ -34,12 +34,12 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 
 14. Deliver the journey blueprint with these sections:
 
-- **Entry** — Trigger event/segment, estimated audience size methodology
-- **Flow Diagram** — ASCII representation of the journey (use arrows, branches, labels)
-- **Node Detail Table** — Columns: # | Type | Channel | Content Direction | Timing
-- **Guardrails** — Per-channel frequency caps and quiet hours
-- **Holdout** — Holdout percentage and measurement approach
-- **Success Metrics** — Primary and secondary metrics for the journey
+- **Entry**: Trigger event/segment, estimated audience size methodology
+- **Flow Diagram**: ASCII representation of the journey (use arrows, branches, labels)
+- **Node Detail Table**: Columns: # | Type | Channel | Content Direction | Timing
+- **Guardrails**: Per-channel frequency caps and quiet hours
+- **Holdout**: Holdout percentage and measurement approach
+- **Success Metrics**: Primary and secondary metrics for the journey
 
 ## Quality check before returning
 

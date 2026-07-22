@@ -1,23 +1,23 @@
 ---
 name: pipeline-review
-description: Analyze pipeline health — deal velocity, stuck deals, risk signals, forecast accuracy. Use for weekly pipeline reviews.
+description: Analyze pipeline health: deal velocity, stuck deals, risk signals, forecast accuracy. Use for weekly pipeline reviews.
 ---
 
 ## Context
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for deal stages, average sales cycle length, and stage definitions.
 
 > **Boundary:** For a deep-dive on a single deal, use `deal-scoring`.
 
 ## Inputs
-3. Ask: "Describe your pipeline — list each deal with its stage, value, and last activity date. You can paste a CRM export or list them out."
+3. Ask: "Describe your pipeline: list each deal with its stage, value, and last activity date. You can paste a CRM export or list them out."
 4. Ask: "What is your quota or revenue target this period?"
 5. Ask: "What is your average sales cycle length, and what deal segment is this? (SMB, Mid-Market, Enterprise)"
 
 ## Process
 6. Read `references/deal-scoring.md` for stage duration benchmarks and risk signal definitions.
 7. Parse the pipeline data into a structured deal list with: deal name, stage, value, days in stage, last activity date, key contacts. If any deal is missing data fields (e.g., last activity date, deal value), note the gap and work with available data.
-8. Calculate deal velocity per deal — compare days in current stage against average stage duration. Flag any deal exceeding 2x the average as stuck.
+8. Calculate deal velocity per deal: compare days in current stage against average stage duration. Flag any deal exceeding 2x the average as stuck.
 9. Flag risk signals per deal:
    - Single-threaded (only one contact engaged)
    - No activity in 14+ days

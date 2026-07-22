@@ -25,16 +25,16 @@ Then research the company using WebSearch and WebFetch. Check:
 
 Return three sections with no extra formatting or headers beyond the section labels:
 
-**Section 1 — What they do**
+**Section 1: What they do**
 3-4 sentences. Business model, core product, primary customer segment, estimated revenue stage. Be specific. Do not write "a technology company."
 
-**Section 2 — What changed recently**
+**Section 2: What changed recently**
 2-3 bullets. Only include things from the last 90 days: funding, key hires, product launches, press, leadership changes. For each bullet: what happened, when, and why it matters to an outbound rep.
 
-**Section 3 — Outreach angle**
+**Section 3: Outreach angle**
 2 sentences. Given what you found, what is the most relevant business problem this company is likely experiencing right now that the user's product addresses? Make it concrete enough to open a conversation with.
 
-If no recent news is found for Section 2, check their job postings and note what roles they are hiring for — this is a proxy for where the company is investing.
+If no recent news is found for Section 2, check their job postings and note what roles they are hiring for: this is a proxy for where the company is investing.
 
 ## Quality check before returning
 

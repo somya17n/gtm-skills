@@ -21,9 +21,9 @@ For each of five variants:
 
 **[N]. [Subject line]** *(character count)*
 
-- Specificity [score/10]: [one-line reason — does it reference something concrete?]
-- Relevance [score/10]: [one-line reason — does it match what this persona cares about?]
-- Curiosity [score/10]: [one-line reason — does it create a genuine reason to open?]
+- Specificity [score/10]: [one-line reason: does it reference something concrete?]
+- Relevance [score/10]: [one-line reason: does it match what this persona cares about?]
+- Curiosity [score/10]: [one-line reason: does it create a genuine reason to open?]
 - Verdict: [one sentence on why this would or would not work for this persona]
 
 ---
@@ -39,7 +39,7 @@ After all five:
 - No clickbait, no false urgency, no all-caps
 - No question mark unless the question is genuinely specific to this prospect's situation
 - Each variant must use a different structural approach: statement, question, reference to their company, reference to a mutual pain, reference to a specific outcome
-- No "Quick question" — it is the most overused cold email subject line in B2B outbound
+- No "Quick question": it is the most overused cold email subject line in B2B outbound
 
 ## Quality check before returning
 

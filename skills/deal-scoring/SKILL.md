@@ -4,29 +4,29 @@ description: Score deals with dual health + intent analysis, trend tracking, and
 ---
 
 ## Context
-1. Check for `.agents/product-context.md` — if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for deal stages and scoring definitions.
 
 > **Boundary:** For portfolio-level analysis across all deals, use `pipeline-review`.
 
 ## Inputs
-3. Ask: "Describe the deal — company, value, current stage, and contacts involved."
+3. Ask: "Describe the deal: company, value, current stage, and contacts involved."
 4. Ask: "What behavioral signals do you have? (website visits, content downloads, email engagement, meeting frequency, feature usage in trials). If you don't have this data, say so and I'll use qualitative assessment."
 
 ## Process
 5. Read `references/deal-scoring.md` for scoring weights and benchmark thresholds.
 6. Calculate the Health Score (0-100) using these weighted dimensions:
-   - Progression velocity: 25% — speed through stages vs. average
-   - Activity recency: 25% — days since last meaningful interaction
-   - Engagement depth: 20% — number of interactions and their quality
-   - Stakeholder coverage: 15% — buying committee roles engaged
-   - BANT completeness: 15% — confirmed elements out of 4
+   - Progression velocity: 25%, speed through stages vs. average
+   - Activity recency: 25%, days since last meaningful interaction
+   - Engagement depth: 20%, number of interactions and their quality
+   - Stakeholder coverage: 15%, buying committee roles engaged
+   - BANT completeness: 15%, confirmed elements out of 4
 7. Calculate the Intent Score (0-100) using these weighted dimensions:
-   - Website visits: 20% — frequency and recency of site visits
-   - Content consumption: 20% — downloads, page views, time on site
-   - Feature usage: 20% — product trials, demo engagement
-   - Meeting frequency: 20% — cadence and attendance
-   - Email engagement: 20% — open rates, click rates, reply rates
+   - Website visits: 20%, frequency and recency of site visits
+   - Content consumption: 20%, downloads, page views, time on site
+   - Feature usage: 20%, product trials, demo engagement
+   - Meeting frequency: 20%, cadence and attendance
+   - Email engagement: 20%, open rates, click rates, reply rates
 
 > If quantitative data is unavailable for any dimension, use qualitative rubrics to estimate scores and clearly mark which dimensions are estimated vs. confirmed with data.
 
@@ -35,16 +35,16 @@ description: Score deals with dual health + intent analysis, trend tracking, and
    - Steady: score changed less than 10 points
    - Declining: score decreased 10+ points
 
-> If the user cannot provide historical data for trend analysis, note trends as "Unknown — insufficient data" rather than guessing.
+> If the user cannot provide historical data for trend analysis, note trends as "Unknown: insufficient data" rather than guessing.
 
 9. Place the deal in a quadrant:
-   - High Health + High Intent = **Strong** — accelerate to close
-   - High Health + Low Intent = **Re-engage** — reignite interest
-   - Low Health + High Intent = **Unblock** — remove friction
-   - Low Health + Low Intent = **Deprioritize** — nurture or disqualify
-10. Run MEDDIC completeness check — score 0-6:
+   - High Health + High Intent = **Strong**: accelerate to close
+   - High Health + Low Intent = **Re-engage**: reignite interest
+   - Low Health + High Intent = **Unblock**: remove friction
+   - Low Health + Low Intent = **Deprioritize**: nurture or disqualify
+10. Run MEDDIC completeness check, score 0-6:
    - Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion
-11. Run BANT completeness check — score 0-4:
+11. Run BANT completeness check, score 0-4:
     - Budget, Authority, Need, Timeline
 
 > For comprehensive meeting-level coaching on BANT/MEDDIC, use the meeting-coaching skill.
@@ -58,7 +58,7 @@ description: Score deals with dual health + intent analysis, trend tracking, and
 | Health | X | arrow | key factors |
 | Intent | X | arrow | key signals |
 
-**Quadrant**: [placement] — [explanation of what this means and recommended posture]
+**Quadrant**: [placement], [explanation of what this means and recommended posture]
 
 **MEDDIC Assessment**
 | Element | Status | Evidence |

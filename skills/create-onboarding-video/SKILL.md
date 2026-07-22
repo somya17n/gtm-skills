@@ -5,15 +5,15 @@ description: Produce short, conversion-focused onboarding videos in Remotion for
 
 # Create Onboarding Video
 
-Produce a **short, conversion-focused onboarding video** in Remotion. The goal is not aesthetics — it is moving users from **New Customers → Promising** on Intempt's lifecycle model by showing them the exact interaction that delivers first value (the activation moment). Every beat in the video corresponds to a conversion step Intempt can track, measure, and act on.
+Produce a **short, conversion-focused onboarding video** in Remotion. The goal is not aesthetics. It is moving users from **New Customers → Promising** on Intempt's lifecycle model by showing them the exact interaction that delivers first value (the activation moment). Every beat in the video corresponds to a conversion step Intempt can track, measure, and act on.
 
-The finished video is designed to be embedded into a company's Intempt-powered onboarding journey — dropped into an email, an in-app modal, or a webhook-triggered overlay — and its activation impact is measured in Intempt's product funnel.
+The finished video is designed to be embedded into a company's Intempt-powered onboarding journey, dropped into an email, an in-app modal, or a webhook-triggered overlay, and its activation impact is measured in Intempt's product funnel.
 
 Every video ends with a **"Powered by Intempt"** end card.
 
 ---
 
-## Conversion context — why this matters
+## Conversion context: why this matters
 
 Intempt's SaaS product funnel benchmark:
 
@@ -23,9 +23,9 @@ Intempt's SaaS product funnel benchmark:
 | Activated → Week 2 Retention | 40–50% | 50–60% | >60% |
 
 Most drop-off happens in the **Signup → Activated** gap. The root causes map to three Intempt drop-off archetypes:
-- **Friction** — the user cannot find or complete the key action → animate fast, effortless motion
-- **Motivation** — the user does not see why the feature matters → linger on the result/payoff state
-- **Ability** — the feature feels too complex → slow down the focal interaction to make it look easy
+- **Friction**: the user cannot find or complete the key action → animate fast, effortless motion
+- **Motivation**: the user does not see why the feature matters → linger on the result/payoff state
+- **Ability**: the feature feels too complex → slow down the focal interaction to make it look easy
 
 A well-built onboarding video addresses the dominant archetype in under 30 seconds by zooming into the exact interaction that constitutes activation. Intempt then measures whether embedding the video lifted activation rate using funnel cohort analysis.
 
@@ -33,9 +33,9 @@ A well-built onboarding video addresses the dominant archetype in under 30 secon
 
 ## What you make
 
-- **Platform targets:** iOS app, Android app, or web product — adapt aspect ratio and interaction language accordingly.
+- **Platform targets:** iOS app, Android app, or web product. Adapt aspect ratio and interaction language accordingly.
 - **Length:** short. 3–8 seconds per onboarding screen, stitched together. Whole video rarely exceeds ~30s.
-- **Style:** UI-first, **never the whole screen**. Each beat shows a **piece of the feature in action** — a single button being tapped, a toggle flipping, a chart filling in — animated with springs, slides, scales, crossfades, or masked reveals.
+- **Style:** UI-first, **never the whole screen**. Each beat shows a **piece of the feature in action**, a single button being tapped, a toggle flipping, a chart filling in, animated with springs, slides, scales, crossfades, or masked reveals.
 - **Conversion-mapped beats:** every scene beat must correspond to one step in the user's path to activation. The caption names the outcome, not the action.
 - **Output:** a Remotion project rendering to MP4, sized for the target platform, ready to embed in an Intempt journey node.
 
@@ -52,18 +52,18 @@ A well-built onboarding video addresses the dominant archetype in under 30 secon
 
 ## Workflow
 
-Follow this loop. **Do not skip intake — guessing at flows produces videos that look good but don't convert.**
+Follow this loop. **Do not skip intake. Guessing at flows produces videos that look good but don't convert.**
 
-### 1. Intake — activation event + stills
+### 1. Intake: activation event + stills
 
 Use `AskUserQuestion` to collect all of the following before planning any shots:
 
-1. **Platform** — iOS, Android, or web.
-2. **Screen count** — how many screens are in the onboarding sequence.
-3. **Activation event** — the single action that moves the user from New Customer to Promising in Intempt (e.g. "connected first data source", "sent first campaign", "made first sale"). The whole video is built backward from this moment.
-4. **Drop-off archetype** — Friction / Motivation / Ability. If the user is unsure, ask: "Do users struggle to *find* the action, struggle to *see why it matters*, or struggle because it *feels too complex*?"
-5. **Stills or descriptions** — prefer 2–4 screenshots per screen (resting, mid-interaction, result, any variant). If the user cannot provide stills yet, accept screen descriptions and proceed in **stills-free mode** (see below).
-6. **Screen sequence** — order of screens and which screen contains the activation event.
+1. **Platform**: iOS, Android, or web.
+2. **Screen count**: how many screens are in the onboarding sequence.
+3. **Activation event**: the single action that moves the user from New Customer to Promising in Intempt (e.g. "connected first data source", "sent first campaign", "made first sale"). The whole video is built backward from this moment.
+4. **Drop-off archetype**: Friction / Motivation / Ability. If the user is unsure, ask: "Do users struggle to *find* the action, struggle to *see why it matters*, or struggle because it *feels too complex*?"
+5. **Stills or descriptions**: prefer 2–4 screenshots per screen (resting, mid-interaction, result, any variant). If the user cannot provide stills yet, accept screen descriptions and proceed in **stills-free mode** (see below).
+6. **Screen sequence**: order of screens and which screen contains the activation event.
 7. **Optional:** brand color / accent, end-card CTA text (default: none), Intempt segment override (default: `lifecycle_stage = "New Customers"`).
 
 Do not start beat planning until activation event and screen descriptions are confirmed.
@@ -72,7 +72,7 @@ Do not start beat planning until activation event and screen descriptions are co
 
 When the user cannot provide screenshots:
 - Accept a plain-language description of each screen (what's on it, what the user does, what the result looks like).
-- Build the Remotion project using **placeholder `div` mockups** styled to match the described UI — solid color blocks, placeholder text, approximate corner radii.
+- Build the Remotion project using **placeholder `div` mockups** styled to match the described UI: solid color blocks, placeholder text, approximate corner radii.
 - Pre-wire all `staticFile()` calls with the correct paths so swapping in real PNGs later requires no structural change.
 - Output a **stills collection table** (see Step 5) that tells the user exactly which screenshots to capture.
 - Label every placeholder clearly: `{/* REPLACE: public/screen-name/state.png */}`.
@@ -81,15 +81,15 @@ When the user cannot provide screenshots:
 
 For each screen, identify before writing any code:
 
-- **Conversion step** — one milestone on the path to activation (e.g. "Step 2 of 5: Shipping address")
-- **Focal element** — the single component that proves this step is easy (button, field, card, toggle)
-- **Drop-off risk** — which archetype applies *to this beat specifically* and how the animation addresses it
-- **Caption** — names the outcome the user gets, not the action they take ("Address confirmed in one tap" not "Fill in shipping address")
-- **Cursor needed?** — interactive beats (tap, click, selection) require a cursor; illustrative beats (state reveals, glow rings, counters) do not
+- **Conversion step**: one milestone on the path to activation (e.g. "Step 2 of 5: Shipping address")
+- **Focal element**: the single component that proves this step is easy (button, field, card, toggle)
+- **Drop-off risk**: which archetype applies *to this beat specifically* and how the animation addresses it
+- **Caption**: names the outcome the user gets, not the action they take ("Address confirmed in one tap" not "Fill in shipping address")
+- **Cursor needed?**: interactive beats (tap, click, selection) require a cursor; illustrative beats (state reveals, glow rings, counters) do not
 
 **Never animate the whole screen.** Crop, mask, or isolate the focal element. The rest of the UI is omitted or implied by a tinted background.
 
-The activation-event screen gets the longest duration and the most deliberate motion — it is the payoff beat.
+The activation-event screen gets the longest duration and the most deliberate motion. It is the payoff beat.
 
 ### 3. Build with Remotion
 
@@ -113,9 +113,9 @@ src/
     crossfade.tsx
 ```
 
-**Use `Series` + `Series.Sequence` for linear beat chains** — never manually compute `from` offsets with nested `<Sequence>`. `Series` handles sequencing automatically.
+**Use `Series` + `Series.Sequence` for linear beat chains**. Never manually compute `from` offsets with nested `<Sequence>`. `Series` handles sequencing automatically.
 
-**Canonical component templates** — copy these exactly; do not deviate from the patterns:
+**Canonical component templates**. Copy these exactly; do not deviate from the patterns:
 
 #### `src/components/TopCaption.tsx`
 
@@ -268,7 +268,7 @@ export const CrossfadeIn: React.FC<Props> = ({ durationInFrames = 10, children }
 
 #### SVG stroke animation (draw-on effect)
 
-Use `pathLength="1"` so path length is always 1 regardless of geometry — never hardcode pixel lengths:
+Use `pathLength="1"` so path length is always 1 regardless of geometry. Never hardcode pixel lengths:
 
 ```tsx
 <svg viewBox="0 0 80 80" fill="none">
@@ -287,7 +287,7 @@ Use `pathLength="1"` so path length is always 1 regardless of geometry — never
 
 #### `src/Root.tsx`
 
-Extract the composition body as a **named component** — never pass an inline arrow function to the `component` prop (Remotion remounts on every re-render):
+Extract the composition body as a **named component**. Never pass an inline arrow function to the `component` prop (Remotion remounts on every re-render):
 
 ```tsx
 import React from 'react';
@@ -360,7 +360,7 @@ export const SuccessScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Slow spring — Motivation archetype: let the win land
+  // Slow spring, Motivation archetype: let the win land
   const checkProgress = spring({
     frame,
     fps,
@@ -388,7 +388,7 @@ export const SuccessScene: React.FC = () => {
     >
       <TopCaption text="Your first sale. Done." />
 
-      {/* Checkmark — pathLength="1" so geometry doesn't matter */}
+      {/* Checkmark, pathLength="1" so geometry doesn't matter */}
       <div
         style={{
           width: 160,
@@ -446,7 +446,7 @@ export const SuccessScene: React.FC = () => {
 };
 ```
 
-### 4. End card — required on every video
+### 4. End card: required on every video
 
 The last `Series.Sequence` of every composition must be:
 
@@ -458,11 +458,11 @@ The last `Series.Sequence` of every composition must be:
 
 Use the `EndCard` component defined above. Never inline it. Never skip it.
 
-### 5. Output — video + stills collection table + Intempt embed spec
+### 5. Output: video + stills collection table + Intempt embed spec
 
 After rendering (or producing placeholder code), deliver:
 
-**Stills collection table** (always include, even when stills were provided — confirms paths match code):
+**Stills collection table** (always include, even when stills were provided, confirms paths match code):
 
 | File | What to capture |
 |------|----------------|
@@ -470,7 +470,7 @@ After rendering (or producing placeholder code), deliver:
 | `public/<screen>/mid.png` | Mid-interaction state |
 | `public/<screen>/result.png` | Success / result state |
 
-**Intempt Journey Integration** — read `references/funnel-benchmarks.md` for the SaaS product funnel numbers and `references/personalization-rules.md` for zone definitions, then fill in:
+**Intempt Journey Integration**: read `references/funnel-benchmarks.md` for the SaaS product funnel numbers and `references/personalization-rules.md` for zone definitions, then fill in:
 
 | Property | Value |
 |----------|-------|
@@ -490,15 +490,15 @@ Render a preview, show it to the user, ask which beats need adjustment. Treat th
 ## Motion rules
 
 - **Captions are visible for the entire beat.** Fade in within the first 10–14 frames, stay on screen through the end. Never delay or fade out mid-beat.
-- **Captions rise in from below.** `translateY` starts at `+60px`, eases to `0` with `Easing.bezier(0.16, 1, 0.3, 1)`. Drive both `opacity` and `translateY` directly from `frame` — do not nest `interpolate` inside `interpolate`.
-- **Captions live at the top, always at the same position.** Fixed `top: 100`, centered. Use the `TopCaption` component — never position captions inline per scene.
+- **Captions rise in from below.** `translateY` starts at `+60px`, eases to `0` with `Easing.bezier(0.16, 1, 0.3, 1)`. Drive both `opacity` and `translateY` directly from `frame`. Do not nest `interpolate` inside `interpolate`.
+- **Captions live at the top, always at the same position.** Fixed `top: 100`, centered. Use the `TopCaption` component. Never position captions inline per scene.
 - **Captions are big.** 54px portrait / 42px landscape, weight 700, `maxWidth` + `padding` for wrapping.
 - **Caption names outcomes, not actions.** "Your audience, ready to message" beats "Click Create Segment."
 - **Same caption across connected beats uses `staticEntry`.** Pass `staticEntry` prop to `TopCaption` so the caption doesn't re-animate at the cut. Only use when text is identical across consecutive beats.
 - **Cursor leads every tap (mobile) or click (web).** Fade in at focal center → single straight move to target → tap fires. No teleporting, no curves, no multi-segment paths within one move.
 - **Multiple interactions on the same UI: pointer glides continuously.** Fade in once, glide tap-to-tap, fade out after the last interaction only.
 - **Different UI / new screen: reset the pointer.** Fade out, fade back in at center on the new screen.
-- **Illustrative beats have no cursor.** State reveals, glow rings, counters, result animations carry themselves — no cursor needed.
+- **Illustrative beats have no cursor.** State reveals, glow rings, counters, result animations carry themselves, no cursor needed.
 - **Use `pathLength="1"` for all SVG stroke animations.** Never hardcode pixel path lengths in `strokeDasharray`.
 - **Match the app's design language.** Colors, corner radii, and type from the supplied stills. Never restyle.
 
@@ -508,7 +508,7 @@ Render a preview, show it to the user, ask which beats need adjustment. Treat th
 
 - **Activation event is required.** Ask before planning any shots. Every beat is built backward from this moment.
 - **Stills are preferred; descriptions are acceptable.** If stills are unavailable, enter stills-free mode: produce styled placeholder divs, pre-wire `staticFile()` paths, output the stills collection table.
-- **Screen count must be confirmed** during intake — do not infer it from freetext.
+- **Screen count must be confirmed** during intake. Do not infer it from freetext.
 - **Drop-off archetype shapes the entire video's motion register.** Friction → fast and frictionless. Motivation → linger on result. Ability → deliberate and slow on the focal action.
 - **One activation event per video.** If the user describes multiple unrelated features, propose one video per activation event.
 - **Show the outcome, not the process.** The viewer should feel the payoff, not watch a tutorial.

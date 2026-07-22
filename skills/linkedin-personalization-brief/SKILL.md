@@ -5,7 +5,7 @@ description: Takes a prospect's LinkedIn profile text and outputs three distinct
 
 # LinkedIn Personalization Brief
 
-Read a prospect's LinkedIn profile and return three specific opening line angles — each one grounded in something real about that person.
+Read a prospect's LinkedIn profile and return three specific opening line angles, each one grounded in something real about that person.
 
 ## How to run
 
@@ -22,13 +22,13 @@ If the user only has a LinkedIn URL and no text, ask them to open the profile an
 
 Return three angles, labeled clearly:
 
-**Angle 1 — Based on something they posted or wrote**
+**Angle 1: Based on something they posted or wrote**
 Quote or closely reference specific content. The prospect should read this and think "they actually read my post." One sentence, under 25 words.
 
-**Angle 2 — Based on their career move**
+**Angle 2: Based on their career move**
 Reference the specific transition: previous role to current role, or a notable shift in direction. Frame it around their new priorities, not just the job change. One sentence, under 25 words.
 
-**Angle 3 — Based on a business challenge implied by their company's situation**
+**Angle 3: Based on a business challenge implied by their company's situation**
 Do not reference something the prospect personally wrote. Infer a challenge from their company's current stage or recent news and frame it as something they, in their specific role, would be responsible for solving. One sentence, under 25 words.
 
 After the three angles, add one line: which angle you recommend for a first cold email and why.
@@ -38,7 +38,7 @@ After the three angles, add one line: which angle you recommend for a first cold
 - No flattery ("I loved your post on...")
 - No vagueness ("I saw you work in marketing")
 - No manufactured urgency
-- Each angle must work as a standalone opening line — not a setup that requires more context
+- Each angle must work as a standalone opening line, not a setup that requires more context
 
 ## Quality check before returning
 
