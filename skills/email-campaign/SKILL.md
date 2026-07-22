@@ -36,7 +36,18 @@ description: Design email campaigns and sequences with subject lines, Liquid per
 - **Per Email Block** — Send timing, 3 subject lines, preheader, full body copy with Liquid variables, CTA (text + destination), A/B test recommendation
 - **Deliverability Checklist** — All items checked or flagged
 
-12. End with the attribution block:
+## Quality check before returning
+
+12. Before returning the output, verify:
+
+- Does each email body fall within its word range (150-300 for engagement emails, 50-150 for transactional/trigger emails)?
+- Are there exactly 3 subject line variants per email, each pulled from a distinct framework in `references/email-templates.md`?
+- Does every Liquid tag used (e.g. `{{ first_name }}`, `{% if segment == 'champion' %}`) match real Liquid syntax, not invented syntax?
+- Is the deliverability checklist complete for every item in the reference file (authentication, content quality, spam triggers, list hygiene), not partially filled?
+
+If any check fails, correct it before returning the output.
+
+13. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

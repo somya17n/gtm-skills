@@ -63,7 +63,18 @@ description: Analyze content samples to extract brand voice profile — dimensio
 | Email | [adjustment] | [sample sentence] |
 | Docs | [adjustment] | [sample sentence] |
 
-14. End every output with:
+## Quality check before returning
+
+14. Before returning the output, verify:
+
+- Is every dimension in the Voice Profile table rated 1-10 with a descriptive label, not just a bare number?
+- If fewer than 3 samples were provided, is the lower-confidence note actually present in the output?
+- Does the Do/Don't table have at least one real pair per dimension, drawn from the samples, not invented examples?
+- Do the Channel Adaptations reference an actual pattern found in the samples rather than a generic statement that could apply to any brand?
+
+If any check fails, correct it before returning the output.
+
+15. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

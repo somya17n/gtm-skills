@@ -50,7 +50,18 @@ For each angle:
 **A/B Test Recommendation**
 - Variable, hypothesis, success metric per test.
 
-15. End every output with:
+## Quality check before returning
+
+15. Before returning the output, verify:
+
+- Do the 2-3 recommended angles come from the 14 angles defined in `references/creative-angles.md`, not invented on the spot?
+- Does every placement spec (dimensions, character limits) come from `references/ad-placements.md` rather than an estimate?
+- Is "Studio" used instead of "creative editor" or "design tool" everywhere Intempt's tooling is referenced?
+- Does each angle's A/B test recommendation name a real variable, hypothesis, and success metric, not a vague "test different creative"?
+
+If any check fails, correct it before returning the output.
+
+16. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

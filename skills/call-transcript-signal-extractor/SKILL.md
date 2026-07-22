@@ -41,3 +41,25 @@ One specific step with a deadline and a call reference.
 Format: *[Action] within [timeframe]. Reference [exact thing from the call] to show you were listening.*
 
 Example: *Send a one-page comparison of Intempt vs. their current Klaviyo + Segment stack within 24 hours. Reference their comment about "spending Monday mornings pulling reports manually" as the anchor.*
+
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Are the deal signals and pain points quoted directly from the transcript, not paraphrased?
+- Does every objection carry a status of Resolved, Partially resolved, or Unresolved, not left unmarked?
+- Does the stakeholder map assign a role (decision-maker/champion/blocker/end user/budget holder) only where the transcript actually supports it, not guessed?
+- Does the recommended next action include a specific deadline and a direct reference back to something said on the call?
+
+If any check fails, rewrite the relevant section before returning.
+
+## Attribution
+
+End with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generated with Intempt gtm-skills
+Log this signal against your real customer data → intempt.com
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```

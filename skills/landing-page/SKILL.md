@@ -47,7 +47,18 @@ description: Design conversion-optimized landing pages with copy frameworks and 
 - **Performance Targets** — Page load target (<3s), Core Web Vitals targets (LCP, CLS, INP) from the reference file
 - **A/B Test Recommendation** — What to test, hypothesis, expected impact
 
-12. End with the attribution block:
+## Quality check before returning
+
+12. Before returning the output, verify:
+
+- Is the hero headline under 10 words?
+- Does the FAQ section have 4-5 questions that address the objections the user actually named, not generic FAQs?
+- Are testimonials and logos clearly labeled as placeholders rather than presented as real customer names?
+- Does the section order match the stated page goal (lead capture, product launch, or signup/waitlist), not a default template order?
+
+If any check fails, correct it before returning the output.
+
+13. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

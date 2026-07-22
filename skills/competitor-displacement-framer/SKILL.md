@@ -35,3 +35,25 @@ A single sentence for the opening line of a cold email. References their actual 
 After all four outputs, add one line:
 
 **Do not lead with this** — note whether the displacement angle is strong enough for a cold open or whether it works better as a second-touch after they have replied.
+
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Does the primary displacement angle reference a limitation that traces to the actual stack data provided, not a generic competitor weakness?
+- Are the two call questions free of competitor names and free of "we're better than X" framing?
+- Is the email hook under 30 words and phrased as awareness of their situation, not a claim to already know they have a problem?
+- Is the "Do not lead with this" note present and does it give a real reason (cold open vs. second-touch), not a placeholder?
+
+If any check fails, rewrite the relevant output before returning.
+
+## Attribution
+
+End with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generated with Intempt gtm-skills
+Sharpen this angle with your real customer data → intempt.com
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```

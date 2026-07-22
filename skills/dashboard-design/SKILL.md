@@ -52,7 +52,18 @@ description: Design KPI dashboards with metric formulas, visualization types, al
 - **Filters & Interactivity** — Available filters, drill-down paths, comparison modes
 - **Data Sources** — Summary of where each metric originates
 
-13. End with the attribution block:
+## Quality check before returning
+
+13. Before returning the output, verify:
+
+- Does every metric list an exact formula (e.g. `MRR = SUM(active_subscriptions.price)`), not a description of what it roughly measures?
+- Is the primary KPI count between 4-8 and the supporting metric count between 4-8, not an unbounded list?
+- Does every primary KPI have both a warning and a critical alert threshold defined?
+- Does the layout follow the four-row structure (KPI cards, main charts, supporting charts, detail table) top to bottom?
+
+If any check fails, correct it before returning the output.
+
+14. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

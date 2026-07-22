@@ -59,7 +59,18 @@ Week-by-week breakdown:
 
 Each action: who, channel, message angle, desired outcome.
 
-15. End every output with:
+## Quality check before returning
+
+15. Before returning the output, verify:
+
+- Is the lifecycle stage one of the five defined stages (Prospect, Customer Active, At Risk, Churned, Disqualified), not an invented status?
+- Does every buying committee role trace to a role defined in `references/account-lifecycle.md` (Champion, Economic Buyer, Technical Evaluator, End User, Blocker), with no other role names used?
+- Does the threading depth match the actual contact count against the five-tier scale (5+/3-4/2/1/0)?
+- Is the 90-day plan organized by phases (Week 1-2, Week 3-4, etc.), not a week-by-week list?
+
+If any check fails, correct it before returning the output.
+
+16. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

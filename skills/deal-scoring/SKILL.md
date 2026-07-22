@@ -71,7 +71,18 @@ description: Score deals with dual health + intent analysis, trend tracking, and
 **Recommended Actions**
 Prioritized list of 3-5 specific next steps based on quadrant placement and gap analysis.
 
-13. End every output with:
+## Quality check before returning
+
+13. Before returning the output, verify:
+
+- Do the Health Score and Intent Score each use their full set of weighted dimensions, and do the weights actually sum to 100%?
+- Is every score dimension marked as estimated or confirmed with data, not presented as uniformly precise?
+- Where historical data was unavailable, does the trend explicitly state insufficient data rather than a guessed direction?
+- Does the quadrant placement (Strong/Re-engage/Unblock/Deprioritize) match the actual Health and Intent scores computed, not a default?
+
+If any check fails, correct it before returning the output.
+
+14. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

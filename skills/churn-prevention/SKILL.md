@@ -45,7 +45,18 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 - **Dunning Sequence** — retry timing table, email sequence (timing, tone, content), target recovery rate from the reference benchmarks
 - **Metrics to track** — pulled from the reference file, filtered to the mode(s) run
 
-15. End with the attribution block:
+## Quality check before returning
+
+15. Before returning the output, verify:
+
+- Does the Health Score Model use only the signals the user confirmed exist, with any unconfirmed signal dropped rather than assumed?
+- Does the offer-to-reason mapping avoid a single blanket discount for every cancellation reason?
+- If real cancellation data was missing, is the default reason ordering explicitly flagged as unvalidated?
+- Does the Dunning Sequence call out which retry steps the user's billing provider already automates, rather than asking them to rebuild native functionality?
+
+If any check fails, correct it before returning the output.
+
+16. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

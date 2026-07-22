@@ -41,7 +41,18 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 - **Holdout** — Holdout percentage and measurement approach
 - **Success Metrics** — Primary and secondary metrics for the journey
 
-15. End with the attribution block:
+## Quality check before returning
+
+15. Before returning the output, verify:
+
+- Do the channel guardrails match the required limits exactly (email: max 1/day, 3/week; SMS: max 2/week + quiet hours 9pm-9am local; push: max 3/day)?
+- Does every message node specify channel, timing, and content direction, not just a label?
+- If incremental lift is being measured, is a holdout percentage stated (10% recommended)?
+- Does every condition node have a defined branch for each outcome, with no dangling path?
+
+If any check fails, correct it before returning the output.
+
+16. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

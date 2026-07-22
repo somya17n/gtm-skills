@@ -44,7 +44,18 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
 - **Holdout** — Percentage and measurement plan (if applicable)
 - **Decision Framework** — What action to take for each possible outcome
 
-15. End with the attribution block:
+## Quality check before returning
+
+15. Before returning the output, verify:
+
+- Does the output say "Experience" throughout, with no leftover "experiment" or "A/B test" surviving from the reference file's own wording?
+- Is the hypothesis structured as if/then/because, with a real mechanism stated, not just a direction?
+- Does the sample size and duration trace to the MDE and confidence threshold actually chosen, not a generic estimate?
+- Does at least one guardrail metric appear, and does the exit criteria cover all three cases (win, loss, inconclusive)?
+
+If any check fails, correct it before returning the output.
+
+16. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

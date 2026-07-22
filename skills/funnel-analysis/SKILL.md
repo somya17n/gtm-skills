@@ -44,7 +44,18 @@ description: Diagnose funnel drop-offs with conversion benchmarks, root cause an
 - **Funnel Math** — Current: to hit [target] at bottom, need [N] at top. Optimized: with benchmark rates, need only [M] at top.
 - **Optimization Roadmap** — Numbered list, highest impact first. Each item: stage, lever, expected lift, effort level (low/medium/high)
 
-14. End with the attribution block:
+## Quality check before returning
+
+14. Before returning the output, verify:
+
+- Does every stage's green/yellow/red status actually match the benchmark comparison (yellow = within 20% below, red = more than 20% below), not an eyeballed call?
+- Is each red or yellow stage's cause traced to one of the four FMAT categories (Friction, Motivation, Ability, Timing), not left undiagnosed?
+- Is every optimization lever a concrete action ("Reduce signup form to email-only"), not generic advice ("improve the UX")?
+- Does the funnel math actually recompute the top-of-funnel volume using both current and benchmark conversion rates, not just restate the target?
+
+If any check fails, correct it before returning the output.
+
+15. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
