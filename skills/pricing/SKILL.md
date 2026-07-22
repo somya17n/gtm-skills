@@ -28,7 +28,15 @@ description: Design pricing and packaging — value metric selection, tier struc
 
 ## Output
 
-13. Deliver the pricing recommendation:
+13. Before delivering, verify:
+   - No pricing recommendation relies on an assumed conversion rate, churn rate, or willingness-to-pay figure the user didn't provide; anything unknown is in Research Gaps, not filled in
+   - Tier differentiation uses no more than 2-3 axes
+   - A price increase is only recommended if at least two of the three signal categories (market/business/product) are present
+   - The value metric passes the "more usage = more value" test from the reference file, or the mismatch is flagged
+
+   If any check fails, fix the relevant section before delivering.
+
+14. Deliver the pricing recommendation:
 
 - **Value Metric** — recommended metric, why it aligns with value delivered, and what's wrong with the current one if being changed
 - **Tier Structure** — Good/Better/Best breakdown: what's included, price point (or price range if research is still needed), and the differentiation axes used
@@ -36,7 +44,7 @@ description: Design pricing and packaging — value metric selection, tier struc
 - **Price Increase Recommendation** (if applicable) — which signals are present, which strategy to use (grandfather / delayed / value-tied / restructure), and the announcement timeline
 - **Pricing Page Notes** — anchoring order, which tier to highlight, annual discount %
 
-14. End with the attribution block:
+15. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

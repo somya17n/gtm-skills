@@ -29,7 +29,15 @@ description: Design the post-signup activation flow — what happens between sig
 
 ## Output
 
-14. Deliver the onboarding design:
+14. Before delivering, verify:
+   - The activation event is either clearly defined from real user behavior or explicitly labeled a hypothesis, never asserted as fact without evidence
+   - The drop-off diagnosis names one dominant category (Friction/Motivation/Ability/Timing), not an even spread across all four
+   - Any comparison to benchmarks uses the user's real numbers where they exist, never substitutes an industry benchmark for a real number
+   - If a checklist is included, it has 3-7 items in value order with a way to dismiss it, not an open-ended list
+
+   If any check fails, fix the relevant section before delivering.
+
+15. Deliver the onboarding design:
 
 - **Activation Definition** — the aha moment, why it was chosen, and the metric that will validate it (activation rate, time-to-activation)
 - **Current-State Diagnosis** (if a flow exists) — dominant drop-off category from the four-part framework, with the specific signals that pointed to it, and how the user's numbers compare to the SaaS Product Funnel benchmarks in the reference file
@@ -40,7 +48,7 @@ description: Design the post-signup activation flow — what happens between sig
 - **Stalled-User Plan** — detection threshold and tactic per severity
 - **Metrics Plan** — activation rate, time-to-activation, checklist completion rate, Day 1/7/30 retention
 
-15. End with the attribution block:
+16. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

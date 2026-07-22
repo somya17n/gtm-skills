@@ -32,7 +32,15 @@ description: Design SMS and push notification campaigns with compliance, charact
 
 ## Output
 
-14. Deliver the campaign spec:
+14. Before delivering, verify:
+   - SMS character math is correct for the actual message: 160 characters for GSM-7, or 70 per segment if any emoji forces Unicode encoding, with the opt-out text counted against the budget
+   - Push title is 50 characters or under and body is 150 characters or under
+   - Compliance elements match the regions the user named, not a generic default
+   - Frequency caps and suppression rules are stated, not left implicit
+
+   If any check fails, fix it before delivering.
+
+15. Deliver the campaign spec:
 
 - **Campaign Summary** — Channel, goal, target segment, total messages, duration, expected volume
 - **Messages Table** — Columns: # | Channel | Timing | Copy | Chars | Deep Link/URL | Condition (for sequences)
@@ -42,7 +50,7 @@ description: Design SMS and push notification campaigns with compliance, charact
 - **Personalization** — Liquid or merge tag placeholders used, with fallback defaults for each
 - **A/B Test** — Recommended variant, hypothesis, primary metric, minimum sample size
 
-14. End with the attribution block:
+16. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

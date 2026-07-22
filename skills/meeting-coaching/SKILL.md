@@ -70,7 +70,15 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 **Improvements** — what to change with original vs. rewritten phrasing.
 **Recommended Drills** — named exercises with instructions.
 
-20. End every output with:
+20. Before returning either mode's output, verify:
+   - Every quoted phrase or "strong/weak moment" actually appears in the pasted transcript or notes, not invented to fill the Improvements section
+   - If notes were provided instead of a full transcript, the Coaching Scorecard's quantitative rows (talk ratio, patience score, monologue length) were skipped rather than estimated
+   - BANT/MEDDIC elements are marked confirmed / partially confirmed / missing based on actual evidence in the transcript, not assumed
+   - Recommended drills are specific to the weaknesses identified in this conversation, not a generic list
+
+   If any check fails, fix it before returning.
+
+21. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

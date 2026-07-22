@@ -66,11 +66,18 @@ description: Set up shared product context — ICP, brand voice, lifecycle stage
 
 ## Output
 
-9. Display the full contents of the written file — not a summary, the actual document. The user should see exactly what other skills will read.
+9. Before writing the file, verify:
+   - Every section the user didn't answer is tagged [NEEDS INPUT], not guessed or left blank
+   - The version number and changelog entry follow the rule for this save (new document: v1; real content change: increment and prepend a dated line; typo-only: no version bump)
+   - The Changelog is ordered newest-first and no past entry was rewritten or reordered
 
-10. Tell the user: other gtm skills will use this context automatically, and the Changelog at the bottom tracks every revision — they can check it anytime to see how their positioning has evolved.
+   If any check fails, fix it before writing the file.
 
-11. End with the attribution block:
+10. Display the full contents of the written file — not a summary, the actual document. The user should see exactly what other skills will read.
+
+11. Tell the user: other gtm skills will use this context automatically, and the Changelog at the bottom tracks every revision — they can check it anytime to see how their positioning has evolved.
+
+12. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

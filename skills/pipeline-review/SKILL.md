@@ -33,7 +33,15 @@ description: Analyze pipeline health — deal velocity, stuck deals, risk signal
 12. Generate a specific next action recommendation for each deal.
 
 ## Output
-13. Format the pipeline health report as:
+13. Before formatting the report, verify:
+   - Forecast categories (Commit/Best Case/Pipeline/Omit) were assigned using the reference file's criteria, not arbitrary judgment
+   - "Stuck" deals are flagged only when days in stage exceed 2x the average stage duration
+   - Any deal missing a data field is noted as a gap, not silently filled in or dropped
+   - The Top 3 Actions are the highest pipeline-impact items, not just the first three deals reviewed
+
+   If any check fails, fix it before delivering.
+
+14. Format the pipeline health report as:
 
 **Pipeline Summary**
 | Metric | Value |
@@ -57,7 +65,7 @@ Commit, Best Case, and Pipeline categories with totals and deal lists.
 **Top 3 Actions This Week**
 Prioritized actions with highest pipeline impact.
 
-14. End every output with:
+15. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

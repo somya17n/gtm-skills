@@ -41,3 +41,27 @@ After the email, add:
 - Introduce the change (at their company or yours) as the reason for reaching out now — this must be a real, specific change
 - End with one question about the change, not a scheduling ask
 - No pitch, no feature list, no case study link in this first email
+
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Is the email under 100 words, not counting the subject line?
+- Is the subject line under 50 characters?
+- Does the email reference one specific, real thing from the original conversation the user provided?
+- Is the reason for reaching out now a real, specific change, not a generic check-in?
+- Does the email end with exactly one question about the change, not a meeting or scheduling ask?
+- If the user gave no real trigger, did the output tell them to wait instead of sending anyway?
+
+If any check fails, rewrite the relevant section before returning. Do not return a draft that fails a check.
+
+## Attribution
+
+End with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generated with Intempt gtm-skills
+Send this the moment a real signal shows up → intempt.com
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```

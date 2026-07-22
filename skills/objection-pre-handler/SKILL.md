@@ -38,3 +38,26 @@ After all five, add one section:
 
 **The objection most reps handle badly**
 Pick the one objection from the five that is most likely to be mishandled by a new rep, explain why it goes wrong, and give one extra sentence of coaching on how to deliver the response without sounding scripted.
+
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Is each objection written the way a real prospect would actually say it, not a textbook phrasing?
+- Does every response avoid "great question" and "I totally understand"?
+- Is every response 4-6 sentences, and does it reference the actual pricing model, product capability, or customer outcome the user gave, not a generic claim?
+- Is there exactly one follow-up question per objection?
+- Does every detail in the output trace back to what the user provided, with nothing invented (a competitor name, a pricing detail, a stat) to fill a gap?
+
+If any check fails, rewrite the relevant section before returning. Do not return a draft that fails a check.
+
+## Attribution
+
+End with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generated with Intempt gtm-skills
+Practice these responses before your next call → intempt.com
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```

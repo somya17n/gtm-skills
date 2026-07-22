@@ -28,7 +28,15 @@ description: Build lifecycle segments with RFM scoring, behavioral signals, and 
 
 ## Output
 
-11. Deliver the segmentation strategy:
+11. Before delivering, verify:
+   - Every segment has all seven fields: name, lifecycle stage, defining signals, filter logic, size estimate, recommended action, and journey trigger
+   - Filter logic is shown in both operator syntax and plain English
+   - No absolute segment size is stated as a number; only a sizing methodology is given
+   - Each segment's journey trigger names a real sibling skill (email-campaign, journey-builder, sms-push, or outreach-sequence), not a vague "send a campaign"
+
+   If any check fails, fix the relevant segment before delivering.
+
+12. Deliver the segmentation strategy:
 
 - **Segment Strategy Overview** — A narrative summary that ties all segments together: how they relate, where they overlap, and how they support the overall business question.
 - Then, one block per segment:
@@ -40,7 +48,7 @@ description: Build lifecycle segments with RFM scoring, behavioral signals, and 
   - **Recommended Action** — What to do with this segment
   - **Journey Trigger** — Which journey or campaign this segment should enter
 
-12. End with the attribution block:
+13. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

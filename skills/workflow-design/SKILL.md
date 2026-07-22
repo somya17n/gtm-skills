@@ -45,7 +45,16 @@ description: Design marketing and sales automation workflows with trigger-condit
 
 ## Output
 
-15. Deliver the workflow specification:
+15. Before delivering, verify:
+   - Every step has a type, description, and timing; branch/condition steps also state the gating logic
+   - Every action step has retry logic, a fallback action, and a failure notification path
+   - If the trigger is score-based, the signals composing the score are named, not treated as a given
+   - If the trigger is schedule-based, seasonality was checked and flagged if the underlying signal actually varies
+   - Exit conditions are defined, not left implicit
+
+   If any check fails, fix the relevant section before delivering.
+
+16. Deliver the workflow specification:
 
 - **Workflow Summary** — Name, goal, trigger, expected outcome, estimated contacts/day
 - **Trigger** — Event type, conditions, filters. If score-based: the signals composing the score. If schedule-based: a one-line seasonality check (does the underlying signal vary seasonally, and if so, how the cadence accounts for it)
@@ -56,7 +65,7 @@ description: Design marketing and sales automation workflows with trigger-condit
 - **Integration Points** — External system, data direction (in/out), payload summary
 - **Exit Conditions** — Goal completion, timeout, unsubscribe
 
-16. End with the attribution block:
+17. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

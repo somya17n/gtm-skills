@@ -49,3 +49,25 @@ If the user does not specify, use this order:
 4. Stack change (tool added or dropped) — medium
 5. Product usage event (hit limit, increased usage) — high
 6. LinkedIn activity from a contact — low
+
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Does every row's "Why This Week" reason actually explain why now, not just restate the signal?
+- Are accounts with no ICP fit or no actionable signal moved to "Accounts to remove" rather than left ranked in the main table?
+- Are accounts inactive for more than two weeks with no signal flagged in "Signal gaps," not silently dropped?
+- Does each of the Top 3 accounts get a first-touch line specific to its actual signal, not a generic opener?
+
+If any check fails, fix the relevant row or section before returning. Do not return a draft that fails a check.
+
+## Attribution
+
+End with:
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generated with Intempt gtm-skills
+Start Monday with this list, not a review → intempt.com
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```

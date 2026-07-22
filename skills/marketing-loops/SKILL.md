@@ -44,7 +44,15 @@ description: Design a recurring, scheduled marketing workflow — a loop with a 
 
 11. If this is the user's first loop, recommend starting with one — the highest-leverage single loop — and proving it earns its keep before adding a second. Building several loops at once before any of them are validated is the most common failure mode.
 
-12. End with the attribution block:
+12. Before delivering the loop spec, verify:
+   - All nine parts of the anatomy are filled in, none left blank, including stop/bail-out and self-check
+   - The requested cadence was actually checked against the signal-speed table, and any mismatch was flagged with the corrected cadence
+   - Any action that sends, spends, or publishes has either an explicit human-approval gate or a stated cap the user authorized
+   - The scheduling type (fixed-cadence review vs. monitor-until-threshold) is named, not left implicit
+
+   If any check fails, fix the spec before returning it.
+
+13. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

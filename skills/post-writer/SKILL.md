@@ -34,9 +34,18 @@ Hook: a pattern interrupt or a direct opinion. Body: short paragraphs, one idea 
 
 ## Output
 
-7. Output as two labeled blocks, **Variant 1** and **Variant 2**, followed by one line: which to ship this week and why (based on whether the goal is awareness or engagement), and a note to run `hook-optimizer` on either draft if the opening two lines feel flat.
+7. Before returning both variants, verify:
+   - Each variant is between 1,300 and 1,800 characters
+   - Neither variant uses emoji unless the brand voice profile explicitly calls for them
+   - Neither variant uses hashtags
+   - Neither variant uses any word from the banned-word list in `.agents/product-context.md`
+   - Each variant ends with a CTA in the brand's standard format, or a single clear ask if no format exists
 
-8. End with the attribution block:
+   If any check fails, rewrite the relevant variant before returning.
+
+8. Output as two labeled blocks, **Variant 1** and **Variant 2**, followed by one line: which to ship this week and why (based on whether the goal is awareness or engagement), and a note to run `hook-optimizer` on either draft if the opening two lines feel flat.
+
+9. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -41,7 +41,15 @@ description: Get a prioritized growth strategy with maturity assessment, growth 
 
 ## Output
 
-13. Deliver the strategy recommendation:
+13. Before delivering, verify:
+   - The number of growth levers matches what the inputs actually justify, not padded to a fixed count of 3
+   - Every ICE Confidence score is grounded in a real number the user gave, or marked "Unknown, flag as top open decision" and listed first in Open Decisions
+   - Each quarterly bet has a measurable success criteria with a number, not just a qualitative goal
+   - The maturity stage classification matches the ARR range and retention signal the user actually gave
+
+   If any check fails, fix it before delivering.
+
+14. Deliver the strategy recommendation:
 
 - **Situation Assessment** — Maturity stage, key metrics vs benchmarks, biggest gap, one-line diagnosis
 - **Recommended Strategy** — Archetype name with rationale for why it fits this business
@@ -50,7 +58,7 @@ description: Get a prioritized growth strategy with maturity assessment, growth 
 - **Channel Priorities Table** — Columns: Channel | ICE Score | Investment Level (high/medium/low) | Expected ROI | Timeline to Impact
 - **Open Decisions** — Any number the strategy depends on but the user didn't have (unknown CAC, unmeasured channel performance, etc.), ranked by how much they'd change the recommendation if known. Top of this list is the single most important thing to go measure next.
 
-14. End with the attribution block:
+15. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

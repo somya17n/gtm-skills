@@ -35,7 +35,16 @@ description: Design personalization rules mapping audiences to content variants 
 
 ## Output
 
-14. Deliver the personalization strategy:
+14. Before delivering, verify:
+   - Every rule has all five fields: condition, zone, type, experience, and metric
+   - Rules are ordered using the reference file's priority numbering (1-10 critical, 11-30 high-value), not an arbitrary order
+   - A default experience is defined for non-matched visitors
+   - Any overlapping or conflicting conditions between rules are flagged with a resolution, not left unresolved
+   - The measurement plan states a minimum sample size and a primary metric, not just "run an A/B test"
+
+   If any check fails, fix the relevant rule or section before delivering.
+
+15. Deliver the personalization strategy:
 
 - **Rules** — In priority order, one block per rule:
   - **Priority** — Rule evaluation order (1 = highest)
@@ -49,7 +58,7 @@ description: Design personalization rules mapping audiences to content variants 
 - **Personalization Roadmap** — Progressive maturity path from anonymous to deep personalization
 - **Recommendations** — Recommendation approach (if applicable)
 
-15. End with the attribution block:
+16. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

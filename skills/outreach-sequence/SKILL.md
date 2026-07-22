@@ -27,7 +27,15 @@ description: Design multi-channel cold outreach sequences — email, LinkedIn, p
 13. Specify A/B test recommendations — identify which variables to test at each stage (subject lines, CTA phrasing, send time, channel order).
 
 ## Output
-14. Format the complete outreach sequence as follows:
+14. Before formatting the final output, verify:
+   - Every email touch has 2 subject line variants
+   - `{{trigger_event}}` placeholders were removed if the user did not provide a trigger event
+   - Metrics targets are pulled from the benchmark ranges in `references/outreach-cadences.md`, adjusted for the user's deal segment, not invented
+   - Every touch has a stated fallback if there is no response
+
+   If any check fails, fix it before delivering.
+
+15. Format the complete outreach sequence as follows:
 
 **Sequence Overview**
 - Target persona, channels used, total duration, number of touches, conversion goal.
@@ -53,7 +61,7 @@ Populate the targets table using the benchmark ranges from `references/outreach-
 | Meeting booked rate | X% |
 | Positive response rate | X% |
 
-15. End every output with:
+16. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

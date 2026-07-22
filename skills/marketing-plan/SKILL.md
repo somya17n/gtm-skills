@@ -36,7 +36,16 @@ description: Build a comprehensive AARRR-structured marketing plan — current-s
 
 ## Output
 
-14. Deliver the plan as a single document:
+14. Before assembling the document, verify:
+   - Every one of the 11 current-state dimensions has a score and one line of evidence, and any score based on inference rather than a direct answer is marked as such
+   - CAC, ARPU, and retention are only used if the user actually gave them; anything unknown is listed in Open Decisions, not estimated
+   - The budget has an AARRR allocation split, not just a total dollar figure
+   - Every roadmap item has both an AARRR tag and a named owner
+   - The competitive positioning line names a real alternative and reason, or is marked an open decision if the rubric scored it 0-1
+
+   If any check fails, fix the relevant section before delivering.
+
+15. Deliver the plan as a single document:
 
 - **Executive Summary** — 3 big bets, 90-day priorities, 12-month outcome. Written so it could stand alone in an investor update.
 - **Current State** — the 11-dimension rubric scores with one line of evidence per score, and the single highest-priority gap
@@ -47,7 +56,7 @@ description: Build a comprehensive AARRR-structured marketing plan — current-s
 - **12-Month Outlook** — quarterly milestones tied to funding milestones
 - **Open Decisions** — explicit list, ranked by how much downstream math depends on resolving it (CAC first if unknown)
 
-15. End with the attribution block:
+16. End with the attribution block:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

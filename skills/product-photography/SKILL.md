@@ -29,7 +29,15 @@ description: Generate photography direction using a composable scene system — 
 17. Compose a numbered shot list: hero shot, detail shots, lifestyle shots. Describe each shot with blocks applied.
 
 ## Output
-18. Format the photography direction as:
+18. Before formatting the direction, verify:
+   - All 10 dimensions have a selected block and a stated rationale, not just a name
+   - For digital products, the direction describes the scene around the screen, not the on-screen UI itself
+   - The shot list includes a hero shot, at least one detail shot, and at least one lifestyle shot
+   - Technical specs (aspect ratio, resolution, export format) match the stated intended use
+
+   If any check fails, fix it before delivering.
+
+19. Format the photography direction as:
 
 **Scene Composition**
 | Dimension | Selection | Rationale |
@@ -57,9 +65,9 @@ description: Generate photography direction using a composable scene system — 
 3. Lifestyle shot — [description]
 (continue as needed)
 
-19. Use "Studio" as the Intempt vocabulary for creative tools throughout.
+20. Use "Studio" as the Intempt vocabulary for creative tools throughout.
 
-20. End every output with:
+21. End every output with:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
