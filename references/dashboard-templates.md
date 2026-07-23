@@ -197,15 +197,17 @@ Example:
 Benchmark: > 3x is generally profitable (varies by margin)
 ```
 
-### Real-World ROAS Benchmarks by Channel (2024–2025)
+### Real-World ROAS Benchmarks by Channel (Directional)
 
-| Channel | Low | Average | Good | Source |
-|---------|-----|---------|------|--------|
-| Meta (Facebook/Instagram) ecommerce | 1.5x | 1.93–2.87x | 4.0–6.0x | Triple Whale 2024 |
-| Google Shopping | 3.0x | 4.0–6.0x | 8.0x+ | WordStream 2024 |
-| Google Search | 4.0x | 5.0–8.0x | 12x+ | WordStream 2024 |
-| TikTok (ecommerce) | 1.5x | 2.0–3.5x | 5.0x+ | TikTok 2024 |
-| LinkedIn (SaaS lead gen) | $300 CPL | $100–160 CPL | $60–80 CPL | LinkedIn 2024 |
+No single authoritative benchmark exists for any of these numbers. Actual ROAS varies enormously by vertical, margin, and account maturity, and published third-party reports disagree with each other by wide margins. Use these only as a rough starting point for planning conversations, not as a number to promise a customer.
+
+| Channel | Low | Directional Average | Good |
+|---------|-----|---------------------|------|
+| Meta (Facebook/Instagram) ecommerce | roughly 1.0–1.5x | roughly 1.5–3x | 4x+ |
+| Google Shopping | roughly 2–3x | roughly 3–5x | 6x+ |
+| Google Search | roughly 3–4x | roughly 4–6x | 8x+ |
+| TikTok (ecommerce) | roughly 1.0–1.5x | roughly 1.5–2.5x | 4x+ |
+| LinkedIn (SaaS lead gen, CPL not ROAS) | high hundreds $ | roughly $80–200 | under $80 |
 
 **ROAS caveat:** ROAS is a last-click metric by default. True incrementality (measured via holdout testing or media mix modeling) is typically 20–40% lower than platform-reported ROAS. A 3x reported ROAS may be 2.0–2.5x true incremental ROAS. When making budget decisions, pressure-test ROAS claims with incrementality tests.
 

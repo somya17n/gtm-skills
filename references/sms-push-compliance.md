@@ -315,37 +315,35 @@ CTA: See What's New
 
 ---
 
-## Real-World SMS and Push Performance Benchmarks (2024–2025)
+## SMS and Push Performance, Directional Ranges
 
-Sourced from Omnisend, Klaviyo, OneSignal, and Braze state-of-messaging reports.
+SMS and push platforms each publish their own performance reports, but sample composition, industry mix, and definitions of "conversion" differ enough between them that no single number is authoritative across senders. Use the ranges below to sanity-check your own numbers, not as a figure to promise a customer.
 
-### SMS Performance Benchmarks
+### SMS Performance (Directional)
 
-| Metric | Average | Good | Top 10% | Source |
-|--------|---------|------|---------|--------|
-| SMS open rate | 90–98% | — | — | Omnisend 2024 |
-| SMS CTR — campaigns | **7.6%** | 10–15% | 20%+ | Omnisend 2024 (n=2B+ messages) |
-| SMS CTR — automations | **9.4%** | 12–18% | 25%+ | Omnisend 2024 |
-| SMS CVR (click → purchase, 24hr) | 29% | 40%+ | — | Klaviyo 2024 |
-| SMS vs. email CVR | SMS 5–10x higher | — | — | Omnisend 2024 |
-| Opt-out rate (healthy) | < 0.1% | — | — | Omnisend / CTIA |
-| Cart abandonment SMS CVR | 5–8% | 10–15% | — | Klaviyo 2024 |
-| Revenue per SMS sent | $0.45–0.70 | $1.00+ | — | Klaviyo 2024 |
+| Metric | Typical Range | Notes |
+|--------|---------------|-------|
+| SMS open rate | 90%+ | One of the more consistent figures across sources, SMS gets read far more than email |
+| SMS CTR, one-off campaigns | Mid single digits to low teens percent | Varies heavily by list quality and offer |
+| SMS CTR, triggered automations | Noticeably higher than campaigns | Behavior-triggered sends consistently beat scheduled broadcasts, the exact multiple varies a lot and isn't stable enough to quote |
+| SMS click-to-purchase rate (short window) | Low tens of percent | Wide range by vertical and cart value |
+| Healthy opt-out rate | Well under 1% per send | Rising opt-outs signal a frequency or targeting problem |
+| Revenue per SMS sent | Sub-dollar, varies by average order value | Not a stable cross-industry figure |
 
-**Key insight:** SMS automations (triggered by behavior) outperform SMS campaigns (scheduled broadcasts) by 24% on CTR. Trigger your SMS, don't schedule it.
+**Directional pattern, not a guaranteed lift:** triggered SMS automations reliably beat scheduled campaign blasts on click rate in every report we reviewed. Don't quote a specific percentage lift as fact, there's no single authoritative source for it.
 
-### Push Notification Performance Benchmarks
+### Push Notification Performance (Directional)
 
-| Metric | iOS Average | Android Average | Source |
-|--------|------------|----------------|--------|
-| Opt-in rate | **44%** | **91%** | OneSignal 2024 |
-| Open/CTR (mobile app push) | 4–6% | 5–8% | OneSignal 2024 |
-| Open/CTR (web push) | 2–4% | 2–4% | OneSignal 2024 |
-| Permission revoke rate (monthly) | 0.5–1.5% | 0.3–0.8% | OneSignal 2024 |
-| Personalized push CTR vs. generic | +2.2x | — | Braze 2024 |
-| Triggered push (behavioral) vs. broadcast | 3x higher CTR | — | Braze 2024 |
+| Metric | Typical Range | Notes |
+|--------|---------------|-------|
+| Opt-in rate, iOS | Roughly 20-55%, highly context-dependent | iOS requires an explicit permission prompt, so opt-in is never automatic |
+| Opt-in rate, Android | Roughly 30-90%, highly context-dependent and trending down | Newer Android versions have moved closer to iOS's model, so older "Android auto-opts-in" figures are dated |
+| Open/CTR, mobile app push | Low single digits to high single digits percent | |
+| Open/CTR, web push | Low single digits percent | |
+| Personalized push vs. generic push | Personalized consistently outperforms | Exact multiplier isn't stable enough to quote as a fixed figure |
+| Triggered (behavioral) push vs. broadcast push | Triggered consistently outperforms | Same caveat, directional only |
 
-**Push opt-in reality:** iOS requires explicit permission prompt — only 44% of iOS users say yes. Android grants permission automatically (91%). This creates a large gap in addressable audience. On iOS, how and when you show the permission prompt matters enormously — apps that pre-condition users with a "why" before the system prompt achieve 60%+ opt-in rates.
+**Push opt-in reality:** iOS requires an explicit permission prompt, so opt-in rates depend heavily on app category and how the prompt is framed. Android's opt-in behavior has shifted with recent OS versions and is no longer reliably near-automatic. How and when you show the permission prompt matters enormously, apps that pre-condition users with a "why" before the system prompt tend to see meaningfully higher opt-in.
 
 ### SMS vs. Push vs. Email: Channel Comparison
 

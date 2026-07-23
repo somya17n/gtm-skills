@@ -330,66 +330,59 @@ Google automatically generates ad combinations from uploaded assets:
 
 ---
 
-## Paid Ad Performance Benchmarks (2024–2025)
+## Paid Ad Performance Benchmarks (Directional)
 
-Real-world performance data from WordStream, NAV43, Triple Whale, Madgicx, and LinkedIn Marketing Solutions. These are population averages — not top-performer cherry-picks.
+No single authoritative benchmark exists for any of these numbers. Every platform's real performance varies heavily by vertical, account maturity, creative quality, and geography, and third-party reports disagree with each other by wide margins. Treat everything below as a directional starting range for planning conversations, not a guarantee or a number to quote as fact to a customer.
 
 ### LinkedIn Ads
 
-| Format | CTR (Average) | CPL (SaaS) | CPC (Average) | Source |
-|--------|-------------|------------|--------------|--------|
-| Single Image Ad | **0.40–0.60%** | $100–160 | $8–15 | LinkedIn Marketing Solutions 2024 |
-| Carousel Ad | 0.30–0.50% | $120–180 | $10–18 | LinkedIn Marketing Solutions 2024 |
-| Video Ad | 0.20–0.40% | $130–200 | $12–20 | NAV43 LinkedIn Benchmark 2024 |
-| Conversation Ad | 1.5–3% open rate | $60–100 | N/A (per send) | LinkedIn 2024 |
-| Thought Leader Ad | 0.50–1.0% | $80–130 | $6–12 | LinkedIn Marketing Solutions 2024 |
-| Document Ad | 0.60–0.90% | $90–140 | $7–14 | NAV43 2024 |
+| Metric | Directional Range |
+|--------|-------------------|
+| CTR (blended, all formats) | roughly 0.3–1.0% |
+| CPC | roughly $6–20, highest of the major ad platforms |
+| CPL (SaaS lead gen) | roughly $80–200, higher for enterprise ICPs |
+| Click → demo request conversion rate | roughly mid-single-digit to low-teens percent for strong landing pages |
 
-**LinkedIn SaaS benchmarks:**
-- Average CPL: $100–160 (high-value leads, justifiable for $500+ ACV products)
-- Average CPC: $8–15 (higher than all other platforms due to B2B audience premium)
-- Average CTR: 0.44% across all formats
-- Conversion rate (click → demo request): 5–12% for strong landing pages
-- LinkedIn ads best for: ACV $5,000+ products targeting VP/Director+ personas
+**LinkedIn SaaS notes:**
+- CPC on LinkedIn tends to run well above Meta and Google, consistent with a B2B audience premium
+- LinkedIn ads are generally best suited to ACV $5,000+ products targeting VP/Director+ personas
+- Format-level differences (single image vs. carousel vs. video vs. conversation ads) are real but not consistent enough across accounts to state as fixed numbers
 
 ### Meta (Facebook + Instagram) Ads
 
-| Metric | Average (All Industries) | Ecommerce | SaaS / B2B | Source |
-|--------|------------------------|-----------|-----------|--------|
-| CTR (Feed) | **0.89%** | 0.85–1.2% | 0.55–0.80% | WordStream 2024 |
-| CPC | $1.01–1.72 | $0.50–1.50 | $2.50–4.00 | WordStream 2024 |
-| CPM | $8–14 | $6–12 | $12–20 | Madgicx Q1 2025 |
-| CPM YoY change | +19.2% (Q1 2025 vs Q1 2024) | — | — | Madgicx 2025 |
-| ROAS (ecommerce) | **1.93–2.87x** | 2.5–4.0x (top 25%) | — | Triple Whale 2024 |
-| ROAS — top quartile | 4.0–6.0x | — | — | Triple Whale 2024 |
-| CVR (click → purchase) | 2.8–3.3% | 2.0–5.0% by category | — | Meta Ads 2024 |
-| CPL (lead gen) | $12–30 | — | $50–120 | WordStream 2024 |
+| Metric | Directional Range |
+|--------|-------------------|
+| CTR (feed) | roughly 0.5–2%, varies widely by objective and creative |
+| CPC | roughly $0.50–2.00 for traffic/awareness objectives, higher for lead-gen objectives |
+| CPM | trending upward year over year across most accounts; no fixed number should be quoted |
+| ROAS (ecommerce) | roughly 1.5–3x is a common range; top performers run well above that |
+| CPL (lead gen) | roughly $15–80, wide swing by industry |
 
-**What's happening in Meta in 2025:**
-- CPMs rising steadily — creative quality gap between top and average advertisers is widening
-- Reels/video placements typically 20–30% cheaper CPM than feed placements
-- Broad targeting is outperforming narrow interest targeting for ecommerce (Meta's AI has better data than most interest stacks)
-- For SaaS/B2B: Meta works well for retargeting and brand awareness; LinkedIn better for cold outbound to high-ACV prospects
+**What's generally true of Meta:**
+- CPMs have trended upward industry-wide for several years running; the exact rate varies too much by report to state a precise figure
+- Reels/video placements are widely believed by practitioners to run cheaper than feed placements, but this is directional, not a fixed discount
+- For SaaS/B2B: Meta is generally used for retargeting and brand awareness; LinkedIn is used more for cold outbound to high-ACV prospects
 
 ### Google Ads
 
-| Format | CVR (Average) | CTR | CPC | Source |
-|--------|-------------|-----|-----|--------|
-| Search (all industries) | **4.2–6.1%** | 4.1–6.3% | $2.69 | WordStream 2024 |
-| Search (SaaS) | 3.8–5.5% | 3.5–5.5% | $3.50–8.00 | WordStream 2024 |
-| Search (ecommerce) | 2.0–3.5% | 2.0–4.0% | $1.00–2.50 | WordStream 2024 |
-| Shopping | **2.69%** average CVR | 0.86% | $0.66 | WordStream 2024 |
-| Display | 0.57% CVR | 0.35% | $0.63 | WordStream 2024 |
-| Performance Max | 3.5–7.5% CVR | varies | varies by goal | Google 2024 |
+| Format | Directional CTR | Directional CPC | Directional CVR |
+|--------|-----------------|------------------|-------------------|
+| Search (overall) | roughly 4–7% | roughly $2–6 | roughly 4–8% |
+| Display (overall) | well under 1%, often around 0.3–0.6% | roughly $0.50–1.00 | well under 1%, often around 0.3–0.6% |
+| Shopping / Performance Max | varies enormously by catalog and margin; no reliable single range | n/a | n/a |
+
+Blended ROAS across Google Ads campaign types is commonly cited in the low-single-digits-to-mid-single-digits range (roughly 3–5x), but this varies enormously by industry and should not be quoted as a fixed benchmark.
 
 ### TikTok Ads
 
-| Metric | Average | Source |
-|--------|---------|--------|
-| CTR | 0.7–1.2% | TikTok for Business 2024 |
-| CPM | $3.50–10 | TikTok 2024 |
-| CVR (click → purchase) | 1.0–2.5% (ecommerce) | TikTok 2024 |
-| Best performing length | 21–34 seconds | TikTok internal data |
+| Metric | Directional Range |
+|--------|-------------------|
+| CTR | roughly 0.5–2%, trending upward as the platform matures for direct response |
+| CPM | roughly $5–15, has been rising as more advertisers shift budget onto the platform |
+| ROAS (ecommerce) | roughly 1.5–2.5x is a common range |
+| CPA | varies enormously by vertical; no reliable single figure |
+
+Claims about an exact "best-performing video length" (e.g. a specific second range) are not backed by any verifiable published source and should not be cited as fact. Shorter, native-feeling video is directionally understood to outperform long-form ads, without a precise cutoff.
 
 ---
 

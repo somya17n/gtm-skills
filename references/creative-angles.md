@@ -223,7 +223,7 @@ Every creative asset starts with a brief that specifies these fields:
 
 ## Ad Creative Copy Research: What Performs
 
-Deep-research findings on ad creative and copy that converts. Sourced from Meta's own performance data, Kantar/System1 ad testing research, AdEspresso, Motion (formerly AdEspresso's analytics platform), DTC practitioner communities (r/ecommerce, Foxwell Digital), and TikTok Creative Best Practices.
+Patterns commonly observed and repeated across ad-creative practitioner communities and agency guides. No single authoritative study backs every claim below, so treat these as directional patterns worth testing, not guaranteed lifts, and avoid presenting them to customers as sourced statistics.
 
 ---
 
@@ -255,7 +255,7 @@ The general finding across Meta and Google creative research: **pain-led copy ou
 
 Mechanism: cold audiences don't yet trust your benefit claims. Pain resonates because it's recognizable as true before they know who you are. Once they've seen you before (warm), they're evaluating whether to act — benefits and proof close.
 
-**The rule of thumb from AdEspresso analysis of $636M in ad spend:**
+**A commonly repeated practitioner rule of thumb (directional, not tied to one verifiable study):**
 - TOF cold: Lead with problem agitation, end with benefit claim + proof
 - MOF consideration: Lead with benefit claim, support with proof
 - BOF decision: Lead with social proof / specific result, end with risk reducer
@@ -286,9 +286,9 @@ CTA: "See how" or "Watch the 2-minute demo"
 
 **Lowercase, conversational tone:**
 
-Brands like Glossier, Olipop, Athletic Greens (AG1), and Liquid Death have documented better CTR on lowercase, conversational copy vs. polished ad copy.
+Several well-known DTC brands are widely cited in marketing communities for favoring lowercase, conversational ad copy over polished brand copy. No specific, verifiable CTR comparison exists for this pattern, so treat it as an observed style trend to test, not a documented lift.
 
-"we made this for people who hate supplements" outperforms "Introducing the New AG1 Formula: Clinically Proven Results" on cold audiences for this brand archetype.
+Directionally: "we made this for people who hate supplements" is the kind of conversational copy commonly believed to outperform formal copy like "Introducing the New AG1 Formula: Clinically Proven Results" on cold audiences for this brand archetype. This is illustrative, not a measured result.
 
 Why it works: the feed is full of polished ads. Conversational copy reads like a friend's post. In a world of ad fatigue, authenticity (even performed authenticity) wins.
 
@@ -355,7 +355,7 @@ LinkedIn feed copy operates differently from Meta — the audience is at work, i
 - Clickbait hooks ("I quit my job and made $1M") — damages brand credibility in B2B
 - Features lists in ad copy ("We offer X, Y, Z integrations")
 - Formal press-release tone in feed ads — "We are pleased to announce..."
-- Stock photos of people in suits (performs worst in LinkedIn A/B tests per LinkedIn's own creative best practices)
+- Generic stock photography, especially of people in suits. No verified LinkedIn-published A/B test backs an exact performance gap, but it is widely reported as underperforming real people and authentic team/product photos
 
 ---
 

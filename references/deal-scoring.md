@@ -140,25 +140,18 @@ The probability of winning a deal given it has reached a particular stage.
 | Proposal | 50-60% | 45-55% | 40-50% |
 | Negotiation | 70-80% | 65-75% | 60-70% |
 
-### Real-World Win Rate Data (2024–2025)
+### Directional Win Rate Patterns (No Single Authoritative Benchmark)
 
-Sourced from Gong Labs, Salesloft, and CSO Insights. Win rates have compressed significantly since 2022 due to economic pressure and increased competition.
+Several sales intelligence and RevOps vendors publish B2B win rate research, but the exact percentages differ by vendor, sample, and year, and none of it is independently reproducible across sources. Several published reports point to a compression trend in recent years due to economic pressure and increased competition, but treat any specific figure as directional, not guaranteed:
 
-| Metric | Real Benchmark | Source | Notes |
-|--------|---------------|--------|-------|
-| Overall B2B SaaS win rate | 19–21% | Gong Labs 2024 | Down from 23% in 2022 — 3-year trend of compression |
-| SMB win rate | 22–27% | Gong Labs 2024 | Shorter cycle, fewer stakeholders |
-| Mid-Market win rate | 17–22% | Gong Labs 2024 | |
-| Enterprise win rate | 15–18% | Gong Labs 2024 | Most competitive, longest cycle |
-| Demo → close rate (average) | 25% | Gong Labs 2024 | Across all B2B SaaS verticals |
-| Demo → close rate (SaaS-specific) | 30% | Gong 2024 | SaaS products have slightly higher demo conversion |
-| Competitive win rate (vs. identified competitor) | 47–54% | Gong Labs 2024 | When a competitor is named in the deal |
-| Uncontested win rate (no competitor) | 71–78% | Gong Labs 2024 | When no alternative is being evaluated |
-| Win rate — multi-threaded deals | 2x vs. single-threaded | Gong Labs 2024 | For deals >$50K ACV, 3+ contacts engaged |
-| Average sales cycle — SMB | 21–45 days | Gong Labs 2024 | |
-| Average sales cycle — Mid-Market | 45–90 days | Gong Labs 2024 | |
-| Average sales cycle — Enterprise | 90–180+ days | Gong Labs 2024 | |
-| Average sales cycle — overall SaaS | 84 days | Gong Labs 2024 | Median across all deal sizes |
+| Metric | Direction | Caveat |
+|--------|-----------|--------|
+| Overall B2B SaaS win rate | Commonly cited in the high teens to low twenties percent | Varies significantly by vendor, sample, and methodology; no single authoritative figure |
+| SMB vs. Mid-Market vs. Enterprise win rate | SMB tends to win at a higher rate than Enterprise, given shorter cycles and fewer stakeholders | Exact ranges not consistently reproducible across sources |
+| Demo to close rate | Varies widely by product and motion | No authoritative cross-industry benchmark; measure your own funnel instead |
+| Competitive vs. uncontested win rate | Deals with no named competitor close at a meaningfully higher rate than contested deals | Magnitude varies significantly by source |
+| Multi-threaded vs. single-threaded win rate | Multi-threaded deals win at a meaningfully higher rate, especially at larger deal sizes | Whether that is roughly 2x or a different multiple is not consistent across sources |
+| Average sales cycle length | Scales with deal size and segment as expected (SMB shortest, Enterprise longest) | Exact day ranges vary widely by vendor and industry; use your own historical data as the baseline |
 
 ### Win Rate Trend Analysis
 
@@ -382,13 +375,13 @@ Plot deals on a 2x2 matrix using Health Score (Y-axis) and Intent Score (X-axis)
 ```
                  High Health
                      |
-    NURTURE          |         ACT NOW
+    RE-ENGAGE        |         STRONG
     (High Health,    |    (High Health,
      Low Intent)     |     High Intent)
                      |
   -------------------+-------------------
                      |
-    DEPRIORITIZE     |         RESCUE
+    DEPRIORITIZE     |         UNBLOCK
     (Low Health,     |    (Low Health,
      Low Intent)     |     High Intent)
                      |
@@ -400,9 +393,9 @@ Plot deals on a 2x2 matrix using Health Score (Y-axis) and Intent Score (X-axis)
 
 | Quadrant | Health | Intent | Strategy |
 |----------|--------|--------|----------|
-| **Act Now** | High (60+) | High (60+) | Priority deals. Accelerate to close. Remove friction. Get proposal/contract out. |
-| **Nurture** | High (60+) | Low (< 60) | Deal is healthy but prospect is not ready. Continue education, build value, wait for intent signals. |
-| **Rescue** | Low (< 60) | High (60+) | Prospect wants to buy but the deal is poorly managed. Fix health issues: re-engage stakeholders, address stalled stages, inject urgency. |
+| **Strong** | High (60+) | High (60+) | Priority deals. Accelerate to close. Remove friction. Get proposal/contract out. |
+| **Re-engage** | High (60+) | Low (< 60) | Deal is healthy but prospect is not ready. Continue education, build value, wait for intent signals. |
+| **Unblock** | Low (< 60) | High (60+) | Prospect wants to buy but the deal is poorly managed. Fix health issues: re-engage stakeholders, address stalled stages, inject urgency. |
 | **Deprioritize** | Low (< 60) | Low (< 60) | Neither healthy nor showing intent. Move to long-term nurture, reduce investment, consider disqualifying. |
 
 ---

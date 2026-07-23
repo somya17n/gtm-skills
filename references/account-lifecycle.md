@@ -248,52 +248,56 @@ Signals that an existing customer is ready for upsell, cross-sell, or expansion.
 
 ---
 
-## Real-World Account Health Benchmarks (2024–2025)
+## Account Health Benchmarks (Directional)
 
-Sourced from Gainsight, ChurnZero, Totango, and Pendo benchmarks.
+These are illustrative ranges for calibration, not benchmarks tied to a specific published study. Account health distributions, churn timing, and expansion rates vary significantly by industry, ACV, and company maturity, and no single authoritative source covers all of them. Treat every number below as directional, not guaranteed: a rough sense of shape to check your own data against, not a target or an external citation.
 
 ### Account Health Distribution
 
-In a typical B2B SaaS customer base, health scores cluster in predictable bands:
+In a typical B2B SaaS customer base, health scores often cluster loosely like this, though the actual split varies a lot by product and segment:
 
 | Health Band | Typical % of Accounts | Revenue Risk | Action |
 |-------------|----------------------|-------------|--------|
-| Healthy (70-100) | 45–60% | Low | Prioritize expansion plays |
-| Watch (40-69) | 25–35% | Medium | Proactive check-ins, engagement campaigns |
-| At Risk (0-39) | 10–20% | High | Immediate intervention required |
-
-Source: Gainsight 2024 Customer Success Benchmark Report (n=500+ CS teams).
+| Healthy (70-100) | roughly 45-60% | Low | Prioritize expansion plays |
+| Watch (40-69) | roughly 25-35% | Medium | Proactive check-ins, engagement campaigns |
+| At Risk (0-39) | roughly 10-20% | High | Immediate intervention required |
 
 ### Churn Prediction Windows
 
-| Signal | Average Days to Churn | Source |
-|--------|----------------------|--------|
-| No login for 21+ days | 45–60 days | Pendo 2024 |
-| Support escalation (critical) | 30–45 days | Gainsight 2024 |
-| Declining feature usage (3 consecutive weeks) | 60–90 days | Amplitude 2024 |
-| NPS drop below 6 | 90–120 days | ChurnZero 2024 |
-| Champion departure | 30–90 days | Gainsight 2024 |
+Directional only. Actual time-to-churn after any given signal depends heavily on product, contract length, and how fast a team responds:
 
-**Key insight from Pendo 2024:** 20–30% of your active customer base shows early churn signals at any given moment. The accounts that get proactive outreach before they reach the 60-day no-login mark renew at 2.3x the rate of those reached after.
+| Signal | Approximate Days to Churn |
+|--------|----------------------|
+| No login for 21+ days | roughly 45-60 days |
+| Support escalation (critical) | roughly 30-45 days |
+| Declining feature usage (3 consecutive weeks) | roughly 60-90 days |
+| NPS drop below 6 | roughly 90-120 days |
+| Champion departure | roughly 30-90 days |
+
+**Directional pattern worth watching for:** a meaningful share of an active customer base, commonly discussed in the 20-30% range though this is not a fixed figure, shows early churn signals at any given moment. Accounts that get proactive outreach before signals compound generally renew at a noticeably higher rate than accounts reached later, though there's no single reliable multiplier to cite.
 
 ### Expansion Revenue Benchmarks
 
-| Metric | SMB | Mid-Market | Enterprise | Source |
-|--------|-----|-----------|-----------|--------|
-| % of ARR from expansion | 15–25% | 25–40% | 35–55% | SaaS Capital 2024 |
-| Upsell close rate | 30–40% | 40–50% | 45–55% | Gainsight 2024 |
-| Cross-sell attach rate | 15–25% | 20–30% | 25–40% | Gainsight 2024 |
-| Expansion ARR growth (healthy) | 20–30% YoY | 30–45% YoY | 40–60% YoY | ChartMogul 2024 |
-| Avg months to first expansion | 9–12 | 6–9 | 12–18 | Totango 2024 |
+Varies significantly by segment and pricing model - illustrative ranges, not measured averages:
+
+| Metric | SMB | Mid-Market | Enterprise |
+|--------|-----|-----------|-----------|
+| % of ARR from expansion | roughly 15-25% | roughly 25-40% | roughly 35-55% |
+| Upsell close rate | roughly 30-40% | roughly 40-50% | roughly 45-55% |
+| Cross-sell attach rate | roughly 15-25% | roughly 20-30% | roughly 25-40% |
+| Expansion ARR growth (healthy) | roughly 20-30% YoY | roughly 30-45% YoY | roughly 40-60% YoY |
+| Avg months to first expansion | roughly 9-12 | roughly 6-9 | roughly 12-18 |
 
 ### Customer Success Impact on Retention
 
-| CS Coverage Model | Net Retention Rate | Gross Revenue Churn | Source |
-|------------------|-------------------|--------------------|-|
-| No CS (product-led only) | 94–100% | 10–18% | Gainsight 2024 |
-| Reactive CS (ticket-driven) | 99–104% | 8–12% | Gainsight 2024 |
-| Proactive CS (health score-driven) | 104–110% | 5–8% | Gainsight 2024 |
-| High-touch enterprise CS | 110–125% | 3–5% | Gainsight 2024 |
+Directional pattern, not a guaranteed outcome. A more proactive CS motion generally correlates with better retention, but the magnitude varies a lot by business:
+
+| CS Coverage Model | Net Retention Rate | Gross Revenue Churn |
+|------------------|-------------------|--------------------|
+| No CS (product-led only) | roughly 94-100% | roughly 10-18% |
+| Reactive CS (ticket-driven) | roughly 99-104% | roughly 8-12% |
+| Proactive CS (health score-driven) | roughly 104-110% | roughly 5-8% |
+| High-touch enterprise CS | roughly 110-125% | roughly 3-5% |
 
 ## Churn Risk Indicators
 

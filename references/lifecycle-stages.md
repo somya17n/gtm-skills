@@ -198,59 +198,58 @@ To prevent stage flapping, a minimum dwell time of 7 days is enforced before a c
 
 ---
 
-## Real-World Lifecycle Benchmarks (2024–2025)
+## Lifecycle Benchmarks (Directional)
 
-Data from Mixpanel, Amplitude, Pendo, and Braze. These help calibrate what healthy, average, and at-risk look like in practice.
+These ranges are for calibration only, a rough sense of what healthy, average, and at-risk tend to look like, not benchmarks tied to a specific published study. Actual numbers vary significantly by product category, price point, and customer segment, and no single authoritative source covers all of them consistently. Treat everything below as directional, not guaranteed.
 
 ### Engagement Benchmarks — SaaS
 
-| Metric | Low | Average | Good | Best-in-Class | Source |
-|--------|-----|---------|------|--------------|--------|
-| DAU/MAU (stickiness ratio) | < 10% | 16% median | 25–35% | 40%+ | Amplitude 2024 |
-| DAU/MAU — B2B SaaS | — | **31%** | — | 50%+ | Mixpanel 2024 benchmark |
-| WAU/MAU (weekly active) | < 30% | 40–50% | 55–65% | 75%+ | Amplitude 2024 |
-| Day 7 retention | < 20% | 25–35% | 35–45% | 55%+ | Amplitude / Mixpanel 2024 |
-| Day 30 retention | < 10% | 15–25% | 25–35% | 45%+ | Amplitude 2024 |
-| Month 3 retention | < 5% | 10–20% | 20–30% | 40%+ | Lenny's Newsletter 2024 |
+| Metric | Low | Average | Good | Best-in-Class |
+|--------|-----|---------|------|--------------|
+| DAU/MAU (stickiness ratio) | below 10% | roughly 15-20% | roughly 25-35% | 40%+ |
+| WAU/MAU (weekly active) | below 30% | roughly 40-50% | roughly 55-65% | 75%+ |
+| Day 7 retention | below 20% | roughly 25-35% | roughly 35-45% | 55%+ |
+| Day 30 retention | below 10% | roughly 15-25% | roughly 25-35% | 45%+ |
+| Month 3 retention | below 5% | roughly 10-20% | roughly 20-30% | 40%+ |
 
-**Context:** DAU/MAU of 25% is the "good" threshold for B2B SaaS. Products below 16% (the median) have a product-market fit or engagement problem, not just a marketing problem.
+**Context:** a DAU/MAU ratio somewhere in the mid-20s percent range is commonly treated as a reasonable "good" threshold for B2B SaaS, though this varies by category and no single number applies uniformly. Products well below that range often have a product-market fit or engagement problem worth investigating, not just a marketing problem.
 
 ### Lifecycle Stage Distribution — Typical SaaS
 
-What a healthy vs. struggling distribution looks like across a customer base:
+What a healthier vs. struggling distribution tends to look like across a customer base. Illustrative, not measured:
 
-| Stage | Healthy Distribution | Struggling Distribution | Notes |
+| Stage | Healthier Distribution | Struggling Distribution | Notes |
 |-------|---------------------|------------------------|-------|
-| New Customers | 10–15% | 25–35% | High % = churning customers, need replacement |
-| Promising | 15–20% | 10–15% | Low % = poor activation, users not progressing |
-| Regulars | 30–40% | 15–25% | Core revenue base — low % = retention problem |
-| Champions | 10–20% | 5–10% | Advocacy engine — low % = upsell/expansion stalled |
-| Needs Attention | 10–15% | 20–30% | High % = product-market fit signal to investigate |
-| At Risk | 5–10% | 15–25% | High % = active churn risk — win-back urgently |
-
-Source: Pendo 2024 SaaS Benchmark Report, Mixpanel 2024.
+| New Customers | roughly 10-15% | roughly 25-35% | High % can mean churning customers needing replacement |
+| Promising | roughly 15-20% | roughly 10-15% | Low % can mean poor activation |
+| Regulars | roughly 30-40% | roughly 15-25% | Core revenue base, low % can signal a retention problem |
+| Champions | roughly 10-20% | roughly 5-10% | Advocacy engine - low % can signal stalled upsell/expansion |
+| Needs Attention | roughly 10-15% | roughly 20-30% | High % is a signal worth investigating |
+| At Risk | roughly 5-10% | roughly 15-25% | High % signals active churn risk |
 
 ### Churn Benchmarks — SaaS
 
-| Metric | Early-Stage | Growth-Stage | Mature-Stage | Source |
-|--------|------------|-------------|-------------|--------|
-| Annual gross revenue churn | 10–20% | 5–10% | 3–7% | ChartMogul 2024 |
-| Annual logo churn (customer count) | 15–25% | 8–15% | 5–10% | ChartMogul 2024 |
-| Monthly churn — SMB-heavy | 3–5% | 2–4% | 1.5–3% | Baremetrics 2024 |
-| Monthly churn — Enterprise-heavy | 0.5–1.5% | 0.5–1% | 0.25–0.75% | ChartMogul 2024 |
-| At-risk user % at any time | — | **20–30%** | — | Pendo 2024 |
+Varies significantly by segment, pricing, and contract terms. No single authoritative benchmark exists across all of these:
 
-**20–30% of your active users show early churn signals at any given time** (Pendo 2024). This is the segment that automated lifecycle campaigns should target first.
+| Metric | Early-Stage | Growth-Stage | Mature-Stage |
+|--------|------------|-------------|-------------|
+| Annual gross revenue churn | roughly 10-20% | roughly 5-10% | roughly 3-7% |
+| Annual logo churn (customer count) | roughly 15-25% | roughly 8-15% | roughly 5-10% |
+| Monthly churn - SMB-heavy | roughly 3-5% | roughly 2-4% | roughly 1.5-3% |
+| Monthly churn - Enterprise-heavy | roughly 0.5-1.5% | roughly 0.5-1% | roughly 0.25-0.75% |
+
+**Directional pattern worth watching for:** a meaningful share of an active user base, commonly discussed in the 20-30% range though this is not a fixed figure, shows early churn signals at any given time. This is the segment automated lifecycle campaigns should target first.
 
 ### Ecommerce Lifecycle Benchmarks
 
-| Metric | Average | Good | Source |
-|--------|---------|------|--------|
-| Repeat purchase rate (90 days) | 27–35% | 40%+ | Klaviyo 2024 |
-| Average orders per customer per year | 2.1 | 3.5+ | Triple Whale 2024 |
-| Customer lifetime value at 12 months | $185–220 | $300+ | Triple Whale 2024 |
-| Win-back rate (lapsed 90+ days) | 5–10% | 15–20% | Klaviyo 2024 |
-| Champions % of revenue contribution | 40–60% | — | Pareto rule in ecommerce |
+Directional only. Ecommerce benchmarks vary enormously by category, price point, and repeat-purchase dynamics, so treat these as a rough shape, not a target:
+
+| Metric | Average | Good |
+|--------|---------|------|
+| Repeat purchase rate (90 days) | roughly 25-35% | 40%+ |
+| Average orders per customer per year | roughly 2 | 3.5+ |
+| Win-back rate (lapsed 90+ days) | roughly 5-10% | roughly 15-20% |
+| Champions % of revenue contribution | roughly 40-60% | N/A |
 
 ## Default Scoring Weights
 
