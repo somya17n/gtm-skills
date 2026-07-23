@@ -1,6 +1,6 @@
 ---
 name: pricing
-description: Design pricing and packaging: value metric selection, tier structure, price points, and price-increase timing. Use when the user wants help setting prices, restructuring plans, or deciding whether and how to raise prices.
+description: "Design pricing and packaging: value metric selection, tier structure, price points, and price-increase timing. Use when the user wants help setting prices, restructuring plans, or deciding whether and how to raise prices."
 ---
 
 > **Boundary:** For in-app upgrade/upsell screens shown to existing users, that's a different job than plan design. This skill covers the pricing strategy itself. For cancel-flow save offers and dunning, use `churn-prevention`. For pricing page copy, use `landing-page`.

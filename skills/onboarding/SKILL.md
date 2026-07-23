@@ -1,6 +1,6 @@
 ---
 name: onboarding
-description: Design the post-signup activation flow: what happens between signup and the "aha moment," in what order, and how drop-off is diagnosed and fixed. Use when users are signing up but not activating or sticking around.
+description: 'Design the post-signup activation flow: what happens between signup and the "aha moment," in what order, and how drop-off is diagnosed and fixed. Use when users are signing up but not activating or sticking around.'
 ---
 
 > **Boundary:** This skill designs the activation flow and strategy. For producing one specific video asset for one moment in that flow, use `create-onboarding-video`. For the lifecycle email/SMS sequence that supports onboarding, use `email-campaign` or `sms-push`. For diagnosing drop-off with actual funnel numbers already in hand, use `funnel-analysis`.

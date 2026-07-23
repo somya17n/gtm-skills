@@ -1,6 +1,6 @@
 ---
 name: product-context
-description: Set up shared product context: ICP, brand voice, lifecycle stages, scoring, design preferences. Run this first before any other gtm skill.
+description: "Set up shared product context: ICP, brand voice, lifecycle stages, scoring, design preferences. Run this first before any other gtm skill."
 ---
 
 ## Context

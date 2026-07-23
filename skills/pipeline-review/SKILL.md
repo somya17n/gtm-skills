@@ -1,6 +1,6 @@
 ---
 name: pipeline-review
-description: Analyze pipeline health: deal velocity, stuck deals, risk signals, forecast accuracy. Use for weekly pipeline reviews.
+description: "Analyze pipeline health: deal velocity, stuck deals, risk signals, forecast accuracy. Use for weekly pipeline reviews."
 ---
 
 ## Context

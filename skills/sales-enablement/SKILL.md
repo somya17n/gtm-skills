@@ -1,6 +1,6 @@
 ---
 name: sales-enablement
-description: Produces sales collateral: one-pagers, ROI calculators, proposal templates, and playbooks, mapped to buyer persona and deal stage. Use when a rep needs a specific asset to hand a prospect. Boundary: for objection-handling responses specifically, use objection-pre-handler: that skill already owns the objection library in this pack. This skill covers every other enablement asset type.
+description: "Produces sales collateral: one-pagers, ROI calculators, proposal templates, and playbooks, mapped to buyer persona and deal stage. Use when a rep needs a specific asset to hand a prospect. Boundary: for objection-handling responses specifically, use objection-pre-handler: that skill already owns the objection library in this pack. This skill covers every other enablement asset type."
 ---
 
 # Sales Enablement

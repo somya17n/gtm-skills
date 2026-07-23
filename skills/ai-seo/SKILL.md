@@ -1,6 +1,6 @@
 ---
 name: ai-seo
-description: Audit and improve how citable and extractable a site's content is for AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini, Copilot): structure, authority signals, and machine-readable files. Use when the user wants their content or brand cited in AI-generated answers, not just ranked in traditional search.
+description: "Audit and improve how citable and extractable a site's content is for AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini, Copilot): structure, authority signals, and machine-readable files. Use when the user wants their content or brand cited in AI-generated answers, not just ranked in traditional search."
 tools: WebFetch, WebSearch
 ---
 

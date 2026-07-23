@@ -1,6 +1,6 @@
 ---
 name: post-writer
-description: Draft two distinct LinkedIn post variants on a topic: an educational angle and an operator/contrarian angle, written in the brand's voice. Use when the user wants organic LinkedIn content to build authority or warm up a list before outbound.
+description: "Draft two distinct LinkedIn post variants on a topic: an educational angle and an operator/contrarian angle, written in the brand's voice. Use when the user wants organic LinkedIn content to build authority or warm up a list before outbound."
 ---
 
 > **Boundary:** For ad creative, use `creative-brief`. For cold outreach copy, use `cold-email-writer` or `outreach-sequence`. This skill is for organic, unpaid posts.

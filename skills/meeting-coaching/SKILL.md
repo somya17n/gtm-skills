@@ -1,6 +1,6 @@
 ---
 name: meeting-coaching
-description: Pre-meeting prep and post-meeting coaching: talk ratio, BANT/MEDDIC scoring, objection tracking, drills.
+description: "Pre-meeting prep and post-meeting coaching: talk ratio, BANT/MEDDIC scoring, objection tracking, drills."
 ---
 
 ## Context

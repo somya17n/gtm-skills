@@ -1,6 +1,6 @@
 ---
 name: prospecting
-description: Builds and qualifies a prospect list from an ICP definition: sourced from data the user provides or from public web research, scored Hot/Warm/Cold/Skip with evidence and confidence per lead. Use when the user wants to build a target account or lead list before outreach. Pairs with icp-signal-scorer (scores a list that already exists) and feeds cold-email-writer.
+description: "Builds and qualifies a prospect list from an ICP definition: sourced from data the user provides or from public web research, scored Hot/Warm/Cold/Skip with evidence and confidence per lead. Use when the user wants to build a target account or lead list before outreach. Pairs with icp-signal-scorer (scores a list that already exists) and feeds cold-email-writer."
 tools: WebFetch, WebSearch
 ---
 

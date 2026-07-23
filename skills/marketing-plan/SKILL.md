@@ -1,6 +1,6 @@
 ---
 name: marketing-plan
-description: Build a comprehensive AARRR-structured marketing plan: current-state audit, acquisition/activation/retention/referral/revenue strategy, budget math, funding-stage capability unlocks, and a phased 90-day roadmap. Use when the user wants a full marketing plan or GTM roadmap to share with their team or investors, not a quick strategic recommendation.
+description: "Build a comprehensive AARRR-structured marketing plan: current-state audit, acquisition/activation/retention/referral/revenue strategy, budget math, funding-stage capability unlocks, and a phased 90-day roadmap. Use when the user wants a full marketing plan or GTM roadmap to share with their team or investors, not a quick strategic recommendation."
 ---
 
 > **Boundary:** For a quick prioritized recommendation (top 3 growth levers, one archetype, one quarter's bets) without the full plan document, use `recommend-strategy` instead. It's faster and lighter. Use `marketing-plan` when the deliverable itself needs to be a shareable document: onboarding a new hire, briefing investors, or replacing a scattered set of docs with one coherent plan. This skill reuses `recommend-strategy`'s maturity/lever/archetype logic as its Section 2 input rather than re-deriving it. Run that skill first if you don't already have those answers.

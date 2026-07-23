@@ -1,6 +1,6 @@
 ---
 name: outreach-sequence
-description: Design multi-channel cold outreach sequences: email, LinkedIn, phone cadences with personalization layers.
+description: "Design multi-channel cold outreach sequences: email, LinkedIn, phone cadences with personalization layers."
 ---
 
 ## Context

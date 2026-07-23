@@ -1,6 +1,6 @@
 ---
 name: account-plan
-description: Build account engagement plans: buying committee mapping, multi-threading assessment, 90-day action plan.
+description: "Build account engagement plans: buying committee mapping, multi-threading assessment, 90-day action plan."
 ---
 
 ## Context

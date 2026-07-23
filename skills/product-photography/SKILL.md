@@ -1,6 +1,6 @@
 ---
 name: product-photography
-description: Generate photography direction using a composable scene system: 160+ blocks across 10 dimensions.
+description: "Generate photography direction using a composable scene system: 160+ blocks across 10 dimensions."
 ---
 
 ## Context

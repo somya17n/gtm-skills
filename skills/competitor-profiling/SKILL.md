@@ -1,6 +1,6 @@
 ---
 name: competitor-profiling
-description: Researches a competitor from their public website and builds a structured profile: positioning, pricing, strengths/weaknesses, and competitive implications. Use when the user wants deep research on a specific competitor, not just a sales angle. Boundary: for turning a known prospect tool-stack into a call-ready displacement angle, use competitor-displacement-framer; that skill assumes this research already exists.
+description: "Researches a competitor from their public website and builds a structured profile: positioning, pricing, strengths/weaknesses, and competitive implications. Use when the user wants deep research on a specific competitor, not just a sales angle. Boundary: for turning a known prospect tool-stack into a call-ready displacement angle, use competitor-displacement-framer; that skill assumes this research already exists."
 tools: WebFetch, WebSearch
 ---
 

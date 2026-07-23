@@ -1,6 +1,6 @@
 ---
 name: revops
-description: Designs the lead-to-opportunity layer between marketing and sales: MQL scoring model, routing rules, speed-to-lead SLAs, and lifecycle stage definitions. Use when leads aren't reaching sales fast enough, marketing and sales disagree on what counts as qualified, or handoff is undefined. Boundary: deal-scoring scores one opportunity; pipeline-review reports on the whole pipeline; this skill is the layer before either exists.
+description: "Designs the lead-to-opportunity layer between marketing and sales: MQL scoring model, routing rules, speed-to-lead SLAs, and lifecycle stage definitions. Use when leads aren't reaching sales fast enough, marketing and sales disagree on what counts as qualified, or handoff is undefined. Boundary: deal-scoring scores one opportunity; pipeline-review reports on the whole pipeline; this skill is the layer before either exists."
 ---
 
 # RevOps
