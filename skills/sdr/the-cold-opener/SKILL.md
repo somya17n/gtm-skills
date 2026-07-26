@@ -5,7 +5,7 @@ description: Takes prospect research, a specific trigger signal, and a product v
 
 # Cold Email Writer
 
-Write a complete, personalized cold email body from the user's research inputs. Under 120 words. Structured around a specific trigger. Ready to send after subject line testing with the cold-email-subject-line-tester skill.
+Write a complete, personalized cold email body from the user's research inputs. Under 120 words. Structured around a specific trigger. Ready to send after subject line testing with `the-subject-line-lab`.
 
 ## How to run
 

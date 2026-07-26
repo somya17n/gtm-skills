@@ -1,6 +1,6 @@
 ---
 name: the-cohort-tracker
-description: Groups customers by acquisition period and tracks a retention or revenue metric across the periods that follow, returned as a cohort table. Use when the user wants to know whether newer customers are performing better or worse than older ones, not just a single blended average. Boundary: this skill builds the cohort table itself. For the dashboard that displays it alongside other KPIs, use `the-kpi-blueprint`. For comparing the result against outside industry numbers, use `the-benchmark-check`.
+description: "Groups customers by acquisition period and tracks a retention or revenue metric across the periods that follow, returned as a cohort table. Use when the user wants to know whether newer customers are performing better or worse than older ones, not just a single blended average. Boundary: this skill builds the cohort table itself. For the dashboard that displays it alongside other KPIs, use `the-kpi-blueprint`. For comparing the result against outside industry numbers, use `the-benchmark-check`."
 ---
 
 # The Cohort Tracker

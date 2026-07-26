@@ -1,6 +1,6 @@
 ---
 name: the-anomaly-alert
-description: Takes a time series of one metric and flags which recent points are genuinely outside its normal range, using a stated trailing-average-and-deviation method, not a gut read of a chart. Use when the user has a week's or month's worth of numbers for a metric and wants to know if something in it is actually unusual. Boundary: this skill flags anomalies in data the user provides. For designing the dashboard that surfaces this metric in the first place, use `the-kpi-blueprint`.
+description: "Takes a time series of one metric and flags which recent points are genuinely outside its normal range, using a stated trailing-average-and-deviation method, not a gut read of a chart. Use when the user has a week's or month's worth of numbers for a metric and wants to know if something in it is actually unusual. Boundary: this skill flags anomalies in data the user provides. For designing the dashboard that surfaces this metric in the first place, use `the-kpi-blueprint`."
 ---
 
 # The Anomaly Alert

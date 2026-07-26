@@ -1,6 +1,6 @@
 ---
 name: the-lead-router
-description: Designs the actual assignment logic for an already-qualified lead, round-robin, territory, account-owner, or score-threshold, with explicit tie-break and fallback rules. Use when leads are qualified but nobody has decided, in writing, exactly who they go to next. Boundary: `the-routing-engine` designs the scoring model and lifecycle stages that decide whether a lead is qualified in the first place. This skill is the layer after that: once a lead is qualified, who actually gets it.
+description: "Designs the actual assignment logic for an already-qualified lead, round-robin, territory, account-owner, or score-threshold, with explicit tie-break and fallback rules. Use when leads are qualified but nobody has decided, in writing, exactly who they go to next. Boundary: `the-routing-engine` designs the scoring model and lifecycle stages that decide whether a lead is qualified in the first place. This skill is the layer after that: once a lead is qualified, who actually gets it."
 ---
 
 # The Lead Router

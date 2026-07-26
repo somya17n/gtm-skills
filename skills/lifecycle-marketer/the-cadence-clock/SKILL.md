@@ -23,7 +23,7 @@ description: Design a recurring, scheduled marketing workflow (a loop with a def
    - **Check cadence**: how often the loop looks
    - **Acts when**: the separate condition that triggers action (most runs of a healthy loop should be "checked, nothing to do")
    - **Purpose**: the one outcome this loop exists to move
-   - **Skills used**: which other skills in this pack the loop calls each run (e.g. a churn-watch loop calls `churn-prevention`'s health score mode)
+   - **Skills used**: which other skills in this pack the loop calls each run (e.g. a churn-watch loop calls `the-save-desk`'s health score mode)
    - **Loop body**: the ordered steps run each iteration
    - **Self-check**: the verification done before acting, so the loop doesn't act on noise, seasonality, or a tracking bug
    - **State / idempotency**: what the loop remembers between runs (last-run marker, cooldown window, dedupe key); without this loops double-act or re-alert the same thing

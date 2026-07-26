@@ -24,7 +24,7 @@ description: 'Design the post-signup activation flow: what happens between signu
 9. Design the flow for the immediate post-signup window: pick one approach (product-first, guided setup, or value-first demo data) based on product complexity, and ensure there's always one clear next action with no dead ends.
 10. If the product has multiple setup steps, design an onboarding checklist: 3-7 items, ordered by value (highest-impact first, not chronological-only), with progress shown and a way to dismiss it. Never trap the user in the checklist.
 11. Design empty states as onboarding opportunities: what the space is for, what it looks like with real data, and one clear primary action, not a dead end.
-12. Design the supporting trigger-based email/notification sequence at a high level (welcome, incomplete-onboarding nudges at 24h/72h, activation celebration, feature discovery at day 3/7/14) and hand off the actual copy to `email-campaign`.
+12. Design the supporting trigger-based email/notification sequence at a high level (welcome, incomplete-onboarding nudges at 24h/72h, activation celebration, feature discovery at day 3/7/14) and hand off the actual copy to `the-campaign-composer`.
 13. Define the stalled-user threshold (days inactive or % through setup) and the re-engagement tactic for each severity level.
 
 ## Output
@@ -44,7 +44,7 @@ description: 'Design the post-signup activation flow: what happens between signu
 - **Flow Design**: step-by-step from signup to activation, approach chosen (product-first/guided/value-first) and why
 - **Checklist Design** (if applicable): items in value order, with the quick win listed first
 - **Empty State Copy**: for each major empty state, the explanation + example + primary action
-- **Supporting Sequence**: trigger points and intent for each email/notification, ready to hand to `email-campaign`
+- **Supporting Sequence**: trigger points and intent for each email/notification, ready to hand to `the-campaign-composer`
 - **Stalled-User Plan**: detection threshold and tactic per severity
 - **Metrics Plan**: activation rate, time-to-activation, checklist completion rate, Day 1/7/30 retention
 

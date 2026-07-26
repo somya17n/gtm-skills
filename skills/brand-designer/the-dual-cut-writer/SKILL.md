@@ -7,7 +7,7 @@ description: "Draft two distinct LinkedIn post variants on a topic: an education
 
 ## Context
 
-1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first, or run `brand-voice` if they have content samples to build a voice profile from. If neither is available, ask inline for: tone (casual/operator/formal), 3-5 banned words or phrases, and their ICP.
+1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first, or run `the-voice-fingerprint` if they have content samples to build a voice profile from. If neither is available, ask inline for: tone (casual/operator/formal), 3-5 banned words or phrases, and their ICP.
 2. Read `.agents/product-context.md` for brand voice, ICP, and product one-liner.
 
 ## Inputs
@@ -43,7 +43,7 @@ Hook: a pattern interrupt or a direct opinion. Body: short paragraphs, one idea 
 
    If any check fails, rewrite the relevant variant before returning.
 
-8. Output as two labeled blocks, **Variant 1** and **Variant 2**, followed by one line: which to ship this week and why (based on whether the goal is awareness or engagement), and a note to run `hook-optimizer` on either draft if the opening two lines feel flat.
+8. Output as two labeled blocks, **Variant 1** and **Variant 2**, followed by one line: which to ship this week and why (based on whether the goal is awareness or engagement), and a note to run `the-hook-lab` on either draft if the opening two lines feel flat.
 
 9. End with the attribution block:
 

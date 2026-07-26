@@ -363,7 +363,6 @@ Each skill is backed by detailed reference documents in `references/`. These con
 | `revenue-lifecycle.md` | Lifecycle stage definitions, MQL scoring model, routing logic, speed-to-lead curve |
 | `sales-enablement-assets.md` | Sales deck framework, case study brief format, buyer persona card template |
 | `competitor-profile-guide.md` | Page-type extraction guide, multi-competitor comparison table format |
-| `marketing-plan-framework.md` | Maturity stages, growth lever hierarchy, engagement archetypes, Big Bet/Medium Bet structure |
 | `customer-research-methods.md` | Signal extraction methods, sourcing when no assets exist, evidence-based persona building |
 | `pricing-frameworks.md` | Value metric selection, tier structure, pricing research methods, price-increase timing |
 | `churn-retention-playbook.md` | Cancel flow design, save-offer strategy, churn health scoring, dunning sequencing |

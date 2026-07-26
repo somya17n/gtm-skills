@@ -47,7 +47,7 @@ description: Score deals with dual health + intent analysis, trend tracking, and
 11. Run BANT completeness check, score 0-4:
     - Budget, Authority, Need, Timeline
 
-> For comprehensive meeting-level coaching on BANT/MEDDIC, use the meeting-coaching skill.
+> For meeting-level coaching on BANT/MEDDIC, use `the-call-coach`.
 
 ## Output
 12. Format the deal scorecard as:

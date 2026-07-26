@@ -1,6 +1,6 @@
 ---
 name: the-benchmark-check
-description: Takes one of the user's own metrics and checks it against a stated benchmark source, returning a clear over/under read and what that gap actually means. Use when the user wants to know if a number (churn rate, CAC, conversion rate, NPS) is good or bad relative to a real reference point, not just the number in isolation. Boundary: this skill does not have a live connection to any benchmark database. It compares against whatever source the user supplies, or discloses plainly when it is using general public knowledge instead.
+description: "Takes one of the user's own metrics and checks it against a stated benchmark source, returning a clear over/under read and what that gap actually means. Use when the user wants to know if a number (churn rate, CAC, conversion rate, NPS) is good or bad relative to a real reference point, not just the number in isolation. Boundary: this skill does not have a live connection to any benchmark database. It compares against whatever source the user supplies, or discloses plainly when it is using general public knowledge instead."
 ---
 
 # The Benchmark Check
