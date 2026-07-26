@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 46 skills across Marketing, Sales, Design, Analytics, and Operations — the only skill pack that covers the full GTM surface in one install.
+**Your AI go-to-market team.** 46 skills organized around the 7 real jobs on a GTM team, not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -12,91 +12,123 @@ Built by [Sid Chaudhary](https://linkedin.com/in/sidchaudhary), founder of [Inte
 
 Skills are instructions that make Claude an expert at specific tasks. Instead of starting every conversation from scratch, skills give Claude deep methodology, frameworks, and domain knowledge to work from.
 
-You install them once. Then you just ask for what you need in plain language — the right skill activates automatically.
+You install them once. Then you just ask for what you need in plain language, the right skill activates automatically.
 
 **You don't need to be technical.** If you can type a sentence, you can use these.
 
 ---
 
+## Why the Job Description Is the Right Map
+
+Most AI skill packs are organized around tools. You end up with a folder full of clever prompts and no idea which one to open on a Tuesday morning.
+
+A GTM hire doesn't come with a folder of prompts. They come with a job description. Seven jobs, over and over, every week, forever: Brand Designer, Lifecycle Marketer, Experimentation Lead, Data Analyst, SDR, Account Executive, and GTM Engineer.
+
+So that's how this is organized. Seven jobs. Six or seven skills behind each one. Every skill maps to something you'd otherwise pay a person to do.
+
 ## What's Inside
 
-46 skills organized across 6 domains. Each skill includes reference materials with real frameworks, benchmarks, and methodology — not generic advice.
+46 skills across 7 jobs, plus one shared setup skill. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
 
 ### Foundation
 
 | Skill | What You Get |
 |-------|-------------|
-| **product-context** | Set up once — your ICP, brand voice, lifecycle stages, scoring model, and design preferences. Every other skill reads this automatically, so output is always tailored to your business. |
+| **product-context** | Set up once, your ICP, brand voice, lifecycle stages, scoring model, and design preferences. Every other skill reads this automatically, so output is always tailored to your business. |
 
-### Marketing (16 skills)
+### Job 1: Brand Designer (7 skills)
 
-| Skill | What You Get |
-|-------|-------------|
-| **journey-builder** | Multi-channel automation flows with conditional branching, holdout groups, and channel guardrails. Outputs a complete journey blueprint with node-by-node detail. |
-| **segment-builder** | Lifecycle segmentation using a 6-stage model (At Risk → Champions) with RFM scoring and behavioral signals. Tells you who to target and why. |
-| **experiment-design** | Bayesian A/B test design with Thompson sampling, sample size calculations, guardrails, and exit criteria. Not just "test this" — a full statistical brief. |
-| **email-campaign** | Complete email campaigns with 3 subject line variants per email, Liquid personalization, sequence timing, and a deliverability checklist. |
-| **sms-push** | SMS and push notification campaigns with character limits, TCPA/GDPR compliance, quiet hours, frequency caps, and deep link specs. |
-| **landing-page** | Conversion-optimized landing pages. Outputs deployable HTML + Tailwind CSS — not a wireframe, a working page. |
-| **personalization** | Rules that map audience segments to content variants. Condition → experience → measurement plan. Priority-ordered with a default fallback. |
-| **post-writer** | Two LinkedIn post variants per topic — educational and operator-punchy angles — written in your brand voice. For organic authority-building, not ads or outbound. |
-| **hook-optimizer** | Four scored hook variants for any post draft, each using a distinct psychological framework, with a recommendation and rug-pull check. |
-| **marketing-plan** | A full AARRR-structured marketing plan — current-state audit, funnel strategy, budget math, and a phased 90-day roadmap. For when the deliverable needs to be a shareable document, not just a recommendation. |
-| **customer-research** | Turns transcripts, reviews, tickets, and surveys into confidence-scored themes, quote banks, and evidence-based personas. |
-| **pricing** | Value metric selection, tier structure, price points, and price-increase timing — refuses to guess at your churn or conversion numbers. |
-| **onboarding** | Designs the post-signup activation flow — what happens before the "aha moment," in what order, and how drop-off gets diagnosed. |
-| **churn-prevention** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences — the systemic retention layer, not a one-off email. |
-| **marketing-loops** | Recurring, scheduled marketing motions with cadence matched to how fast the underlying signal actually changes. |
-| **ai-seo** | Audits how citable your content is for ChatGPT, Perplexity, and AI Overviews — structure, authority signals, and machine-readable files. |
-
-### Sales (21 skills)
+Builds the on-brand asset and the content around it, so nothing ships off-voice or off-catalog.
 
 | Skill | What You Get |
 |-------|-------------|
-| **outreach-sequence** | Multi-channel cold outreach cadences — email copy, LinkedIn scripts, phone talk tracks. Touch-by-touch with personalization layers and A/B test recommendations. |
-| **meeting-coaching** | Two modes: pre-meeting prep (agenda, discovery questions, objection handling) and post-meeting coaching (talk ratio analysis, BANT/MEDDIC scoring, specific rewrites). |
-| **pipeline-review** | Full pipeline health analysis — stuck deals, risk signals, forecast by category, coverage ratio. Flags problems and recommends next actions per deal. |
-| **account-plan** | Account engagement plans with buying committee mapping, threading depth assessment, and a 90-day week-by-week action plan per stakeholder. |
-| **deal-scoring** | Dual-axis scoring (health + intent, each 0-100) with independent trend tracking. Places each deal in a quadrant and runs full MEDDIC/BANT completeness checks. |
-| **account-research-digest** | Researches any company and produces a 90-second rep brief — what they do, what changed recently, and the strongest outreach angle. |
-| **linkedin-personalization-brief** | Turns a prospect's LinkedIn profile text into three distinct, specific personalization angles for a cold email or LinkedIn opener. |
-| **competitor-displacement-framer** | Maps a prospect's current tool stack to the exact inefficiency it creates, two questions to surface it on a call, and a one-line displacement hook. |
-| **cold-email-writer** | Turns prospect research, a trigger signal, and a value prop into a complete cold email body under 120 words. |
-| **cold-email-subject-line-tester** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
-| **outbound-sequence-auditor** | Audits a full cold email sequence, diagnoses each email's specific weakness, and rewrites the three worst-performing ones. |
-| **icp-signal-scorer** | Scores an account list against your ICP criteria and returns priority tiers with a one-sentence outreach rationale per account. |
-| **weekly-pipeline-signal-prioritizer** | Turns a week of intent signals — funding, hires, job posts, stack changes — into a ranked Monday-morning outreach list. |
-| **call-transcript-signal-extractor** | Extracts deal signals, objections, confirmed pain points, and a stakeholder map from a raw sales call transcript. |
-| **objection-pre-handler** | Outputs the five most likely objections for a persona, each with an acknowledgment, response, and follow-up question. |
-| **re-engagement-rewriter** | Turns notes from a lost or gone-dark deal into a re-engagement email under 100 words that addresses the original objection directly. |
-| **topic-briefer** | Turns one piece of content — an article, transcript, or announcement — into a sales brief: pain points, trigger events, and ranked outreach hooks for your ICP. |
-| **prospecting** | Builds and qualifies a prospect list from your ICP, sourced from data you provide or public research — every lead scored Hot/Warm/Cold/Skip with cited evidence, not just fit. |
-| **revops** | Designs the lead-to-opportunity layer — MQL scoring model, routing rules, and speed-to-lead SLAs — so marketing and sales agree on what "qualified" means. |
-| **sales-enablement** | One-pagers, ROI calculators, proposal templates, and playbooks mapped to persona and deal stage — the enablement assets outside objection handling. |
-| **competitor-profiling** | Deep-dives one competitor's public site into a structured profile — positioning, pricing, strengths/weaknesses, and competitive implications. |
+| **the-angle-vault** | Creative briefs using 14 proven angles mapped to funnel stages and channels. Includes messaging hierarchy with character limits and exact ad placement specs for every platform. |
+| **the-scene-composer** | Photography direction using a composable scene system, 160+ blocks across 10 dimensions (lighting, camera, surface, props, background, color, style, film type, scene, pose). |
+| **the-voice-fingerprint** | Analyzes your content samples to extract a reusable voice profile, 6 dimensions rated 1-10, vocabulary rules, sentence patterns, and channel-specific adaptations. |
+| **the-activation-reel** | Short, conversion-focused onboarding videos built in Remotion for iOS, Android, or web. Maps each beat to a conversion milestone on the path to activation. |
+| **the-dual-cut-writer** | Two LinkedIn post variants per topic, educational and operator-punchy angles, written in your brand voice. For organic authority-building, not ads or outbound. |
+| **the-hook-lab** | Four scored hook variants for any post draft, each using a distinct psychological framework, with a recommendation and rug-pull check. |
+| **the-citation-auditor** | Audits how citable your content is for ChatGPT, Perplexity, and AI Overviews, structure, authority signals, and machine-readable files. |
 
-### Design (4 skills)
+### Job 2: Lifecycle Marketer (6 skills)
+
+Runs the flows that fire on their own, welcome, recovery, win-back, so retention isn't a once-a-quarter campaign.
 
 | Skill | What You Get |
 |-------|-------------|
-| **creative-brief** | Creative briefs using 14 proven angles mapped to funnel stages and channels. Includes messaging hierarchy with character limits and exact ad placement specs for every platform. |
-| **product-photography** | Photography direction using a composable scene system — 160+ blocks across 10 dimensions (lighting, camera, surface, props, background, color, style, film type, scene, pose). |
-| **brand-voice** | Analyzes your content samples to extract a reusable voice profile — 6 dimensions rated 1-10, vocabulary rules, sentence patterns, and channel-specific adaptations. |
-| **create-onboarding-video** | Short, conversion-focused onboarding videos built in Remotion for iOS, Android, or web. Maps each beat to a conversion milestone on the path to activation. Handles intake (platform, activation event, drop-off archetype, screen stills), beat planning, motion direction, and outputs a renderable Remotion project with journey embed spec. |
+| **the-flow-architect** | Multi-channel automation flows with conditional branching, holdout groups, and channel guardrails. Outputs a complete journey blueprint with node-by-node detail. |
+| **the-lifecycle-mapper** | Lifecycle segmentation using a 6-stage model (At Risk to Champions) with RFM scoring and behavioral signals. Tells you who to target and why. |
+| **the-campaign-composer** | Complete email campaigns with 3 subject line variants per email, Liquid personalization, sequence timing, and a deliverability checklist. |
+| **the-channel-guard** | SMS and push notification campaigns with character limits, TCPA/GDPR compliance, quiet hours, frequency caps, and deep link specs. |
+| **the-save-desk** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences, the systemic retention layer, not a one-off email. |
+| **the-cadence-clock** | Recurring, scheduled marketing motions with cadence matched to how fast the underlying signal actually changes. |
 
-### Analytics (2 skills)
+### Job 3: Experimentation Lead (6 skills)
 
-| Skill | What You Get |
-|-------|-------------|
-| **dashboard-design** | KPI dashboard specs with metric formulas, visualization types, alert thresholds, and section-by-section layout. Includes 8 templates (SaaS, e-commerce, RevOps, etc.). |
-| **funnel-analysis** | Diagnoses funnel drop-offs against industry benchmarks, identifies root causes (friction, motivation, ability, timing), calculates the math to hit your targets, and prioritizes fixes. |
-
-### Operations (2 skills)
+Decides what ships and what dies, with a number attached instead of a gut feeling.
 
 | Skill | What You Get |
 |-------|-------------|
-| **workflow-design** | Marketing and sales automation workflows — trigger → condition → action patterns with error handling, retry logic, rate limiting, and integration points. |
-| **recommend-strategy** | Growth strategy recommendations based on your business maturity. Identifies your top 3 growth levers, recommends a strategy archetype, and builds a quarterly plan with 3 prioritized bets. |
+| **the-hypothesis-engine** | Bayesian A/B test design with Thompson sampling, sample size calculations, guardrails, and exit criteria. Not just "test this," a full statistical brief. |
+| **the-page-shipper** | Conversion-optimized landing pages. Outputs deployable HTML + Tailwind CSS, not a wireframe, a working page. |
+| **the-variant-router** | Rules that map audience segments to content variants. Condition, experience, measurement plan. Priority-ordered with a default fallback. |
+| **the-price-point-finder** | Value metric selection, tier structure, price points, and price-increase timing, refuses to guess at your churn or conversion numbers. |
+| **the-leak-finder** | Diagnoses funnel drop-offs against industry benchmarks, identifies root causes, calculates the math to hit your targets, and prioritizes fixes. |
+| **the-first-mile-mapper** | Designs the post-signup activation flow, what happens before the "aha moment," in what order, and how drop-off gets diagnosed. |
+
+### Job 4: Data Analyst (6 skills)
+
+Explains what moved and why, before anyone has to ask.
+
+| Skill | What You Get |
+|-------|-------------|
+| **the-kpi-blueprint** | KPI dashboard specs with metric formulas, visualization types, alert thresholds, and section-by-section layout. Includes 8 templates. |
+| **the-theme-miner** | Turns transcripts, reviews, tickets, and surveys into confidence-scored themes, quote banks, and evidence-based personas. |
+| **the-lever-finder** | Growth strategy recommendations based on your business maturity. Identifies your top 3 growth levers and builds a quarterly plan. |
+| **the-cohort-tracker** *(new)* | Groups customers by acquisition period and tracks retention or revenue across the periods that follow, as a cohort table. |
+| **the-benchmark-check** *(new)* | Checks one of your metrics against a stated benchmark source, with an honest confidence read on how solid that comparison actually is. |
+| **the-anomaly-alert** *(new)* | Flags which points in a metric's recent history are genuinely outside its normal range, using a stated trailing-average method. |
+
+### Job 5: SDR (7 skills)
+
+Builds and works the list, so outbound isn't a stale spreadsheet from last quarter.
+
+| Skill | What You Get |
+|-------|-------------|
+| **the-list-builder** | Builds and qualifies a prospect list from your ICP, every lead scored Hot/Warm/Cold/Skip with cited evidence. |
+| **the-fit-scorer** | Scores an account list against your ICP criteria and returns priority tiers with a one-sentence rationale per account. |
+| **the-monday-list** | Turns a week of intent signals, funding, hires, job posts, stack changes, into a ranked Monday-morning outreach list. |
+| **the-cold-opener** | Turns prospect research, a trigger signal, and a value prop into a complete cold email body under 120 words. |
+| **the-subject-line-lab** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
+| **the-sequence-doctor** | Audits a full cold email sequence, diagnoses each email's specific weakness, and rewrites the three worst-performing ones. |
+| **the-profile-reader** | Turns a prospect's LinkedIn profile text into three distinct, specific personalization angles for a cold email or opener. |
+
+### Job 6: Account Executive (7 skills)
+
+Runs the deal from first call to signature, and tells you honestly when it's stalling.
+
+| Skill | What You Get |
+|-------|-------------|
+| **the-call-coach** | Pre-meeting prep and post-meeting coaching, talk ratio analysis, BANT/MEDDIC scoring, specific rewrites. |
+| **the-pipeline-scanner** | Full pipeline health analysis, stuck deals, risk signals, forecast by category, coverage ratio. |
+| **the-account-blueprint** | Account engagement plans with buying committee mapping and a 90-day week-by-week action plan per stakeholder. |
+| **the-deal-gauge** | Dual-axis scoring (health + intent) with independent trend tracking and full MEDDIC/BANT completeness checks. |
+| **the-90-second-brief** | Researches any company and produces a 90-second rep brief, what changed, and the strongest outreach angle. |
+| **the-switch-angle** | Maps a prospect's current tool stack to the exact inefficiency it creates, plus questions to surface it on a call. |
+| **the-objection-playbook** | Outputs the five most likely objections for a persona, each with an acknowledgment, response, and follow-up question. |
+
+### Job 7: GTM Engineer (6 skills)
+
+Builds the systems everyone else's work runs on top of.
+
+| Skill | What You Get |
+|-------|-------------|
+| **the-routing-engine** | Designs the lead-to-opportunity layer, MQL scoring model, routing rules, and speed-to-lead SLAs. |
+| **the-enablement-kit** | One-pagers, ROI calculators, proposal templates, and playbooks mapped to persona and deal stage. |
+| **the-workflow-builder** | Marketing and sales automation workflows, trigger, condition, action, with error handling and retries. |
+| **the-transcript-miner** | Extracts deal signals, objections, confirmed pain points, and a stakeholder map from a raw sales call transcript. |
+| **the-competitor-dossier** | Deep-dives one competitor's public site into a structured profile, positioning, pricing, weaknesses. |
+| **the-lead-router** *(new)* | Designs the actual assignment logic for a qualified lead, round-robin, territory, or score-threshold, with tie-break and fallback rules. |
 
 ---
 
@@ -104,28 +136,28 @@ You install them once. Then you just ask for what you need in plain language —
 
 ### Step 1: Install the skills
 
-**Option A — One command** (if you have Claude Code):
+**Option A, One command** (if you have Claude Code):
 ```bash
 npx skills add sidchaudhary/gtm-skills
 ```
 
-**Option B — Git clone:**
+**Option B, Git clone:**
 ```bash
 git clone https://github.com/sidchaudhary/gtm-skills.git
 cd gtm-skills
 ```
 
-**Option C — Download ZIP:**
-Click the green **Code** button on GitHub → **Download ZIP** → extract to a folder.
+**Option C, Download ZIP:**
+Click the green **Code** button on GitHub, **Download ZIP**, extract to a folder.
 
 ---
 
 ### Step 2: Pick how you'll use them
 
 <details>
-<summary><strong>Claude Code (terminal) — recommended</strong></summary>
+<summary><strong>Claude Code (terminal), recommended</strong></summary>
 
-Claude Code is Anthropic's AI coding assistant that runs in your terminal. Don't let "terminal" scare you — you just type `claude` and start talking.
+Claude Code is Anthropic's AI coding assistant that runs in your terminal. Don't let "terminal" scare you, you just type `claude` and start talking.
 
 **What you need:**
 - A terminal (Terminal on Mac, PowerShell on Windows)
@@ -152,9 +184,9 @@ Claude Cowork is Anthropic's desktop agent. This repo includes a plugin manifest
 - Claude Desktop app with Cowork enabled (any paid Claude plan)
 
 **Setup:**
-1. Open the Claude Desktop app → switch to the **Cowork** tab
+1. Open the Claude Desktop app, switch to the **Cowork** tab
 2. Select the downloaded `gtm-skills` folder as your working directory
-3. The 46 skills activate automatically
+3. All 46 skills activate automatically
 
 Once set up, just ask for what you need.
 
@@ -169,16 +201,16 @@ You can use these skills in Claude's web interface using Projects.
 - A Claude account at [claude.ai](https://claude.ai) (Pro, Max, or Team)
 
 **Setup:**
-1. Go to [claude.ai](https://claude.ai) → **Projects** → **Create a new project**
+1. Go to [claude.ai](https://claude.ai), **Projects**, **Create a new project**
 2. Click **Add content** in the project knowledge section
-3. Upload the skill files you want from `skills/` — each folder has a `SKILL.md` file
+3. Upload the skill files you want from `skills/<job>/<skill>/`, each folder has a `SKILL.md` file
 4. Upload the matching reference files from `references/`
 
 > **Tip:** The `.claude-plugin` folder is hidden by default. On Mac, press `Cmd + Shift + .` in Finder to show hidden files.
 
 Start a conversation inside the project and ask for what you need.
 
-**Note:** Unlike Claude Code and Cowork, outputs won't auto-save as files — copy them from the chat.
+**Note:** Unlike Claude Code and Cowork, outputs won't auto-save as files, copy them from the chat.
 
 </details>
 
@@ -200,21 +232,48 @@ Or just say: *"Help me set up my product context."*
 
 Tell Claude what you need in plain language:
 
-- *"Design a journey for onboarding new users"*
-- *"Score this deal — here's what I know about it"*
-- *"Build me a landing page for our free trial"*
-- *"Prep me for my demo with Acme Corp tomorrow"*
-- *"Where's my funnel leaking?"*
-- *"What should our growth strategy be this quarter?"*
-- *"Create a creative brief for LinkedIn ads"*
-- *"Analyze my pipeline — here are my current deals"*
-- *"Build an onboarding video for my iOS checkout flow — activation event is first sale made"*
+- *"Design a journey for onboarding new users"* (the-flow-architect)
+- *"Score this deal, here's what I know about it"* (the-deal-gauge)
+- *"Build me a landing page for our free trial"* (the-page-shipper)
+- *"Prep me for my demo with Acme Corp tomorrow"* (the-90-second-brief)
+- *"Where's my funnel leaking?"* (the-leak-finder)
+- *"What should our growth strategy be this quarter?"* (the-lever-finder)
+- *"Create a creative brief for LinkedIn ads"* (the-angle-vault)
+- *"Analyze my pipeline, here are my current deals"* (the-pipeline-scanner)
+- *"Is this quarter's churn rate actually bad?"* (the-benchmark-check)
+- *"Who should this inbound lead get routed to?"* (the-lead-router)
+
+You don't need to know the skill name. Describe the job and the right one activates.
+
+## The Order to Build Them In
+
+Don't install all 46 on day one. You'll use nine of them and forget the rest.
+
+**Week one:** set up `product-context`, then run `the-90-second-brief` and `the-cold-opener` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
+
+**Week two:** add `the-objection-playbook` and `the-pipeline-scanner`. Sorting stalled deals and objections is where most pipelines actually leak.
+
+**Week three:** add `the-list-builder`, `the-fit-scorer`, and `the-monday-list`, so you stop working a stale list.
+
+**Week four:** add `the-flow-architect`, `the-page-shipper`, and `the-kpi-blueprint`, and let the whole thing run.
+
+## What to Never Hand Over
+
+Three things stay with you, permanently.
+
+**The decision to contact someone.** These skills draft and suggest. You approve. The day that flips is the day you become the thing everyone complains about.
+
+**The price conversation.** Let a skill draft the pricing strategy. Never let it negotiate live with a real customer.
+
+**A bad reply.** When someone is annoyed, a human answers. Every time.
+
+Everything else on this list is fair game, and every hour it takes back is an hour you spend on the calls that close.
 
 ---
 
 ## How Skills Work Together
 
-Skills are independent — use any one on its own. But they're more powerful together because they share your product context.
+Skills are independent, use any one on its own. But they're more powerful together because they share your product context.
 
 ```
                     ┌─────────────────────┐
@@ -222,30 +281,19 @@ Skills are independent — use any one on its own. But they're more powerful tog
                     │  (your business DNA) │
                     └─────────┬───────────┘
                               │ feeds into everything
-          ┌───────────────────┼───────────────────┐
-          ▼                   ▼                   ▼
-   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-   │  MARKETING   │    │    SALES     │    │   DESIGN    │
-   │             │    │             │    │             │
-   │ segments    │───▶│ outreach    │    │ creative    │
-   │ journeys    │    │ coaching    │    │ photography │
-   │ experiments │    │ pipeline    │    │ brand voice │
-   │ emails      │    │ accounts    │    │ onboard vid │
-   │ SMS/push    │    │ deal scores │    └─────────────┘
-   │ landing pg  │    └─────────────┘
-   │ personalize │
-   └──────┬──────┘
-          │
-          ▼
-   ┌─────────────┐    ┌─────────────┐
-   │  ANALYTICS   │    │ OPERATIONS  │
-   │             │    │             │
-   │ dashboards  │    │ workflows   │
-   │ funnels     │    │ strategy    │
-   └─────────────┘    └─────────────┘
+     ┌──────────┬─────────────┼─────────────┬──────────┬──────────┐
+     ▼          ▼             ▼             ▼          ▼          ▼
+ ┌────────┐ ┌────────┐  ┌────────────┐ ┌─────────┐ ┌────────┐ ┌────────┐
+ │ Brand  │ │Lifecycle│  │Experiment- │ │  Data   │ │  SDR   │ │Account │
+ │Designer│ │Marketer │  │ation Lead  │ │ Analyst │ │        │ │Executive│
+ └────────┘ └────────┘  └────────────┘ └─────────┘ └────────┘ └────────┘
+                                                                     │
+                                                              ┌──────▼──────┐
+                                                              │ GTM Engineer │
+                                                              └─────────────┘
 ```
 
-**Example flow:** Run `segment-builder` to identify at-risk customers → feed that into `journey-builder` to design a retention flow → use `email-campaign` for the email content → set up an `experiment-design` to test two approaches → track results with `dashboard-design`.
+**Example flow:** Run `the-lifecycle-mapper` to identify at-risk customers, feed that into `the-flow-architect` to design a retention flow, use `the-campaign-composer` for the email content, set up `the-hypothesis-engine` to test two approaches, track results with `the-kpi-blueprint`.
 
 ---
 
@@ -253,9 +301,9 @@ Skills are independent — use any one on its own. But they're more powerful tog
 
 | | Generic AI prompts | Single-domain skill packs | GTM Skills |
 |---|---|---|---|
-| **Domains** | Whatever you ask for | Marketing only (or sales only) | Marketing + Sales + Design + Analytics + Operations |
-| **Methodology** | None — starts from scratch | Varies | Bayesian testing, lifecycle scoring, composable photography, dual deal scoring, 14 creative angles |
-| **Context** | Forgets everything between conversations | Some persistence | Shared product context file — set up once, every skill uses it |
+| **Organized by** | Whatever you ask for | One tool or one domain | The 7 real jobs on a GTM team |
+| **Methodology** | None, starts from scratch | Varies | Bayesian testing, lifecycle scoring, composable photography, dual deal scoring, 14 creative angles |
+| **Context** | Forgets everything between conversations | Some persistence | Shared product context file, set up once, every skill uses it |
 | **Output quality** | Depends on your prompt | Template-driven | Framework-driven with reference data (benchmarks, compliance rules, scoring rubrics) |
 | **Cost** | Your Claude subscription | Free or $100+ | Free |
 
@@ -270,19 +318,19 @@ No. You need to type sentences. That's it. Claude Code runs in a terminal, but a
 Not necessarily. Claude Code and Cowork work with a regular Claude subscription (Pro at $20/mo, Max at $100/mo). An API key is only needed if you prefer pay-per-use billing.
 
 **Can I use just one skill?**
-Absolutely. Every skill works independently. Use `email-campaign` without ever touching `deal-scoring`. But if you set up `product-context` first, the output will be tailored to your business.
+Absolutely. Every skill works independently. Use `the-campaign-composer` without ever touching `the-deal-gauge`. But if you set up `product-context` first, the output will be tailored to your business.
 
 **Can my team use this?**
 Yes. Share the repo. Each person's `product-context` is local to their machine, so the same skills produce output customized to whoever is using them.
 
 **What if I already use [Klaviyo / HubSpot / Salesforce / etc.]?**
-These skills design the *strategy* — what to build, who to target, what to say. You execute in whatever tools you already use. Skills handle the thinking layer; your existing stack handles the doing layer.
+These skills design the *strategy*, what to build, who to target, what to say. You execute in whatever tools you already use. Skills handle the thinking layer; your existing stack handles the doing layer.
 
 **Can I customize the skills?**
 Yes. Skills are just Markdown files. Edit any `SKILL.md` or `references/*.md` to match your methodology or add your own frameworks.
 
 **How is this related to Intempt?**
-These skills encode methodology developed while building [Intempt](https://intempt.com), a customer engagement platform. The skills are free and work with any stack. If you want to execute the strategies they generate with real customer data, Intempt is the natural next step — but it's not required.
+These skills encode methodology developed while building [Intempt](https://intempt.com), a customer engagement platform. The skills are free and work with any stack. If you want to execute the strategies they generate with real customer data, Intempt is the natural next step, but it's not required.
 
 ---
 
@@ -326,4 +374,4 @@ Each skill is backed by detailed reference documents in `references/`. These con
 
 ## License
 
-MIT — use freely, modify as needed, no attribution required.
+MIT, use freely, modify as needed, no attribution required.
