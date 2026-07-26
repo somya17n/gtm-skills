@@ -3,7 +3,7 @@ name: the-switch-angle
 description: "Takes a prospect's current tool stack and outputs the strongest competitive displacement angle specific to their configuration, grounded only in stack data the user actually provided: the specific inefficiency their stack creates, two questions to surface it on a call, and a one-line email hook. Use when the user wants to displace a competitor or when a prospect's tech stack is known."
 ---
 
-# Competitor Displacement Framer
+# The Switch Angle
 
 Turn a prospect's tool stack into a specific displacement argument: the exact inefficiency their configuration creates and how to surface it without sounding like a competitive pitch.
 

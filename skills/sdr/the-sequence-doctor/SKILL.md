@@ -3,7 +3,7 @@ name: the-sequence-doctor
 description: Audits a cold outbound email sequence and returns a gap analysis per email, rewrites for the three weakest emails, and a recommendation for any missing sequence step. Use when the user wants to diagnose why reply rates are low or wants a new sequence reviewed before launch.
 ---
 
-# Outbound Sequence Auditor
+# The Sequence Doctor
 
 Audit a cold email sequence and return a structured diagnosis with rewrites for the weakest emails.
 

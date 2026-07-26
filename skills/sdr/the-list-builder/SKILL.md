@@ -4,7 +4,7 @@ description: "Builds and qualifies a prospect list from an ICP definition: sourc
 tools: WebFetch, WebSearch
 ---
 
-# Prospecting
+# The List Builder
 
 Build a qualified, evidence-backed prospect list from an ICP definition: every row has a reason and a source, not a spray list.
 

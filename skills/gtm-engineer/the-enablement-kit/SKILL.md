@@ -3,7 +3,7 @@ name: the-enablement-kit
 description: "Produces sales collateral: one-pagers, ROI calculators, proposal templates, and playbooks, mapped to buyer persona and deal stage. Use when a rep needs a specific asset to hand a prospect. Boundary: for objection-handling responses specifically, use the-objection-playbook: that skill already owns the objection library in this pack. This skill covers every other enablement asset type."
 ---
 
-# Sales Enablement
+# The Enablement Kit
 
 Produce the sales collateral a rep actually hands a prospect, mapped to who they are and what stage the deal is in, not a generic template.
 

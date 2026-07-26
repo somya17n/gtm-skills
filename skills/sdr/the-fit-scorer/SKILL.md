@@ -3,7 +3,7 @@ name: the-fit-scorer
 description: Scores an account list against ICP criteria and outputs a priority tier (High/Medium/Low) and one-sentence outreach rationale per account. Use when the user wants to prioritize a list of accounts before an outbound campaign.
 ---
 
-# ICP Signal Scorer
+# The Fit Scorer
 
 Score an account list against ICP criteria and return a ranked priority table with outreach rationale per account.
 

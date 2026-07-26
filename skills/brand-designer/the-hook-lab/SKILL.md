@@ -3,7 +3,7 @@ name: the-hook-lab
 description: Takes a LinkedIn post draft and generates four scored hook/opening-line variants using four distinct psychological frameworks, with a recommendation. Use when a post's opening two lines feel flat or when testing hook variants before publishing. Pairs with the-dual-cut-writer.
 ---
 
-# Hook Optimizer
+# The Hook Lab
 
 Generate four hook variants for a LinkedIn post and recommend the strongest one. The hook is the first 1-2 lines before LinkedIn's "see more" cutoff. If it does not stop the scroll, the rest of the post does not matter.
 
@@ -40,6 +40,18 @@ For each: one line on why it fits this audience, and a flag if the hook promises
 - No clickbait, no engagement-bait phrasing ("this changed everything"), no all-caps
 - Every hook must be grounded in something actually in the post body or the user's input: do not invent a stat, event, or claim to make the hook stronger
 - If the user supplied past performance data, prioritize the framework that data shows works best for their audience over the default ranking
+
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Does every hook stand alone if LinkedIn truncates after line 1, with no dependency on line 2?
+- Is every stat or claim in a hook actually present in the post body or the user's input, not invented to make it punchier?
+- Was every hook checked for the rug-pull flag (promising something the post body doesn't deliver), and cut if it failed regardless of how strong it tested?
+- If the user supplied past performance data, did the recommended pick actually follow that data instead of the default framework ranking?
+- Is the "Specific Stat" variant's number real, not a fabricated engagement prediction?
+
+If any check fails, correct it before returning the output.
 
 ## Attribution
 

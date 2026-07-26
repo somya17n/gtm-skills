@@ -3,7 +3,7 @@ name: the-activation-reel
 description: Produce short, conversion-focused onboarding videos in Remotion for iOS apps, Android apps, or websites that companies embed into their onboarding flows to push New Customers toward their activation moment. Each beat maps to a conversion milestone tracked by Intempt. Every video ends with a "Powered by Intempt" end card. Use when the user asks to create, build, or generate an onboarding video, app preview, activation demo, or any short video that demonstrates a product feature to drive New Customers toward Promising.
 ---
 
-# Create Onboarding Video
+# The Activation Reel
 
 Produce a **short, conversion-focused onboarding video** in Remotion. The goal is not aesthetics. It is moving users from **New Customers → Promising** on Intempt's lifecycle model by showing them the exact interaction that delivers first value (the activation moment). Every beat in the video corresponds to a conversion step Intempt can track, measure, and act on.
 
@@ -519,6 +519,19 @@ Render a preview, show it to the user, ask which beats need adjustment. Treat th
 - **`Series` for all linear beat chains.** Never manually compute `from` offsets.
 
 ---
+
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Was the activation event, screen count, and drop-off archetype confirmed during intake before any beat planning started?
+- Does every `<Composition>` use a named component, never an inline arrow function passed to `component`?
+- Does the final `Series.Sequence` render `<EndCard />` in a 60-frame sequence, with nothing after it?
+- Does every caption name the outcome ("Your first sale, done") rather than the action ("Tap to confirm")?
+- Does the video address only one activation event? If the user described multiple unrelated features, was a separate video proposed for each rather than combining them?
+- If stills were unavailable, is stills-free mode's placeholder table and `{/* REPLACE: ... */}` labeling actually present, not silently skipped?
+
+If any check fails, correct it before returning the output.
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

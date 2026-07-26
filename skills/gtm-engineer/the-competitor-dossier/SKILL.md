@@ -4,7 +4,7 @@ description: "Researches a competitor from their public website and builds a str
 tools: WebFetch, WebSearch
 ---
 
-# Competitor Profiling
+# The Competitor Dossier
 
 Research a competitor from public sources and build a structured, comparable profile: a dossier, not a sales pitch.
 
@@ -46,6 +46,18 @@ Ask the user for:
 If profiling more than one competitor, produce one profile per competitor, then a short side-by-side comparison table using the same metrics across all of them.
 
 Read `references/competitor-profile-guide.md` for the field-by-field extraction checklist and the multi-competitor comparison table format.
+
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Does every claim in the profile trace to a specific page or search result, with anything inferred rather than directly read labeled "inference"?
+- Are all customer counts, review ratings, and traffic/SEO figures either sourced from an actual search result or explicitly flagged as unavailable, never estimated?
+- Where the competitor's own marketing claims a stat or outcome, is it noted as their claim (not repeated as verified fact) unless review/press evidence actually confirms it?
+- Does the Sources section list every URL used with the date fetched?
+- If profiling multiple competitors, does every profile use the same metrics so the comparison table is genuinely apples-to-apples?
+
+If any check fails, correct it before returning the output.
 
 ## Attribution
 

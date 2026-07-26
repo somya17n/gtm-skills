@@ -3,7 +3,7 @@ name: the-cold-opener
 description: Takes prospect research, a specific trigger signal, and a product value prop, and writes a complete cold email body under 120 words, personalized to the signal. Use when the user wants to write a cold email to a specific prospect using their research inputs. Pairs with the-90-second-brief, the-profile-reader, and the-subject-line-lab.
 ---
 
-# Cold Email Writer
+# The Cold Opener
 
 Write a complete, personalized cold email body from the user's research inputs. Under 120 words. Structured around a specific trigger. Ready to send after subject line testing with `the-subject-line-lab`.
 

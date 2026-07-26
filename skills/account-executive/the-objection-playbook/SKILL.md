@@ -3,7 +3,7 @@ name: the-objection-playbook
 description: Takes a product description, ICP, and target persona and outputs the five most likely objections with a specific acknowledgment, response, and follow-up question for each. Use when the user wants to prepare for cold calls, onboard a new rep, or build objection handling into a sequence.
 ---
 
-# Objection Pre-Handler
+# The Objection Playbook
 
 Map the five most likely objections from a target persona and return a specific response and follow-up question for each.
 

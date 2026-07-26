@@ -3,7 +3,7 @@ name: the-routing-engine
 description: "Designs the lead-to-opportunity layer between marketing and sales: MQL scoring model, routing rules, speed-to-lead SLAs, and lifecycle stage definitions. Use when leads aren't reaching sales fast enough, marketing and sales disagree on what counts as qualified, or handoff is undefined. Boundary: the-deal-gauge scores one opportunity; the-pipeline-scanner reports on the whole pipeline; this skill is the layer before either exists."
 ---
 
-# RevOps
+# The Routing Engine
 
 Design the system that moves a lead from first touch to a working opportunity: scoring, routing, and the SLA that keeps it from going cold.
 

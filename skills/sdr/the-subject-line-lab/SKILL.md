@@ -3,7 +3,7 @@ name: the-subject-line-lab
 description: Takes a cold email body and target persona and generates five scored subject line variants with a recommendation. Use when the user wants to test subject line options before sending a sequence at scale.
 ---
 
-# Cold Email Subject Line Tester
+# The Subject Line Lab
 
 Generate five scored subject line variants for a cold email and recommend the best one for a first send.
 

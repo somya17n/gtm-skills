@@ -3,7 +3,7 @@ name: the-profile-reader
 description: Takes a prospect's LinkedIn profile text and outputs three distinct personalization angles for a cold email opening line, each grounded in something specific the prospect wrote or did publicly. Use when the user wants to personalize a cold email or LinkedIn message to a specific prospect.
 ---
 
-# LinkedIn Personalization Brief
+# The Profile Reader
 
 Read a prospect's LinkedIn profile and return three specific opening line angles, each one grounded in something real about that person.
 

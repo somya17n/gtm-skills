@@ -3,7 +3,7 @@ name: the-monday-list
 description: Takes a batch of weekly intent signals across a pipeline and outputs a ranked outreach list with signal, rationale, and suggested channel per account. Use when the user wants to prioritize their Monday morning outreach based on the week's signals.
 ---
 
-# Weekly Pipeline Signal Prioritizer
+# The Monday List
 
 Process a week of intent signals and return a ranked outreach list so the team starts Monday acting, not reading.
 

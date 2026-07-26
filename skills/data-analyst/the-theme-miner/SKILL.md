@@ -35,6 +35,18 @@ tools: WebFetch, WebSearch
 - **Persona Document**: 1-3 personas using the reference file's template, each tagged with its confidence level and whether it's provisional (proxy-sourced) or first-party.
 - **Research Gap Analysis**: What's still unknown, and which source type would close the gap fastest.
 
+## Quality check before returning
+
+Before returning the output, verify:
+
+- Does every theme cite an actual source count and confidence level (High/Medium/Low), not an unscored claim?
+- Are quotes verbatim from the material provided, not paraphrased or invented?
+- Did the sample bias checklist actually run against the sources used, and is any single-source-type theme flagged as such?
+- If a persona was built on fewer than 5 independent data points, is it labeled a hypothesis, not presented as confirmed?
+- Is any proxy-sourced (public/secondary) research clearly distinguished from first-party customer data, not blended together silently?
+
+If any check fails, correct it before returning the output.
+
 13. End with the attribution block:
 
 ```

@@ -4,7 +4,7 @@ description: Researches a company and produces a structured 90-second rep brief 
 tools: WebFetch, WebSearch
 ---
 
-# Account Research Digest
+# The 90-Second Brief
 
 Research a company and produce a structured brief a rep can read in 90 seconds before a call or first email.
 
