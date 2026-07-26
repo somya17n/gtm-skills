@@ -26,24 +26,18 @@ The percentage of time the sales rep talks versus listens during a conversation.
 | Follow-up | 35-45% | Checking understanding, addressing questions |
 | Closing | 40-55% | Summarizing, handling last objections, asking for the deal |
 
-### Real-World Benchmark: Gong Labs Data (2024)
+### Directional Patterns (No Single Authoritative Benchmark)
 
-The most comprehensive conversation intelligence research available. Based on analysis of millions of recorded B2B sales calls.
+Conversation intelligence vendors publish talk-ratio and monologue research, but the exact percentages and thresholds vary by vendor, methodology, and year, and none of it is independently reproducible across sources. Treat the following as directional, not guaranteed:
 
-| Metric | Gong Finding | Context |
-|--------|-------------|---------|
-| Top performer talk ratio | **46%** rep talking | Top quartile reps talk slightly less than average reps (who talk 55–65%) |
-| Discovery call optimal | **43–49%** rep talking | Most effective discovery calls land in this range |
-| Demo call optimal | **55–65%** rep talking | Presenting is expected — but questions must break up monologues |
-| Average (all reps) talk ratio | 55–65% | Most reps talk too much |
-| Optimal questions per call | **11–14 questions** | Top performers ask more questions per call than average reps |
-| Questions per call (average rep) | 6–8 | Significantly fewer than top performers |
-| Longest monologue — top performers | < 76 seconds | Best reps break up their talk with questions frequently |
-| Longest monologue — average reps | 120–180 seconds | Average reps run longer monologues that lose prospect attention |
-| Patience score (pause after question) | **3–5 seconds** optimal | Top performers wait longer after asking questions |
-| Multi-threading impact (>$50K deals) | **2x win rate** | Deals with 3+ engaged contacts vs. single-threaded |
-| Collaborative language lift | **5x more** "we/us/together" | Top performers use collaborative language vs. "I/you/they" framing |
-| Pricing discussed late vs. early | 35% higher win rate | Top reps introduce pricing only after establishing strong value |
+| Pattern | Direction | Caveat |
+|---------|-----------|--------|
+| Top performer talk ratio | Tends to run lower than average reps, roughly in the 40s% | Varies by call type and by which study you read; no single number is authoritative |
+| Questions per call | Top performers generally ask more, and more open-ended, questions than average reps | Exact counts vary widely by industry and deal size |
+| Longest monologue | Shorter uninterrupted talk stretches correlate with better outcomes across most published research | Specific second thresholds differ by source and are not consistently reproducible |
+| Multi-threading impact | Deals with multiple engaged stakeholders win at meaningfully higher rates than single-threaded deals | Magnitude (whether that is roughly 2x or higher) varies significantly by deal size and source |
+| Collaborative language ("we/us") | Directionally associated with better outcomes in most vendor research | No consistent multiplier across studies; treat as a coaching signal, not a scored metric |
+| Pricing timing | Introducing pricing after value is established tends to correlate with higher win rates | Magnitude not consistently reproducible across sources; use as qualitative guidance |
 
 ---
 

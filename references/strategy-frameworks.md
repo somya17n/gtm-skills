@@ -268,33 +268,35 @@ Conference/Event → Booth/Session → Follow-Up → Nurture → Convert
 | Gross margin | > 60% | > 65% | > 70% | > 75% |
 | Rule of 40 | N/A | N/A | > 30 | > 40 |
 
-### Real-World SaaS Benchmarks by ARR Stage (2024)
+### SaaS Benchmarks by ARR Stage: Directional Ranges
 
-Sourced from ChartMogul 2024 SaaS Benchmark Report (n=1,800+ companies) and OpenView Partners 2024 SaaS Benchmarks.
+Treat every figure below as directional, not guaranteed. No single authoritative benchmark exists across company stage, category, and funding profile, and published SaaS benchmark reports frequently disagree with each other. Use these as sanity-check ranges, not targets to cite externally.
 
-| Metric | $1M–$5M ARR | $5M–$20M ARR | $20M–$100M ARR | Source |
-|--------|------------|-------------|---------------|--------|
-| Median ARR growth (YoY) | 148% | 89% | 56% | ChartMogul 2024 |
-| Top quartile ARR growth | 200%+ | 130%+ | 85%+ | ChartMogul 2024 |
-| NRR median | 106% | 110% | 116% | ChartMogul 2024 |
-| Logo churn (annual) | 12–20% | 8–14% | 5–10% | ChartMogul 2024 |
-| CAC payback median | 18 months | 15 months | 12 months | OpenView 2024 |
-| LTV:CAC median | 3.0x | 3.8x | 5.2x | OpenView 2024 |
-| Gross margin median | 68% | 72% | 76% | OpenView 2024 |
-| Sales & Marketing as % of ARR | 45–65% | 35–50% | 25–40% | OpenView 2024 |
-| Activation rate median | 34–38% | 38–44% | 40–50% | Userpilot 2024 |
+| Metric | $1M-$5M ARR | $5M-$20M ARR | $20M-$100M ARR |
+|--------|------------|-------------|---------------|
+| Median ARR growth (YoY) | Typically triple-digit for the strongest performers | Growth rate moderates as the base grows | Growth rate moderates further; efficiency starts to matter more than speed |
+| Top quartile ARR growth | Meaningfully above the median | Meaningfully above the median | Meaningfully above the median |
+| NRR median | Often just above 100% | Generally higher than earlier stage | Often the highest of the three bands, reflecting more mature expansion motions |
+| Logo churn (annual) | Highest of the three bands | Moderating | Lowest of the three bands |
+| CAC payback median | Longest of the three bands | Shortening | Shortest of the three bands |
+| LTV:CAC median | Lowest of the three bands | Improving | Highest of the three bands |
+| Gross margin median | Lowest of the three bands, though still SaaS-grade | Improving with scale | Highest of the three bands |
+| Sales & Marketing as % of ARR | Highest of the three bands | Moderating | Lowest of the three bands |
+| Activation rate median | Widest range, most product-dependent | Improving as onboarding matures | Highest of the three bands |
 
-### PLG vs. Sales-Led Growth: By the Numbers
+### PLG vs. Sales-Led Growth: Directional Comparison
 
-| Metric | PLG Average | Sales-Led Average | Source |
-|--------|------------|------------------|--------|
-| Activation rate | 34.6% | 41.6% | Userpilot 2024 |
-| CAC payback | 13 months | 18 months | OpenView 2024 |
-| NRR | 108% | 105% | OpenView 2024 |
-| ARR per employee | $180K+ | $140K | OpenView 2024 |
-| Trial → paid CVR (opt-out) | 48.8% | N/A (demo-led) | ProfitWell |
-| Trial → paid CVR (opt-in) | 18.2% | N/A | ProfitWell |
-| Median time to PMF | 22 months | 27 months | First Round Capital |
+No single dataset reliably separates PLG from sales-led benchmarks across the whole market. The comparison below is directional only, not a citable statistic.
+
+| Metric | PLG Tendency | Sales-Led Tendency |
+|--------|------------|------------------|
+| Activation rate | Generally lower, since self-serve users are less qualified going in | Generally higher, since sales pre-qualifies before signup |
+| CAC payback | Typically shorter, lower-touch motion | Typically longer, higher-touch motion |
+| NRR | Comparable to sales-led on average; varies heavily by product | Comparable to PLG on average; varies heavily by segment |
+| ARR per employee | Often higher due to lower headcount per dollar of revenue | Often lower due to higher headcount per dollar of revenue |
+| Trial to paid conversion (opt-out trials) | Meaningfully higher than opt-in trials | Not directly comparable; sales-led motions are typically demo-led rather than trial-led |
+| Trial to paid conversion (opt-in trials) | Meaningfully lower than opt-out trials | Not directly comparable |
+| Time to product-market fit | Varies enormously by team and market | Varies enormously by team and market |
 
 ---
 

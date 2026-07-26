@@ -360,54 +360,48 @@ Poses a question the reader wants answered.
 | Reply rate | < 0.5% | 1-3% | 3-5% | > 5% |
 | Meeting booked rate | < 0.1% | 0.2-0.5% | 0.5-1% | > 1% |
 
-### Real-World Email Flow Benchmarks (2024–2025)
+### Email Flow Performance, Directional Ranges
 
-Sourced from Klaviyo, Omnisend, and Mailchimp state-of-email reports. Automated flows vs. manual campaigns have dramatically different performance profiles.
+Email platforms each publish their own performance numbers, but methodology, industry mix, and time period differ enough between them that no single figure is an authoritative benchmark across senders. Treat everything below as a directional range to sanity-check your own numbers against, not a target to promise a customer.
 
-#### Ecommerce Flow Performance (Klaviyo / Omnisend 2024)
+#### Ecommerce Flow Performance (Directional)
 
-| Flow Type | Open Rate | Click Rate | CVR | Revenue per Email | Source |
-|-----------|----------|-----------|-----|------------------|--------|
-| Welcome series (email 1) | 45–55% | 8–12% | 3–5% | $0.40–0.80 | Klaviyo 2024 |
-| Abandoned cart (email 1, 1hr) | 38–45% | 7–10% | 3.33% avg / 7.69% top 10% | $1.00–2.50 | Klaviyo + Omnisend 2024 |
-| Browse abandonment | 25–35% | 4–7% | 1.5–2.5% | $0.30–0.60 | Omnisend 2024 |
-| Post-purchase upsell | 35–45% | 5–9% | 2–4% | $0.50–1.20 | Klaviyo 2024 |
-| Win-back (30-day lapsed) | 20–30% | 3–6% | 1.5–2.5% | $0.20–0.50 | Omnisend 2024 |
-| Birthday / anniversary | 40–55% | 7–12% | 5–8% | $0.80–1.50 | Klaviyo 2024 |
+| Flow Type | Open Rate | Click Rate | CVR |
+|-----------|----------|-----------|-----|
+| Welcome series (email 1) | 40-55% | 8-12% | 2-5% |
+| Abandoned cart (email 1, sent within a few hours) | 35-50% | 6-10% | 2-8%, wide range by cart value and vertical |
+| Browse abandonment | 20-35% | 4-7% | 1-3% |
+| Post-purchase upsell | 30-45% | 5-9% | 2-4% |
+| Win-back (lapsed customers) | 15-30% | 3-6% | 1-3% |
+| Birthday / anniversary | 35-55% | 6-12% | 4-8% |
 
-**Key finding from Omnisend 2024:** Automated email flows deliver **27x higher CVR** than broadcast campaigns (3.33% automated vs. 0.12% broadcast). The leverage is in flows, not blasts.
+**Directional pattern, not a guaranteed multiplier:** across the reports we reviewed, automated behavior-triggered flows consistently outconvert one-off broadcast campaigns, often by a wide margin. The exact ratio moves a lot by list, vertical, and time period, so don't quote a specific multiplier to a customer as if it were fixed.
 
-#### Segmentation Impact (Klaviyo 2024)
+#### Segmentation Impact (Directional)
 
-| Approach | Revenue per Recipient (RPR) | Relative Lift |
-|----------|-----------------------------|--------------|
-| Unsegmented broadcast | $0.08 | Baseline |
-| Basic segmentation (engaged vs. unengaged) | $0.18 | +125% |
-| Advanced segmentation (lifecycle + behavior) | $0.26 | **+225% (3.2x)** |
+Segmented sends (by engagement, lifecycle stage, or behavior) reliably beat unsegmented broadcasts on revenue per recipient, open rate, and click rate, and tend to produce lower unsubscribe rates too. The size of the lift varies significantly by list quality and segmentation depth. Roughly 2-4x revenue per recipient is a reasonable planning range, but there's no single authoritative benchmark that holds across industries.
 
-**Segmented emails generate 3.2x higher revenue per recipient than unsegmented lists.** Source: Klaviyo 2024 (n=130,000+ ecommerce accounts).
-
-#### SaaS Email Benchmarks (2024)
+#### SaaS Email Benchmarks (Directional)
 
 | Flow Type | Open Rate | Click Rate | Notes |
 |-----------|----------|-----------|-------|
-| Trial activation (Day 1) | 40–55% | 12–18% | Highest open rate in any SaaS sequence — maximize CTA clarity |
-| Onboarding Day 3 | 30–45% | 8–12% | Feature-specific, link to in-app action |
-| Activation nudge (Day 7, not activated) | 25–35% | 5–9% | Human-sent variant outperforms automated by 2–3x |
-| Feature announcement | 20–30% | 4–7% | Use for activated users only; dormant users inflate open, deflate click |
-| Renewal reminder (30 days out) | 45–55% | 10–15% | Highest-converting email in SaaS — plan your renewal message carefully |
+| Trial activation (Day 1) | 35-55% | 10-18% | Usually the highest open rate in a SaaS sequence, maximize CTA clarity |
+| Onboarding Day 3 | 25-45% | 8-12% | Feature-specific, link to in-app action |
+| Activation nudge (Day 7, not activated) | 20-35% | 5-9% | Human-sent variants tend to outperform automated ones |
+| Feature announcement | 15-30% | 4-7% | Use for activated users only; dormant users inflate open, deflate click |
+| Renewal reminder (30 days out) | 40-55% | 8-15% | Often the highest-converting email in a SaaS sequence |
 
 ---
 
 ## Copy Research: What Actually Converts
 
-Deep-research findings on email copy patterns — what converts across ecommerce and SaaS contexts. Sourced from Klaviyo community, Braze 2023-2024, Intercom State of Customer Engagement 2023, Yotpo, Barilliance, and practitioner case studies from Email Geeks Slack.
+Copy patterns that tend to convert across ecommerce and SaaS contexts, based on general email marketing practice rather than any single named study.
 
 ---
 
 ### Ecommerce Welcome Email Copy
 
-**The 3-email structure that wins (Klaviyo 2024, 51x ROI on welcome flows)**
+**The 3-email structure that wins**
 
 Email 1 accounts for 60-70% of total welcome flow revenue. Keep it under 150 words — mobile is 65%+ of opens.
 
@@ -443,7 +437,7 @@ CTA: "Shop [Brand]" (specific product link beats generic "Shop Now")
 **Top DTC approaches:**
 - Gymshark: Lead with community, not product. Email 1 has no product push. Works for identity-driven brands.
 - Glossier: No discount in welcome flow at all. Editorial-first builds LTV over discount training.
-- AWAY: "The Weekend Edit" format — story-led content that features product. 2-3x industry average click rate.
+- AWAY: "The Weekend Edit" format - story-led content that features product. Tends to outperform typical click rates for story-led formats, though the exact multiple isn't backed by a verified benchmark.
 
 ---
 
@@ -454,9 +448,9 @@ CTA: "Shop [Brand]" (specific product link beats generic "Shop Now")
 | Email | Timing | Copy Approach |
 |-------|--------|--------------|
 | Order confirmation | Immediate | 70% functional / 30% brand. Include 1 cross-sell. "Customers who bought X also love Y." |
-| Usage check-in | Day 3-5 (post-delivery) | "How's your [product] treating you?" — not promotional. Care instructions, usage tips. 2x review submission rate (Yotpo 2023). |
-| Replenishment or cross-sell | Day 14-21 (calibrated to product cycle) | "You might need this with your [product name]" — lead with use case, not product. 8-15% purchase rate for consumables. |
-| Review request | Day 30 | "How did we do?" — small incentive for review. NPS respondents have 3x higher LTV (Yotpo). |
+| Usage check-in | Day 3-5 (post-delivery) | "How's your [product] treating you?" - not promotional. Care instructions, usage tips. Tends to lift review submission rates meaningfully compared to a cold review ask, though the exact multiple isn't backed by a verified source. |
+| Replenishment or cross-sell | Day 14-21 (calibrated to product cycle) | "You might need this with your [product name]" - lead with use case, not product. 8-15% purchase rate for consumables. |
+| Review request | Day 30 | "How did we do?" - small incentive for review. Customers who leave high satisfaction scores tend to have meaningfully higher LTV, though the exact multiple varies by source. |
 
 **Email 3 money copy pattern:**
 ```
@@ -479,7 +473,7 @@ Browse abandonment: interest but no commitment. Assuming purchase intent reads a
 **Browse abandonment subject lines that convert:**
 | Subject | CTR | Notes |
 |---------|-----|-------|
-| "Still thinking about [product name]?" | 4-6% | Klaviyo practitioner average |
+| "Still thinking about [product name]?" | 4-6% | Common range for this subject pattern |
 | "We saved [product] for you" | high | Pair with limited stock |
 | "Others are looking at [product name]" | 3-5% | Social proof trigger |
 | "[First name], we know great taste when we see it" | good | Premium brand flattery |
@@ -488,13 +482,13 @@ Browse abandonment copy rule: position it as a service, not surveillance. "We sa
 
 Browse abandonment emails should include 2-3 alternative product recommendations in the same category — they're still in discovery mode. Cart abandonment should focus on the specific cart item only.
 
-**Timing:** Within 1 hour of browsing session ending converts at 3.3x the rate of after 24 hours (Barilliance).
+**Timing:** Reaching out within an hour of the browsing session ending tends to convert meaningfully better than waiting 24 hours, though the exact multiple isn't backed by a verified source.
 
 ---
 
 ### Win-Back / Re-Engagement Copy
 
-**Subject lines with documented performance from Klaviyo community + DTC practitioner case studies:**
+**Subject lines that tend to perform well for win-back sends:**
 
 | Approach | Subject | Open Rate |
 |----------|---------|-----------|
@@ -506,7 +500,7 @@ Browse abandonment emails should include 2-3 alternative product recommendations
 | Product update | "Come back — we've changed" | 22-26% (only if genuinely true) |
 | Classic | "We miss you, [first name]" | 18-22% (weakest — feels generic) |
 
-**The three-way comparison (Klaviyo large account tests):**
+**The three-way comparison:**
 - Curiosity approaches: highest open rate (25-32%), second on revenue per email
 - Straight offer: second on open rate, highest revenue per email (discount drives AOV)
 - "We miss you": third on every metric except reply rate (emotional response, low purchase intent)
@@ -533,21 +527,21 @@ Body structure:
 3. Two-option CTA: "Stay subscribed" button AND visible "Unsubscribe" link
 4. Optional: small incentive attached to "stay subscribed"
 
-Making unsubscribe easy paradoxically increases re-engagement by 34% — the subscriber feels respected, not trapped (Mailchimp 2023). A mid-market outdoor brand reported 31% re-engagement rate using this pattern on 47,000 lapsed subscribers.
+Making unsubscribe easy paradoxically tends to increase re-engagement - the subscriber feels respected, not trapped. Some brands have reported meaningfully higher re-engagement using this pattern, though there's no single verified benchmark for the lift.
 
 ---
 
 ### SaaS Activation Email Copy
 
-**Goal: one action in Day 0-1. Users who complete one meaningful action in the first 24 hours are 3-5x more likely to convert to paid (Intercom, Mixpanel, Amplitude).**
+**Goal: one action in Day 0-1. Users who complete one meaningful action in the first 24 hours tend to be meaningfully more likely to convert to paid, though the exact multiple isn't backed by one verified source.**
 
 **Winning subject line patterns:**
-| Pattern | Why It Works | Source |
+| Pattern | Why It Works | Notes |
 |---------|-------------|--------|
-| "Your [Product] account is ready — start here" | Eliminates decision paralysis | Intercom 2023 |
-| "One thing to do in [Product] today" | Single-action framing | +22% Day 1 activation (Intercom 2023) |
-| "We set something up for you" | Curiosity + implies effort made | Multiple SaaS practitioner data |
-| "[First name], before you explore [Product]..." | Pattern interrupt for complex products | Practitioner reported |
+| "Your [Product] account is ready - start here" | Eliminates decision paralysis | Common pattern in SaaS activation sequences |
+| "One thing to do in [Product] today" | Single-action framing | Tends to lift Day 1 activation, though the exact lift isn't backed by a verified benchmark |
+| "We set something up for you" | Curiosity + implies effort made | Anecdotally reported by SaaS teams, not backed by a specific study |
+| "[First name], before you explore [Product]..." | Pattern interrupt for complex products | Anecdotally reported, no verified benchmark |
 
 **Anatomy of a high-converting Day 0 activation email (under 150 words):**
 ```
@@ -564,9 +558,9 @@ CTA: Action-specific — "Connect your [data source]" not "Go to dashboard"
 Below fold (optional): 3-bullet "what you can do" only if product complexity warrants it
 ```
 
-**Intercom's published example:**
-> Subject: "One thing to do in Intercom today"
-> Body: "Hi [Name], Welcome to Intercom. You can send your first message to a customer in the next 5 minutes. [CTA: Install Messenger] That's it for now. Once you've done that, we'll walk you through the next step. — The Intercom Team"
+**Example pattern:**
+> Subject: "One thing to do in [Product] today"
+> Body: "Hi [Name], Welcome to [Product]. You can [complete the core action] in the next 5 minutes. [CTA: specific action] That's it for now. Once you've done that, we'll walk you through the next step."
 
 ---
 
@@ -595,14 +589,14 @@ Below fold (optional): 3-bullet "what you can do" only if product complexity war
 
 **Format hierarchy by conversion on paid upgrade:**
 
-1. **Use case story** (highest): "Here's how [company type] uses [feature] to [specific outcome]." 200-350 words, one CTA to try the feature. Converts 2-4x better than tip-based emails (Intercom 2023).
+1. **Use case story** (highest): "Here's how [company type] uses [feature] to [specific outcome]." 200-350 words, one CTA to try the feature. Tends to convert meaningfully better than tip-based emails, though the exact multiple isn't backed by a verified benchmark.
 
 2. **Before/after framing**: "Before [feature]: [pain]. After [feature]: [result]." Works for productivity and automation features.
    - Subject: "Before vs. after [feature name]"
 
 3. **Tip format**: "3 ways to use [feature]." Works for power users, not onboarding. Risk: makes the feature feel optional.
 
-4. **Video/GIF-led**: Animated GIF in email showing feature. +15-25% CTR (HubSpot benchmark). Lift diminishes for users who don't watch.
+4. **Video/GIF-led**: Animated GIF in email showing feature. Tends to lift CTR meaningfully, though the exact percentage isn't backed by a verified benchmark. Lift diminishes for users who don't watch.
 
 **The format to avoid:** Long feature documentation dumps. "Here's everything [feature] can do" has the lowest click rates and highest unsubscribes in every SaaS email benchmark.
 
@@ -614,10 +608,10 @@ Below fold (optional): 3-bullet "what you can do" only if product complexity war
 
 | Trigger | Subject Pattern | CVR |
 |---------|----------------|-----|
-| Usage limit (80-90% of plan cap) | "You're almost out of [limit]" | Highest — 3-5x more effective than time-based (Stripe, Mailchimp, Intercom data) |
-| Feature paywall hit | "You tried [feature] — here's how to unlock it" | 8-15% of sends |
-| Success milestone | "You've [done X] — here's what's next on [paid plan]" | Strong — success-framed beats problem-framed for activated users (Amplitude 2024) |
-| Team collaboration | "Invite your team to see what you've built" | Strong for seat expansion (Slack, Notion, Figma top-performer) |
+| Usage limit (80-90% of plan cap) | "You're almost out of [limit]" | Highest - tends to notably outperform time-based triggers |
+| Feature paywall hit | "You tried [feature] - here's how to unlock it" | 8-15% of sends |
+| Success milestone | "You've [done X] - here's what's next on [paid plan]" | Strong - success-framed tends to beat problem-framed for activated users |
+| Team collaboration | "Invite your team to see what you've built" | Strong for seat expansion in collaborative products |
 
 **Copy pattern for upsell email:**
 1. Lead with what they've accomplished (not what they're missing): "You've [done X] in [Product]."

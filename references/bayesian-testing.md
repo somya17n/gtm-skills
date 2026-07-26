@@ -109,7 +109,7 @@ The probability that a given variant has the highest true conversion rate. Compu
 The expected cost of choosing this variant if it is not actually the best. Measured in the same units as the optimization goal.
 
 ```
-Expected Loss = E[max(other variants) - this variant | this variant chosen]
+Expected Loss = E[max(0, best_other_variant - this_variant) | this variant chosen]
 ```
 
 | Expected Loss | Action |
@@ -283,20 +283,20 @@ Exit rules are condition-based and can reference any experiment metric or Bayesi
 
 ---
 
-## Real-World A/B Testing Performance Data (2024–2025)
+## A/B Testing Performance in Practice
 
-The gap between theoretical testing and what actually happens in practice is significant. These numbers come from Optimizely, VWO, Kameleoon, and CXL Institute research.
+The gap between theoretical testing and what actually happens in practice is real and worth planning for. Treat every figure below as directional, not guaranteed. No single authoritative benchmark exists across tools, industries, and traffic levels, and reported win rates vary widely by how a "significant winner" is defined.
 
-| Finding | Real Benchmark | Source | Implication |
-|---------|---------------|--------|-------------|
-| Tests that produce a significant winner | **1 in 7–8** | Optimizely 2024 (n=millions of tests) | Most tests will be inconclusive — that is normal, not failure |
-| False positive rate (peeking at 90% confidence) | **771/1000** A/A tests hit significance at some point | Kohavi et al., Microsoft Research | Never stop a test just because it crossed a significance threshold |
-| Average test duration needed | **2–4 weeks** | CXL Institute research | Shorter tests systematically underestimate winner rates and overclaim |
-| Winning test results that persist after 6 months | ~50% | Optimizely longitudinal analysis | Roughly half of A/B wins don't hold long-term — novelty effect inflates initial results |
-| Personalization tests winning rate | 1 in 3–4 | Dynamic Yield benchmark (ecommerce) | Personalization wins more often than generic copy tests |
-| Email subject line tests | 1 in 4–5 produce significant lift | Mailchimp internal data | Open rate tests especially noisy due to Apple MPP |
-| Minimum sample for reliable results | **1,000 per variant** | Industry consensus | 500 is the floor; 1,000 is where posterior estimates stabilize |
-| Novelty effect duration | 7–14 days | Optimizely research | New experiences see inflated metrics in first 1–2 weeks; wait for steady state |
+| Finding | Directional Range | Implication |
+|---------|-------------------|-------------|
+| Tests that produce a significant winner | Roughly 1 in 5 to 1 in 10, depending on program maturity and traffic | Most tests will be inconclusive, and that is normal, not failure |
+| False positive risk from peeking early | Materially elevated versus a single fixed-horizon check | Never stop a test just because it crossed a significance threshold mid-run |
+| Typical test duration needed | Commonly 2-4 weeks for standard traffic levels | Shorter tests systematically underestimate winner rates and overclaim |
+| Winning results that persist after 6 months | A meaningful share fade or reverse | Novelty effects inflate initial results; re-validate wins periodically |
+| Personalization test win rates | Often reported higher than generic copy-only tests | Segment-aware variants tend to outperform one-size-fits-all copy tests |
+| Email subject line tests | A minority produce a statistically significant lift | Open-rate tests are especially noisy on lists with heavy Apple Mail usage |
+| Minimum sample for reliable results | 1,000 per variant is a reasonable planning floor | 500 is an absolute minimum; posterior estimates stabilize meaningfully above it |
+| Novelty effect duration | Commonly 1-2 weeks | New experiences see inflated metrics early; wait for steady state before declaring a winner |
 
 ### Note on Apple Mail Privacy Protection (MPP)
 
@@ -328,14 +328,16 @@ Where:
 
 | Baseline Rate | Relative Lift | 95% Confidence / 80% Power | Per Variant |
 |--------------|--------------|---------------------------|-------------|
-| 2% | 20% | ~24,000 | per variant |
-| 5% | 20% | ~9,200 | per variant |
-| 10% | 10% | ~14,600 | per variant |
-| 10% | 20% | ~3,800 | per variant |
-| 20% | 10% | ~6,200 | per variant |
-| 20% | 20% | ~1,600 | per variant |
-| 30% | 10% | ~3,600 | per variant |
-| 50% | 10% | ~1,600 | per variant |
+| 2% | 20% | ~21,100 | per variant |
+| 5% | 20% | ~8,150 | per variant |
+| 10% | 10% | ~14,750 | per variant |
+| 10% | 20% | ~3,850 | per variant |
+| 20% | 10% | ~6,500 | per variant |
+| 20% | 20% | ~1,700 | per variant |
+| 30% | 10% | ~3,750 | per variant |
+| 50% | 10% | ~1,550 | per variant |
+
+**Note:** every row above is recomputed directly from the formula stated in this section (Z=1.96, Z=0.842). If you use these numbers, recompute from the formula rather than trusting a static table, since small changes in baseline rate shift the required sample size quickly.
 
 **Note:** This uses a frequentist power analysis formula for planning purposes. Bayesian experiments can also use expected value of information or posterior precision targets, but the frequentist approach gives a practical minimum sample size.
 
