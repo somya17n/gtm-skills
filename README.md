@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 46 skills organized around the 7 real jobs on a GTM team, not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
+**Your AI go-to-market team.** 54 skills organized around the 7 real jobs on a GTM team, plus one shared setup skill (55 total), not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -28,7 +28,7 @@ So that's how this is organized. Seven jobs. Six or seven skills behind each one
 
 ## What's Inside
 
-46 skills across 7 jobs, plus one shared setup skill. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
+54 skills across 7 jobs, plus one shared setup skill (product-context), 55 total. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
 
 ### Foundation
 
@@ -50,7 +50,7 @@ Builds the on-brand asset and the content around it, so nothing ships off-voice 
 | **the-hook-lab** | Four scored hook variants for any post draft, each using a distinct psychological framework, with a recommendation and rug-pull check. |
 | **the-citation-auditor** | Audits how citable your content is for ChatGPT, Perplexity, and AI Overviews, structure, authority signals, and machine-readable files. |
 
-### Job 2: Lifecycle Marketer (6 skills)
+### Job 2: Lifecycle Marketer (7 skills)
 
 Runs the flows that fire on their own, welcome, recovery, win-back, so retention isn't a once-a-quarter campaign.
 
@@ -60,6 +60,7 @@ Runs the flows that fire on their own, welcome, recovery, win-back, so retention
 | **the-lifecycle-mapper** | Lifecycle segmentation using a 6-stage model (At Risk to Champions) with RFM scoring and behavioral signals. Tells you who to target and why. |
 | **the-campaign-composer** | Complete email campaigns with 3 subject line variants per email, Liquid personalization, sequence timing, and a deliverability checklist. |
 | **the-channel-guard** | SMS and push notification campaigns with character limits, TCPA/GDPR compliance, quiet hours, frequency caps, and deep link specs. |
+| **the-referral-architect** | Designs a customer referral program, trigger moment, two-sided incentive sized against real customer value, tiers, and anti-abuse rules. |
 | **the-save-desk** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences, the systemic retention layer, not a one-off email. |
 | **the-cadence-clock** | Recurring, scheduled marketing motions with cadence matched to how fast the underlying signal actually changes. |
 
@@ -89,7 +90,7 @@ Explains what moved and why, before anyone has to ask.
 | **the-benchmark-check** *(new)* | Checks one of your metrics against a stated benchmark source, with an honest confidence read on how solid that comparison actually is. |
 | **the-anomaly-alert** *(new)* | Flags which points in a metric's recent history are genuinely outside its normal range, using a stated trailing-average method. |
 
-### Job 5: SDR (7 skills)
+### Job 5: SDR (12 skills)
 
 Builds and works the list, so outbound isn't a stale spreadsheet from last quarter.
 
@@ -102,8 +103,13 @@ Builds and works the list, so outbound isn't a stale spreadsheet from last quart
 | **the-subject-line-lab** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
 | **the-sequence-doctor** | Audits a full cold email sequence, diagnoses each email's specific weakness, and rewrites the three worst-performing ones. |
 | **the-profile-reader** | Turns a prospect's LinkedIn profile text into three distinct, specific personalization angles for a cold email or opener. |
+| **the-reply-classifier** | Sorts a batch of replies into Interested/Later/Referred/Objection/Dead/Angry with evidence and the next action for each. |
+| **the-inbox-zero-enforcer** | Processes a full unhandled inbox into Drafted/Escalated/Scheduled/Closed so nothing sits unworked. |
+| **the-list-cleaner** | Dedupes and flags a raw list, wrong titles, stale roles, wrong companies, broken data, before it hits a sequence. |
+| **the-call-booker** | Writes the booking message, reschedule, confirmation, and day-before reminder that gets a warm lead onto a calendar. |
+| **the-no-show-save** | Writes the 3-stage recovery sequence for a missed meeting, plus when to stop trying based on no-show history. |
 
-### Job 6: Account Executive (7 skills)
+### Job 6: Account Executive (10 skills)
 
 Runs the deal from first call to signature, and tells you honestly when it's stalling.
 
@@ -113,6 +119,9 @@ Runs the deal from first call to signature, and tells you honestly when it's sta
 | **the-pipeline-scanner** | Full pipeline health analysis, stuck deals, risk signals, forecast by category, coverage ratio. |
 | **the-account-blueprint** | Account engagement plans with buying committee mapping and a 90-day week-by-week action plan per stakeholder. |
 | **the-deal-gauge** | Dual-axis scoring (health + intent) with independent trend tracking and full MEDDIC/BANT completeness checks. |
+| **the-win-loss-analyzer** | Ranks the real, evidence-backed reasons deals close or die across a batch of closed-won and closed-lost deals. |
+| **the-renewal-tracker** | Scores an existing account's renewal risk from usage and relationship signals, with the one highest-leverage action. |
+| **the-negotiation-coach** | Preps anchor, concession ladder, walk-away point, and calibrated questions for one specific deal negotiation. |
 | **the-90-second-brief** | Researches any company and produces a 90-second rep brief, what changed, and the strongest outreach angle. |
 | **the-switch-angle** | Maps a prospect's current tool stack to the exact inefficiency it creates, plus questions to surface it on a call. |
 | **the-objection-playbook** | Outputs the five most likely objections for a persona, each with an acknowledgment, response, and follow-up question. |
@@ -186,7 +195,7 @@ Claude Cowork is Anthropic's desktop agent. This repo includes a plugin manifest
 **Setup:**
 1. Open the Claude Desktop app, switch to the **Cowork** tab
 2. Select the downloaded `gtm-skills` folder as your working directory
-3. All 46 skills activate automatically
+3. All 55 skills activate automatically
 
 Once set up, just ask for what you need.
 
@@ -247,7 +256,7 @@ You don't need to know the skill name. Describe the job and the right one activa
 
 ## The Order to Build Them In
 
-Don't install all 46 on day one. You'll use nine of them and forget the rest.
+Don't install all 55 on day one. You'll use nine of them and forget the rest.
 
 **Week one:** set up `product-context`, then run `the-90-second-brief` and `the-cold-opener` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
 
