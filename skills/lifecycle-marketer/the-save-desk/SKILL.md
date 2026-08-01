@@ -15,7 +15,7 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 3. Ask: "What do you want built: a cancel flow, a churn risk score, a dunning sequence, or more than one?"
 4. Ask: "What's your billing provider?" (Stripe, Chargebee, Paddle, Recurly, other)
 5. Ask: "Do you have cancellation reason data from past churns, or exit survey responses?" If none exists, say so in the output: the reason-to-offer mapping will use generic categories until real data exists to refine them.
-6. Ask: "Monthly, annual, or both billing intervals, and do you support pausing or downgrading plans?"
+6. Ask: "Monthly, annual, or both billing intervals, and do you support pausing or downgrading plans?" If the product ships on a delivery cycle (replenishment, subscribe-and-save, meal kits), also ask whether pauses and skips are currently counted as churn in the user's own reporting; they usually shouldn't be, and a churn rate that hasn't separated them is inflated.
 
 ## Process
 
@@ -23,7 +23,8 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 
 7. Design the sequence: Trigger → Exit Survey → Dynamic Offer → Confirmation → Post-Cancel.
 8. Build the exit survey: single-select, 5-8 reason categories max. If the user has real cancellation data, order reasons by actual frequency; otherwise use the default ordering in the reference file and flag it as unvalidated.
-9. Map each reason to a primary offer and a fallback offer using the offer-to-reason table in the reference file. Never propose one blanket discount for every reason: a discount does not save someone who isn't using the product, and a roadmap preview does not save someone who can't afford it.
+9. Map each reason to a primary offer and a fallback offer using the offer-to-reason table in the reference file. Never propose one blanket discount for every reason: a discount does not save someone who isn't using the product, and a roadmap preview does not save someone who can't afford it. For a delivery-cycle product, treat "too much product" as a frequency mismatch first: the fix is usually a longer cycle or a quantity change, not a discount.
+9b. For a delivery-cycle product, list which off-ramps the customer portal actually surfaces before the cancel button becomes reachable: skip a cycle, delay, reduce quantity, swap product, change frequency. If any of these exist as backend capability but aren't surfaced in the portal, flag that as the gap, not the offer.
 10. Specify the confirmation step (clear end-of-billing-period messaging, no dark patterns; keep "continue cancelling" visible) and the post-cancel step (reactivation path; draft the win-back email directly as a one-off, not via a separate skill).
 
 **Mode B: Churn risk / health score**
@@ -53,6 +54,8 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 - Does the offer-to-reason mapping avoid a single blanket discount for every cancellation reason?
 - If real cancellation data was missing, is the default reason ordering explicitly flagged as unvalidated?
 - Does the Dunning Sequence call out which retry steps the user's billing provider already automates, rather than asking them to rebuild native functionality?
+- For a delivery-cycle product, are pauses and skips kept separate from cancellations in the churn numbers, rather than folded into a single blended rate?
+- Is a "too much product" complaint checked against delivery frequency before a discount is proposed as the fix?
 
 If any check fails, correct it before returning the output.
 

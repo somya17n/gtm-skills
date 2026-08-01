@@ -16,6 +16,8 @@ Ask the user for these inputs. If any are missing, ask before building the table
 3. **The raw data**: either a per-customer table (customer ID, cohort period, activity or revenue per period) or an already-aggregated cohort table the user pastes in. This skill does not have access to a live database; it only works with data the user actually provides.
 4. **Time window**: how many periods after acquisition to track (e.g. 12 weeks, 6 months).
 5. **Segment split, if any**: does the user want cohorts split further by acquisition channel, plan tier, or another dimension, or one table across all customers.
+6. **CAC or acquisition spend, if a payback window is wanted**: spend by channel and period. Optional; skip the payback section entirely if this isn't supplied.
+7. **Customer identity method**: how a customer is deduplicated across orders or sessions. If this is unclear (guest checkout, multiple emails for one person), ask before building the table rather than assuming the raw customer count is clean.
 
 ## Output format
 
@@ -33,6 +35,7 @@ Below the table:
 - **Cohort trend**: is the newest fully-observed cohort retaining better or worse than the oldest, stated as a specific percentage point difference at the same period-since-acquisition (e.g. "the Mar cohort's Month 1 retention is 68%, six points above Jan's 62% at the same point").
 - **Where the drop is steepest**: the single period-over-period transition with the largest average drop across all cohorts (e.g. "Month 0 to Month 1 loses the most of any transition").
 - **Cells with insufficient data**: mark any period that hasn't happened yet for a cohort as `N/A`, never a guessed value.
+- **Payback window, only if CAC was supplied**: for each cohort or segment, the period at which cumulative revenue or margin per customer crosses the CAC for that period, stated as "Month 3" or "not yet reached" rather than left blank.
 
 ## Rules
 
@@ -40,6 +43,8 @@ Below the table:
 - A cohort's Month 0 value is always 100% for retention metrics (the whole cohort, by definition) or the cohort's actual starting revenue for revenue metrics; state this explicitly rather than silently assuming it.
 - If the user provides fewer than 3 complete cohorts, say so and note that a trend read on 1-2 cohorts is not reliable, rather than reporting a trend anyway.
 - If activity or revenue data is ambiguous (e.g. it is unclear whether a customer churned or is simply between billing cycles), ask the user how to classify it rather than guessing.
+- If the customer identity method is unclear, say so and note that a fragmented identity (the same person counted as two customers) understates repeat rate and overstates cohort size, rather than reporting the raw count as if it were clean.
+- State whether the tracked metric is revenue or contribution margin, and never compare a revenue figure to CAC as if it were profit; if the user hasn't said which, ask.
 - Do not compare this cohort's numbers to any outside company or industry figure. That is a separate skill.
 
 ## Quality check before returning
@@ -50,6 +55,8 @@ Before returning the output, verify:
 - Are all not-yet-observed periods marked `N/A`, not a projected number?
 - Is the cohort trend stated as a specific number (percentage points), not a vague "getting better"?
 - If fewer than 3 cohorts were provided, does the output say so rather than asserting a trend?
+- If CAC was supplied, is the payback window stated per cohort or segment, not just a single blended number?
+- Is it clear throughout whether the tracked value is revenue or margin, with no silent switch between the two?
 
 If any check fails, correct it before returning the output.
 
