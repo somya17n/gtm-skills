@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 54 skills organized around the 7 real jobs on a GTM team, plus one shared setup skill (55 total), not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
+**Your AI go-to-market team.** 69 skills organized around the 7 real jobs on a GTM team, plus one shared setup skill (70 total), not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -24,11 +24,11 @@ Most AI skill packs are organized around tools. You end up with a folder full of
 
 A GTM hire doesn't come with a folder of prompts. They come with a job description. Seven jobs, over and over, every week, forever: Brand Designer, Lifecycle Marketer, Experimentation Lead, Data Analyst, SDR, Account Executive, and GTM Engineer.
 
-So that's how this is organized. Seven jobs. Six or seven skills behind each one. Every skill maps to something you'd otherwise pay a person to do.
+So that's how this is organized. Seven jobs. Seven to thirteen skills behind each one, weighted toward wherever the work actually piles up. Every skill maps to something you'd otherwise pay a person to do.
 
 ## What's Inside
 
-54 skills across 7 jobs, plus one shared setup skill (product-context), 55 total. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
+69 skills across 7 jobs, plus one shared setup skill (product-context), 70 total. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
 
 ### Foundation
 
@@ -50,7 +50,7 @@ Builds the on-brand asset and the content around it, so nothing ships off-voice 
 | **the-hook-lab** | Four scored hook variants for any post draft, each using a distinct psychological framework, with a recommendation and rug-pull check. |
 | **the-citation-auditor** | Audits how citable your content is for ChatGPT, Perplexity, and AI Overviews, structure, authority signals, and machine-readable files. |
 
-### Job 2: Lifecycle Marketer (7 skills)
+### Job 2: Lifecycle Marketer (9 skills)
 
 Runs the flows that fire on their own, welcome, recovery, win-back, so retention isn't a once-a-quarter campaign.
 
@@ -61,10 +61,12 @@ Runs the flows that fire on their own, welcome, recovery, win-back, so retention
 | **the-campaign-composer** | Complete email campaigns with 3 subject line variants per email, Liquid personalization, sequence timing, and a deliverability checklist. |
 | **the-channel-guard** | SMS and push notification campaigns with character limits, TCPA/GDPR compliance, quiet hours, frequency caps, and deep link specs. |
 | **the-referral-architect** | Designs a customer referral program, trigger moment, two-sided incentive sized against real customer value, tiers, and anti-abuse rules. |
-| **the-save-desk** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences, the systemic retention layer, not a one-off email. |
+| **the-save-desk** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences, the systemic retention layer, not a one-off email. Now also covers delivery-cycle products: pause/skip vs. cancellation, and frequency mismatch as a churn cause. |
 | **the-cadence-clock** | Recurring, scheduled marketing motions with cadence matched to how fast the underlying signal actually changes. |
+| **the-repeat-purchase-check** *(new)* | Reviews the post-first-purchase repeat-buy flow, reorder prompts, replenishment timing, second-purchase incentives, and names what's blocking a second order. |
+| **the-promo-impact-check** *(new)* | Measures the after-the-fact impact of a promotion or discount already run: lift, margin cost, and the post-promo dip, over a stated recovery period. |
 
-### Job 3: Experimentation Lead (6 skills)
+### Job 3: Experimentation Lead (10 skills)
 
 Decides what ships and what dies, with a number attached instead of a gut feeling.
 
@@ -76,8 +78,12 @@ Decides what ships and what dies, with a number attached instead of a gut feelin
 | **the-price-point-finder** | Value metric selection, tier structure, price points, and price-increase timing, refuses to guess at your churn or conversion numbers. |
 | **the-leak-finder** | Diagnoses funnel drop-offs against industry benchmarks, identifies root causes, calculates the math to hit your targets, and prioritizes fixes. |
 | **the-first-mile-mapper** | Designs the post-signup activation flow, what happens before the "aha moment," in what order, and how drop-off gets diagnosed. |
+| **the-search-merchandiser** *(new)* | Reviews onsite search query logs, zero-result queries, synonym gaps, and merchandising rules, and refuses to run without a real query export. |
+| **the-spend-waste-finder** *(new)* | Triages which ad channels, campaigns, or audiences are wasting spend using ROAS, CAC, and spend concentration. |
+| **the-checkout-auditor** *(new)* | A direct UX audit of a checkout flow, form fields, payment coverage, trust signals, step count, from a walkthrough or screenshots. |
+| **the-pdp-reviewer** *(new)* | Reviews an existing product detail page and returns a prioritized edit brief, not a new page build. |
 
-### Job 4: Data Analyst (6 skills)
+### Job 4: Data Analyst (13 skills)
 
 Explains what moved and why, before anyone has to ask.
 
@@ -86,9 +92,16 @@ Explains what moved and why, before anyone has to ask.
 | **the-kpi-blueprint** | KPI dashboard specs with metric formulas, visualization types, alert thresholds, and section-by-section layout. Includes 8 templates. |
 | **the-theme-miner** | Turns transcripts, reviews, tickets, and surveys into confidence-scored themes, quote banks, and evidence-based personas. |
 | **the-lever-finder** | Growth strategy recommendations based on your business maturity. Identifies your top 3 growth levers and builds a quarterly plan. |
-| **the-cohort-tracker** *(new)* | Groups customers by acquisition period and tracks retention or revenue across the periods that follow, as a cohort table. |
-| **the-benchmark-check** *(new)* | Checks one of your metrics against a stated benchmark source, with an honest confidence read on how solid that comparison actually is. |
-| **the-anomaly-alert** *(new)* | Flags which points in a metric's recent history are genuinely outside its normal range, using a stated trailing-average method. |
+| **the-cohort-tracker** | Groups customers by acquisition period and tracks retention or revenue across the periods that follow, as a cohort table. Now also computes a CAC payback window per cohort when acquisition spend is supplied. |
+| **the-benchmark-check** | Checks one of your metrics against a stated benchmark source, with an honest confidence read on how solid that comparison actually is. |
+| **the-anomaly-alert** | Flags which points in a metric's recent history are genuinely outside its normal range, using a stated trailing-average method. |
+| **the-margin-builder** *(new)* | Computes CM1/CM2/CM3 contribution margin for a product, order, or SKU set from the cost and revenue inputs you provide right now. |
+| **the-shipping-recovery-check** *(new)* | Isolates shipping cost recovery: real carrier cost vs. what's charged, and where a free-shipping threshold sits against median order value. |
+| **the-inventory-risk-scanner** *(new)* | SKU-level stockout and overstock risk from sales velocity, on-hand units, and lead time, with stated days-of-cover thresholds. |
+| **the-chargeback-pattern-finder** *(new)* | Finds fraud and dispute clustering patterns (BIN range, address mismatch, order velocity), dated to the original sale. |
+| **the-catalog-auditor** *(new)* | Audits product catalog completeness (titles, attributes, images, descriptions) at SKU scale, not a sampled spot-check. |
+| **the-returns-miner** *(new)* | Groups structured return and RMA reason codes to specific SKUs and surfaces the highest-volume root causes. |
+| **the-weekly-reporter** *(new)* | One weekly operating readout pulled from performance, traffic, lifecycle, inventory, and support exports, what changed, what didn't, and the 3 next actions. |
 
 ### Job 5: SDR (12 skills)
 
@@ -126,7 +139,7 @@ Runs the deal from first call to signature, and tells you honestly when it's sta
 | **the-switch-angle** | Maps a prospect's current tool stack to the exact inefficiency it creates, plus questions to surface it on a call. |
 | **the-objection-playbook** | Outputs the five most likely objections for a persona, each with an acknowledgment, response, and follow-up question. |
 
-### Job 7: GTM Engineer (6 skills)
+### Job 7: GTM Engineer (8 skills)
 
 Builds the systems everyone else's work runs on top of.
 
@@ -137,7 +150,9 @@ Builds the systems everyone else's work runs on top of.
 | **the-workflow-builder** | Marketing and sales automation workflows, trigger, condition, action, with error handling and retries. |
 | **the-transcript-miner** | Extracts deal signals, objections, confirmed pain points, and a stakeholder map from a raw sales call transcript. |
 | **the-competitor-dossier** | Deep-dives one competitor's public site into a structured profile, positioning, pricing, weaknesses. |
-| **the-lead-router** *(new)* | Designs the actual assignment logic for a qualified lead, round-robin, territory, or score-threshold, with tie-break and fallback rules. |
+| **the-lead-router** | Designs the actual assignment logic for a qualified lead, round-robin, territory, or score-threshold, with tie-break and fallback rules. |
+| **the-launch-readiness-check** *(new)* | A pre-launch go/no-go checklist for a specific product or campaign launch. |
+| **the-feed-auditor** *(new)* | Audits the actual data feed sent to Google Shopping, Meta, or another channel, required attributes, disapprovals, price/availability mismatches vs. the live site. |
 
 ---
 
@@ -195,7 +210,7 @@ Claude Cowork is Anthropic's desktop agent. This repo includes a plugin manifest
 **Setup:**
 1. Open the Claude Desktop app, switch to the **Cowork** tab
 2. Select the downloaded `gtm-skills` folder as your working directory
-3. All 55 skills activate automatically
+3. All 70 skills activate automatically
 
 Once set up, just ask for what you need.
 
@@ -256,7 +271,7 @@ You don't need to know the skill name. Describe the job and the right one activa
 
 ## The Order to Build Them In
 
-Don't install all 55 on day one. You'll use nine of them and forget the rest.
+Don't install all 70 on day one. You'll use nine of them and forget the rest.
 
 **Week one:** set up `product-context`, then run `the-90-second-brief` and `the-cold-opener` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
 
