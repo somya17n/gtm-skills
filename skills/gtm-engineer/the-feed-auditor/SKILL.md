@@ -1,6 +1,6 @@
 ---
 name: the-feed-auditor
-description: "Audits the actual data feed sent to Google Shopping, Meta, or another channel for required-attribute completeness, disapproval risk, and price or availability mismatches against the live site. Use when products are disapproved, Shopping or catalog ad performance drops without an obvious campaign cause, or a feed is about to be pushed to a new channel. Boundary: `the-catalog-audit` (Data Analyst) audits the on-page storefront catalog content itself; this skill audits the feed data sent to an external channel, not the storefront page."
+description: "Audits the actual data feed sent to Google Shopping, Meta, or another channel for required-attribute completeness, disapproval risk, and price or availability mismatches against the live site. Use when products are disapproved, Shopping or catalog ad performance drops without an obvious campaign cause, or a feed is about to be pushed to a new channel. Boundary: `the-catalog-auditor` (Data Analyst) audits the on-page storefront catalog content itself; this skill audits the feed data sent to an external channel, not the storefront page."
 ---
 
 # The Feed Auditor

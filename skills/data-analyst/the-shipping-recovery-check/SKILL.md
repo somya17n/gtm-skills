@@ -1,6 +1,6 @@
 ---
-name: the-shipping-margin-check
-description: "Compares what a store charges for shipping against what shipping actually costs, banded by order value and zone, and tests the free-shipping threshold against the store's real order distribution. Use when fulfillment cost is rising, the free-shipping threshold has never been recalculated, or margin looks worse on small orders than large ones. Boundary: differs from `the-margin-stack`, which builds full order-level contribution margin across every cost line. This skill isolates shipping recovery and threshold placement only, and doesn't touch COGS, fees, or ad spend."
+name: the-shipping-recovery-check
+description: "Compares what a store charges for shipping against what shipping actually costs, banded by order value and zone, and tests the free-shipping threshold against the store's real order distribution. Use when fulfillment cost is rising, the free-shipping threshold has never been recalculated, or margin looks worse on small orders than large ones. Boundary: differs from `the-margin-builder`, which builds full order-level contribution margin across every cost line. This skill isolates shipping recovery and threshold placement only, and doesn't touch COGS, fees, or ad spend."
 ---
 
 # The Shipping Margin Check

@@ -1,5 +1,5 @@
 ---
-name: the-catalog-audit
+name: the-catalog-auditor
 description: "Audits a whole product catalog export for missing attributes, thin or empty descriptions, duplicate copy, and image gaps, ranked by revenue rather than row count. Use when the catalog has too many SKUs to review page by page, before a marketplace or feed push, or when only the best sellers seem to have real content. Boundary: `the-citation-auditor` audits blog and content pages for citability to AI search engines. This skill audits product catalog completeness at SKU scale, not content citability."
 ---
 

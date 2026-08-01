@@ -1,5 +1,5 @@
 ---
-name: the-launch-gate
+name: the-launch-readiness-check
 description: "Runs a one-time go/no-go readiness check before a product or campaign launch, covering stock, page, tracking, lifecycle flows, support, and margin as a checklist the launch owner signs off against. Use when a launch, restock, or spend increase is about to go live and the cost of finding a gap after the fact is high. Boundary: `the-workflow-builder` designs ongoing marketing and sales automation that runs indefinitely; this skill is a single pre-launch checklist for one specific launch date, not an automation build."
 ---
 

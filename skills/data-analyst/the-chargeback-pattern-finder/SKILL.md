@@ -1,5 +1,5 @@
 ---
-name: the-chargeback-pattern-check
+name: the-chargeback-pattern-finder
 description: "Takes a dispute or chargeback export and finds whether the disputes cluster by product, channel, geography, order value band, or payment method into a fraud pattern, or whether they're mostly service failures and friendly fraud, then weighs that against what over-blocking would cost in rejected good orders. Use when a dispute rate is rising, a payment provider has sent a warning, or the store wants to know how much of its chargeback problem is real fraud. Boundary: `the-anomaly-alert` flags a generic single-metric time series moving outside its normal range. This skill dates every dispute to the sale it belongs to, not the filing date, and clusters across the dimensions an export actually has instead."
 ---
 

@@ -95,13 +95,13 @@ Explains what moved and why, before anyone has to ask.
 | **the-cohort-tracker** | Groups customers by acquisition period and tracks retention or revenue across the periods that follow, as a cohort table. Now also computes a CAC payback window per cohort when acquisition spend is supplied. |
 | **the-benchmark-check** | Checks one of your metrics against a stated benchmark source, with an honest confidence read on how solid that comparison actually is. |
 | **the-anomaly-alert** | Flags which points in a metric's recent history are genuinely outside its normal range, using a stated trailing-average method. |
-| **the-margin-stack** *(new)* | Computes CM1/CM2/CM3 contribution margin for a product, order, or SKU set from the cost and revenue inputs you provide right now. |
-| **the-shipping-margin-check** *(new)* | Isolates shipping cost recovery: real carrier cost vs. what's charged, and where a free-shipping threshold sits against median order value. |
-| **the-inventory-risk-brief** *(new)* | SKU-level stockout and overstock risk from sales velocity, on-hand units, and lead time, with stated days-of-cover thresholds. |
-| **the-chargeback-pattern-check** *(new)* | Finds fraud and dispute clustering patterns (BIN range, address mismatch, order velocity), dated to the original sale. |
-| **the-catalog-audit** *(new)* | Audits product catalog completeness (titles, attributes, images, descriptions) at SKU scale, not a sampled spot-check. |
+| **the-margin-builder** *(new)* | Computes CM1/CM2/CM3 contribution margin for a product, order, or SKU set from the cost and revenue inputs you provide right now. |
+| **the-shipping-recovery-check** *(new)* | Isolates shipping cost recovery: real carrier cost vs. what's charged, and where a free-shipping threshold sits against median order value. |
+| **the-inventory-risk-scanner** *(new)* | SKU-level stockout and overstock risk from sales velocity, on-hand units, and lead time, with stated days-of-cover thresholds. |
+| **the-chargeback-pattern-finder** *(new)* | Finds fraud and dispute clustering patterns (BIN range, address mismatch, order velocity), dated to the original sale. |
+| **the-catalog-auditor** *(new)* | Audits product catalog completeness (titles, attributes, images, descriptions) at SKU scale, not a sampled spot-check. |
 | **the-returns-miner** *(new)* | Groups structured return and RMA reason codes to specific SKUs and surfaces the highest-volume root causes. |
-| **the-weekly-readout** *(new)* | One weekly operating readout pulled from performance, traffic, lifecycle, inventory, and support exports, what changed, what didn't, and the 3 next actions. |
+| **the-weekly-reporter** *(new)* | One weekly operating readout pulled from performance, traffic, lifecycle, inventory, and support exports, what changed, what didn't, and the 3 next actions. |
 
 ### Job 5: SDR (12 skills)
 
@@ -151,7 +151,7 @@ Builds the systems everyone else's work runs on top of.
 | **the-transcript-miner** | Extracts deal signals, objections, confirmed pain points, and a stakeholder map from a raw sales call transcript. |
 | **the-competitor-dossier** | Deep-dives one competitor's public site into a structured profile, positioning, pricing, weaknesses. |
 | **the-lead-router** | Designs the actual assignment logic for a qualified lead, round-robin, territory, or score-threshold, with tie-break and fallback rules. |
-| **the-launch-gate** *(new)* | A pre-launch go/no-go checklist for a specific product or campaign launch. |
+| **the-launch-readiness-check** *(new)* | A pre-launch go/no-go checklist for a specific product or campaign launch. |
 | **the-feed-auditor** *(new)* | Audits the actual data feed sent to Google Shopping, Meta, or another channel, required attributes, disapprovals, price/availability mismatches vs. the live site. |
 
 ---

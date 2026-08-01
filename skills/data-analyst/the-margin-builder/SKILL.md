@@ -1,5 +1,5 @@
 ---
-name: the-margin-stack
+name: the-margin-builder
 description: "Builds a per-SKU or per-order contribution margin stack (CM1, CM2, CM3) from raw revenue, cost, fee, and ad spend inputs, so the user can see which products actually make money after every variable cost, not just after product cost. Use when ROAS looks fine but profit doesn't, before scaling spend on a product, or when deciding which SKUs are worth promoting. Boundary: this skill computes margin from numbers the user hands over right now. For designing the recurring dashboard that surfaces margin over time, use `the-kpi-blueprint`."
 ---
 

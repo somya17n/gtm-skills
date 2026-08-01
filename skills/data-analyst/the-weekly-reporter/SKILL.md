@@ -1,5 +1,5 @@
 ---
-name: the-weekly-readout
+name: the-weekly-reporter
 description: "Produces one weekly operating readout for a store or product from exported performance, traffic, lifecycle, inventory, and support summaries, instead of scattered dashboards. Use when the user wants a single weekly view of what changed, what likely caused it, and what to do next. Boundary: this skill summarizes across whatever data the user brings this week. For a deep read on one specific area (margin, cohorts, checkout, search), use the matching skill directly and feed its output in here as one of the week's inputs."
 ---
 
@@ -15,7 +15,7 @@ Ask the user for these inputs. If any are missing, note the gap in the output ra
 2. **Core performance**: revenue, orders or conversions, traffic, conversion rate, and average order or deal value for both periods.
 3. **Whatever else moved**: paid traffic summary, lifecycle/email-SMS summary, inventory exceptions, support ticket themes, return or refund highlights, promo calendar, and any changes shipped this week.
 4. **The owner's goal**: revenue, margin, new customers, repeat rate, or operational stability. This decides which changes count as material.
-5. **Outputs from other skills, if the user ran them this week**: a `the-margin-stack` read, a `the-cohort-tracker` table, a `the-checkout-auditor` finding, etc. Treat these as first-class inputs, not just narrative color.
+5. **Outputs from other skills, if the user ran them this week**: a `the-margin-builder` read, a `the-cohort-tracker` table, a `the-checkout-auditor` finding, etc. Treat these as first-class inputs, not just narrative color.
 
 ## Method
 

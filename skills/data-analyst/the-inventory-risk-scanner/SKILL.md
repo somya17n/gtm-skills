@@ -1,5 +1,5 @@
 ---
-name: the-inventory-risk-brief
+name: the-inventory-risk-scanner
 description: "Turns a SKU-level inventory export and sales history into a stockout/overstock risk brief, using a stated days-of-cover method against sales velocity and lead time, not a gut read of a stock report. Use when deciding which SKUs are safe to promote, which to protect from a planned campaign, or which are quietly overstocked. Boundary: differs from `the-anomaly-alert`, which flags one metric's time series against its own trailing average. This skill scores SKU-level stockout/overstock risk from on-hand units, sales velocity, and lead time, not a single metric's history."
 ---
 
