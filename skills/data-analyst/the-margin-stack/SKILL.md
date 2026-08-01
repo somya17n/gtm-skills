@@ -21,16 +21,17 @@ Ask the user for these inputs. If any are missing, ask before building the stack
 
 Build the stack in this exact order. Never blend fixed overhead into it.
 
-1. **Net revenue** = gross revenue − discounts − returns/refunds + shipping charged to customer. Take discounts and returns as an absolute value regardless of how the export signs them (`-120`, `(120)`, or `120`). Trusting the sign as-is risks a negative-signed discount silently adding back to revenue.
-2. **COGS**: total COGS if given, else unit cost × units. If neither exists, treat COGS as 0 in the dollar math but flag the SKU's missing lines as including `cogs`, and withhold its CM2%/breakeven ROAS (step 6). A percentage built on a cost you don't have is not a margin.
-3. **CM1** = net revenue − COGS.
-4. **Payment fee** = (net revenue × payment fee %) + (fixed per-order fee × order count). The fixed fee is per *order*, not per unit: use the orders count if given, else convert with average units per order, else charge it per unit and flag that this overstates fees on multi-unit baskets.
-5. **Platform fee** = net revenue × platform/channel fee %.
-6. **CM2** = CM1 − payment fee − platform fee − shipping cost − packaging cost. Missing lines count as 0 and get named in missing data, never folded in silently. **CM2%** = CM2 ÷ net revenue × 100, withheld (state "withheld, COGS missing" instead of a number) for any SKU flagged in step 2.
-7. **CM3** = CM2 − ad spend (missing ad spend treated as 0, flagged the same way).
-8. **Breakeven ROAS** = net revenue ÷ CM2, only when CM2 > 0 and COGS was present. If CM2 ≤ 0, say the SKU is already unprofitable before any ad ran.
-9. **Rank SKUs by dollar contribution (CM2 or CM3), never by margin percentage alone.** A 60%-margin SKU selling 4 units matters less than a 22%-margin SKU carrying the catalog.
-10. **Split negative-CM3 SKUs**: CM2 < 0 is "negative before ad spend"; CM2 ≥ 0 but CM3 < 0 is "negative only because of ad spend." Different fixes for each.
+1. **Product revenue** = gross revenue − discounts − returns/refunds. Take discounts and returns as an absolute value regardless of how the export signs them (`-120`, `(120)`, or `120`). Trusting the sign as-is risks a negative-signed discount silently adding back to revenue. Keep this figure separate from shipping charged to the customer; it never belongs in a product margin line.
+2. **Net revenue** = product revenue + shipping charged to customer. This is the fee basis (steps 5-6 use it), not a margin line: payment and platform fees apply to the full amount charged, shipping included.
+3. **COGS**: total COGS if given, else unit cost × units. If neither exists, treat COGS as 0 in the dollar math but flag the SKU's missing lines as including `cogs`, and withhold its CM2%/breakeven ROAS (step 7). A percentage built on a cost you don't have is not a margin.
+4. **CM1** = product revenue − COGS. Never substitute net revenue here; shipping charged to the customer is not product margin, and folding it in inflates CM1 for any SKU with high shipping revenue relative to product price.
+5. **Payment fee** = (net revenue × payment fee %) + (fixed per-order fee × order count). The fixed fee is per *order*, not per unit: use the orders count if given, else convert with average units per order, else charge it per unit and flag that this overstates fees on multi-unit baskets.
+6. **Platform fee** = net revenue × platform/channel fee %.
+7. **CM2** = CM1 − payment fee − platform fee − shipping cost − packaging cost. Missing lines count as 0 and get named in missing data, never folded in silently. **CM2%** = CM2 ÷ net revenue × 100, withheld (state "withheld, COGS missing" instead of a number) for any SKU flagged in step 3.
+8. **CM3** = CM2 − ad spend (missing ad spend treated as 0, flagged the same way).
+9. **Breakeven ROAS** = net revenue ÷ CM2, only when CM2 > 0 and COGS was present. If CM2 ≤ 0, say the SKU is already unprofitable before any ad ran.
+10. **Rank SKUs by dollar contribution (CM2 or CM3), never by margin percentage alone.** A 60%-margin SKU selling 4 units matters less than a 22%-margin SKU carrying the catalog.
+11. **Split negative-CM3 SKUs**: CM2 < 0 is "negative before ad spend"; CM2 ≥ 0 but CM3 < 0 is "negative only because of ad spend." Different fixes for each.
 
 ## Output format
 
@@ -62,6 +63,7 @@ Build the stack in this exact order. Never blend fixed overhead into it.
 Before returning the output, verify:
 
 - Every discount/return figure is subtracted as a magnitude regardless of the export's sign convention.
+- CM1 is computed from product revenue only, with shipping charged to the customer never folded in.
 - CM2%/breakeven ROAS is withheld, not printed, for every SKU with missing COGS.
 - The fixed per-order fee is applied per order (or its per-unit fallback is explicitly flagged), not silently per unit.
 - SKUs are ranked by dollar contribution, not margin percentage.

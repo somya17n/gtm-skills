@@ -24,7 +24,7 @@ Most AI skill packs are organized around tools. You end up with a folder full of
 
 A GTM hire doesn't come with a folder of prompts. They come with a job description. Seven jobs, over and over, every week, forever: Brand Designer, Lifecycle Marketer, Experimentation Lead, Data Analyst, SDR, Account Executive, and GTM Engineer.
 
-So that's how this is organized. Seven jobs. Six to thirteen skills behind each one, weighted toward wherever the work actually piles up. Every skill maps to something you'd otherwise pay a person to do.
+So that's how this is organized. Seven jobs. Seven to thirteen skills behind each one, weighted toward wherever the work actually piles up. Every skill maps to something you'd otherwise pay a person to do.
 
 ## What's Inside
 
@@ -96,7 +96,7 @@ Explains what moved and why, before anyone has to ask.
 | **the-benchmark-check** | Checks one of your metrics against a stated benchmark source, with an honest confidence read on how solid that comparison actually is. |
 | **the-anomaly-alert** | Flags which points in a metric's recent history are genuinely outside its normal range, using a stated trailing-average method. |
 | **the-margin-stack** *(new)* | Computes CM1/CM2/CM3 contribution margin for a product, order, or SKU set from the cost and revenue inputs you provide right now. |
-| **the-shipping-margin-check** *(new)* | Isolates shipping cost recovery: real carrier and box cost vs. what's charged, and where a free-shipping threshold sits against average order value. |
+| **the-shipping-margin-check** *(new)* | Isolates shipping cost recovery: real carrier cost vs. what's charged, and where a free-shipping threshold sits against median order value. |
 | **the-inventory-risk-brief** *(new)* | SKU-level stockout and overstock risk from sales velocity, on-hand units, and lead time, with stated days-of-cover thresholds. |
 | **the-chargeback-pattern-check** *(new)* | Finds fraud and dispute clustering patterns (BIN range, address mismatch, order velocity), dated to the original sale. |
 | **the-catalog-audit** *(new)* | Audits product catalog completeness (titles, attributes, images, descriptions) at SKU scale, not a sampled spot-check. |

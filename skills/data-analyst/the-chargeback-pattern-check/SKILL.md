@@ -1,6 +1,6 @@
 ---
 name: the-chargeback-pattern-check
-description: "Takes a dispute or chargeback export and finds whether the disputes cluster into a fraud pattern (shared BIN range, shipping/billing address mismatches, unusual order velocity per customer), or whether they're mostly service failures and friendly fraud. Use when a dispute rate is rising, a payment provider has sent a warning, or the store wants to know how much of its chargeback problem is real fraud. Boundary: `the-anomaly-alert` flags a generic single-metric time series moving outside its normal range. This skill dates every dispute to the sale it belongs to, not the filing date, and clusters across fraud dimensions instead."
+description: "Takes a dispute or chargeback export and finds whether the disputes cluster by product, channel, geography, order value band, or payment method into a fraud pattern, or whether they're mostly service failures and friendly fraud, then weighs that against what over-blocking would cost in rejected good orders. Use when a dispute rate is rising, a payment provider has sent a warning, or the store wants to know how much of its chargeback problem is real fraud. Boundary: `the-anomaly-alert` flags a generic single-metric time series moving outside its normal range. This skill dates every dispute to the sale it belongs to, not the filing date, and clusters across the dimensions an export actually has instead."
 ---
 
 # The Chargeback Pattern Check
@@ -11,17 +11,19 @@ Take a dispute export and work out how much of it is real fraud versus a service
 
 Ask the user for these inputs. If any are missing, ask before analyzing.
 
-1. **Dispute export**: one row per dispute, with amount, reason code, and ideally both the transaction date and the filed date.
+1. **Dispute export**: one row per dispute, with amount, reason code, product, and ideally both the transaction date and the filed date.
 2. **Order volume for the same period**: needed to turn a dispute count into a rate.
-3. **Whatever supports clustering**: card BIN range, whether shipping and billing address matched, and how many orders the same customer identity placed in a short window before the dispute. Say which of these couldn't be checked.
+3. **Whatever supports clustering**: channel, geography, order value, and payment method per disputed order, plus card BIN range, shipping/billing address match, and customer order velocity if the export happens to carry them (most don't; say which of these couldn't be checked rather than treating their absence as a gap in the analysis).
+4. **Declined-order export, if over-blocking is a question**: orders the fraud rules rejected, not just disputes that got through. Disputes show what went wrong after approval; declines show what the rules are already stopping. Sizing over-blocking without the decline side is guesswork.
 
 ## Method
 
 1. **Date every dispute to the original transaction, not the filing date.** A dispute filed in March belongs to the sale that happened in January. If only a filed date exists, use it but say explicitly the rate is now dated to filing and will understate a rising problem, since disputes take weeks to arrive.
 2. **Compute the rate as disputes-by-transaction-month divided by orders-in-that-same-month.** A month with no order volume gets a dash, not a fabricated rate.
 3. **Classify each dispute into one reason family**: fraud/unauthorized, not received, not as described, subscription/recurring, duplicate or processing error. Match on the reason text given. Anything that doesn't clearly fit stays labeled unclassified and visible, rather than forced into a family.
-4. **Cluster the classified disputes across three fraud-specific dimensions**: shared or adjacent BIN range across multiple disputed orders, shipping address that doesn't match billing, and order velocity (the same customer identity placing several orders in a short window before the dispute). A cluster on any of these is a materially different finding than disputes spread evenly across normal traffic. Also cluster by product, order value band, and channel, since a pattern tied to one SKU points at a different fix than one tied to payment identity.
+4. **Cluster the classified disputes by product, channel, geography, order value band, and payment method.** A cluster tied to one SKU or channel points at a different fix than one spread evenly across normal traffic. If the export also carries BIN range, address match, or order velocity, cluster on those too and treat a cluster there as a materially different (more identity-fraud-specific) finding; if it doesn't, say plainly those dimensions couldn't be checked rather than forcing a finding out of data that isn't there.
 5. **Check the service-failure share.** If not-received, not-as-described, and subscription disputes together exceed 40% of all disputes, say so and note tightening fraud rules would not have prevented them, and would reject good orders instead.
+6. **If a declined-order export was supplied, size over-blocking.** What share of declines match the profile of a good customer (prior clean orders, matched address, normal order value for that customer), and what that share is worth against the fraud the rules actually prevented. Without the decline export, say plainly that over-blocking can't be sized, only guessed at.
 
 ## Output format
 
@@ -33,9 +35,11 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 | Family | Count | Share | Value |
 |---|---|---|---|
 
-**Fraud clustering found**: BIN range, address mismatch, and order velocity findings, each with the count of disputes involved. If a dimension couldn't be checked, say so.
+**Clustering found**: product, channel, geography, order value band, and payment method findings, each with the count of disputes involved. If BIN range, address mismatch, or order velocity were also checkable, include those findings too; otherwise say explicitly they couldn't be checked.
 
 **Store-side causes**: operational issues (delivery, descriptor clarity, cancellation friction) generating disputes that look like fraud but aren't.
+
+**Over-blocking read**: sized against the declined-order export if supplied; otherwise stated as unsizeable, not guessed at.
 
 **Recommendation**: what to act on first, and what needs more data before acting.
 
@@ -43,7 +47,7 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 - Never compute a rate against the wrong denominator. Say explicitly which date field the rate is based on.
 - Never treat a reason code as proof of what happened. It's the customer's claim, not a finding.
-- Never recommend tightening fraud rules without stating the cost in rejected good orders.
+- Never recommend tightening fraud rules without a declined-order export to size the cost in rejected good orders against. Without one, say the cost can't be sized yet.
 - Never name or profile an individual customer as fraudulent. Describe the pattern, not the person.
 
 ## Quality check before returning
@@ -52,8 +56,9 @@ Before returning the output, verify:
 
 - Does the output state whether the rate is dated by transaction or filing date, and the consequence of that choice?
 - Is every family classification traceable to the reason text, with unclassified disputes left visible rather than forced into a bucket?
-- Are all three fraud dimensions (BIN range, address mismatch, order velocity) addressed, even if only to say the data couldn't support one?
+- Are all five core dimensions (product, channel, geography, order value band, payment method) addressed, with BIN range/address mismatch/order velocity included only when the export actually supports them?
 - If service-failure families exceed 40%, does the output say so and warn against tightening fraud rules as the default fix?
+- Is the over-blocking read sized from a declined-order export when one was supplied, and stated as unsizeable rather than guessed when it wasn't?
 
 If any check fails, correct it before returning the output.
 

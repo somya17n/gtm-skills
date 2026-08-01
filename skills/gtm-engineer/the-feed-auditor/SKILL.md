@@ -31,26 +31,18 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 ## Output format
 
-### Feed verdict
+**Feed verdict:** one line on overall feed health and the channel it targets.
 
-One line on overall feed health and the channel it targets.
-
-### Issue table
+**Issue table**
 
 | Item/SKU | Issue | Blocks approval or degrades performance | Evidence | Recommended fix |
 |---|---|---|---|---|
 
-### Price/availability mismatches
+**Price/availability mismatches:** items where feed and live page disagree, with both values shown side by side.
 
-Items where feed and live page disagree, with both values shown side by side.
+**Cleanup patterns:** reusable fixes: title template, description template, image spec.
 
-### Cleanup patterns
-
-Reusable fixes: title template, description template, image spec.
-
-### Missing data
-
-Diagnostics or columns needed to confirm any finding not yet verifiable.
+**Missing data:** diagnostics or columns needed to confirm any finding not yet verifiable.
 
 ## Rules
 

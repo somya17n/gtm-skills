@@ -24,8 +24,8 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 2. For each window, compute revenue per day, orders per day, AOV, ad spend per day, and total discount given.
 3. Compute uplift: promo revenue/day minus baseline revenue/day.
 4. Compute the recovery-period trough: recovery revenue/day minus baseline revenue/day. Never judge the promo on the promo window alone. A promo that lifts revenue during the sale and craters it right after was pull-forward, not growth, and that only shows up once the recovery window is measured on the same footing as the promo window.
-5. Compute net impact: (uplift × promo window length) + (trough × recovery window length). If net impact is at or below zero, state plainly that the promo did not beat baseline once pull-forward is counted, and call it pull-forward, not growth.
-6. Check whether ad spend per day during the promo rose more than 10% above baseline ad spend per day. If it did, flag that lift cannot be credited to the discount alone, since higher spend would lift revenue with or without a discount.
+5. Compute net impact: (uplift × promo window length) + (trough × recovery window length). Call it pull-forward only when the recovery period actually shows a trough (trough < 0) and net impact is at or below zero: the promo lifted revenue, then gave it back. If net impact is at or below zero but the recovery period shows no trough (trough ≥ 0), the promo simply underperformed; it never generated a lift to give back, so pull-forward is not the cause and the fix is a better offer or audience, not a calendar change.
+6. Check whether ad spend per day during the promo rose more than 10% above baseline ad spend per day. If baseline ad spend per day is zero, a percentage increase is undefined: say instead that spend was newly introduced during the promo, and flag that lift cannot be separated from the new spend. Otherwise, if spend rose more than 10%, flag that lift cannot be credited to the discount alone, since higher spend would lift revenue with or without a discount.
 7. Compute the margin actually given away: total discount value plus any incremental shipping or transaction fee cost during the promo window.
 8. If a code usage export exists, check for leakage: codes used outside their intended audience, stacking with other codes, repeated use by the same customer, or appearance on public coupon sites.
 9. If a new-versus-returning split exists, state what share of promo-window revenue came from customers who would likely have bought anyway versus genuinely new buyers.
@@ -33,29 +33,23 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 ## Output format
 
-### Promo verdict
+**Promo verdict:** profit, revenue-shift, or loss, stated plainly, with the baseline dates used and a confidence level.
 
-Profit, revenue-shift, or loss, stated plainly, with the baseline dates used and a confidence level.
-
-### Window comparison
+**Window comparison**
 
 | Window | Dates | Revenue/day | Orders/day | AOV | Ad spend/day |
 |---|---|---|---|---|---|
 
 Rows: baseline, promo, recovery.
 
-### Pull-forward check
+**Pull-forward check:** uplift per day, trough per day, and net impact across both windows combined. State explicitly whether the promo cleared its own recovery-period cost, and whether any net-negative result was pull-forward (trough < 0) or a plain underperformance (trough ≥ 0).
 
-Uplift per day, trough per day, and net impact across both windows combined. State explicitly whether the promo cleared its own recovery-period cost.
-
-### Leakage findings
+**Leakage findings**
 
 | Leak | Evidence | Fix |
 |---|---|---|
 
-### Recommended promo rules
-
-Three to five rules for the next calendar: mechanic, floor margin, audience, exclusions.
+**Recommended promo rules:** three to five rules for the next calendar: mechanic, floor margin, audience, exclusions.
 
 ## Rules
 
@@ -70,7 +64,8 @@ Before returning the output, verify:
 
 - Is the recovery window sized and dated (default: same length as the promo, immediately after), not skipped or left vague?
 - Does the verdict weigh uplift and trough together across both windows, not the promo window alone?
-- If ad spend rose more than 10%, is that flagged as confounding the lift?
+- Is "pull-forward" only used when the recovery period actually shows a trough, never applied to a promo that simply underperformed with no trough?
+- If ad spend rose more than 10% over a nonzero baseline, is that flagged as confounding the lift? If baseline spend was zero, is it stated as newly introduced spend rather than an undefined percentage?
 - Is a margin or profit claim made only when COGS or margin data was actually provided?
 - Is every window with missing daily data stated explicitly?
 

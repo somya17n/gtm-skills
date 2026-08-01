@@ -31,20 +31,16 @@ Ask the user for these inputs. If any are missing, ask before scoring anything.
 
 ## Output format
 
-### Go/no-go verdict
+**Go/no-go verdict:** Go, Go with conditions, or Hold, with conditions named and owned.
 
-Go, Go with conditions, or Hold, with conditions named and owned.
-
-### Readiness board
+**Readiness board**
 
 | Layer | Status | Verified or assumed | Blocker | Owner | Due before launch |
 |---|---|---|---|---|---|
 
-### Oversell/overload scenario
+**Oversell/overload scenario:** what happens if demand is 3x plan, and the response.
 
-What happens if demand is 3x plan, and the response.
-
-### Watch list and rollback
+**Watch list and rollback**
 
 | Signal | Threshold | Rollback action |
 |---|---|---|

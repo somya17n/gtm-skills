@@ -16,7 +16,7 @@ Ask the user for these inputs. If any are missing, ask before building the table
 3. **The raw data**: either a per-customer table (customer ID, cohort period, activity or revenue per period) or an already-aggregated cohort table the user pastes in. This skill does not have access to a live database; it only works with data the user actually provides.
 4. **Time window**: how many periods after acquisition to track (e.g. 12 weeks, 6 months).
 5. **Segment split, if any**: does the user want cohorts split further by acquisition channel, plan tier, or another dimension, or one table across all customers.
-6. **CAC or acquisition spend, if a payback window is wanted**: spend by channel and period. Optional; skip the payback section entirely if this isn't supplied.
+6. **CAC or acquisition spend, if a payback window is wanted**: spend by channel and period, cohort size (customers acquired) per cohort, and cumulative revenue or margin per acquired customer at each period, not just the retention percentages the main table tracks. Optional; skip the payback section entirely if this isn't all supplied, since payback can't be computed from a retention percentage alone.
 7. **Customer identity method**: how a customer is deduplicated across orders or sessions. If this is unclear (guest checkout, multiple emails for one person), ask before building the table rather than assuming the raw customer count is clean.
 
 ## Output format
@@ -35,7 +35,7 @@ Below the table:
 - **Cohort trend**: is the newest fully-observed cohort retaining better or worse than the oldest, stated as a specific percentage point difference at the same period-since-acquisition (e.g. "the Mar cohort's Month 1 retention is 68%, six points above Jan's 62% at the same point").
 - **Where the drop is steepest**: the single period-over-period transition with the largest average drop across all cohorts (e.g. "Month 0 to Month 1 loses the most of any transition").
 - **Cells with insufficient data**: mark any period that hasn't happened yet for a cohort as `N/A`, never a guessed value.
-- **Payback window, only if CAC was supplied**: for each cohort or segment, the period at which cumulative revenue or margin per customer crosses the CAC for that period, stated as "Month 3" or "not yet reached" rather than left blank.
+- **Payback window, only if CAC, cohort size, and a cumulative revenue/margin series were all supplied**: a second table, cohort as rows, cumulative revenue or margin per acquired customer as columns, with the period at which that cumulative figure crosses CAC-per-customer (spend for the cohort's period ÷ cohort size) stated as "Month 3" or "not yet reached," never left blank.
 
 ## Rules
 
@@ -55,6 +55,7 @@ Before returning the output, verify:
 - Are all not-yet-observed periods marked `N/A`, not a projected number?
 - Is the cohort trend stated as a specific number (percentage points), not a vague "getting better"?
 - If fewer than 3 cohorts were provided, does the output say so rather than asserting a trend?
+- If a payback window is reported, does it come from an actual cumulative revenue/margin-per-customer series and a real cohort size, not derived from the retention percentage table alone?
 - If CAC was supplied, is the payback window stated per cohort or segment, not just a single blended number?
 - Is it clear throughout whether the tracked value is revenue or margin, with no silent switch between the two?
 

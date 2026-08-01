@@ -19,19 +19,19 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 1. **Normalize every raw reason code or label into one of eight fixed themes** before grouping anything: sizing/fit, product expectation mismatch, quality issue, shipping damage, wrong item shipped, late delivery, buyer remorse, unclear compatibility. State the mapping used from raw code to theme, since raw codes vary by returns system and get misread if assumed.
 2. **Group normalized returns by SKU, then by theme within each SKU.** Tally return count and quantity per SKU-theme pair.
-3. **Compute each SKU's return rate**: returns for that SKU divided by units sold for that SKU in the same period. Compute the catalog or category average return rate the same way, as the baseline.
-4. **Flag return concentration using a stated multiple of the average, not a gut call.** A SKU whose return rate is at least 1.5x the category average is a concentration; at least 2x is severe. State the SKU's exact rate and the average it's being compared to for every flagged SKU.
+3. **Compute each SKU's return rate as returned units (not return rows) divided by units sold**, both for that SKU in the same period. A return row covering more than one unit must contribute its full unit count, not one count per row, or the rate overstates itself on any multi-unit return.
+4. **Use the SKU's own category average as the baseline. Fall back to the catalog average only when the SKU's category has fewer than 5 other SKUs with return data**, and state which baseline was used for every SKU, since a SKU can sit above one average and below the other. Flag return concentration using a stated multiple of whichever baseline was used, not a gut call: at least 1.5x is a concentration, at least 2x is severe. State the SKU's exact rate and the exact average and baseline type it's being compared to for every flagged SKU.
 5. **Assign the likely root cause per flagged SKU as its single highest-volume theme.** If two themes are within 10% of each other's count for that SKU, name both rather than forcing a single cause.
 6. **Separate preventable themes from normal category behavior, and map each to a fix category.** Sizing/fit and unclear compatibility (PDP copy, sizing guide) and expectation mismatch (PDP copy, imagery) are preventable through content; quality issue (product/QC review) and shipping damage (packaging/fulfillment) through operations; wrong item is a fulfillment process fix, not a PDP fix. Buyer remorse, and late delivery unless a fulfillment failure is confirmed, are normal category behavior, not a defect to fix on the product page.
 
 ## Output format
 
-**Returns verdict:** [X] SKUs show return concentration (rate ≥ 1.5x category average), of which [Y] are severe (≥ 2x). Catalog average return rate: [Z]%.
+**Returns verdict:** [X] SKUs show return concentration (rate ≥ 1.5x their baseline), of which [Y] are severe (≥ 2x). State the catalog-wide average return rate for context, separate from the per-SKU baselines used to flag concentration.
 
 **Concentration table**
 
-| SKU | Return rate | Category average | Multiple | Likely root cause (theme) | Fix category |
-|---|---|---|---|---|---|
+| SKU | Return rate (units) | Baseline used (category or catalog) | Baseline rate | Multiple | Likely root cause (theme) | Fix category |
+|---|---|---|---|---|---|---|
 
 **Preventable vs. normal split**: return volume attributed to preventable themes versus buyer remorse and confirmed-normal late delivery, stated as counts, not just percentages.
 
@@ -41,7 +41,8 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 ## Rules
 
-- Never flag a SKU as a concentration without stating its exact return rate and the average it's compared to.
+- Never flag a SKU as a concentration without stating its exact return rate (in returned units, not return rows), which baseline (category or catalog) it's compared to, and that baseline's value.
+- Never mix baselines for the same SKU across the verdict, table, and narrative; use the one baseline the method assigned it.
 - Never treat a coded reason as certain when it was agent-selected rather than customer-selected; note the difference in confidence.
 - Never call buyer remorse or normal late delivery a preventable defect requiring a product or PDP fix.
 - Never recommend a stricter return policy as the default response to a concentration finding; find the theme behind it first.
@@ -50,7 +51,8 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 Before returning the output, verify:
 
-- Does every flagged SKU show its exact return rate, the category average, and the multiple, not just a verdict of "high"?
+- Does every flagged SKU show its exact return rate (units, not rows), which baseline it used, that baseline's value, and the multiple, not just a verdict of "high"?
+- Is the same baseline (category, or catalog only for thin categories) used consistently for one SKU across the verdict, table, and narrative, rather than switching between them?
 - Is the 1.5x / 2x threshold used stated explicitly, and is it applied consistently across every SKU?
 - Is the root cause assigned from the highest-volume theme for that specific SKU, with ties named rather than forced to one theme?
 - Is buyer remorse excluded from the preventable fix queue?

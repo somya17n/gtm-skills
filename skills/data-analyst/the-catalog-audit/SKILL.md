@@ -17,7 +17,7 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 ## Method
 
-1. **Count the rows before deciding how to work.** Above roughly 150 SKUs, do not read a sample of rows and describe what you saw. A read of that scale summarizes the rows attended to and reports that as catalog coverage, and the percentages come out confidently wrong. Go through every row systematically and keep a running tally instead. If a full pass genuinely isn't possible, state the exact sample size next to every percentage and call it a sample, never a full audit.
+1. **Count the rows before deciding how to work.** Above roughly 150 SKUs, a single read-through summarizes the rows attended to and reports that as catalog coverage, confidently wrong, and there's no way to self-check that from inside the same read. Above that threshold, work in fixed-size chunks (150 rows at a time): score each chunk fully, print that chunk's own counts (products scanned, thin, empty, duplicate, missing-attribute, image-gap) before moving to the next, then carry a running total forward chunk to chunk. The per-chunk counts are what make the total checkable; a single end-of-pass total with no chunk breakdown is not verifiably different from a summarized skim. If the export can't be worked in chunks (pasted inline, no way to isolate row ranges), state a specific sample size up front, work only that sample, and label every resulting percentage a sample figure, never a full audit.
 2. **Collapse variant rows to one record per product first.** Exports in the style of Shopify put one row per variant, with title and description populated only on the first row of each handle. Group rows by SKU or handle, keeping the first non-empty value found for each field, except: keep the highest image count seen and the longest description seen across the group. State how many rows collapsed this way, since an uncollapsed export inflates the product count and reports every continuation row as an empty description.
 3. **Score each collapsed product**: description under 40 words counts as thin, 0 words counts as empty; under 3 images counts as an image gap; and note which required attributes are blank.
 4. **Flag duplicate descriptions by exact match only**, after stripping HTML and normalizing whitespace and case. Do not attempt near-duplicate or fuzzy matching. A wrong fuzzy match is a worse finding than a missed real one.
@@ -41,7 +41,7 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 ## Rules
 
-- Never audit an export over roughly 150 SKUs by reading a sample and calling it a full audit. State the sample size explicitly if a full pass isn't possible.
+- Never audit an export over roughly 150 SKUs in one undivided pass with only an end total. Work it in chunks with each chunk's counts shown, or state a sample size explicitly and label the result a sample.
 - Never invent a specification, material, dimension, or compliance claim to fill a gap. A missing attribute is reported missing, not guessed.
 - Never attempt near-duplicate or fuzzy description matching. Exact match only.
 - Never rank the work queue by defect count alone. Revenue or sessions come first.
@@ -50,7 +50,7 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 Before returning the output, verify:
 
-- Was every row accounted for, either by full pass or a stated sample size, never a silent partial read?
+- Was every row accounted for, either by chunked passes with each chunk's own counts shown, or a stated sample size, never a silent partial read presented as a full total?
 - Were variant rows collapsed to one record per product before any count was taken, with the collapse count stated?
 - Is duplicate detection exact-match only, with no fuzzy matches presented as findings?
 - Is the priority queue ordered by revenue, not raw defect count?

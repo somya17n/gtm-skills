@@ -18,14 +18,15 @@ Ask the user for these inputs. If any are missing, ask before banding anything.
 
 ## Method
 
-1. **Exclude refund and adjustment rows before computing anything.** A negative order value is a refund or adjustment, not an order. Drop it from every band, zone, and total, and report the excluded count so totals stay consistent.
-2. **Recovery rate** = total shipping charged ÷ total shipping cost, as a percentage, computed overall and again per zone.
-3. **Band every remaining order by value** into these ranges (defaults, override if AOV sits well outside them): $0–25, $25–50, $50–75, $75–100, $100–150, $150–250, $250+. For each band, compute orders, charged, cost, dollar gap (charged − cost), and gap per order. The aggregate recovery rate hides the real finding: a store recovering 92% overall can still lose money on every order in the bottom bands.
-4. **Flag every band where the gap is negative**, sized by order count, not just percentage.
-5. **Test the threshold against the real distribution, not a rule of thumb.** Compute median order value. If it already sits above the current threshold, say so: most free deliveries go to orders that would have converted anyway, which is subsidy, not basket building.
-6. **Compute the share of orders landing "just above" the threshold**, defined as order value ≥ threshold and < threshold × 1.15. Under 5% is weak evidence the threshold changes behavior at all.
-7. **Review surcharge exposure separately** from the banded recovery number: oversize, remote area, fuel, and address-correction charges usually hide inside one lump invoice total. If the invoice doesn't break them out, say the recovery rate is likely optimistic.
-8. **Model at most two or three threshold or rate scenarios**, each with its assumption stated and conversion risk named. A scenario is a model, not a forecast.
+1. **Exclude refund, adjustment, and unreadable rows before computing anything.** A negative order value is a refund or adjustment, not an order; a row with a blank or unreadable order value or shipping cost can't be banded or totaled honestly either. Drop both kinds from every band, zone, and total, and report each excluded count separately (refunds/adjustments vs. unreadable) so totals stay consistent and a blank-cost row never gets silently treated as zero cost.
+2. **Take shipping cost and shipping charged as magnitudes, regardless of how the export signs them.** Carrier invoices sign cost negative as often as they sign it positive; trusting the sign as-is risks a negative-signed cost silently subtracting instead of adding to the total, which inflates the recovery rate.
+3. **Recovery rate** = total shipping charged ÷ total shipping cost, as a percentage, computed overall and again per zone.
+4. **Band every remaining order by value** into these ranges (defaults, override if AOV sits well outside them): $0–25, $25–50, $50–75, $75–100, $100–150, $150–250, $250+. For each band, compute orders, charged, cost, dollar gap (charged − cost), and gap per order. The aggregate recovery rate hides the real finding: a store recovering 92% overall can still lose money on every order in the bottom bands.
+5. **Flag every band where the gap is negative**, sized by order count, not just percentage.
+6. **Test the threshold against the real distribution, not a rule of thumb.** Compute median order value. If it already sits above the current threshold, say so: most free deliveries go to orders that would have converted anyway, which is subsidy, not basket building.
+7. **Compute the share of orders landing "just above" the threshold**, defined as order value ≥ threshold and < threshold × 1.15. Under 5% is weak evidence the threshold changes behavior at all.
+8. **Review surcharge exposure separately** from the banded recovery number: oversize, remote area, fuel, and address-correction charges usually hide inside one lump invoice total. If the invoice doesn't break them out, say the recovery rate is likely optimistic.
+9. **Model at most two or three threshold or rate scenarios**, each with its assumption stated and conversion risk named. A scenario is a model, not a forecast.
 
 ## Output format
 
@@ -47,7 +48,8 @@ Ask the user for these inputs. If any are missing, ask before banding anything.
 
 ## Rules
 
-- Never include a negative-order-value row in a band or a zone total. Drop it and report the exclusion count.
+- Never include a negative-order-value, refund, or unreadable-cost row in a band or a zone total. Drop each and report its exclusion count separately.
+- Never trust the export's sign on shipping cost or shipping charged; take both as magnitudes.
 - Never recommend changing a live rate table or threshold from this analysis alone. A threshold change is felt by every customer within the hour and is hard to walk back cleanly.
 - Never label a projected savings figure as a forecast. It's a model with stated assumptions.
 - Never treat one month of carrier invoices as seasonal truth.
@@ -57,7 +59,8 @@ Ask the user for these inputs. If any are missing, ask before banding anything.
 
 Before returning the output, verify:
 
-- Are all negative-order-value rows excluded from bands and totals, with the count disclosed?
+- Are all negative-order-value, refund, and unreadable-cost rows excluded from bands and totals, with each count disclosed separately?
+- Are shipping cost and shipping charged treated as magnitudes regardless of export sign?
 - Does every band show orders, charged, cost, and gap, not just a recovery percentage?
 - Is the threshold read stated against the actual median order value and the "just above threshold" share, not an opinion?
 - Are unverifiable/bundled surcharge lines named in the missing data section rather than assumed absent?
