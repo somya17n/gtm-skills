@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 69 skills organized around the 7 real jobs on a GTM team, plus one shared setup skill (70 total), not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
+**Your AI go-to-market team.** 69 skills organized around the 7 real jobs on a GTM team, plus 8 store loops that run those skills on a schedule, plus one shared setup skill (78 total), not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -28,13 +28,13 @@ So that's how this is organized. Seven jobs. Seven to thirteen skills behind eac
 
 ## What's Inside
 
-69 skills across 7 jobs, plus one shared setup skill (product-context), 70 total. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
+69 skills across 7 jobs, 8 store loops, plus one shared setup skill (product-context), 78 total. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
 
 ### Foundation
 
 | Skill | What You Get |
 |-------|-------------|
-| **product-context** | Set up once, your ICP, brand voice, lifecycle stages, scoring model, and design preferences. Every other skill reads this automatically, so output is always tailored to your business. |
+| **product-context** | Set up once, your ICP, brand voice, lifecycle stages, scoring model, and design preferences. The skills that read it pick it up automatically, so their output is tailored to your business without asking again. 26 of the other 77 skills read it; the rest ask inline for what they need. |
 
 ### Job 1: Brand Designer (7 skills)
 
@@ -154,6 +154,26 @@ Builds the systems everyone else's work runs on top of.
 | **the-launch-readiness-check** *(new)* | A pre-launch go/no-go checklist for a specific product or campaign launch. |
 | **the-feed-auditor** *(new)* | Audits the actual data feed sent to Google Shopping, Meta, or another channel, required attributes, disapprovals, price/availability mismatches vs. the live site. |
 
+### Store Loops (8 skills) *(new)*
+
+Not a job - a mechanism. The 7 jobs above answer a question once. These run that answer on a
+schedule, diff it against the last run, and stop when a gate fails. Built for a Shopify store
+where the same margin, stock, feed, and spend checks need doing every morning and get skipped.
+
+Every one of them is read-and-propose by default. None of them will change a price, move a
+budget, or edit your catalog without you approving it.
+
+| Skill | What You Get |
+|-------|-------------|
+| **the-loop-designer** | Turns a recurring store question into a runnable loop: cadence, an objective gate that can fail, a stop condition, and a ceiling. Refuses to emit a loop whose gate can't evaluate false. |
+| **the-loop-ledger** | The state file at `.agents/store-loop-ledger.md` that every loop reads and appends to. What ran, what it flagged, what changed, what to stop flagging. The agent forgets between runs; this doesn't. |
+| **the-store-pulse** | The daily exception pass over orders, revenue, and spend. Reports only what moved outside its own trailing band, ranked by dollars at stake, not percentage. |
+| **the-margin-sentry** | Reruns the contribution-margin stack on a cadence and reports *crossings*: which SKUs went unprofitable since last run, split into losing-before-ads vs losing-only-because-of-ads. |
+| **the-stockout-spend-guard** | Cross-checks live ad spend against on-hand units and proposes pausing spend on what you can't ship. Matches on the grain the ads target, so a variant ad isn't checked against parent stock. |
+| **the-feed-watch** | Runs the feed audit repeatedly and reports the delta, so an overnight disapproval isn't buried under 400 known issues. Separates new from regressed, grouped by cause. |
+| **the-launch-watch** | Watches a new product's first weeks against pre-set signal thresholds and a hard test budget, then closes itself. Won't state a verdict on a sample below your minimum. |
+| **the-loop-auditor** | The checker in a maker-checker pair. Reviews another loop's proposal by trying to refute it, and defaults to reject. Catches gates that could never have failed. |
+
 ---
 
 ## Quick Start
@@ -210,7 +230,7 @@ Claude Cowork is Anthropic's desktop agent. This repo includes a plugin manifest
 **Setup:**
 1. Open the Claude Desktop app, switch to the **Cowork** tab
 2. Select the downloaded `gtm-skills` folder as your working directory
-3. All 70 skills activate automatically
+3. All 78 skills activate automatically
 
 Once set up, just ask for what you need.
 
@@ -271,7 +291,7 @@ You don't need to know the skill name. Describe the job and the right one activa
 
 ## The Order to Build Them In
 
-Don't install all 70 on day one. You'll use nine of them and forget the rest.
+Don't install all 78 on day one. You'll use nine of them and forget the rest.
 
 **Week one:** set up `product-context`, then run `the-90-second-brief` and `the-cold-opener` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
 
