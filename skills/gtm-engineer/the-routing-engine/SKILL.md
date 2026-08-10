@@ -9,6 +9,11 @@ Design the system that moves a lead from first touch to a working opportunity: s
 
 > **Boundary:** `the-deal-gauge` scores a single opportunity that already exists. `the-pipeline-scanner` reports on the health of the whole pipeline. This skill covers the layer before either: lead lifecycle stages, MQL definition, and the marketing-to-sales handoff. For the actual round-robin/territory/score-threshold assignment logic once a lead is qualified, use `the-lead-router`.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the lifecycle stages, ICP, and scoring definitions.
+2. Read `.agents/product-context.md` for the lifecycle stages, ICP, and scoring definitions. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user for:

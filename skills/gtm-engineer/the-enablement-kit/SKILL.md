@@ -9,6 +9,12 @@ Produce the sales collateral a rep actually hands a prospect, mapped to who they
 
 > **Boundary:** For objection responses, use `the-objection-playbook`: that skill already covers objection acknowledgment/response/follow-up in depth. This skill is for the other asset types: one-pagers, ROI calculators, proposals, and playbooks.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, target persona, product one-liner, competitive landscape, and brand voice.
+2. Read `.agents/product-context.md` for the ICP, target persona, product one-liner, competitive landscape, and brand voice. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
+
 ## How to run
 
 Ask the user for:

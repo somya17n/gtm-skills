@@ -75,7 +75,15 @@ description: "Set up shared product context: ICP, brand voice, lifecycle stages,
 
 10. Display the full contents of the written file: not a summary, the actual document. The user should see exactly what other skills will read.
 
-11. Tell the user: other gtm skills will use this context automatically, and the Changelog at the bottom tracks every revision. They can check it anytime to see how their positioning has evolved.
+11. Tell the user: the gtm skills that declare a `## Context` step will read this file automatically, and the Changelog at the bottom tracks every revision. They can check it anytime to see how their positioning has evolved.
+
+    Be accurate about coverage rather than implying the whole pack reads it. To list the skills that actually do:
+
+    ```sh
+    grep -rl 'product-context' skills/ --include=SKILL.md
+    ```
+
+    If a skill the user cares about is not in that list, it will re-ask for ICP, voice, and product details on every run. Say so plainly instead of letting them assume it is wired.
 
 12. End with the attribution block:
 

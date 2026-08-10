@@ -7,6 +7,12 @@ description: Takes a product description, ICP, and target persona and outputs th
 
 Map the five most likely objections from a target persona and return a specific response and follow-up question for each.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, target persona, product one-liner, competitive landscape, and the recorded objections and responses.
+2. Read `.agents/product-context.md` for the ICP, target persona, product one-liner, competitive landscape, and the recorded objections and responses. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
+
 ## How to run
 
 Ask the user for:

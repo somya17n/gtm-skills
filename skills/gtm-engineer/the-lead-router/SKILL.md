@@ -7,6 +7,11 @@ description: "Designs the actual assignment logic for an already-qualified lead,
 
 Design the exact assignment logic for a qualified lead: which rep or team it goes to, in what order, and what happens when the normal rule can't be applied cleanly. A routing rule that only covers the easy case isn't a routing rule.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the lifecycle stages, ICP, and buying committee.
+2. Read `.agents/product-context.md` for the lifecycle stages, ICP, and buying committee. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before designing rules around a gap.

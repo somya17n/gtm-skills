@@ -10,6 +10,11 @@ Build a qualified, evidence-backed prospect list from an ICP definition: every r
 
 > **Boundary:** This skill builds the initial candidate list from nothing. If the user already has an account list and just wants it scored against ICP fit, use `the-fit-scorer` instead. Don't re-run discovery on a list that already exists.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP definition and the disqualifier list.
+2. Read `.agents/product-context.md` for the ICP definition and the disqualifier list. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user for:
@@ -40,8 +45,14 @@ Ask the user for:
 
 **ICP used**: the one-paragraph statement + checklist
 
-| Score | Company | Why (fit + signal) | Source | Confidence |
-|---|---|---|---|---|
+| Score | Company | Contact (name + role, or `none found`) | Why (fit + signal) | Source | Confidence |
+|---|---|---|---|---|---|
+
+The Contact column is required, not optional: the Compliance section below requires a source URL
+and confidence level per contact, and the Hot criteria require "a plausible path to a
+decision-maker". Neither is checkable without recording who that person is. Where no contact was
+found, write `none found` rather than leaving the cell blank, and cap the row at Warm: a row with
+no named path to a decision-maker cannot be Hot.
 
 **Top outreach targets**: the 3-5 Hot leads, one sentence each on why to reach out first
 **Skipped**: count, and which disqualifier cut them (so the user can sanity-check the funnel)

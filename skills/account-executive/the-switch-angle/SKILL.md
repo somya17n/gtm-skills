@@ -7,6 +7,12 @@ description: "Takes a prospect's current tool stack and outputs the strongest co
 
 Turn a prospect's tool stack into a specific displacement argument: the exact inefficiency their configuration creates and how to surface it without sounding like a competitive pitch.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the product one-liner and the competitive landscape.
+2. Read `.agents/product-context.md` for the product one-liner and the competitive landscape. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
+
 ## How to run
 
 Ask the user for:

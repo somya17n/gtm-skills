@@ -10,6 +10,11 @@ Research a competitor from public sources and build a structured, comparable pro
 
 > **Boundary:** This skill builds the research dossier on a competitor. `the-switch-angle` takes a *prospect's* known tool stack and turns it into a call-ready displacement angle; feed this skill's output into that one when the competitor in question is part of a prospect's stack, don't duplicate the research there.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the product one-liner and the competitive landscape (so this dossier extends what is already recorded instead of restating it).
+2. Read `.agents/product-context.md` for the product one-liner and the competitive landscape (so this dossier extends what is already recorded instead of restating it). Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user for:

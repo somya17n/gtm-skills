@@ -7,6 +7,12 @@ description: Takes prospect research, a specific trigger signal, and a product v
 
 Write a complete, personalized cold email body from the user's research inputs. Under 120 words. Structured around a specific trigger. Ready to send after subject line testing with `the-subject-line-lab`.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, product one-liner, proof points, brand voice, and banned-word list.
+2. Read `.agents/product-context.md` for the ICP, product one-liner, proof points, brand voice, and banned-word list. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask for them before writing. Do not fill in company details from memory or guesswork.

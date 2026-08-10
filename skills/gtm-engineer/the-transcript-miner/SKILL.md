@@ -7,6 +7,11 @@ description: Takes a raw sales call transcript and extracts deal signals, object
 
 Read a sales call transcript and extract every signal a rep needs to write the right follow-up and advance the deal.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, target persona, and product one-liner.
+2. Read `.agents/product-context.md` for the ICP, target persona, and product one-liner. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user to paste the raw transcript. Any format works: timestamps optional.

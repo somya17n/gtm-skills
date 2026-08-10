@@ -8,6 +8,11 @@ tools: WebFetch, WebSearch
 
 Research a company and produce a structured brief a rep can read in 90 seconds before a call or first email.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, target persona, and product one-liner.
+2. Read `.agents/product-context.md` for the ICP, target persona, and product one-liner. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user for:

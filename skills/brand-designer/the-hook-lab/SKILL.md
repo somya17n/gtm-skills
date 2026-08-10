@@ -7,6 +7,12 @@ description: Takes a LinkedIn post draft and generates four scored hook/opening-
 
 Generate four hook variants for a LinkedIn post and recommend the strongest one. The hook is the first 1-2 lines before LinkedIn's "see more" cutoff. If it does not stop the scroll, the rest of the post does not matter.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the target persona and brand voice, including the banned-word list.
+2. Read `.agents/product-context.md` for the target persona and brand voice, including the banned-word list. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
+
 ## How to run
 
 Ask the user for:

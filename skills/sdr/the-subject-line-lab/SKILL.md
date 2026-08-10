@@ -7,6 +7,12 @@ description: Takes a cold email body and target persona and generates five score
 
 Generate five scored subject line variants for a cold email and recommend the best one for a first send.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, target persona, product one-liner, and banned-word list.
+2. Read `.agents/product-context.md` for the ICP, target persona, product one-liner, and banned-word list. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
+
 ## How to run
 
 Ask the user for:
