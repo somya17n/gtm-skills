@@ -7,6 +7,11 @@ description: Processes a full unhandled inbox into Drafted, Escalated, Scheduled
 
 Take a full backlog of unhandled messages and clear it: draft what's safe to draft, escalate what isn't, schedule what has a date, close what's actually done.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## How to run
 
 Ask the user for:

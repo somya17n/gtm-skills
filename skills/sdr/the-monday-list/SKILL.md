@@ -7,6 +7,11 @@ description: Takes a batch of weekly intent signals across a pipeline and output
 
 Process a week of intent signals and return a ranked outreach list so the team starts Monday acting, not reading.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP criteria and the signal definitions recorded under Scoring.

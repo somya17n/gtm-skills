@@ -7,6 +7,11 @@ description: Takes a LinkedIn post draft and generates four scored hook/opening-
 
 Generate four hook variants for a LinkedIn post and recommend the strongest one. The hook is the first 1-2 lines before LinkedIn's "see more" cutoff. If it does not stop the scroll, the rest of the post does not matter.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the target persona and brand voice, including the banned-word list.

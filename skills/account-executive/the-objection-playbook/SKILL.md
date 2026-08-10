@@ -7,6 +7,11 @@ description: Takes a product description, ICP, and target persona and outputs th
 
 Map the five most likely objections from a target persona and return a specific response and follow-up question for each.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, target persona, product one-liner, competitive landscape, and the recorded objections and responses.

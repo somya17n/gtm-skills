@@ -164,6 +164,29 @@ Plain-text dunning emails typically recover better than heavily designed ones. N
 
 ---
 
+## Save Durability
+
+A save rate measured when the offer is accepted is a deflection rate. It counts customers who
+stopped cancelling that day, which is not the same as customers who stayed.
+
+| Measure | What it counts | Why it misleads |
+|---|---|---|
+| Offer-accept rate | Accepted the offer instead of cancelling now | Peaks when the offer is generous, regardless of whether the underlying reason was fixed |
+| 60/90-day retained save rate | Still active, still paying, at the re-check window | The honest number. Usually far below the accept rate. |
+| Saved-cohort net revenue | Revenue from the saved cohort minus the discount given | A deep discount can make a "successful" save unprofitable |
+
+Rules:
+
+- Re-check every save at 60 or 90 days for monthly plans, and at the next renewal for annual.
+- Report the saved cohort separately from customers who never entered the cancel flow. Blending
+  them makes the save look like retention.
+- A save that required a discount has to clear the discount's cost before it counts as a win.
+  Track net revenue for the cohort, not headcount retained.
+- A reason category whose saves consistently fail the re-check is a product or fit problem the
+  cancel flow cannot fix. Escalate it out of lifecycle rather than deepening the offer.
+
+---
+
 ## Common Mistakes
 
 - No cancel flow at all — instant cancel with no survey or offer leaves recoverable revenue on the table

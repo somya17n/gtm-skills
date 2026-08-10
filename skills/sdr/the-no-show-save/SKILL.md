@@ -7,6 +7,11 @@ description: Writes the 3-stage recovery sequence for a missed meeting - the hou
 
 Write the sequence that gets a missed meeting rebooked, or closes it gracefully if it's genuinely over.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## How to run
 
 Ask the user for:

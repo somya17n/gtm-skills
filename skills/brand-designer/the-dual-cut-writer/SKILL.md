@@ -5,6 +5,11 @@ description: "Draft two distinct LinkedIn post variants on a topic: an education
 
 > **Boundary:** For ad creative, use `the-angle-vault`. For cold outreach copy, use `the-cold-opener`. This skill is for organic, unpaid posts.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## Context
 
 1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first, or run `the-voice-fingerprint` if they have content samples to build a voice profile from. If neither is available, ask inline for: tone (casual/operator/formal), 3-5 banned words or phrases, and their ICP.

@@ -5,6 +5,11 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 
 > **Boundary:** For a single, one-off re-engagement email to one gone-dark prospect or closed-lost deal, draft it directly rather than running a full skill. This skill designs the systemic in-app and billing retention flows for existing customers.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask inline for: monthly churn rate (voluntary vs. involuntary if known), billing provider, and B2B or B2C.
@@ -25,7 +30,15 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 8. Build the exit survey: single-select, 5-8 reason categories max. If the user has real cancellation data, order reasons by actual frequency; otherwise use the default ordering in the reference file and flag it as unvalidated.
 9. Map each reason to a primary offer and a fallback offer using the offer-to-reason table in the reference file. Never propose one blanket discount for every reason: a discount does not save someone who isn't using the product, and a roadmap preview does not save someone who can't afford it. For a delivery-cycle product, treat "too much product" as a frequency mismatch first: the fix is usually a longer cycle or a quantity change, not a discount.
 9b. For a delivery-cycle product, list which off-ramps the customer portal actually surfaces before the cancel button becomes reachable: skip a cycle, delay, reduce quantity, swap product, change frequency. If any of these exist as backend capability but aren't surfaced in the portal, flag that as the gap, not the offer.
-10. Specify the confirmation step (clear end-of-billing-period messaging, no dark patterns; keep "continue cancelling" visible) and the post-cancel step (reactivation path; draft the win-back email directly as a one-off, not via a separate skill).
+10. Specify the confirmation step (clear end-of-billing-period messaging, no dark patterns; keep
+    "continue cancelling" visible on every step, at the same visual weight as the offer). Treat
+    this as a compliance boundary, not a design preference: several jurisdictions require
+    cancellation to be at least as easy as signup was, and a flow that adds steps, hides the
+    cancel path, or requires a channel the customer did not sign up through can be unlawful
+    regardless of how well it saves. If the user asks for a flow that crosses that line, say so
+    plainly, and offer the version that saves without the friction. Note in the output which
+    jurisdictions the user should confirm against, since the specifics differ and this skill is
+    not legal advice. and the post-cancel step (reactivation path; draft the win-back email directly as a one-off, not via a separate skill).
 
 **Mode B: Churn risk / health score**
 
@@ -45,6 +58,14 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 - **Health Score Model**: formula built only from the user's confirmed signals, weights, status bands, action per band
 - **Dunning Sequence**: retry timing table, email sequence (timing, tone, content), target recovery rate from the reference benchmarks
 - **Metrics to track**: pulled from the reference file, filtered to the mode(s) run
+- **Save durability plan**: for every save offer proposed, the window at which the save gets
+  re-checked and the condition that would mark it a real save rather than a deferral. A save rate
+  measured at the moment of the offer counts deflections, not retention: a customer who accepts a
+  discount and cancels 30 days later was never saved, and a blended save rate hides that
+  completely. Specify the re-check window (60 or 90 days is the usual honest floor for a monthly
+  plan, one renewal cycle for annual) and require the saved cohort to be reported separately from
+  never-churning customers. Where the user has no way to track a cohort that far out, say that
+  the save rate will be unverifiable rather than reporting it as if it were retention.
 
 ## Quality check before returning
 
@@ -54,6 +75,15 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 - Does the offer-to-reason mapping avoid a single blanket discount for every cancellation reason?
 - If real cancellation data was missing, is the default reason ordering explicitly flagged as unvalidated?
 - Does the Dunning Sequence call out which retry steps the user's billing provider already automates, rather than asking them to rebuild native functionality?
+- Does the retry schedule route by decline type rather than applying one schedule to every
+  failure? Hard declines (card stolen, account closed) must not be retried on a soft-decline
+  cadence: the retries cannot succeed, and repeated attempts on a dead card raise the account's
+  decline ratio with the processor. Authentication-required failures need the customer sent to
+  complete authentication, not a silent retry.
+- Is a save-durability re-check window specified for every offer, with the saved cohort reported
+  separately, rather than a save rate measured at the moment of deflection?
+- Is cancellation ease treated as a compliance boundary, with any requested dark pattern flagged
+  rather than designed?
 - For a delivery-cycle product, is churn split into three buckets, voluntary cancellation, involuntary (failed payment), and paused-not-resumed, rather than either folding pauses into cancellations or stripping them out of churn entirely?
 - Is a "too much product" complaint checked against delivery frequency before a discount is proposed as the fix?
 

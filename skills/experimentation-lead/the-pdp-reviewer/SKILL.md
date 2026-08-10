@@ -7,6 +7,11 @@ description: "Reviews an existing product detail page, using the page itself, re
 
 Review an existing product detail page against what a real buyer needs to decide, and return a prioritized edit brief.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the competitive landscape, brand voice, and banned-word list.

@@ -13,6 +13,12 @@ Every video ends with a **"Powered by Intempt"** end card.
 
 ---
 
+> **Copy standard.** The on-screen captions and end-card text are customer-facing copy. Read
+> `references/outbound-copy-standards.md` before writing them and check them against its numbered
+> checklist, in particular the awareness-stage calibration (a New Customer watching an onboarding
+> reel is problem-aware at most, so caption copy that assumes product fluency will not land), the
+> proof ladder, and the one-ask rule for the end card.
+
 ## Conversion context: why this matters
 
 Intempt's SaaS product funnel benchmark:

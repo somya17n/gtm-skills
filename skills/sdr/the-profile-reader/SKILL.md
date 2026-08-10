@@ -7,6 +7,11 @@ description: Takes a prospect's LinkedIn profile text and outputs three distinct
 
 Read a prospect's LinkedIn profile and return three specific opening line angles, each one grounded in something real about that person.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## How to run
 
 Ask the user to paste:

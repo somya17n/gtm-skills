@@ -7,6 +7,11 @@ description: Takes prospect research, a specific trigger signal, and a product v
 
 Write a complete, personalized cold email body from the user's research inputs. Under 120 words. Structured around a specific trigger. Ready to send after subject line testing with `the-subject-line-lab`.
 
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, product one-liner, proof points, brand voice, and banned-word list.
