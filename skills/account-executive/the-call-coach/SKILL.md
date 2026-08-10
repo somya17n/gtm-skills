@@ -11,13 +11,13 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 
 ---
 
-### Pre-Meeting Prep Mode
+## Mode A: Pre-meeting prep
 
-## Inputs
+### Inputs
 2. Read `.agents/product-context.md` for ICP, value props, competitive positioning.
 3. Ask: "Who are you meeting, what company, and what's the purpose? (discovery / demo / follow-up / negotiation / closing)"
 
-## Process
+### Process
 4. Read `references/coaching-metrics.md` for question quality taxonomy and objection response frameworks.
 5. Analyze the company and role context based on what the user provides and what is available in product context.
 6. Generate a structured agenda with time allocations.
@@ -25,7 +25,7 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 8. Prepare objection responses for the top 3-5 likely objections based on product-context competitive landscape.
 9. Build competitive positioning notes if competitors are likely to come up.
 
-## Output
+### Output
 10. Format pre-meeting prep as:
 - **Meeting Prep**: attendees, company, purpose, agenda with time blocks
 - **Discovery Questions**: 5-8 open-ended questions ranked by priority
@@ -34,14 +34,14 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 
 ---
 
-### Post-Meeting Coaching Mode
+## Mode B: Post-meeting coaching
 
-## Inputs
+### Inputs
 11. Ask: "Paste your meeting notes, transcript, or describe what happened."
 
 > If the user provides notes or a summary instead of a full transcript, skip the Coaching Scorecard quantitative metrics (talk ratio, monologue length, patience score) and focus on BANT/MEDDIC assessment and qualitative analysis.
 
-## Process
+### Process
 12. Read `references/coaching-metrics.md` for scoring benchmarks.
 13. Analyze the conversation against coaching metrics: talk ratio, monologue length, question quality, patience score, interactivity.
 14. Run BANT qualification check: score each element (Budget, Authority, Need, Timeline) as confirmed / partially confirmed / missing.
@@ -50,7 +50,7 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 17. Write concrete rewrites for weak moments: show the original and improved version.
 18. Recommend 2-3 specific drills to improve identified weaknesses.
 
-## Output
+### Output
 19. Format coaching analysis as:
 
 **Coaching Scorecard**
