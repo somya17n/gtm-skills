@@ -58,6 +58,73 @@ Every source over-represents someone. Correct for it before generalizing:
 
 For each piece of content pulled this way, capture: source + URL + date, the exact verbatim quote, what prompted it, sentiment, and a theme tag (pain / trigger / outcome / alternative / language).
 
+## What They Say vs What They Do
+
+The most expensive error in customer research is treating a stated preference as a revealed one.
+People are reliable reporters of their problems and unreliable reporters of their future behavior.
+
+| Reliable | Unreliable |
+|---|---|
+| What they did, with dates | What they would do hypothetically |
+| What they currently pay for | What they say they would pay |
+| The workaround they built | The feature they asked for |
+| Why they switched last time | Whether they would switch now |
+| What they complained about unprompted | What they agreed was a problem when asked |
+
+Rules:
+
+- **A feature request is a clue, not a requirement.** It encodes a real problem in the vocabulary of
+  a solution the customer invented. Extract the problem; discard the proposed solution unless
+  several people independently converged on it.
+- **Weight behaviour above opinion.** A workaround someone built themselves is stronger evidence
+  than an enthusiastic yes, because it cost them something.
+- **Discount agreement.** "Yes, that's a problem for us" in response to a direct question is the
+  weakest signal in the set. Unprompted complaints are worth several prompted agreements.
+- **Never source a willingness-to-pay number from an interview.** Stated price sensitivity does not
+  survive contact with a checkout page. Label it a hypothesis and point to a pricing research
+  method instead.
+
+Tag every theme with whether it rests on **stated** or **revealed** evidence. A high-frequency
+theme built entirely on stated preference is not high confidence, however many people said it.
+
+---
+
+## Saturation: Knowing When to Stop
+
+A sample is sufficient when new sources stop producing new themes, not when a count is reached.
+
+- Track new themes per source as you work. When the last three sources in a segment produce no
+  theme that is not already in the set, that segment has reached saturation.
+- If new themes are still appearing at the end of the material, say so. The finding is "this set is
+  not yet saturated", and the correct output is a provisional set plus the number of additional
+  sources likely required, not a confident ranking.
+- Saturation is per segment. Reaching it for one segment says nothing about another, and a blended
+  set can look saturated while an under-sampled segment is entirely missing.
+- The 5-per-segment floor in the persona rules is a floor, not a target. Five sources that all
+  produce new themes is under-sampled.
+
+---
+
+## Source-Specific Bias
+
+Every source type distorts in a known direction. Name the distortion when using it, rather than
+treating all text as equally representative.
+
+| Source | Distortion | Correction |
+|---|---|---|
+| Public reviews | Extreme-response bias: written by the delighted and the furious. The satisfied middle is silent and invisible. | Never read review ratios as population sentiment. Use reviews for vocabulary and failure modes, not for prevalence. |
+| Support tickets | Only surfaces problems that are worth reporting and reachable by support. Silent abandonment leaves no ticket. | Pair with churn data. The most damaging problems often generate no tickets at all. |
+| Sales call transcripts | Contaminated by the seller's framing. A prospect agreeing with a pitched pain point is echoing the pitch. | Extract only unprompted statements and the prospect's own vocabulary. Discard agreement that followed a leading question. |
+| Win/loss notes | Written by the rep, after the fact, with an interest in the reason. Losses skew toward price. | Treat stated loss reasons as hypotheses. Prefer the buyer's own words where available. |
+| NPS comments | Bimodal by construction, and anchored on the score just given. | Use for theme discovery, never for prevalence. |
+| Surveys | Reflects the question order and wording as much as the respondent. | Read the instrument before the results. Flag any leading question. |
+| Community and forum posts | Skews toward the technically vocal and the early adopter. | Do not generalise to the mainstream segment. |
+
+When a theme rests mainly on one source type, its confidence is capped by that source's
+distortion, regardless of how many instances were found.
+
+---
+
 ## Persona Construction Rules
 
 - Don't invent a detail you don't have data for — leave it blank rather than filling it in

@@ -30,6 +30,22 @@ Ask the user for:
 3. This skill does not have SEO/backlink tooling (no DataForSEO-equivalent access). Do not claim domain authority, keyword rankings, or organic traffic estimates: that data isn't available here. If the user needs that layer, say so explicitly rather than approximating it.
 4. Cross-reference marketing claims against what else you found: if the competitor's site claims a specific customer count or outcome, note whether review or press evidence supports or contradicts it. Don't repeat a marketing claim as if it were verified fact.
 5. Every statement in the profile must trace to a specific page or search result. Anything you're inferring rather than reading directly gets labeled "inference," not stated as fact.
+6. Stay inside the conduct limits in the reference file. Public material only: no booking a demo or
+   contacting sales while posing as a prospect, no burner-account signups to reach gated product, no
+   scraping behind a login, and no material sourced from someone bound by an NDA. If a question can
+   only be answered by crossing one of those lines, say the question is not answerable from public
+   sources and name what legitimately would answer it.
+7. Read the pricing page as marketing rather than a price list, per the reference file. List price is
+   a ceiling for anyone with a sales motion, "contact us" is a finding rather than a number to
+   estimate, and the page you fetched is one variant from one location on one date. Record the
+   structure that is easy to miss: seat minimums, annual-only terms, onboarding fees, overage rates,
+   separately sold support, and feature gates that only appear in docs. Compare value metrics, since
+   the scale at which each side becomes cheaper is usually the more useful finding than the headline
+   number.
+8. Where public sources show it, capture what the competitor says about the user's own product: any
+   alternatives or comparison page naming them, the weaknesses attributed to their approach, and the
+   objections their messaging pre-loads. Flag any claim about the user that is wrong or out of date,
+   with the correction and its source. If nothing public exists, say so rather than speculating.
 
 ## Output format
 
@@ -46,6 +62,15 @@ Ask the user for:
 
 **Competitive implications for [user's product]**: where they're stronger, where the user is stronger, one specific, concrete opportunity this creates
 
+**What they say about [user's product]**: their claims, where published, and a correction with its
+source for anything wrong or out of date. "No public material found" if that is the case.
+
+**Publication note**: which statements in this dossier are safe to use in customer-facing copy and
+which are internal-only. Anything labelled inference, and any weakness resting on a handful of
+reviews, is internal-only. Anything published needs a like-for-like comparison, a visible
+last-verified date, and an owner, since a competitor's pricing changes without notice and a stale
+comparison becomes a false claim by neglect.
+
 **Sources**: every URL used, with the date fetched
 
 If profiling more than one competitor, produce one profile per competitor, then a short side-by-side comparison table using the same metrics across all of them.
@@ -61,6 +86,21 @@ Before returning the output, verify:
 - Where the competitor's own marketing claims a stat or outcome, is it noted as their claim (not repeated as verified fact) unless review/press evidence actually confirms it?
 - Does the Sources section list every URL used with the date fetched?
 - If profiling multiple competitors, does every profile use the same metrics so the comparison table is genuinely apples-to-apples?
+- Was every source public? No pretexted demo or sales call, no burner-account signup to reach gated
+  product, no login-gated scrape, no NDA-bound material. If a question could only be answered by
+  crossing that line, is it reported as unanswerable from public sources with a legitimate
+  alternative named?
+- Is list price presented as a ceiling rather than as what customers actually pay, with the fetch
+  date and a note that the page varies by visitor, geo, and test variant?
+- Are the easy-to-miss structural terms captured (seat minimums, annual-only commitments, onboarding
+  fees, overage rates, separately sold support, doc-only feature gates), and is the value metric
+  compared rather than only the headline price?
+- Does the dossier mark which statements are internal-only and which are safe to publish, with every
+  inference and every weakness resting on a handful of reviews kept internal-only?
+- Does anything marked publishable carry a like-for-like comparison, a last-verified date, and an
+  owner, so it cannot become a false claim by neglect when the competitor changes pricing?
+- Is any claim the competitor makes about the user's own product captured with a sourced correction,
+  or explicitly reported as not publicly found rather than speculated about?
 
 If any check fails, correct it before returning the output.
 

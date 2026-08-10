@@ -70,6 +70,87 @@ Sales case studies differ from marketing case studies: marketing tells a story, 
 
 ---
 
+## Demo Script / Talk Track
+
+The asset a rep uses live, so it is written to be spoken, not read.
+
+**Structure**
+
+1. **Frame** - one sentence on what you are about to show and which of their stated problems it
+   addresses. Never open in the product.
+2. **The one thing** - the single capability that matters most to this persona, shown first. A demo
+   that saves the best part for last loses the room before it arrives.
+3. **Their data, or their scenario** - use the prospect's own numbers, names, and workflow. A demo
+   in a generic sandbox is a product tour, not a demo.
+4. **Two supporting beats** - no more. Every extra feature shown dilutes the one thing.
+5. **Land it** - restate the outcome in their words, then ask what they would want to see next.
+
+**Talk track types**
+
+| Type | Use when | Length |
+|---|---|---|
+| Cold-call opener | First voice contact, no context | Under 30 seconds |
+| Discovery-to-demo bridge | Moving from questions to showing | Two sentences |
+| Feature-to-outcome translation | A rep keeps describing mechanics | One line per feature |
+| Competitive displacement | A named competitor is in play | Under a minute, no disparagement |
+| Pricing walk-through | Presenting the number | Say the number, then stop |
+
+**Rules for spoken copy**
+
+- Write in the rep's spoken register. If they would not say it out loud, rewrite it.
+- Mark where to stop talking. The most common demo failure is narrating past the point where the
+  prospect wanted to speak.
+- No feature named without the outcome attached in the same breath.
+- One question at the end, not three.
+- Never script a claim the rep cannot defend when asked how they know it.
+
+---
+
+## Will a Rep Actually Use This
+
+Most enablement collateral is made once and never used again. An asset reps do not trust or cannot
+find is not an asset, and producing it has a cost: it displaces the version they were already
+improvising, which at least fit the conversation.
+
+Every asset ships with:
+
+- **What it replaces.** If it does not replace something, say what it is added to and when in the
+  cycle it gets used. An asset with no slot in an existing motion will not acquire one.
+- **Where it lives.** A path, a link, or a named place. An asset a rep has to ask for is an asset
+  they will not use on a live call.
+- **Who owns it.** A named person, because the next question a rep has about it goes to someone.
+- **The trust test.** Would a rep put their own name behind every claim in it? Reps drop collateral
+  the moment one number gets challenged and they cannot defend it. A single indefensible claim
+  discredits the whole document.
+
+Diagnostic: if the rep would rather send a short email they wrote themselves than this asset, the
+asset is wrong. Ask why, and fix that instead of polishing the layout.
+
+---
+
+## Every Asset Has an Expiry
+
+Enablement assets rot silently, and a stale asset is worse than a missing one because it gets used
+with confidence.
+
+| What goes stale | Why it matters | Review trigger |
+|---|---|---|
+| Pricing on a one-pager or proposal | A rep quotes a price that no longer exists | Any pricing change |
+| A named customer in a proof point | The customer may have churned, or never agreed to be named | Quarterly, and on any churn |
+| Competitive positioning | Competitors ship and reprice | Quarterly, and on a competitor launch |
+| Integration and security claims | The product changed underneath the claim | Any relevant release |
+| ROI benchmark inputs | Wage, tool cost, and team-size assumptions drift | Annually |
+
+Each asset carries a **last verified date** and the trigger that forces the next review. Undated
+collateral cannot be audited, so it never gets retired.
+
+**Permission to cite is separate from having the number.** Before a customer name appears in
+anything a prospect sees, confirm the reference is approved and current. A churned customer used as
+a proof point is a live liability: a prospect who checks will find out, and the rep will not know
+why the deal cooled.
+
+---
+
 ## Common Mistakes Across Asset Types
 
 - Proposals and decks that lead with features instead of the buyer's own stated pain

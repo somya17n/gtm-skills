@@ -23,7 +23,22 @@ tools: WebFetch, WebSearch
 7. For each asset provided, extract using the JTBD framework from the reference file: functional/emotional/social jobs, pain points, trigger events, desired outcomes, exact vocabulary, and alternatives considered.
 8. Cluster extracted signal by theme across all assets. Score each theme's frequency (how many sources) and intensity (how strongly felt, based on emotional language).
 9. Apply the confidence rubric from the reference file to every theme: High/Medium/Low, with the source count that earned it.
-10. Run the sample bias checklist against the sources used: flag any theme that leans heavily on a single source type (e.g., only support tickets, only one segment).
+10. Run the sample bias checklist against the sources used: flag any theme that leans heavily on a
+    single source type (e.g., only support tickets, only one segment). Then apply the
+    source-specific bias table in the reference file: each source type distorts in a known
+    direction, so name the distortion rather than treating all text as equally representative.
+    Public reviews in particular cannot be read for prevalence, only for vocabulary and failure
+    modes, because only the delighted and the furious write them.
+10a. Tag every theme as resting on **stated** or **revealed** evidence, using the reference file's
+    table. What someone did is reliable; what they say they would do is not. A feature request
+    encodes a real problem in the vocabulary of a solution the customer invented: extract the
+    problem and discard the proposed solution unless several sources converged on it independently.
+    A high-frequency theme built entirely on stated preference is not high confidence, however many
+    people said it.
+10b. Check saturation per segment: track new themes per source, and if the last three sources in a
+    segment produced nothing new, that segment is saturated. If new themes were still appearing at
+    the end of the material, say so and mark the theme set provisional rather than ranking it
+    confidently.
 11. If building personas: check the minimum viable sample (5+ independent data points per segment) before drafting one. If under that threshold, present it as a hypothesis and say so explicitly.
 
 ## Output
@@ -44,6 +59,18 @@ Before returning the output, verify:
 - Did the sample bias checklist actually run against the sources used, and is any single-source-type theme flagged as such?
 - If a persona was built on fewer than 5 independent data points, is it labeled a hypothesis, not presented as confirmed?
 - Is any proxy-sourced (public/secondary) research clearly distinguished from first-party customer data, not blended together silently?
+- Is every theme tagged stated or revealed, with no stated-only theme carrying High confidence
+  purely on frequency?
+- Is every feature request reduced to the underlying problem rather than passed through as a
+  requirement?
+- Is saturation reported per segment, with an unsaturated set labelled provisional and the
+  additional sources needed named?
+- Is each source type's known distortion stated where it was used, and is no review ratio or NPS
+  comment set read as population prevalence?
+- Are prompted agreements in sales transcripts excluded in favour of unprompted statements, so the
+  seller's own framing is not returned as customer signal?
+- If any willingness-to-pay figure appears, is it labelled a hypothesis rather than sourced from an
+  interview?
 
 If any check fails, correct it before returning the output.
 

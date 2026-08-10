@@ -23,7 +23,7 @@ Produce the sales collateral a rep actually hands a prospect, mapped to who they
 ## How to run
 
 Ask the user for:
-1. **Which asset they need**: one-pager, ROI calculator, proposal, or playbook
+1. **Which asset they need**: one-pager, ROI calculator, proposal, playbook, or demo script / talk track
 2. **Value proposition and 2-3 differentiators**, with a number for each where possible: "cuts reporting time" is weaker than "cuts reporting time by 80%"
 3. **Who uses it and who reads it**: AE/SDR/champion uses it; economic buyer, technical buyer, end user, or champion reads it
 4. **Deal stage** the asset is for
@@ -42,6 +42,12 @@ Match structure to the asset type:
 
 **Playbook**: buyer profile → qualification framework (BANT/MEDDIC or the user's own) → discovery questions organized by topic → competitive positioning per named competitor → recommended demo flow per persona.
 
+**Demo script / talk track**: frame → the one capability that matters most to this persona, shown
+first → their own data or scenario → at most two supporting beats → restate the outcome in their
+words and ask what they want to see next. Written in the rep's spoken register, with the points
+marked where they should stop talking. See the reference file for the talk-track types and their
+lengths.
+
 Tailor emphasis by buyer type regardless of asset:
 | Buyer | Lead with |
 |---|---|
@@ -56,7 +62,21 @@ Deliver the requested asset in full and ready to use, not an outline needing a s
 
 If the user asked for a proposal or ROI calculator without providing the required inputs (discovery notes / current-state metrics), stop and ask for them instead of inventing a customer voice or numbers that don't exist yet.
 
-Read `references/sales-enablement-assets.md` for the full slide-by-slide deck framework, case study brief format, and buyer persona card template.
+Every asset also ships with the adoption and expiry block from the reference file, because an
+asset reps do not trust or cannot find is not an asset:
+
+- **What it replaces**, or where it slots into an existing motion
+- **Where it lives** and **who owns it**
+- **Last verified date** and the trigger that forces the next review (a pricing change, a churn, a
+  competitor launch, a relevant release)
+
+Before any customer name appears in something a prospect will see, confirm the reference is
+approved and still current. Having the number is not the same as having permission to use it, and a
+churned customer cited as proof is a liability the rep will not see coming.
+
+Read `references/sales-enablement-assets.md` for the full slide-by-slide deck framework, case study
+brief format, buyer persona card template, demo script and talk-track structures, the adoption test,
+and the asset expiry table.
 
 ## Quality check before returning
 
@@ -67,6 +87,14 @@ Before returning the output, verify:
 - If discovery notes or current-state metrics were missing, did the output stop and ask instead of inventing a customer voice or numbers?
 - Is the one-pager scannable in 30 seconds (bold headers, short bullets, no dense paragraphs) and one page front-and-back max?
 - Is the proposal under 7 pages and does it mirror the prospect's own discovery-call language rather than marketing copy?
+- Does the asset carry its adoption block: what it replaces or where it slots in, where it lives,
+  who owns it, and a last-verified date with the trigger for the next review?
+- Would a rep put their own name behind every claim in it? Flag any claim the rep could not defend
+  if challenged, since one indefensible number discredits the whole document.
+- Is every named customer confirmed as an approved, current reference rather than just a name the
+  user happened to supply?
+- For a demo script: is it written in spoken register, does the most important capability come
+  first rather than last, and are the stop-talking points marked?
 
 If any check fails, fix the relevant section before returning. Do not return a draft that fails a check.
 
