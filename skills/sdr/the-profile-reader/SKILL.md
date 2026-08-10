@@ -31,7 +31,9 @@ Reference the specific transition: previous role to current role, or a notable s
 **Angle 3: Based on a business challenge implied by their company's situation**
 Do not reference something the prospect personally wrote. Infer a challenge from their company's current stage or recent news and frame it as something they, in their specific role, would be responsible for solving. One sentence, under 25 words.
 
-After the three angles, add one line: which angle you recommend for a first cold email and why.
+After the angles, add one line: which angle you recommend for a first cold email and why.
+
+**Never pad to reach a count.** Angle 1 requires real content the prospect actually wrote. If they have published nothing, do not invent a post, do not paraphrase a generic industry take as theirs, and do not stretch a job-title line into a quote. Return the angles you can genuinely support, label the missing one `Not available: no published content found`, and name the input that would unlock it. Two well-sourced angles beat three where one is fabricated.
 
 ## Rules
 

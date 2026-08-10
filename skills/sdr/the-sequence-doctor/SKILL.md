@@ -7,6 +7,12 @@ description: Audits a cold outbound email sequence and returns a gap analysis pe
 
 Audit a cold email sequence and return a structured diagnosis with rewrites for the weakest emails.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask for the ICP, persona, and product one-liner inline.
+2. Read `.agents/product-context.md` for the ICP, persona, product one-liner, competitors, and banned-word list. Inputs 2 through 5 below are usually already recorded there: pull them and confirm rather than asking the user to restate them.
+3. Read `references/outreach-cadences.md` for cadence patterns by buyer type, channel mix, personalization layers, and send-day spacing. Output 3 recommends a missing step with a suggested send day, so ground that recommendation in the cadence patterns there rather than inventing an interval.
+
 ## How to run
 
 Ask the user for:
@@ -36,6 +42,8 @@ Explain why each problem reduces reply rates. Be direct.
 
 Identify the three weakest emails. Rewrite each one in full. Keep the send day and sequence position the same. Fix the structural problem. Do not just polish the original wording.
 
+**Never pad to reach a count.** If the sequence contains fewer than three emails, rewrite every email in it and say how many there were. If only one or two emails have a real structural problem, rewrite only those and state that the rest were sound. Three is a ceiling on effort, not a quota to fill.
+
 **Output 3: Missing step**
 
 Review the sequence as a whole. Recommend any follow-up type that is missing:
@@ -52,7 +60,7 @@ If a step is missing, recommend it with the suggested send day and one sentence 
 Before returning the output, verify:
 
 - Does every email in the gap analysis get one of the seven named diagnoses, not a vague "this could be better"?
-- Are exactly three emails identified as weakest and rewritten in full, with the same send day and sequence position preserved?
+- Are the weakest emails (up to three, or all of them if the sequence is shorter) rewritten in full, with the same send day and sequence position preserved, and is the number stated when it is fewer than three?
 - Do the rewrites fix the structural problem identified, not just polish the original wording?
 - Does the missing-step recommendation include a suggested send day and one sentence on what it should say?
 

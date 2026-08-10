@@ -7,6 +7,12 @@ description: "Reviews an existing product detail page, using the page itself, re
 
 Review an existing product detail page against what a real buyer needs to decide, and return a prioritized edit brief.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the competitive landscape, brand voice, and banned-word list.
+2. Read `.agents/product-context.md` for the competitive landscape, brand voice, and banned-word list. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.
@@ -28,7 +34,9 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 ## Output format
 
-**PDP verdict:** short verdict naming the top 3 blockers to purchase.
+**PDP verdict:** short verdict naming the top blockers to purchase, up to 3.
+
+**Never pad to reach a count.** If the page has only one or two real blockers, name those and say the rest of the page held up. Do not pad the list with minor nitpicks to reach three.
 
 **Review table:**
 

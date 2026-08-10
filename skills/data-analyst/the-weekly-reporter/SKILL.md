@@ -7,6 +7,11 @@ description: "Produces one weekly operating readout for a store or product from 
 
 Turn a week of scattered exports into one operating update: what changed, what probably caused it, and the three things worth doing next.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the north star metric, secondary metrics, and the owner's goal (input 4 below is usually already recorded there, and it decides which changes count as material).
+2. Read `.agents/product-context.md` for the north star metric, secondary metrics, and the owner's goal (input 4 below is usually already recorded there, and it decides which changes count as material). Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, note the gap in the output rather than skipping it silently.
@@ -23,7 +28,7 @@ Ask the user for these inputs. If any are missing, note the gap in the output ra
 2. Flag only material changes: a move worth the owner's attention given their stated goal, not every fluctuation. State the size of the move next to each one.
 3. For each material change, name the most likely driver from what the user actually reported (traffic mix, a promo, product availability, a page or flow change, seasonality) and mark it a hypothesis unless the user confirmed the cause.
 4. Call out what did not move but was expected to, given an action taken the prior week. A change that failed to land is often the most useful line in the readout and the one most often left out.
-5. Recommend exactly 3 next actions and list separately anything worth watching but not acting on yet.
+5. Recommend up to 3 next actions and list separately anything worth watching but not acting on yet. Recommend only actions the week's data actually supports: if one material change happened, one action is the honest answer. A quiet week ends with a short list, not three invented actions. This rule takes precedence over filling the section.
 
 ## Output format
 
@@ -38,7 +43,7 @@ Ask the user for these inputs. If any are missing, note the gap in the output ra
 
 **What didn't move**: anything expected to change from last week's action that didn't.
 
-**Next 3 actions**: owner, what to do, how it'll be measured.
+**Next actions (up to 3)**: owner, what to do, how it'll be measured. Fewer is correct when the week supports fewer.
 
 **Watch list**: items worth tracking, not yet worth acting on.
 
@@ -59,7 +64,7 @@ Before returning the output, verify:
 - Does every "what changed" line state the size of the move, not just its direction?
 - Is every named cause marked confirmed or hypothesis, with no unmarked causal claim?
 - Does the readout say what didn't move, not just what did?
-- Are there exactly 3 next actions, each with an owner and a way to measure it?
+- Does every next action (up to 3, and only as many as the week's data supports) have an owner and a way to measure it, with no action included merely to reach three?
 
 If any check fails, correct it before returning the output.
 

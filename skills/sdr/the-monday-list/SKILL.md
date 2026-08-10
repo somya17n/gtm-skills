@@ -7,6 +7,11 @@ description: Takes a batch of weekly intent signals across a pipeline and output
 
 Process a week of intent signals and return a ranked outreach list so the team starts Monday acting, not reading.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP criteria and the signal definitions recorded under Scoring.
+2. Read `.agents/product-context.md` for the ICP criteria and the signal definitions recorded under Scoring. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user for:
@@ -31,8 +36,10 @@ Return a ranked table:
 
 After the table, add three sections:
 
-**Top 3 to action today**
-Name the top three accounts and write one sentence on exactly what to say in the first touch, specific to their signal, not a generic opener.
+**Top accounts to action today (up to 3)**
+Name the top accounts, up to three, and write one sentence on exactly what to say in the first touch, specific to their signal, not a generic opener.
+
+**Never pad to reach a count.** A quiet week is a real result. If only one or two accounts carry a signal worth acting on today, name those and say so. If none do, say that outright and point to the Signal gaps section instead of promoting a weak account to fill a slot.
 
 **Accounts to remove**
 Any accounts in this week's batch with no ICP fit or no signal worth acting on. One-line reason per account.

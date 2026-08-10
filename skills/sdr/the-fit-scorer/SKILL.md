@@ -7,6 +7,11 @@ description: Scores an account list against ICP criteria and outputs a priority 
 
 Score an account list against ICP criteria and return a ranked priority table with outreach rationale per account.
 
+## Context
+
+1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP criteria (including the disqualifier list) and the product one-liner.
+2. Read `.agents/product-context.md` for the ICP criteria (including the disqualifier list) and the product one-liner. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
+
 ## How to run
 
 Ask the user for:
@@ -28,7 +33,7 @@ Return a markdown table with these columns:
 
 After the table, add a short summary:
 - How many High / Medium / Low accounts
-- The top 3 accounts to contact this week and why
+- The top 3 accounts to contact this week and why. If fewer than 3 accounts reached High, list only the High ones and say how many there were: do not pad the list with Medium accounts to reach three, and do not promote a Medium account to fill the slot. If zero accounts reached High, say that outright and name what signal or contact confirmation the list would need to produce one.
 - Any accounts that should be removed from the pipeline entirely (no fit), with a one-line reason
 
 ## Scoring logic
