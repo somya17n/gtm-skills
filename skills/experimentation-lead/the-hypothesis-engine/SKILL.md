@@ -9,6 +9,10 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `references/bayesian-testing.md` for statistical design patterns and Thompson sampling details.
+2a. Read that file's **Validity Threats** section too. Those checks decide whether a result is
+    readable at all, and they belong in the brief up front rather than being discovered after the
+    experience has run: a confident number from a broken experience is worse than no number, because
+    it gets shipped.
 
 ## Inputs
 
@@ -29,7 +33,30 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
     - Estimated duration based on traffic
     - Confidence threshold: Refer to the confidence threshold tiers in the reference file to recommend the appropriate level.
 11. Define guardrails: metrics that must NOT degrade (e.g., unsubscribe rate, error rate).
-12. Set exit criteria, when to stop: confidence threshold reached, max duration hit, or guardrail violated.
+12. Set exit criteria, when to stop: confidence threshold reached, max duration hit, or guardrail
+    violated. State the primary metric explicitly and declare it as the only metric that can decide
+    the outcome: secondary metrics explain and catch harm, they never promote a loss to a win, and a
+    guardrail breach is decisive against shipping but can never justify shipping.
+12a. Specify the validity checks that must pass before the result is read, from the reference file:
+
+    - **Sample ratio mismatch.** How the observed exposures per variant will be compared against the
+      configured allocation, and who checks it. Where Thompson sampling is the assignment strategy,
+      the comparison is against what the allocator *intended* per period, not against an even split,
+      since adaptive allocation is supposed to be uneven and a naive check will always look
+      mismatched. If the platform cannot report intended allocation, say SRM is unverifiable here and
+      record that as a limit on the verdict rather than skipping it.
+    - **Comparison count.** If more than one treatment runs against control, note that the evidence
+      threshold has to account for the number of comparisons rather than being applied repeatedly at
+      the level set for one.
+    - **Pre-declared segments.** Any segment the experience is meant to read separately is named now,
+      before traffic starts, and powered for. Segments found later are hypotheses for a next
+      experience, not findings from this one.
+    - **Minimum duration of one full business cycle**, so weekday effects are not read as treatment
+      effects, regardless of how fast the sample size is reached.
+12b. State what happens if the result is flat. The default for inconclusive is **do not ship**, and
+    the finding is reported as "no effect larger than the MDE was detected" rather than "no
+    difference". If the user intends to ship regardless on strategic grounds, that is legitimate and
+    gets recorded as a decision made on other grounds, not as a result.
 13. Specify holdout if measuring incremental lift beyond the experience itself.
 
 ## Output
@@ -42,7 +69,11 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
 - **Guardrails**: Metrics that must not degrade, with thresholds
 - **Exit Criteria**: Conditions to stop early (win, loss, or inconclusive)
 - **Holdout**: Percentage and measurement plan (if applicable)
-- **Decision Framework**: What action to take for each possible outcome
+- **Validity Checks**: the SRM comparison method (against intended allocation where assignment is
+  adaptive) and who runs it, the comparison count and its effect on the evidence threshold, the
+  pre-declared segments, and the minimum duration in business cycles
+- **Decision Framework**: What action to take for each possible outcome, including the flat case,
+  where the default is not to ship and the result is stated as no effect larger than the MDE
 
 ## Quality check before returning
 
@@ -53,6 +84,19 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
 - Does the sample size and duration trace to the MDE and confidence threshold actually chosen, not a generic estimate?
 - Does at least one guardrail metric appear, and does the exit criteria cover all three cases (win, loss, inconclusive)?
 - Does the baseline conversion rate, MDE, and sample size come from product context or the user's actual input, with no invented statistical assumption? If a number the calculation needs wasn't provided, is it flagged as an assumption needing the user's real number rather than presented as fact?
+- Is a sample ratio mismatch check specified with an owner, and where assignment is adaptive, is it
+  defined against intended allocation per period rather than an even split? If the platform cannot
+  report intended allocation, is that recorded as a limit on the verdict rather than omitted?
+- Is exactly one primary metric declared as decisive, with secondary metrics explicitly unable to
+  promote a loss to a win, and a guardrail breach able only to stop a ship?
+- If more than one treatment runs, does the brief address the comparison count rather than applying a
+  single-comparison threshold repeatedly?
+- Are any segments to be read separately declared in advance and powered for, with a statement that
+  segments discovered later are hypotheses rather than results?
+- Is a minimum duration of one full business cycle set, independent of how quickly the sample size is
+  reached?
+- Does the decision framework cover the flat case with a do-not-ship default, stating the finding as
+  no effect larger than the MDE rather than as no difference?
 
 If any check fails, correct it before returning the output.
 

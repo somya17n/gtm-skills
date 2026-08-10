@@ -17,6 +17,16 @@ Write a complete, personalized cold email body from the user's research inputs. 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, product one-liner, proof points, brand voice, and banned-word list.
 2. Read `.agents/product-context.md` for the ICP, product one-liner, proof points, brand voice, and banned-word list. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
 3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
+4. Read `references/outreach-cadences.md` for what a cold commercial email has to carry, in
+   particular the 1:1 compliance footer. A personal-sounding plain-text email still needs sender
+   identification, a postal address, and a working opt-out. Ask the user for the postal address to
+   use, and confirm they have a suppression process that genuinely honours reply-based opt-outs
+   across every sequence and sending domain. If they do not, say the sequence is not ready to send
+   rather than returning copy that cannot lawfully go out at volume.
+5. Ask which countries the recipients are in. Canada is consent-based rather than opt-out based, so
+   a Canadian prospect who cannot be tied to a conspicuously published, role-relevant business
+   address or an existing business relationship should be treated as not contactable rather than
+   emailed on an opt-out assumption.
 
 ## How to run
 
@@ -49,6 +59,10 @@ Hi [First name],
 
 [First name only]
 
+[Company name, postal address]
+
+[One-line reply-based opt-out, e.g. Not useful? Reply "stop" and I won't follow up.]
+
 ---
 
 **Hook rationale:** [One sentence explaining why the opening maps to the specific trigger provided]
@@ -64,7 +78,11 @@ Hi [First name],
 - No exclamation points
 - Opening must reference the specific trigger or personalization angle, never "I noticed you work at X" or generic openers
 - CTA must be a question, not a meeting request ("Worth a 20-minute look?" not "Are you free Thursday?")
-- Sign-off is first name only: no title, company name, or links in the body
+- Sign-off is first name only: no title, company name, or links **in the body**. The compliance
+  footer below the sign-off is a separate block and is required, not optional: company name, postal
+  address, and a one-line reply-based opt-out. Keeping it below the sign-off preserves the 1:1
+  register without dropping what commercial email has to carry. It does not count against the
+  120-word body budget.
 - Do not invent or hallucinate company details not provided by the user; if a detail is missing, ask for it
 
 ## Quality check before returning
@@ -75,7 +93,13 @@ Before returning the output, verify:
 - Is the total email body under 120 words?
 - Is there exactly one CTA?
 - Does the proof point include a number or a named customer, not a vague outcome claim?
-- Is the sign-off first name only?
+- Is the sign-off first name only, with the compliance footer as a separate block below it?
+- Does the footer carry the company name, a postal address, and a working one-line opt-out, and was
+  the address supplied by the user rather than invented or left as a placeholder in returned copy?
+- If any recipient is in Canada, was the consent basis established (a conspicuously published
+  role-relevant business address, or an existing business relationship) rather than an opt-out model
+  assumed?
+- Is the subject line non-deceptive, with no fake reply-thread prefix on a first contact?
 
 If any check fails, rewrite the relevant section before returning. Do not return a draft that fails a check.
 

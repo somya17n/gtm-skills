@@ -303,6 +303,61 @@ Embed proof points in your sequence that proactively address the top objections 
 | Transparency | Explain why you are contacting them and how you obtained their data |
 | Record keeping | Document your legitimate interest assessment |
 
+### CASL (Canada)
+
+Stricter than CAN-SPAM in the way that matters most: Canada requires **consent** for a commercial
+electronic message rather than an opt-out. Consent can be express, or implied by an existing
+business relationship or a conspicuously published business address relevant to the recipient's
+role. Penalties are significant and apply per violation.
+
+| Requirement | Detail |
+|-------------|--------|
+| Consent | Express, or implied through an existing relationship or a conspicuously published role-relevant business address |
+| Identification | Sender clearly identified, with a mailing address and either a phone number, email, or web address |
+| Unsubscribe | A working mechanism, honoured within 10 business days, valid for at least 60 days after sending |
+| Record keeping | Retain the evidence of consent or of the implied-consent basis |
+
+Practical effect on cold outbound: a role-based business address published on the company's own site
+is generally the safest basis, and a personal or guessed address is not. Where a Canadian prospect
+cannot be tied to a published business address or an existing relationship, treat them as not
+contactable rather than assuming an opt-out model applies.
+
+### The compliance footer on a 1:1 cold email
+
+The most common failure in cold outbound is a genuinely personal, plain-text email that omits the
+identification, address, and opt-out that commercial email requires. Teams leave them out to
+preserve the one-to-one feel, and the whole sequence is non-compliant as a result.
+
+The requirement and the register are not actually in conflict. A short plain-text close satisfies
+both:
+
+```
+Somya
+Intempt, <street address, city, country>
+
+Not useful? Reply "stop" and I won't follow up.
+```
+
+Rules:
+
+- **A reply-based opt-out is a valid mechanism** and reads far more naturally in a 1:1 email than an
+  unsubscribe link. It only works if it is actually honoured and written to a suppression list,
+  which has to be a real process rather than an intention.
+- **The postal address is not optional** in US commercial email, and it is required for
+  identification under CASL. A registered office or a mail-handling address is fine.
+- **Honour opt-outs within 24 hours**, well inside every statutory window, and suppress across every
+  sequence and every sending domain rather than per campaign. A prospect who opted out of one
+  sequence and receives another from a sibling domain is the version of this that generates
+  complaints.
+- **Keep the footer below the sign-off** and out of the body, so it does not compete with the
+  message or count against the word budget.
+- **Never disguise a commercial email as personal correspondence.** A misleading subject line or a
+  fake reply-thread prefix ("Re:" on a first contact) is deceptive-header territory, separately from
+  being ineffective once noticed.
+
+Jurisdictions differ, this list is not exhaustive, and none of it is legal advice. Any programme
+sending at volume should have the footer and the suppression process reviewed once, properly.
+
 ### Best Practices for Compliance
 
 - Always include an unsubscribe link or clear opt-out instructions

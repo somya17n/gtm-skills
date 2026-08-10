@@ -39,6 +39,11 @@ One paragraph per email. For each, identify the specific structural problem usin
 - Too long (cut to what matters)
 - Weak or unclear CTA (the ask is vague or asks for too much)
 - Subject line mismatch (subject line creates an expectation the body does not fulfill)
+- Missing compliance footer (no sender identification, no postal address, or no working opt-out).
+  Flag this on every email that lacks it, and treat it as blocking rather than as a style note: the
+  sequence cannot lawfully send at volume without it. Check also that opt-outs suppress across every
+  sequence and every sending domain rather than per campaign, since a prospect who opted out of one
+  sequence and then receives another from a sibling domain is what generates complaints.
 - Feature focus (describes the product, not the outcome the prospect cares about)
 
 Explain why each problem reduces reply rates. Be direct.

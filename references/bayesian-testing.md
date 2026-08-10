@@ -346,3 +346,91 @@ Where:
 - **Multiple variants:** Multiply by number of comparisons for Bonferroni correction, or use a hierarchical Bayesian model
 - **Thompson Sampling:** Requires ~20-30% more total exposures than fixed-split to reach equivalent certainty
 - **Sequential testing:** Use alpha-spending functions to control false positive rate when peeking
+
+---
+
+## Validity Threats: Checks That Come Before the Result
+
+A confident number from a broken experience is worse than no number, because it gets shipped. These
+checks decide whether the result is readable at all, so they run before anyone looks at the winner.
+
+### Sample ratio mismatch
+
+The first thing to check and the most commonly skipped. Compare the exposures each variant actually
+received against the allocation that was configured. A meaningful gap means the assignment,
+exposure logging, or delivery is broken, and **the result is unreadable regardless of how strong the
+posterior looks.**
+
+Common causes, none of which are visible in the result itself:
+
+- A variant that loads more slowly loses users before the exposure event fires, so its population is
+  quietly filtered to the more patient.
+- Assignment happening on one identity (anonymous ID) and conversion recorded on another (user ID)
+  after login.
+- Redirect-based variants losing traffic on the redirect.
+- Bot or internal traffic hitting one variant disproportionately.
+- A variant erroring for one browser, device, or locale.
+
+**Adaptive allocation changes this check, it does not remove it.** Thompson sampling deliberately
+shifts traffic over time, so the observed split is supposed to be uneven and a naive comparison
+against an even split will always look mismatched. Check the observed exposures against what the
+allocator *intended* at each step, not against a flat split. If the platform cannot report intended
+allocation per period, say that SRM cannot be verified under adaptive assignment, and treat that as
+a limitation on the confidence of the verdict rather than ignoring it.
+
+When SRM appears: stop, fix the cause, and restart. Do not analyse the data with the affected
+segment removed, because whatever filtered the population is very likely correlated with the
+outcome being measured.
+
+### Multiple variants and multiple metrics
+
+Every extra comparison raises the chance that something looks like a winner by luck.
+
+- **Declare the primary metric before starting.** One metric decides the outcome. Everything else is
+  secondary and cannot promote a loss to a win.
+- **More variants need more evidence per variant**, not the same threshold applied more times. Four
+  treatments against one control is four comparisons, and a threshold set for one is too loose for
+  four. Raise the bar or reduce the variants.
+- **Secondary metrics are directional.** They are useful for explaining a result and for catching
+  harm. They are not eligible to be the reason something ships.
+- **A guardrail breach is decisive on its own.** Guardrails work in one direction only: they can
+  stop a ship, they can never justify one.
+
+### Post-hoc segments
+
+The most reliable way to manufacture a false win is to slice a flat result until something is
+significant. With enough segments, something always is.
+
+- A segment finding is a **hypothesis for the next experience**, never a result from this one.
+- Segments the experience was designed and powered for, declared in advance, are legitimate. Segments
+  discovered while looking at the data are not, and the distinction is whether they were written
+  down before the traffic started.
+- Each segment is a smaller sample, so segment-level intervals are wider than the overall one.
+  Confidence at segment level requires more evidence than at the top level, not less.
+- Say plainly how many segments were examined. "It won for mobile users in Germany" means something
+  entirely different after checking one slice than after checking thirty.
+
+### Flat is a real outcome
+
+Most experiences do not produce a winner, and the honest default for an inconclusive result is
+**do not ship**, not ship-because-it-did-not-hurt.
+
+A flat result rules out the effect size the design was powered to detect. That is genuine
+information: report it as "no effect larger than the MDE was detected", which is a different and
+more useful claim than "no difference". If shipping anyway on other grounds (strategy, design debt,
+consistency), record that the decision was made on those grounds rather than on the result.
+
+### Before reporting any verdict
+
+1. Was SRM checked, and under adaptive allocation was it checked against intended allocation rather
+   than an even split?
+2. Was the primary metric declared before the experience started?
+3. Does the number of variants match the evidence threshold being applied?
+4. Is every segment claim either pre-declared, or labelled a hypothesis for a future experience with
+   the number of segments examined stated?
+5. Did the experience run for at least one full business cycle, so weekday effects are not read as
+   treatment effects?
+6. Is a guardrail breach treated as decisive against shipping, and never as support for shipping?
+7. If the result is flat, is it reported as "no effect larger than the MDE", with any ship decision
+   attributed to other grounds?
+
