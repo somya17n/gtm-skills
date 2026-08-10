@@ -379,3 +379,72 @@ SMS and push platforms each publish their own performance reports, but sample co
 - If user engages with push, suppress the SMS follow-up (and vice versa)
 - Track total cross-channel touches: max 10 per week across all channels
 - Transactional messages do not count toward marketing caps
+
+---
+
+## Carrier Gates: Registration and Filtering
+
+Legal consent is necessary and not sufficient. In several markets, notably the US, carriers apply
+their own registration and content filtering on top of the law. A campaign can be fully
+TCPA-compliant and still never arrive.
+
+### Registration is a precondition, not paperwork
+
+US application-to-person messaging requires the sending brand and each campaign to be registered
+before traffic flows. Unregistered or misregistered traffic is throttled, surcharged, or blocked
+outright, and the block is silent from the sender's side.
+
+| Route | What registration involves | Notes |
+|---|---|---|
+| **10DLC** | Register the brand, then each use case, with sample message copy and the opt-in flow | The standard route. Throughput and daily limits are tied to a trust score. |
+| **Toll-free** | Verification submission with the same evidence | Unverified toll-free traffic is heavily filtered. |
+| **Short code** | Full provisioning, longest lead time, highest cost | For sustained high volume. |
+
+Consequences the spec must account for:
+
+- **Sample copy is submitted and enforced.** Messages that drift materially from what was
+  registered can be filtered. If a campaign's content changes shape, the registration needs
+  revisiting.
+- **Throughput is capped** by trust tier, so a large send is a scheduling problem, not just a
+  content one.
+- **Lead time is real.** Registration takes days to weeks. A launch date that assumes instant
+  sending is wrong, and this is the most common SMS launch failure.
+
+Before specifying any US SMS campaign, ask which route is registered and whether this use case is
+covered. If it is not, say the campaign is blocked on registration and give the lead time, rather
+than delivering copy that cannot legally or practically send.
+
+### Content filtering is separate from consent
+
+Carriers filter on message content regardless of how clean the consent is. Common triggers:
+
+- **Public URL shorteners.** Shared shortener domains (bit.ly and similar) carry other senders'
+  reputation and are widely filtered. Use a branded or dedicated link domain.
+- **Regulated categories** — lending and debt, cannabis, gambling, firearms, adult content,
+  high-risk supplements. Some are prohibited outright on standard routes.
+- **All-caps words, excess punctuation, and money symbols** in patterns that resemble spam.
+- **Bare URLs with no context**, or a link as the entire message body.
+- **Sender inconsistency**: rotating numbers for the same programme reads as evasion.
+
+Filtering usually returns a success status to the sender, so **a delivery report is not proof of
+arrival.** Where deliverability matters, require real delivery receipts and treat a gap between
+sent and delivered as filtering rather than churn.
+
+### Proving consent, not just collecting it
+
+The STOP and HELP handling elsewhere in this file covers the exit path. The entry path has to be
+provable, because in a dispute the burden sits with the sender.
+
+Retain, per subscriber: the timestamp, the source (which form, page, or keyword), the exact
+disclosure text shown at opt-in, and the channel scope consented to. Rules that follow from this:
+
+- **Consent is per channel and per purpose.** An email subscriber has not consented to SMS, and a
+  transactional opt-in is not a marketing opt-in.
+- **Keep the disclosure wording as it was shown**, not the current version. What matters is what
+  that person actually saw on that date.
+- **Retain the record after opt-out**, since the claim usually arrives later.
+- **Consent does not transfer.** Not through an acquisition, a list purchase, or a partner
+  co-registration, unless the original disclosure covered exactly that.
+
+If the user cannot produce this for a segment, that segment is not sendable. Say so plainly.
+

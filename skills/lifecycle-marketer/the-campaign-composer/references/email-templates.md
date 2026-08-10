@@ -620,3 +620,66 @@ Below fold (optional): 3-bullet "what you can do" only if product complexity war
 4. End with risk reducer: "Cancel anytime. No commitment."
 
 **What fails:** Upsell emails that open with "Upgrade now" or "You're missing out on..." before acknowledging what the user has already done. The acknowledgment of their own behavior is the trust signal that makes the upgrade feel earned, not pushed.
+
+---
+
+## Sending Gates: What Blocks Mail Before Copy Matters
+
+Deliverability failures are not copy problems, and no subject-line work recovers a send that was
+rejected at the gateway. Check these before a campaign ships. Where the user cannot confirm one,
+say the campaign is blocked on it rather than shipping and hoping.
+
+### Bulk sender requirements
+
+Major inbox providers apply hard requirements to anyone sending meaningful volume to their users.
+The specifics move, so confirm current thresholds with the provider, but the shape has been stable:
+
+| Requirement | What it means | Failure mode |
+|---|---|---|
+| **SPF and DKIM both passing** | Authenticate on the sending domain | Mail rejected or junked outright |
+| **DMARC published** | A policy record on the sending domain, aligned with SPF or DKIM | Rejected at bulk volume |
+| **Alignment** | The visible From domain matches the authenticated domain | Passes SPF technically, still fails alignment |
+| **One-click unsubscribe** | `List-Unsubscribe` plus `List-Unsubscribe-Post` headers, honoured within a short window | Non-compliant bulk mail; complaints rise because the only exit is the spam button |
+| **Spam complaint rate under roughly 0.1%, never near 0.3%** | Measured by the provider, not by your tool | Progressive throttling, then blocking, and recovery is slow |
+
+**One-click unsubscribe is a header, not a footer link.** A visible unsubscribe link in the body
+does not satisfy it. If the sending platform does not set both headers, that is a platform gap to
+resolve before the send, and it is worth checking rather than assuming, since a footer link is what
+most teams believe is sufficient.
+
+### Warmup and ramp
+
+A new domain, subdomain, or IP has no sending reputation, and volume without reputation reads as a
+spam pattern.
+
+- Never launch a sequence at full volume from a domain with no history. Start small and increase
+  gradually over weeks, watching complaint and bounce rates at each step rather than following a
+  fixed schedule.
+- Send to the most engaged recipients first. Early positive engagement is what builds the
+  reputation that later volume depends on.
+- **Warm the subdomain you will actually send from.** Reputation attaches to the sending domain, so
+  warming the root domain does not transfer to a new marketing subdomain.
+- A reputation drop takes far longer to recover than it took to cause. Slowing a ramp costs days;
+  a block costs weeks.
+
+### List hygiene as a deliverability control
+
+- **Never send to a purchased or scraped list.** Spam traps in bought lists damage domain
+  reputation in ways that affect every future send, including transactional mail.
+- Remove hard bounces immediately, and repeated soft bounces after a small number of attempts.
+- **Sunset the unengaged.** Continuing to mail people who have not opened in many months depresses
+  engagement rates, which is itself a ranking signal. A re-engagement attempt followed by removal
+  beats indefinite sending.
+- Validate at capture, not in bulk later. A typo caught at the form never becomes a bounce.
+
+### Verify before the full send
+
+- **Seed test first.** Send to addresses across the major providers and confirm placement, not just
+  delivery. "Delivered" and "in the inbox" are different outcomes and most tools report only the
+  first.
+- Render-test on mobile and in a dark-mode client. Dark mode inverts backgrounds and commonly makes
+  a logo or a bordered button disappear.
+- Click every link in the seed copy, including the unsubscribe. A broken unsubscribe converts
+  unsubscribes into spam complaints, which is the most expensive possible substitution.
+- Confirm the plain-text alternative exists and reads properly on its own.
+

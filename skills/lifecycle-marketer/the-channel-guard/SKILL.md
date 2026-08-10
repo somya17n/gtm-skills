@@ -37,11 +37,46 @@ description: Design SMS and push notification campaigns with compliance, charact
 
 ## Output
 
+13a. **Carrier gates.** Legal consent is necessary and not sufficient. Read the carrier gates in
+    `references/sms-push-compliance.md` and resolve them before writing copy, because a campaign can
+    be fully compliant and still never arrive.
+
+    Ask which route is registered (10DLC, toll-free verification, or short code) and whether this
+    specific use case is covered by that registration. Unregistered US traffic is throttled or
+    blocked silently, registration takes days to weeks, and a launch date that assumes instant
+    sending is the most common SMS launch failure. If the use case is not registered, say the
+    campaign is blocked on registration and give the lead time rather than delivering copy that
+    cannot send. Registered sample copy is also enforced, so a message that drifts materially from
+    what was registered can be filtered.
+
+    Then check content against carrier filtering, which is judged separately from consent: no public
+    URL shorteners (shared shortener domains carry other senders' reputation and are widely
+    filtered), no bare link as the entire message, no rotating numbers for one programme, and
+    awareness of the regulated categories. Filtering usually returns a success status to the sender,
+    so a delivery report is not proof of arrival: where it matters, require real delivery receipts
+    and read a sent-versus-delivered gap as filtering rather than disengagement.
+
+    Finally, confirm consent is provable rather than merely collected: per subscriber, the
+    timestamp, the source, the exact disclosure text as it was shown on that date, and the channel
+    and purpose scope. Consent is per channel and per purpose, an email subscriber has not consented
+    to SMS, and consent does not transfer through an acquisition or a list purchase. If the user
+    cannot produce this for a segment, that segment is not sendable: say so plainly rather than
+    writing copy for it.
+
 14. Before delivering, verify:
    - SMS character math is correct for the actual message: 160 characters for GSM-7, or 70 per segment if any emoji forces Unicode encoding, with the opt-out text counted against the budget
    - Push title is 50 characters or under and body is 150 characters or under
    - Compliance elements match the regions the user named, not a generic default
    - Frequency caps and suppression rules are stated, not left implicit
+   - For any US SMS campaign: the registration route is named, this use case is confirmed covered,
+     and if it is not, the campaign is reported as blocked on registration with its lead time rather
+     than delivered as sendable copy
+   - No public URL shortener, no message that is only a bare link, and no number rotation within one
+     programme
+   - Consent is provable for every segment addressed (timestamp, source, disclosure text as shown,
+     channel and purpose scope), with any segment that cannot be evidenced excluded and named
+   - Throughput limits are accounted for in the schedule, so a large send is not specified as if it
+     delivers instantly
 
    If any check fails, fix it before delivering.
 

@@ -7,6 +7,9 @@ description: "Produces one weekly operating readout for a store or product from 
 
 Turn a week of scattered exports into one operating update: what changed, what probably caused it, and the three things worth doing next.
 
+> **Chart form.** Read `references/chart-form-and-accessibility.md` before specifying how any
+> number is displayed. Its Scorecard table and any chart in the readout follow the polarity, denominator, and comparison-period rules there: a metric where down is good must not be formatted as though down is bad.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the north star metric, secondary metrics, and the owner's goal (input 4 below is usually already recorded there, and it decides which changes count as material).

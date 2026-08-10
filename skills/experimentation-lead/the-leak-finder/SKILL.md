@@ -3,6 +3,9 @@ name: the-leak-finder
 description: Diagnose funnel drop-offs with conversion benchmarks, root cause analysis, and optimization roadmap. Use for marketing, sales, or product funnels.
 ---
 
+> **Chart form.** Read `references/chart-form-and-accessibility.md` before specifying how any
+> number is displayed. Any funnel it specifies shows step-to-step conversion as well as absolute counts, since an absolute-only funnel hides the worst step.
+
 ## Context
 
 1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.

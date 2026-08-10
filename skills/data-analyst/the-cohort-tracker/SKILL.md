@@ -7,6 +7,9 @@ description: "Groups customers by acquisition period and tracks a retention or r
 
 Build a cohort retention or revenue table: group customers by the period they were acquired in, then track a single metric across each period after that, so the user can see whether performance is improving or decaying cohort over cohort, not just watch one blended number drift.
 
+> **Chart form.** Read `references/chart-form-and-accessibility.md` before specifying how any
+> number is displayed. Its cohort table follows the colour-scale and legend rules there, and the requirement that a diverging scale is used only where a real midpoint exists rather than an arbitrary one.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before building the table. Do not invent figures to fill gaps.

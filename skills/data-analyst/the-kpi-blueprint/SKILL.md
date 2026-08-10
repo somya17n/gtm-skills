@@ -7,6 +7,13 @@ description: Design KPI dashboards with metric formulas, visualization types, al
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `references/dashboard-templates.md` for template patterns and metric catalog.
+2a. Read `references/chart-form-and-accessibility.md` before assigning any visualisation type or
+    laying out a row. It sets how the form is chosen from the question rather than picked off a
+    list, which forms to refuse and what to specify instead, axis and scale integrity, the
+    accessibility requirements the spec has to state, and the required contents of a stat tile. A
+    spec that names chart types without those constraints produces dashboards that get read wrong,
+    and the failure is quiet: the chart renders, everyone nods, and the number they took away was
+    not the number in the data.
 
 ## Inputs
 
@@ -22,20 +29,43 @@ description: Design KPI dashboards with metric formulas, visualization types, al
    - **Formula**: exact calculation (e.g., `MRR = SUM(active_subscriptions.price)`, `Activation Rate = activated_users / signed_up_users * 100`)
    - **Data source**: table or event that feeds it
    - **Granularity**: daily, weekly, monthly
-8. Assign a visualization type to each metric based on what it communicates:
-   - Trend line: metric change over time
-   - Funnel chart: sequential conversion stages
-   - Cohort heatmap: retention or behavior by cohort
-   - Gauge: current value against target
-   - Scorecard: single number with delta
-   - Bar chart: categorical comparison
-   - Table: detailed drill-down data
+8. Assign a visualisation type to each metric by asking what the viewer needs to do with the
+   number, using the form table in `references/chart-form-and-accessibility.md`. Do not pick off a
+   menu: if the next action is comparison, the encoding has to be position or length, because
+   comparison of angle, area, and colour intensity is unreliable.
+
+   The common mappings:
+   - Change over time → line, four series maximum
+   - Comparison across categories → horizontal bar, sorted by value, not alphabetical
+   - Current value against a target → scorecard with the target and the delta, or a bullet bar.
+     **Not a gauge**: a gauge spends a large area on one number, cannot be read precisely, and its
+     arc implies a range that is usually arbitrary.
+   - Sequential drop-off → funnel showing step-to-step conversion as well as absolute counts, since
+     absolute-only funnels hide the worst step
+   - Behaviour by join date → cohort heatmap with a stated colour scale and a legend carrying real
+     values
+   - Underlying records → a sorted table with the sort column named. A table is a legitimate answer,
+     not a fallback.
+   - Trend inside a tile → sparkline alongside the current value and the delta
+
+   For each metric the spec must also state: the aggregation granularity, the comparison period and
+   whether a partial current bucket is included, whether a line axis starts at zero, the denominator
+   for any rate, and **which direction is good**. That last one prevents the most common dashboard
+   defect, a churn or CAC tile turning red because the number improved.
+
+   Refuse the forms listed in the reference file (gauges, pie beyond three slices, dual-axis, 3D,
+   radar, stacked area past three series). If a stakeholder asked for one, record the trade-off and
+   the alternative in the spec rather than silently substituting.
 9. Set alert thresholds for anomaly detection on each primary KPI:
    - **Warning**: e.g., metric drops 10% below 7-day average
    - **Critical**: e.g., metric drops 25% below 7-day average or hits absolute floor
    - **Notification channel**: Slack, email, or in-app
 10. Design the layout section by section, top to bottom:
-    - **Row 1, KPI cards:** 4-6 scorecards with sparklines showing primary KPIs
+    - **Row 1, KPI cards:** 4-6 scorecards with sparklines showing primary KPIs. Each tile
+      carries label, value with units rounded to a precision someone would say out loud, delta with
+      its comparison period and correct polarity, freshness timestamp, and a reachable definition.
+      A stale tile reads as current, which is worse than a tile that is visibly missing. Past six
+      tiles nothing is prominent, which defeats the purpose of a summary row.
     - **Row 2, Main charts:** 2-3 primary visualizations (trend lines, funnels)
     - **Row 3, Supporting charts:** 2-3 secondary visualizations (cohort heatmaps, bar charts)
     - **Row 4, Detail table:** Filterable table for drill-down investigation
@@ -58,6 +88,24 @@ description: Design KPI dashboards with metric formulas, visualization types, al
 
 - Does every metric list an exact formula (e.g. `MRR = SUM(active_subscriptions.price)`), not a description of what it roughly measures?
 - Is the primary KPI count between 4-8 and the supporting metric count between 4-8, not an unbounded list?
+- Does every metric's form follow from the question the viewer answers, rather than being picked off
+  a list, and are the refused forms absent (no gauge, no pie past three slices, no dual-axis, no 3D,
+  no radar, no stacked area past three series)?
+- Does every metric declare which direction is good, so no delta or conditional format can turn an
+  improvement in churn, CAC, or refund rate red?
+- Does every metric state its aggregation granularity and comparison period, with any partial
+  current bucket marked?
+- Do all length-encoded charts start at zero, and does every truncated line axis say so explicitly?
+- Does every rate show its denominator?
+- Does every series carry a channel besides colour (direct label, shape, dash, position), and does
+  every status carry text or an icon rather than colour alone?
+- Are colours specified as semantic tokens rather than hex, referencing the brand colour in
+  `.agents/product-context.md` instead of restating a value that will drift?
+- Is the spec explicit that every chart must be legible in both light and dark?
+- Does every chart carry a one-line text takeaway that survives without seeing it, and does nothing
+  essential live only in a tooltip?
+- Does every stat tile carry label, value with units, delta with period and polarity, freshness, and
+  a reachable definition?
 - Does every primary KPI have both a warning and a critical alert threshold defined?
 - Does the layout follow the four-row structure (KPI cards, main charts, supporting charts, detail table) top to bottom?
 - Does every baseline value, target threshold, or historical comparison number trace to data the user or product context actually provided, with none invented? If a baseline is needed but not provided, is it marked "TBD, needs your real number" instead of a guessed figure?

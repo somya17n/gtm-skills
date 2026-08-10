@@ -41,12 +41,30 @@ description: Design email campaigns and sequences with subject lines, Liquid per
 - **Per Email Block**: Send timing, 3 subject lines, preheader, full body copy with Liquid variables, CTA (text + destination), A/B test recommendation
 - **Deliverability Checklist**: All items checked or flagged
 
+## Sending gates
+
+Before returning a campaign, check the sending gates in `references/email-templates.md`. These fail
+before copy matters, and no subject-line work recovers a send rejected at the gateway.
+
+Ask, and do not assume: are SPF and DKIM passing with DMARC published and aligned on the sending
+domain? Does the platform set the `List-Unsubscribe` and `List-Unsubscribe-Post` headers, since a
+footer link does not satisfy one-click unsubscribe? Is the sending domain warmed, and is this the
+subdomain that was warmed rather than the root? Is the list free of purchased or scraped addresses?
+Is there a seed test across the major providers confirming placement rather than just delivery?
+
+Where the user cannot confirm one, state that the campaign is blocked on it rather than shipping and
+hoping.
+
 ## Quality check before returning
 
 12. Before returning the output, verify:
 
 - Does each email body fall within its word range (150-300 for engagement emails, 50-150 for transactional/trigger emails)?
 - Are there exactly 3 subject line variants per email, each pulled from a distinct framework in `references/email-templates.md`?
+- Were the sending gates checked and reported rather than assumed: authentication and alignment,
+  one-click unsubscribe as headers rather than a footer link, domain warmup on the actual sending
+  subdomain, list provenance, and a seed test confirming placement?
+- Is any unconfirmed gate reported as a blocker rather than passed over?
 - Does every Liquid tag used (e.g. `{{ first_name }}`, `{% if segment == 'champion' %}`) match real Liquid syntax, not invented syntax?
 - Is the deliverability checklist complete for every item in the reference file (authentication, content quality, spam triggers, list hygiene), not partially filled?
 
