@@ -12,6 +12,11 @@ Build the negotiation plan for one deal before the conversation happens, not a g
 > promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
 > rule for every line of copy this pack produces. Its checks are additional to this skill's own.
 
+> **Objection modes.** Read `references/objection-handling.md` before scripting responses to
+> pushback. Its six-type classification decides the mode and length of each answer, and its
+> over-answering limit applies with more force in a negotiation than in discovery: a long
+> justification of your number is read as an invitation to push it down.
+
 ## How to run
 
 Ask the user for:
