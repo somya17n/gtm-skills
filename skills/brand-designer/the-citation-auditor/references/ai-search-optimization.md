@@ -112,7 +112,49 @@ Run this against any priority page:
 | Heading structure matches how people phrase the query |
 | AI crawlers allowed in robots.txt |
 
-**AI crawler names to check in robots.txt:** GPTBot and ChatGPT-User (OpenAI), PerplexityBot, ClaudeBot and anthropic-ai, Google-Extended (Gemini/AI Overviews), Bingbot (Copilot). Blocking any of these means that platform cannot cite the site at all. A common middle ground is blocking training-only crawlers (e.g. CCBot) while leaving the search-and-cite bots open.
+### AI crawler access: training vs retrieval
+
+Most vendors run **separate crawlers for model training and for answer-time retrieval**, and the
+two have opposite consequences. Blocking a training crawler protects content from being learned
+and costs nothing in citations. Blocking a retrieval crawler removes the site from that engine's
+answers. Conflating them is the most common and most expensive mistake in AI search work: teams
+block a training bot to opt out of training, then conclude they have given up citations, or block
+a retrieval bot by accident and never learn why they stopped appearing.
+
+| User-agent | Engine | Purpose | Blocking it costs you |
+|---|---|---|---|
+| `GPTBot` | OpenAI | Training | Nothing in citations |
+| `OAI-SearchBot` | ChatGPT search | Retrieval / indexing for answers | ChatGPT search citations |
+| `ChatGPT-User` | ChatGPT | User-initiated page fetch | Live fetches when a user asks about your page |
+| `ClaudeBot` | Anthropic | Training | Nothing in citations |
+| `Claude-SearchBot` | Claude search | Retrieval / indexing for answers | Claude search citations |
+| `Claude-User` | Claude | User-initiated page fetch | Live fetches during a user's session |
+| `PerplexityBot` | Perplexity | Indexing for answers | Perplexity citations |
+| `Perplexity-User` | Perplexity | User-initiated fetch | Live fetches |
+| `Googlebot` | Google Search **and AI Overviews** | Indexing | Google Search *and* AI Overviews |
+| `Google-Extended` | Gemini app grounding, Vertex training | Training / grounding | Gemini grounding. **Not** AI Overviews. |
+| `Bingbot` | Bing, and Copilot through it | Indexing | Bing and Copilot |
+| `CCBot` | Common Crawl | Open dataset used by many trainers | Nothing directly; indirect training exposure |
+
+Two corrections worth stating outright, because the wrong version is widespread:
+
+- **`Google-Extended` does not control AI Overviews.** AI Overviews are served from the ordinary
+  Google Search index, crawled by `Googlebot`. `Google-Extended` governs Gemini app grounding and
+  Vertex AI training. A site can block `Google-Extended` and still appear in AI Overviews, and the
+  only way to leave AI Overviews is to leave Google Search.
+- **Blocking `GPTBot` does not remove a site from ChatGPT's cited sources.** Retrieval for ChatGPT
+  search runs through `OAI-SearchBot`. Opting out of training and staying citable is a supported,
+  coherent position, not a contradiction.
+
+**Bot names change.** Vendors add, rename, and split crawlers, and any static table dates. Treat
+this one as a starting point: read the site's actual `robots.txt`, report exactly which agents are
+named there and what each rule does, and check the vendor's current published list before telling
+a user a block is safe. Do not assert that an agent not present in `robots.txt` is blocked, and do
+not assert that an unfamiliar agent is harmless.
+
+**Reading order matters.** Crawler access is a precondition, not a checklist item. If a retrieval
+crawler is disallowed, every structural and authority improvement is unreachable for that engine,
+so resolve access before spending effort on extractability.
 
 ---
 
