@@ -332,8 +332,8 @@ The requirement and the register are not actually in conflict. A short plain-tex
 both:
 
 ```
-Somya
-Intempt, <street address, city, country>
+<first name>
+<company>, <street address, city, country>
 
 Not useful? Reply "stop" and I won't follow up.
 ```

@@ -76,6 +76,8 @@ them, because the reader has seen the template:
 | "Hope this finds you well" / "Hope you're having a great week" | Costs a line, says nothing, signals template. |
 | "Quick question" as an opener or subject | The most-used opener in B2B outbound. Signals volume sending. |
 | "I'll keep this short" | Then be short. Saying it is the opposite of it. |
+| **Bio recap** — describing their company back to them from their own About page | They wrote it. Repeating it proves you read a page, not that you understood a situation. This is the most common "personalised" opener that still reads as automated. |
+| **Compliment with no bridge** — "I love what you're building" | Praise that leads nowhere. An observation has to imply a consequence, or it is filler with a nicer tone. |
 | Congratulating a funding round with no read on what it changes | Everyone sent that email the same week. |
 
 **The specificity test:** could this exact opening line be sent unchanged to a different person
@@ -150,6 +152,71 @@ emoji in a subject line all read as marketing rather than a person writing.
 
 ---
 
+## 6a. The cold first-touch structure
+
+The one-ask rule and the opening-line rules above say what a cold email must not do. This is the
+shape that works when it is doing it right, and it is tighter than most senders expect.
+
+**Word budget: 55-90 words for a first touch.** Under 120 is a ceiling for the format, not a target.
+A first cold email at 110 words is usually three sentences of setup that a second draft removes. The
+shorter version reads as a colleague noticing something; the longer one reads as a campaign.
+
+**Five parts, in order, one to two sentences each:**
+
+1. **The observation.** One specific, checkable fact about their situation, with the pain implied
+   rather than stated. Max 20 words. Something they could confirm, and that would break if sent to
+   anyone else.
+2. **Who you are, compressed.** "I'm [name] at [company]." One line. Not "My name is X and I work at
+   a company called Y, which helps teams to…" — a long self-introduction spends the reader's attention
+   on the sender at the exact moment it is worth the least.
+3. **What the product *is*.** Plain language, in one sentence. Not what it will do for them: that is
+   the next line's job, and collapsing the two produces a claim before they know what is being
+   claimed about.
+4. **The bridge.** One sentence connecting the product to *their* specific situation, referencing the
+   observation from part 1. If this sentence would read identically to a different prospect, part 1
+   was not specific enough.
+5. **One ask.** One sentence, and shorter than feels comfortable.
+
+**Imply the pain, do not assign it.** "Running lifecycle for six clients across three separate
+accounts" lets the reader supply the problem themselves. "You're probably struggling to keep those
+accounts in sync" tells them what their problem is, invites "actually, no", and reads as a script.
+
+### The ask, specifically
+
+Short beats warm. These soft closes all read as a script and all reduce replies:
+
+- "Would love to hop on a quick call"
+- "Happy to share more if useful"
+- "Let me know if this resonates"
+- "Thoughts?"
+- "Open to a conversation?"
+
+They are hedges: they ask for permission to ask. A direct short question ("Worth a look?", "Want
+in?") outperforms them because it is answerable in one word.
+
+### If the offer involves scarcity, name the number
+
+"One of about 15 lifecycle consultants we reached out to" is checkable and therefore credible. "A
+select group", "a few people", "a handful of teams" are unfalsifiable and read as sales language. If
+the real number cannot be stated, drop the scarcity framing rather than vaguen it — see the
+borrowed-urgency rule above.
+
+### Subject lines for a cold first touch
+
+The subject-line rules in `references/email-templates.md` cover campaigns. Cold first touches behave
+differently, and the pattern that works is narrower:
+
+- **Two to four words. Lowercase. No punctuation** beyond a comma between two proper nouns. It should
+  look like something a person typed in a hurry to one recipient, not something a marketing tool
+  produced.
+- **Draw on one of these, in priority order:** a trigger event ("just went independent"), an
+  information gap the reader will want closed ("klaviyo to what exactly"), a named transition
+  ("gymshark to adanola"), or an observable fact about how they operate ("fractional, six clients").
+- **Do not use** the recipient's first name alone, their city, your own product or company name, or
+  any of: free, opportunity, demo, growth, scale, strategy, automation, funnel, campaigns, lifecycle,
+  email. These are category words. They tell the reader which folder the message belongs in before
+  they open it.
+
 ## 7. Voice
 
 If `.agents/product-context.md` exists, its brand voice and banned-word list are **binding, not
@@ -189,6 +256,20 @@ that fails a check, and do not note the failure as a caveat instead of fixing it
 **Ask**
 
 10. Is there exactly one ask, sized to the reader's current trust?
+10a. For a cold first touch: is the body 55-90 words rather than merely under the 120 ceiling?
+10b. Does it follow the five-part shape — observation, compressed self-intro, what the product *is*,
+    the bridge to their situation, one ask — with none of the five collapsed into another?
+10c. Does the bridge sentence reference the observation specifically enough that it would not read
+    identically to a different prospect?
+10d. Is the pain implied rather than assigned, so the reader supplies it instead of being told what
+    their problem is?
+10e. Is the ask a short answerable question rather than one of the hedged soft closes ("hop on a quick
+    call", "if this resonates", "happy to share more", "thoughts?")?
+10f. If scarcity appears, is a real number named rather than "a select group"?
+10g. For a cold subject line: two to four words, lowercase, no punctuation beyond a comma between
+    proper nouns, drawn from a trigger / information gap / named transition / observable fact, and
+    free of category words (free, opportunity, demo, growth, scale, strategy, automation, funnel,
+    campaigns, lifecycle, email) and of the sender's own company name?
 
 **Slop**
 

@@ -71,7 +71,11 @@ Hi [First name],
 
 ## Rules
 
-- Total email body (excluding subject line) must be under 120 words
+- Total email body (excluding subject line) must be under 120 words, and **should land at 55-90**.
+  120 is the ceiling for the format, not the target: a first cold email at 110 words is usually three
+  sentences of setup a second draft removes. Follow the five-part shape in
+  `references/outbound-copy-standards.md` (observation, compressed self-intro, what the product *is*,
+  the bridge, one ask) and keep the self-introduction to a single line.
 - No bullet points inside the email body
 - No bold text inside the email body
 - No em dashes anywhere in the email
@@ -90,7 +94,10 @@ Hi [First name],
 Before returning the output, verify:
 
 - Is the opening line specific to the exact trigger the user provided, or is it generic?
-- Is the total email body under 120 words?
+- Is the total email body 55-90 words, and under the 120 ceiling at worst?
+- Does the pain get implied rather than assigned, so the reader supplies it instead of being told what
+  their problem is?
+- Is the ask a short answerable question rather than a hedged soft close?
 - Is there exactly one CTA?
 - Does the proof point include a number or a named customer, not a vague outcome claim?
 - Is the sign-off first name only, with the compliance footer as a separate block below it?
