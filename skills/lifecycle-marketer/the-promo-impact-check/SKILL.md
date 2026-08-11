@@ -26,7 +26,30 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 ## Method
 
-1. Fix three windows on the same daily footing: baseline (default: the 28 days immediately before the promo start, unless the user gives another baseline), promo (the actual sale dates), and recovery (default: the same number of days as the promo window itself, immediately after the promo ends). State the exact dates and lengths of all three windows in the output.
+1. Fix three windows on the same daily footing: baseline (default: the 28 days immediately before the
+   promo start, unless the user gives another baseline), promo (the actual sale dates), and recovery
+   (default: the same number of days as the promo window itself, immediately after the promo ends).
+   State the exact dates and lengths of all three windows in the output.
+
+1a. **Test the baseline before trusting it.** The 28 days immediately before a promo are the days most
+   likely to be contaminated, in two ways that both inflate the result:
+
+   - **Anticipation dip.** If the sale was announced, teased, or is an annual fixture customers expect,
+     purchases get deferred into it. That depresses the baseline, which inflates measured uplift and
+     hides the recovery trough. Check it: split the baseline window in half and compare revenue per day
+     in the later half against the earlier half. If the later half is materially lower with no other
+     explanation, the dip is present. Say so, and use a clean window instead — either an earlier
+     equivalent-length window before any announcement, or the same calendar period last year.
+   - **Seasonality.** A promo in a peak week measured against an off-peak baseline attributes the
+     season to the discount. Where the promo sits in a known seasonal period (Black Friday, holiday,
+     end of quarter, a category's own peak), a same-period-last-year baseline is the only honest
+     comparison. Say plainly when the available baseline cannot separate season from promotion.
+
+   This is not a rounding concern. A 15% anticipation dip across half the baseline window moves the
+   baseline from 1000 to 925 per day, and on a modestly positive promo that is enough to flip the
+   verdict: net impact reads +700 and passes, when on a clean baseline it is −350 with a real trough,
+   which is pull-forward. Step 5's logic is correct; a biased baseline makes it reach the wrong
+   conclusion from sound reasoning.
 2. For each window, compute revenue per day, orders per day, AOV, ad spend per day, and total discount given.
 3. Compute uplift: promo revenue/day minus baseline revenue/day.
 4. Compute the recovery-period trough: recovery revenue/day minus baseline revenue/day. Never judge the promo on the promo window alone. A promo that lifts revenue during the sale and craters it right after was pull-forward, not growth, and that only shows up once the recovery window is measured on the same footing as the promo window.
@@ -35,7 +58,13 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 7. Compute the margin actually given away: total discount value plus any incremental shipping or transaction fee cost during the promo window.
 8. If a code usage export exists, check for leakage: codes used outside their intended audience, stacking with other codes, repeated use by the same customer, or appearance on public coupon sites.
 9. If a new-versus-returning split exists, state what share of promo-window revenue came from customers who would likely have bought anyway versus genuinely new buyers.
-10. If any window has incomplete daily data, state exactly how many of the expected days are actually present for that window, and don't render a verdict on a window with significant gaps without flagging it.
+10. If any window has incomplete daily data, state exactly how many of the expected days are actually
+    present for that window, and don't render a verdict on a window with significant gaps without
+    flagging it.
+11. **Report the baseline test and which baseline was used.** State the anticipation-dip check and its
+    result, whether the promo sits in a seasonal period, which baseline window was ultimately chosen,
+    and why. A verdict whose baseline is not shown cannot be checked, and the baseline is the single
+    input the whole conclusion pivots on.
 
 ## Output format
 
