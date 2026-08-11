@@ -1,6 +1,6 @@
 ---
 name: the-hook-lab
-description: Takes a LinkedIn post draft and generates four scored hook/opening-line variants using four distinct psychological frameworks, with a recommendation. Use when a post's opening two lines feel flat or when testing hook variants before publishing. Pairs with the-dual-cut-writer.
+description: Takes a LinkedIn post draft and generates four scored hook/opening-line variants using four distinct psychological frameworks, with a recommendation. Use when a post's opening two lines feel flat or when testing hook variants before publishing. Pairs with any post draft the user brings.
 ---
 
 # The Hook Lab

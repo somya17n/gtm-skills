@@ -1,6 +1,6 @@
 ---
 name: the-returns-miner
-description: "Takes a structured returns or RMA export with reason codes tied to SKUs and finds which SKUs have a genuine return concentration problem, and which coded reason is the likely root cause. Use when a return rate is rising, a specific SKU returns far above the catalog average, or returns are logged as a cost line instead of mined for the fix behind them. Boundary: `the-theme-miner` mines unstructured text (transcripts, reviews, tickets, surveys) into themes. This skill works from structured, coded return reasons tied to SKUs; use `the-theme-miner` instead when the input is free-text reviews or tickets, not a reason-code field."
+description: "Takes a structured returns or RMA export with reason codes tied to SKUs and finds which SKUs have a genuine return concentration problem, and which coded reason is the likely root cause. Use when a return rate is rising, a specific SKU returns far above the catalog average, or returns are logged as a cost line instead of mined for the fix behind them. Boundary: this skill works from structured, coded return reasons tied to SKUs. If the input is free-text reviews or support tickets with no reason-code field, say so: the coded-reason analysis here does not apply and the raw text needs reading rather than tallying."
 ---
 
 # The Returns Miner
@@ -19,7 +19,7 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 1. **Returns export**: one row per return, with SKU, date, quantity, and a reason code or reason label.
 2. **Sales volume per SKU for the same period**: without this, a return count can be ranked but not judged as high or normal for that product.
-3. **Whether reasons are customer-selected, agent-selected, or free text**: a coded field from a fixed dropdown is far more reliable than an agent's guess at the customer's real reason, and free text belongs to `the-theme-miner`, not here.
+3. **Whether reasons are customer-selected, agent-selected, or free text**: a coded field from a fixed dropdown is far more reliable than an agent's guess at the customer's real reason, and free text is out of scope here: a coded-reason tally cannot be run on it, so say so and treat the raw text as something to read rather than count.
 
 ## Method
 

@@ -1,11 +1,18 @@
 ---
 name: the-win-loss-analyzer
-description: Analyzes a batch of closed-won and closed-lost deals to find the real, evidence-backed reasons deals are actually won or lost, ranked by frequency, not a gut-feel retro. Use when the user wants to know why deals are actually closing or dying, not just track that they did. Pairs with the-objection-playbook and the-switch-angle.
+description: Analyzes a batch of closed-won and closed-lost deals to find the real, evidence-backed reasons deals are actually won or lost, ranked by frequency, not a gut-feel retro. Use when the user wants to know why deals are actually closing or dying, not just track that they did. Pairs with the-objection-playbook and the-competitor-dossier.
 ---
 
 # The Win-Loss Analyzer
 
 Turn a batch of closed deals into the real pattern behind your wins and losses, backed by evidence from the deals themselves.
+
+> **Stated versus revealed.** Before ranking anything, read **What They Say vs What They Do** in
+> `references/customer-research-methods.md`. A buyer's account of why they chose or left is a stated
+> preference; what they actually did (switched, renewed, built a workaround, paid) is revealed. Tag
+> each reason with which it rests on, and weight revealed above stated. Its source-bias table also
+> covers win/loss notes directly: they are written by the rep, after the fact, by someone with an
+> interest in the reason.
 
 ## How to run
 

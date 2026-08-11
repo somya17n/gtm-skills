@@ -1,5 +1,5 @@
 ---
-name: the-monday-list
+name: the-signal-queue
 description: Takes a batch of weekly intent signals across a pipeline and outputs a ranked outreach list with signal, rationale, and suggested channel per account. Use when the user wants to prioritize their Monday morning outreach based on the week's signals.
 ---
 

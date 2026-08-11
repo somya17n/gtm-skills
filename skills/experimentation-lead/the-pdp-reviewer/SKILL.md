@@ -18,6 +18,14 @@ Review an existing product detail page against what a real buyer needs to decide
 > resolves into a sequence, and a baseline captured before anything changes so the fixes are
 > attributable. Its edit brief is a set of recommended changes, so the sequencing rule applies directly: shipping every edit at once makes the result unattributable.
 
+> **Customer-voice bias.** This skill reads reviews and buyer questions. Before treating either as
+> evidence of prevalence, read the **Source-Specific Bias** table in
+> `references/customer-research-methods.md`. Public reviews are written by the delighted and the
+> furious while the satisfied middle is silent, so a review ratio is not population sentiment: use
+> reviews for the customer's own vocabulary and for failure modes, never to size how common a problem
+> is. Apply the stated-versus-revealed rule too, since a reviewer asking for a feature is describing a
+> problem in the vocabulary of a solution they invented.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the competitive landscape, brand voice, and banned-word list.

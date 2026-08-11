@@ -37,7 +37,7 @@ description: Build lifecycle segments with RFM scoring, behavioral signals, and 
    - **Attribute filters**: demographic or firmographic properties
    - Use the filter operators from the reference file to express segment rules.
 9. Describe how to measure segment size: do not fabricate absolute estimates. Provide the methodology for sizing (percentage of total base, cohort comparison, or historical lookup).
-10. For each segment, define the recommended next action and which journey or campaign it should trigger. Reference these skills where relevant: the-campaign-composer, the-flow-architect, the-channel-guard, the-cold-opener.
+10. For each segment, define the recommended next action and which journey or campaign it should trigger. Reference these skills where relevant: the-campaign-engine, the-flow-architect, the-campaign-engine, the-cold-opener.
 
 ## Output
 
@@ -45,7 +45,7 @@ description: Build lifecycle segments with RFM scoring, behavioral signals, and 
    - Every segment has all seven fields: name, lifecycle stage, defining signals, filter logic, size estimate, recommended action, and journey trigger
    - Filter logic is shown in both operator syntax and plain English
    - No absolute segment size is stated as a number; only a sizing methodology is given
-   - Each segment's journey trigger names a real sibling skill (the-campaign-composer, the-flow-architect, the-channel-guard, or the-cold-opener), not a vague "send a campaign"
+   - Each segment's journey trigger names a real sibling skill (the-campaign-engine, the-flow-architect, the-campaign-engine, or the-cold-opener), not a vague "send a campaign"
 
    If any check fails, fix the relevant segment before delivering.
 

@@ -8,7 +8,10 @@ tools: WebFetch, WebSearch
 
 Build a qualified, evidence-backed prospect list from an ICP definition: every row has a reason and a source, not a spray list.
 
-> **Boundary:** This skill builds the initial candidate list from nothing. If the user already has an account list and just wants it scored against ICP fit, use `the-fit-scorer` instead. Don't re-run discovery on a list that already exists.
+> **Boundary:** This skill builds the initial candidate list from nothing, and produces the
+> per-person opening angles for the leads worth contacting first. If the user already has an account
+> list and just wants it scored against ICP fit, use `the-fit-scorer` instead. Don't re-run discovery
+> on a list that already exists.
 
 ## Context
 
@@ -58,6 +61,50 @@ no named path to a decision-maker cannot be Hot.
 **Skipped**: count, and which disqualifier cut them (so the user can sanity-check the funnel)
 **Open questions**: anything you could not verify; name it instead of guessing to fill a row
 
+## Per-lead opening angles
+
+For each **Hot** lead, and any Warm lead the user asks about, produce the opening angles a rep would
+actually use. Building a list and stopping leaves the hardest part undone.
+
+### What this needs
+
+Ask the user to paste, per lead: the contact's name, title and company, their profile About section,
+any recent posts or articles they wrote (the **text**, not a link), their role history, and any other
+public content — talks, awards, bylines.
+
+If only a profile URL exists, ask them to open it and paste the relevant sections. Do not attempt to
+fetch gated profile URLs; see the Compliance section.
+
+### Three angles per lead
+
+**Angle 1 — something they wrote.** Quote or closely reference specific content, so the reader thinks
+*they actually read my post*. One sentence, under 25 words.
+
+**Angle 2 — their career move.** The specific transition: previous role to current, or a notable shift
+in direction. Frame it around their new priorities, not the job change itself. One sentence, under 25
+words.
+
+**Angle 3 — a challenge implied by the company's situation.** Do not reference anything the person
+personally wrote. Infer a challenge from the company's stage or recent news and frame it as something
+they, in their specific role, would own. One sentence, under 25 words.
+
+Then one line: which angle to use for a first touch, and why.
+
+**Never pad to reach a count.** Angle 1 requires real content the person actually wrote. If they have
+published nothing, do not invent a post, do not paraphrase a generic industry take as theirs, and do
+not stretch a job-title line into a quote. Return the angles you can support, label the missing one
+`Not available: no published content found`, and name the input that would unlock it. Two
+well-sourced angles beat three where one is fabricated.
+
+### Angle rules
+
+- No flattery. "I loved your post on..." is not an angle.
+- No vagueness. "I saw you work in marketing" could be sent to anyone.
+- No manufactured urgency.
+- Each angle must stand alone as an opening line, not as a setup needing more context.
+- Angle 3 is an inference about the company and must read as one, never as a confirmed fact about the
+  person.
+
 ## Compliance (read before every run)
 
 - No bulk scraping of LinkedIn, Sales Navigator, Google Maps, or any gated/rate-limited platform. Public web pages and user-provided exports only.
@@ -76,6 +123,11 @@ Before returning the output, verify:
 - Is any candidate marked "Hot" only because a specific, cited signal is present, never on ICP fit alone?
 - Does the Hot/Warm/Cold ratio roughly track 20%/30%/rest, and if the whole list came back Hot, was the bar tightened instead of shipped as-is?
 - Are the Compliance rules followed (no bulk scraping, no sensitive-attribute qualification, resale flagged if applicable)?
+- Does every Hot lead carry its opening angles, with each angle a single sentence under 25 words?
+- Is Angle 1 built on content the person genuinely wrote, or explicitly labelled
+  `Not available: no published content found` rather than fabricated?
+- Is Angle 3 framed as an inference about the company rather than a confirmed fact about the person?
+- Are flattery, vagueness and manufactured urgency absent from every angle?
 
 If any check fails, fix the relevant row or section before returning. Do not return a draft that fails a check.
 

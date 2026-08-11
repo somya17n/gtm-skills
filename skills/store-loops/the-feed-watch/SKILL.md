@@ -1,6 +1,6 @@
 ---
 name: the-feed-watch
-description: "Runs a recurring diff on product feed and catalog health, reporting only what broke since the last run - new disapprovals, newly missing attributes, and fresh price or availability mismatches. Use daily or every other day on any store running Shopping, catalog, or marketplace ads. Boundary: `the-feed-auditor` audits a feed once, in full, against a channel's requirements. This loop runs that audit repeatedly and reports the delta, so a standing backlog of known gaps does not drown the new breakage."
+description: "Runs a recurring diff on product feed and catalog health, reporting only what broke since the last run - new disapprovals, newly missing attributes, and fresh price or availability mismatches. Use daily or every other day on any store running Shopping, catalog, or marketplace ads. It carries the full channel-requirement audit itself (required attributes, disapproval risk, feed-versus-page price and availability mismatch) and runs it on a cadence, reporting only the delta so a standing backlog of known gaps does not drown the new breakage."
 ---
 
 # The Feed Watch
@@ -22,7 +22,23 @@ A full feed audit tells you everything wrong with the feed, which on a real cata
 
 1. **Confirm the feed is the same feed.** Compare row count and channel against last run. A feed that shrank by 30% overnight is the finding - a truncated export produces hundreds of false "newly missing" attributes. Report a large row-count drop as a suspected export failure and stop rather than diffing it.
 2. **Read the ledger** for the prior issue set, watchlist, and active suppressions.
-3. **Run the audit using `the-feed-auditor`'s method** against the stated channel's requirements. Do not substitute a generic attribute list - the required set is channel-specific.
+3. **Run the audit below** against the stated channel's requirements. Do not substitute a generic
+   attribute list: the required set is channel-specific.
+
+### The audit
+
+1. Confirm which required-for-approval attributes are present for the target channel: id, title, description, price, availability, image link, product link, and GTIN/MPN/brand where the channel's identifier policy requires them for that category. Mark any missing required attribute as a disapproval risk, not just a completeness gap.
+2. Compare feed price to the live product page price for every item flagged in diagnostics, plus any items the user calls out. Any mismatch, in either direction, is a real finding: feed-to-page price mismatch is a hard policy violation on every major channel, not a matter of degree.
+3. Compare feed availability (in stock, out of stock, preorder) to the live page's actual add-to-cart state for the same sample. Flag any item shown available in the feed but unavailable on the page, or the reverse.
+4. Check title and description against three criteria: does the title carry the attributes shoppers search on for this category (brand, key attribute, size or variant where applicable); is the description free of boilerplate-only text; are both free of promotional symbols or all-caps that trigger style rejections on some channels.
+5. Check images for resolution, background compliance (most channels require a plain or white background on the primary image), and whether the image actually matches the linked product.
+6. Check for variant confusion: parent and child items sharing one identifier, or size/color variants missing their own item IDs.
+7. Check category mapping: does the feed's assigned category match what the channel's own taxonomy expects for this item type. A wrong category routes the item into the wrong auction and the wrong search matches.
+8. Split every finding into two buckets: blocks approval (identifier, price mismatch, availability mismatch, prohibited content) versus degrades performance only (weak title, thin description, mediocre image). Anything not directly confirmed in the diagnostics export is marked as needing confirmation in the channel's own diagnostics before anyone spends time fixing it.
+9. Build a fix queue ordered by approval-blocking items first, then performance-degrading items, then reusable cleanup patterns across the catalog.
+
+### End of audit
+
 4. **On the first run, record the full issue set as the baseline and report it as a backlog, not as breakage.** Every issue is "new" on run one. Labelling the backlog as overnight breakage destroys the loop's credibility immediately.
 5. **Diff into four buckets, which carry different urgency:**
    - **New** - absent last run, present now. This is the loop's whole reason to exist.
@@ -31,7 +47,7 @@ A full feed audit tells you everything wrong with the feed, which on a real cata
    - **Regressed** - resolved in an earlier run, back again. The most important bucket: a regression means a fix does not hold, usually because a template or sync overwrites it.
 6. **Evaluate the gate**: flagged if any new or regressed issue is at or above the severity floor. Persistent issues do not trip the gate - they are already known - but are counted so a growing backlog stays visible.
 7. **Check price and availability against the live page for every new issue**, not just against the feed's internal consistency. A feed that agrees with itself and disagrees with the storefront is the mismatch that gets products disapproved.
-8. **Group new issues by cause, not by SKU.** Fifty SKUs missing GTIN from one supplier import is one problem with one fix, and listing it fifty times hides that. Inherit `the-feed-auditor`'s cleanup-pattern output for this.
+8. **Group new issues by cause, not by SKU.** Fifty SKUs missing GTIN from one supplier import is one problem with one fix, and listing it fifty times hides that. Report these as reusable cleanup patterns (title template, description template, image spec) rather than per-SKU rows.
 9. **Never edit products or the feed.** Feed and disapproval issues need human diagnosis - a wrong automated fix propagates to every channel reading that feed. Output the work queue for a person.
 10. **Append to the ledger**: feed row count, channel, the full current issue set for the next diff, and which buckets each issue landed in.
 

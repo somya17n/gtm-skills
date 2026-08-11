@@ -3,7 +3,7 @@ name: the-flow-architect
 description: Design multi-channel journeys with conditional branching, holdouts, and channel guardrails. Use for automation flows, onboarding, retention, and win-back.
 ---
 
-> **Boundary:** For single-channel email sequences without branching, use `the-campaign-composer`. For cold prospecting sequences, use `the-cold-opener` or `the-sequence-doctor`.
+> **Boundary:** For single-channel email sequences without branching, use `the-campaign-engine`. For cold prospecting sequences, use `the-cold-opener` or `the-sequence-doctor`.
 
 ## Context
 

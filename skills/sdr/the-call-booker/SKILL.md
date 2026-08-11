@@ -1,6 +1,6 @@
 ---
 name: the-call-booker
-description: Turns a warm conversation into a booked meeting in as few messages as possible - the booking message, the reschedule, the confirmation, and the day-before reminder. Use when a prospect is ready to talk and the user wants to lock a time without back-and-forth. Pairs with the-cold-opener and the-90-second-brief.
+description: Turns a warm conversation into a booked meeting in as few messages as possible - the booking message, the reschedule, the confirmation, and the day-before reminder. Use when a prospect is ready to talk and the user wants to lock a time without back-and-forth. Pairs with the-cold-opener and the-account-blueprint.
 ---
 
 # The Call Booker

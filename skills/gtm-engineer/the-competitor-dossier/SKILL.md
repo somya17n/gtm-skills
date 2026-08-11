@@ -1,6 +1,6 @@
 ---
 name: the-competitor-dossier
-description: "Researches a competitor from their public website and builds a structured profile: positioning, pricing, strengths/weaknesses, and competitive implications. Use when the user wants deep research on a specific competitor, not just a sales angle. Boundary: for turning a known prospect tool-stack into a call-ready displacement angle, use the-switch-angle; that skill assumes this research already exists."
+description: "Researches a competitor from public sources and builds a structured profile (positioning, pricing, strengths/weaknesses, competitive implications), and turns a prospect's known tool stack into a call-ready displacement angle. Use when the user wants deep competitor research, a displacement angle for a specific prospect, or both. Two modes: Mode A researches the competitor, Mode B converts a prospect's stack into the specific inefficiency it creates, two call questions and an email hook."
 tools: WebFetch, WebSearch
 ---
 
@@ -8,7 +8,19 @@ tools: WebFetch, WebSearch
 
 Research a competitor from public sources and build a structured, comparable profile: a dossier, not a sales pitch.
 
-> **Boundary:** This skill builds the research dossier on a competitor. `the-switch-angle` takes a *prospect's* known tool stack and turns it into a call-ready displacement angle; feed this skill's output into that one when the competitor in question is part of a prospect's stack, don't duplicate the research there.
+> **Two modes.** Ask which is needed, or run both in sequence when the competitor in question sits
+> inside a specific prospect's stack.
+>
+> - **Mode A — Competitor dossier.** Research one competitor from public sources and build the
+>   structured profile. Use when the user needs to understand a competitor properly.
+> - **Mode B — Displacement angle.** Take a specific prospect's current tool stack and turn it into
+>   the inefficiency that configuration creates, two call questions, and an email hook. Use when a
+>   prospect's stack is known and a rep needs something to say about it.
+>
+> Mode B is stronger when Mode A has already run for the tool being displaced, because the
+> limitation cited then has a real source behind it. Where it has not, Mode B is limited to what the
+> stack data itself supports, which is usually a structural inefficiency rather than a product
+> weakness. Say which is being claimed.
 
 ## Context
 
@@ -76,6 +88,72 @@ comparison becomes a false claim by neglect.
 If profiling more than one competitor, produce one profile per competitor, then a short side-by-side comparison table using the same metrics across all of them.
 
 Read `references/competitor-profile-guide.md` for the field-by-field extraction checklist and the multi-competitor comparison table format.
+
+## Mode B: displacement angle from a prospect's stack
+
+Run this when the user has a specific prospect's tool stack and needs something a rep can actually
+say. It is about the prospect's *configuration*, not a feature comparison.
+
+### Inputs
+
+Ask for:
+
+1. Their own product description and key differentiators, with numbers where possible (usually
+   already in `.agents/product-context.md`).
+2. Their pricing model, especially where it is structurally different from competitors'.
+3. The tools they most often replace or consolidate, with one sentence on what they replace about each.
+4. **The prospect's current stack, by category**: CRM, email/SMS, analytics, CDP, lifecycle,
+   experimentation, sales engagement.
+5. **Where the stack data came from**: enrichment tool, job posting, prospect conversation, G2
+   profile, or the company's own site. The source sets the ceiling on what can be claimed.
+
+### The sourcing rule
+
+Every competitive claim — the tool named as most vulnerable, its specific limitation, the
+operational inefficiency — must trace to something the user actually provided: a real feature list,
+a real pricing page, a documented integration gap, a direct quote from a review or conversation, or
+a fact stated in the stack data itself.
+
+Never invent a competitor limitation, integration gap, or pricing detail because it sounds
+plausible. Where the stack data does not support a specific verifiable claim, either ask for the
+missing detail (a feature comparison, a pricing page, a review excerpt) or narrow the output to what
+the data supports, and label anything not directly sourced as an inference rather than a fact.
+
+**A structural inefficiency is usually the safer claim.** "Three tools, none sharing an identity
+graph, so someone reconciles them by hand" follows from the stack list itself. "Their CDP cannot do
+X" needs a source. Prefer the first unless Mode A has produced the second.
+
+### Output
+
+**Primary displacement angle** — which tool in the stack is most vulnerable and why, referencing that
+tool's exact limitation in the context of their full configuration, sourced from step 5. Two to three
+sentences.
+
+**The specific inefficiency** — the operational problem this configuration creates. Concrete: what
+manual work it requires, what data does not connect, what is being paid twice. Give the friction as
+it shows up in a typical week for their team. Three to four sentences.
+
+**Two call questions** — questions that surface the pain in the prospect's own words, without naming
+a competitor and without saying you are better than anyone. If the prospect would not describe the
+problem themselves in answering, the question is not doing its job.
+
+**One-line email hook** — a single opening sentence referencing their actual stack. Under 30 words.
+Curious and specific rather than presumptuous: it implies awareness of their situation, it does not
+claim to know they have a problem.
+
+**Do not lead with this** — state whether the angle is strong enough for a cold open or works better
+as a second touch after a reply. A displacement angle built only on a structural inference is
+usually a second touch.
+
+### Mode B checks
+
+- Does every claim trace to the stack data or sourcing actually provided, with nothing invented?
+- Is anything not directly sourced labelled an inference rather than stated as fact?
+- Where Mode A has not run for the tool being displaced, is the claim structural rather than a
+  product weakness, and is that stated?
+- Do the call questions avoid naming a competitor and avoid any comparative claim?
+- Is the email hook under 30 words, and does it stop short of asserting the prospect has a problem?
+- Is the lead-with-it verdict given, rather than left for the rep to guess?
 
 ## Quality check before returning
 
