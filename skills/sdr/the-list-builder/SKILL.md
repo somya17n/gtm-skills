@@ -112,7 +112,20 @@ well-sourced angles beat three where one is fabricated.
 - Do not qualify, tag, or prioritize prospects on health, financial hardship, political belief, religion, sexuality, or other sensitive attributes, even when a public source happens to reveal them.
 - If the user's target list will be sold or resold as data (not used for their own outreach), stop and flag it: that changes the compliance posture and this skill isn't scoped for it.
 
-Read `references/prospecting-sources.md` for source guidance by motion (SaaS / general B2B / local) and the full qualification rubric.
+Read `references/prospecting-sources.md` for source guidance by motion (SaaS / general B2B / local),
+the **Source Routing** table (which mechanism to use for which sourcing need, and the gate on each),
+and the full qualification rubric.
+
+Two things from that table are load-bearing here:
+
+- **Match the mechanism to the need before sourcing anything.** A firmographic profile comes from an
+  export the user pastes; a buying trigger comes from public web research with a checkable URL; a
+  specific person's background comes from the rep, pasted. Reaching for a scrape where an export
+  exists adds risk for no extra data.
+- **LinkedIn is paste-only.** Exporting profile or Sales Navigator data is prohibited and enforced,
+  and the exposure lands on the user's account rather than on any tool. A rep browsing as themselves
+  is fine, which is exactly why the paste path is both compliant and the better input. If the user
+  asks for profile automation, say plainly that it risks their account and offer the paste path.
 
 ## Quality check before returning
 
@@ -123,6 +136,13 @@ Before returning the output, verify:
 - Is any candidate marked "Hot" only because a specific, cited signal is present, never on ICP fit alone?
 - Does the Hot/Warm/Cold ratio roughly track 20%/30%/rest, and if the whole list came back Hot, was the bar tightened instead of shipped as-is?
 - Are the Compliance rules followed (no bulk scraping, no sensitive-attribute qualification, resale flagged if applicable)?
+- Was the mechanism matched to the need per the Source Routing table, rather than defaulting to a
+  scrape where a pasted export or a public page would have served?
+- Does every candidate carry a source URL **and** a fetch date, so the row can be checked months later?
+- Was `robots.txt` respected where anything was fetched, with no login wall, paywall or CAPTCHA
+  bypassed?
+- Did every person-level detail come from the user rather than from an automated LinkedIn path, and if
+  profile automation was requested, was the account risk stated and the paste path offered instead?
 - Does every Hot lead carry its opening angles, with each angle a single sentence under 25 words?
 - Is Angle 1 built on content the person genuinely wrote, or explicitly labelled
   `Not available: no published content found` rather than fabricated?

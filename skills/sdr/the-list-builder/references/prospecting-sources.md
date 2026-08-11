@@ -72,3 +72,62 @@ Do not attempt to pull structured local-business data from Google Maps or Yelp a
 - [ ] Every contact has a source URL and a "verified" date — required lineage for CAN-SPAM/GDPR downstream
 - [ ] The list is for the user's own outreach, not for resale as a data product
 - [ ] No sensitive-attribute targeting (health, financial hardship, political belief, religion, sexuality) even when a public source reveals it
+
+---
+
+## Source Routing: Which Tool for Which Job
+
+`the-list-builder` runs on data the user provides or on genuinely public web research. This table
+routes a sourcing need to the right mechanism and states the gate on each. The gate is not optional
+paperwork: several of these carry account-loss or legal risk, and the risk falls on the user, not on
+the tool.
+
+| Need | Mechanism | Gate |
+|---|---|---|
+| Companies matching a firmographic profile | Enrichment platform export the user pastes (Clay, Apollo, ZoomInfo, CRM report) | Named as the source, with the pull date |
+| Companies showing a buying trigger | Public web research: funding announcements, press, company blog, changelog | Every candidate needs a checkable source URL |
+| Hiring as a budget signal | Public job boards and the company's own careers page | Public listings only, no gated board scraping |
+| Structured data from a public page | A crawl/extract API (Firecrawl, HasData) or a headless-browser scrape | Respect `robots.txt`, rate-limit, no login walls, no CAPTCHA bypass |
+| Local businesses by geography | Maps/places data | Check the provider's terms; most prohibit bulk redistribution |
+| Community and forum signal | Public posts via the platform's own API where one exists (Reddit's API, for example) | Platform API terms, and no personal data beyond what the post shows |
+| Social signal at scale | Platform API or a licensed provider | Never a credentialed scrape of a logged-in session |
+| A specific person's background | **The user pastes it.** See below. | — |
+
+### LinkedIn is paste-only, and this is not caution for its own sake
+
+**Do not automate LinkedIn, and do not export from it.** Scraping profiles, search results, or Sales
+Navigator data out to an external database is explicitly prohibited, and enforcement is real rather
+than theoretical: in March 2026 HeyReach received a cease-and-desist and roughly 30,000 users had
+their LinkedIn outreach cut off within weeks. The exposure lands on the user's own account and
+company page.
+
+The distinction that actually matters:
+
+- **A person browsing LinkedIn as themselves, in their own browser, is not doing anything
+  prohibited.** So asking the rep to open a profile and paste the relevant sections is both compliant
+  and the highest-quality input available — they see things a scrape does not.
+- **What gets detected is the architecture**, not the intent: cloud-run automation, browser
+  extensions, and proxy tools produce request patterns and browsing rates that do not look human, and
+  those are what get flagged.
+- **Rapid profile viewing and unpersonalised mass messaging** are the two behaviours most commonly
+  behind an account restriction, independently of any tool.
+- **Never take a shared LinkedIn password** to operate an account on someone's behalf.
+
+So: company pages are public and fetchable for firmographics. Individual profiles come from the rep,
+pasted. If the user asks for profile automation, say plainly that it risks their account and offer the
+paste path instead.
+
+### Rules that apply to every mechanism above
+
+- **A source URL and a fetch date per candidate.** A row without provenance cannot be checked later,
+  and lists get reused long after anyone remembers where they came from.
+- **Respect `robots.txt` and rate limits.** Read the file rather than assuming; it is fetchable.
+- **Never bypass a login wall, a paywall, or a CAPTCHA.** If the data needs an account you do not
+  legitimately hold, the answer is that the question is not answerable from public sources.
+- **Personal data carries obligations regardless of how public it was.** A lawful basis is needed to
+  process it for outreach, role-based business addresses published by the company are the safest
+  footing, and a guessed personal address is not. Retain the provenance, because that is the evidence.
+- **Never qualify on a sensitive attribute** (health, financial hardship, political belief, religion,
+  sexuality) even where a public source happens to reveal it.
+- **If the list will be resold as data rather than used for the user's own outreach, stop and flag
+  it.** That is a different compliance posture and this skill is not scoped for it.
