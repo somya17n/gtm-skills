@@ -25,8 +25,46 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 1. **Normalize every raw reason code or label into one of eight fixed themes** before grouping anything: sizing/fit, product expectation mismatch, quality issue, shipping damage, wrong item shipped, late delivery, buyer remorse, unclear compatibility. State the mapping used from raw code to theme, since raw codes vary by returns system and get misread if assumed.
 2. **Group normalized returns by SKU, then by theme within each SKU.** Tally return count and quantity per SKU-theme pair.
-3. **Compute each SKU's return rate as returned units (not return rows) divided by units sold**, both for that SKU in the same period. A return row covering more than one unit must contribute its full unit count, not one count per row, or the rate overstates itself on any multi-unit return.
-4. **Use the SKU's own category average as the baseline. Fall back to the catalog average only when the SKU's category has fewer than 5 other SKUs with return data**, and state which baseline was used for every SKU, since a SKU can sit above one average and below the other. Flag return concentration using a stated multiple of whichever baseline was used, not a gut call: at least 1.5x is a concentration, at least 2x is severe. State the SKU's exact rate and the exact average and baseline type it's being compared to for every flagged SKU.
+3. **Compute each SKU's return rate as returned units (not return rows) divided by units sold**, for
+   that SKU. A return row covering more than one unit must contribute its full unit count, not one
+   count per row, or the rate overstates itself on any multi-unit return.
+
+   **Date each returned unit to the sale it came from, not to the period the return arrived in.** A
+   return landing this month is for a sale made three to six weeks earlier once shipping and the
+   return window are allowed for, so a same-period numerator and denominator describe different
+   cohorts of sales. Whenever unit volume is changing, they do not line up, and the error is large:
+
+   - Growing 30% a month, a SKU whose true return rate is 20% measures **16.8%** — understated by 3.2
+     points, every month, for as long as growth continues. A real problem clears the 1.5x
+     concentration test it should fail.
+   - Declining 30% a month, that same 20% reality measures **26.0%** — overstated by 6 points, so a
+     fading SKU gets flagged for a returns problem it does not have.
+   - The bias **flips sign with the growth rate**, so it cannot be corrected with a constant
+     adjustment. Only aligning the numerator to the sale period fixes it.
+
+   If the export carries the original order date or order ID, use it and say so. If it does not, either
+   use a window long enough that the lag is small relative to it (a quarter or more, not a month), or
+   report the rate with the SKU's unit-volume trend stated next to it and say the rate is understated
+   while volume is growing and overstated while it is shrinking. Do not present a same-period rate for
+   a fast-moving SKU as if it were the SKU's actual return rate.
+4. **Use the SKU's category average as the baseline, computed with the SKU under test excluded
+   (leave-one-out). Fall back to the catalog average, also leave-one-out, only when the SKU's category
+   has fewer than 5 other SKUs with return data**, and state which baseline was used for every SKU,
+   since a SKU can sit above one average and below the other.
+
+   Excluding the SKU from its own baseline is not a refinement. A high-return SKU inside the average it
+   is measured against inflates that average and dampens its own multiple, and in a small category the
+   effect is enough to change the verdict. Worked case: peers at 10%, the SKU at 16%. Its true multiple
+   is 1.60x, a concentration. Included in a 5-SKU category average of 11.2%, it measures **1.43x and is
+   not flagged at all.** The distortion shrinks as the category grows (the flip band is roughly 1.50x
+   to 1.71x at 5 SKUs, narrowing to 1.50x to 1.53x at 30), so it bites hardest in exactly the small
+   categories this step already treats as fragile. Even where the verdict holds, self-inclusion
+   understates severity: a SKU at a true 5.00x reports 2.78x in a 5-SKU category. Flag return concentration using a stated multiple of whichever baseline was used, not a gut call: at least 1.5x is a concentration, at least 2x is severe. State the SKU's exact rate and the exact average and baseline type it's being compared to for every flagged SKU.
+4a. **Report the peer count behind every baseline.** A category average computed from 3 peers is a
+   different kind of number from one computed from 30, and the multiple should not be presented with
+   the same confidence. Where the leave-one-out peer count is below 5 even after the catalog fallback,
+   say the baseline is too thin to support a concentration verdict rather than issuing one.
+
 5. **Assign the likely root cause per flagged SKU as its single highest-volume theme.** If two themes are within 10% of each other's count for that SKU, name both rather than forcing a single cause.
 6. **Separate preventable themes from normal category behavior, and map each to a fix category.** Sizing/fit and unclear compatibility (PDP copy, sizing guide) and expectation mismatch (PDP copy, imagery) are preventable through content; quality issue (product/QC review) and shipping damage (packaging/fulfillment) through operations; wrong item is a fulfillment process fix, not a PDP fix. Buyer remorse, and late delivery unless a fulfillment failure is confirmed, are normal category behavior, not a defect to fix on the product page.
 
@@ -57,6 +95,15 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 Before returning the output, verify:
 
+- Is every returned unit dated to the sale it came from rather than to the period the return arrived
+  in? If the export cannot support that, is the SKU's unit-volume trend stated alongside the rate, with
+  the direction of the bias named (understated while growing, overstated while shrinking)?
+- Is every baseline computed leave-one-out, with the SKU under test excluded from the average it is
+  measured against?
+- Is the peer count behind each baseline reported, and is a concentration verdict withheld where fewer
+  than 5 peers remain after the catalog fallback?
+- Is the exact rate, the exact baseline, the baseline type, and the peer count shown for every flagged
+  SKU, so the multiple can be recomputed by hand?
 - Does every flagged SKU show its exact return rate (units, not rows), which baseline it used, that baseline's value, and the multiple, not just a verdict of "high"?
 - Is the same baseline (category, or catalog only for thin categories) used consistently for one SKU across the verdict, table, and narrative, rather than switching between them?
 - Is the 1.5x / 2x threshold used stated explicitly, and is it applied consistently across every SKU?

@@ -18,7 +18,31 @@ Take one metric the user cares about and tell them, honestly, whether it is good
 Ask the user for these inputs. If any are missing, ask before comparing. Do not proceed with a comparison the user hasn't actually asked for.
 
 1. **The metric and its value**: what it is (churn rate, CAC, conversion rate, NPS, sales cycle length, etc.) and the user's own actual number.
-2. **Context needed to benchmark it fairly**: business model (B2B SaaS, B2C ecommerce, marketplace, etc.), rough company stage or size, and pricing model if relevant, since the same raw number means different things at different stages.
+2. **Context needed to benchmark it fairly**: business model (B2B SaaS, B2C ecommerce, marketplace,
+   etc.), rough company stage or size, and pricing model if relevant, since the same raw number means
+   different things at different stages.
+2a. **How the metric is computed**, in the user's own words: the numerator, the denominator, the period,
+   and what is included or excluded. Ask for it; do not assume the standard definition. Definition
+   mismatch is the largest single source of apparent benchmark gaps, larger than most real performance
+   differences, and it is invisible once both figures are printed as percentages.
+
+   The common splits worth asking about directly:
+
+   - **Churn**: customer/logo or revenue, gross or net of expansion, monthly or annual. Same company,
+     same month: 50 customers lost from 1000 with expansion offsetting 30 is **5.0% gross logo churn or
+     2.0% net revenue churn**. Both are correct; they are not comparable to the same benchmark.
+   - **CAC**: does it include salaries, brand and content spend, agency fees, free-trial cost, or only
+     paid media? A paid-media-only CAC compared against a fully loaded benchmark looks excellent and
+     means nothing.
+   - **Conversion rate**: sessions or users as the denominator, and which step counts as the conversion.
+   - **AOV and revenue**: gross or net of discounts, returns, tax and shipping.
+   - **Sales cycle**: from first touch, from qualification, or from opportunity creation.
+
+2b. **Never annualise a rate by multiplying.** Monthly churn × 12 is not annual churn, and the error
+   grows fast: 5% monthly is **46.0%** annual, not 60% — a 14-point artefact. At 7% monthly it is 25.9
+   points, and at 10% the naive figure exceeds 100%, which should be the tell. Compound it as
+   1 − (1 − monthly)^12, and if the user has already annualised by multiplying, say so and recompute
+   before comparing anything.
 3. **Benchmark source**: ask directly, "Do you have a specific benchmark report or number you want to compare against, or should I use commonly cited public ranges for this metric and business model?" This determines which of the two paths below is used.
 
 ### Path A: user supplies the benchmark
@@ -48,6 +72,11 @@ Use only broadly and repeatedly published reference ranges for that specific met
 
 Before returning the output, verify:
 
+- Was the user's own metric definition captured (numerator, denominator, period, inclusions) and checked
+  against how the benchmark defines the same metric, with any mismatch named as the likely explanation
+  for the gap before any performance conclusion is drawn?
+- If either figure is an annualised rate, was it compounded rather than multiplied, and was a
+  multiply-annualised input from the user recomputed and flagged?
 - Does the "Confidence" line honestly reflect whether this came from the user's own source or general public knowledge?
 - Is any Path B range stated as a range, not dressed up as a precise figure?
 - Does "What the gap means" say something specific to this metric, not a copy-paste "this is good news" applicable to any metric?
