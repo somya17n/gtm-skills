@@ -37,6 +37,22 @@ Build the stack in this exact order. Never blend fixed overhead into it.
 8. **CM3** = CM2 − ad spend (missing ad spend treated as 0, flagged the same way).
 9. **Breakeven ROAS** = net revenue ÷ CM2, only when CM2 > 0 and COGS was present. If CM2 ≤ 0, say the SKU is already unprofitable before any ad ran.
 10. **Rank SKUs by dollar contribution (CM2 or CM3), never by margin percentage alone.** A 60%-margin SKU selling 4 units matters less than a 22%-margin SKU carrying the catalog.
+
+    **Rank only SKUs with complete cost lines.** Any SKU flagged in step 3 or step 7 for a missing
+    line is excluded from the ranking and listed separately under "cannot be ranked, missing data",
+    with the lines it is missing. Its dollar CM2 is inflated by exactly the cost that is absent, so it
+    is not comparable to a SKU whose costs are known, and withholding only the percentage does not fix
+    that: the ranking is by dollars.
+
+    This is not a corner case. A SKU with no COGS at all has a CM2 equal to its entire product
+    revenue less fees, which will usually place it at or near the top of the list. Worked example: on
+    identical inputs, a SKU with $500 of COGS recorded shows CM2 of $228 and ranks third, while the
+    same SKU with COGS missing shows CM2 of $728 and ranks first. Presenting that as the strongest
+    contributor is the opposite of the truth, and it points ad spend at the product the user knows
+    least about.
+
+    State the count of excluded SKUs next to the ranking, so a mostly-unranked catalog reads as a
+    data problem rather than as a short list of winners.
 11. **Split negative-CM3 SKUs**: CM2 < 0 is "negative before ad spend"; CM2 ≥ 0 but CM3 < 0 is "negative only because of ad spend." Different fixes for each.
 
 ## Output format
@@ -73,6 +89,12 @@ Before returning the output, verify:
 - CM2%/breakeven ROAS is withheld, not printed, for every SKU with missing COGS.
 - The fixed per-order fee is applied per order (or its per-unit fallback is explicitly flagged), not silently per unit.
 - SKUs are ranked by dollar contribution, not margin percentage.
+- Every SKU with a missing cost line is **excluded from the ranking** and listed under "cannot be
+  ranked, missing data" with the lines it lacks. A SKU whose COGS is absent has a dollar CM2 inflated
+  by exactly that missing cost, so withholding its percentage while still ranking it by dollars puts
+  the least-understood product at the top of the list.
+- The count of excluded SKUs appears next to the ranking, so a mostly-unranked catalog reads as a data
+  problem rather than a short list of winners.
 - Negative-CM3 SKUs are split into "negative before ad spend" and "negative only after ad spend."
 
 If any check fails, correct it before returning the output.
