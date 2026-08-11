@@ -8,7 +8,12 @@ description: 'Design the post-signup activation flow: what happens between signu
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask inline for: product type (B2B/B2C), core value proposition, and lifecycle stage names in use.
-2. Read `references/funnel-benchmarks.md`: specifically the SaaS Product Funnel benchmarks and the Drop-Off Diagnosis Framework (Friction / Motivation / Ability / Timing), and `references/lifecycle-stages.md` for how this business defines its early lifecycle stages.
+2. Read `references/funnel-benchmarks.md`: specifically the SaaS Product Funnel benchmarks and the Drop-Off Diagnosis Framework (Friction / Motivation / Ability / Timing), and `references/lifecycle-stages.md` for how this business defines its early lifecycle stages. Note
+   that its RFM-to-stage mapping is an **ordered ruleset, evaluated first-match**: New Customers is
+   reached only after the recency gates have been passed, so a recently-acquired customer who has
+   already gone quiet is At Risk rather than New. An activation flow aimed at "New Customers" that is
+   built from frequency and monetary thresholds alone will target people who have already lapsed, which
+   is a win-back problem and not a first-mile one.
 
 ## Inputs
 

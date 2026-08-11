@@ -8,7 +8,23 @@ description: Design a recurring, scheduled marketing workflow (a loop with a def
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask inline for: available channels/integrations and the primary lifecycle goal this loop should protect.
-2. Read `references/loop-cadence-guide.md` for the signal-speed-to-cadence table and the 9-part loop anatomy.
+2. Read `references/loop-cadence-guide.md` for the signal-speed-to-cadence table and the 9-part loop
+   anatomy, and also its **Baseline Contamination**, **Alert Fatigue** and **The Loop Has to Be Able to
+   Fail** sections. Every loop this skill designs has to carry all three:
+
+   - **A baseline rule**, if the loop compares against a trailing window. An unmarked anomaly entering
+     that window makes the next run misread a return to normal as a new problem, and worse, absorbs a
+     gradual decline one run at a time until the loop is comparing a bad number against an equally bad
+     baseline. Specify that flagged periods are excluded from the window, that a real step change resets
+     the baseline deliberately with a stated reason, and that one fixed anchor the loop cannot rewrite
+     is kept alongside the trailing comparison.
+   - **A flag budget and a dismissal path.** A loop that flags too much gets ignored, and an ignored
+     loop is worse than none because it costs per run and provides false assurance. Set the per-run
+     ceiling when the loop is designed, and say where a consciously accepted finding is recorded so the
+     next run stops re-reporting it. Never resolve noise by widening the threshold.
+   - **A gate that can actually fail**, plus a stop condition. State the condition under which a run
+     reports nothing to act on, and confirm it is reachable with real data. A gate that cannot return a
+     negative result makes this a scheduled report rather than a check.
 
 ## Inputs
 

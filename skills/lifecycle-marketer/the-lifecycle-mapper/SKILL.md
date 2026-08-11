@@ -6,7 +6,20 @@ description: Build lifecycle segments with RFM scoring, behavioral signals, and 
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
-2. Read `references/lifecycle-stages.md` for stage definitions and scoring thresholds.
+2. Read `references/lifecycle-stages.md` for stage definitions and scoring thresholds. The
+   RFM-to-stage mapping there is an **ordered ruleset, evaluated first-match**, not a lookup table:
+   apply the rules in sequence and stop at the first one that matches. The order is the tie-breaker and
+   it is load-bearing.
+
+   Two consequences to carry into every segment you build:
+
+   - **Recency gates before anything else.** A lapsed high-value customer (R=2, F=5, M=5) resolves to
+     At Risk, not Champions. High lifetime value does not cancel the recency signal; it raises the
+     stakes of the win-back. Building a Champions segment on frequency and monetary value alone will
+     quietly include customers who have already gone quiet.
+   - **Every RFM combination resolves to exactly one stage.** If a segment definition appears to let a
+     customer satisfy two stages, the rules were applied out of order rather than in sequence. Do not
+     invent a tie-break of your own.
 
 ## Inputs
 
