@@ -7,6 +7,9 @@ description: "Runs the daily pass over a store's orders, revenue, and ad spend, 
 
 The daily exception report. Join yesterday's orders and revenue to yesterday's ad spend, compare each figure to its own trailing baseline, and return only the movements large enough to act on. Read-only by design: this loop escalates, it never changes anything.
 
+> **Loop discipline.** Read `references/loop-cadence-guide.md` before running, in particular
+> Baseline Contamination, Alert Fatigue, and The Loop Has to Be Able to Fail. This loop compares against a trailing baseline, so the contamination rule is load-bearing: exclude any period this loop flagged from the window that judges later runs, and report the baseline value and period count alongside every flag.
+
 ## How to run
 
 1. **Yesterday's order export**: order count, gross revenue, discounts, and refunds. Product-level rows if available, store-level totals if not.

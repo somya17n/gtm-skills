@@ -65,8 +65,18 @@ description: Analyze content samples to extract a brand voice profile, dimension
 
 ## Quality check before returning
 
+13a. Ask, for each sample: roughly when was it written, and who wrote it (founder, in-house
+    marketer, agency, freelancer). Voice drifts, and a brand that changed writers has more than one
+    voice in its archive. Where samples split into distinct groups, build the profile from the most
+    recent coherent group and say which samples were set aside and why, rather than averaging across
+    all of them into something none of them sound like.
+
 14. Before returning the output, verify:
 
+- Was the age and authorship of each sample established, and does the profile describe one coherent
+  voice rather than an average of several? Samples spanning a long period, or mixing in-house writing
+  with agency or ghostwritten copy, produce a profile of a voice nobody actually writes in. Where the
+  samples are mixed, say which subset the profile describes and note what was excluded.
 - Is every dimension in the Voice Profile table rated 1-10 with a descriptive label, not just a bare number?
 - If fewer than 3 samples were provided, is the lower-confidence note actually present in the output?
 - Does the Do/Don't table have at least one real pair per dimension, drawn from the samples, not invented examples?

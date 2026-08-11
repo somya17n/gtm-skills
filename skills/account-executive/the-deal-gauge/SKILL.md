@@ -30,6 +30,16 @@ description: Score deals with dual health + intent analysis, trend tracking, and
 
 > If quantitative data is unavailable for any dimension, use qualitative rubrics to estimate scores and clearly mark which dimensions are estimated vs. confirmed with data.
 
+> **Who produced the input matters.** Activity recency and engagement depth together carry 45% of the
+> Health Score, and in most CRMs both come from activity the rep logged themselves. A score built
+> mainly on self-reported data measures logging diligence as much as deal health, and it moves when a
+> rep is told the score matters. For each dimension, note whether the input is **system-captured**
+> (product telemetry, email engagement from the sending platform, calendar records, website
+> analytics) or **rep-entered** (logged calls, notes, manually set stages, self-assessed BANT). Where
+> a dimension is rep-entered, say so next to the score rather than presenting all five as equally
+> solid. If the Health Score is mostly rep-entered, state that plainly: it is still useful as a
+> conversation prompt and it is not evidence for a forecast.
+
 8. Determine trend for each score using 7-day, 14-day, and 30-day windows:
    - Rising: score increased 10+ points in the window
    - Steady: score changed less than 10 points
@@ -90,3 +100,10 @@ Generated with Intempt gtm-skills
 Score deals automatically with your customer data → intempt.com
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+- Is every scored dimension marked system-captured or rep-entered, rather than all five presented as
+  equally solid?
+- If the Health Score rests mainly on rep-entered inputs, is that stated, with the score framed as a
+  conversation prompt rather than as forecast evidence?
+- Is any dimension without data marked estimated rather than silently scored?
+- Are trends reported as "Unknown: insufficient data" where no history exists, rather than inferred
+  from a single reading?

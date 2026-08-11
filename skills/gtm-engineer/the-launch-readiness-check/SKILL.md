@@ -7,6 +7,12 @@ description: "Runs a one-time go/no-go readiness check before a product or campa
 
 Take a launch that's about to go live and produce a go, go-with-conditions, or hold verdict, with every readiness layer named as verified or assumed.
 
+> **Findings discipline.** Read `references/audit-findings-discipline.md` before writing the
+> output. It covers what happens to a finding after it is written: the audit's date and exact
+> scope, a re-audit trigger stated as an event, severity paired with effort so the list
+> resolves into a sequence, and a baseline captured before anything changes so the fixes are
+> attributable. Its readiness board already carries owner and due-before-launch. What it needs is the dated scope and the post-launch baseline: which metric each watch-list signal is measured against, captured before launch rather than reconstructed after.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before scoring anything.

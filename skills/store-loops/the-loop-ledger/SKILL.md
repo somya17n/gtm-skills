@@ -7,6 +7,9 @@ description: "Creates and maintains the state file every store loop reads and ap
 
 Maintain `.agents/store-loop-ledger.md`, the memory that survives between loop runs. The agent forgets what it saw yesterday. The file does not. Without it every loop re-flags the same seasonal spike forever and no loop can tell a new problem from a known one.
 
+> **Loop discipline.** Read `references/loop-cadence-guide.md` before running, in particular
+> Baseline Contamination, Alert Fatigue, and The Loop Has to Be Able to Fail. The ledger is where dismissals, flagged-and-excluded periods, and threshold changes are recorded. Without those three, the contamination and fatigue rules cannot be enforced by any loop that reads it.
+
 ## How to run
 
 1. **Check whether `.agents/store-loop-ledger.md` already exists.** If it does, read it fully before writing anything, and append rather than replace.

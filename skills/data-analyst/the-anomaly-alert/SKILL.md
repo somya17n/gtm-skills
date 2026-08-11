@@ -7,6 +7,12 @@ description: "Takes a time series of one metric and flags which recent points ar
 
 Take a metric's recent history and flag which points are genuinely outside its normal range, using a stated method the user can check, not an impression of "that looks off."
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. A partial final period is the most common cause of a false anomaly. Never flag an incomplete bucket as a drop.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before flagging anything.

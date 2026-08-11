@@ -34,6 +34,20 @@ If usage data isn't available, say so and score on relationship and stated-inten
 
 - Never score Low risk on stated intent alone if usage is declining. Usage trend overrides a polite "we're happy" comment.
 - If a champion has left with no confirmed replacement, that alone is enough to push the score to at least Medium regardless of usage.
+- **Work backwards from the notice deadline, not the renewal date.** Most contracts auto-renew unless
+  cancelled by a stated notice period, commonly 30, 60, or 90 days before term end. That notice date
+  is the real deadline: after it passes the renewal is contractually settled whatever the customer
+  feels, and before it passes the customer can exit with no negotiation at all. Ask for the notice
+  period and the resulting date, and set the one action against that date rather than the renewal
+  date. A plan that lands two weeks before renewal on a 60-day-notice contract is 46 days late.
+- **If the notice period is unknown, say so and treat it as the highest-priority unknown**, ahead of
+  any usage or sentiment signal. Everything else in this read is advisory until the actual deadline
+  is established.
+- **Auto-renewal is not the same as a healthy renewal.** An account that renews because nobody
+  cancelled in time is a deferred risk, not a retained customer, and it usually surfaces as a
+  mid-term cancellation attempt or a hard fight at the next term. Where usage is declining but the
+  notice window has closed, say the renewal is likely to land and the risk has moved to the following
+  term rather than scoring it Low.
 - Do not invent a usage trend that wasn't provided. Mark it as an unknown input, not a neutral assumption.
 
 ## Quality check before returning

@@ -7,6 +7,12 @@ description: "Reviews a customer's post-first-purchase flow, reorder prompts, re
 
 Take the flows a customer sees after their first order and find the specific gap, timing or message, that's stopping the second one.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Recent cohorts have not had time to repeat, so they always look worse. Do not read an immature cohort as a decline.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

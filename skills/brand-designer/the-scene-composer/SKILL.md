@@ -24,7 +24,38 @@ description: "Generate photography direction using a composable scene system: 16
 12. Select a style block: editorial, commercial, lifestyle, minimal, etc.
 13. Select a film type block: digital clean, film grain, cinematic, etc. Note the resulting look.
 14. Select a Scene/Location block from the reference: environment type, setting, and background context.
-15. If a character or model is needed: specify type, wardrobe direction, pose, and identity slot.
+15. If a character or model is needed, specify **role, wardrobe direction, and pose**. Describe the
+    person by what they are doing in the scene, not by who they are: "hands on a keyboard, sleeves
+    rolled", "someone mid-conversation holding a coffee", "a pair of hands unboxing". Role and action
+    are what the shot needs; demographic specification is not, and supplying it is where this skill
+    does damage.
+
+    - **Do not default the casting.** An unqualified brief resolves to the most statistically common
+      depiction of that role, so "a CEO", "a developer", "a nurse", or "a small-business owner"
+      returns a stereotype without anyone choosing one. If the brief genuinely needs a specific
+      person, that is the user's decision to state, not this skill's to infer. Ask rather than assume,
+      and where the user has no preference, write the direction so the role does not encode one.
+    - **Never direct a shot depicting an identifiable real person**, a public figure, or a
+      recognisable likeness. If the user wants a named person, that needs their rights and consent,
+      which is outside this skill.
+    - **Keep third-party IP out of the frame.** No competitor products, visible logos, book covers,
+      artwork, or recognisable branded props unless the user confirms they hold the rights. A prop
+      that adds context is not worth a rights problem.
+    - The term "identity slot" appeared in an earlier version of this step and was never defined
+      anywhere in this skill or its reference file. Do not use it. If the user's own design system
+      defines it, use their definition and say which.
+
+15a. If the output will be produced as generated rather than photographed imagery, add two constraints:
+
+    - **The product has to be depicted accurately.** A generated image must not show features,
+      contents, quantities, finishes, or included accessories the actual product does not have.
+      For an ecommerce listing this is not a style question: an image that misrepresents what arrives
+      is a consumer-protection problem and a returns problem, in that order. Where the direction
+      cannot be produced without inventing product detail, say so and recommend a real photograph of
+      the product composited into the generated scene instead.
+    - **Flag disclosure as a question for the user.** Several platforms and jurisdictions require
+      synthetic or AI-generated media in advertising to be labelled. Note that it applies and that
+      the specifics depend on where the creative runs, rather than deciding it silently either way.
 16. Define technical specs: aspect ratio, resolution, export format based on intended use.
 17. Compose a numbered shot list: hero shot, detail shots, lifestyle shots. Describe each shot with blocks applied.
 
@@ -34,6 +65,16 @@ description: "Generate photography direction using a composable scene system: 16
    - For digital products, the direction describes the scene around the screen, not the on-screen UI itself
    - The shot list includes a hero shot, at least one detail shot, and at least one lifestyle shot
    - Technical specs (aspect ratio, resolution, export format) match the stated intended use
+   - Where a person appears, are they described by role, wardrobe and action rather than by
+     demographic, so the brief does not resolve to a default depiction of that role?
+   - Is no identifiable real person or recognisable likeness directed, and is no competitor product,
+     logo, or third-party artwork in the frame without confirmed rights?
+   - Does the direction avoid the undefined term "identity slot"?
+   - For generated imagery: does the direction avoid showing any product feature, content, quantity or
+     included accessory the real product does not have, and is synthetic-media disclosure raised as a
+     question for the user rather than decided silently?
+   - If the creative will carry text (ad or social), does the colour palette reserve enough contrast
+     for legible overlay text rather than filling the frame with mid-tones?
 
    If any check fails, fix it before delivering.
 

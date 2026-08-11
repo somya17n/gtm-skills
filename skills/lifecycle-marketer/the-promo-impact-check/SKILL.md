@@ -7,6 +7,12 @@ description: "Measures whether a promotion or discount that already ran added re
 
 Take a promotion that already ran and measure what it actually did to profit, not just to the revenue chart during the sale.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. The baseline, promo, and recovery windows must all be complete periods on the same timezone, or the comparison measures period length rather than promotion effect.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

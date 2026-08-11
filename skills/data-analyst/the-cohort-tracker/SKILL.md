@@ -10,6 +10,12 @@ Build a cohort retention or revenue table: group customers by the period they we
 > **Chart form.** Read `references/chart-form-and-accessibility.md` before specifying how any
 > number is displayed. Its cohort table follows the colour-scale and legend rules there, and the requirement that a diverging scale is used only where a real midpoint exists rather than an arbitrary one.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Recent cohorts are immature rather than worse, and the most recent period is usually partial on both axes of the table.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before building the table. Do not invent figures to fill gaps.

@@ -7,6 +7,12 @@ description: "Builds a per-SKU or per-order contribution margin stack (CM1, CM2,
 
 Turn revenue, cost, fee, and ad spend inputs into contribution margin per SKU or order, so profit questions get answered with a stack the user can check line by line, not a single blended margin number.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. A blank or zero cost column is the failure that matters most here: a zero cost reads as infinite margin, and a cost missing for a third of SKUs produces a margin figure that silently describes only the rest.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before building the stack, and mark whatever stays missing as an assumption rather than guessing a number.

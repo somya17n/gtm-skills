@@ -7,6 +7,12 @@ description: "Audits a cart and checkout flow directly, using screenshots or a w
 
 Walk a cart and checkout flow step by step and find the specific points where buyers are likely to stall or leave.
 
+> **Findings discipline.** Read `references/audit-findings-discipline.md` before writing the
+> output. It covers what happens to a finding after it is written: the audit's date and exact
+> scope, a re-audit trigger stated as an event, severity paired with effort so the list
+> resolves into a sequence, and a baseline captured before anything changes so the fixes are
+> attributable. Its friction table already carries Effort; the grouping, the baseline-before-fix rule, and the sequencing rule are what make those fixes attributable rather than five simultaneous changes nobody can read.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

@@ -12,6 +12,12 @@ Review an existing product detail page against what a real buyer needs to decide
 > promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
 > rule for every line of copy this pack produces. Its checks are additional to this skill's own.
 
+> **Findings discipline.** Read `references/audit-findings-discipline.md` before writing the
+> output. It covers what happens to a finding after it is written: the audit's date and exact
+> scope, a re-audit trigger stated as an event, severity paired with effort so the list
+> resolves into a sequence, and a baseline captured before anything changes so the fixes are
+> attributable. Its edit brief is a set of recommended changes, so the sequencing rule applies directly: shipping every edit at once makes the result unattributable.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the competitive landscape, brand voice, and banned-word list.

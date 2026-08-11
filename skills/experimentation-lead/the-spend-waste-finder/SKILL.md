@@ -7,6 +7,12 @@ description: "Triages paid ad spend, using ROAS, CAC, and spend concentration ac
 
 Triage paid traffic spend to find which channels, campaigns, or audiences are wasting budget, and which layer of the business is actually responsible.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Spend and revenue almost always come from different systems on different timezone conventions, which is exactly how ROAS gets misattributed daily. Align them or aggregate to a period where the boundary stops mattering.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

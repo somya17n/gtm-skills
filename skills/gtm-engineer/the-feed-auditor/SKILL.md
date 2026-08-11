@@ -7,6 +7,12 @@ description: "Audits the actual data feed sent to Google Shopping, Meta, or anot
 
 Take a product feed headed to Google Shopping, Meta, or another channel and find exactly what will get an item disapproved, mismatched, or under-matched, separate from how the storefront page itself reads.
 
+> **Findings discipline.** Read `references/audit-findings-discipline.md` before writing the
+> output. It covers what happens to a finding after it is written: the audit's date and exact
+> scope, a re-audit trigger stated as an event, severity paired with effort so the list
+> resolves into a sequence, and a baseline captured before anything changes so the fixes are
+> attributable. Its issue table separates blocks-approval from degrades-performance, which is severity; add effort and group accordingly, and set the re-audit trigger to a channel policy change or a catalog restructure rather than a fixed interval.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

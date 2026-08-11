@@ -7,6 +7,9 @@ description: "Turns a recurring store question into a runnable loop: a cadence, 
 
 Convert a recurring store task into a loop specification: cadence, inputs, gate, stop condition, approval boundary, and state file. The gate is the deliverable. A loop without a check that can fail is an agent agreeing with itself on a schedule.
 
+> **Loop discipline.** Read `references/loop-cadence-guide.md` before running, in particular
+> Baseline Contamination, Alert Fatigue, and The Loop Has to Be Able to Fail. Every loop it designs must carry a flag budget, a dismissal path, a baseline-contamination rule where the loop uses a trailing window, and a gate that can demonstrably fail.
+
 ## How to run
 
 Ask the user for these. Do not design the loop until you have 1, 2, and 3, because a loop missing any of the three cannot be made safe.

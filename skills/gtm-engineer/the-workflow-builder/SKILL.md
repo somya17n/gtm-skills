@@ -36,11 +36,38 @@ description: Design marketing and sales automation workflows with trigger-condit
 9. Add branching logic where behavior should diverge: use if/else conditions based on user attributes, engagement signals, or prior step outcomes.
 10. Define error handling for each action step:
     - **Retry logic**: exponential backoff, max 3 attempts
-    - **Fallback action**: alternative if retries exhaust (e.g., email fails, fall back to SMS)
+    - **Idempotency key**: required on every retryable action that has an outward effect, and named
+      explicitly in the spec. A retry without one is how a contact receives the same email three
+      times or a charge lands twice. The failure mode is specifically a *successful* action whose
+      response was lost: the send happened, the acknowledgement timed out, and the retry sends it
+      again. Specify the key (contact ID plus step ID plus the trigger event ID is usually enough)
+      and state that the receiving system must reject a repeat of the same key rather than relying
+      on the sender not to retry.
+    - **Fallback action**: alternative if retries exhaust (e.g., email fails, fall back to SMS).
+      The fallback needs its own idempotency key, or a failed-then-fallen-back step delivers twice.
     - **Failure notification**: alert ops team via Slack or email on persistent failure
+    - **Where the record goes**: a permanently failed contact must land somewhere a human will look,
+      with the step it died at and the error. A notification alone is not a destination, and a
+      record that fails silently out of a workflow is indistinguishable from one that completed.
 11. Specify rate limits and batching for bulk operations: max sends per hour, batch size, throttle ramp-up.
 12. Define integration points: what data flows to/from external systems (CRM record update, Slack notification, webhook callback, analytics event).
-13. Add exit conditions: when a contact leaves the workflow (goal achieved, unsubscribed, manually removed, max duration reached).
+13. Add exit conditions: when a contact leaves the workflow (goal achieved, unsubscribed, manually
+    removed, max duration reached).
+13a. Define **re-entry and overlap** rules, which exit conditions alone do not cover:
+    - **Can a contact re-enter this workflow?** If the trigger can fire again, say whether a second
+      enrollment is allowed, blocked while active, or blocked for a cooling-off period. Without a
+      rule, a contact whose trigger fires twice runs the workflow twice, in parallel, and receives
+      everything twice.
+    - **What happens if they are already mid-workflow?** Skip, queue, or restart. Pick one and say
+      which.
+    - **What happens if they match another workflow at the same time?** Name the workflows that can
+      overlap and either set a precedence order or a global per-contact message cap. Two
+      independently reasonable workflows firing the same week is the usual cause of a contact
+      receiving five messages in two days, and neither workflow looks wrong in isolation.
+13b. Specify how the workflow gets **verified before activation**: run it against a real record in a
+    test mode or with the ops team as the recipient, confirm each branch is reachable, and confirm at
+    least one failure path actually notifies. An automation that has only been reasoned about is not
+    tested, and the branches that never fire in testing are the ones that misfire in production.
 14. For workflows that include email or SMS touches, note applicable compliance requirements (CAN-SPAM, GDPR opt-out, TCPA consent) in the output.
 
 ## Output
@@ -51,6 +78,18 @@ description: Design marketing and sales automation workflows with trigger-condit
    - If the trigger is score-based, the signals composing the score are named, not treated as a given
    - If the trigger is schedule-based, seasonality was checked and flagged if the underlying signal actually varies
    - Exit conditions are defined, not left implicit
+   - Every retryable action with an outward effect names an idempotency key, and the spec says the
+     receiving system rejects repeats rather than trusting the sender not to retry
+   - Every fallback action has its own idempotency key, so a failed-then-fallen-back step cannot
+     deliver twice
+   - Permanently failed records have a named destination a human will look at, not only a
+     notification
+   - Re-entry is defined (allowed, blocked while active, or cooling-off), and the already-mid-workflow
+     case resolves to skip, queue, or restart
+   - Workflows that can overlap for one contact are named, with either a precedence order or a global
+     per-contact message cap
+   - A pre-activation verification step is specified, covering every branch and at least one failure
+     path
 
    If any check fails, fix the relevant section before delivering.
 

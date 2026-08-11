@@ -9,6 +9,9 @@ The checker in a maker-checker pair. The run that proposed a change is the worst
 
 Default to reject. A proposal that cannot be verified is rejected, not passed along with a caveat - a caveat in a queue of twenty proposals is read as approval.
 
+> **Loop discipline.** Read `references/loop-cadence-guide.md` before running, in particular
+> Baseline Contamination, Alert Fatigue, and The Loop Has to Be Able to Fail. When reviewing a proposal, check whether the loop's own baseline has drifted: a proposal generated from a contaminated baseline is refutable on that ground alone, regardless of how sound its reasoning looks.
+
 ## How to run
 
 1. **The proposal**, in full, from whichever loop produced it, including the numbers it was based on.

@@ -7,6 +7,9 @@ description: "Cross-checks active ad spend against on-hand inventory on a daily 
 
 Find the products still being advertised that the store cannot ship. This is the narrowest loop in the pack and usually the fastest to pay for itself, because every dollar it catches was buying a customer who was going to be disappointed anyway.
 
+> **Loop discipline.** Read `references/loop-cadence-guide.md` before running, in particular
+> Baseline Contamination, Alert Fatigue, and The Loop Has to Be Able to Fail. The pause list is the output, so the fatigue budget applies directly: a pause list nobody reads is worse than none, because it reads as coverage.
+
 ## How to run
 
 1. **Current inventory export**: SKU and on-hand units. Variant-level if the ads point at variants, because a parent product in stock can have the advertised size sold out.

@@ -12,6 +12,14 @@ Take a full backlog of unhandled messages and clear it: draft what's safe to dra
 > promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
 > rule for every line of copy this pack produces. Its checks are additional to this skill's own.
 
+> **Auto-replies and opt-outs.** Before sorting anything into Drafted, Escalated,
+> Scheduled, or Closed, separate the messages with no human behind them and the ones that
+> withdraw permission. Out-of-office notices, autoresponders, and delivery failures are not
+> replies: never draft to them, and never read a vacation return date as a commitment. An
+> opt-out request in any wording is not a Closed conversation, it is a suppression task that
+> has to propagate across every sequence and sending domain within 24 hours. See
+> `the-reply-classifier` for the full class list and the rules that go with it.
+
 ## How to run
 
 Ask the user for:

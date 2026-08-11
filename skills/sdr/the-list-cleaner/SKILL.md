@@ -44,6 +44,19 @@ Then a single count line: **Started with X, kept clean Y, flagged Z, removed W**
 
 ## Rules
 
+- **Check the suppression list first, before any other check.** Ask the user for their opt-out and
+  do-not-contact list and remove every match. This is the one removal that is not a judgment call and
+  not reversible by review: a contact who asked to stop being contacted and reappears in a cleaned
+  list gets emailed again, which is a compliance failure rather than a hygiene miss. If the user has
+  no suppression list, or cannot produce one, say the list is not safe to send and that building the
+  suppression list is step one. Do not clean around the gap.
+- **Check for existing customers and live opportunities.** Cold-sequencing a current customer or a
+  contact on an open deal is worse than a wasted send: it undercuts the account team and confuses the
+  buyer. Ask for a customer list and an open-pipeline export, match against both, and route those rows
+  to their owner rather than into the sequence.
+- Suppression matches go in their own table, separate from removals. A removal is a quality decision
+  the user may want to reverse on review; a suppression is not reviewable and must never be
+  reinstated.
 - Never silently delete. Every single removal appears in the summary table with a reason.
 - When unsure whether a row belongs, keep it and flag it in "Likely gone" rather than removing it. Reviewing ten flagged rows costs less than losing one good lead.
 - Do not invent a reason for removal that isn't backed by something visible in the row's own data.
@@ -54,7 +67,12 @@ Before returning the output, verify:
 
 - Does every row that was removed appear in the removed-rows table with its specific check and reason?
 - Does every "Likely gone" row appear in its own flagged table with a stated reason, rather than sitting unmarked in the clean list or missing entirely?
-- Does the count line add up: kept clean + flagged + removed = started?
+- Was the suppression list requested and matched before any other check, with matches in their own
+  non-reviewable table? If the user had no suppression list, does the output say the list is not safe
+  to send rather than proceeding?
+- Were existing customers and open-pipeline contacts matched and routed to their owner rather than
+  left in the sequence list?
+- Does the count line add up: kept clean + flagged + removed + suppressed = started?
 - Are large wrong-title groups called out as a possible separate sequence, not just discarded?
 
 If any check fails, fix the summary before returning. Do not return a list where the math doesn't add up.

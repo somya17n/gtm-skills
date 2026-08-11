@@ -42,6 +42,15 @@ description: Get a prioritized growth strategy with maturity assessment, growth 
 ## Output
 
 13. Before delivering, verify:
+   - Does the quarterly plan carry a review date and the specific signal that would mean changing
+     course, rather than being a plan for a quarter with no checkpoint inside it? A growth plan whose
+     assumptions are never re-tested becomes a commitment to a decision made with the least
+     information anyone will ever have about that quarter.
+   - Is every recommended lever tied to a baseline number the user actually supplied, with any missing
+     baseline named as the first thing to instrument rather than estimated?
+   - Are the levers sequenced, with a stated reason for the order, rather than presented as a set to
+     run in parallel? A small team running six levers at once cannot attribute any result, and the
+     usual outcome is that none of them are done properly.
    - The number of growth levers matches what the inputs actually justify, not padded to a fixed count of 3
    - Every ICE Confidence score is grounded in a real number the user gave, or marked "Unknown, flag as top open decision" and listed first in Open Decisions
    - Each quarterly bet has a measurable success criteria with a number, not just a qualitative goal

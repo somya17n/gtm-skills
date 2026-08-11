@@ -7,6 +7,9 @@ description: "Watches a new product's first weeks against pre-set early-signal t
 
 New products live or die on early signal, and watching each one by hand is exactly the chore that gets skipped in a launch week. This loop runs for a fixed window - typically 14 days - then stops itself. The bounded window is the point: an unbounded launch watch becomes a second daily report nobody reads.
 
+> **Loop discipline.** Read `references/loop-cadence-guide.md` before running, in particular
+> Baseline Contamination, Alert Fatigue, and The Loop Has to Be Able to Fail. Its early-signal thresholds are fixed for a bounded window, so the fatigue budget and the failability rule matter more here than baseline drift: confirm the gate can actually fail and stop the spend.
+
 ## How to run
 
 1. **Which products launched, and on what date.** The window is per product, not per store, so a launch on day 9 of another product's window starts its own.

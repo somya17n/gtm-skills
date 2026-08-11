@@ -7,6 +7,12 @@ description: "Compares what a store charges for shipping against what shipping a
 
 Find the gap between shipping charged and shipping paid, banded by order value and zone, and test whether the free-shipping threshold is actually doing anything.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Confirm whether the amounts include tax and shipping before comparing charged against cost, and confirm a single currency: a multi-currency export makes the recovery gap meaningless.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before banding anything.

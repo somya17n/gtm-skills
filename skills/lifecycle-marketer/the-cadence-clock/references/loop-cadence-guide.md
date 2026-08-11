@@ -77,3 +77,72 @@ Every loop needs all nine parts filled in. A loop missing any of these is not re
 - No self-check before acting — the loop reacts to noise, seasonality, or a tracking bug instead of a real signal
 - No human checkpoint on anything that spends or publishes
 - Standing up many loops at once instead of proving one loop's value first, then adding the next
+
+---
+
+## Baseline Contamination
+
+Any loop that compares the current run against a trailing window has a failure mode that gets worse
+the longer it runs, and it is invisible from inside a single run.
+
+**The mechanism.** A trailing baseline is built from recent history. If the anomaly the loop just
+flagged goes into that history unmarked, it becomes part of what counts as normal. Two consequences,
+both bad:
+
+1. **The next run misreads a return to normal as a new problem.** A spike enters the baseline, the
+   baseline rises, and the following day's ordinary number now sits below it and gets flagged.
+2. **Sustained problems become invisible.** A metric that degrades gradually is absorbed one run at a
+   time. Each individual step is inside the band, the band moves with it, and after a few weeks the
+   loop is comparing a bad number against an equally bad baseline and reporting nothing. The loop
+   goes blind precisely to the slow decline it would have been most valuable for catching.
+
+**What to do:**
+
+- **Exclude flagged periods from the baseline.** When a run flags a period as anomalous, mark it in
+  the ledger and leave it out of the trailing window for subsequent runs. Keep the raw value, but
+  compute the baseline from unflagged periods only.
+- **Where a shift turns out to be a real, permanent step change** (a price change, a new channel, a
+  product launch), say so explicitly and reset the baseline from that date rather than letting the
+  window absorb it gradually. A deliberate reset with a stated reason is different from silent drift.
+- **Anchor against something the loop cannot move.** Alongside the trailing comparison, keep one
+  fixed reference the loop never rewrites: the same period last year, a stated target, or a
+  pre-launch baseline. If the trailing comparison is quiet but the fixed anchor has moved a long way,
+  the baseline has drifted and the loop is the thing that is broken.
+- **Report the baseline, not just the verdict.** Every flag states the baseline value it was measured
+  against and how many periods it was computed from. A number without its baseline cannot be audited,
+  and a drifting baseline is only ever caught by someone looking at it.
+
+---
+
+## Alert Fatigue Is a Failure, Not a Side Effect
+
+A loop that flags too much gets ignored, and an ignored loop is worse than no loop: it costs money
+per run and provides false assurance that something is being watched.
+
+- **Set a per-run flag budget** when the loop is designed, and rank within it. Three to five items is
+  the practical ceiling for something read daily. If a run produces more, report the top ones and
+  state the total count rather than emitting everything.
+- **Suppress what has already been dismissed.** A finding a human has seen and consciously accepted
+  stops being reported until it materially changes. That decision belongs in the ledger, with the
+  date and the reason, so the next run can read it.
+- **Distinguish new from continuing.** "Still true since Tuesday" and "started today" need different
+  treatment, and collapsing them is what makes a daily loop feel like the same email every morning.
+- **Track the ignore rate.** If nothing from the last several runs prompted any action, that is a
+  finding about the loop. Either the thresholds are too loose or the thing being watched does not
+  need watching at this cadence. Say so and propose a change.
+- **Never fix fatigue by quietly widening thresholds.** Loosening a threshold until the loop stops
+  complaining converts a noisy loop into a decorative one, and the second failure is harder to
+  notice than the first. If a threshold changes, record what it was, what it became, and why.
+
+---
+
+## The Loop Has to Be Able to Fail
+
+A loop whose gate cannot return a negative result is a scheduled report, not a check.
+
+- State the condition under which a run reports "nothing to act on", and confirm that condition is
+  reachable with real data.
+- State the condition that would end the loop entirely. A loop with no stop condition accumulates
+  cost indefinitely.
+- If several consecutive runs cannot fail their own gate, the gate is wrong. Report that rather than
+  continuing to pass.

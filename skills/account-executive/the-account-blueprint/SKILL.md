@@ -67,6 +67,14 @@ Each action: who, channel, message angle, desired outcome.
 - Does every buying committee role trace to a role defined in `references/account-lifecycle.md` (Champion, Economic Buyer, Technical Evaluator, End User, Blocker), with no other role names used?
 - Does the threading depth match the actual contact count against the five-tier scale (5+/3-4/2/1/0)?
 - Is the 90-day plan organized by phases (Week 1-2, Week 3-4, etc.), not a week-by-week list?
+- Does the plan carry a review checkpoint with a date, and the specific change that would make it
+  wrong (a champion leaving, a reorg, a budget freeze, a competitor entering)? A 90-day plan written
+  once and never revisited is a document, not a plan, and the assumptions it rests on are exactly the
+  ones most likely to move inside 90 days.
+- Is every buying-committee status backed by an actual interaction rather than an assumption about who
+  matters? An org chart inferred from job titles is a hypothesis about the committee, and mapping a
+  role to a person nobody has spoken to should be labelled as unconfirmed rather than shown as
+  coverage.
 
 If any check fails, correct it before returning the output.
 

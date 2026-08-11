@@ -7,6 +7,12 @@ description: "Takes a dispute or chargeback export and finds whether the dispute
 
 Take a dispute export and work out how much of it is real fraud versus a service failure or friendly fraud, using a stated dating rule and a stated set of clustering dimensions, not an impression of "chargebacks are up."
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Dispute rates need their denominator shown, and a low-volume segment will always look extreme. This skill already dates disputes to the sale rather than the filing; the volume floor and the partial-maturity rule matter just as much, since recent periods look clean only because disputes have not arrived yet.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

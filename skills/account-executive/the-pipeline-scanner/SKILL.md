@@ -37,7 +37,17 @@ description: "Analyze pipeline health: deal velocity, stuck deals, risk signals,
    - Forecast categories (Commit/Best Case/Pipeline/Omit) were assigned using the reference file's criteria, not arbitrary judgment
    - "Stuck" deals are flagged only when days in stage exceed 2x the average stage duration
    - Any deal missing a data field is noted as a gap, not silently filled in or dropped
-   - The Top 3 Actions are the highest pipeline-impact items, not just the first three deals reviewed
+   - The Top 3 Actions are the highest pipeline-impact items, not just the first three deals reviewed.
+     If fewer than three deals genuinely warrant action, list only those and say so rather than
+     padding to three.
+   - Forecast categories are reported alongside how the previous period's categories actually
+     resolved, where the user can supply it. A Commit category that historically closes at 60% is a
+     Best Case category wearing the wrong label, and an uncalibrated forecast is a restatement of the
+     reps' optimism rather than a prediction. If no history is available, say the categories are
+     uncalibrated rather than presenting the totals as a forecast.
+   - Stage durations and activity recency are marked as system-captured or rep-entered. Where stage
+     changes are set manually, a deal can look healthy because it was advanced rather than because it
+     progressed, and "days in stage" measures when someone last clicked.
 
    If any check fails, fix it before delivering.
 

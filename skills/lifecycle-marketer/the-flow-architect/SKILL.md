@@ -27,6 +27,31 @@ description: Design multi-channel journeys with conditional branching, holdouts,
     - Email: max 1 per day, 3 per week
     - SMS: max 2 per week, quiet hours 9pm-9am local
     - Push: max 3 per day
+
+    Per-channel caps are not enough on their own. State the **global per-contact cap across every
+    active journey**, because a contact enrolled in three journeys that each respect their own caps
+    still receives three times the intended volume, and each journey looks correct in isolation. Name
+    which other journeys can overlap with this one and set either a precedence order or a shared
+    budget. If the platform cannot enforce a cross-journey cap, say so: the caps in this blueprint are
+    then per-journey only, which is a real limitation rather than a detail.
+
+11a. Define **exit conditions**, which are separate from the journey simply ending:
+    - **Goal achieved.** The moment the contact does the thing the journey exists to cause, they
+      leave. Without this, someone who converts on step 2 receives the rest of the nurture sequence,
+      and a "still thinking it over?" message three days after they paid is the most damaging
+      routine failure in lifecycle marketing.
+    - **Opt-out or unsubscribe.** Immediate exit from every journey, not just this one.
+    - **Negative signal.** A cancellation, a refund, a support escalation, or a churn event should
+      pull the contact out of upsell and advocacy journeys rather than continuing them.
+    - **Stage change.** If the journey is scoped to a lifecycle stage, moving out of that stage
+      exits it.
+    - **Max duration.** A hard ceiling so nobody sits in a journey indefinitely because a condition
+      never resolved.
+    - **Suppression list membership**, checked at every send node rather than only at entry.
+
+    For each exit, say whether it is checked continuously or only at the next node. An exit evaluated
+    only at the next node still sends whatever was already queued, which for a conversion exit means
+    the message goes out anyway.
 12. Specify holdout group if measuring incremental lift (recommend 10% holdout).
 13. Define success metrics tied to the journey goal.
 
@@ -37,7 +62,12 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 - **Entry**: Trigger event/segment, estimated audience size methodology
 - **Flow Diagram**: ASCII representation of the journey (use arrows, branches, labels)
 - **Node Detail Table**: Columns: # | Type | Channel | Content Direction | Timing
-- **Guardrails**: Per-channel frequency caps and quiet hours
+- **Guardrails**: Per-channel frequency caps and quiet hours, plus the global per-contact cap across
+  all active journeys, the journeys that can overlap with this one, and their precedence. State
+  explicitly if the platform cannot enforce a cross-journey cap.
+- **Exits**: every exit condition, and for each one whether it is evaluated continuously or at the
+  next node. Goal-achieved and opt-out must be continuous: an exit checked only at the next node
+  still delivers what is already queued.
 - **Holdout**: Holdout percentage and measurement approach
 - **Success Metrics**: Primary and secondary metrics for the journey
 

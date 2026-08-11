@@ -6,6 +6,12 @@ tools: WebFetch, WebSearch
 
 > **Boundary:** This skill covers AI-citation-specific structure and authority on top of a site's existing SEO foundation. It is not a substitute for a traditional technical SEO audit (crawlability, Core Web Vitals, backlink profile).
 
+> **Findings discipline.** Read `references/audit-findings-discipline.md` before writing the
+> output. It covers what happens to a finding after it is written: the audit's date and exact
+> scope, a re-audit trigger stated as an event, severity paired with effort so the list
+> resolves into a sequence, and a baseline captured before anything changes so the fixes are
+> attributable. Its re-audit trigger is a page rewrite or a change to the site's robots policy. Its top-3-fixes output should carry effort, since an llms.txt file and restructuring a page are very different costs.
+
 ## Context
 
 1. Check for `.agents/product-context.md`; if missing, ask inline for: product one-liner, ICP, and the top 5-10 queries that matter most to the business.

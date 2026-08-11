@@ -7,6 +7,12 @@ description: "Takes one of the user's own metrics and checks it against a stated
 
 Take one metric the user cares about and tell them, honestly, whether it is good, average, or concerning relative to a real reference point, stated clearly, never a confident-sounding number this skill invented on the spot.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Confirm the user's metric is defined the same way as the benchmark's before comparing: tax and shipping inclusion, and what counts as an order, differ between sources and account for most apparent gaps.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before comparing. Do not proceed with a comparison the user hasn't actually asked for.

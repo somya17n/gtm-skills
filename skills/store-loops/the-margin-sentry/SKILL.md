@@ -7,6 +7,9 @@ description: "Watches per-SKU contribution margin on a recurring cadence and fla
 
 Recompute the contribution margin stack on a cadence and report the *changes* - which SKUs crossed a floor, in which direction, and what moved. A margin table tells you where you stand. This tells you what just broke.
 
+> **Loop discipline.** Read `references/loop-cadence-guide.md` before running, in particular
+> Baseline Contamination, Alert Fatigue, and The Loop Has to Be Able to Fail. This loop diffs against the last run, so a SKU whose margin was already flagged must not silently become the new normal that later runs are measured against.
+
 ## How to run
 
 1. **The same inputs `the-margin-builder` requires**, for the current period: revenue basis, COGS, fee rates, shipping cost, and attributed ad spend per SKU. This loop does not invent a shortcut around missing cost data.

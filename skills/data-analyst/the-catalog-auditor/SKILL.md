@@ -7,6 +7,18 @@ description: "Audits a whole product catalog export for missing attributes, thin
 
 Take a product catalog export and find where content is missing, thin, or duplicated, counted across every row rather than a sampled impression of a few products.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Rank findings by revenue impact rather than by rate, and check the export was not silently truncated by a row limit before concluding the catalog is complete.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
+> **Findings discipline.** Read `references/audit-findings-discipline.md` before writing the
+> output. It covers what happens to a finding after it is written: the audit's date and exact
+> scope, a re-audit trigger stated as an event, severity paired with effort so the list
+> resolves into a sequence, and a baseline captured before anything changes so the fixes are
+> attributable. It already ranks by revenue rather than row count, which is the severity half. Add effort so a 4000-SKU list resolves into a sequence someone can start.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

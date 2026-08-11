@@ -7,6 +7,9 @@ description: "Runs a recurring diff on product feed and catalog health, reportin
 
 A full feed audit tells you everything wrong with the feed, which on a real catalog is a list nobody reads twice. This loop runs the audit on a cadence and reports only what changed, so a disapproval that appeared overnight is visible instead of buried under 400 known issues.
 
+> **Loop discipline.** Read `references/loop-cadence-guide.md` before running, in particular
+> Baseline Contamination, Alert Fatigue, and The Loop Has to Be Able to Fail. This loop reports the delta since the last run, so a standing disapproval that was flagged and consciously accepted belongs in the ledger as dismissed rather than being re-reported every day.
+
 ## How to run
 
 1. **The current feed export** and the channel it targets: Google Shopping, Meta catalog, TikTok catalog, or a marketplace. Requirements differ per channel and a diff across two different channels is meaningless.

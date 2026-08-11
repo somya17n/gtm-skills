@@ -7,6 +7,12 @@ description: "Takes a structured returns or RMA export with reason codes tied to
 
 Take a returns export with SKU-level reason codes and find which products have a real return concentration problem and which coded reason is driving it, using a stated concentration threshold, not a read of whichever returns feel memorable.
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Return rates on low-volume SKUs are the classic false finding here: one return out of three orders is 33% and means nothing. Date every return to the original sale, not the return date.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

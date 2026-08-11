@@ -7,6 +7,12 @@ description: "Turns onsite search query logs, including zero-result queries, int
 
 Turn onsite search query logs into specific fixes: synonym rules, naming corrections, and collection pages for demand the store isn't answering.
 
+> **Findings discipline.** Read `references/audit-findings-discipline.md` before writing the
+> output. It covers what happens to a finding after it is written: the audit's date and exact
+> scope, a re-audit trigger stated as an event, severity paired with effort so the list
+> resolves into a sequence, and a baseline captured before anything changes so the fixes are
+> attributable. Query findings need effort alongside volume, since a synonym rule and a new collection page are not the same cost. Where zero-result logging is off, instrumenting it is the prerequisite finding and belongs first.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before analyzing.

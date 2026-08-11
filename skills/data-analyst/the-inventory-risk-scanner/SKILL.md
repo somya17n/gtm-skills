@@ -7,6 +7,12 @@ description: "Turns a SKU-level inventory export and sales history into a stocko
 
 Score each SKU's stockout and overstock risk from on-hand units, sales velocity, and lead time, using a stated days-of-cover method the user can check, not an impression of "this looks low."
 
+> **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
+> anything, and report what they found. Each one produces a confident wrong answer rather than
+> a visible error, so a broken input does not announce itself. Velocity computed across a partial final period understates demand and produces a falsely comfortable days-of-cover. Exclude or mark the incomplete bucket.
+> Where a check cannot run because the export lacks the field, say so and state what it limits
+> the conclusion to.
+
 ## How to run
 
 Ask the user for these inputs. If any are missing, ask before scoring anything.
