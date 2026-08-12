@@ -1,6 +1,6 @@
 ---
 name: the-workflow-builder
-description: Design marketing and sales automation workflows with trigger-condition-action patterns, branching logic, error handling, and integration points.
+description: "Designs a marketing or sales automation as a specification: trigger, entry conditions, actions, branching, wait logic, error handling, the scheduled data assertions that catch a silent integration failure where nothing errors but values are wrong, plus a named owner, an audit date and a retirement condition. Use when automating an internal handoff or a repetitive process, or when an existing automation is misfiring and nobody can say why. Boundary: `the-flow-architect` designs customer-facing lifecycle journeys with messaging in them, while this skill designs the operational plumbing. `the-routing-engine` covers lead scoring and routing specifically."
 ---
 
 > **Automations fail quietly.** Read **Why Automations Fail Quietly** in

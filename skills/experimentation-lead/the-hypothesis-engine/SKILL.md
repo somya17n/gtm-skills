@@ -1,6 +1,6 @@
 ---
 name: the-hypothesis-engine
-description: Design Bayesian experiences with Thompson sampling, guardrails, holdouts, and exit criteria. Use for experience optimization and variant testing.
+description: "Designs a runnable experiment: the hypothesis stated so that it can actually fail, the variants, Bayesian allocation with Thompson sampling, guardrail metrics, a holdout, required sample size and duration, explicit exit criteria, and the validity threats that would invalidate the read. Use when planning an A/B or multi-armed test, or when a previous test produced a result nobody trusts. Boundary: `the-variant-router` designs personalisation rules that deliberately serve different audiences different content with no winner ever declared, whereas this skill runs a test to find one."
 ---
 
 > **Vocabulary:** Use "Experience" throughout, not "experiment" or "A/B test." This matches Intempt product terminology. When the reference file uses "experiment," translate to "experience" in all output.

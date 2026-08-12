@@ -1,6 +1,6 @@
 ---
 name: the-first-mile-mapper
-description: 'Design the post-signup activation flow: what happens between signup and the "aha moment," in what order, and how drop-off is diagnosed and fixed. Use when users are signing up but not activating or sticking around.'
+description: "Designs the post-signup activation path: what happens between signup and first real value, in what order, which step is the actual aha moment rather than a convenient proxy for it, and how drop-off at each step gets diagnosed and fixed. Use when users sign up but do not activate, or when onboarding has never been designed deliberately. Boundary: covers signup to first value for a product. `the-campaign-engine` writes the welcome messaging that carries it, and `the-leak-finder` diagnoses drop-off across any funnel rather than the activation path specifically."
 ---
 
 > **Boundary:** This skill designs the activation flow and strategy. For producing one specific video asset for one moment in that flow, use `the-activation-reel`. For the lifecycle email/SMS sequence that supports onboarding, use `the-campaign-engine`. For diagnosing drop-off with actual funnel numbers already in hand, use `the-leak-finder`.

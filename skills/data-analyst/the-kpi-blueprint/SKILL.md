@@ -1,6 +1,6 @@
 ---
 name: the-kpi-blueprint
-description: Design KPI dashboards with metric formulas, visualization types, alert thresholds, and layout wireframes. Use for marketing, sales, exec, product, or CS dashboards.
+description: "Designs a KPI dashboard: the metric list with an explicit formula per metric, the visualisation form chosen from the question each answers, alert thresholds, and a layout wireframe. Use when building or rebuilding a marketing, sales, exec, product or CS dashboard, or when an existing one is not being read. Boundary: this designs the dashboard and its thresholds. `the-anomaly-alert` then judges whether a specific movement is genuinely abnormal, and `the-weekly-reporter` writes the recurring narrative readout that sits on top."
 ---
 
 ## Context

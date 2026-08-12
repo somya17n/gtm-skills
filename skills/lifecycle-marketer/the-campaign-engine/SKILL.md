@@ -1,6 +1,6 @@
 ---
 name: the-campaign-engine
-description: "Designs a lifecycle campaign end to end and decides whether it should run once or run forever: email sequences with subject variants and deliverability gates, SMS and push with carrier registration and consent gates, and the recurring-loop version of either with a cadence matched to how fast its signal actually moves. Use for welcome, nurture, convert, retain, win-back and announce campaigns on any channel, and when a campaign should become an always-on motion rather than a one-off send."
+description: "Designs a lifecycle campaign end to end and decides whether it runs once or runs forever: email sequences with subject variants and deliverability gates, SMS and push with carrier registration and consent gates, and the recurring version of either with a cadence matched to how fast its signal actually moves. Use for welcome, nurture, convert, retain, win-back and announce campaigns on any channel, and when deciding whether a campaign should become an always-on motion. Boundary: writes the messaging. `the-flow-architect` designs the multi-step journey structure it sits inside, and `the-lifecycle-mapper` defines the audience it targets."
 ---
 
 # The Campaign Engine

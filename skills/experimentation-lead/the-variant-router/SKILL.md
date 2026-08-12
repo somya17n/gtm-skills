@@ -1,6 +1,6 @@
 ---
 name: the-variant-router
-description: Design personalization rules mapping audiences to content variants with measurement plans. Use for dynamic content on pages, emails, and in-app.
+description: "Designs personalisation rules that map an audience to a content variant, with the eligibility condition, the fallback for everyone who matches nothing, and a per-experience measurement plan. Use for dynamic content on pages, in emails or in-app, once the segments exist. Boundary: this serves different audiences different content permanently, with no winner declared. `the-hypothesis-engine` runs a test to pick one winner instead. Segment definitions come from `the-lifecycle-mapper`."
 ---
 
 > **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check

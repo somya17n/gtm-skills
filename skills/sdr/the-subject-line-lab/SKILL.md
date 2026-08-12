@@ -1,6 +1,6 @@
 ---
 name: the-subject-line-lab
-description: Takes a cold email body and target persona and generates five scored subject line variants with a recommendation. Use when the user wants to test subject line options before sending a sequence at scale.
+description: "Takes a cold email body and a target persona and generates five scored subject line variants with a recommendation and the reason it wins. Use when testing subject line options before sending a sequence at scale. Boundary: subject lines only, for a body that already exists. `the-cold-opener` writes the body, and `the-sequence-doctor` audits a whole sequence including its subjects."
 ---
 
 # The Subject Line Lab

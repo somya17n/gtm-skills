@@ -1,6 +1,6 @@
 ---
 name: the-lever-finder
-description: Get a prioritized growth strategy with maturity assessment, growth levers, channel priorities, and quarterly plan. Use for strategic planning and growth audits.
+description: "Produces a prioritised growth plan: a maturity read, the candidate levers scored on effort, risk and reward, channel priorities, a 70-20-10 allocation where there is ongoing capacity, and an explicit statement of what is being declined for now. Use for quarterly or annual growth planning, or when there are more good ideas than the team can actually run. Boundary: `the-leak-finder` diagnoses where one specific funnel loses people, and `the-hypothesis-engine` designs the test for a lever once it has been chosen."
 ---
 
 > **Focus is the deliverable.** Read **Priority Dilution: The Actual Failure Mode** in

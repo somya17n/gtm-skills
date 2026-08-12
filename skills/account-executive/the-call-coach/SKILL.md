@@ -1,6 +1,6 @@
 ---
 name: the-call-coach
-description: "Pre-meeting prep and post-meeting coaching: talk ratio, BANT/MEDDIC scoring, objection tracking, drills."
+description: "Two modes for one specific meeting: pre-call prep, covering the agenda, discovery questions and the single thing that must be established, and post-call coaching, covering talk ratio, BANT or MEDDIC completeness, every objection raised and how it was handled, and a drill for the weakest habit. Use before a scheduled sales call, or immediately after one while the detail is fresh. Boundary: `the-transcript-miner` extracts deal facts from the same call for the follow-up and the CRM, while this skill grades the rep's own performance. `the-negotiation-coach` covers a pricing or terms conversation specifically."
 ---
 
 > **Weight the metrics by signal strength.** Read **What the Conversation Data Actually Supports** in

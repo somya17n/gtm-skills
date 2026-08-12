@@ -1,6 +1,6 @@
 ---
 name: the-transcript-miner
-description: Takes a raw sales call transcript and extracts deal signals, objections, confirmed pain points, a stakeholder map, and a specific recommended next action. Use when the user wants to analyze a discovery call before writing a follow-up email or updating a CRM record.
+description: "Reads a raw sales call transcript and extracts what the follow-up needs: deal signals, objections raised, pain points the prospect actually confirmed rather than ones the rep suggested, a stakeholder map, and one specific recommended next action. Use after a discovery call, before writing the follow-up email or updating the CRM record. Boundary: extracts deal facts for the follow-up and the CRM, while `the-call-coach` grades the rep's own performance on that same call."
 ---
 
 # The Transcript Miner

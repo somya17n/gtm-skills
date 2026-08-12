@@ -1,6 +1,6 @@
 ---
 name: the-loop-designer
-description: "Turns a recurring store question into a runnable loop: a cadence, an objective gate that can fail the work, a stop condition, and a state file. Use when the user keeps re-running the same store check by hand and wants it to run on a schedule instead. Boundary: `the-workflow-builder` (GTM Engineer) designs marketing and sales automation that runs inside a platform; this skill designs the agent-side loop that runs in Claude Code, and its defining output is the gate, not the automation."
+description: "Turns a recurring store question into a runnable loop specification: a cadence, an objective gate that can fail the work, a stop condition, an approval boundary, and the state file it reads. Use when the user keeps re-running the same store check by hand and wants it to run on a schedule instead. Boundary: this designs a loop that does not exist yet, and its defining output is the gate. `the-loop-ledger` creates and maintains the state file that loops read and append to once they are running. `the-workflow-builder` designs in-platform marketing and sales automation rather than an agent-side loop."
 ---
 
 # The Loop Designer

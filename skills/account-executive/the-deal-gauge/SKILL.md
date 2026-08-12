@@ -1,6 +1,6 @@
 ---
 name: the-deal-gauge
-description: Score deals with dual health + intent analysis, trend tracking, and MEDDIC/BANT completeness. Use for deal assessment.
+description: "Scores one deal in depth on two independent axes, health and buyer intent, tracks the direction of travel since the last review, checks MEDDIC or BANT completeness, and returns a prioritised list of three to five specific next steps from where the deal lands. Use when a single deal needs an honest read before a forecast call, a renewal conversation, or a decision to keep investing in it. Boundary: `the-pipeline-scanner` triages the whole pipeline to decide which deals deserve this level of attention. For renewal risk on an existing customer use `the-renewal-tracker`."
 ---
 
 > **What a score is worth downstream.** Read **Forecast Accuracy: What "Commit" Is Actually Worth** in

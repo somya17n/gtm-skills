@@ -1,6 +1,6 @@
 ---
 name: the-voice-fingerprint
-description: Analyze content samples to extract a brand voice profile, dimensions, vocabulary, sentence patterns, channel adaptations.
+description: "Analyses real content samples and extracts a brand voice profile as a checkable artifact: tone dimensions each carrying at least one followable rule, required and banned vocabulary, sentence and paragraph patterns, channel adaptations, and a weighted scorecard with a publish-ready threshold to grade drafts against. Use when onboarding a writer or agency, when AI-generated copy is drifting off-brand, or when nobody on the team can say concretely what on-brand means. Boundary: `product-context` captures a short voice summary inside the shared context file, while this skill produces the full profile and the scorecard."
 ---
 
 > **Ship a scorecard, not a description.** Read **Why Voice Profiles Fail, and What to Ship Instead** in

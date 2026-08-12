@@ -1,6 +1,6 @@
 ---
 name: the-leak-finder
-description: Diagnose funnel drop-offs with conversion benchmarks, root cause analysis, and optimization roadmap. Use for marketing, sales, or product funnels.
+description: "Diagnoses where a funnel loses people: stage-by-stage conversion against benchmarks, the drop-offs ranked by the spread they represent rather than by the worst absolute number, likely root causes, and an ordered fix roadmap. Use when conversion is weak on a marketing, sales or product funnel and it is not yet clear which step is responsible. Boundary: locates and ranks the leak, while `the-hypothesis-engine` designs the test for the fix. For checkout specifically use `the-checkout-auditor`, and for post-signup activation use `the-first-mile-mapper`."
 ---
 
 > **Chart form.** Read `references/chart-form-and-accessibility.md` before specifying how any

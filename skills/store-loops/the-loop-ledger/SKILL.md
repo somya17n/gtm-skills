@@ -1,6 +1,6 @@
 ---
 name: the-loop-ledger
-description: "Creates and maintains the state file every store loop reads and appends to, recording what each run checked, what it flagged, what changed, and which recurring patterns to stop flagging. Use before running any loop on a cadence, and whenever a loop keeps re-reporting something already dismissed. Boundary: `product-context` stores who the business is and what it sells, and rarely changes. This file stores what the loops have done and learned, and changes every run."
+description: "Creates and maintains `.agents/store-loop-ledger.md`, the state file every store loop reads and appends to, recording what each run checked, what it flagged, what changed, and which recurring patterns to stop flagging. Use before running any loop on a cadence, and whenever a loop keeps re-reporting something already dismissed. Boundary: `the-loop-designer` specifies a new loop and its gate, whereas this skill owns the shared memory that existing loops write to between runs. `product-context` stores who the business is and rarely changes; this file stores what the loops have learned and changes every run."
 ---
 
 # The Loop Ledger

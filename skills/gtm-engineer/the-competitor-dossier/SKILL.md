@@ -1,6 +1,6 @@
 ---
 name: the-competitor-dossier
-description: "Researches a competitor from public sources and builds a structured profile (positioning, pricing, strengths/weaknesses, competitive implications), and turns a prospect's known tool stack into a call-ready displacement angle. Use when the user wants deep competitor research, a displacement angle for a specific prospect, or both. Two modes: Mode A researches the competitor, Mode B converts a prospect's stack into the specific inefficiency it creates, two call questions and an email hook."
+description: "Two modes. Mode A researches a competitor from public sources into a structured, comparable profile: positioning, pricing, strengths and weaknesses, and the competitive implications. Mode B converts a prospect's known tool stack into a call-ready displacement angle: the specific inefficiency that stack creates, two call questions, and an email hook. Use when you need deep competitor research, a displacement angle for a named prospect, or both. Boundary: `the-win-loss-analyzer` finds which competitors actually beat you using your own closed deals, whereas this skill works from public sources and a stated stack."
 tools: WebFetch, WebSearch
 ---
 

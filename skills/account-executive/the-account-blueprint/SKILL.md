@@ -1,6 +1,6 @@
 ---
 name: the-account-blueprint
-description: "Build account engagement plans: buying committee mapping, multi-threading assessment, 90-day action plan."
+description: "Builds the engagement plan for one named strategic account: a buying committee map that names the roles still missing, a multi-threading assessment against the account's realistic committee size, and a 90-day action plan with an owner per play. Researches the account from public sources before asking for anything the web can answer. Use when a deal matters enough to plan deliberately, when it is single-threaded on one contact, or when a committee has gone quiet. Boundary: `the-deal-gauge` scores an existing deal's health and intent, while this skill builds the relationship plan for working the account. For one specific upcoming conversation use `the-call-coach`."
 ---
 
 ## Context

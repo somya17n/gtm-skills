@@ -1,6 +1,6 @@
 ---
 name: the-feed-watch
-description: "Runs a recurring diff on product feed and catalog health, reporting only what broke since the last run - new disapprovals, newly missing attributes, and fresh price or availability mismatches. Use daily or every other day on any store running Shopping, catalog, or marketplace ads. It carries the full channel-requirement audit itself (required attributes, disapproval risk, feed-versus-page price and availability mismatch) and runs it on a cadence, reporting only the delta so a standing backlog of known gaps does not drown the new breakage."
+description: "Runs a recurring diff on product feed and catalog health, reporting only what broke since the last run: new disapprovals, newly missing required attributes, and fresh feed-versus-page price or availability mismatches. Carries the full channel-requirement audit itself and runs it on a cadence so a standing backlog of known gaps cannot drown new breakage. Use daily or every other day on any store running Shopping, catalog or marketplace ads. Boundary: `the-catalog-auditor` runs a one-time full-catalogue content audit ranked by revenue, whereas this loop reports only the delta."
 ---
 
 # The Feed Watch

@@ -1,6 +1,6 @@
 ---
 name: the-price-point-finder
-description: "Design pricing and packaging: value metric selection, tier structure, price points, and price-increase timing. Use when the user wants help setting prices, restructuring plans, or deciding whether and how to raise prices."
+description: "Designs pricing and packaging: the value metric to charge on, tier structure, the price points themselves, and the timing and framing of an increase. Flags the case where an absence of price objections is evidence of being underpriced. Use when setting prices for the first time, restructuring plans, or deciding whether and how to raise them. Boundary: sets the structure. `the-negotiation-coach` handles discounting on one live deal, and `the-margin-builder` computes what a given price actually earns after every variable cost."
 ---
 
 > **Boundary:** For in-app upgrade/upsell screens shown to existing users, that's a different job than plan design. This skill covers the pricing strategy itself. For cancel-flow save offers and dunning, use `the-save-desk`. For pricing page copy, use `the-page-shipper`.

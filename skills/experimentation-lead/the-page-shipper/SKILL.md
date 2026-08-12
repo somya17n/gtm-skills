@@ -1,6 +1,6 @@
 ---
 name: the-page-shipper
-description: Design conversion-optimized landing pages with copy frameworks and prototype-ready HTML/Tailwind output. Use for lead capture, signups, and launches.
+description: "Designs a conversion-focused landing page: the copy framework matched to traffic source and awareness stage, section order, form length, proof placement, and prototype-ready HTML with Tailwind. Use for a lead capture page, a signup page or a launch page that does not exist yet. Boundary: builds a new page from scratch. `the-pdp-reviewer` reviews an existing product detail page, and `the-checkout-auditor` reviews cart and checkout."
 ---
 
 > **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check

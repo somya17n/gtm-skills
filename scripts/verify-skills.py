@@ -59,6 +59,14 @@ for p in SK:
         P.append("description too short (%d chars) - weak routing" % len(desc))
     elif "One sentence" in desc or "what this skill does" in desc:
         P.append("PLACEHOLDER description")
+    # routing: a description needs an invocation trigger and a disambiguating boundary
+    if desc and not re.search(r"\bUse (when|for|to|after|before|if|daily|weekly|as )\b|\bRun this first\b",
+                              desc, re.I):
+        P.append("no invocation trigger - will not auto-route")
+    if desc and not re.search(r"\b(Boundary|Pairs with|differs from|Not for)\b", desc, re.I):
+        P.append("no boundary clause - may collide with a neighbouring skill")
+    rec["desc_main"] = re.split(r"Boundary:", desc)[0]
+    rec["desc_refs"] = set(re.findall(r"`(the-[a-z-]+|product-context)`", desc))
 
     # 2. body sections
     heads = re.findall(r"^##+ (.+)$", body, re.M)
@@ -150,6 +158,22 @@ for p in SK:
 
     rows.append(rec)
 
+# ---- routing collisions: high-overlap description pairs need a mutual boundary ----
+import itertools
+STOP = set(("the a an and or for to of in on with when use this that it its from than rather not is are "
+            "be as by at into out only per each every uses using boundary skill skills user users what "
+            "which who how does do").split())
+TOK = {r["name"]: {w for w in re.findall(r"[a-z]{4,}", r.get("desc_main", "").lower()) if w not in STOP}
+       for r in rows}
+REFS = {r["name"]: r.get("desc_refs", set()) for r in rows}
+collisions = []
+for a, b in itertools.combinations(sorted(TOK), 2):
+    u = TOK[a] | TOK[b]
+    j = len(TOK[a] & TOK[b]) / len(u) if u else 0
+    if j >= 0.22 and b not in REFS[a] and a not in REFS[b]:
+        collisions.append((j, a, b))
+        problems[a].append("routing collision with %s (%.0f%% overlap, no mutual boundary)" % (b, j * 100))
+
 # ================= REPORT =================
 bad = {k: v for k, v in problems.items() if v}
 print("=" * 74)
@@ -163,6 +187,9 @@ dl = sorted(r["desc_len"] for r in rows)
 print("body words          : min %d / median %d / max %d" % (w[0], w[len(w) // 2], w[-1]))
 print("description chars   : min %d / median %d / max %d" % (dl[0], dl[len(dl) // 2], dl[-1]))
 print("skills citing refs  : %d of %d" % (sum(1 for r in rows if r["refs"]), len(rows)))
+print("routing: with trigger + boundary, and 0 unguarded collisions")
+print("  naming a neighbour : %d of %d" % (sum(1 for n in REFS if REFS[n]), len(rows)))
+print("  unguarded pairs    : %d" % len(collisions))
 
 print()
 print("=" * 74)

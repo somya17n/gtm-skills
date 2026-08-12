@@ -1,6 +1,6 @@
 ---
 name: the-objection-playbook
-description: Takes a product description, ICP, and target persona and outputs the five most likely objections with a specific acknowledgment, response, and follow-up question for each. Use when the user wants to prepare for cold calls, onboard a new rep, or build objection handling into a sequence.
+description: "Takes a product description, ICP and target persona and outputs the five most likely objections, each with a specific acknowledgment, a response, and the follow-up question that moves past it. Use when preparing for cold calls, onboarding a new rep, or building objection handling into a sequence before it launches. Boundary: this prepares responses in advance for a persona. `the-reply-classifier` handles an objection that has already arrived in a real reply, and `the-negotiation-coach` handles a live pricing or terms push on one deal."
 ---
 
 # The Objection Playbook

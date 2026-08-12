@@ -1,6 +1,6 @@
 ---
 name: the-activation-reel
-description: Produce short, conversion-focused onboarding videos in Remotion for iOS apps, Android apps, or websites that companies embed into their onboarding flows to push New Customers toward their activation moment. Each beat maps to a conversion milestone tracked by Intempt. Every video ends with a "Powered by Intempt" end card. Use when the user asks to create, build, or generate an onboarding video, app preview, activation demo, or any short video that demonstrates a product feature to drive New Customers toward Promising.
+description: "Produces a short conversion-focused onboarding video in Remotion for an iOS app, Android app or website, embedded into an onboarding flow to move New Customers toward their activation moment, with each beat mapped to a conversion milestone that can be tracked. Use when asked to create, build or generate an onboarding video, app preview, activation demo, or any short video that demonstrates a product feature to drive activation. Boundary: `the-scene-composer` directs still photography and `the-angle-vault` produces the messaging brief. This skill renders an actual video."
 ---
 
 # The Activation Reel

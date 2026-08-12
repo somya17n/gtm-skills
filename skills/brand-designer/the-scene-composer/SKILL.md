@@ -1,6 +1,6 @@
 ---
 name: the-scene-composer
-description: "Generate photography direction using a composable scene system: 160+ blocks across 10 dimensions."
+description: "Turns a product into photography direction as a shootable set: subject, styling, environment, lighting, composition and camera treatment composed from a block system, scoped to five to eight images per product and matched to the store's existing catalogue treatment. Use when briefing a photographer or an image generator, before a product shoot, or when catalogue imagery is visually inconsistent from product to product. Boundary: `the-angle-vault` decides the messaging angle and placement before the shoot, and `the-pdp-reviewer` reviews a live product page including its images. This skill only directs new imagery."
 ---
 
 > **Direct a set, and match the catalogue.** Read **The Set Beats the Shot** and **Consistency Across the

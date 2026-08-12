@@ -382,3 +382,70 @@ Below: "Join 2,000+ teams who made the switch." + CTA
 
 **Why before/after outperforms feature ads for SaaS:**
 Viewers self-insert into the before state more than they self-insert into feature demonstrations. The transformation is the story; features are just evidence.
+
+---
+
+## Angle Beats Execution, and the Two Are Constantly Confused
+
+The angle is the argument the ad makes. The execution is how that argument is packaged: headline wording,
+visual treatment, CTA phrasing. **The right angle with mediocre execution generally outperforms the wrong
+angle with excellent execution**, which is why angle sits at the top of the creative hierarchy and
+execution tests are secondary.
+
+The recurring failure: a team ships five creatives with different approaches *and* different packaging,
+then cannot say whether the winner won on its visual, its copy, or its argument. Nothing is learned and
+the next round starts from zero again.
+
+**The isolation test.** If you can swap the headline, visual and CTA without changing the underlying
+argument, you have isolated an angle. If those swaps change the argument, you were testing executions and
+calling them angles.
+
+### How many angles actually exist
+
+Most brands have **three to five genuinely distinct angles** worth testing. Past that, what look like new
+angles are variations on the same core message. Recommending eight is not thoroughness, it is the same
+argument wearing different clothes — and it burns budget proving that.
+
+### Diversity means differing on at least two axes
+
+Real creative diversity means the set differs on at least two of three axes:
+
+| Axis | The question |
+|---|---|
+| **Persona** | Who is speaking, or who is being spoken to |
+| **Angle** | What argument is being made |
+| **Format** | How the ad is packaged |
+
+This matters mechanically, not just conceptually: ad platforms cluster near-identical creatives into a
+single entity for delivery. Twelve versions of one product shot with different background colours are
+treated as **one ad**, so the test produces no signal at all. Different thumbnails are not diversity.
+
+## Diagnosing Fatigue: Two Problems That Look Identical
+
+A declining creative and a wrong-angle creative look the same on a dashboard, and they need opposite
+fixes. Separate them before recommending anything.
+
+**Fatigue signals** — the audience has seen it too many times:
+
+| Signal | Threshold |
+|---|---|
+| 7-day frequency, prospecting | Above ~2.5 monitor; past ~4.0 performance falls off a cliff |
+| 7-day frequency, retargeting | ~2.5 monitor, ~3.5 hard refresh trigger |
+| CTR decline | Down 20-25%, sustained 3+ days |
+| CPM rise | Up 15-20%+ with no auction event to explain it |
+
+The cost of waiting is steep: past 5-8 views, conversion rates fall by roughly **45%** and CTR by roughly
+**50%**, and at 5+ exposures cost per result climbs **50-80%**.
+
+**So the diagnosis splits:**
+
+- **High frequency + falling CTR = fatigue.** The angle may still be right. New *executions* of the same
+  angle can recover it, and adding new creative into a fatigued ad set has a measured causal improvement
+  in conversion rate. Plan 4-6 executions per proven winner.
+- **Low frequency + falling or never-good CTR = the angle is wrong.** New executions will not help,
+  because the argument is what is failing. This needs a different angle, not a refresh.
+
+Recommending a refresh when the angle was never right is the most expensive mistake available here, and
+the most common. Ask for frequency before diagnosing fatigue. **If frequency is not available, say the
+diagnosis cannot be made rather than guessing from the CTR trend alone** — both causes produce a falling
+CTR, and that is precisely why frequency is the input that separates them.

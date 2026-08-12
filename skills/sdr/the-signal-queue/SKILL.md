@@ -1,6 +1,6 @@
 ---
 name: the-signal-queue
-description: Takes a batch of weekly intent signals across a pipeline and outputs a ranked outreach list with signal, rationale, and suggested channel per account. Use when the user wants to prioritize their Monday morning outreach based on the week's signals.
+description: "Takes a batch of intent signals from across the pipeline and returns a ranked outreach list with the signal, the rationale, and a suggested channel per account, ordered so the week starts with action rather than reading. Use when prioritising a week of outreach around what actually changed. Boundary: ranks by fresh signal and its decay, whereas `the-fit-scorer` ranks by static ICP fit. `the-cold-opener` then writes to whatever this surfaces."
 ---
 
 # The Monday List

@@ -1,6 +1,6 @@
 ---
 name: product-context
-description: "Builds the shared context every other gtm skill reads, by researching the company first and only asking for what research cannot establish: positioning, ICP, brand voice and its banned words, competitors, objections, lifecycle stages, scoring, metrics, and the brand-kit pointers. Run this first, before any other gtm skill."
+description: "Builds the shared context file every other gtm skill reads, researching the company first and asking only for what research cannot establish: positioning, ICP, brand voice and its banned words, competitors, objections, lifecycle stages, scoring definitions, metrics and the brand-kit pointers. Anything unverifiable is tagged as needing input rather than guessed. Run this first, before any other gtm skill. Use when setting up the pack, when another skill reports the context file is missing, or when positioning, ICP or pricing has changed since it was last built. Boundary: this is the only skill that writes the shared context file, and it produces no campaign, copy or analysis output itself."
 tools: WebFetch, WebSearch
 ---
 

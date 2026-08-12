@@ -1,6 +1,6 @@
 ---
 name: the-pipeline-scanner
-description: "Analyze pipeline health: deal velocity, stuck deals, risk signals, forecast accuracy. Use for weekly pipeline reviews."
+description: "Reads a whole pipeline export and returns only what genuinely needs attention: deal velocity against your own stage norms, deals stuck past their stage median, risk signals, and where the forecast is most likely to slip. Lists only the deals that warrant action rather than padding to a fixed count. Use for a weekly pipeline review, before a forecast call, or when the pipeline number looks fine but the deals feel soft. Boundary: `the-deal-gauge` scores one deal in depth, while this skill triages across all of them to decide which ones deserve that."
 ---
 
 > **What a score is worth downstream.** Read **Forecast Accuracy: What "Commit" Is Actually Worth** in

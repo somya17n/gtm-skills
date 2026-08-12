@@ -1,6 +1,6 @@
 ---
 name: the-fit-scorer
-description: Scores an account list against ICP criteria and outputs a priority tier (High/Medium/Low) and one-sentence outreach rationale per account. Use when the user wants to prioritize a list of accounts before an outbound campaign.
+description: "Scores an account list that already exists against ICP criteria and returns a priority tier of High, Medium or Low with a one-sentence outreach rationale per account, plus what was inferred rather than observed. Use when prioritising a list of accounts before an outbound campaign. Boundary: `the-list-builder` sources and qualifies a list that does not exist yet, whereas this skill scores one you already have. `the-list-cleaner` fixes data quality before either runs."
 ---
 
 # The Fit Scorer
