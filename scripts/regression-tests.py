@@ -10,13 +10,24 @@ fails = []
 
 
 def guard(skill, needles, label):
-    """every needle must appear in the skill or a reference it cites"""
+    """every needle must appear in the skill or a reference it cites.
+
+    Matched on word boundaries, not as a bare substring. A plain
+    `"lag" in text` also matches "flag", "flags", "flagged" -- and the
+    corrective guards live in prose full of the word "flag", so the
+    returns-lag guard could be deleted outright while this suite still
+    reported ALL GUARDS PRESENT. That is the exact silent revert the
+    suite exists to catch, so the match has to respect word edges.
+    """
     s = io.open(P[skill], encoding="utf-8").read()
     for c in set(re.findall(r"references/([A-Za-z0-9_.-]+\.md)", s)):
         if c in R:
             s += io.open(R[c], encoding="utf-8").read()
     low = s.lower()
-    missing = [n for n in needles if n.lower() not in low]
+    missing = [
+        n for n in needles
+        if not re.search(r"(?<![a-z])" + re.escape(n.lower()) + r"(?![a-z])", low)
+    ]
     if missing:
         fails.append("%s [%s] missing guard: %s" % (skill, label, missing))
         return "FAIL"
@@ -123,9 +134,9 @@ adj_rate = (returns_seen / lag_share) / shipped_recent
 print("\n9. returns / lag bias")
 print("   %d returns on %d shipped = %.1f%% naive, but only %.0f%% of returns have landed"
       % (returns_seen, shipped_recent, naive_rate * 100, lag_share * 100))
-print("   true ~%.1f%% -> bias %.1fpp, and the sign flips vs older cohorts. Guard:",
-      end=" ")
-print("%.1f%%" % (adj_rate * 100), guard("the-returns-miner", ["lag"], "returns lag"))
+print("   true ~%.1f%% -> bias %.1fpp, and the sign flips vs older cohorts. Guard:"
+      % (adj_rate * 100, (adj_rate - naive_rate) * 100),
+      guard("the-returns-miner", ["lag"], "returns lag"))
 
 m = 0.05
 print("\n10. benchmark / multiply-annualisation")
