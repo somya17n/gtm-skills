@@ -283,3 +283,84 @@ When no custom configuration is provided, these weights apply:
 | Intent Level | 20% |
 
 These weights are configurable per project. Adjusting weights automatically recalculates all customer stages on the next evaluation cycle.
+
+---
+
+## Calibrate Before You Score
+
+The score tables above are **absolute thresholds calibrated for high-frequency retail**: "last
+activity within 1-7 days" as the top recency bucket and "20+ interactions in 90 days" as top
+frequency describe a store someone visits weekly. Applied unchanged to a B2B SaaS on monthly
+billing, or to a considered-purchase category with a 9-month repurchase cycle, they put almost the
+entire base in the bottom two buckets and the segmentation stops discriminating.
+
+**Do two things before scoring anything.**
+
+### 1. Redefine each dimension for the business model
+
+| | High-frequency retail | Subscription / SaaS | Considered purchase |
+|---|---|---|---|
+| **Recency** | Days since last order | Days since last **meaningful** activity, or since renewal | Days since last order, against the category's own repurchase cycle |
+| **Frequency** | Orders in the window | Usage events, or billing cycles completed | Orders per year, not per quarter |
+| **Monetary** | Revenue in the window | MRR or ARPU, or trailing-12-month margin | Order value, and lifetime value where known |
+
+**Use different look-back windows per dimension where the model calls for it.** A single window is a
+retail convenience. For subscription businesses, roughly **90 days for Recency and 12 months for
+Frequency and Monetary** is the better default: recency needs to be sensitive, while frequency and
+monetary need enough history to be stable. State the windows used.
+
+**"Meaningful activity" excludes bare logins.** Login frequency measures access, not engagement. An
+account logging in daily with no expansion conversation, no new seats, and no new feature adoption
+for six months is not a Champion — it is a habitual user, and habitual users are often the ones
+quietly evaluating alternatives. Score on the events that indicate value being received, and say
+which events were counted.
+
+### 2. Set thresholds from the actual distribution, not from this table
+
+Prefer **quintiles of the user's own data** over the absolute buckets above: score 5 for the top 20%
+of the base on that dimension, 4 for the next 20%, and so on. Quantiles adapt to the distribution
+and keep the segments populated; fixed thresholds import someone else's business model.
+
+Use the absolute tables only when the user has too few customers for quantiles to be stable, and say
+that is what happened.
+
+**Two tells that the input is broken rather than the business:**
+
+- **High-value customers landing in low-value segments.** Usually duplicate customer records
+  splitting one account's history, or a monetary column that is missing for part of the base.
+- **Dramatically uneven segment sizes** — most of the base in one or two segments. Usually the
+  wrong window for the model, or thresholds imported rather than derived.
+
+Investigate either before presenting the segmentation. A segmentation built on broken identity
+resolution is confidently wrong in a way that looks like insight.
+
+---
+
+## The Transition Matters More Than the Stage
+
+A stage is a snapshot. What a stage was **last period** carries most of the information, and a
+snapshot hides it entirely.
+
+- **Always report the previous stage alongside the current one.** A Regular who was a Champion is a
+  different situation from a Regular who was Promising, and they need opposite messages. The first is
+  a decline to diagnose; the second is progress to reinforce.
+- **Direction beats position for prioritisation.** A Champion sliding toward Regulars deserves
+  attention before a stable Needs Attention account that has sat there for a year.
+- **At renewal, the transition is the whole story.** An account that was a Champion twelve months ago
+  and is now Needs Attention will not renew on the same pitch at the same price. Pitching the renewal
+  as if nothing changed is the most common avoidable renewal loss.
+- **Name the segments nobody is acting on.** A stage with a defined playbook that nothing has
+  triggered from in months is either mis-defined or unowned. Say which.
+
+## Segments Go Stale
+
+Most teams build the segmentation once and never rebuild it, and it is useless within months while
+still being used.
+
+- State the **refresh cadence** when the segmentation is designed, and where it is computed. Monthly
+  is the usual floor; weekly if the business moves fast enough to justify it.
+- Recompute the **thresholds**, not just the memberships. A growing base shifts its own quintiles, so
+  last quarter's cut points describe a company that no longer exists.
+- Set a **review date** for the stage definitions themselves, separate from the data refresh. The
+  definitions embed assumptions about the business model, and those change less often but more
+  consequentially.
