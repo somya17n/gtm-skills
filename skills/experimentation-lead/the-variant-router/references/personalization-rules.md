@@ -595,3 +595,51 @@ The worst stale data mistake: using a category preference from a one-time purcha
 "Based on your last purchase" framing: lifts CTR when logically connected, but hurts CTR when irrelevant - the attribution to their specific behavior makes irrelevance more jarring than generic irrelevance.
 
 Rule: only use predictive subject lines when your recommendation accuracy is above 70% relevance. Below that, generic editorial framing ("Our picks for this season") outperforms predictive for the same product set.
+
+---
+
+## What Personalization Actually Returns, and What It Requires First
+
+Personalization does work, with reported revenue lifts around **5-15%** and bounce-rate reductions of
+**20-45%** on personalized homepages for mid-market and enterprise B2B traffic. But three findings
+determine whether a programme gets any of that.
+
+### Identification comes before personalization
+
+**Personalization without identification is guessing.** The teams reporting real lift invested in
+visitor-identification infrastructure first. Without it, a "personalized" experience is a rule firing on
+a signal that may not describe the visitor at all, and the failure is invisible: the page renders, the
+variant is served, and nobody knows it was served to the wrong person.
+
+So before designing variants, establish **how a visitor is identified**, what share of traffic can be
+identified at all, and what the fallback is for the rest. If most traffic cannot be identified, the
+honest answer is that the default experience matters more than the variants, and effort belongs there.
+
+### Token-swapping is not personalization
+
+Changing "we help companies" to "we help healthcare companies" with no supporting proof delivers minimal
+lift. The reader notices the noun and nothing behind it changed: same case studies, same claims, same
+CTA. It reads as a mail-merge, which is the web equivalent of "I noticed you're the [title] at
+[company]".
+
+A variant earns its place when the **evidence** changes with it — the case study is from their industry,
+the objection addressed is the one their segment actually raises, the CTA matches how they buy. Swapping
+a word while leaving the proof generic is worse than not personalising, because it advertises that
+someone tried.
+
+### Account-level beats one-to-one
+
+The highest-return approach is **account-level**, not segment-of-one: adapting hero copy, case studies
+and CTAs to the visiting company's industry or profile. One-to-one personalization costs far more to
+build and maintain and does not reliably outperform it.
+
+The approaches with real adoption are narrower than the pitch suggests: firmographic homepage changes,
+intent-triggered content sequencing, account-specific landing pages, personalized chat openers, and
+pricing-page adaptation. Anything beyond those is usually a maintenance liability.
+
+### Measure per experience, never as one global number
+
+Attributing a single figure to "personalization" is not achievable, and asking for one produces a number
+nobody can defend. **Measure per experience and per segment.** A programme reporting "personalization
+drove +8%" is reporting an average across variants that individually range from strongly positive to
+negative, and the negative ones stay live because nothing separates them.

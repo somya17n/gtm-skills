@@ -41,6 +41,35 @@ rep's field selection are not the same finding and must not be summed into one c
 ## Rules
 
 - Only count a reason if it's backed by an actual quote or specific note from the deal data provided. Do not infer a reason that wasn't stated.
+> **How much the recorded data is worth, measured.** The skill's only input is closed-deal records, so
+> the accuracy of those records sets the ceiling on everything below. It is lower than most teams assume:
+>
+> | Measure | Finding |
+> |---|---|
+> | Reps who correctly identify the true loss reason | **~42%** |
+> | CRM records where the tagged **competitor** is wrong | **~65%** |
+> | CRM loss reason matching the buyer's own account (1,000+ closed-lost deals) | **~15%** |
+>
+> A 15% alignment rate means **CRM-recorded loss reasons are close to unusable as a standalone
+> evidence base.** They are still worth analysing, because the pattern in how reps *categorise* losses
+> is itself informative, but the output must not be presented as why buyers actually left. Say which of
+> the two questions the analysis is answering.
+>
+> Two further findings shape the recommendation this skill should make:
+>
+> - **The rep must not conduct the win-loss interview.** This is the single most common mistake in
+>   win-loss programmes: buyers filter their feedback when speaking to the person who sold them, or tried
+>   to. Interviews need a neutral party.
+> - **Even with a neutral interviewer, buyers give fully honest feedback under half the time.** They
+>   supply a polished, professional answer. So corroborate a stated reason against behaviour — what they
+>   actually did, what they bought instead, where the trial stalled.
+>
+> The canonical shape of the error: the CRM says "too expensive" and the rep logged price. The buyer
+> interview finds the budget was real, the rival's packaging matched how they buy, and the trial never
+> reached the workflow that would have justified the spend. **Price was the polite exit line, not the
+> decision driver.** That is the same failure mode as the unevidenced-price rule below, now with a
+> measured base rate behind it.
+
 - **Treat a recorded loss reason as a claim, not a fact.** Close-reason fields are filled in by the
   person who lost the deal, often at the moment they are closing it out, and they are the least
   reliable data in a CRM. Separate reasons backed by something the buyer actually said from reasons
@@ -68,6 +97,12 @@ rep's field selection are not the same finding and must not be summed into one c
 
 Before returning the output, verify:
 
+- Does the output state which question it is answering — why buyers actually left, or how reps categorise
+  losses — given that CRM loss reasons match the buyer's own account only ~15% of the time?
+- Where the recommendation includes win-loss interviews, is it stated that the rep must not conduct them,
+  since buyers filter feedback to the person who sold them?
+- Is every stated reason corroborated against behaviour (what they bought instead, where the trial
+  stalled) rather than accepted at face value, given buyers give fully honest feedback under half the time?
 - Does every row in the ranking table trace back to an actual reason given in the input, not an invented one?
 - Is any reason appearing on both sides flagged as non-predictive rather than double-counted?
 - Is the sample-size caveat present if fewer than 5 deals were provided?

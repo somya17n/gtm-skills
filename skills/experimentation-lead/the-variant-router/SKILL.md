@@ -8,6 +8,24 @@ description: Design personalization rules mapping audiences to content variants 
 > promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
 > rule for every line of copy this pack produces. Its checks are additional to this skill's own.
 
+> **Identification first, then variants.** Read **What Personalization Actually Returns, and What It
+> Requires First** in `references/personalization-rules.md`.
+>
+> - **Personalization without identification is guessing.** Establish how a visitor is identified, what
+>   share of traffic can be identified at all, and the fallback for the rest, before designing any
+>   variant. Where most traffic cannot be identified, say the default experience matters more than the
+>   variants and that effort belongs there. The failure mode is invisible: the variant renders and nobody
+>   knows it was served to the wrong person.
+> - **Token-swapping is not personalization.** Changing "we help companies" to "we help healthcare
+>   companies" with generic proof behind it delivers minimal lift and advertises that someone tried. A
+>   variant earns its place when the **evidence** changes with it: the case study, the objection
+>   addressed, the CTA.
+> - **Account-level beats one-to-one.** Segment-of-one costs far more to build and maintain without
+>   reliably outperforming account-level adaptation.
+> - **Measure per experience and per segment, never as one global lift.** A single "personalization drove
+>   +8%" averages variants that individually range from strongly positive to negative, and the negative
+>   ones stay live because nothing separates them.
+
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
@@ -41,7 +59,13 @@ description: Design personalization rules mapping audiences to content variants 
 ## Output
 
 14. Before delivering, verify:
-   - Every rule has all five fields: condition, zone, type, experience, and metric
+
+- Is the identification method stated, with the share of traffic that can be identified and the fallback
+  for the rest, before any variant is designed?
+- Does every variant change the **evidence** (case study, objection addressed, CTA) rather than swapping
+  a noun while the proof stays generic?
+- Is the approach account-level rather than segment-of-one, unless one-to-one is specifically justified?
+- Does the measurement plan report per experience and per segment rather than a single global lift figure?   - Every rule has all five fields: condition, zone, type, experience, and metric
    - Rules are ordered using the reference file's priority numbering (1-10 critical, 11-30 high-value), not an arbitrary order
    - A default experience is defined for non-matched visitors
    - Any overlapping or conflicting conditions between rules are flagged with a resolution, not left unresolved
