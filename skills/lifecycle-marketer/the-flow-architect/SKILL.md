@@ -5,6 +5,20 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 
 > **Boundary:** For single-channel email sequences without branching, use `the-campaign-engine`. For cold prospecting sequences, use `the-cold-opener` or `the-sequence-doctor`.
 
+> **Where flow revenue actually comes from.** Read **What Flows Are Actually Worth** in
+> `references/journey-nodes.md` before designing. Flows carry ~58-65% of email revenue, and automated
+> email produces ~37% of email-generated sales from ~2% of send volume - so a team choosing between
+> another campaign and fixing a flow is choosing between the 98% and the 2%.
+>
+> The design finding that matters most here: a **single-email** cart-abandonment flow recovers ~2-3%,
+> while a **multi-step flow combining email and SMS** recovers 8-12%. That is a three-to-four times
+> difference produced by step count and channel mix, not by copy. So when designing or auditing a
+> recovery journey, settle the number of steps and the channels **before** touching messaging - a
+> one-email flow is not a weak version of a good flow, it is a different and much worse thing.
+>
+> And treat the welcome flow's ~91% open rate as what it is: the highest-attention moment the brand will
+> ever have with that contact, which makes it the wrong place for a generic greeting.
+
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.

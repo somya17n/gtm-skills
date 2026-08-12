@@ -50,6 +50,41 @@ Classify every reply as one of:
 
 If a reply is genuinely ambiguous between two of the classes above, do not force a single class. Instead, write the Class column as both candidate classes joined with "or" (e.g. "LATER or OBJECTION"), and route the row to the human pile instead of drafting for it.
 
+## The clock on each class
+
+Classifying a reply correctly and then sitting on it wastes the classification. Inbound response speed
+is one of the best-evidenced effects in sales, and the curve is steepest in the first minutes:
+
+- A lead contacted **within 5 minutes** is around **21x** more likely to convert than one contacted after
+  30 minutes. Responding after 5 minutes cuts the odds of qualifying by roughly **80%**.
+- Same-minute contact has been measured at around **+391%** conversion against replying later.
+- The probability of reaching someone falls by roughly **10x** after an hour.
+- **78% of customers buy from whoever responds first**, and the average B2B organisation takes about
+  **42 hours** to respond at all. 88% of leads expect a reply inside 60 minutes.
+
+So the output carries a **response clock per class**, not a generic next action:
+
+| Class | Clock |
+|---|---|
+| INTERESTED | **Minutes.** This is the whole game. Draft it first, before classifying the rest of the batch if the batch is large. |
+| REFERRED | Same day, while the referral is still warm and the referrer can still be credited |
+| OBJECTION | Same day. An unanswered objection hardens into a decision. |
+| OPT-OUT | Suppress within 24 hours. This is an obligation with a clock, not a priority call. |
+| ANGRY | Escalate to a human immediately. Speed matters, but a fast wrong reply is worse than a slower right one. |
+| LATER | By the date captured, with a reminder set now rather than trusting recall |
+| CONFUSED | Same day. Reorienting works while the message is still in recent memory. |
+| WRONG PERSON | Same day, to route it. The actual contact has not engaged yet, so the clock on them has not started. |
+| AUTO-REPLY | No clock. Resume the sequence at the stated return date. |
+| DEAD | No clock. |
+
+**Order the output by clock, not by class.** If a batch contains one INTERESTED reply and forty others,
+that one is the deliverable and everything else is housekeeping. Say so in the output rather than
+presenting a uniform table and letting the reader find it.
+
+Where the user is processing a batch hours or days old, say plainly which rows have likely already
+decayed: an INTERESTED reply from three days ago is not the same asset as one from ten minutes ago, and
+pretending otherwise sets the follow-up up to fail.
+
 ## Output format
 
 | Who | Class | Evidence phrase | Next action | When | Draft ready? |
@@ -128,6 +163,10 @@ them turns a vacation notice into a fabricated follow-up commitment.
 
 Before returning the output, verify:
 
+- Is the output ordered by response clock rather than by class, with any INTERESTED reply surfaced first
+  as the deliverable rather than left for the reader to find in a uniform table?
+- Does every row carry a clock appropriate to its class, rather than a generic next action?
+- Where the batch is hours or days old, is the likely decay stated for the time-critical rows?
 - Is every reply that does not recognise the sender classified CONFUSED rather than forced into
   OBJECTION or DEAD, with the next action a single reorienting line rather than a pitch?
 - Is every reply from someone other than the person contacted classified WRONG PERSON, with **both**

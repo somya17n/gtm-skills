@@ -3,6 +3,26 @@ name: the-voice-fingerprint
 description: Analyze content samples to extract a brand voice profile, dimensions, vocabulary, sentence patterns, channel adaptations.
 ---
 
+> **Ship a scorecard, not a description.** Read **Why Voice Profiles Fail, and What to Ship Instead** in
+> `references/brand-voice-dimensions.md`. Voice work fails on execution and governance, not analysis: the
+> guideline gets written like a marketing artifact and used like a fire drill, and the people who need it
+> receive a PDF and are told to "stay on brand", which nobody can act on.
+>
+> - **A profile that only describes is not usable.** "Warm but direct" cannot be applied or disputed.
+>   "Contractions yes, exclamation marks no, never open with a question" can. Every dimension in the
+>   output needs at least one rule someone could follow without asking a question.
+> - **Output a weighted scorecard** across vocabulary compliance, tone alignment, structural patterns,
+>   readability consistency and identity compliance, with a publish-ready threshold (~85%). A threshold
+>   turns "does this sound like us" from an opinion into a check, which is what survives a handover -
+>   verbal guidelines otherwise evaporate when the person who internalised them leaves.
+> - **The AI-era asymmetry to name explicitly:** visual consistency holds up because design systems
+>   enforce it, while verbal consistency collapses because nothing does. Generated copy drifts to a
+>   generic register while the page around it stays on brand, which is exactly why the drift goes
+>   unnoticed.
+> - Where it is unclear whether a distinct voice exists at all, recommend a **blind content test** -
+>   strip the branding and see whether people can pick this brand's copy out of a set. That is the only
+>   honest measure.
+
 ## Context
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for any existing brand voice notes.

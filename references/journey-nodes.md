@@ -306,3 +306,40 @@ Global frequency caps that apply across all journeys for a given person:
 **Cap behavior:** When a cap is reached, the message is suppressed (not delayed). The journey continues but the send step is skipped with a "frequency_capped" status.
 
 **Priority override:** Messages marked as "transactional" (e.g., password reset, order confirmation) bypass frequency caps. Only marketing/engagement messages are capped.
+
+---
+
+## What Flows Are Actually Worth
+
+Flows are where lifecycle revenue concentrates, and the concentration is extreme enough to change
+priorities.
+
+| Measure | Benchmark |
+|---|---|
+| Email and SMS share of total revenue | ~38-45% (P90) |
+| Flow share of email revenue | ~58-65% |
+| Automated email share of email-generated sales | **~37%, from ~2% of send volume** |
+
+That last row is the argument for building flows before campaigns: **2% of volume produces 37% of
+sales.** A team choosing between another campaign and fixing a flow is choosing between the 98% and the
+2%.
+
+### Per-flow benchmarks
+
+| Flow | Benchmark |
+|---|---|
+| Abandoned cart | Highest revenue per recipient of any automation, ~$3.65. Recovery 8-12% (P90) |
+| Welcome | 12-18% conversion (P90), ~91% open rate |
+
+**The single most consequential design finding:** a **single-email** cart abandonment flow recovers
+about **2-3%**, while a **multi-step flow combining email and SMS** recovers **8-12%**. That is a three
+to four times difference produced by adding steps and a second channel, not by better copy.
+
+So when auditing or designing a recovery flow, **step count and channel mix are the first questions**,
+ahead of subject lines and timing. A one-email flow is not a weak version of a good flow, it is a
+different and much worse thing. Where a flow exists but underperforms, check its step count before
+rewriting anything.
+
+The welcome flow's ~91% open rate has a second implication: it is the highest-attention moment the
+brand will ever get with that contact, which makes it the wrong place for a generic greeting and the
+right place for the single most important thing the brand needs them to understand.

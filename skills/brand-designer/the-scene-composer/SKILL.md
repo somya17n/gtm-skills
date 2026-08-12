@@ -3,6 +3,27 @@ name: the-scene-composer
 description: "Generate photography direction using a composable scene system: 160+ blocks across 10 dimensions."
 ---
 
+> **Direct a set, and match the catalogue.** Read **The Set Beats the Shot** and **Consistency Across the
+> Catalogue Outranks Any Single Shoot** in `references/scene-composition.md`.
+>
+> - **Target 5-8 images per product**: one white-background hero, two to three alternate angles, at least
+>   one lifestyle or in-use frame, and a detail close-up. Pages with more than five images convert around
+>   50% higher than single-image pages across a ~2.3M-listing study, and on-model lifestyle beats flat lay
+>   by roughly 20-30% in most apparel categories.
+> - **Ask what the existing catalogue looks like before composing anything** - background treatment, crop
+>   ratio, lighting direction, on-model or flat, product scale in frame. Request two or three existing
+>   images or a live product page. Around 54% of shoppers report abandoning over product content that felt
+>   inconsistent, so a technically excellent scene that does not match the rest of the catalogue makes the
+>   store worse even while making one page better.
+> - **Establish whether this shoot joins the existing system or replaces it.** Joining means matching the
+>   current treatment even where a better one exists. Replacing puts the whole catalogue in scope, and a
+>   single-product brief is then the wrong unit of work - say so rather than proceeding.
+> - **Output the reusable spec, not only this scene**: background, ratio, margin, lighting direction and
+>   hero framing as rules the next twenty products can follow. Where the catalogue is already inconsistent,
+>   name that as the finding: a store with twelve visual treatments does not need a thirteenth good one.
+> - Never promise a lift. Image strategy done well moves conversion in the 10-30% range, which is worth
+>   doing and is not a silver bullet.
+
 ## Context
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for brand design preferences and visual identity.

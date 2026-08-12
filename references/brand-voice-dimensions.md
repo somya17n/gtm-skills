@@ -330,3 +330,62 @@ The same message written at different dimension levels to illustrate the spectru
 
 **Formal + Calm + Serious (8, 3, 2):**
 > "We cordially invite you to attend a comprehensive product demonstration, during which our team will present the platform's capabilities and address your specific requirements."
+
+---
+
+## Why Voice Profiles Fail, and What to Ship Instead
+
+Consistent brand presentation across channels is associated with **23-33% higher revenue**, so the value
+of getting voice right is not in dispute. What fails is almost never the analysis. It is what the
+analysis becomes.
+
+**Voice guidelines fail on execution and governance, not on content.** The recurring pattern: the
+guideline is written like a marketing artifact and used like a fire drill. The people who need it most
+receive a PDF after the fact and are told to "stay on brand", which is not an instruction anyone can
+follow. Brand inconsistency then shows up wherever a decision was never actually defined, and the team
+falls back on asking for approval instead of applying a rule.
+
+Two consequences worth designing around:
+
+- **A profile that only describes is not usable.** "Warm but direct" cannot be applied or disputed. A
+  rule can: "contractions yes, exclamation marks no, never open with a question."
+- **Verbal guidelines evaporate with departures.** The voice lives in whoever internalised it, and it
+  leaves when they do. Only a written, checkable artifact survives a handover.
+
+### One more reason this matters now
+
+Teams using AI content tools report a specific asymmetry: **visual brand consistency holds up, verbal
+consistency collapses.** Logos, colour and type are enforced by design systems and templates. Voice has
+no equivalent enforcement layer, so generated copy drifts toward a generic register while everything
+around it stays on brand. The drift is easy to miss precisely because the page still looks right.
+
+That makes the checkable artifact the point of the exercise, not a nice-to-have.
+
+### Ship a scorecard, not a description
+
+The output that survives contact with a team is a weighted scorecard someone else can apply to a draft
+without asking a question. Five dimensions:
+
+| Dimension | What is checked |
+|---|---|
+| Vocabulary compliance | Required words present, banned words absent |
+| Tone alignment | Register matches the profile on the stated axes |
+| Structural patterns | Sentence length, paragraph shape, opener and closer habits |
+| Readability consistency | Complexity in the brand's actual range, not just "clear" |
+| Identity compliance | How the brand refers to itself, the customer, and the problem |
+
+Score a draft against them and treat roughly **85%+ as publish-ready**. The threshold matters less than
+having one, because a threshold turns "does this sound like us" from an opinion into a check.
+
+### And what an audit should actually produce
+
+Three artifacts, not a report:
+
+1. **A pattern summary** — the strengths and failures that repeat across channels.
+2. **A gap list** — the specific places where current language contradicts the intended voice.
+3. **A north-star statement** — how the brand sounds at its best, in one paragraph, drawn from real
+   sentences rather than aspiration.
+
+Where recognition itself is in question, a **blind content test** settles it: strip the branding, ask
+whether people can pick the brand's copy out of a set. That is the only honest measure of whether a voice
+exists yet.

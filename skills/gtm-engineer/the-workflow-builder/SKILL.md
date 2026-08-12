@@ -3,6 +3,24 @@ name: the-workflow-builder
 description: Design marketing and sales automation workflows with trigger-condition-action patterns, branching logic, error handling, and integration points.
 ---
 
+> **Automations fail quietly.** Read **Why Automations Fail Quietly** in
+> `references/workflow-patterns.md`. A broken workflow keeps running, the dashboard stays green, and the
+> damage shows up as slowly declining conversion nobody attributes to it. Reported failures are almost
+> always design and governance problems rather than technology ones.
+>
+> Two additions to the error handling in step 10, which only covers failures that announce themselves:
+>
+> - **Specify at least one data assertion per workflow**, run on a schedule, with its expected value and
+>   a named reader. Integrations can appear to work while corrupting data - one documented case ran with
+>   45% of opportunities carrying wrong lead-source attribution, scores that had not updated in three
+>   weeks, and 23% of qualified leads never reaching sales, with nothing erroring. Assert on the data:
+>   do entry counts match trigger events, are the depended-on fields populated rather than defaulting,
+>   has the score this workflow reads actually moved for anyone recently.
+> - **Every workflow needs a named owner (a person, not a team), an audit date with what gets checked,
+>   and a retirement condition.** A workflow nobody audits becomes a zombie: still sending, still
+>   spending, still writing attribution data that distorts every report built on it. Without a stated
+>   retirement condition, nothing is ever switched off.
+
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.

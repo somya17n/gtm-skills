@@ -484,3 +484,60 @@ Warehouse → Intempt:
   - Custom scores → Score imports (daily)
   - Segments → External segment definitions (daily)
 ```
+
+---
+
+## Why Automations Fail Quietly
+
+The defining property of automation failure is that **it does not announce itself**. A broken workflow
+keeps running, the dashboard stays green, and the damage accumulates as slowly declining conversion and
+slowly rising unsubscribes that nobody attributes to it. By the time anyone looks, the cause is months
+back.
+
+Reported failures cluster into five design-and-governance problems, not technology problems:
+
+1. **Built on incomplete data.** Duplicated records, blank fields, or inconsistently tracked behaviour
+   mean contacts enter the wrong path, skip steps they needed, or never qualify at all.
+2. **No clear goal and no exit.** Contacts get trapped in sequences that stopped being relevant.
+3. **Rigid time-based steps standing in for real behaviour.** A Day-3 email that fires regardless of
+   what happened on Day 1 is a broadcast on a delay.
+4. **Channel silos over-messaging the same contact.** Each workflow respects its own cap and the contact
+   receives the sum.
+5. **No owner, and no audit.** This is the one that turns the other four into permanent damage.
+
+### Silent integration failure is the worst case
+
+Integrations between a CRM and a marketing platform can **appear to work while corrupting data**. There
+is no error, no alert, and no failed-job count: the sync reports success and writes the wrong values.
+
+A documented case gives the shape of it: 45% of opportunities carrying incorrect lead-source
+attribution, lead scores that had not updated for three weeks, 23% of qualified leads never reaching
+sales at all, and $1.2M of pipeline attributed to unknown sources. Every one of those workflows was
+"running".
+
+**Error handling does not catch this**, because nothing errored. What catches it is a **positive
+assertion on the data itself**, run on a schedule:
+
+- Does the count of records that entered the workflow this week match the count of trigger events?
+- Are the fields the workflow depends on populated for the records currently in it, or defaulting?
+- Has the score or stage this workflow reads actually changed for anyone in the last N days? A field
+  that never moves is either meaningless or broken, and both matter.
+- Do the totals in the two systems agree, and if not, by how much and in which direction?
+
+Specify at least one such assertion per workflow, with the expected value and who looks at it. A
+workflow with error handling but no data assertion is protected against the failure that announces
+itself and exposed to the failure that does not.
+
+### Zombie automations
+
+A workflow nobody audits does not become harmless, it becomes a **zombie**: still sending, still
+consuming sends and budget, still writing attribution data that distorts every report built on it.
+These accumulate silently and are usually discovered only when someone audits attribution.
+
+So every workflow ships with:
+
+- **A named owner.** Not a team, a person.
+- **An audit date**, and what gets checked on it: is it still firing, is the trigger still valid, does
+  its goal metric still move, and is anyone still reading its output.
+- **A retirement condition.** The specific state in which this workflow should be switched off. Without
+  one, nothing is ever switched off.

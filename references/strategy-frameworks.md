@@ -423,3 +423,54 @@ How easy is this to implement?
 - Use ICE to rank, not to decide — strategic context and sequencing matter
 - Track actual impact vs. predicted impact to improve future scoring accuracy
 - Combine with quarterly planning: Big Bet should be highest-ICE initiative, Medium Bets next two
+
+---
+
+## Priority Dilution: The Actual Failure Mode
+
+**Growth does not fail for lack of ideas. It fails for lack of focus.** Any strategy output that returns
+a long list of good levers has made the problem worse, not better, because the constraint was never
+idea supply.
+
+The evidence runs one way:
+
+- Organisations that invest in strategic prioritisation deliver around **40% more value** than those that
+  do not.
+- Companies selecting **fewer** priority initiatives are about **16% more likely** to sit in the top tier
+  of their industry.
+- Pursuing many initiatives at once reduces total impact rather than spreading it: the common outcome is
+  succeeding at none of them.
+
+So the deliverable is not a ranked list of everything. It is a short set of things that will actually get
+done, and an explicit statement of what is being *declined* for now. A plan that declines nothing has not
+prioritised.
+
+### Score, then obey the score
+
+Rate each lever honestly on **effort, risk and reward** on a 1-5 scale, then order by the arithmetic
+rather than by what feels most urgent in the room. The point of scoring is to survive the meeting: a
+number can be argued with on its inputs, while a feeling can only be overruled by seniority.
+
+Where a lever's reward score rests on a baseline the user could not supply, say so rather than scoring it
+anyway. An unscoreable lever is a research task, not a priority.
+
+### The 70-20-10 portfolio
+
+For teams with ongoing experiment capacity, allocate rather than pick:
+
+| Share | Where it goes |
+|---|---|
+| **70%** | Core optimisation of what already works |
+| **20%** | Adjacent channels or audiences |
+| **10%** | Exploratory bets, high uncertainty and high upside |
+
+This is the honest counterweight to two opposite failure modes. A team spending everything on core
+optimisation grinds toward a local maximum and calls it a plateau. A team chasing new channels has no
+compounding base. Naming the split makes both visible, and it makes the exploratory 10% defensible
+instead of something that gets cut first whenever a quarter looks tight.
+
+### Sequence what remains
+
+Even a short list runs in an order. A small team running six levers at once cannot attribute any result,
+so the levers that survive prioritisation still need a sequence and a stated reason for it - usually
+either a dependency or the fastest read on the biggest unknown.

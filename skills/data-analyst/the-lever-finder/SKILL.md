@@ -3,6 +3,23 @@ name: the-lever-finder
 description: Get a prioritized growth strategy with maturity assessment, growth levers, channel priorities, and quarterly plan. Use for strategic planning and growth audits.
 ---
 
+> **Focus is the deliverable.** Read **Priority Dilution: The Actual Failure Mode** in
+> `references/strategy-frameworks.md`. Growth does not fail for lack of ideas, it fails for lack of focus,
+> so a long list of good levers makes the problem worse rather than better. Organisations investing in
+> prioritisation deliver ~40% more value, and companies choosing **fewer** initiatives are ~16% more
+> likely to be top-tier in their industry.
+>
+> - **State what is being declined.** A plan that declines nothing has not prioritised. The output is a
+>   short set that will actually get done, plus the explicit not-now list.
+> - **Score on effort, risk and reward (1-5) and then obey the arithmetic**, not what felt most urgent in
+>   the room. A number can be argued with on its inputs; a feeling can only be overruled by seniority.
+>   Where a reward score rests on a baseline the user could not supply, say so: an unscoreable lever is a
+>   research task, not a priority.
+> - **Allocate rather than pick where there is ongoing capacity:** roughly 70% core optimisation of what
+>   already works, 20% adjacent channels or audiences, 10% exploratory. That names both failure modes at
+>   once - grinding toward a local maximum and calling it a plateau, or chasing new channels with no
+>   compounding base - and it makes the exploratory 10% defensible instead of the first thing cut.
+
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.

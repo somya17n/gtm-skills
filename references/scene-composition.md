@@ -286,3 +286,56 @@ Intempt's scene composition system provides 160+ blocks across 10 dimensions tha
 | 30 | Unboxing Joy | Soft Diffused | Over-Shoulder | Light Wood | White Seamless | Bright/Airy | Digital Clean |
 | 31 | Night Cinema | Backlighting | Wide Context | Polished Metal | Black Seamless | Moody/Dramatic | Cinestill 800T |
 | 32 | Heritage Craft | Practical | Detail Crop | Leather | Textured Plaster | Vintage/Retro | HP5 Plus |
+
+---
+
+## The Set Beats the Shot
+
+A single beautiful image underperforms an adequate **set**. The direction this file produces should
+therefore be scoped to a set, not to one frame.
+
+**Target 5-8 images per product**, composed as:
+
+| Slot | Purpose |
+|---|---|
+| 1 white-background hero | Answers "what is it?" instantly. Carries the clarity that permits a purchase. |
+| 2-3 alternate angles | Removes the doubt that something is being hidden |
+| 1+ lifestyle or in-use | Supplies scale, context and the imagined ownership |
+| 1 detail close-up | Answers the material and quality question |
+
+The evidence for the count is unusually direct: across a study of ~2.3 million listings, product pages
+with **more than five images converted around 50% higher** than single-image pages. And where all three
+characteristics are present together — multiple angles, a consistent clean hero, and lifestyle context —
+conversion runs materially higher than for a single poorly-lit photo.
+
+On lifestyle specifically: on-model lifestyle outperforms flat lay by roughly **20-30%** on conversion
+across most apparel categories. Lifestyle is not decoration once the hero has done its job; it is the
+frame that answers "is this for someone like me".
+
+**The honest ceiling:** image strategy done well moves conversion somewhere in the **10-30%** range.
+Useful, and not a silver bullet. Never promise a specific lift.
+
+## Consistency Across the Catalogue Outranks Any Single Shoot
+
+This is the finding most easily missed when briefing one product, because it is invisible from inside
+that brief: **around 54% of shoppers report abandoning a purchase because the product content felt
+inconsistent**, and consistent imagery across a store is associated with conversion gains of at least
+10% on its own.
+
+That means a technically excellent scene that does not match the rest of the catalogue **makes the store
+worse**, even while making that one page better. A brief cannot be judged in isolation.
+
+So before composing anything, establish:
+
+- **What the existing catalogue looks like** — background treatment, crop ratio, lighting direction,
+  whether products are shown on-model or flat, and at what scale in frame. Ask for two or three existing
+  images, or the URL of a live product page.
+- **Whether this shoot is joining that system or replacing it.** Joining means matching the existing
+  treatment even where a better one exists. Replacing means the whole catalogue is in scope, and a
+  single-product brief is the wrong unit of work — say so.
+- **The reusable spec, not just this scene.** Background, ratio, margin, lighting direction and hero
+  framing stated as rules the next twenty products can follow. That spec is worth more than the
+  individual direction, because it is what keeps the 54% from abandoning.
+
+Where the catalogue is currently inconsistent, name that as the finding. A store with twelve visual
+treatments does not need a thirteenth good one.
