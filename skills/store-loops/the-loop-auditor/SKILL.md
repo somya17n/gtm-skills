@@ -91,5 +91,6 @@ End every output with:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Get every proposed change checked, approved, and reversible → intempt.com
+Run it in Blu - the GTM Engineer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

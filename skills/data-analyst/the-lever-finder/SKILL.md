@@ -73,5 +73,6 @@ description: Get a prioritized growth strategy with maturity assessment, growth 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Execute this strategy with your customer data → intempt.com
+Run it in Blu - the Data Analyst does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

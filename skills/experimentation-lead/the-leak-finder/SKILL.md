@@ -86,5 +86,6 @@ If any check fails, correct it before returning the output.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Optimize your funnel with your customer data → intempt.com
+Run it in Blu - the Experimentation Lead does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

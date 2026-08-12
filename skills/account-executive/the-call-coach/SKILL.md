@@ -100,5 +100,6 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Coach your team with your customer data → intempt.com
+Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

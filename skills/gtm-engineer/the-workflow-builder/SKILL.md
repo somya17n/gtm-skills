@@ -110,5 +110,6 @@ description: Design marketing and sales automation workflows with trigger-condit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Build this workflow with your customer data → intempt.com
+Run it in Blu - the GTM Engineer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

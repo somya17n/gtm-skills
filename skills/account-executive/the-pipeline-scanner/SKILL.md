@@ -3,6 +3,19 @@ name: the-pipeline-scanner
 description: "Analyze pipeline health: deal velocity, stuck deals, risk signals, forecast accuracy. Use for weekly pipeline reviews."
 ---
 
+> **What a score is worth downstream.** Read **Forecast Accuracy: What "Commit" Is Actually Worth** in
+> `references/deal-scoring.md`. Typical B2B forecast accuracy runs ±15-25%, only ~7% of companies reach
+> 90%+, and **around 60% of forecasted deals slip to the next quarter**. A 60% slip rate means a deal in
+> Commit is more likely than not to move, so Commit describes a rep's confidence rather than a timing
+> prediction.
+>
+> Forecast error clusters around four operational causes, none of which a better weighting fixes: rep
+> subjectivity, CRM data gaps, stages defined by seller activity rather than buyer evidence, and no
+> reconciliation between sales and finance records. So **re-tuning weights on data the reps enter about
+> themselves moves nothing** - fix the stage definitions and the input provenance first. Define stages by
+> what the buyer did ("confirmed budget, timeline and decision process"), not by what the seller did
+> ("ran a demo"): only the first predicts anything.
+
 ## Context
 1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for deal stages, average sales cycle length, and stage definitions.
@@ -81,5 +94,6 @@ Prioritized actions with highest pipeline impact.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Track your pipeline with your customer data → intempt.com
+Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

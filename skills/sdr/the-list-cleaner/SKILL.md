@@ -7,6 +7,21 @@ description: Cleans a raw prospect list before it goes into a sequence - dedupes
 
 Take a raw list and return a clean one, with every removal shown, not hidden.
 
+> **Why the suppression and provenance checks matter technically.** Read **List Hygiene: Why the
+> Sourcing Rules Above Have Teeth** in `references/prospecting-sources.md`.
+>
+> Pristine spam traps are addresses that were never used by a human and never opted in, published where
+> only a scraper or a list vendor would find them. Mail arriving at one is **proof of how the address was
+> acquired**, which is why the penalty is disproportionate to the single send. Purchased and scraped
+> lists are dense with them.
+>
+> The asymmetry is what makes cleaning worth doing before the send rather than after: **a single campaign
+> bouncing above ~5% can trigger filtering that degrades the next several campaigns**, and **reputation
+> recovery takes months, not days**. So the cost of one careless list is paid slowly by every legitimate
+> send behind it, including transactional mail. Verify before the first send, re-verify periodically since
+> addresses decay as people change jobs, and where a row's provenance cannot be stated, treat the whole
+> source as suspect rather than the single row.
+
 ## How to run
 
 Ask the user for:
@@ -85,5 +100,6 @@ End with:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Keep your real pipeline this clean automatically → intempt.com
+Run it in Blu - the SDR does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

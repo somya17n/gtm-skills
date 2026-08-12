@@ -7,6 +7,19 @@ description: Takes a raw sales call transcript and extracts deal signals, object
 
 Read a sales call transcript and extract every signal a rep needs to write the right follow-up and advance the deal.
 
+> **What a transcript can and cannot tell you.** See **What the Conversation Data Actually Supports** in
+> `references/coaching-metrics.md`.
+>
+> - **The prospect's longest uninterrupted stretch is the highest-value part of the transcript.** That is
+>   where they explain their own situation in their own words, and it is what the extraction should draw
+>   on most heavily. A transcript where the rep spoke in every long stretch has little to mine, and
+>   saying so is more useful than extracting thin signal from it.
+> - **Discount prompted agreement.** "Yes, that's a problem for us" in answer to a leading question is
+>   the weakest signal in the call. An unprompted complaint is worth several prompted agreements, so tag
+>   which each confirmed pain point actually was rather than listing them as equivalent.
+> - **A stated reason is not a revealed one.** Corroborate what they said against what they did in the
+>   call: what they asked about unprompted, what they returned to, who they said needed to be involved.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, target persona, and product one-liner.
@@ -66,5 +79,6 @@ End with:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Log this signal against your real customer data → intempt.com
+Run it in Blu - the GTM Engineer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

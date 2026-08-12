@@ -432,3 +432,50 @@ Recalibrate weights quarterly by analyzing:
 3. Are there components with no predictive value? (Consider removing or replacing.)
 
 Use logistic regression on historical deal data to optimize weights empirically.
+
+---
+
+## Forecast Accuracy: What "Commit" Is Actually Worth
+
+Any scoring model here feeds a forecast, so the forecast's real accuracy sets the ceiling on what the
+scores are worth. That accuracy is lower than most teams believe.
+
+| Measure | Figure |
+|---|---|
+| Typical B2B forecast accuracy | **±15-25%** |
+| High performers | **±5-10%** |
+| Companies achieving 90%+ accuracy | **~7%** |
+| Forecasted deals that **slip to the next quarter** | **~60%** |
+
+**A 60% slip rate is the number that matters.** It means a deal sitting in Commit is more likely than not
+to move, so "Commit" describes a rep's confidence rather than a timing prediction. Reporting a Commit
+total as though it were next quarter's revenue is the single most common forecasting error, and it is not
+a modelling problem — it is a labelling one.
+
+### The misses are operational, not statistical
+
+Forecast error clusters around four causes, none of which a better scoring formula fixes:
+
+1. **Rep subjectivity.** Stage and confidence are set by the person whose number depends on them.
+2. **CRM data gaps.** Missing fields silently default rather than flagging.
+3. **Loose stage design.** Stages defined by activity ("demo done") rather than by buyer evidence
+   ("buyer confirmed budget and timeline") let a deal advance without anything changing.
+4. **No reconciliation between sales and finance records.** Two systems, two totals, and the difference
+   is discovered at quarter end.
+
+The implication for any score built here: **methodology and input quality drive accuracy far more than
+the weighting does.** Re-tuning weights on data the reps enter about themselves moves nothing. Fix the
+stage definitions and the input provenance first.
+
+### What to do with this in practice
+
+- **Report the slip rate alongside the forecast**, where history allows. A team that has historically
+  slipped 60% of Commit should not present Commit as a plan.
+- **Calibrate the categories against outcomes**, not against intent. If Commit historically closes at
+  60%, it is a Best Case bucket wearing the wrong label, and renaming it is more honest than coaching
+  the reps.
+- **Define stages by buyer evidence, not seller activity.** "We ran a demo" is something you did.
+  "They confirmed budget, timeline and the decision process" is something they did, and only the second
+  predicts anything.
+- **Say when the forecast is uncalibrated.** With no history to check categories against, the totals are
+  a restatement of the reps' optimism, and presenting them without that caveat is the error above.

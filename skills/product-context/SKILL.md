@@ -154,5 +154,6 @@ back a draft to correct.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 All gtm skills will use this context → intempt.com
+Run it in Blu - every agent reads this context on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

@@ -542,6 +542,7 @@ If any check fails, correct it before returning the output.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Drive activation with personalized journeys → intempt.com
+Embed this reel in your onboarding flow → intempt.com
+Run it in Blu - the Brand Designer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

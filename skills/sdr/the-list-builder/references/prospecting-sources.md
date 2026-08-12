@@ -131,3 +131,41 @@ paste path instead.
   sexuality) even where a public source happens to reveal it.
 - **If the list will be resold as data rather than used for the user's own outreach, stop and flag
   it.** That is a different compliance posture and this skill is not scoped for it.
+
+---
+
+## List Hygiene: Why the Sourcing Rules Above Have Teeth
+
+The compliance rules earlier in this file are not only about lawfulness. There is a technical
+enforcement mechanism behind them, and it is unforgiving.
+
+**Spam traps exist specifically to catch the behaviour those rules ban.** A pristine spam trap is an
+address that was never used by a human and never opted in to anything, published where only a scraper or
+a list vendor would find it. Mail arriving at one is proof of how the address was acquired. Hitting a
+pristine trap does not signal that a campaign was poorly targeted; it signals that the acquisition method
+was illegitimate, which is why the consequences are disproportionate to the single send.
+
+**Purchased and scraped lists are the fastest way to destroy a sending domain**, because they are dense
+with exactly these addresses along with dead mailboxes and people who never consented.
+
+### The asymmetry that makes this worth taking seriously
+
+- **A single campaign with a bounce rate above ~5% can trigger filtering that degrades the next several
+  campaigns.** One bad send is not one bad send; it is a tax on everything queued behind it.
+- **Reputation recovery takes months, not days.** There is no fast remediation, which means the cost of
+  one careless list is paid slowly by every legitimate send that follows, including transactional mail.
+
+That asymmetry is the argument for verifying before the first send rather than measuring after it. The
+downside of a bad list is not a wasted campaign, it is a degraded channel.
+
+### Minimum hygiene before any list is used
+
+1. **Verify before the first send**, not after the first bounce report. Check syntax, disposable domains,
+   and whether the domain resolves and accepts mail at all.
+2. **Re-verify an existing list periodically.** Addresses decay as people change jobs, and a list that
+   was clean six months ago is not clean now.
+3. **Remove hard bounces immediately** and repeated soft bounces after a small number of attempts.
+4. **Never send to a list whose provenance cannot be stated.** If nobody can say where a row came from,
+   treat the whole source as suspect rather than the single row.
+5. **Watch the direction of travel, not just the level.** A bounce rate climbing across sends means the
+   list is decaying or the source was bad, and both get worse with volume.

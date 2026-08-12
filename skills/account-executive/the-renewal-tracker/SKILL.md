@@ -7,6 +7,19 @@ description: Scores an existing account's renewal risk from usage and relationsh
 
 Score renewal risk for an existing account, using the signals you actually have, not a guess.
 
+> **Read the risk against the right segment.** See **Churn Benchmarks, and the Thing That Actually
+> Determines Them** in `references/churn-retention-playbook.md`. Healthy monthly logo churn runs under
+> ~0.5% enterprise, ~0.5-1.5% mid-market and ~2-4% SMB, so an account behaving at its segment norm is not
+> a red flag. More importantly, **price point drives churn more than execution does** (products over
+> ~$1,000 ARPU churn near 1.8% monthly against ~6.1% under ~$25), so a low-ARPU account showing ordinary
+> disengagement may be structurally rather than relationally at risk - and no amount of renewal outreach
+> changes that.
+>
+> Also split the risk: roughly a quarter of all churn is **involuntary** (failed payments, expired cards)
+> rather than a decision. Before scoring a renewal as at-risk on sentiment, check whether the card on
+> file is current, because that is the cheapest possible save and it looks identical to disengagement in
+> most dashboards.
+
 ## How to run
 
 Ask the user for:
@@ -69,5 +82,6 @@ End with:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Score renewal risk automatically against your real usage data → intempt.com
+Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

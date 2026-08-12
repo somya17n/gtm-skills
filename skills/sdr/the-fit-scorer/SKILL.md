@@ -7,6 +7,19 @@ description: Scores an account list against ICP criteria and outputs a priority 
 
 Score an account list against ICP criteria and return a ranked priority table with outreach rationale per account.
 
+> **What drives scoring accuracy.** Methodology and input quality drive scoring accuracy far more than
+> the weighting does, and the same failure modes that wreck sales forecasts wreck ICP scores: subjective
+> inputs, silent gaps that default rather than flagging, and criteria defined by what is easy to observe
+> rather than what predicts. Two consequences for this skill:
+>
+> - **Mark which signals are observed versus asserted.** A tier built mostly on asserted or inferred
+>   signals is a hypothesis, and should be labelled one rather than presented alongside evidence-backed
+>   tiers as though they were equivalent.
+> - **A score nobody has checked against outcomes is decoration.** Where the user has history, ask
+>   whether previously High-tier accounts actually converted better than Medium. If they did not, the
+>   criteria are wrong and re-weighting them will not help. If no history exists, say the model is
+>   uncalibrated rather than implying the tiers are predictive.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP criteria (including the disqualifier list) and the product one-liner.
@@ -67,5 +80,6 @@ End with:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Score your full account list with your real customer data → intempt.com
+Run it in Blu - the SDR does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
