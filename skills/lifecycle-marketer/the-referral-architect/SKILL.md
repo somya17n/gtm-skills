@@ -18,6 +18,19 @@ description: Designs a customer referral or advocacy program - incentive structu
 
 ## Process
 
+5a. **Set the expectation band before designing anything**, from **Referral Benchmarks, and Where the
+   Constraint Actually Is** in the reference file: **12-15% participation** and **3-5% referral
+   conversion** are normal, with 25%+ participation exceptional rather than a target. A programme judged
+   against an imagined 50% gets called a failure while performing at benchmark, and then has its
+   incentive raised for no reason.
+
+5b. **Order the design by where the constraint actually is.** About **83%** of satisfied customers are
+   willing to refer and only **~29%** do. Willingness is almost never the limiting factor: the limit is
+   that nobody asked at a moment when acting was easy. So work in this order — **trigger moment**, then
+   **friction of the ask**, then **incentive** last and least. A programme at 5% participation is far
+   more likely to have a timing or friction problem than an incentive problem, so raising the reward is
+   the wrong first move, and it degrades cohort quality by pulling in reward-motivated signups.
+
 6. Pick the trigger moment: the specific point in the customer's lifecycle when the ask should happen, tied to a real signal (a milestone hit, a positive support interaction, a renewal just completed) using the trigger-timing guidance in the reference file, not a generic "anytime" ask.
 7. Design the incentive structure: what the advocate gets and what the referred friend gets, as a two-sided incentive, using the pricing-tier patterns in the reference file. State the actual value proposed and how it compares to the customer's worth from input 3, so the economics are visible, not just a nice-sounding number.
 8. Decide whether a single flat incentive is enough or a tiered structure rewards repeat referrers more, based on the advocate pool described in input 3.
@@ -73,6 +86,12 @@ description: Designs a customer referral or advocacy program - incentive structu
 12. Before returning the output, verify:
 
 - Is the incentive value justified against the stated customer worth, with the math shown?
+- Was the realistic band (12-15% participation, 3-5% conversion) stated before design, so the programme
+  is not judged against an imagined number?
+- Is the design ordered trigger moment, then friction, then incentive, rather than leading with the
+  reward? Where participation is low, is timing or friction investigated before the incentive is raised?
+- If two-sided rewards are recommended, is the direction given without quoting a specific lift as a
+  forecast, since published effects range from roughly +29% to +91%?
 - Does the trigger moment tie to an actual lifecycle signal from the reference file's guidance, not "whenever"?
 - Is there a specific anti-abuse rule matched to the actual incentive type recommended, per the reference file?
 - Is the one metric to watch a conversion metric, not a vanity metric like shares or signups to the program itself?

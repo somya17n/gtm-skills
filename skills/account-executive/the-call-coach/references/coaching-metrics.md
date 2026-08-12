@@ -393,3 +393,64 @@ Targeted practice exercises to build specific skills.
 | **BANT check** | After every mock call, score BANT from memory | 5 min | After every call |
 | **3x3 research** | Practice finding 3 personalized insights in 3 minutes | 3 min | Before every call |
 | **Closing pivot** | Practice transitioning from any topic to a next-step ask | 10 min | 2x/week |
+
+---
+
+## What the Conversation Data Actually Supports
+
+These are the three metrics most call-coaching tools report, with what the large-sample data says and,
+more importantly, how strong a signal each one really is. Coaching a weak signal hard is how a rep ends
+up optimising a dashboard instead of a conversation.
+
+### Talk ratio: a real effect, and a small one
+
+The widely quoted target is around **43:57 rep-to-prospect**. The measured reality across large call
+samples is closer to a **60/40** average, and — the part that usually gets left out — **the gap between
+won and lost deals is about 5 percentage points**: roughly **57% rep talk time on closed-won** against
+**62% on lost**.
+
+Two consequences:
+
+- **Talk ratio is a weak discriminator on its own.** A five-point spread means it separates won from
+  lost only faintly. A rep at 62% is not failing, and moving them to 57% is a marginal intervention.
+  Presenting it as the headline fix overstates it.
+- **The tail is where it matters.** Above roughly **65%** rep talk time, win rates fall off more
+  clearly. So the useful coaching target is not "hit 43%", it is "do not exceed 65%", which is a much
+  easier and more honest ask.
+
+Treat talk ratio as a **screen**, not a diagnosis: it flags calls worth listening to, and the reason the
+call was lost is in what was said, not in the ratio.
+
+### Discovery questions: fewer, not more
+
+This one runs against the usual advice. In calls that closed, top reps asked around **15-16 questions**;
+in lost calls the count was nearer **20**. Other analyses put the effective range at **11-14 questions
+in a 30-minute discovery**.
+
+More questions correlate with *worse* outcomes, and the mechanism is legible: a long question list gets
+worked through like a checklist, which produces short answers and no follow-through. Fewer, open
+questions that build on the previous answer produce longer answers and more usable information.
+
+So **never coach "ask more discovery questions" from a low question count alone.** Ask whether the
+questions were open, and whether each one followed from the last. A rep asking 20 closed questions has a
+worse call than one asking 12 that build.
+
+### Monologue length: the one with a clean threshold
+
+Top reps keep continuous uninterrupted speech under about **76 seconds**. This is the most actionable of
+the three because it is concrete, easy to observe, and easy to change.
+
+And the inverse metric matters more than the direct one: the **longest uninterrupted prospect
+monologue** correlates with engagement and deal progression. The goal is not primarily to shorten the
+rep's monologue, it is to lengthen the prospect's. A rep who talks in short bursts but never lets the
+prospect run is still not getting discovery.
+
+### How to weight these when coaching
+
+Rank by signal strength, not by ease of measurement:
+
+1. **Longest prospect monologue** — did they ever really talk?
+2. **Rep monologue over 76 seconds** — concrete, fixable
+3. **Question quality** — open, and building on the last answer
+4. **Talk ratio** — a screen, and only the >65% tail is a clear finding
+5. **Question count** — nearly useless alone, and misleading if coached upward

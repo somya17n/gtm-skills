@@ -92,3 +92,50 @@ attribution reports it as a win.
   and incremental acquisition get checked against the reward cost, and what result would mean
   changing or ending it.
 
+---
+
+## Referral Benchmarks, and Where the Constraint Actually Is
+
+| Measure | Benchmark |
+|---|---|
+| Satisfied customers **willing** to refer | ~83% |
+| Satisfied customers who **actually do** | ~29% |
+| Programme participation rate | ~12-15% typical; above 25% is exceptional |
+| Referral conversion rate (e-commerce) | ~3-5% median; 8%+ top quartile |
+| Referred-customer conversion vs other channels | 3-5x higher |
+| Referred-customer lifetime value | ~16% higher (Wharton) |
+
+### Willingness is not the constraint
+
+The gap between **83% willing** and **29% doing** is the single most useful number here. It says the
+limiting factor is almost never that customers are unwilling — it is that **nobody asked them at a
+moment when acting was easy.**
+
+That reorders the design work:
+
+1. **The trigger moment** — asking at a point of felt satisfaction, not on a schedule
+2. **The friction of the ask** — how many steps between wanting to refer and having referred
+3. **The incentive** — last, and usually the least of the three
+
+A programme underperforming at 5% participation is far more likely to have a timing or friction problem
+than an incentive problem, so **raising the reward is the wrong first move.** It also degrades cohort
+quality, per the Did the Referral Add a Customer section: a larger reward pulls in reward-motivated
+signups who churn differently.
+
+### Two-sided incentives, honestly reported
+
+Two-sided rewards do outperform one-sided, but the published effect sizes vary widely: reported lifts on
+participation range from about **+29% to +91%** depending on the study, with completion rates around
+**52% two-sided against 29% one-sided**. About **78%** of programmes use a two-sided structure.
+
+Use the direction, not the number. Two-sided is the right default because it gives the advocate something
+to say that is not purely self-interested — "you get X too" is easier to send than "I get X if you sign
+up." Do not quote a specific lift to the user as though it were a forecast; the spread across studies is
+too wide to promise.
+
+### Set expectations before designing
+
+Tell the user the realistic band up front: **12-15% participation and 3-5% referral conversion** are
+normal, and 25%+ participation is exceptional rather than a target. A programme judged against an
+imagined 50% will be called a failure while performing at the benchmark, and then get its incentive
+raised for no reason.

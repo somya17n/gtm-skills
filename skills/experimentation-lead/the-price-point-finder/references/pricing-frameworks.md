@@ -145,3 +145,45 @@ Every pricing recommendation ships with:
 - [ ] Features mapped to tiers with no more than 2-3 differentiation axes
 - [ ] Annual discount strategy set (typical range: 17-20% off monthly)
 - [ ] Enterprise/custom tier planned or explicitly deferred
+
+---
+
+## Discounting: What the Data Shows, and What It Does Not
+
+**The observed numbers.** On closed-won enterprise B2B SaaS deals, median price realisation runs about
+**78%** of list (a median discount near **22%**), with the top decile of deals discounted **41%+**.
+Median win rate on qualified opportunities sits near **21%**, and win rates fall as deals grow: roughly
+25-35% under $50K, 18-28% at $50-250K, 12-22% above $250K, 10-18% above $1M.
+
+**The correlation that gets misread.** Deals receiving **15%+ discounts closed at about 19%**, while
+deals receiving **0-5% discounts closed at about 34%**. The tempting conclusion is that discounting
+loses deals, so discount less and win more.
+
+**Do not draw that conclusion.** The relationship is almost certainly confounded, and the direction of
+causation runs mostly the other way:
+
+- Deals that need a heavy discount are usually **already weak** — competitive, price-sensitive, poorly
+  qualified, or championed by someone without budget authority. The weakness produces both the discount
+  request and the loss.
+- A rep discounts when they feel the deal slipping. The discount is a **symptom of the slip**, recorded
+  before the loss it appears to cause.
+- Strong deals close at list because they were strong, not because nobody offered a discount.
+
+So the honest reading is: **a large discount request is a diagnostic signal about deal quality**, not a
+lever to withhold. When a deal needs 20% off to move, the question is what is actually wrong with it —
+qualification, champion strength, competitive position, or fit — and whether the discount is buying a
+close or delaying a loss.
+
+What follows for practice:
+
+- **Never present "discount less to win more" as causal.** It is not supported by this data, and a rep
+  who withholds a discount on a genuinely price-constrained deal loses it anyway, with worse terms
+  learned for next time.
+- **Treat a discount request above the median as a qualification review**, not a pricing decision.
+- **Track price realisation as a portfolio metric**, not a per-deal scorecard. Punishing individual
+  discounts pushes discounting off-book into terms, scope and free periods, which is harder to see and
+  more expensive.
+- **Concede structure before price.** Term length, payment timing, scope, and success criteria are all
+  cheaper to give than a rate cut, and none of them reset the reference price for the renewal.
+- **A discount given without an exchange trains the buyer** that the number moves when they push. If
+  something is given, get something: a longer term, a case study, a faster signature, a reference call.

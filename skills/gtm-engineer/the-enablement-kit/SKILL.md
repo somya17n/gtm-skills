@@ -14,6 +14,24 @@ Produce the sales collateral a rep actually hands a prospect, mapped to who they
 > promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
 > rule for every line of copy this pack produces. Its checks are additional to this skill's own.
 
+> **Check retrieval before producing.** Read **The Usage Problem, With Numbers** in
+> `references/sales-enablement-assets.md`. About **65%** of marketing content goes unused by sales, and
+> roughly **60-70%** of that is untouched specifically because reps **cannot find it** — not because it
+> is bad. Around 40% gets recreated because nobody located the original, and sellers lose about 10 hours
+> a week hunting for and reworking material.
+>
+> Two consequences for this skill:
+>
+> - **"We need better collateral" usually is not a request for a new asset.** Ask what already exists,
+>   whether reps can find it, and whether the gap is creation or retrieval. Producing into an unfindable
+>   library adds to the 65%. If the gap is retrieval, say so and stop.
+> - **Roughly 50% of prospect engagement comes from about 10% of content.** So ask which assets reps
+>   actually send unprompted and which prospects respond to, and use those as the template. A rep sending
+>   the same thing repeatedly is the closest thing to a usage metric most teams have. Ask too what they
+>   improvise from scratch every time: that gap is the highest-value asset nobody has built. Where the
+>   user cannot answer which assets get sent, measuring that is the first deliverable, ahead of producing
+>   anything.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the ICP, target persona, product one-liner, competitive landscape, and brand voice.
@@ -82,6 +100,10 @@ and the asset expiry table.
 
 Before returning the output, verify:
 
+- Was retrieval checked before production: does the asset already exist, and can reps find it? If the gap
+  is findability rather than creation, is that said instead of producing another asset?
+- Was the user asked which assets reps actually send unprompted, and what they improvise from scratch?
+  Where they cannot answer, is measuring that named as the first deliverable?
 - Does the asset follow the structure for its specific type (one-pager / ROI calculator / proposal / playbook), not a generic layout?
 - Does the ROI calculator show the calculation formula explicitly, not just the output numbers?
 - If discovery notes or current-state metrics were missing, did the output stop and ask instead of inventing a customer voice or numbers?

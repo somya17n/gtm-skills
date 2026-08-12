@@ -157,3 +157,45 @@ why the deal cooled.
 - ROI calculators with the formula hidden — a rep can't defend math they can't see
 - One-pagers that try to cover everything instead of the 3 differentiators that actually matter for this buyer
 - Playbooks nobody owns — assign an owner and review quarterly, or it goes stale within two quarters
+
+---
+
+## The Usage Problem, With Numbers
+
+The adoption section above says an asset reps do not use is not an asset. The scale of that is worth
+stating, because it reframes what producing collateral is actually for.
+
+| Finding | Figure |
+|---|---|
+| Marketing content that goes unused by sales | **~65%**, stable for over a decade; some audits above 80% |
+| Untouched specifically because reps cannot find it | **~60-70%** |
+| Content recreated because nobody could find the original | **~40%** |
+| Sellers reporting no easy access to what they need | **~78%** |
+| Seller time spent hunting, comparing or revising content | **~10 hours per week** |
+
+**The dominant failure is findability, not quality.** Roughly two thirds of content goes untouched
+because it cannot be located, which means the "where it lives" line in the adoption block is not
+administrative detail — it is the highest-leverage field on the whole asset. A good one-pager nobody can
+find loses to a mediocre one in the rep's own downloads folder, every time.
+
+It also means **the default answer to "we need better collateral" is usually not a new asset.** Before
+producing anything, ask what already exists, whether reps can find it, and whether the gap is creation
+or retrieval. Producing a new asset into an unfindable library adds to the 65%.
+
+### The 10% that does the work
+
+**Around 50% of all prospect engagement comes from about 10% of enablement content.**
+
+That distribution changes the job from *producing* to *identifying*:
+
+- **Find the 10% before commissioning the next asset.** Ask which pieces reps actually send, unprompted,
+  and which ones prospects respond to. Those are the templates for everything else.
+- **A rep sending the same asset repeatedly is a signal, not a habit.** It is the closest thing to a
+  usage metric most teams have.
+- **Retire aggressively.** An asset nobody has sent in a quarter is not neutral: it dilutes search, adds
+  to the pile reps are failing to navigate, and makes the 10% harder to find.
+- **Ask what the rep currently improvises instead.** The gap between what exists and what they type from
+  scratch every time is the highest-value asset nobody has built.
+
+Where the user cannot answer which assets get sent, say that measuring it is the first deliverable, ahead
+of producing anything new.

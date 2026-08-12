@@ -3,6 +3,22 @@ name: the-call-coach
 description: "Pre-meeting prep and post-meeting coaching: talk ratio, BANT/MEDDIC scoring, objection tracking, drills."
 ---
 
+> **Weight the metrics by signal strength.** Read **What the Conversation Data Actually Supports** in
+> `references/coaching-metrics.md` before scoring a call. Three corrections to how these usually get
+> coached:
+>
+> - **Talk ratio is a weak discriminator.** The won/lost gap is about 5 points (roughly 57% rep talk on
+>   closed-won against 62% on lost), so a rep at 62% is not failing and moving them to 57% is marginal.
+>   The clear finding is only in the tail: above ~65% win rates fall off. Use it as a screen for which
+>   calls to listen to, not as the diagnosis.
+> - **Fewer discovery questions is better, not worse.** Closed calls averaged ~15-16 questions against
+>   ~20 in lost ones. Never coach "ask more questions" from a low count: ask whether the questions were
+>   open and whether each followed from the last answer. Twenty closed questions is a worse call than
+>   twelve that build.
+> - **The prospect's longest monologue is the strongest signal**, ahead of the rep's. Keeping rep
+>   monologues under ~76 seconds is concrete and fixable, but a rep who speaks in short bursts and never
+>   lets the prospect run has still not done discovery.
+
 ## Context
 1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 

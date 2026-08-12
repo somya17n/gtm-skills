@@ -17,6 +17,22 @@ Build the negotiation plan for one deal before the conversation happens, not a g
 > over-answering limit applies with more force in a negotiation than in discovery: a long
 > justification of your number is read as an invitation to push it down.
 
+> **Read the discount data with its confounder attached.** See **Discounting: What the Data Shows, and
+> What It Does Not** in `references/pricing-frameworks.md`.
+>
+> Median price realisation on closed-won enterprise SaaS is ~78% of list (a ~22% median discount), and
+> deals discounted 15%+ close at ~19% against ~34% for those discounted 0-5%. **Do not read that as
+> "discount less to win more."** The relationship is confounded: deals needing a heavy discount are
+> usually already weak — competitive, price-sensitive, or poorly qualified — and the weakness produces
+> both the discount request and the loss. The discount is a symptom recorded before the loss it appears
+> to cause.
+>
+> So a discount request above the median is a **qualification signal**, not a lever to withhold. When a
+> deal needs 20% off to move, prep the question of what is actually wrong with it — qualification,
+> champion strength, competitive position, fit — alongside the concession ladder. And concede
+> **structure before price**: term, payment timing, scope and success criteria are all cheaper to give
+> than a rate cut, and none of them reset the reference price for the renewal.
+
 ## How to run
 
 Ask the user for:
@@ -48,6 +64,13 @@ Ask the user for:
 
 Before returning the output, verify:
 
+- Is any discount above the median treated as a qualification signal and prepped as such, rather than
+  purely as a pricing decision?
+- Does the concession ladder exhaust structural concessions (term, payment timing, scope, success
+  criteria) before rate cuts, given that none of those reset the renewal reference price?
+- Does every concession have something asked in return, so the buyer does not learn the number moves
+  when they push?
+- Is the discount/win-rate correlation presented with its confounder rather than as causal advice?
 - Does every concession in the ladder pair with something we get back?
 - Is the walk-away point exactly what the user stated, not adjusted?
 - Are the calibrated questions actually open-ended, not rhetorical?
