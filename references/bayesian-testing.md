@@ -434,3 +434,60 @@ consistency), record that the decision was made on those grounds rather than on 
 7. If the result is flat, is it reported as "no effect larger than the MDE", with any ship decision
    attributed to other grounds?
 
+---
+
+## Duration, Sample Size, and the Cost of Peeking
+
+**Duration is a sample-size question, not a calendar question.** Visitors needed per variant, divided
+by visitors per day, gives the floor. Then two constraints raise that floor:
+
+- **At least one full business cycle, 7 days minimum**, regardless of how fast the sample arrives.
+  Weekday and weekend behaviour differ, and a test that ran Tuesday to Thursday measured Tuesday to
+  Thursday.
+- **Two weeks, or two business cycles, is the more defensible default** for anything that will inform a
+  real decision. One cycle can be an unusual week; two makes that visible.
+
+Set the sample size **and** the duration before launch, write both down, and read the result at the
+predetermined endpoint. Not before.
+
+### What peeking actually costs
+
+This is the number worth internalising: **stopping on interim significance inflates the false-positive
+rate from the nominal 5% to somewhere around 25-30%.** A test read at "95% confidence" after repeated
+looks is closer to 70-75% confidence, and nobody involved can tell from the output.
+
+The mechanism is simple. Every look is another chance for random fluctuation to cross the threshold.
+Look ten times and something crosses it, whether or not there is any real effect. The variant that
+"won" is often the one that got lucky first, which is why so many winning tests fail to replicate and
+why shipped "wins" so often do not show up in the aggregate numbers later.
+
+**A stopping rule fixes this; discipline does not.** Intending not to peek is not a method. Write the
+endpoint down before the traffic starts.
+
+### The legitimate way to look early
+
+Peeking is not forbidden, **unprincipled** peeking is. Two valid routes:
+
+- **Sequential / anytime-valid methods.** These are designed for repeated looks: the threshold widens
+  to account for the number of examinations, so the error rate stays where you set it. If a platform
+  offers "always valid" or sequential results, this is what it means, and peeking is then fine.
+- **Pre-registered interim checkpoints.** Decide in advance that you will look at, say, two points, and
+  adjust the threshold for exactly those looks.
+
+### Bayesian and adaptive methods do not remove the problem
+
+This is where the pack's default assignment strategy needs care. Thompson sampling and Bayesian
+posteriors are frequently described as letting you look whenever you like. That is **only** true with
+an appropriate stopping rule.
+
+- A Bayesian posterior read repeatedly against a **fixed** decision threshold has the same
+  inflated-error problem under a different name. "P(variant is best) > 95%" checked daily is peeking.
+- Adaptive allocation also means the traffic split is deliberately uneven and moves over time, so
+  early reads are taken on a sample the allocator has already skewed toward whatever was winning
+  first. That is exactly when a lucky early run is most self-reinforcing.
+- The honest framing: use expected loss or a pre-set posterior threshold **with a minimum-exposure
+  floor and a stated maximum duration**, and say which of the two ended the experience.
+
+State in the brief which stopping rule is in force, and whether the platform's results are
+anytime-valid or fixed-horizon. If nobody can answer that, treat the results as fixed-horizon and do
+not read them early.

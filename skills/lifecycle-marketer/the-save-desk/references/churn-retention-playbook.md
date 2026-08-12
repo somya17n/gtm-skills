@@ -196,3 +196,57 @@ Rules:
 - Guilt-trip survey or confirmation copy
 - Pauses longer than 3 months, which rarely reactivate
 - No post-cancel reactivation path or win-back trigger
+
+---
+
+## Churn Benchmarks, and the Thing That Actually Determines Them
+
+**Monthly logo churn, healthy ranges by segment:**
+
+| Segment | Healthy monthly logo churn |
+|---|---|
+| Enterprise | under ~0.5% |
+| Mid-market | ~0.5-1.5% |
+| SMB / prosumer | ~2-4% |
+
+**Annual:** roughly **5-7%** is the gold standard for mature enterprise (93-95% retention), while
+**10-15%** annual is healthy and sustainable across the broader B2B SaaS market.
+
+**Net revenue retention:** median around **82%**; elite companies clear **120-130%+**. Above 100% means
+existing customers grow faster than losses, which is the actual goal.
+
+### Price point drives churn more than execution does
+
+This is the finding that reframes most churn work:
+
+| ARPU | Typical monthly churn |
+|---|---|
+| Over ~$1,000 | ~1.8% |
+| Under ~$25 | ~6.1% |
+
+And the same split shows up in expansion: only about **2%** of companies with ARPU under $25/month
+reach NRR above 100%, against nearly **half** of those charging over $500/month.
+
+So a low-ARPU product churning 6% a month is **not necessarily badly run** — it is operating where
+churn is structurally high, because low price points attract the least-committed buyers and leave no
+budget for the onboarding and support that would retain them. Before treating that as a lifecycle
+problem, check whether it is a pricing problem. If a save-desk, a dunning stack and a better
+onboarding flow have all been built and churn is still at the segment norm, the remaining lever is the
+price point and the buyer it selects. See the underpricing section in
+`references/pricing-frameworks.md`.
+
+Never benchmark a product against a segment it is not in. Comparing an SMB self-serve product to
+enterprise churn produces a permanent sense of failure and no useful action.
+
+### Involuntary churn is about a quarter of the problem
+
+A median monthly churn near **3.5%** splits roughly into **2.6% voluntary** and **0.8-0.9%
+involuntary** — failed payments, expired cards, and payment-method changes.
+
+That means roughly **a quarter of all churn is a billing failure rather than a decision**, and it is
+the cheapest churn to recover because the customer has not chosen to leave. Any churn programme that
+starts with cancel-flow design before checking the dunning stack is optimising the harder three
+quarters first.
+
+Always split the reported number before proposing anything. A team reporting "5% monthly churn" with
+no split may be looking at a 1.3% payments problem they could largely fix this quarter.

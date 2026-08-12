@@ -545,3 +545,55 @@ px-4 md:px-8 lg:px-16                         — responsive padding
 hidden lg:block                               — show on desktop only
 lg:hidden                                     — show on mobile only
 ```
+
+---
+
+## Conversion Benchmarks, and Why Industry Is the Wrong Comparison
+
+Median landing-page conversion sits around **6.6%** across industries, with wide spread: SaaS and
+technology nearer **3.8%**, financial services **8.4%**, events and entertainment **12.3%**. Strong
+performers run **10-15%+**.
+
+**But traffic source moves the number more than industry does.** Email traffic converts around
+**19.3%**; organic search around **2.7%**. That is a 7x spread inside any single industry, which means
+an industry benchmark quoted without the traffic mix is close to meaningless.
+
+The practical consequence: **ask what traffic hits this page before judging its rate.** A 3%
+conversion rate on cold organic search is unremarkable. The same 3% on warm email traffic is a broken
+page. Two teams reporting identical rates can have opposite problems, and no amount of copy work fixes
+the one that is actually a traffic-mix issue.
+
+State the traffic source, the offer type, and what counts as a conversion on this page, next to any
+rate. Without all three, the number is not comparable to anything, including its own past.
+
+## Form Length Is the Highest-Leverage Variable
+
+Form length has a larger, more reliable effect than almost anything else on the page:
+
+| Fields | Typical conversion |
+|---|---|
+| 3 | ~10.1% |
+| 9 | ~3.6% |
+
+Removing a single field has been measured at up to a **50%** lift on its own. That makes the field
+list the first thing to attack, before headline testing, before layout, before design.
+
+For every field, ask: **is this used before the first human conversation?** Anything needed only later
+in the process belongs later in the process. Job title, company size, and phone number are the usual
+offenders, collected for routing or scoring that could equally happen after the lead exists.
+
+Where fields genuinely cannot be cut, enrich rather than ask: a submitted work email plus enrichment
+usually recovers company, size and industry without asking for any of them.
+
+## Social Proof Placement Beats Social Proof Volume
+
+Adding social proof lifts form conversion by roughly **26%**, and placement matters as much as
+presence: trust signals positioned **within visual proximity of the form** improve completion by
+around **12%** over the same signals placed elsewhere on the page.
+
+So the rule is not "add testimonials". It is: put the proof where the hesitation happens. A logo wall
+in the hero and a testimonial in the footer leave the form itself unsupported, which is exactly the
+moment the reader decides.
+
+Prefer specific over decorative: a named customer with a number outperforms a logo grid, and a
+testimonial that names the objection it answers outperforms one that praises the product generally.

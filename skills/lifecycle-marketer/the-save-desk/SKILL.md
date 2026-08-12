@@ -17,6 +17,23 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 
 ## Inputs
 
+2a. **Split the churn number before designing anything**, per the Churn Benchmarks section of
+   `references/churn-retention-playbook.md`. Ask for voluntary versus involuntary. A median 3.5% monthly
+   churn typically splits into about 2.6% voluntary and 0.8-0.9% involuntary, so roughly **a quarter of
+   all churn is a billing failure rather than a decision** — and it is the cheapest to recover, because
+   nobody chose to leave. Starting with cancel-flow design before checking the dunning stack optimises
+   the harder three quarters first. If the user cannot split it, say that is the first thing to measure.
+
+2b. **Read the rate against the right segment, and check whether it is a pricing problem.** Healthy
+   monthly logo churn runs under ~0.5% enterprise, ~0.5-1.5% mid-market, ~2-4% SMB/prosumer, so
+   benchmarking a self-serve SMB product against enterprise numbers produces a permanent sense of
+   failure and no action. More importantly, price point drives churn more than execution does: products
+   over ~$1,000 ARPU churn near 1.8% monthly against ~6.1% under ~$25. A low-ARPU product churning 6%
+   is often operating where churn is structurally high rather than being badly run. If a save desk,
+   dunning stack and onboarding flow already exist and churn still sits at the segment norm, say the
+   remaining lever is the price point and the buyer it selects, and point at
+   `references/pricing-frameworks.md`.
+
 3. Ask: "What do you want built: a cancel flow, a churn risk score, a dunning sequence, or more than one?"
 4. Ask: "What's your billing provider?" (Stripe, Chargebee, Paddle, Recurly, other)
 5. Ask: "Do you have cancellation reason data from past churns, or exit survey responses?" If none exists, say so in the output: the reason-to-offer mapping will use generic categories until real data exists to refine them.
@@ -73,6 +90,13 @@ description: Design cancel flows, dynamic save offers, churn risk scoring, and d
 
 - Does the Health Score Model use only the signals the user confirmed exist, with any unconfirmed signal dropped rather than assumed?
 - Does the offer-to-reason mapping avoid a single blanket discount for every cancellation reason?
+- Was the churn number split into voluntary and involuntary before anything was designed, with the
+  dunning stack checked before cancel-flow work, or the absence of a split named as the first thing to
+  measure?
+- Is the rate compared against the right segment (enterprise / mid-market / SMB-prosumer) rather than a
+  generic benchmark?
+- Where churn sits at the segment norm and the retention mechanics already exist, is the price point
+  named as the remaining lever rather than proposing more lifecycle work?
 - If real cancellation data was missing, is the default reason ordering explicitly flagged as unvalidated?
 - Does the Dunning Sequence call out which retry steps the user's billing provider already automates, rather than asking them to rebuild native functionality?
 - Does the retry schedule route by decline type rather than applying one schedule to every

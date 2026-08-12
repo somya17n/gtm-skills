@@ -51,8 +51,25 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
     - **Pre-declared segments.** Any segment the experience is meant to read separately is named now,
       before traffic starts, and powered for. Segments found later are hypotheses for a next
       experience, not findings from this one.
-    - **Minimum duration of one full business cycle**, so weekday effects are not read as treatment
-      effects, regardless of how fast the sample size is reached.
+    - **Minimum duration of one full business cycle (7 days floor)**, so weekday effects are not read
+      as treatment effects, regardless of how fast the sample size is reached. Two cycles is the more
+      defensible default for anything informing a real decision, since one cycle can simply be an
+      unusual week.
+    - **The stopping rule, written down before launch.** Not an intention to be disciplined: a rule.
+      Per the reference file, stopping on interim significance inflates the false-positive rate from a
+      nominal 5% to roughly **25-30%**, so a result read at "95% confidence" after repeated looks is
+      nearer 70-75% and nothing in the output reveals it. This is why so many winning tests fail to
+      replicate.
+    - **Whether the platform's results are anytime-valid or fixed-horizon.** Sequential and
+      anytime-valid methods widen the threshold to account for repeated looks, and peeking is then
+      legitimate. Fixed-horizon results are not. If nobody can answer which this is, treat it as
+      fixed-horizon and do not read it early.
+    - **For Thompson sampling specifically:** adaptive allocation does not license unlimited peeking.
+      A posterior read repeatedly against a fixed threshold ("P(best) > 95%", checked daily) has the
+      same inflated-error problem under a different name, and adaptive allocation makes it worse,
+      because the split has already been skewed toward whatever was winning first. Use a pre-set
+      posterior or expected-loss threshold **with a minimum-exposure floor and a stated maximum
+      duration**, and record which of the two ended the experience.
 12b. State what happens if the result is flat. The default for inconclusive is **do not ship**, and
     the finding is reported as "no effect larger than the MDE was detected" rather than "no
     difference". If the user intends to ship regardless on strategic grounds, that is legitimate and
@@ -93,8 +110,15 @@ description: Design Bayesian experiences with Thompson sampling, guardrails, hol
   single-comparison threshold repeatedly?
 - Are any segments to be read separately declared in advance and powered for, with a statement that
   segments discovered later are hypotheses rather than results?
-- Is a minimum duration of one full business cycle set, independent of how quickly the sample size is
-  reached?
+- Is a minimum duration of one full business cycle (7 days floor) set, independent of how quickly the
+  sample size is reached, with two cycles used where the decision warrants it?
+- Is a stopping rule written down before launch, rather than an intention not to peek? Interim stopping
+  takes the false-positive rate from 5% to roughly 25-30%, and the output does not reveal it.
+- Is it stated whether the platform's results are anytime-valid or fixed-horizon, with fixed-horizon
+  assumed when nobody can answer?
+- For Thompson sampling: is the threshold paired with a minimum-exposure floor and a maximum duration,
+  and is it recorded which of the two ended the experience? A posterior checked daily against a fixed
+  threshold is peeking under another name.
 - Does the decision framework cover the flat case with a do-not-ship default, stating the finding as
   no effect larger than the MDE rather than as no difference?
 

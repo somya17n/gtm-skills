@@ -13,6 +13,23 @@ description: Design conversion-optimized landing pages with copy frameworks and 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `references/landing-page-patterns.md` for section patterns, copy frameworks, and conversion best practices.
 
+> **Benchmark and form discipline.** Read the **Conversion Benchmarks**, **Form Length** and **Social
+> Proof Placement** sections of `references/landing-page-patterns.md` before designing.
+>
+> Three things bind this skill:
+>
+> - **Ask what traffic will hit this page before quoting or targeting any conversion rate.** Traffic
+>   source moves the number more than industry does: email converts around 19.3% against organic
+>   search at 2.7%, a 7x spread inside any single industry. A 3% rate on cold organic is unremarkable;
+>   the same 3% on warm email traffic is a broken page.
+> - **Attack the field list first.** Three-field forms convert near 10.1% against 3.6% at nine fields,
+>   and removing a single field has been measured at up to a 50% lift. Do this before headline testing
+>   or layout. For every field ask whether it is used before the first human conversation, and prefer
+>   enrichment from a work email over asking for company, size or industry.
+> - **Put proof where the hesitation is.** Social proof lifts form conversion around 26%, and the same
+>   signals near the form beat signals elsewhere on the page by roughly 12%. A logo wall in the hero
+>   with the form unsupported leaves the deciding moment bare.
+
 ## Inputs
 
 3. Ask: "What is the page goal?" (lead capture, product launch, signup, waitlist, demo request)
@@ -57,6 +74,15 @@ description: Design conversion-optimized landing pages with copy frameworks and 
 
 12. Before returning the output, verify:
 
+- Is the expected traffic source stated, with any target or comparison rate qualified by it rather than
+  by industry alone?
+- Does every quoted rate carry its traffic source, offer type, and what counts as a conversion on this
+  page?
+- Was the field list minimised first, with every remaining field justified as needed before the first
+  human conversation, and enrichment preferred over asking for company, size or industry?
+- Is social proof placed within visual proximity of the form rather than only in the hero or footer?
+- Is the proof specific (a named customer with a number, or a testimonial naming the objection it
+  answers) rather than a decorative logo grid?
 - Is the hero headline under 10 words?
 - Does the FAQ section have 4-5 questions that address the objections the user actually named, not generic FAQs?
 - Are testimonials and logos clearly labeled as placeholders rather than presented as real customer names?
