@@ -12,6 +12,20 @@ Audit a cold email sequence and return a structured diagnosis with rewrites for 
 > promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
 > rule for every line of copy this pack produces. Its checks are additional to this skill's own.
 
+> **Read the numbers before diagnosing the copy.** `references/outreach-cadences.md` now carries cold
+> outbound benchmarks. Three of them change what this audit should conclude:
+>
+> - **A bounce rate above 3% is not a copy problem.** It means the list is stale, guessed or bought, and
+>   every send damages the domain the good sends depend on. Rewriting emails against a bad list is
+>   wasted work: say the list is the finding.
+> - **Spam complaints at or above 0.3% breach bulk-sender requirements.** That is the only hard limit
+>   in the set. Under 0.1% is the operating target, and 0.2% is an emergency rather than a warning.
+> - **Signal-referencing emails reply at 15-25% against a ~3.43% average.** That is roughly 5x, and
+>   larger than any effect available from subject-line or send-time work. If the sequence has no
+>   signal trigger, that is the highest-leverage finding in the audit, ahead of every rewrite. The
+>   condition is in `references/signal-response.md`: referencing a signal is not stating it, and
+>   "congrats on the round" performs like any other template.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask for the ICP, persona, and product one-liner inline.
@@ -69,6 +83,11 @@ If a step is missing, recommend it with the suggested send day and one sentence 
 
 Before returning the output, verify:
 
+- Was the bounce rate checked before the copy was diagnosed, with anything above 3% reported as a list
+  problem rather than answered with rewrites?
+- Is the spam-complaint rate checked against the 0.3% hard limit and the 0.1% operating target?
+- If the sequence has no signal trigger, is that named as the highest-leverage finding, ahead of the
+  rewrites, given the ~5x reply difference?
 - Does every email in the gap analysis get one of the seven named diagnoses, not a vague "this could be better"?
 - Are the weakest emails (up to three, or all of them if the sequence is shorter) rewritten in full, with the same send day and sequence position preserved, and is the number stated when it is fewer than three?
 - Do the rewrites fix the structural problem identified, not just polish the original wording?

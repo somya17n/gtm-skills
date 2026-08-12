@@ -585,3 +585,46 @@ The "close your file" frame triggers two responses: (a) people who genuinely are
 - Fake RE: or FWD: subject lines — destroys trust when exposed
 - Sending from a domain that's less than 60 days old without warming
 - Sending 50+ emails per day from a single domain without warming (5-10/day start, scale over 6-8 weeks)
+
+---
+
+## Cold Outbound Benchmarks
+
+Numbers to read a campaign against, and the thresholds that are not negotiable.
+
+| Metric | Poor | Acceptable | Strong | Hard limit |
+|---|---|---|---|---|
+| Open rate | under 15% | ~20-28% | 35%+ | — |
+| Reply rate | under 2% | 3-5% | 5-10%, excellent above 10% | — |
+| Bounce rate | 7-8% | under 3% | under 1.5% | — |
+| Spam complaints | — | under 0.1% | — | **0.3% breaches bulk-sender requirements** |
+
+Two things worth knowing about the trend: average cold open rates have settled near **27.7%**, down
+from roughly 36% in 2023, and average cold **reply rates are around 3.43%**. The bar has moved, so a
+campaign holding 4% reply is doing better relative to the field than the same number was two years ago.
+
+**The spam-complaint number is the only hard limit in the table.** At or above 0.3% you are in breach
+of the major providers' bulk-sender requirements, throttling follows, and recovery takes far longer
+than the breach did. Operate under 0.1% and treat 0.2% as an emergency rather than a warning.
+
+### The one lever with a 5x effect
+
+Emails referencing a **specific buying signal** — a funding round, a leadership change, a hiring surge
+— report reply rates of **15-25%**, against a 3.43% average. That is roughly a 5x difference, and it is
+larger than any effect available from subject-line testing, send-time optimisation, or sequence length.
+
+It also comes with a condition, and the condition is where most teams lose the effect: referencing the
+signal is not the same as **stating** it. See `references/signal-response.md`. "Congrats on the round"
+references the signal and performs like any other template, because it tells the reader what they
+already know. Leading with the pain the signal created is what produces the difference.
+
+Practical consequence for sequence design: **a signal-triggered sequence to fifty accounts will
+outperform a generic sequence to five hundred**, and it will do less reputation damage doing it. If
+volume is being used to compensate for a low reply rate, the reply rate is the thing to fix.
+
+### Deliverability follows from list quality, not from copy
+
+A bounce rate of 7-8% is not a copy problem and no subject line fixes it. Bounces above 3% mean the
+list is stale, guessed, or bought, and every send against it damages the sending domain that the good
+sends depend on. Verify before sending, and treat a high bounce rate as a reason to stop rather than a
+metric to report.

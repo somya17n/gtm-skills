@@ -338,3 +338,59 @@ Critical Risk (health 0-19):
   → Post-mortem if churn is likely — capture learnings
   → Begin transition planning (graceful offboarding)
 ```
+
+---
+
+## Committee Size and Threading
+
+**The committee has roughly doubled in a decade.** Average B2B buying-group size has moved from ~5.4
+stakeholders in 2014, to ~6.8 in 2020, to ~8.2 in 2024, to **11+ in 2026**, with Forrester and 6sense
+both putting the median near **11.2 people for deals above $50K**.
+
+What sellers actually plan for is smaller than that, which is the gap worth noticing:
+
+| Segment | Titles the seller typically plans for |
+|---|---|
+| SMB | ~4.6 |
+| Mid-market | ~5.6 |
+| Enterprise | ~6.0 (though ~21% list 6-8 and ~14% name 9+) |
+
+So a "fully threaded" enterprise plan naming six people is covering roughly half the group that will
+actually decide.
+
+**Threading is worth more than almost anything else measurable.** Reaching five or more stakeholders
+has been reported closing at **~30% against ~5% single-threaded** — about a 6x difference. Other
+studies put it at **+130% win rate on deals above $50K**, and cross-department threading at **+56%**.
+
+### The contradiction to resolve before quoting either number
+
+There is a second, apparently opposite finding: deals with **1-3 stakeholders close at 38-52%**, while
+deals with **10+ close at 18-30%**. Read naively, that says fewer stakeholders is better and
+multithreading is pointless.
+
+Both are true, and the resolution is that **committee size is a property of the deal, not a choice**.
+Large deals have large committees and are structurally harder to win. Multithreading is what you do
+*about* that, not a thing you add to a deal to make it bigger. So:
+
+- **Never read low-stakeholder win rates as an argument against threading.** The comparison is
+  confounded by deal size. The right comparison is threaded versus single-threaded *within* the same
+  deal size, and that comparison favours threading heavily.
+- **Do not add stakeholders to a small deal** because the benchmark says more is better. A three-person
+  SMB deal threaded to eight people is a slower three-person deal.
+- **Judge coverage against the committee this deal actually has**, not against an absolute count.
+
+### Threading depth, relative rather than absolute
+
+An absolute "5+ contacts is Strong" ages badly against a committee that has doubled in size. Assess
+coverage as a **share of the committee this deal actually has**, and record both numbers:
+
+| Coverage | Read |
+|---|---|
+| Most of the identified committee, including the economic buyer | Strong |
+| Around half, economic buyer engaged | Adequate |
+| Around half, economic buyer **not** engaged | At risk regardless of the count |
+| One or two contacts on a committee of 8+ | Weak, and the count understates the risk |
+| Single-threaded at any deal size | High risk, and the single point of failure should be named |
+
+**The economic buyer is not one contact among several.** Coverage that misses them is at risk whatever
+the headcount says, so weight that role rather than counting heads.

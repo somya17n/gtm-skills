@@ -74,7 +74,26 @@ right now that the user's product addresses. Concrete enough to open a conversat
    that is hiring is a function with budget and a stakeholder worth reaching. Mark any role inferred
    from public data rather than an actual interaction as **unconfirmed**, and never show it as
    coverage.
-10. Assess threading depth. Read `references/account-lifecycle.md` and use the reference file's threading thresholds:
+10. Assess threading depth. Read the **Committee Size and Threading** section of
+   `references/account-lifecycle.md` first, then use the thresholds below **as a floor, not as the
+   answer**.
+
+   Average buying-group size has roughly doubled in a decade, from ~5.4 stakeholders in 2014 to **11+
+   in 2026**, with the median near 11.2 for deals above $50K. Against that, an absolute "5+ contacts is
+   Strong" ages badly: five of eleven is under half the group that will decide. So express coverage as a
+   **share of the committee this deal actually has**, and record both the count and the share.
+
+   Two rules that follow:
+
+   - **The economic buyer is not one contact among several.** Coverage that misses them is at risk
+     whatever the headcount says. Weight the role rather than counting heads.
+   - **Do not add stakeholders because a benchmark says more is better.** Threading reaching five or
+     more stakeholders has been reported closing at ~30% against ~5% single-threaded, but committee size
+     is a property of the deal rather than a choice: large deals have large committees and are harder to
+     win. A three-person SMB deal threaded to eight people is a slower three-person deal. The comparison
+     that matters is threaded versus single-threaded *within* the same deal size.
+
+   The absolute thresholds, for reference:
    - 5+ contacts across multiple roles = Strong (Low risk)
    - 3-4 contacts across 2+ roles = Good (Moderate risk)
    - 2 contacts engaged = Adequate (Elevated risk)
@@ -117,7 +136,12 @@ Each action: who, channel, message angle, desired outcome.
 
 - Is the lifecycle stage one of the five defined stages (Prospect, Customer Active, At Risk, Churned, Disqualified), not an invented status?
 - Does every buying committee role trace to a role defined in `references/account-lifecycle.md` (Champion, Economic Buyer, Technical Evaluator, End User, Blocker), with no other role names used?
-- Does the threading depth match the actual contact count against the five-tier scale (5+/3-4/2/1/0)?
+- Does the threading assessment report **both** the contact count and the coverage as a share of the
+  committee this deal actually has, rather than only the absolute count against the five-tier scale?
+- Is the economic buyer's engagement stated separately, with coverage marked at risk when they are
+  missing regardless of headcount?
+- Does the plan avoid recommending extra stakeholders purely because more is better, given that
+  committee size is a property of the deal rather than a lever?
 - Is the 90-day plan organized by phases (Week 1-2, Week 3-4, etc.), not a week-by-week list?
 - Did Phase 0 actually run, with the snapshot returned before the plan and every claim traceable to a
   fetched source and date?
