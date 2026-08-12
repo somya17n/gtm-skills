@@ -23,7 +23,13 @@ Ask the user for:
 1. Their ICP (company size, target roles, industries)
 2. Their product and what problem it solves in one sentence
 3. Signal weighting preference: ask which signal types matter most for their ICP (funding, leadership hires, job postings, stack changes, LinkedIn activity, product usage events)
-4. This week's signals: one account per line in any format (company name + signal type + detail + date)
+4. This week's signals: one account per line in any format (company name + signal type + detail + date).
+   **The date is required, not decoration.** Signal decay is steep: a funding round from six months ago
+   is trivia, a job change from two weeks ago is the strongest thing on the list. A signal without a
+   date cannot be ranked.
+5. Which signals, if any, came from private or internal sources (a call recording, a support ticket, a
+   usage drop, a data-export request). These rank normally but are **never** mentioned in the touch
+   itself, per `references/signal-response.md`.
 
 If the user pastes a messy export from Clay, CRM alerts, or LinkedIn notifications, clean it up before processing. Do not ask them to reformat it.
 
@@ -42,6 +48,11 @@ Return a ranked table:
 After the table, add three sections:
 
 **Top accounts to action today (up to 3)**
+
+Each one leads with the **pain the signal created**, never the signal itself. Per
+`references/signal-response.md`: stating the signal back tells the person what they already know
+happened to them, and reads as surveillance rather than relevance. "Congrats on the new role" is the
+amateur version of every entry on this list.
 Name the top accounts, up to three, and write one sentence on exactly what to say in the first touch, specific to their signal, not a generic opener.
 
 **Never pad to reach a count.** A quiet week is a real result. If only one or two accounts carry a signal worth acting on today, name those and say so. If none do, say that outright and point to the Signal gaps section instead of promoting a weak account to fill a slot.
@@ -51,6 +62,20 @@ Any accounts in this week's batch with no ICP fit or no signal worth acting on. 
 
 **Signal gaps**
 Any accounts in the pipeline that had no signal this week and have been inactive for more than two weeks. Flag them as candidates for a pipeline review.
+
+## Ranking
+
+Read `references/signal-response.md` before ranking. Three things override a flat signal-type
+weighting:
+
+- **Decay.** Rank on freshness alongside strength. Every signal has a window, and outside it the
+  signal is trivia rather than a reason to write.
+- **Level.** A named person who changed roles beats a 500-person account "showing intent": you know
+  who to write to and what changed for them. Account-level intent tells you a building is warm.
+- **Convergence.** Two or more independent signals landing on one account in the same window is a
+  buying window and outranks anything single-sourced. Say when that is what you are looking at.
+
+Then apply the type weighting below.
 
 ## Signal weighting defaults
 

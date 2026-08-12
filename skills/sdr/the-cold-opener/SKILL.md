@@ -33,7 +33,20 @@ Write a complete, personalized cold email body from the user's research inputs. 
 Ask the user for these inputs. If any are missing, ask for them before writing. Do not fill in company details from memory or guesswork.
 
 1. **Prospect:** First name, title, and company name
-2. **Trigger signal:** One specific reason for reaching out: funding round, job posting, tech stack change, LinkedIn post, product usage event, or company announcement
+2. **Trigger signal:** One specific reason for reaching out: funding round, job posting, tech stack
+   change, LinkedIn post, product usage event, or company announcement. Ask for its **date** too, since
+   signal decay is steep and a stale trigger is a worse opener than no trigger.
+
+   Read `references/signal-response.md` before writing. Two rules from it bind this skill:
+
+   - **The signal is never the opener.** Lead with the pain it created for them — the pressure, the
+     promise they made, the problem they inherited — not with the event. "Congrats on the round" states
+     back what they already know happened to them, and spends the one line that matters proving you can
+     read an alert.
+   - **Some signals shape the message and never appear in it.** Layoffs, a missed quarter, a profile
+     view, and anything from a private or internal source are all in that category. If naming the
+     signal would make the reader wonder how closely they are being watched, use it and leave it out of
+     the text.
 3. **Personalization angle:** One specific observation about this person or company (ideally from a LinkedIn profile or account research brief)
 4. **Product one-liner:** What the product does and who it is for, no buzzwords
 5. **Proof point:** A specific stat, outcome, or customer result, not a vague claim like "significant time savings"
@@ -94,6 +107,11 @@ Hi [First name],
 Before returning the output, verify:
 
 - Is the opening line specific to the exact trigger the user provided, or is it generic?
+- Does it lead with the **pain the trigger created** rather than stating the trigger itself?
+- If the trigger is sensitive (layoffs, a missed quarter, a profile view, anything private or internal),
+  is it absent from the text while still having shaped the message?
+- Is the trigger recent enough to justify writing now, and if it is stale, was that raised rather than
+  used anyway?
 - Is the total email body 55-90 words, and under the 120 ceiling at worst?
 - Does the pain get implied rather than assigned, so the reader supplies it instead of being told what
   their problem is?
