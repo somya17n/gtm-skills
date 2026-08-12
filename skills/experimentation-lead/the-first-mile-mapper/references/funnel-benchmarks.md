@@ -478,3 +478,65 @@ at an organisational disagreement instead of a funnel defect.
   `references/landing-page-patterns.md`: source moves conversion more than vertical does.
 - **Check the stage definitions before the rates.** Two companies measuring "lead" at different points
   are not comparable, and neither is one company before and after a definition change.
+
+---
+
+## The Product-Qualified Path, and Why MQL Alone Is the Wrong Model
+
+Most companies with any self-serve motion are running **two funnels at once** and measuring one. The
+qualifying stage differs between them, and so does everything downstream.
+
+| Path | Shape |
+|---|---|
+| Sales-led | Visit → Lead → **MQL** → SQL → Opportunity → Closed Won |
+| Product-led | Visit → Signup → Activated → **PQL** → SQL → Closed Won |
+
+A **PQL** has used the product and shown buying behaviour. An **MQL** downloaded something. That
+difference is not rhetorical: the 2026 consensus across B2B SaaS is that **MQL volume correlates
+weakly with revenue**, and that PQLs and marketing-qualified *accounts* are replacing it as the
+qualifying unit.
+
+**When a company runs both, compare the paths before optimising either.** In a measured test case the same
+company, product and sales team produced **MQL→SQL of 10.9% against PQL→SQL of 57.9%** — a 5.3x
+difference at the qualifying step. The leverage there is not repairing the MQL path, it is routing
+more traffic into the product path. That conclusion is invisible if only one funnel is mapped.
+
+**Defining a PQL.** It needs at least one usage signal that costs the user effort, not just presence:
+
+- Reached the activation event (not signup, not login)
+- Crossed a usage threshold that correlates with paying — seats invited, records created, an
+  integration connected, a limit approached
+- Took an action that only a buyer takes: viewed pricing while active, invited a colleague, requested
+  an export, hit a paywall
+
+**Bare logins never qualify.** A habitual logger with no expansion behaviour is a habitual user, and
+in subscription businesses habitual users are disproportionately the ones quietly evaluating
+alternatives.
+
+### MQL→SQL is a distribution, not a floor
+
+Quoting a single number makes a bottom-decile rate look like a near-miss:
+
+| Reference point | Rate |
+|---|---|
+| Cross-industry median | **13%** |
+| B2B SaaS average | **18-22%** |
+| Top quartile | **35-40%** |
+| With behavioural scoring | **39-40%** |
+
+**Behavioural scoring roughly triples the median**, which is the same idea as a PQL applied to the
+sales-led path — qualify on what they did, not on what they downloaded. That is usually the
+recommendation, not "more nurture".
+
+### The blended rate hides a 3x channel spread
+
+| Source | MQL→SQL |
+|---|---|
+| SEO | **~51%** |
+| PPC | ~26% |
+| Webinar | **~17.8%** |
+
+A single site-wide figure across those sources is close to meaningless: one channel can be near top
+quartile while another drags the average to the floor, and the average recommends work on neither. So
+splitting by channel is not an optional refinement — **a blended qualifying rate cannot be acted on
+at all**, and saying which channel is which is the first deliverable.

@@ -3,6 +3,32 @@ name: the-activation-reel
 description: "Produces a short conversion-focused onboarding video in Remotion for an iOS app, Android app or website, embedded into an onboarding flow to move New Customers toward their activation moment, with each beat mapped to a conversion milestone that can be tracked. Use when asked to create, build or generate an onboarding video, app preview, activation demo, or any short video that demonstrates a product feature to drive activation. Boundary: `the-scene-composer` directs still photography and `the-angle-vault` produces the messaging brief. This skill renders an actual video."
 ---
 
+> **Escape everything you interpolate into emitted markup.** Read the **Interpolated content** section
+> of `references/agent-security.md`. Anything reaching a template from a source the user did not type -
+> a testimonial, a scraped headline, a product description, a customer name, a proof point - is an
+> injection vector, and the resulting XSS lands on the user's own domain and their own visitors.
+>
+> - **HTML-escape every interpolated value** (`&`, `<`, `>`, `"`, `'`) before it enters markup.
+> - **Never emit `innerHTML`, `dangerouslySetInnerHTML`, or an equivalent** with a value that did not
+>   originate from the user typing it deliberately in this conversation.
+> - **Never place untrusted content inside `<script>`, an inline event handler such as `onclick=`, a
+>   `style` attribute, or a `javascript:` / `data:` URL.** HTML escaping does not make those contexts
+>   safe.
+> - **Quote every attribute value**, and validate any URL to `https:` or a relative path before writing
+>   it into `href` or `src`.
+> - Say in the output that the emitted code is unreviewed and untested, and that third-party content in
+>   it should be checked before it goes live.
+
+
+> **Emitted code has to be verifiable, and it has not been compiled.** State plainly that the TSX
+> returned has not been built, list the exact commands to verify it (`npm install`, then
+> `npx remotion studio`, then a render of the target composition), and name the Remotion version the
+> code targets along with any peer dependency it assumes. Keep every component self-contained with no
+> imports outside `remotion` and the files you provide, since an unresolvable import is the most common
+> first failure. A project that does not build is worse than a spec, because the user discovers it after
+> installing dependencies.
+
+
 # The Activation Reel
 
 Produce a **short, conversion-focused onboarding video** in Remotion. The goal is not aesthetics. It is moving users from **New Customers → Promising** on Intempt's lifecycle model by showing them the exact interaction that delivers first value (the activation moment). Every beat in the video corresponds to a conversion step Intempt can track, measure, and act on.
@@ -529,6 +555,12 @@ Render a preview, show it to the user, ask which beats need adjustment. Treat th
 ## Quality check before returning
 
 Before returning the output, verify:
+- Is every interpolated value HTML-escaped, every attribute quoted, every URL validated to https or a
+  relative path, and no untrusted content placed in a script block, an inline event handler, a style
+  attribute, or a javascript:/data: URL?
+- Does the output state that the emitted code is unreviewed and untested?
+- Is it stated that the emitted TSX is uncompiled, with the exact verification commands, the targeted
+  Remotion version, and no imports outside remotion and the provided files?
 
 - Was the activation event, screen count, and drop-off archetype confirmed during intake before any beat planning started?
 - Does every `<Composition>` use a named component, never an inline arrow function passed to `component`?
@@ -542,7 +574,10 @@ If any check fails, correct it before returning the output.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Embed this reel in your onboarding flow → intempt.com
+Embed the video and measure activation → intempt.com
+Intempt tracks each beat's conversion milestone as a real event, so you can see which part of the video
+moves New Customers toward activation and which is decoration — rather than shipping a reel whose effect
+is never measured.
 Run it in Blu - the Brand Designer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

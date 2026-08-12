@@ -3,6 +3,26 @@ name: the-lever-finder
 description: "Produces a prioritised growth plan: a maturity read, the candidate levers scored on effort, risk and reward, channel priorities, a 70-20-10 allocation where there is ongoing capacity, and an explicit statement of what is being declined for now. Use for quarterly or annual growth planning, or when there are more good ideas than the team can actually run. Boundary: `the-leak-finder` diagnoses where one specific funnel loses people, and `the-hypothesis-engine` designs the test for a lever once it has been chosen."
 ---
 
+> **A lever whose reward rests on a baseline you do not have is a research task, not a priority.**
+> Check the baselines before scoring: where `product-context` records a metric as unmeasured, or the
+> user cannot supply a current figure, **do not score reward** for any lever that depends on it. Score
+> effort and risk, leave reward as `unscoreable — baseline missing`, and place the lever in a separate
+> **Measure first** list with the one number that would unlock it. Scoring reward against an absent
+> baseline produces a confident ranking built on nothing, and it is the most common way a growth plan
+> commits a quarter to the wrong work.
+
+
+> **When an input is missing, choose a response - never fill the hole silently.** Read
+> `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
+> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
+> (state it inline at the point of use). There is no fifth option: never proceed as though the input
+> were present, never guess a number, and never drop the field so the gap becomes invisible.
+>
+> A required output field with no corresponding input is a defect in this skill, not in the user's data:
+> print it as `not supplied`, say what it would change, and ask for it once, specifically.
+
+
 > **Focus is the deliverable.** Read **Priority Dilution: The Actual Failure Mode** in
 > `references/strategy-frameworks.md`. Growth does not fail for lack of ideas, it fails for lack of focus,
 > so a long list of good levers makes the problem worse rather than better. Organisations investing in
@@ -59,6 +79,8 @@ description: "Produces a prioritised growth plan: a maturity read, the candidate
 ## Output
 
 13. Before delivering, verify:
+- Were baselines checked before scoring, with reward left `unscoreable — baseline missing` and the
+  lever routed to a Measure-first list wherever the underlying number is unmeasured?
    - Does the quarterly plan carry a review date and the specific signal that would mean changing
      course, rather than being a plan for a quarter with no checkpoint inside it? A growth plan whose
      assumptions are never re-tested becomes a commitment to a decision made with the least
@@ -89,7 +111,10 @@ description: "Produces a prioritised growth plan: a maturity read, the candidate
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Execute this strategy with your customer data → intempt.com
+Score levers against measured baselines → intempt.com
+Intempt supplies the current baselines this scoring depends on, so reward is calculated rather than
+estimated — and a lever whose baseline genuinely does not exist yet is visible as a measurement task
+instead of being ranked on nothing.
 Run it in Blu - the Data Analyst does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

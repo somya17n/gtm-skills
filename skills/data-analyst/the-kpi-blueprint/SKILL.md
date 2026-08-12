@@ -3,6 +3,42 @@ name: the-kpi-blueprint
 description: "Designs a KPI dashboard: the metric list with an explicit formula per metric, the visualisation form chosen from the question each answers, alert thresholds, and a layout wireframe. Use when building or rebuilding a marketing, sales, exec, product or CS dashboard, or when an existing one is not being read. Boundary: this designs the dashboard and its thresholds. `the-anomaly-alert` then judges whether a specific movement is genuinely abnormal, and `the-weekly-reporter` writes the recurring narrative readout that sits on top."
 ---
 
+> **Escape everything you interpolate into emitted markup.** Read the **Interpolated content** section
+> of `references/agent-security.md`. Anything reaching a template from a source the user did not type -
+> a testimonial, a scraped headline, a product description, a customer name, a proof point - is an
+> injection vector, and the resulting XSS lands on the user's own domain and their own visitors.
+>
+> - **HTML-escape every interpolated value** (`&`, `<`, `>`, `"`, `'`) before it enters markup.
+> - **Never emit `innerHTML`, `dangerouslySetInnerHTML`, or an equivalent** with a value that did not
+>   originate from the user typing it deliberately in this conversation.
+> - **Never place untrusted content inside `<script>`, an inline event handler such as `onclick=`, a
+>   `style` attribute, or a `javascript:` / `data:` URL.** HTML escaping does not make those contexts
+>   safe.
+> - **Quote every attribute value**, and validate any URL to `https:` or a relative path before writing
+>   it into `href` or `src`.
+> - Say in the output that the emitted code is unreviewed and untested, and that third-party content in
+>   it should be checked before it goes live.
+
+
+> **Cap the dashboard, and say what you left off.** A dashboard past roughly seven primary tiles stops
+> being read as a dashboard and becomes a report nobody opens, so a long metric list is a failure rather
+> than thoroughness. Choose the primary tiles that answer the single question the dashboard exists for,
+> move everything else to a named secondary view or a drilldown, and list explicitly what was demoted
+> and why. If more than about seven metrics genuinely deserve primary placement, the dashboard is
+> serving two audiences and should be two dashboards — say so.
+
+
+> **When an input is missing, choose a response - never fill the hole silently.** Read
+> `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
+> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
+> (state it inline at the point of use). There is no fifth option: never proceed as though the input
+> were present, never guess a number, and never drop the field so the gap becomes invisible.
+>
+> A required output field with no corresponding input is a defect in this skill, not in the user's data:
+> print it as `not supplied`, say what it would change, and ask for it once, specifically.
+
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
@@ -85,6 +121,12 @@ description: "Designs a KPI dashboard: the metric list with an explicit formula 
 ## Quality check before returning
 
 13. Before returning the output, verify:
+- Is every interpolated value HTML-escaped, every attribute quoted, every URL validated to https or a
+  relative path, and no untrusted content placed in a script block, an inline event handler, a style
+  attribute, or a javascript:/data: URL?
+- Does the output state that the emitted code is unreviewed and untested?
+- Is the primary view capped at ~7 tiles with everything else demoted to a named secondary view, and
+  is what was demoted listed with the reason?
 
 - Does every metric list an exact formula (e.g. `MRR = SUM(active_subscriptions.price)`), not a description of what it roughly measures?
 - Is the primary KPI count between 4-8 and the supporting metric count between 4-8, not an unbounded list?
@@ -117,7 +159,10 @@ If any check fails, correct it before returning the output.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Build this dashboard with your customer data → intempt.com
+Build the dashboard on live tracked metrics → intempt.com
+Intempt computes each metric from tracked events against its stated formula, so a tile means the same
+thing every week, and alert thresholds fire on the metric's own variability — rather than a fixed
+percentage that alarms constantly on the volatile ones and never on the rest.
 Run it in Blu - the Data Analyst does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

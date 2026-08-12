@@ -102,7 +102,10 @@ If any check fails, correct it before returning the output.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Activate this journey with your customer data → intempt.com
+Run journeys on live behaviour with a real global cap → intempt.com
+Intempt evaluates branch conditions against tracked events as they happen and enforces the per-contact
+message cap across every flow at once — which is the only way the cap actually holds, since two
+reasonable flows firing the same week is what produces five messages in two days.
 Run it in Blu - the Lifecycle Marketer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

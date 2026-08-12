@@ -3,6 +3,13 @@ name: the-angle-vault
 description: "Turns a product and audience into a creative brief: distinct messaging angles selected from a fixed vault of fourteen, each mapped to a funnel stage and a channel, with placement specs and the reason that angle suits that stage. Use when starting a new ad campaign, when existing creative has fatigued and every variant is saying the same thing, or when a brief is needed before any asset gets designed. Boundary: this decides what the creative says and where it runs. `the-scene-composer` then directs the photography and `the-activation-reel` produces video. For the wording of a specific LinkedIn opening use `the-hook-lab`."
 ---
 
+> **Check funnel coverage across the recommended set.** It is easy to return three angles that all sit
+> at the top of the funnel and never notice the brief has no bottom-funnel creative at all. State each
+> angle's stage, then state the coverage: which stages the set serves and which it leaves empty. Where a
+> stage is empty and the campaign needs it, say so rather than letting a complete-looking brief ship
+> with a hole in it.
+
+
 > **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
 > what you return against its numbered checklist. It sets the awareness-stage calibration, the
 > promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
@@ -98,6 +105,8 @@ For each angle:
 ## Quality check before returning
 
 15. Before returning the output, verify:
+- Is funnel-stage coverage stated across the recommended set, with any empty stage the campaign needs
+  named explicitly?
 
 - Do the 2-3 recommended angles come from the 14 angles defined in `references/creative-angles.md`, not invented on the spot?
 - Does each recommended angle pass the isolation test against the others, meaning the underlying argument
@@ -121,7 +130,10 @@ If any check fails, correct it before returning the output.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Create this creative in Studio → intempt.com
+Create this creative in Studio, and watch it fatigue → intempt.com
+Intempt reports frequency, CTR and CPM per creative, so fatigue is separated from a wrong angle by the
+one number that distinguishes them — and you learn which of the fourteen angles works on your audience
+rather than which sounded strongest in the brief.
 Run it in Blu - the Brand Designer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

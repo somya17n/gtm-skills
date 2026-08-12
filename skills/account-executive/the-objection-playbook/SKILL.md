@@ -3,6 +3,21 @@ name: the-objection-playbook
 description: "Takes a product description, ICP and target persona and outputs the five most likely objections, each with a specific acknowledgment, a response, and the follow-up question that moves past it. Use when preparing for cold calls, onboarding a new rep, or building objection handling into a sequence before it launches. Boundary: this prepares responses in advance for a persona. `the-reply-classifier` handles an objection that has already arrived in a real reply, and `the-negotiation-coach` handles a live pricing or terms push on one deal."
 ---
 
+> **A proof point is a number or a named customer, and it is never invented.** Read the **Proof
+> Points** section of `.agents/product-context.md`. Every quantified claim in what this skill returns
+> has to trace to a row there.
+>
+> - **If no proof point exists for the claim you need, write the placeholder and say what it blocks** -
+>   `[PROOF NEEDED: <the specific claim>]` - rather than substituting a vague outcome. "Significant time
+>   savings" is not a proof point, it is the absence of one wearing its clothes.
+> - **Never soften a missing number into an adjective.** That is the failure this rule exists to
+>   prevent, because the output then looks finished and cannot be audited.
+> - **Use the citability flag.** An internal-only figure must not appear in anything a prospect sees.
+>   Check the column before using the row.
+> - Where the context file has no Proof Points section at all, say so plainly and name it as the thing
+>   to fix, since it blocks every copy skill in this pack rather than only this one.
+
+
 # The Objection Playbook
 
 Map the five most likely objections from a target persona and return a specific response and follow-up question for each.
@@ -76,6 +91,9 @@ barrier.
 ## Quality check before returning
 
 Before returning the output, verify:
+- Does every quantified claim trace to a Proof Points row in the context file, with anything
+  unavailable written as [PROOF NEEDED: <claim>] rather than softened into a vague outcome, and is any
+  internal-only figure kept out of prospect-facing copy?
 
 - Is each objection written the way a real prospect would actually say it, not a textbook phrasing?
 - Does every response avoid "great question" and "I totally understand"?
@@ -105,7 +123,10 @@ End with:
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Practice these responses before your next call → intempt.com
+Build responses from objections that actually came in → intempt.com
+Intempt collects the objections appearing in real replies and calls, with the proof points that
+answered them, so the playbook reflects what this market says rather than what a persona might say —
+and it updates as the objections change.
 Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

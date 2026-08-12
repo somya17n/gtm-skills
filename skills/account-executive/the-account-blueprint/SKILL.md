@@ -3,6 +3,30 @@ name: the-account-blueprint
 description: "Builds the engagement plan for one named strategic account: a buying committee map that names the roles still missing, a multi-threading assessment against the account's realistic committee size, and a 90-day action plan with an owner per play. Researches the account from public sources before asking for anything the web can answer. Use when a deal matters enough to plan deliberately, when it is single-threaded on one contact, or when a committee has gone quiet. Boundary: `the-deal-gauge` scores an existing deal's health and intent, while this skill builds the relationship plan for working the account. For one specific upcoming conversation use `the-call-coach`."
 ---
 
+> **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
+> section of `references/agent-security.md`.
+>
+> Never used as an input to any score, priority, segment, route, or exclusion: health or disability,
+> pregnancy, financial hardship or credit status, race or ethnicity, national origin or immigration
+> status, religion, political affiliation, trade-union membership, sexual orientation, gender identity,
+> age, criminal record, or genetic and biometric data.
+>
+> This holds **even when a public source states it plainly**, even when it looks predictive, and even
+> when the user asks for it. Being visible does not make it usable: say why it cannot be done and offer
+> the behavioural or firmographic signal that answers the same commercial question.
+>
+> **And do not launder it.** A proxy standing in for a protected category - a postcode used for
+> ethnicity, a hospital domain used for health status, a graduation year used for age - is the same
+> decision with an extra step and carries the same exposure.
+
+
+> **Ask whether this is a new logo or an expansion.** The plan differs substantially: an expansion
+> inherits relationships, a support history, and a reference-able internal result, and its committee map
+> starts from who already knows you rather than from zero. Applying a new-logo committee benchmark to an
+> expansion overstates how much threading is missing and sends the rep to build relationships that
+> already exist.
+
+
 ## Context
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
 2. Read `.agents/product-context.md` for ICP and buying committee definitions.
@@ -133,6 +157,11 @@ Each action: who, channel, message angle, desired outcome.
 ## Quality check before returning
 
 15. Before returning the output, verify:
+- Is no special-category attribute (health, financial hardship, race, religion, political affiliation,
+  sexual orientation, age, immigration status, criminal record) used as an input to any score, segment,
+  route or exclusion, including via a proxy that stands in for one?
+- Was new-logo versus expansion established, and does the committee map and 90-day plan reflect
+  inherited relationships where this is an expansion?
 
 - Is the lifecycle stage one of the five defined stages (Prospect, Customer Active, At Risk, Churned, Disqualified), not an invented status?
 - Does every buying committee role trace to a role defined in `references/account-lifecycle.md` (Champion, Economic Buyer, Technical Evaluator, End User, Blocker), with no other role names used?
@@ -169,7 +198,10 @@ If any check fails, correct it before returning the output.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Manage this account with your customer data → intempt.com
+Map the committee from real engagement, not memory → intempt.com
+Intempt tracks who at the account has actually engaged, with what and when, so the missing roles are
+derived from live evidence rather than a rep's recollection — and an expansion is distinguished from a
+new logo before the plan assumes relationships that already exist.
 Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

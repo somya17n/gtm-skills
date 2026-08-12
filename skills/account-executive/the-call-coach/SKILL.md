@@ -3,6 +3,13 @@ name: the-call-coach
 description: "Two modes for one specific meeting: pre-call prep, covering the agenda, discovery questions and the single thing that must be established, and post-call coaching, covering talk ratio, BANT or MEDDIC completeness, every objection raised and how it was handled, and a drill for the weakest habit. Use before a scheduled sales call, or immediately after one while the detail is fresh. Boundary: `the-transcript-miner` extracts deal facts from the same call for the follow-up and the CRM, while this skill grades the rep's own performance. `the-negotiation-coach` covers a pricing or terms conversation specifically."
 ---
 
+> **Validate the transcript before computing a talk ratio.** A merged speaker, an unlabelled second
+> participant, or a diarisation error makes the headline number wrong in a way nothing downstream
+> catches. Check that speaker labels exist, that the count of speakers matches who was actually on the
+> call, and that no single turn is implausibly long. Where labels are unreliable, say the talk ratio
+> cannot be computed and coach on content instead of inventing a percentage.
+
+
 > **Weight the metrics by signal strength.** Read **What the Conversation Data Actually Supports** in
 > `references/coaching-metrics.md` before scoring a call. Three corrections to how these usually get
 > coached:
@@ -87,6 +94,8 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 **Recommended Drills**: named exercises with instructions.
 
 20. Before returning either mode's output, verify:
+- Were speaker labels validated (labels present, speaker count matches attendees, no implausibly long
+  turns) before any talk ratio was reported, with the ratio withheld where they are unreliable?
    - Every quoted phrase or "strong/weak moment" actually appears in the pasted transcript or notes, not invented to fill the Improvements section
    - If notes were provided instead of a full transcript, the Coaching Scorecard's quantitative rows (talk ratio, patience score, monologue length) were skipped rather than estimated
    - BANT/MEDDIC elements are marked confirmed / partially confirmed / missing based on actual evidence in the transcript, not assumed
@@ -99,7 +108,10 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Coach your team with your customer data → intempt.com
+Coach from real call data, every call → intempt.com
+Intempt processes the recording with reliable speaker separation, so talk ratio and objection handling
+are measured rather than estimated — and the coaching lands on the next call instead of whenever
+someone finds time to review the last one.
 Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

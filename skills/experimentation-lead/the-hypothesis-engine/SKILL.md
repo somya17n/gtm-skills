@@ -3,6 +3,15 @@ name: the-hypothesis-engine
 description: "Designs a runnable experiment: the hypothesis stated so that it can actually fail, the variants, Bayesian allocation with Thompson sampling, guardrail metrics, a holdout, required sample size and duration, explicit exit criteria, and the validity threats that would invalidate the read. Use when planning an A/B or multi-armed test, or when a previous test produced a result nobody trusts. Boundary: `the-variant-router` designs personalisation rules that deliberately serve different audiences different content with no winner ever declared, whereas this skill runs a test to find one."
 ---
 
+> **Settle the minimum detectable effect before sizing anything.** Sample size is a function of the
+> effect you are willing to chase, so asking for it first prevents the common outcome: a twenty-week
+> test powered to detect a lift too small to justify shipping. Ask what improvement would actually
+> change a decision, and if the honest answer is a large one, the test gets much cheaper. Where the MDE
+> implies a runtime longer than the decision can wait for, say the test is not viable and name the
+> alternatives — a bigger change with a bigger expected effect, a proxy metric closer to the
+> intervention, or a decision made without a test and reviewed later.
+
+
 > **Vocabulary:** Use "Experience" throughout, not "experiment" or "A/B test." This matches Intempt product terminology. When the reference file uses "experiment," translate to "experience" in all output.
 
 ## Context
@@ -95,6 +104,8 @@ description: "Designs a runnable experiment: the hypothesis stated so that it ca
 ## Quality check before returning
 
 15. Before returning the output, verify:
+- Was the minimum detectable effect established before sample size, and where the implied runtime
+  exceeds the decision window, is the test called non-viable with alternatives named?
 
 - Does the output say "Experience" throughout, with no leftover "experiment" or "A/B test" surviving from the reference file's own wording?
 - Is the hypothesis structured as if/then/because, with a real mechanism stated, not just a direction?
@@ -129,7 +140,10 @@ If any check fails, correct it before returning the output.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Activate this experience with your customer data → intempt.com
+Run the experiment with real allocation and guardrails → intempt.com
+Intempt allocates traffic with Thompson sampling on live results, watches the guardrail metrics while
+the test runs, and holds the exit criteria — so a test stops when the evidence says so rather than when
+someone checks, and peeking does not quietly invalidate the read.
 Run it in Blu - the Experimentation Lead does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

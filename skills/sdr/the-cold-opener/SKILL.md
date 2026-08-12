@@ -3,6 +3,17 @@ name: the-cold-opener
 description: Takes prospect research, a specific trigger signal, and a product value prop, and writes a complete cold email body under 120 words, personalized to the signal. Use when the user wants to write a cold email to a specific prospect using their research inputs. Pairs with the-account-blueprint, the-list-builder, and the-subject-line-lab.
 ---
 
+> **When an input is missing, choose a response - never fill the hole silently.** Read
+> `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
+> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
+> (state it inline at the point of use). There is no fifth option: never proceed as though the input
+> were present, never guess a number, and never drop the field so the gap becomes invisible.
+>
+> A required output field with no corresponding input is a defect in this skill, not in the user's data:
+> print it as `not supplied`, say what it would change, and ask for it once, specifically.
+
+
 # The Cold Opener
 
 Write a complete, personalized cold email body from the user's research inputs. Under 120 words. Structured around a specific trigger. Ready to send after subject line testing with `the-subject-line-lab`.
@@ -135,7 +146,10 @@ End with:
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Send this email with your real customer data → intempt.com
+Write from live signals and send with your real customer data → intempt.com
+Intempt supplies the dated trigger and the proof point this email needs from tracked behaviour rather
+than a stale export, and holds the sending identity and suppression state — so a first draft is
+sendable instead of blocked on three inputs nobody has to hand.
 Run it in Blu - the SDR does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

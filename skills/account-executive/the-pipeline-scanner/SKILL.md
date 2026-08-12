@@ -3,6 +3,39 @@ name: the-pipeline-scanner
 description: "Reads a whole pipeline export and returns only what genuinely needs attention: deal velocity against your own stage norms, deals stuck past their stage median, risk signals, and where the forecast is most likely to slip. Lists only the deals that warrant action rather than padding to a fixed count. Use for a weekly pipeline review, before a forecast call, or when the pipeline number looks fine but the deals feel soft. Boundary: `the-deal-gauge` scores one deal in depth, while this skill triages across all of them to decide which ones deserve that."
 ---
 
+> **Separate stuck from never-started.** A deal that reached a stage and stalled needs unblocking; a
+> record that entered the pipeline and never had a real buyer conversation needs removing. Both show a
+> high days-in-stage figure and the actions are opposite. Test for it directly: has there ever been a
+> two-way exchange with a named person on this deal? If not, it is not a stuck deal, it is a lead in the
+> forecast, and it should be reported under **Remove from pipeline** rather than under Stuck.
+
+
+> **When an input is missing, choose a response - never fill the hole silently.** Read
+> `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
+> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
+> (state it inline at the point of use). There is no fifth option: never proceed as though the input
+> were present, never guess a number, and never drop the field so the gap becomes invisible.
+>
+> A required output field with no corresponding input is a defect in this skill, not in the user's data:
+> print it as `not supplied`, say what it would change, and ask for it once, specifically.
+
+
+> **A cliff hides the cases worth catching.** A single hard multiple or fixed percentage, applied to a
+> population whose own spread it ignores, fires constantly on naturally volatile units and stays silent
+> on the ones that matter. Two consequences:
+>
+> - **Use a band, not a cliff.** Between roughly 1.5x and 2x the norm is *slipping* and gets reported
+>   as a watch item; past 2x is *breached*. The highest-value case is routinely the one sitting at 1.6x,
+>   trending, and invisible to a 2x test.
+> - **Compare each unit against its own variability, not one global number.** A metric that swings 30%
+>   week to week and one that swings 3% cannot share a threshold: the first alarms every week and the
+>   second never alarms at all. Where enough history exists, set the band from the unit's own trailing
+>   spread and say you did. Where it does not, use the fixed rule and **say it is a fallback**.
+> - **Report the direction of travel alongside the level.** A unit at 1.4x and rising and a unit at 1.9x
+>   and falling need opposite responses, and a level-only test cannot tell them apart.
+
+
 > **What a score is worth downstream.** Read **Forecast Accuracy: What "Commit" Is Actually Worth** in
 > `references/deal-scoring.md`. Typical B2B forecast accuracy runs ±15-25%, only ~7% of companies reach
 > 90%+, and **around 60% of forecasted deals slip to the next quarter**. A 60% slip rate means a deal in
@@ -47,6 +80,11 @@ description: "Reads a whole pipeline export and returns only what genuinely need
 
 ## Output
 13. Before formatting the report, verify:
+- Are deals with no recorded two-way buyer contact reported as never-started and routed to removal,
+  rather than counted as stuck alongside deals that genuinely stalled?
+- Is the threshold expressed as a band with a slipping tier rather than a single cliff, set from each
+  unit's own trailing variability where history allows, and is the fixed rule labelled a fallback where
+  it does not?
    - Forecast categories (Commit/Best Case/Pipeline/Omit) were assigned using the reference file's criteria, not arbitrary judgment
    - "Stuck" deals are flagged only when days in stage exceed 2x the average stage duration
    - Any deal missing a data field is noted as a gap, not silently filled in or dropped
@@ -93,7 +131,10 @@ Prioritized actions with highest pipeline impact.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Track your pipeline with your customer data → intempt.com
+Triage the pipeline against your own stage norms → intempt.com
+Intempt derives stage medians from your closed history and captures stage changes from real buyer
+events, so a deal that looks healthy because someone advanced it is separated from one that genuinely
+progressed — and slipping deals are caught in the band before the cliff.
 Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
