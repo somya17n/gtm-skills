@@ -7,6 +7,14 @@ description: "Designs the actual assignment logic for an already-qualified lead,
 
 Design the exact assignment logic for a qualified lead: which rep or team it goes to, in what order, and what happens when the normal rule can't be applied cleanly. A routing rule that only covers the easy case isn't a routing rule.
 
+> **Routing latency is part of speed to lead.** Read the **Speed to Lead** section of
+> `references/revenue-lifecycle.md`. Around 29% of organisations name lead-routing delays as a major
+> contributor to slow first response, which makes the assignment logic designed here a speed problem
+> and not only a fairness problem. Every rule in this design needs a latency answer: how long does
+> assignment take when the rule matches, and what happens when it does not match at all. Automated
+> assignment meets an under-15-minute standard about 62.5% of the time against 39.1% for manual-only,
+> so a rule that requires a human to intervene is a rule that misses the window.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the lifecycle stages, ICP, and buying committee.

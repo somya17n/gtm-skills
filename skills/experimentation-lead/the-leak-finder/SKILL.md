@@ -6,6 +6,21 @@ description: Diagnose funnel drop-offs with conversion benchmarks, root cause an
 > **Chart form.** Read `references/chart-form-and-accessibility.md` before specifying how any
 > number is displayed. Any funnel it specifies shows step-to-step conversion as well as absolute counts, since an absolute-only funnel hides the worst step.
 
+> **Where to start, and one diagnostic.** Read the **B2B SaaS Funnel Benchmarks by Stage** section of
+> `references/funnel-benchmarks.md` before ranking anything.
+>
+> - **When several stages look weak, start at the top.** Visitor-to-lead has by far the widest spread
+>   between median and top quartile (roughly 2% against 8-15%, a 4-7x gap) where every other stage is
+>   closer to 1.5x. Improving a mid-funnel step from 30% to 40% is a 33% gain on that step; moving
+>   visitor-to-lead from 2% to 6% triples the volume entering everything downstream.
+> - **An MQL-to-SQL rate below ~15% is a definitions problem, not a conversion problem.** It means
+>   marketing and sales do not agree on what qualified means, so marketing is passing leads sales does
+>   not recognise as leads. Nurture and handoff coaching will not move it; the scoring definition will.
+>   Diagnose it as an organisational disagreement and route it to whoever owns the scoring model.
+> - **Match the ACV band and the traffic mix before comparing.** A 15% close rate is healthy above
+>   $100k ACV and poor at $10k, and a blended site-wide visitor-to-lead rate hides which channel is
+>   underperforming.
+
 ## Context
 
 1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
@@ -51,6 +66,12 @@ description: Diagnose funnel drop-offs with conversion benchmarks, root cause an
 
 14. Before returning the output, verify:
 
+- Where several stages look weak, does the roadmap start at the stage with the widest median-to-top
+  spread rather than the worst absolute number?
+- Is any MQL-to-SQL rate below ~15% diagnosed as a definitions disagreement between marketing and
+  sales, and routed to the scoring-model owner, rather than treated as a nurture problem?
+- Is every benchmark comparison matched on ACV band and traffic mix, and are the stage definitions
+  confirmed before the rates are compared?
 - Does every stage's green/yellow/red status actually match the benchmark comparison (yellow = within 20% below, red = more than 20% below), not an eyeballed call?
 - Is each red or yellow stage's cause traced to one of the four FMAT categories (Friction, Motivation, Ability, Timing), not left undiagnosed?
 - Is every optimization lever a concrete action ("Reduce signup form to email-only"), not generic advice ("improve the UX")?

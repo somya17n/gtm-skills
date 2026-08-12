@@ -439,3 +439,42 @@ They are not the same thing, and the gap between them is where the failure lives
 - **Name the realisation in words**, not only the event. "They understand their data is connected" is
   the thing; "connected a second integration" is the proxy. Writing the sentence out is what makes it
   possible to notice the proxy has drifted from it.
+
+---
+
+## B2B SaaS Funnel Benchmarks by Stage
+
+| Stage | Median | Top quartile | Notes |
+|---|---|---|---|
+| Visitor → lead | 1.5-2.5% | 8-15% | Widest gap in the funnel |
+| Lead → MQL | 30-50% | 60%+ | |
+| MQL → SQL | 25-40% | ~40% | Below 15% is a definitions problem, not a conversion one |
+| Demo → opportunity | 60-80% | 90%+ | |
+| Opportunity → won | 20-28% mid-market | | 12-18% for enterprise above ~$100k ACV |
+
+Paid traffic splits further: Google Ads runs ~3-5% visitor-to-lead against LinkedIn at ~1.8-3.2%, so
+a blended site-wide rate hides which channel is actually underperforming.
+
+### Two things these numbers tell you that a single rate does not
+
+**Visitor-to-lead is where the leverage is, for most companies.** It has by far the widest spread
+between median and top quartile — roughly 2% against 8-15%, a 4-7x gap, where every other stage is
+closer to 1.5x. Fixing a mid-funnel stage from 30% to 40% is a 33% improvement on that step. Moving
+visitor-to-lead from 2% to 6% triples the volume entering everything downstream. **When several stages
+look weak, start at the top** unless there is a specific reason not to.
+
+**An MQL-to-SQL rate below ~15% is usually not a conversion problem at all.** It means marketing and
+sales do not agree on what qualified means: marketing is passing leads that sales does not recognise
+as leads. Coaching the handoff or adding nurture will not move it. The fix is the definition, and it
+belongs to whoever owns the scoring model. Diagnose it that way rather than treating it as a
+mid-funnel efficiency loss, and say so plainly, because it is the one stage where a low number points
+at an organisational disagreement instead of a funnel defect.
+
+### Comparing honestly
+
+- **Match the ACV band.** A 15% close rate is healthy above $100k ACV and poor at $10k. Comparing
+  across bands produces false alarms in one direction and false comfort in the other.
+- **Match the traffic mix**, not just the industry. See the traffic-source spread in
+  `references/landing-page-patterns.md`: source moves conversion more than vertical does.
+- **Check the stage definitions before the rates.** Two companies measuring "lead" at different points
+  are not comparable, and neither is one company before and after a definition change.

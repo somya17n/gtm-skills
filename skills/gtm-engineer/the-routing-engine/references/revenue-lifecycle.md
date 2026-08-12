@@ -149,3 +149,50 @@ Building one dashboard with every metric and letting each audience ignore what d
 | Win rate | Closed-won / total opportunities | 20-30% (varies heavily by ACV and motion) |
 
 If a number falls well outside these ranges, the fix is usually one of: the MQL threshold is miscalibrated (too loose → low MQL-to-SQL; too strict → low lead-to-MQL), the routing has a silent unassigned bucket, or the SLA isn't actually enforced (defined on paper, ignored in practice).
+
+---
+
+## Speed to Lead
+
+The single best-evidenced number in lead management, and the one most consistently missed.
+
+**What the speed buys:**
+
+- Responding **under 5 minutes** carries roughly **100x** the odds of qualifying a lead against waiting
+  30 minutes. This is why 5 minutes is the standard SLA rather than an aspiration.
+- Responding **within 1 minute** has been measured at around **+391%** conversion against responding
+  after 2 minutes. The curve is steepest at the very start, so the first minutes are not a rounding
+  difference.
+- There is roughly a **2.6x close-rate difference** between the fastest and slowest responder tiers.
+
+**What actually happens:**
+
+- Around **74%** of businesses miss the five-minute window entirely.
+- In one study of 1,000 companies, **63.5% never responded at all**, and those that did averaged over
+  **29 hours**.
+
+The gap between the evidence and the practice is the opportunity: this is not a subtle optimisation,
+it is a majority of competitors not answering.
+
+**What closes the gap:**
+
+- **A written SLA nearly doubles compliance.** About **54.9%** of companies with a defined SLA respond
+  within 15 minutes, against **29.5%** without one. The document is the intervention, because it makes
+  the miss visible and assignable.
+- **Routing delay is itself a major cause.** Around **29%** of organisations name lead-routing delays as
+  a major contributor to slow first response. A perfect SLA on paper fails if the lead sits unassigned,
+  so routing latency has to be measured separately from rep responsiveness. Splitting those two is what
+  tells you whether you have a process problem or a people problem.
+- **Automated assignment outperforms manual.** Roughly **62.5%** of companies using automated routing
+  meet an under-15-minute standard against **39.1%** of manual-only ones.
+
+**Design consequences:**
+
+- Set the SLA in **minutes**, and measure from lead creation, not from assignment. Measuring from
+  assignment hides exactly the delay that matters.
+- Instrument **two clocks**: creation → assignment, and assignment → first touch. Report them
+  separately.
+- Define what happens when the SLA is missed, and by whom. An SLA with no escalation is a target, not
+  an agreement.
+- Cover the hours the leads actually arrive. A five-minute SLA that applies only in business hours is
+  an overnight queue with a fast morning.

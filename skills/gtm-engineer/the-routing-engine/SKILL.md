@@ -9,6 +9,18 @@ Design the system that moves a lead from first touch to a working opportunity: s
 
 > **Boundary:** `the-deal-gauge` scores a single opportunity that already exists. `the-pipeline-scanner` reports on the health of the whole pipeline. This skill covers the layer before either: lead lifecycle stages, MQL definition, and the marketing-to-sales handoff. For the actual round-robin/territory/score-threshold assignment logic once a lead is qualified, use `the-lead-router`.
 
+> **Speed to lead.** Read the **Speed to Lead** section of `references/revenue-lifecycle.md` before
+> designing the SLA. Under 5 minutes carries roughly 100x the odds of qualifying against 30 minutes,
+> and about 74% of businesses miss that window entirely, so this is not a subtle optimisation.
+>
+> Three design consequences: set the SLA in **minutes and measure from lead creation, not assignment**,
+> because measuring from assignment hides the delay that matters. Instrument **two clocks** —
+> creation-to-assignment and assignment-to-first-touch — and report them separately, since routing delay
+> is named by ~29% of organisations as a major cause and a perfect rep SLA fails if the lead sits
+> unassigned. And define the escalation when the SLA is missed: an SLA with no escalation is a target,
+> not an agreement. Writing it down is itself the intervention — ~54.9% of companies with a defined SLA
+> respond within 15 minutes against ~29.5% without one.
+
 ## Context
 
 1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the lifecycle stages, ICP, and scoring definitions.
