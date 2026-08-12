@@ -375,3 +375,67 @@ Slice cohort funnels by:
 | Industry | Which industries convert best at each stage? |
 | First content consumed | Does first-touch content type predict downstream conversion? |
 | Campaign | Which campaigns produce the best full-funnel performance? |
+
+---
+
+## Activation Benchmarks and Time to Value
+
+**Activation rate, median by category.** Read a rate against its own category before calling it a
+problem: the same 35% is healthy in one and poor in another.
+
+| Category | Median activation | Notes |
+|---|---|---|
+| E-commerce | ~62% | Shortest path from signup to first value |
+| Fintech | ~44% | |
+| B2B SaaS (self-serve) | ~38% | |
+| Vertical SaaS | ~35% | |
+| B2B services | ~29% | Longest, most human-dependent path |
+
+Most products sit around **15-20%**; top-quartile products reach **40%+**. A product at 20% is
+ordinary rather than broken, and the gap to 40% is the realistic target, not 100%.
+
+**Time to value, self-serve.** Under 5 minutes is excellent. 5 to 20 minutes is typical and
+acceptable. 20 to 60 minutes loses a meaningful share of signups. Beyond an hour, most self-serve
+signups are gone.
+
+The effect compounds fast in the early window:
+
+- Reaching value within about 5 minutes is associated with materially higher 30-day retention than
+  taking 15 minutes or more.
+- Users who reach value **in the first hour** retain several times better at day 7 than those who take
+  more than a day. **The unit that matters is the hour, not the day** - a first-mile flow measured in
+  days has already lost the window it was built for.
+
+**What moves it, in rough order of leverage:**
+
+1. **Fewer steps.** Cutting the number of onboarding steps produces some of the largest completion
+   gains available, and it costs nothing to ship. Remove before you add.
+2. **Interactive over static.** Doing the thing beats being shown the thing by a wide margin. A product
+   tour is not onboarding.
+3. **Path per segment.** A single generic flow underperforms paths matched to why the user signed up.
+4. **Pre-filled and imported state.** Value arrives faster when the user does not have to build the
+   conditions for it first. An empty state is a wall.
+
+---
+
+## The Aha Moment Is Not the Activation Event
+
+This distinction is the most commonly collapsed one in activation work, and collapsing it is how a
+team ships an onboarding flow that improves the metric and not the business.
+
+**The aha moment is qualitative**: the point at which the user recognises the product is worth keeping.
+**The activation event is a proxy**: a measurable action believed to correlate with that recognition.
+
+They are not the same thing, and the gap between them is where the failure lives:
+
+- **Optimising the proxy detaches it from the realisation.** Push hard enough on "completed setup" and
+  you get users who completed setup because they were pushed, not because they saw value. Activation
+  rises and retention does not follow, which looks like a retention problem later and is actually an
+  activation-definition problem now.
+- **Validate the proxy against retention before optimising it.** An activation event worth using is one
+  where the activated cohort retains materially better than the non-activated. If both retain the same,
+  the event is not measuring the realisation, and the fix is a better event rather than a better flow.
+- **Re-validate it.** A proxy that held when the product had three features may not hold after ten.
+- **Name the realisation in words**, not only the event. "They understand their data is connected" is
+  the thing; "connected a second integration" is the proxy. Writing the sentence out is what makes it
+  possible to notice the proxy has drifted from it.

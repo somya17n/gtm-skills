@@ -8,7 +8,23 @@ description: 'Design the post-signup activation flow: what happens between signu
 ## Context
 
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask inline for: product type (B2B/B2C), core value proposition, and lifecycle stage names in use.
-2. Read `references/funnel-benchmarks.md`: specifically the SaaS Product Funnel benchmarks and the Drop-Off Diagnosis Framework (Friction / Motivation / Ability / Timing), and `references/lifecycle-stages.md` for how this business defines its early lifecycle stages. Note
+2. Read `references/funnel-benchmarks.md`: specifically the SaaS Product Funnel benchmarks and the Drop-Off Diagnosis Framework (Friction / Motivation / Ability / Timing), and `references/lifecycle-stages.md` for how this business defines its early lifecycle stages, plus
+   the **Activation Benchmarks and Time to Value** and **The Aha Moment Is Not the Activation Event**
+   sections of `references/funnel-benchmarks.md`.
+
+   Two things from there govern this skill:
+
+   - **Read the activation rate against its own category** before calling it a problem. Medians run
+     roughly 62% for e-commerce, 44% fintech, 38% self-serve B2B SaaS, 35% vertical SaaS, 29% B2B
+     services. Most products sit at 15-20% while top quartile reaches 40%+, so a product at 20% is
+     ordinary and 40% is the realistic target rather than 100%.
+   - **Separate the aha moment from the activation event.** The aha moment is the qualitative
+     recognition that the product is worth keeping; the activation event is only a measurable proxy for
+     it. Optimising the proxy without validating it produces users who completed setup because they
+     were pushed rather than because they saw value: activation rises, retention does not follow, and
+     it surfaces as a retention problem months later. Before designing any flow, check that the
+     activated cohort actually retains better than the non-activated. If it does not, the fix is a
+     better event, not a better flow. Note
    that its RFM-to-stage mapping is an **ordered ruleset, evaluated first-match**: New Customers is
    reached only after the recency gates have been passed, so a recently-acquired customer who has
    already gone quiet is At Risk rather than New. An activation flow aimed at "New Customers" that is
@@ -25,6 +41,18 @@ description: 'Design the post-signup activation flow: what happens between signu
 
 6. Read `.agents/product-context.md` for ICP and lifecycle stage definitions.
 7. If activation isn't clearly defined yet, define it using the "aha moment" logic: the earliest action that reliably predicts retention, not just any early action.
+7a. **Measure time to value in the right unit.** The window is the **hour**, not the day: users who
+   reach value in the first hour retain several times better at day 7 than those taking more than a day,
+   and self-serve tolerance runs out somewhere past 20 minutes. State the current TTV and where it sits
+   against under-5 (excellent), 5-20 (acceptable), 20-60 (losing signups), 60+ (mostly lost). A flow
+   whose TTV is measured in days has already missed the window it exists to serve.
+
+7b. **Remove before adding.** Cutting steps produces some of the largest completion gains available and
+   costs nothing to ship, so exhaust removal before proposing new education, tooltips or a tour.
+   Interactive beats static by a wide margin: a product tour is not onboarding, it is a slideshow in
+   front of one. And an empty state is a wall, so pre-filled or imported state moves value earlier than
+   any amount of explanation.
+
 8. Diagnose current drop-off (or, if the flow doesn't exist yet, anticipate the likely failure point) using the four-category framework from `references/funnel-benchmarks.md`: Friction (UX/process), Motivation (messaging/value), Ability (complexity/capability), Timing (readiness). Name the dominant category. Don't spread the diagnosis across all four evenly.
 9. Design the flow for the immediate post-signup window: pick one approach (product-first, guided setup, or value-first demo data) based on product complexity, and ensure there's always one clear next action with no dead ends.
 10. If the product has multiple setup steps, design an onboarding checklist: 3-7 items, ordered by value (highest-impact first, not chronological-only), with progress shown and a way to dismiss it. Never trap the user in the checklist.
@@ -35,7 +63,18 @@ description: 'Design the post-signup activation flow: what happens between signu
 ## Output
 
 14. Before delivering, verify:
-   - The activation event is either clearly defined from real user behavior or explicitly labeled a hypothesis, never asserted as fact without evidence
+
+- Is the activation rate read against its own category median rather than against 100%, with the
+  realistic target stated?
+- Is the aha moment written out as a sentence describing the realisation, separately from the
+  measurable activation event standing in for it?
+- Was the activation event validated against retention (does the activated cohort actually retain
+  better than the non-activated) before any flow work was proposed? If it was not validated, is that
+  named as the first thing to fix?
+- Is time to value stated in minutes and hours rather than days, and placed against the
+  under-5 / 5-20 / 20-60 / 60+ bands?
+- Were step removals exhausted before new education was proposed, and is any proposed tour justified
+  against an interactive alternative?   - The activation event is either clearly defined from real user behavior or explicitly labeled a hypothesis, never asserted as fact without evidence
    - The drop-off diagnosis names one dominant category (Friction/Motivation/Ability/Timing), not an even spread across all four
    - Any comparison to benchmarks uses the user's real numbers where they exist, never substitutes an industry benchmark for a real number
    - If a checklist is included, it has 3-7 items in value order with a way to dismiss it, not an open-ended list
