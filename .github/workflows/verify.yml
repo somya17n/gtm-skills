@@ -1,0 +1,41 @@
+name: verify
+
+# The three suites this repo ships were runnable but nothing ran them. An
+# unrun gate teaches the same lesson as an unsatisfiable one: that gates are
+# optional. All three exit non-zero on failure, so they gate directly.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Structure, routing and CTA (all 68 skills, no sampling)
+        run: python scripts/verify-skills.py
+
+      - name: Arithmetic guards still present (10 live fixtures)
+        run: python scripts/regression-tests.py
+
+      - name: References resolve, match root, and are cited
+        run: bash scripts/check-references.sh
+
+      - name: Per-skill reference copies are in sync with the root
+        # sync-references.sh is generative. If running it changes anything,
+        # someone edited a root reference without re-syncing, and the installed
+        # copy of that skill would ship stale text.
+        run: |
+          bash scripts/sync-references.sh
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Per-skill reference copies are stale. Run scripts/sync-references.sh and commit."
+            git --no-pager diff --stat
+            exit 1
+          fi

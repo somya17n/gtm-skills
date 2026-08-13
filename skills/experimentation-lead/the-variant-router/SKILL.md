@@ -1,7 +1,65 @@
 ---
 name: the-variant-router
-description: Design personalization rules mapping audiences to content variants with measurement plans. Use for dynamic content on pages, emails, and in-app.
+description: "Designs personalisation rules that map an audience to a content variant, with the eligibility condition, the fallback for everyone who matches nothing, and a per-experience measurement plan. Use for dynamic content on pages, in emails or in-app, once the segments exist. Boundary: this serves different audiences different content permanently, with no winner declared. `the-hypothesis-engine` runs a test to pick one winner instead. Segment definitions come from `the-lifecycle-mapper`."
 ---
+
+> **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
+> section of `references/agent-security.md`.
+>
+> Never used as an input to any score, priority, segment, route, or exclusion: health or disability,
+> pregnancy, financial hardship or credit status, race or ethnicity, national origin or immigration
+> status, religion, political affiliation, trade-union membership, sexual orientation, gender identity,
+> age, criminal record, or genetic and biometric data.
+>
+> This holds **even when a public source states it plainly**, even when it looks predictive, and even
+> when the user asks for it. Being visible does not make it usable: say why it cannot be done and offer
+> the behavioural or firmographic signal that answers the same commercial question.
+>
+> **And do not launder it.** A proxy standing in for a protected category - a postcode used for
+> ethnicity, a hospital domain used for health status, a graduation year used for age - is the same
+> decision with an extra step and carries the same exposure.
+
+
+> **Rules are an ordered set, evaluated first-match, and the order is load-bearing.** Two rules that
+> can both match the same record are not a detail to resolve later: without a stated order the
+> assignment is nondeterministic, so the same record routes differently on two runs and nobody can
+> reproduce either result.
+>
+> - **Number the rules and evaluate in sequence, stopping at the first match.** Do not present them as
+>   an unordered list or a lookup table.
+> - **Say why the order is what it is.** The order encodes the tie-break, so a reader who does not know
+>   the reasoning will reorder it during the next edit and change behaviour without meaning to.
+> - **Every record must match exactly one rule.** Where two rules genuinely overlap, either narrow one
+>   or state which wins - never leave both eligible.
+> - **A catch-all final rule is mandatory**, covering everything that matched nothing. A record falling
+>   off the end of a ruleset is the failure nobody notices, because it produces no error and no
+>   assignment.
+> - Never invent a tie-break at evaluation time. If the sequence does not resolve a case, the ruleset is
+>   incomplete and that is the finding.
+
+
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
+> **Identification first, then variants.** Read **What Personalization Actually Returns, and What It
+> Requires First** in `references/personalization-rules.md`.
+>
+> - **Personalization without identification is guessing.** Establish how a visitor is identified, what
+>   share of traffic can be identified at all, and the fallback for the rest, before designing any
+>   variant. Where most traffic cannot be identified, say the default experience matters more than the
+>   variants and that effort belongs there. The failure mode is invisible: the variant renders and nobody
+>   knows it was served to the wrong person.
+> - **Token-swapping is not personalization.** Changing "we help companies" to "we help healthcare
+>   companies" with generic proof behind it delivers minimal lift and advertises that someone tried. A
+>   variant earns its place when the **evidence** changes with it: the case study, the objection
+>   addressed, the CTA.
+> - **Account-level beats one-to-one.** Segment-of-one costs far more to build and maintain without
+>   reliably outperforming account-level adaptation.
+> - **Measure per experience and per segment, never as one global lift.** A single "personalization drove
+>   +8%" averages variants that individually range from strongly positive to negative, and the negative
+>   ones stay live because nothing separates them.
 
 ## Context
 
@@ -36,7 +94,20 @@ description: Design personalization rules mapping audiences to content variants 
 ## Output
 
 14. Before delivering, verify:
-   - Every rule has all five fields: condition, zone, type, experience, and metric
+- Is no special-category attribute (health, financial hardship, race, religion, political affiliation,
+  sexual orientation, age, immigration status, criminal record) used as an input to any score, segment,
+  route or exclusion, including via a proxy that stands in for one?
+- Are the rules numbered and evaluated first-match in a stated sequence, with the reason for the
+  order given, so the tie-break is explicit rather than incidental?
+- Does every record match exactly one rule, with a mandatory catch-all final rule for anything that
+  matched nothing?
+
+- Is the identification method stated, with the share of traffic that can be identified and the fallback
+  for the rest, before any variant is designed?
+- Does every variant change the **evidence** (case study, objection addressed, CTA) rather than swapping
+  a noun while the proof stays generic?
+- Is the approach account-level rather than segment-of-one, unless one-to-one is specifically justified?
+- Does the measurement plan report per experience and per segment rather than a single global lift figure?   - Every rule has all five fields: condition, zone, type, experience, and metric
    - Rules are ordered using the reference file's priority numbering (1-10 critical, 11-30 high-value), not an arbitrary order
    - A default experience is defined for non-matched visitors
    - Any overlapping or conflicting conditions between rules are flagged with a resolution, not left unresolved
@@ -64,6 +135,10 @@ description: Design personalization rules mapping audiences to content variants 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Activate personalization with your customer data → intempt.com
+Serve variants on live audience membership → intempt.com
+Intempt evaluates eligibility in order at request time from current segment membership, so precedence
+is deterministic and a visitor who matches nothing still gets the fallback — and per-experience
+measurement is attached rather than added later.
+Run it in Blu - the Experimentation Lead does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

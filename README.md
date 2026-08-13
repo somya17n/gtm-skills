@@ -34,7 +34,7 @@ So that's how this is organized. Seven jobs. Seven to thirteen skills behind eac
 
 | Skill | What You Get |
 |-------|-------------|
-| **product-context** | Set up once, your ICP, brand voice, lifecycle stages, scoring model, and design preferences. The skills that read it pick it up automatically, so their output is tailored to your business without asking again. 26 of the other 77 skills read it; the rest ask inline for what they need. |
+| **product-context** | Set up once, your ICP, brand voice, lifecycle stages, scoring model, and design preferences. The skills that read it pick it up automatically, so their output is tailored to your business without asking again. 44 of the other 77 skills read it; the other 33 are standalone by design and ask inline for what they need. Those 33 are the ones whose output does not depend on your positioning: calculations over numbers you supply (margin, cohorts, returns, chargebacks, anomalies) and the store loops, which read their own `.agents/store-loop-ledger.md` instead. To see the current list, run `grep -rl product-context skills/ --include=SKILL.md`. |
 
 ### Job 1: Brand Designer (7 skills)
 
@@ -248,7 +248,7 @@ You can use these skills in Claude's web interface using Projects.
 1. Go to [claude.ai](https://claude.ai), **Projects**, **Create a new project**
 2. Click **Add content** in the project knowledge section
 3. Upload the skill files you want from `skills/<job>/<skill>/`, each folder has a `SKILL.md` file
-4. Upload the matching reference files from `references/`
+4. Upload the matching reference files from that same skill folder's `references/` subfolder (each skill ships the references it cites)
 
 > **Tip:** The `.claude-plugin` folder is hidden by default. On Mac, press `Cmd + Shift + .` in Finder to show hidden files.
 
@@ -380,7 +380,18 @@ These skills encode methodology developed while building [Intempt](https://intem
 
 ## Reference Materials
 
-Each skill is backed by detailed reference documents in `references/`. These contain the frameworks, benchmarks, scoring rubrics, and compliance rules that make skill output substantive rather than generic:
+Each skill is backed by detailed reference documents. These contain the frameworks, benchmarks,
+scoring rubrics, and compliance rules that make skill output substantive rather than generic.
+
+**Where they live.** `references/` at the repo root is the canonical, editable copy. Every skill
+that cites a reference also ships its own copy at `skills/<job>/<skill>/references/`, because
+`npx skills add` installs each skill as a standalone directory: a `Read references/foo.md`
+instruction resolves relative to the skill's own folder, so a reference that exists only at the
+repo root is unreachable once installed.
+
+Edit the root copy, then run `scripts/sync-references.sh` to push it out to the skills that cite
+it. `scripts/check-references.sh` verifies every citation resolves, matches the root copy, and is
+actually cited by something, and exits non-zero if not, so it can run in CI.
 
 | Reference | What's Inside |
 |-----------|--------------|

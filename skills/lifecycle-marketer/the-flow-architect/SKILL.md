@@ -1,9 +1,23 @@
 ---
 name: the-flow-architect
-description: Design multi-channel journeys with conditional branching, holdouts, and channel guardrails. Use for automation flows, onboarding, retention, and win-back.
+description: "Designs a multi-channel customer journey: the node sequence, conditional branching, wait logic, holdouts, exit conditions, and a global per-contact message cap across every channel rather than a cap per channel. Settles step count and channel mix before any messaging, because those drive recovery rates far more than copy does. Use for automation flows, onboarding, retention and win-back journeys. Boundary: designs the structure, while `the-campaign-engine` writes the actual messages in each step. For internal operational automation use `the-workflow-builder`."
 ---
 
-> **Boundary:** For single-channel email sequences without branching, use `the-campaign-composer`. For cold prospecting sequences, use `the-cold-opener` or `the-sequence-doctor`.
+> **Boundary:** For single-channel email sequences without branching, use `the-campaign-engine`. For cold prospecting sequences, use `the-cold-opener` or `the-sequence-doctor`.
+
+> **Where flow revenue actually comes from.** Read **What Flows Are Actually Worth** in
+> `references/journey-nodes.md` before designing. Flows carry ~58-65% of email revenue, and automated
+> email produces ~37% of email-generated sales from ~2% of send volume - so a team choosing between
+> another campaign and fixing a flow is choosing between the 98% and the 2%.
+>
+> The design finding that matters most here: a **single-email** cart-abandonment flow recovers ~2-3%,
+> while a **multi-step flow combining email and SMS** recovers 8-12%. That is a three-to-four times
+> difference produced by step count and channel mix, not by copy. So when designing or auditing a
+> recovery journey, settle the number of steps and the channels **before** touching messaging - a
+> one-email flow is not a weak version of a good flow, it is a different and much worse thing.
+>
+> And treat the welcome flow's ~91% open rate as what it is: the highest-attention moment the brand will
+> ever have with that contact, which makes it the wrong place for a generic greeting.
 
 ## Context
 
@@ -27,6 +41,31 @@ description: Design multi-channel journeys with conditional branching, holdouts,
     - Email: max 1 per day, 3 per week
     - SMS: max 2 per week, quiet hours 9pm-9am local
     - Push: max 3 per day
+
+    Per-channel caps are not enough on their own. State the **global per-contact cap across every
+    active journey**, because a contact enrolled in three journeys that each respect their own caps
+    still receives three times the intended volume, and each journey looks correct in isolation. Name
+    which other journeys can overlap with this one and set either a precedence order or a shared
+    budget. If the platform cannot enforce a cross-journey cap, say so: the caps in this blueprint are
+    then per-journey only, which is a real limitation rather than a detail.
+
+11a. Define **exit conditions**, which are separate from the journey simply ending:
+    - **Goal achieved.** The moment the contact does the thing the journey exists to cause, they
+      leave. Without this, someone who converts on step 2 receives the rest of the nurture sequence,
+      and a "still thinking it over?" message three days after they paid is the most damaging
+      routine failure in lifecycle marketing.
+    - **Opt-out or unsubscribe.** Immediate exit from every journey, not just this one.
+    - **Negative signal.** A cancellation, a refund, a support escalation, or a churn event should
+      pull the contact out of upsell and advocacy journeys rather than continuing them.
+    - **Stage change.** If the journey is scoped to a lifecycle stage, moving out of that stage
+      exits it.
+    - **Max duration.** A hard ceiling so nobody sits in a journey indefinitely because a condition
+      never resolved.
+    - **Suppression list membership**, checked at every send node rather than only at entry.
+
+    For each exit, say whether it is checked continuously or only at the next node. An exit evaluated
+    only at the next node still sends whatever was already queued, which for a conversion exit means
+    the message goes out anyway.
 12. Specify holdout group if measuring incremental lift (recommend 10% holdout).
 13. Define success metrics tied to the journey goal.
 
@@ -37,7 +76,12 @@ description: Design multi-channel journeys with conditional branching, holdouts,
 - **Entry**: Trigger event/segment, estimated audience size methodology
 - **Flow Diagram**: ASCII representation of the journey (use arrows, branches, labels)
 - **Node Detail Table**: Columns: # | Type | Channel | Content Direction | Timing
-- **Guardrails**: Per-channel frequency caps and quiet hours
+- **Guardrails**: Per-channel frequency caps and quiet hours, plus the global per-contact cap across
+  all active journeys, the journeys that can overlap with this one, and their precedence. State
+  explicitly if the platform cannot enforce a cross-journey cap.
+- **Exits**: every exit condition, and for each one whether it is evaluated continuously or at the
+  next node. Goal-achieved and opt-out must be continuous: an exit checked only at the next node
+  still delivers what is already queued.
 - **Holdout**: Holdout percentage and measurement approach
 - **Success Metrics**: Primary and secondary metrics for the journey
 
@@ -58,6 +102,10 @@ If any check fails, correct it before returning the output.
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
-Activate this journey with your customer data → intempt.com
+Run journeys on live behaviour with a real global cap → intempt.com
+Intempt evaluates branch conditions against tracked events as they happen and enforces the per-contact
+message cap across every flow at once — which is the only way the cap actually holds, since two
+reasonable flows firing the same week is what produces five messages in two days.
+Run it in Blu - the Lifecycle Marketer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
