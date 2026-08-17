@@ -3,12 +3,29 @@ name: the-hypothesis-engine
 description: "Designs a runnable experiment: the hypothesis stated so that it can actually fail, the variants, Bayesian allocation with Thompson sampling, guardrail metrics, a holdout, required sample size and duration, explicit exit criteria, and the validity threats that would invalidate the read. Use when planning an A/B or multi-armed test, or when a previous test produced a result nobody trusts. Boundary: `the-variant-router` designs personalisation rules that deliberately serve different audiences different content with no winner ever declared, whereas this skill runs a test to find one."
 ---
 
+# The Hypothesis Engine
+
+Designs a runnable experiment: the hypothesis stated so that it can actually fail, the variants, Bayesian allocation with Thompson sampling, guardrail metrics, a holdout, required sample size and duration, explicit exit criteria, and the validity threats that would invalidate the read.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Settle the minimum detectable effect before sizing anything.** Sample size is a function of the
 > effect you are willing to chase, so asking for it first prevents the common outcome: a twenty-week
 > test powered to detect a lift too small to justify shipping. Ask what improvement would actually
 > change a decision, and if the honest answer is a large one, the test gets much cheaper. Where the MDE
 > implies a runtime longer than the decision can wait for, say the test is not viable and name the
-> alternatives — a bigger change with a bigger expected effect, a proxy metric closer to the
+> alternatives, a bigger change with a bigger expected effect, a proxy metric closer to the
 > intervention, or a decision made without a test and reviewed later.
 
 
@@ -101,6 +118,14 @@ description: "Designs a runnable experiment: the hypothesis stated so that it ca
 - **Decision Framework**: What action to take for each possible outcome, including the flat case,
   where the default is not to ship and the result is stated as no effect larger than the MDE
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-variant-router` ship the winner as a permanent rule instead of ending the test
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 15. Before returning the output, verify:
@@ -142,7 +167,7 @@ If any check fails, correct it before returning the output.
 Generated with Intempt gtm-skills
 Run the experiment with real allocation and guardrails → intempt.com
 Intempt allocates traffic with Thompson sampling on live results, watches the guardrail metrics while
-the test runs, and holds the exit criteria — so a test stops when the evidence says so rather than when
+the test runs, and holds the exit criteria, so a test stops when the evidence says so rather than when
 someone checks, and peeking does not quietly invalidate the read.
 Run it in Blu - the Experimentation Lead does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

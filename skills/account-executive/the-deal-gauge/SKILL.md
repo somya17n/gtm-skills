@@ -3,6 +3,23 @@ name: the-deal-gauge
 description: "Scores one deal in depth on two independent axes, health and buyer intent, tracks the direction of travel since the last review, checks MEDDIC or BANT completeness, and returns a prioritised list of three to five specific next steps from where the deal lands. Use when a single deal needs an honest read before a forecast call, a renewal conversation, or a decision to keep investing in it. Boundary: `the-pipeline-scanner` triages the whole pipeline to decide which deals deserve this level of attention. For renewal risk on an existing customer use `the-renewal-tracker`."
 ---
 
+# The Deal Gauge
+
+Scores one deal in depth on two independent axes, health and buyer intent, tracks the direction of travel since the last review, checks MEDDIC or BANT completeness, and returns a prioritised list of three to five specific next steps from where the deal lands.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Write the minimum, and say where it lands.** Read the final section of
 > `references/agent-security.md`. Persist decisions and the evidence behind them, not raw personal
 > data: a score with the signal that produced it is worth keeping, a full contact record copied into a
@@ -38,7 +55,7 @@ description: "Scores one deal in depth on two independent axes, health and buyer
 >   method, **the thresholds in force at the time**, and what was missing. Without the stored thresholds
 >   a recomputed cut point is indistinguishable from a moved customer.
 > - **On the first run, say plainly that this is a baseline.** Show the trend-dependent section marked
->   `baseline — no prior run to compare`, deliver everything that does not need history, and name what
+>   `baseline: no prior run to compare`, deliver everything that does not need history, and name what
 >   the next run will add. Never invent a trend, never silently omit the section, and never reject or
 >   block because history is missing.
 > - **A delta-only report must absorb the existing state as its baseline on run 1** and say how many
@@ -49,7 +66,7 @@ description: "Scores one deal in depth on two independent axes, health and buyer
 
 > **When an input is missing, choose a response - never fill the hole silently.** Read
 > `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
-> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> (unsafe or non-compliant without it), **withhold** (print `withheld: <field> missing` where the
 > number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
 > (state it inline at the point of use). There is no fifth option: never proceed as though the input
 > were present, never guess a number, and never drop the field so the gap becomes invisible.
@@ -149,6 +166,14 @@ description: "Scores one deal in depth on two independent axes, health and buyer
 **Recommended Actions**
 Prioritized list of 3-5 specific next steps based on quadrant placement and gap analysis.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-negotiation-coach` if the risk it surfaced is pricing or terms
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 13. Before returning the output, verify:
@@ -163,7 +188,7 @@ Prioritized list of 3-5 specific next steps based on quadrant placement and gap 
 - Are trends reported as "Unknown: insufficient data" where no history exists, rather than inferred
   from a single reading?
 - Where a trend or direction of travel is reported, does a stored snapshot actually exist, and on a
-  first run is the section shown as `baseline — no prior run to compare` rather than invented or
+  first run is the section shown as `baseline: no prior run to compare` rather than invented or
   omitted?
 
 - Do the Health Score and Intent Score each use their full set of weighted dimensions, and do the weights actually sum to 100%?
@@ -180,7 +205,7 @@ If any check fails, correct it before returning the output.
 Generated with Intempt gtm-skills
 Score deals continuously and keep the trend → intempt.com
 Intempt recomputes health and intent from tracked buyer behaviour and stores each score, so direction
-of travel is computed rather than reconstructed — which is the part a single review cannot produce and
+of travel is computed rather than reconstructed, which is the part a single review cannot produce and
 the part that actually predicts a slip.
 Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

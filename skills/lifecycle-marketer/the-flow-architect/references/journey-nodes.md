@@ -29,11 +29,11 @@ The entry point of a journey. Defines who enters and when.
 ```
 
 **Operators in Filter DSL:**
-- `$or` — Any child condition matches
-- `$and` — All child conditions match
-- `$not` — Negates the child condition
-- `$event` — Matches on event name + property + operator + value
-- `$userAttribute` — Matches on user attribute + operator + value
+- `$or`, Any child condition matches
+- `$and`, All child conditions match
+- `$not`, Negates the child condition
+- `$event`, Matches on event name + property + operator + value
+- `$userAttribute`, Matches on user attribute + operator + value
 
 ### Delay
 
@@ -82,14 +82,14 @@ Sends an email message to the person in the journey.
 | `preheader` | String | Preview text (40-130 characters) |
 
 **Liquid Personalization Variables:**
-- `{{person.first_name}}` — First name
-- `{{person.last_name}}` — Last name
-- `{{person.email}}` — Email address
-- `{{person.company}}` — Company name
-- `{{person.lifecycle_stage}}` — Current lifecycle stage
-- `{{person.activity_score}}` — Activity score (0-100)
-- `{{person.custom.*}}` — Any custom attribute
-- `{% if person.lifecycle_stage == "Champions" %}...{% endif %}` — Conditional blocks
+- `{{person.first_name}}`, First name
+- `{{person.last_name}}`, Last name
+- `{{person.email}}`, Email address
+- `{{person.company}}`, Company name
+- `{{person.lifecycle_stage}}`, Current lifecycle stage
+- `{{person.activity_score}}`, Activity score (0-100)
+- `{{person.custom.*}}`, Any custom attribute
+- `{% if person.lifecycle_stage == "Champions" %}...{% endif %}`, Conditional blocks
 
 ### SMS
 
@@ -133,8 +133,8 @@ Binary branch node. Evaluates a filter DSL condition and routes to positive (tru
 | `negativeNodeId` | String | Node to execute if condition is false |
 
 **Children connect via `inputPath`:**
-- `inputPath: "positive"` — the true branch
-- `inputPath: "negative"` — the false branch
+- `inputPath: "positive"`, the true branch
+- `inputPath: "negative"`, the false branch
 
 ### Multi-Split
 
@@ -209,7 +209,7 @@ Nodes are linked using three properties on each node:
 |----------|------|-------------|
 | `previousId` | Number | 0-based index of the parent node in the journey's node array |
 | `inputType` | String | `"default"` for standard flow |
-| `inputPath` | String | `"default"`, `"positive"`, or `"negative"` — determines which output of the parent this node connects to |
+| `inputPath` | String | `"default"`, `"positive"`, or `"negative"`, determines which output of the parent this node connects to |
 
 **Linking rules:**
 - The trigger node has no `previousId` (it is the root)
@@ -251,7 +251,7 @@ Guardrails are per-channel thresholds that automatically pause journey steps or 
 
 ## Holdout Controls
 
-Each journey step can have an optional holdout — a percentage of users who reach that step but do not receive the treatment.
+Each journey step can have an optional holdout, a percentage of users who reach that step but do not receive the treatment.
 
 | Parameter | Range | Default |
 |-----------|-------|---------|

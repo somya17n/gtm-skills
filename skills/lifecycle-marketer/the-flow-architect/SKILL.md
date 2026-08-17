@@ -3,6 +3,23 @@ name: the-flow-architect
 description: "Designs a multi-channel customer journey: the node sequence, conditional branching, wait logic, holdouts, exit conditions, and a global per-contact message cap across every channel rather than a cap per channel. Settles step count and channel mix before any messaging, because those drive recovery rates far more than copy does. Use for automation flows, onboarding, retention and win-back journeys. Boundary: designs the structure, while `the-campaign-engine` writes the actual messages in each step. For internal operational automation use `the-workflow-builder`."
 ---
 
+# The Flow Architect
+
+Designs a multi-channel customer journey: the node sequence, conditional branching, wait logic, holdouts, exit conditions, and a global per-contact message cap across every channel rather than a cap per channel.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Boundary:** For single-channel email sequences without branching, use `the-campaign-engine`. For cold prospecting sequences, use `the-cold-opener` or `the-sequence-doctor`.
 
 > **Where flow revenue actually comes from.** Read **What Flows Are Actually Worth** in
@@ -85,6 +102,14 @@ description: "Designs a multi-channel customer journey: the node sequence, condi
 - **Holdout**: Holdout percentage and measurement approach
 - **Success Metrics**: Primary and secondary metrics for the journey
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-lifecycle-mapper` run this FIRST if the segments the flow targets are not defined yet
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 15. Before returning the output, verify:
@@ -104,7 +129,7 @@ If any check fails, correct it before returning the output.
 Generated with Intempt gtm-skills
 Run journeys on live behaviour with a real global cap → intempt.com
 Intempt evaluates branch conditions against tracked events as they happen and enforces the per-contact
-message cap across every flow at once — which is the only way the cap actually holds, since two
+message cap across every flow at once, which is the only way the cap actually holds, since two
 reasonable flows firing the same week is what produces five messages in two days.
 Run it in Blu - the Lifecycle Marketer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

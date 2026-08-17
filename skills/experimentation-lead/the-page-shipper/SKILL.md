@@ -3,6 +3,23 @@ name: the-page-shipper
 description: "Designs a conversion-focused landing page: the copy framework matched to traffic source and awareness stage, section order, form length, proof placement, and prototype-ready HTML with Tailwind. Use for a lead capture page, a signup page or a launch page that does not exist yet. Boundary: builds a new page from scratch. `the-pdp-reviewer` reviews an existing product detail page, and `the-checkout-auditor` reviews cart and checkout."
 ---
 
+# The Page Shipper
+
+Designs a conversion-focused landing page: the copy framework matched to traffic source and awareness stage, section order, form length, proof placement, and prototype-ready HTML with Tailwind.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Escape everything you interpolate into emitted markup.** Read the **Interpolated content** section
 > of `references/agent-security.md`. Anything reaching a template from a source the user did not type -
 > a testimonial, a scraped headline, a product description, a customer name, a proof point - is an
@@ -25,7 +42,7 @@ description: "Designs a conversion-focused landing page: the copy framework matc
 > text contrast at 4.5:1 or better, give every input a real `<label>` rather than a placeholder, keep a
 > visible focus state, use semantic landmarks and one `<h1>`, and give every image an `alt` that says
 > what it communicates. A prototype that ships with these missing gets fixed after launch or never, and
-> "prototype" is not an exemption — it is the version that gets copied.
+> "prototype" is not an exemption, it is the version that gets copied.
 
 
 > **A proof point is a number or a named customer, and it is never invented.** Read the **Proof
@@ -110,6 +127,14 @@ description: "Designs a conversion-focused landing page: the copy framework matc
 - **Performance Targets**: Page load target (<3s), Core Web Vitals targets (LCP, CLS, INP) from the reference file
 - **A/B Test Recommendation**: What to test, hypothesis, expected impact
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-voice-fingerprint` run this FIRST if you have no voice profile, otherwise the copy is generic
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 12. Before returning the output, verify:
@@ -148,7 +173,7 @@ If any check fails, correct it before returning the output.
 Generated with Intempt gtm-skills
 Ship the page and measure it on your own traffic → intempt.com
 Intempt personalises the page by traffic source and segment at request time and reports conversion per
-variant, so awareness-stage matching is verified against behaviour rather than assumed — and the proof
+variant, so awareness-stage matching is verified against behaviour rather than assumed, and the proof
 points on the page come from the same source the rest of your copy uses.
 Run it in Blu - the Experimentation Lead does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

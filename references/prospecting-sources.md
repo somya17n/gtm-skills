@@ -11,7 +11,7 @@ Reference for the `prospecting` skill: data sources by motion, the qualification
 | Signal | Where to look (public, non-scraped) |
 |---|---|
 | Funding | Company blog "News/Press" page, funding announcement posts the company itself published |
-| Hiring surge | Company careers page — count of open roles in the function you sell into |
+| Hiring surge | Company careers page, count of open roles in the function you sell into |
 | Tech stack | Job postings that name specific tools ("experience with Salesforce and Marketo required") |
 | Leadership change | Company blog, "About/Team" page, press releases |
 | Growth signal | Product launch posts, "customers" page additions, press coverage |
@@ -29,10 +29,10 @@ Reference for the `prospecting` skill: data sources by motion, the qualification
 | Signal | Where to look |
 |---|---|
 | Active business | Business's own website, public hours/contact page |
-| Website status | Does the business have a functioning site at all — this itself is often the qualifying signal |
+| Website status | Does the business have a functioning site at all, this itself is often the qualifying signal |
 | Decision-maker access | Named owner/manager on an About page, public contact email |
 
-Do not attempt to pull structured local-business data from Google Maps or Yelp at scale — that is exactly the kind of platform scraping the compliance section below prohibits. A single manual lookup of a business's own site is fine; automated bulk extraction from a maps/reviews platform is not.
+Do not attempt to pull structured local-business data from Google Maps or Yelp at scale, that is exactly the kind of platform scraping the compliance section below prohibits. A single manual lookup of a business's own site is fine; automated bulk extraction from a maps/reviews platform is not.
 
 ---
 
@@ -44,7 +44,7 @@ Do not attempt to pull structured local-business data from Google Maps or Yelp a
 |---|---|
 | High | 2+ independent public sources, or one official company-owned page (About, Press) |
 | Medium | 1 credible source, consistent with other available context |
-| Low | Ambiguous or single weak source — flag explicitly, don't silently upgrade it |
+| Low | Ambiguous or single weak source, flag explicitly, don't silently upgrade it |
 
 ### Score bands
 
@@ -57,19 +57,19 @@ Do not attempt to pull structured local-business data from Google Maps or Yelp a
 
 ### Common scoring mistakes
 
-- Marking "Hot" on fit alone, with no signal — the signal is what makes the *timing* right, not just the fit
-- Treating a single search result as "High confidence" — High requires corroboration
-- Padding the list with Cold entries to hit a target count — a smaller list with real signals beats a longer one without them
-- Mixing motions — don't apply SaaS tech-stack scoring logic to a local SMB, or vice versa
+- Marking "Hot" on fit alone, with no signal, the signal is what makes the *timing* right, not just the fit
+- Treating a single search result as "High confidence", High requires corroboration
+- Padding the list with Cold entries to hit a target count, a smaller list with real signals beats a longer one without them
+- Mixing motions, don't apply SaaS tech-stack scoring logic to a local SMB, or vice versa
 
 ---
 
 ## Compliance Checklist (apply every run)
 
 - [ ] No bulk scraping of LinkedIn, Sales Navigator, Google Maps, or any platform whose ToS prohibits automated extraction
-- [ ] No CAPTCHA or login-wall bypass — work with what's genuinely public
-- [ ] Contact channels used are public business channels (info@, named-role emails published on the company's own site) — not personal/private emails without a lawful basis
-- [ ] Every contact has a source URL and a "verified" date — required lineage for CAN-SPAM/GDPR downstream
+- [ ] No CAPTCHA or login-wall bypass, work with what's genuinely public
+- [ ] Contact channels used are public business channels (info@, named-role emails published on the company's own site), not personal/private emails without a lawful basis
+- [ ] Every contact has a source URL and a "verified" date, required lineage for CAN-SPAM/GDPR downstream
 - [ ] The list is for the user's own outreach, not for resale as a data product
 - [ ] No sensitive-attribute targeting (health, financial hardship, political belief, religion, sexuality) even when a public source reveals it
 
@@ -91,7 +91,7 @@ the tool.
 | Local businesses by geography | Maps/places data | Check the provider's terms; most prohibit bulk redistribution |
 | Community and forum signal | Public posts via the platform's own API where one exists (Reddit's API, for example) | Platform API terms, and no personal data beyond what the post shows |
 | Social signal at scale | Platform API or a licensed provider | Never a credentialed scrape of a logged-in session |
-| A specific person's background | **The user pastes it.** See below. | — |
+| A specific person's background | **The user pastes it.** See below. |, |
 
 ### LinkedIn is paste-only, and this is not caution for its own sake
 
@@ -105,7 +105,7 @@ The distinction that actually matters:
 
 - **A person browsing LinkedIn as themselves, in their own browser, is not doing anything
   prohibited.** So asking the rep to open a profile and paste the relevant sections is both compliant
-  and the highest-quality input available — they see things a scrape does not.
+  and the highest-quality input available, they see things a scrape does not.
 - **What gets detected is the architecture**, not the intent: cloud-run automation, browser
   extensions, and proxy tools produce request patterns and browsing rates that do not look human, and
   those are what get flagged.

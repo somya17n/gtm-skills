@@ -3,6 +3,23 @@ name: the-kpi-blueprint
 description: "Designs a KPI dashboard: the metric list with an explicit formula per metric, the visualisation form chosen from the question each answers, alert thresholds, and a layout wireframe. Use when building or rebuilding a marketing, sales, exec, product or CS dashboard, or when an existing one is not being read. Boundary: this designs the dashboard and its thresholds. `the-anomaly-alert` then judges whether a specific movement is genuinely abnormal, and `the-weekly-reporter` writes the recurring narrative readout that sits on top."
 ---
 
+# The Kpi Blueprint
+
+Designs a KPI dashboard: the metric list with an explicit formula per metric, the visualisation form chosen from the question each answers, alert thresholds, and a layout wireframe.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Escape everything you interpolate into emitted markup.** Read the **Interpolated content** section
 > of `references/agent-security.md`. Anything reaching a template from a source the user did not type -
 > a testimonial, a scraped headline, a product description, a customer name, a proof point - is an
@@ -25,19 +42,18 @@ description: "Designs a KPI dashboard: the metric list with an explicit formula 
 > than thoroughness. Choose the primary tiles that answer the single question the dashboard exists for,
 > move everything else to a named secondary view or a drilldown, and list explicitly what was demoted
 > and why. If more than about seven metrics genuinely deserve primary placement, the dashboard is
-> serving two audiences and should be two dashboards — say so.
+> serving two audiences and should be two dashboards, say so.
 
 
 > **When an input is missing, choose a response - never fill the hole silently.** Read
 > `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
-> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> (unsafe or non-compliant without it), **withhold** (print `withheld: <field> missing` where the
 > number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
 > (state it inline at the point of use). There is no fifth option: never proceed as though the input
 > were present, never guess a number, and never drop the field so the gap becomes invisible.
 >
 > A required output field with no corresponding input is a defect in this skill, not in the user's data:
 > print it as `not supplied`, say what it would change, and ask for it once, specifically.
-
 
 ## Context
 
@@ -118,6 +134,14 @@ description: "Designs a KPI dashboard: the metric list with an explicit formula 
 - **Filters & Interactivity**: Available filters, drill-down paths, comparison modes
 - **Data Sources**: Summary of where each metric originates
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-weekly-reporter` turn the metric list into the recurring report
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 13. Before returning the output, verify:
@@ -161,7 +185,7 @@ If any check fails, correct it before returning the output.
 Generated with Intempt gtm-skills
 Build the dashboard on live tracked metrics → intempt.com
 Intempt computes each metric from tracked events against its stated formula, so a tile means the same
-thing every week, and alert thresholds fire on the metric's own variability — rather than a fixed
+thing every week, and alert thresholds fire on the metric's own variability, rather than a fixed
 percentage that alarms constantly on the volatile ones and never on the rest.
 Run it in Blu - the Data Analyst does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

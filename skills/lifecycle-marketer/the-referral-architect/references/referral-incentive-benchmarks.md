@@ -34,7 +34,7 @@ several regimes at once. Most of these are cheap to comply with and expensive to
 | **Disclosure of a material connection** | An advocate who recommends publicly while receiving a reward has to disclose that they were incentivised, clearly and near the recommendation | Any programme where advocates post on social, review sites, or communities. The obligation sits with the brand to instruct and monitor, not only with the advocate. |
 | **Prize draws and sweepstakes law** | Randomised rewards ("refer a friend, enter to win") are regulated, frequently require published rules, eligibility terms, and an odds statement, and can be unlawful where a purchase is a condition of entry | The moment the reward is a chance rather than a certainty |
 | **Tax reporting** | Cash and cash-equivalent rewards can be reportable income above jurisdictional thresholds, and may require collecting details from the advocate | Cash, gift cards, and prepaid cards. Account credit against the advocate's own subscription is usually treated differently. |
-| **Referral-fee and anti-kickback rules** | In regulated sectors — healthcare, financial services, legal, insurance, and others — paying for a customer referral is restricted or prohibited outright, sometimes criminally | Any programme in a regulated industry. This is a stop, not a design constraint. |
+| **Referral-fee and anti-kickback rules** | In regulated sectors, healthcare, financial services, legal, insurance, and others, paying for a customer referral is restricted or prohibited outright, sometimes criminally | Any programme in a regulated industry. This is a stop, not a design constraint. |
 | **The advocate's own employer policy** | Enterprise and B2B advocates are often barred by gifts-and-entertainment rules from accepting anything cash-like | B2B programmes. A charity donation or a product credit is frequently the only acceptable form. |
 | **Platform terms** | Review sites generally prohibit incentivised reviews outright, whatever the disclosure | Anything that rewards leaving a review rather than making an introduction |
 
@@ -108,14 +108,14 @@ attribution reports it as a win.
 ### Willingness is not the constraint
 
 The gap between **83% willing** and **29% doing** is the single most useful number here. It says the
-limiting factor is almost never that customers are unwilling — it is that **nobody asked them at a
+limiting factor is almost never that customers are unwilling, it is that **nobody asked them at a
 moment when acting was easy.**
 
 That reorders the design work:
 
-1. **The trigger moment** — asking at a point of felt satisfaction, not on a schedule
-2. **The friction of the ask** — how many steps between wanting to refer and having referred
-3. **The incentive** — last, and usually the least of the three
+1. **The trigger moment**, asking at a point of felt satisfaction, not on a schedule
+2. **The friction of the ask**, how many steps between wanting to refer and having referred
+3. **The incentive**, last, and usually the least of the three
 
 A programme underperforming at 5% participation is far more likely to have a timing or friction problem
 than an incentive problem, so **raising the reward is the wrong first move.** It also degrades cohort
@@ -129,7 +129,7 @@ participation range from about **+29% to +91%** depending on the study, with com
 **52% two-sided against 29% one-sided**. About **78%** of programmes use a two-sided structure.
 
 Use the direction, not the number. Two-sided is the right default because it gives the advocate something
-to say that is not purely self-interested — "you get X too" is easier to send than "I get X if you sign
+to say that is not purely self-interested, "you get X too" is easier to send than "I get X if you sign
 up." Do not quote a specific lift to the user as though it were a forecast; the spread across studies is
 too wide to promise.
 

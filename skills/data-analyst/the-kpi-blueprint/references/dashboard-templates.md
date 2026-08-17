@@ -71,7 +71,7 @@ Reference for 8 out-of-the-box dashboard templates, metric calculation formulas,
 | **AOV** (Average Order Value) | Total revenue / number of orders | Line chart with trend | Increasing trend, segment-specific targets |
 | **Conversion Rate** | Orders / sessions | Funnel chart + line trend | > 2% (typical), > 3% (good), > 5% (excellent) |
 | **Cart Abandonment Rate** | Carts created but not purchased / total carts created | Single number + trend | < 70% (good), industry average ~70% |
-| **Revenue by Channel** | Revenue attributed to each marketing channel | Stacked bar or pie chart | Diversified — no single channel > 50% |
+| **Revenue by Channel** | Revenue attributed to each marketing channel | Stacked bar or pie chart | Diversified, no single channel > 50% |
 | **Return Rate** | Items returned / items sold | Line chart with threshold | < 10% (normal), investigate if > 15% |
 
 ---
@@ -103,7 +103,7 @@ Reference for 8 out-of-the-box dashboard templates, metric calculation formulas,
 
 | Metric | Definition | Visualization | Target |
 |--------|-----------|---------------|--------|
-| **RFM Distribution** | Customer count by RFM segment | Treemap or segmented bar chart | Healthy distribution — growing Champions and Regulars |
+| **RFM Distribution** | Customer count by RFM segment | Treemap or segmented bar chart | Healthy distribution, growing Champions and Regulars |
 | **LTV Cohort Analysis** | Cumulative revenue per customer cohort over time | Cohort line chart (one line per monthly cohort) | Later cohorts trending higher than earlier cohorts |
 | **NPS** | Net Promoter Score from customer surveys | Gauge + trend line | > 30, increasing |
 | **Repeat Purchase Rate** | Customers with 2+ purchases / total customers | Single number + trend | > 25% (good), > 40% (excellent) |
@@ -203,13 +203,13 @@ No single authoritative benchmark exists for any of these numbers. Actual ROAS v
 
 | Channel | Low | Directional Average | Good |
 |---------|-----|---------------------|------|
-| Meta (Facebook/Instagram) ecommerce | roughly 1.0–1.5x | roughly 1.5–3x | 4x+ |
-| Google Shopping | roughly 2–3x | roughly 3–5x | 6x+ |
-| Google Search | roughly 3–4x | roughly 4–6x | 8x+ |
-| TikTok (ecommerce) | roughly 1.0–1.5x | roughly 1.5–2.5x | 4x+ |
-| LinkedIn (SaaS lead gen, CPL not ROAS) | high hundreds $ | roughly $80–200 | under $80 |
+| Meta (Facebook/Instagram) ecommerce | roughly 1.0-1.5x | roughly 1.5-3x | 4x+ |
+| Google Shopping | roughly 2-3x | roughly 3-5x | 6x+ |
+| Google Search | roughly 3-4x | roughly 4-6x | 8x+ |
+| TikTok (ecommerce) | roughly 1.0-1.5x | roughly 1.5-2.5x | 4x+ |
+| LinkedIn (SaaS lead gen, CPL not ROAS) | high hundreds $ | roughly $80-200 | under $80 |
 
-**ROAS caveat:** ROAS is a last-click metric by default. True incrementality (measured via holdout testing or media mix modeling) is typically 20–40% lower than platform-reported ROAS. A 3x reported ROAS may be 2.0–2.5x true incremental ROAS. When making budget decisions, pressure-test ROAS claims with incrementality tests.
+**ROAS caveat:** ROAS is a last-click metric by default. True incrementality (measured via holdout testing or media mix modeling) is typically 20-40% lower than platform-reported ROAS. A 3x reported ROAS may be 2.0-2.5x true incremental ROAS. When making budget decisions, pressure-test ROAS claims with incrementality tests.
 
 ### Net Revenue Retention (NRR)
 
@@ -367,7 +367,7 @@ Gives more credit to touchpoints closer to conversion. Typically uses a 7-day ha
 | Metric | Threshold | Description |
 |--------|-----------|-------------|
 | Churn rate | > 5% monthly | Significant customer loss; investigate root cause |
-| Conversion rate drop | > 20% week-over-week | Something is broken — check funnel, site, pricing |
+| Conversion rate drop | > 20% week-over-week | Something is broken, check funnel, site, pricing |
 | Error rate | > 1% | Product or infrastructure issue |
 | NPS | < 0 | More detractors than promoters |
 | Bounce rate | > 80% on key pages | Page content or targeting mismatch |
@@ -379,7 +379,7 @@ Gives more credit to touchpoints closer to conversion. Typically uses a 7-day ha
 | Metric | Threshold | Description |
 |--------|-----------|-------------|
 | Churn rate | 3-5% monthly | Elevated but manageable |
-| Trial conversion decline | > 10% week-over-week | Trending down — investigate before it worsens |
+| Trial conversion decline | > 10% week-over-week | Trending down, investigate before it worsens |
 | DAU/MAU ratio | < 15% | Stickiness is declining |
 | NRR | < 100% | Customers are shrinking |
 | Support ticket volume | > 25% increase week-over-week | Possible product issue or onboarding problem |

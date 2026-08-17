@@ -55,7 +55,7 @@ Dedicated section for the primary call-to-action.
 - **Button design:** Rounded corners (4-8px radius), padding (12-16px vertical, 24-40px horizontal)
 - **Button text:** Action-oriented, 2-5 words ("Shop Now", "Start Free Trial", "Get the Guide")
 - **Surrounding whitespace:** Minimum 20px above and below
-- **Single CTA per block** — avoid competing actions
+- **Single CTA per block**, avoid competing actions
 
 ### 6. Footer
 
@@ -221,7 +221,7 @@ Poses a question the reader wants answered.
 
 - **Length:** 30-50 characters (6-10 words) for mobile-friendly display
 - **Avoid spam triggers:** "FREE", "ACT NOW", all caps, excessive punctuation (!!!)
-- **Emoji:** Use sparingly (0-1 per subject). Test performance — works in some industries, hurts in others.
+- **Emoji:** Use sparingly (0-1 per subject). Test performance, works in some industries, hurts in others.
 - **Preview:** Always test rendering in Gmail, Apple Mail, Outlook mobile
 
 ---
@@ -308,13 +308,13 @@ Poses a question the reader wants answered.
 
 | Element | What to Test | Impact Level |
 |---------|-------------|-------------|
-| Subject line | Framework, length, personalization, emoji, tone | High — drives open rate |
-| Send time | Day of week, time of day, timezone optimization | Medium — drives open rate |
-| CTA text | Action verb, specificity, urgency, length | High — drives click rate |
-| Layout | Single vs. multi-column, image placement, content order | Medium — drives engagement |
-| Sender name | Brand name vs. person name vs. role + brand | Medium — drives open rate and trust |
-| Preheader | Length, tone, complement vs. repeat subject | Low-medium — drives open rate |
-| Content length | Short vs. long, text-heavy vs. image-heavy | Medium — drives click rate |
+| Subject line | Framework, length, personalization, emoji, tone | High, drives open rate |
+| Send time | Day of week, time of day, timezone optimization | Medium, drives open rate |
+| CTA text | Action verb, specificity, urgency, length | High, drives click rate |
+| Layout | Single vs. multi-column, image placement, content order | Medium, drives engagement |
+| Sender name | Brand name vs. person name vs. role + brand | Medium, drives open rate and trust |
+| Preheader | Length, tone, complement vs. repeat subject | Low-medium, drives open rate |
+| Content length | Short vs. long, text-heavy vs. image-heavy | Medium, drives click rate |
 
 ### Testing Rules
 
@@ -328,7 +328,7 @@ Poses a question the reader wants answered.
 
 ## Performance Benchmarks by Industry
 
-**Critical note on open rates:** Apple Mail Privacy Protection (MPP), active since iOS 15 in 2021, prefetches email images and inflates open rates by 30–50% for lists with significant Apple Mail users. Open rate benchmarks below are distorted by this. **Use click rate and click-to-open rate as your primary engagement signals — these are not affected by MPP.**
+**Critical note on open rates:** Apple Mail Privacy Protection (MPP), active since iOS 15 in 2021, prefetches email images and inflates open rates by 30-50% for lists with significant Apple Mail users. Open rate benchmarks below are distorted by this. **Use click rate and click-to-open rate as your primary engagement signals, these are not affected by MPP.**
 
 ### SaaS
 
@@ -403,21 +403,21 @@ Copy patterns that tend to convert across ecommerce and SaaS contexts, based on 
 
 **The 3-email structure that wins**
 
-Email 1 accounts for 60-70% of total welcome flow revenue. Keep it under 150 words — mobile is 65%+ of opens.
+Email 1 accounts for 60-70% of total welcome flow revenue. Keep it under 150 words, mobile is 65%+ of opens.
 
 **Subject line patterns by brand type:**
 | Brand Type | Winning Subject Pattern | Example |
 |-----------|------------------------|---------|
 | Discount-first | Transactional + specific | "Here's your 15% off, [first name]" |
-| Premium (Glossier, Allbirds style) | Warmth signal | "Welcome to [brand] — you're going to love this" |
+| Premium (Glossier, Allbirds style) | Warmth signal | "Welcome to [brand], you're going to love this" |
 | Fitness / lifestyle | Aspiration | "Your [Brand] journey starts now" |
 | Cult DTC | Intimacy | "We've been waiting for you" |
 
 **Discount-led Email 1 copy pattern (3x immediate revenue vs. no discount):**
 ```
-Line 1: Acknowledge — "You're in."
-Line 2: Deliver — "Your 15% off is waiting — no minimum."
-Line 3: Set expectation — "We'll also send you new arrivals, restocks, and the occasional story worth reading."
+Line 1: Acknowledge, "You're in."
+Line 2: Deliver, "Your 15% off is waiting, no minimum."
+Line 3: Set expectation, "We'll also send you new arrivals, restocks, and the occasional story worth reading."
 CTA: "Shop [Brand]" (specific product link beats generic "Shop Now")
 ```
 
@@ -430,9 +430,9 @@ CTA: "Shop [Brand]" (specific product link beats generic "Shop Now")
 | Health/wellness | Brand story (mission sells product) | Values alignment drives purchase |
 
 **Email 3 (Day 5-7): Close the undecided subscriber:**
-- Urgency play: "Your 15% off expires in 48 hours" — highest immediate conversion, only if deadline is real. False urgency is detectable.
-- Objection handling: "Not sure where to start? Take our 60-second quiz" — highest-converting Day 7 format for wide-assortment brands
-- Social proof closer: Testimonials that address hesitation ("I wasn't sure at first, but...") — closes 2-3% of unconverted subscribers
+- Urgency play: "Your 15% off expires in 48 hours", highest immediate conversion, only if deadline is real. False urgency is detectable.
+- Objection handling: "Not sure where to start? Take our 60-second quiz", highest-converting Day 7 format for wide-assortment brands
+- Social proof closer: Testimonials that address hesitation ("I wasn't sure at first, but..."), closes 2-3% of unconverted subscribers
 
 **Top DTC approaches:**
 - Gymshark: Lead with community, not product. Email 1 has no product push. Works for identity-driven brands.
@@ -464,11 +464,11 @@ CTA: Specific product link, NOT category page
 
 ### Browse Abandonment vs. Cart Abandonment Copy
 
-**The key distinction — getting this wrong kills performance:**
+**The key distinction, getting this wrong kills performance:**
 
 Cart abandonment: customer showed purchase intent. Copy can be direct. "You left something behind" is accepted.
 
-Browse abandonment: interest but no commitment. Assuming purchase intent reads as presumptuous. "You were looking at these boots — are you ready to buy?" underperforms.
+Browse abandonment: interest but no commitment. Assuming purchase intent reads as presumptuous. "You were looking at these boots, are you ready to buy?" underperforms.
 
 **Browse abandonment subject lines that convert:**
 | Subject | CTR | Notes |
@@ -480,7 +480,7 @@ Browse abandonment: interest but no commitment. Assuming purchase intent reads a
 
 Browse abandonment copy rule: position it as a service, not surveillance. "We saved your browsing so you can pick up where you left off" beats "We saw you looking at the burgundy ankle boots."
 
-Browse abandonment emails should include 2-3 alternative product recommendations in the same category — they're still in discovery mode. Cart abandonment should focus on the specific cart item only.
+Browse abandonment emails should include 2-3 alternative product recommendations in the same category, they're still in discovery mode. Cart abandonment should focus on the specific cart item only.
 
 **Timing:** Reaching out within an hour of the browsing session ending tends to convert meaningfully better than waiting 24 hours, though the exact multiple isn't backed by a verified source.
 
@@ -497,8 +497,8 @@ Browse abandonment emails should include 2-3 alternative product recommendations
 | Curiosity | "We need to talk" | 26-30% (casual/lifestyle brands only) |
 | Straight offer | "A gift for you, [first name]" | 22-25% ("gift" beats "discount" by 8-12%) |
 | Straight offer | "We kept your 15% off waiting" | 21-25% |
-| Product update | "Come back — we've changed" | 22-26% (only if genuinely true) |
-| Classic | "We miss you, [first name]" | 18-22% (weakest — feels generic) |
+| Product update | "Come back, we've changed" | 22-26% (only if genuinely true) |
+| Classic | "We miss you, [first name]" | 18-22% (weakest, feels generic) |
 
 **The three-way comparison:**
 - Curiosity approaches: highest open rate (25-32%), second on revenue per email
@@ -517,7 +517,7 @@ Browse abandonment emails should include 2-3 alternative product recommendations
 
 Key finding: the jump is between "no offer" and "any offer." The marginal difference between 20% and 30% rarely justifies the margin loss.
 
-**The "unsubscribe or re-engage" email — highest re-engagement rate in the category:**
+**The "unsubscribe or re-engage" email, highest re-engagement rate in the category:**
 
 Subject: "Should we stay or should we go?" or "This is probably our last email"
 
@@ -553,7 +553,7 @@ Para 2 (3-4 sentences): Name the single action. Explain why it's the one thing.
 "The fastest way to see [Product] work for your business is to [specific action].
 It takes under 5 minutes and shows you exactly how [outcome]."
 
-CTA: Action-specific — "Connect your [data source]" not "Go to dashboard"
+CTA: Action-specific, "Connect your [data source]" not "Go to dashboard"
 
 Below fold (optional): 3-bullet "what you can do" only if product complexity warrants it
 ```
@@ -566,12 +566,12 @@ Below fold (optional): 3-bullet "what you can do" only if product complexity war
 
 ### SaaS "You Haven't Activated" Copy (Day 3-5)
 
-**What doesn't work:** "We noticed you haven't [taken action] yet" — frames inactivity as failure. Opens fine (curiosity), clicks poorly.
+**What doesn't work:** "We noticed you haven't [taken action] yet", frames inactivity as failure. Opens fine (curiosity), clicks poorly.
 
 **What works: barrier removal framing.**
 ```
 "If you ran into any trouble setting up [Product], we can fix that in 5 minutes."
-"Sometimes the first step isn't obvious — here's the shortcut."
+"Sometimes the first step isn't obvious, here's the shortcut."
 ```
 
 **Plain text beats HTML for this email:**
@@ -580,7 +580,7 @@ Below fold (optional): 3-bullet "what you can do" only if product complexity war
 
 **The pattern that converts best:**
 > Subject: "Quick question, [Name]"
-> Body: "Hey [Name], Did you get a chance to try [Product] yet? I wanted to make sure you got to [key activation moment] — a lot of people find that's when it clicks. If you're stuck on anything, just reply here. — [Human name], [Product] team"
+> Body: "Hey [Name], Did you get a chance to try [Product] yet? I wanted to make sure you got to [key activation moment], a lot of people find that's when it clicks. If you're stuck on anything, just reply here., [Human name], [Product] team"
 > CTA: Soft ask (reply) or calendar link. Hard CTAs ("Click here to complete setup") underperform when the subscriber is already in a non-action state.
 
 ---

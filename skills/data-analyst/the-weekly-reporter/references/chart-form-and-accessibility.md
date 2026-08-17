@@ -115,12 +115,12 @@ fails most reliably is a hardcoded near-white surface with light-grey lines.
 
 The row everyone actually reads, and the one most often underspecified. Each tile states:
 
-1. **Label** — plain language, no internal jargon or system field name.
-2. **Value** — with units, and rounded to a precision someone would actually say out loud.
+1. **Label**, plain language, no internal jargon or system field name.
+2. **Value**, with units, and rounded to a precision someone would actually say out loud.
    `$48.2k` beats `$48,231.77` in a tile.
-3. **Delta** — the number, the period it compares against, and its polarity per section 3.
-4. **Shape** — a sparkline, if trend matters. Optional, and useless if it has no baseline context.
-5. **Freshness** — when the data last updated. A stale tile is read as current, which is worse than
+3. **Delta**, the number, the period it compares against, and its polarity per section 3.
+4. **Shape**, a sparkline, if trend matters. Optional, and useless if it has no baseline context.
+5. **Freshness**, when the data last updated. A stale tile is read as current, which is worse than
    a tile that is visibly missing.
 6. **A definition the viewer can reach.** If two people in the company would compute this number
    differently, the tile needs its formula one click away.

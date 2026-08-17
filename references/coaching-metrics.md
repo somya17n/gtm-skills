@@ -11,8 +11,8 @@ The percentage of time the sales rep talks versus listens during a conversation.
 | Talk Ratio (Rep) | Rating | Description |
 |-------------------|--------|-------------|
 | < 30% | Too passive | Rep is not guiding the conversation or sharing enough value |
-| 30-40% | Good for discovery | Appropriate for early discovery calls — mostly listening |
-| 40-60% | Ideal range | Balanced conversation — the golden zone |
+| 30-40% | Good for discovery | Appropriate for early discovery calls, mostly listening |
+| 40-60% | Ideal range | Balanced conversation, the golden zone |
 | 60-70% | Leaning monologue | Rep is talking too much; risk of losing prospect |
 | > 70% | Monologue | Rep is dominating; prospect is disengaged |
 
@@ -22,7 +22,7 @@ The percentage of time the sales rep talks versus listens during a conversation.
 |-----------|-----------------|-----------|
 | Discovery | 30-40% | Listen to understand pain, let prospect talk |
 | Demo | 50-60% | Presenting, but with interactive Q&A |
-| Negotiation | 40-50% | Balanced — presenting offers, hearing concerns |
+| Negotiation | 40-50% | Balanced, presenting offers, hearing concerns |
 | Follow-up | 35-45% | Checking understanding, addressing questions |
 | Closing | 40-55% | Summarizing, handling last objections, asking for the deal |
 
@@ -70,7 +70,7 @@ The longest uninterrupted stretch of the rep talking without asking a question o
 |----------|--------|--------|
 | < 30 seconds | Excellent | Highly conversational, engaged prospect |
 | 30-60 seconds | Good | Appropriate for demos and presentations |
-| 60-90 seconds | Caution | Getting long — prospect attention may wander |
+| 60-90 seconds | Caution | Getting long, prospect attention may wander |
 | > 90 seconds | Problem | Losing prospect attention; needs to break up with a question |
 | > 120 seconds | Critical | Almost certainly lost the prospect; monologue mode |
 
@@ -129,7 +129,7 @@ The number of questions the rep asks per 10-minute window.
 | Open-ended | High | "What's driving the need to solve this now?" |
 | Probing | High | "Can you tell me more about how that impacts your team?" |
 | Clarifying | Medium-High | "When you say 'too slow,' what specifically do you mean?" |
-| Confirming | Medium | "So the main issue is X — is that right?" |
+| Confirming | Medium | "So the main issue is X, is that right?" |
 | Closed (yes/no) | Low-Medium | "Are you using [tool] today?" |
 | Leading | Low | "You'd agree that faster is better, right?" |
 | Loaded | Avoid | "Why haven't you fixed this already?" |
@@ -194,11 +194,11 @@ When does the prospect need a solution in place?
 
 | Total (0-100) | Qualification |
 |---------------|--------------|
-| 80-100 | Highly Qualified — pursue aggressively |
-| 60-79 | Qualified — continue working, address gaps |
-| 40-59 | Partially Qualified — needs development in weak areas |
-| 20-39 | Weakly Qualified — nurture, check back later |
-| 0-19 | Not Qualified — disqualify or long-term nurture |
+| 80-100 | Highly Qualified, pursue aggressively |
+| 60-79 | Qualified, continue working, address gaps |
+| 40-59 | Partially Qualified, needs development in weak areas |
+| 20-39 | Weakly Qualified, nurture, check back later |
+| 0-19 | Not Qualified, disqualify or long-term nurture |
 
 ---
 
@@ -272,7 +272,7 @@ Is there an internal advocate with power, influence, and motivation to push the 
 |-------|----------|
 | 17 | Strong champion identified: has power, vested interest, and actively sells internally |
 | 13 | Champion identified with influence but limited organizational power |
-| 9 | Potential champion — supportive but untested in advocacy role |
+| 9 | Potential champion, supportive but untested in advocacy role |
 | 5 | Friendly contact but no indication of willingness to champion |
 | 0 | No champion identified |
 
@@ -280,11 +280,11 @@ Is there an internal advocate with power, influence, and motivation to push the 
 
 | Total (0-102) | Qualification |
 |---------------|--------------|
-| 80-102 | Strong Deal — high probability of close |
-| 60-79 | Good Deal — address remaining gaps proactively |
-| 40-59 | Developing Deal — significant work needed on weak elements |
-| 20-39 | At Risk — major gaps that threaten the deal |
-| 0-19 | Weak Deal — consider deprioritizing or disqualifying |
+| 80-102 | Strong Deal, high probability of close |
+| 60-79 | Good Deal, address remaining gaps proactively |
+| 40-59 | Developing Deal, significant work needed on weak elements |
+| 20-39 | At Risk, major gaps that threaten the deal |
+| 0-19 | Weak Deal, consider deprioritizing or disqualifying |
 
 ---
 
@@ -307,9 +307,9 @@ Is there an internal advocate with power, influence, and motivation to push the 
 | Score | Interpretation |
 |-------|---------------|
 | 0 objections detected | Either too early in conversation or prospect is very receptive |
-| 1-2 objections | Normal — healthy sign of engagement |
-| 3-4 objections | Moderate concern — ensure each is addressed |
-| 5+ objections | High concern — prospect may not be a fit or rep is losing control |
+| 1-2 objections | Normal, healthy sign of engagement |
+| 3-4 objections | Moderate concern, ensure each is addressed |
+| 5+ objections | High concern, prospect may not be a fit or rep is losing control |
 
 ---
 
@@ -341,25 +341,25 @@ Every conversation analysis should produce a structured coaching report.
 
 ### 1. Strengths
 
-What the rep did well — reinforce these behaviors.
+What the rep did well, reinforce these behaviors.
 
 ```
 Strengths:
 - Strong opening: established credibility in first 30 seconds with a relevant trigger event
-- Excellent discovery questions at 4:20 and 7:15 — open-ended and pain-probing
-- Good patience score (4.2s average) — let the prospect think
+- Excellent discovery questions at 4:20 and 7:15, open-ended and pain-probing
+- Good patience score (4.2s average), let the prospect think
 - Handled pricing objection at 18:30 with quantified ROI response
 ```
 
 ### 2. Weaknesses
 
-Areas for improvement — specific, actionable, not personal.
+Areas for improvement, specific, actionable, not personal.
 
 ```
 Weaknesses:
-- Longest monologue of 2:15 at 12:00-14:15 — lost prospect attention (their responses shortened after)
-- Talk ratio skewed to 65% — too much presenting, not enough dialogue
-- Did not ask about timeline or budget — BANT incomplete
+- Longest monologue of 2:15 at 12:00-14:15, lost prospect attention (their responses shortened after)
+- Talk ratio skewed to 65%, too much presenting, not enough dialogue
+- Did not ask about timeline or budget, BANT incomplete
 - Missed opportunity to multi-thread when prospect mentioned "my team would need to see this"
 ```
 
@@ -374,7 +374,7 @@ Rewrites:
         Try: "Which of these areas is most relevant to your situation? I'll focus there."
 
 [18:45] Instead of: "Our pricing is very competitive."
-        Try: "Teams your size typically see a 3x ROI within 6 months — let me show you the math."
+        Try: "Teams your size typically see a 3x ROI within 6 months, let me show you the math."
 
 [22:10] Instead of: "Let me know if you have any questions."
         Try: "Based on what we discussed, what would need to be true for you to move forward?"
@@ -405,7 +405,7 @@ up optimising a dashboard instead of a conversation.
 ### Talk ratio: a real effect, and a small one
 
 The widely quoted target is around **43:57 rep-to-prospect**. The measured reality across large call
-samples is closer to a **60/40** average, and — the part that usually gets left out — **the gap between
+samples is closer to a **60/40** average, and, the part that usually gets left out, **the gap between
 won and lost deals is about 5 percentage points**: roughly **57% rep talk time on closed-won** against
 **62% on lost**.
 
@@ -449,8 +449,8 @@ prospect run is still not getting discovery.
 
 Rank by signal strength, not by ease of measurement:
 
-1. **Longest prospect monologue** — did they ever really talk?
-2. **Rep monologue over 76 seconds** — concrete, fixable
-3. **Question quality** — open, and building on the last answer
-4. **Talk ratio** — a screen, and only the >65% tail is a clear finding
-5. **Question count** — nearly useless alone, and misleading if coached upward
+1. **Longest prospect monologue**, did they ever really talk?
+2. **Rep monologue over 76 seconds**, concrete, fixable
+3. **Question quality**, open, and building on the last answer
+4. **Talk ratio**, a screen, and only the >65% tail is a clear finding
+5. **Question count**, nearly useless alone, and misleading if coached upward

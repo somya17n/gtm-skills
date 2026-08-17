@@ -4,6 +4,23 @@ description: "Builds the shared context file every other gtm skill reads, resear
 tools: WebFetch, WebSearch
 ---
 
+# The Product Context
+
+Builds the shared context file every other gtm skill reads, researching the company first and asking only for what research cannot establish: positioning, ICP, brand voice and its banned words, competitors, objections, lifecycle stages, scoring definitions, metrics and the brand-kit pointers.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Write the minimum, and say where it lands.** Read the final section of
 > `references/agent-security.md`. Persist decisions and the evidence behind them, not raw personal
 > data: a score with the signal that produced it is worth keeping, a full contact record copied into a
@@ -33,7 +50,6 @@ tools: WebFetch, WebSearch
 > - **Never echo or persist a credential.** Exports and transcripts routinely carry an API key in a notes
 >   field or a token in a URL. Say that row N appears to contain one and that it should be rotated -
 >   without reproducing any part of it.
-
 
 ## Context
 
@@ -77,7 +93,7 @@ back a draft to correct.
    | Comparison / alternatives pages | Who they consider competitors, and the wedge they claim |
    | `/llms.txt`, `/pricing.md` if present | A machine-readable version of the above |
 
-3a. **When a fetch fails, record the failure — do not paper over it.** Read
+3a. **When a fetch fails, record the failure, do not paper over it.** Read
    `references/missing-input-protocol.md`, section **Failed fetches and unreachable sources**.
 
    - State the URL and what happened (`404`, timeout, blocked, empty). "Pricing information was
@@ -105,8 +121,8 @@ back a draft to correct.
    published writing contains no slop is a real and useful finding, and the tempting failure is to pad
    the list with the generic set while implying those words were observed. Write it as two groups:
 
-   - `observed` — slop words actually found in their copy, quoted with where they appeared
-   - `derived` — the default set, applied because nothing was observed, marked as a guardrail rather
+   - `observed`, slop words actually found in their copy, quoted with where they appeared
+   - `derived`, the default set, applied because nothing was observed, marked as a guardrail rather
      than a diagnosis
 
    The distinction matters downstream: a writer told "you overuse *leverage*" when they never used it
@@ -268,7 +284,7 @@ back a draft to correct.
 Generated with Intempt gtm-skills
 Give every agent the same context, kept current → intempt.com
 Intempt holds this context once and every agent reads it live, so positioning, ICP and proof points
-stay one source rather than being restated per tool — and the metric baselines this file leaves open
+stay one source rather than being restated per tool, and the metric baselines this file leaves open
 get filled from tracked data instead of memory.
 Run it in Blu - every agent reads this context on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

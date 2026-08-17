@@ -82,7 +82,7 @@ Includes: A-Z, a-z, 0-9, and these symbols: `@ $ ! " # % & ' ( ) * + , - . / : ;
 
 ## Compliance Regulations
 
-### TCPA (Telephone Consumer Protection Act) — United States
+### TCPA (Telephone Consumer Protection Act), United States
 
 | Requirement | Detail |
 |-------------|--------|
@@ -94,7 +94,7 @@ Includes: A-Z, a-z, 0-9, and these symbols: `@ $ ! " # % & ' ( ) * + , - . / : ;
 | Content requirements | Must identify the sender and include opt-out instructions |
 | Penalties | $500-$1,500 per violation (per message) |
 
-### GDPR (General Data Protection Regulation) — European Union
+### GDPR (General Data Protection Regulation), European Union
 
 | Requirement | Detail |
 |-------------|--------|
@@ -106,7 +106,7 @@ Includes: A-Z, a-z, 0-9, and these symbols: `@ $ ! " # % & ' ( ) * + , - . / : ;
 | DPO | Appoint a Data Protection Officer if required by scale/nature of processing |
 | Penalties | Up to 4% of annual global turnover or 20M EUR |
 
-### CASL (Canadian Anti-Spam Legislation) — Canada
+### CASL (Canadian Anti-Spam Legislation), Canada
 
 | Requirement | Detail |
 |-------------|--------|
@@ -140,7 +140,7 @@ All SMS campaigns must recognize and immediately process these keywords:
 | < 0.1% | Healthy | Continue normally |
 | 0.1-0.15% | Watch | Review message content and frequency |
 | 0.15-0.2% | Warning | Reduce frequency, review targeting and content |
-| > 0.2% | Critical — Pause | Pause campaign immediately. Investigate cause. |
+| > 0.2% | Critical, Pause | Pause campaign immediately. Investigate cause. |
 
 **Calculation:** Opt-out rate = (opt-outs in period) / (total messages delivered in period) x 100
 
@@ -157,7 +157,7 @@ All SMS campaigns must recognize and immediately process these keywords:
 | 12:00 PM - 2:00 PM (local) | Moderate | Lunch break, mixed engagement |
 | 8:00 AM - 10:00 AM (local) | Moderate | Morning routine, may be seen but not acted on |
 | 7:00 PM - 9:00 PM (local) | Low | Evening wind-down, lower intent |
-| 9:00 PM - 8:00 AM (local) | Prohibited | Quiet hours — do not send |
+| 9:00 PM - 8:00 AM (local) | Prohibited | Quiet hours, do not send |
 
 ### Push Notification Optimal Times
 
@@ -349,10 +349,10 @@ SMS and push platforms each publish their own performance reports, but sample co
 
 | Channel | Open/CTR | CVR | Cost | Best For |
 |---------|---------|-----|------|----------|
-| Email | 2–4% CTR | 0.5–3% | Very low ($0.001–0.005/send) | Nurture, education, long-form content |
-| SMS | 7–9% CTR | 5–10% | Medium ($0.01–0.05/send) | Urgency, time-sensitive offers, transactional |
-| Push (app) | 4–6% CTR | 2–5% | Very low ($0.001/send) | Real-time triggers, re-engagement, updates |
-| Push (web) | 2–4% CTR | 1–3% | Free | Lightweight retargeting, cart recovery |
+| Email | 2-4% CTR | 0.5-3% | Very low ($0.001-0.005/send) | Nurture, education, long-form content |
+| SMS | 7-9% CTR | 5-10% | Medium ($0.01-0.05/send) | Urgency, time-sensitive offers, transactional |
+| Push (app) | 4-6% CTR | 2-5% | Very low ($0.001/send) | Real-time triggers, re-engagement, updates |
+| Push (web) | 2-4% CTR | 1-3% | Free | Lightweight retargeting, cart recovery |
 
 ## Frequency Capping
 
@@ -420,7 +420,7 @@ Carriers filter on message content regardless of how clean the consent is. Commo
 
 - **Public URL shorteners.** Shared shortener domains (bit.ly and similar) carry other senders'
   reputation and are widely filtered. Use a branded or dedicated link domain.
-- **Regulated categories** — lending and debt, cannabis, gambling, firearms, adult content,
+- **Regulated categories**, lending and debt, cannabis, gambling, firearms, adult content,
   high-risk supplements. Some are prohibited outright on standard routes.
 - **All-caps words, excess punctuation, and money symbols** in patterns that resemble spam.
 - **Bare URLs with no context**, or a link as the entire message body.

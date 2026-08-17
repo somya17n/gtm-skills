@@ -3,6 +3,23 @@ name: the-pipeline-scanner
 description: "Reads a whole pipeline export and returns only what genuinely needs attention: deal velocity against your own stage norms, deals stuck past their stage median, risk signals, and where the forecast is most likely to slip. Lists only the deals that warrant action rather than padding to a fixed count. Use for a weekly pipeline review, before a forecast call, or when the pipeline number looks fine but the deals feel soft. Boundary: `the-deal-gauge` scores one deal in depth, while this skill triages across all of them to decide which ones deserve that."
 ---
 
+# The Pipeline Scanner
+
+Reads a whole pipeline export and returns only what genuinely needs attention: deal velocity against your own stage norms, deals stuck past their stage median, risk signals, and where the forecast is most likely to slip.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Separate stuck from never-started.** A deal that reached a stage and stalled needs unblocking; a
 > record that entered the pipeline and never had a real buyer conversation needs removing. Both show a
 > high days-in-stage figure and the actions are opposite. Test for it directly: has there ever been a
@@ -12,7 +29,7 @@ description: "Reads a whole pipeline export and returns only what genuinely need
 
 > **When an input is missing, choose a response - never fill the hole silently.** Read
 > `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
-> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> (unsafe or non-compliant without it), **withhold** (print `withheld: <field> missing` where the
 > number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
 > (state it inline at the point of use). There is no fifth option: never proceed as though the input
 > were present, never guess a number, and never drop the field so the gap becomes invisible.
@@ -78,6 +95,14 @@ description: "Reads a whole pipeline export and returns only what genuinely need
 11. Calculate pipeline coverage ratio: total pipeline value / quota target.
 12. Generate a specific next action recommendation for each deal.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-deal-gauge` score the deals the scan flagged, one at a time
+
+Say it as **Next:** followed by that skill.
+
 ## Output
 13. Before formatting the report, verify:
 - Are deals with no recorded two-way buyer contact reported as never-started and routed to removal,
@@ -134,7 +159,7 @@ Generated with Intempt gtm-skills
 Triage the pipeline against your own stage norms → intempt.com
 Intempt derives stage medians from your closed history and captures stage changes from real buyer
 events, so a deal that looks healthy because someone advanced it is separated from one that genuinely
-progressed — and slipping deals are caught in the band before the cliff.
+progressed, and slipping deals are caught in the band before the cliff.
 Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

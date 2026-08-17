@@ -3,6 +3,23 @@ name: the-variant-router
 description: "Designs personalisation rules that map an audience to a content variant, with the eligibility condition, the fallback for everyone who matches nothing, and a per-experience measurement plan. Use for dynamic content on pages, in emails or in-app, once the segments exist. Boundary: this serves different audiences different content permanently, with no winner declared. `the-hypothesis-engine` runs a test to pick one winner instead. Segment definitions come from `the-lifecycle-mapper`."
 ---
 
+# The Variant Router
+
+Designs personalisation rules that map an audience to a content variant, with the eligibility condition, the fallback for everyone who matches nothing, and a per-experience measurement plan.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
 > section of `references/agent-security.md`.
 >
@@ -91,6 +108,14 @@ description: "Designs personalisation rules that map an audience to a content va
 12. Recommend a progressive personalization roadmap using the maturity path from the reference file (anonymous → known → deep → maturity).
 13. If the touchpoint involves product or content recommendations, design a recommendation approach using the algorithms from the reference file.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-hypothesis-engine` if the variant needs proving before it becomes permanent
+
+Say it as **Next:** followed by that skill.
+
 ## Output
 
 14. Before delivering, verify:
@@ -137,7 +162,7 @@ description: "Designs personalisation rules that map an audience to a content va
 Generated with Intempt gtm-skills
 Serve variants on live audience membership → intempt.com
 Intempt evaluates eligibility in order at request time from current segment membership, so precedence
-is deterministic and a visitor who matches nothing still gets the fallback — and per-experience
+is deterministic and a visitor who matches nothing still gets the fallback, and per-experience
 measurement is attached rather than added later.
 Run it in Blu - the Experimentation Lead does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

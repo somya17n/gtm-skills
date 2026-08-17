@@ -195,7 +195,7 @@ Rules are evaluated **top-to-bottom by priority number** (lower number = higher 
 ### Conflict Resolution
 
 - First matching rule wins (no stacking, no blending)
-- A default fallback is **required** for every zone — visitors must always see something
+- A default fallback is **required** for every zone, visitors must always see something
 - If no rules match for a zone, the default experience renders
 - Rules can be toggled on/off without deletion (enabled/disabled flag)
 
@@ -413,7 +413,7 @@ How to write to each customer segment - specific copy patterns that work, based 
 
 ---
 
-### Champions Segment (High RFM — Top 20% of Customers)
+### Champions Segment (High RFM, Top 20% of Customers)
 
 **What doesn't work:** Generic loyalty rewards (10% off emails wasted on customers already buying, just burns margin).
 
@@ -425,9 +425,9 @@ Copy tone: Peer-to-peer, not brand-to-customer. "You've been with us long enough
 | Copy Pattern | Example |
 |-------------|---------|
 | Early access before public | "Before we announce this publicly, [first name]..." |
-| Behind-the-scenes | "Here's what we're working on next — you're one of the first to know." |
+| Behind-the-scenes | "Here's what we're working on next, you're one of the first to know." |
 | Direct ask for feedback | "We want your opinion on [new product] before we launch it." |
-| VIP event invitation | "You're invited to [exclusive event/session]" — invitation-only framing |
+| VIP event invitation | "You're invited to [exclusive event/session]", invitation-only framing |
 
 **CTA:** "See it first" not "Shop now." The difference: one signals reward for loyalty, the other signals a push.
 
@@ -437,15 +437,15 @@ Copy tone: Peer-to-peer, not brand-to-customer. "You've been with us long enough
 
 **This is the highest-ROI personalization target.** These customers have proven LTV and are slipping away. Early intervention around the 90-day lapse mark tends to convert meaningfully better than waiting until a customer is fully lapsed and relying on a discount to win them back.
 
-**What doesn't work:** "We miss you" generic — these customers don't respond to sentiment.
+**What doesn't work:** "We miss you" generic, these customers don't respond to sentiment.
 
 **What works:** Acknowledging the change without making it awkward + introducing what's new.
 
 Copy structure:
 ```
-1. Acknowledge the gap briefly: "It's been a while — things have changed since you were last here"
+1. Acknowledge the gap briefly: "It's been a while, things have changed since you were last here"
 2. Introduce what's new/changed (new products, features, collections)
-3. Soft offer (not your largest discount — that's for confirmed-churned)
+3. Soft offer (not your largest discount, that's for confirmed-churned)
 4. Easy re-entry CTA
 ```
 
@@ -467,42 +467,42 @@ Body:
   - Framing: "what people pair with X" NOT "you might also like Y" (more specific, more trusted)
 ```
 
-**Cross-sell specificity rule:** If they bought running shoes, suggest running socks or an insole. If they bought a face moisturizer, suggest SPF or a serum. Logical adjacency beats algorithmic recommendation at <$10M revenue — manual curation of top product pairings outperforms automated for smaller catalogs.
+**Cross-sell specificity rule:** If they bought running shoes, suggest running socks or an insole. If they bought a face moisturizer, suggest SPF or a serum. Logical adjacency beats algorithmic recommendation at <$10M revenue, manual curation of top product pairings outperforms automated for smaller catalogs.
 
 ---
 
 ### Behavioral Trigger Copy Patterns
 
-**"Viewed pricing page 3+ times" — high-intent evaluation loop:**
+**"Viewed pricing page 3+ times", high-intent evaluation loop:**
 
 What to say: acknowledge the decision they're trying to make, remove friction.
 
 | CTA Type | Copy | CVR |
 |----------|------|-----|
 | Open conversation | "Have a question about [Product] pricing?" | Tends to convert well for demo/call bookings, though no verified benchmark exists for the exact rate |
-| Value uncertainty | "What's included in [Plan name] — the honest version" | Strong for comparison-stage visitors |
+| Value uncertainty | "What's included in [Plan name], the honest version" | Strong for comparison-stage visitors |
 | Service-oriented | "Let's figure out the right plan for you" | Best for complex multi-plan products |
 
-Email body: Short. "I noticed you've been looking at our pricing page. If you're trying to figure out which plan is right for [company type/use case], I'd be happy to walk you through it — or just send you a quick breakdown. What's your main use case?"
+Email body: Short. "I noticed you've been looking at our pricing page. If you're trying to figure out which plan is right for [company type/use case], I'd be happy to walk you through it, or just send you a quick breakdown. What's your main use case?"
 
 Generic promotional email to the same trigger typically converts in the low single digits. Conversational personalized email typically converts meaningfully higher.
 
-**"Used feature X for the first time" — positive momentum signal:**
+**"Used feature X for the first time", positive momentum signal:**
 
 What to say: One sentence acknowledging what they did. One sentence on what it unlocks. One CTA. Total: under 100 words. Goal is to maintain momentum, not to deliver a tutorial.
 
 The next-step feature should be:
 (a) Logically adjacent to what they just did
 (b) Increases activation depth
-(c) NOT behind a paywall — don't poison a success moment with an upsell
+(c) NOT behind a paywall, don't poison a success moment with an upsell
 
 Example pattern: "You just created your first segment. Segments are the foundation of everything in [Product]. Next: send your first message to that segment." CTA: "Create a campaign."
 
-**"Haven't logged in for 14 days" — critical intervention window:**
+**"Haven't logged in for 14 days", critical intervention window:**
 
 Earlier intervention tends to outperform later intervention - the 14-day mark is a common trigger point, but treat the exact multiplier as illustrative, not a verified benchmark.
 
-What not to say: "We haven't seen you in a while" — passive-aggressive tone, clicks poorly.
+What not to say: "We haven't seen you in a while", passive-aggressive tone, clicks poorly.
 
 What works: Barrier removal + value reminder.
 
@@ -518,14 +518,14 @@ Body: Open with curiosity ("How's [use case] going for you?"). Remind them of on
 
 ### Personalization Failure Modes in Copy
 
-**1. Creepy vs. Helpful — where the line is**
+**1. Creepy vs. Helpful, where the line is**
 
 A useful framework: personalization feels helpful when it reduces effort. It feels creepy when it reveals surveillance the customer wasn't aware of.
 
 | Helpful (reduces effort) | Creepy (reveals surveillance) |
 |--------------------------|-------------------------------|
 | "Based on your recent order, you might need [X]" | "We saw you looking at ankle boots for 12 minutes on Tuesday" |
-| "You've browsed [category] a few times — here are the bestsellers" | "Based on your location near [store], you should visit tomorrow" |
+| "You've browsed [category] a few times, here are the bestsellers" | "Based on your location near [store], you should visit tomorrow" |
 | "Your account is almost full" | "We noticed you were comparison shopping" |
 
 The rule: personalization is welcomed when customers believe you're using data they intentionally gave you. It becomes creepy when it reveals data they didn't consciously share.
@@ -537,15 +537,15 @@ Purchase-based personalization tends to outperform browse-based in brand percept
 Personalization has diminishing returns and can eventually hurt performance past a certain point.
 
 Why maximum personalization fails:
-- Coherence breaks down when personalizing on 10+ variables simultaneously — the customer gets something that feels random
-- Sample sizes become meaningless — can't A/B test anything
-- Personalization signals conflict — a customer who bought luxury, browsed sale items, and is in a mid-income zip shows contradictory signals. Weighting all equally produces a message that fits nothing.
+- Coherence breaks down when personalizing on 10+ variables simultaneously, the customer gets something that feels random
+- Sample sizes become meaningless, can't A/B test anything
+- Personalization signals conflict, a customer who bought luxury, browsed sale items, and is in a mid-income zip shows contradictory signals. Weighting all equally produces a message that fits nothing.
 
 **The practical limit:** Personalize on 2-3 variables maximum per campaign. Behavioral (recency/engagement) + one other signal. Adding a third variable rarely improves performance much, while adding significant complexity.
 
 **3. Job Title vs. Behavior Mismatch**
 
-The most common B2B SaaS personalization mistake: a VP of Marketing signs up. Team tags them as "executive persona" and sends ROI/strategy content. But they personally signed up to test an automation feature — they're in hands-on evaluation mode.
+The most common B2B SaaS personalization mistake: a VP of Marketing signs up. Team tags them as "executive persona" and sends ROI/strategy content. But they personally signed up to test an automation feature, they're in hands-on evaluation mode.
 
 Behavior-triggered emails tend to significantly outperform segment-by-demographic emails on conversion to paid, though the exact multiple isn't backed by a verified benchmark.
 
@@ -553,7 +553,7 @@ Fix: use job title/persona to inform default content, but override immediately w
 
 **4. Stale Data Personalization**
 
-Using behavioral data older than 90 days for ecommerce, or 30 days for SaaS, actively hurts performance. It doesn't just miss — it signals that your personalization is lazy.
+Using behavioral data older than 90 days for ecommerce, or 30 days for SaaS, actively hurts performance. It doesn't just miss, it signals that your personalization is lazy.
 
 **Data freshness rules:**
 | Data Type | Use for | Beyond this, use for suppression only |
@@ -569,7 +569,7 @@ The worst stale data mistake: using a category preference from a one-time purcha
 
 ### Subject Line Personalization: What the Data Shows
 
-**First-name personalization — declining returns:**
+**First-name personalization, declining returns:**
 
 | Context | Lift | Notes |
 |---------|------|-------|
@@ -589,7 +589,7 @@ The worst stale data mistake: using a category preference from a one-time purcha
 | Browse abandonment | "Still thinking about [specific product]?" | 14-18% |
 | Social proof + scarcity | "10 people viewed [product] today" | 16-20% (limited-stock products) |
 
-**Predictive subject lines — high reward, high risk:**
+**Predictive subject lines, high reward, high risk:**
 
 "Picked for you" framing vs. generic: tends to lift CTR noticeably, though the exact percentage isn't backed by a verified benchmark.
 "Based on your last purchase" framing: lifts CTR when logically connected, but hurts CTR when irrelevant - the attribution to their specific behavior makes irrelevance more jarring than generic irrelevance.
@@ -622,7 +622,7 @@ lift. The reader notices the noun and nothing behind it changed: same case studi
 CTA. It reads as a mail-merge, which is the web equivalent of "I noticed you're the [title] at
 [company]".
 
-A variant earns its place when the **evidence** changes with it — the case study is from their industry,
+A variant earns its place when the **evidence** changes with it, the case study is from their industry,
 the objection addressed is the one their segment actually raises, the CTA matches how they buy. Swapping
 a word while leaving the proof generic is worse than not personalising, because it advertises that
 someone tried.

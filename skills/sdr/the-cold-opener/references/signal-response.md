@@ -78,7 +78,7 @@ window, say so and rank it above anything single-sourced.
 **Speed is part of the signal.** A strong signal acted on within hours converts; the same signal a
 few days later often does not, because the window it opened has closed or someone else walked through
 it. If the operating cadence cannot act inside a signal's window, that signal is not worth monitoring
-at that cadence — say so rather than collecting it.
+at that cadence, say so rather than collecting it.
 
 ## 5. Precision over volume
 
@@ -97,8 +97,8 @@ positives go with it.
 
 1. Does the recommended touch lead with the **pain**, not the signal, so nothing states back to the
    person what they already know happened to them?
-2. Is the pain specific to what the event changed for *them* — the pressure, the promise, the
-   inherited problem — rather than a generic category pain?
+2. Is the pain specific to what the event changed for *them*, the pressure, the promise, the
+   inherited problem, rather than a generic category pain?
 3. Does the bridge connect to what the user actually sells, rather than being generic advice that
    would fit any vendor?
 4. Is the ask sized to the bandwidth their situation leaves them?

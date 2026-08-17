@@ -11,7 +11,7 @@ Intempt uses a 6-stage customer lifecycle model built on RFM (Recency, Frequency
 | **At Risk** | Previously active customers showing declining engagement. Have not interacted in an extended period and may churn without intervention. | Low recency, any frequency/monetary | Urgent re-engagement: win-back campaigns, personal outreach, incentives |
 | **Needs Attention** | Customers whose engagement is fading but have not fully disengaged. Still reachable but trending downward. | Medium-low recency, medium frequency | Proactive nudge: check-in emails, feature highlights, satisfaction surveys |
 | **New Customers** | Recently acquired customers in their first engagement window. High recency but limited history. | High recency, low frequency, low monetary | Onboarding: welcome sequences, activation guidance, quick wins |
-| **Promising** | Customers showing positive early signals — increasing frequency or monetary value. Likely to become regulars. | High recency, medium frequency, growing monetary | Nurture: education content, product adoption, community invitations |
+| **Promising** | Customers showing positive early signals, increasing frequency or monetary value. Likely to become regulars. | High recency, medium frequency, growing monetary | Nurture: education content, product adoption, community invitations |
 | **Regulars** | Consistent, reliable customers with steady engagement patterns. Backbone of revenue. | Medium-high recency, high frequency, medium-high monetary | Retain: loyalty rewards, exclusive access, feedback loops |
 | **Champions** | Highest-value customers with exceptional engagement across all dimensions. Most likely to refer and expand. | High recency, high frequency, high monetary | Celebrate: VIP treatment, referral programs, co-creation, advocacy |
 
@@ -217,7 +217,7 @@ To prevent stage flapping, a minimum dwell time of 7 days is enforced before a c
 
 These ranges are for calibration only, a rough sense of what healthy, average, and at-risk tend to look like, not benchmarks tied to a specific published study. Actual numbers vary significantly by product category, price point, and customer segment, and no single authoritative source covers all of them consistently. Treat everything below as directional, not guaranteed.
 
-### Engagement Benchmarks — SaaS
+### Engagement Benchmarks, SaaS
 
 | Metric | Low | Average | Good | Best-in-Class |
 |--------|-----|---------|------|--------------|
@@ -229,7 +229,7 @@ These ranges are for calibration only, a rough sense of what healthy, average, a
 
 **Context:** a DAU/MAU ratio somewhere in the mid-20s percent range is commonly treated as a reasonable "good" threshold for B2B SaaS, though this varies by category and no single number applies uniformly. Products well below that range often have a product-market fit or engagement problem worth investigating, not just a marketing problem.
 
-### Lifecycle Stage Distribution — Typical SaaS
+### Lifecycle Stage Distribution, Typical SaaS
 
 What a healthier vs. struggling distribution tends to look like across a customer base. Illustrative, not measured:
 
@@ -242,7 +242,7 @@ What a healthier vs. struggling distribution tends to look like across a custome
 | Needs Attention | roughly 10-15% | roughly 20-30% | High % is a signal worth investigating |
 | At Risk | roughly 5-10% | roughly 15-25% | High % signals active churn risk |
 
-### Churn Benchmarks — SaaS
+### Churn Benchmarks, SaaS
 
 Varies significantly by segment, pricing, and contract terms. No single authoritative benchmark exists across all of these:
 
@@ -311,7 +311,7 @@ monetary need enough history to be stable. State the windows used.
 
 **"Meaningful activity" excludes bare logins.** Login frequency measures access, not engagement. An
 account logging in daily with no expansion conversation, no new seats, and no new feature adoption
-for six months is not a Champion — it is a habitual user, and habitual users are often the ones
+for six months is not a Champion, it is a habitual user, and habitual users are often the ones
 quietly evaluating alternatives. Score on the events that indicate value being received, and say
 which events were counted.
 
@@ -328,7 +328,7 @@ that is what happened.
 
 - **High-value customers landing in low-value segments.** Usually duplicate customer records
   splitting one account's history, or a monetary column that is missing for part of the base.
-- **Dramatically uneven segment sizes** — most of the base in one or two segments. Usually the
+- **Dramatically uneven segment sizes**, most of the base in one or two segments. Usually the
   wrong window for the model, or thresholds imported rather than derived.
 
 Investigate either before presenting the segmentation. A segmentation built on broken identity

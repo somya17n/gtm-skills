@@ -12,8 +12,8 @@ Reference for the `competitor-profiling` skill: what to pull from each page type
 | Pricing | Tiers, price per tier, feature breakdown per tier, billing options (monthly/annual), free tier or trial terms, any enterprise/custom-pricing signal |
 | About | Founding story, team size if stated, funding if publicly disclosed, mission statement, headquarters |
 | Customers/case studies | Named customers, industries represented, the outcome each case study emphasizes |
-| Blog (top-level scan only) | Posting cadence (rough estimate from dates), 2-3 recurring content themes — signals what they're currently investing in |
-| Changelog/what's-new (if it exists) | Recent feature releases — signals product direction |
+| Blog (top-level scan only) | Posting cadence (rough estimate from dates), 2-3 recurring content themes, signals what they're currently investing in |
+| Changelog/what's-new (if it exists) | Recent feature releases, signals product direction |
 
 Only extract what a page actually states. If a page doesn't mention team size or funding, leave the field as "not disclosed" rather than guessing from company size proxies.
 
@@ -22,7 +22,7 @@ Only extract what a page actually states. If a page doesn't mention team size or
 ## Review Mining (deep profile only)
 
 Search for the competitor's G2, Capterra, or TrustRadius listing. From what the search actually returns, extract:
-- Overall rating and review count (only if directly visible in the result — don't infer from partial snippets)
+- Overall rating and review count (only if directly visible in the result, don't infer from partial snippets)
 - 2-3 recurring praise themes
 - 2-3 recurring complaint themes
 - One representative quote per theme, only if the exact text is visible in the source

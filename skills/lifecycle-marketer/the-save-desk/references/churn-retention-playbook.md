@@ -1,6 +1,6 @@
 # Churn & Retention Playbook
 
-Reference for cancel flow design, save-offer strategy, churn health scoring, and dunning (failed payment recovery). Voluntary churn (customer chooses to leave) and involuntary churn (payment fails) need different fixes — do not treat them as the same problem.
+Reference for cancel flow design, save-offer strategy, churn health scoring, and dunning (failed payment recovery). Voluntary churn (customer chooses to leave) and involuntary churn (payment fails) need different fixes, do not treat them as the same problem.
 
 ---
 
@@ -11,7 +11,7 @@ Reference for cancel flow design, save-offer strategy, churn health scoring, and
 | Voluntary | Customer actively cancels | 50-70% | Cancel flow, save offers, exit survey |
 | Involuntary | Payment fails silently | 30-50% | Dunning emails, smart retries, card updaters |
 
-Involuntary churn is usually the higher-leverage fix first — it is easier to recover than a customer who has decided to leave.
+Involuntary churn is usually the higher-leverage fix first, it is easier to recover than a customer who has decided to leave.
 
 ---
 
@@ -21,16 +21,16 @@ Default categories, ordered by typical frequency (reorder using the customer's r
 
 | Reason | Signal it sends |
 |--------|------------------|
-| Too expensive | Price sensitivity — responds to discount or downgrade |
-| Not using it enough | Low engagement — responds to pause or onboarding help |
-| Missing a feature | Product gap — show roadmap or workaround |
-| Switching to a competitor | Competitive pressure — understand what they're switching to |
-| Technical issues / bugs | Product quality — escalate to support, don't offer a discount |
-| Temporary / seasonal need | Usage pattern — offer a pause, not a discount |
-| Business closed or changed | Unavoidable — skip the offer, let them go gracefully |
+| Too expensive | Price sensitivity, responds to discount or downgrade |
+| Not using it enough | Low engagement, responds to pause or onboarding help |
+| Missing a feature | Product gap, show roadmap or workaround |
+| Switching to a competitor | Competitive pressure, understand what they're switching to |
+| Technical issues / bugs | Product quality, escalate to support, don't offer a discount |
+| Temporary / seasonal need | Usage pattern, offer a pause, not a discount |
+| Business closed or changed | Unavoidable, skip the offer, let them go gracefully |
 | Other | Catch-all with free text |
 
-Keep the survey to one question, single-select, 5-8 options max — more than that produces decision fatigue and lower completion.
+Keep the survey to one question, single-select, 5-8 options max, more than that produces decision fatigue and lower completion.
 
 ---
 
@@ -46,9 +46,9 @@ The core rule: **match the offer to the stated reason.** A discount will not sav
 | Switching to a competitor | Direct comparison + discount | Feedback session |
 | Technical issues | Escalate to support immediately | Service credit + priority fix |
 | Temporary / seasonal | Pause subscription | Temporary downgrade |
-| Business closed | No offer — respect the situation | — |
+| Business closed | No offer, respect the situation |, |
 
-**Discount guidance:** 20-30% for 2-3 months is the sweet spot. Avoid 50%+ discounts — they train customers to cancel for a deal rather than genuinely re-engaging. Show the dollar amount saved, not just the percentage.
+**Discount guidance:** 20-30% for 2-3 months is the sweet spot. Avoid 50%+ discounts, they train customers to cancel for a deal rather than genuinely re-engaging. Show the dollar amount saved, not just the percentage.
 
 **Pause guidance:** cap pauses at 1-3 months. 60-80% of pausers return to active within that window; pauses longer than 3 months rarely reactivate.
 
@@ -58,10 +58,10 @@ The core rule: **match the offer to the stated reason.** A discount will not sav
 
 ## Cancel Flow UI Principles
 
-- Keep a "never mind, keep my subscription" option visible at every step — no dark patterns, and several jurisdictions legally require easy self-serve cancellation
-- One primary offer plus one fallback per step — not a wall of options
+- Keep a "never mind, keep my subscription" option visible at every step, no dark patterns, and several jurisdictions legally require easy self-serve cancellation
+- One primary offer plus one fallback per step, not a wall of options
 - Show specific dollar savings, not abstract percentages
-- Mobile-friendly — a meaningful share of cancellations happen on mobile
+- Mobile-friendly, a meaningful share of cancellations happen on mobile
 
 ---
 
@@ -77,7 +77,7 @@ Health Score = Login frequency (0-100) × 0.30
              + Engagement score (0-100)  × 0.15
 ```
 
-If a signal isn't tracked, drop it and redistribute its weight proportionally across the remaining signals — do not silently assume a value.
+If a signal isn't tracked, drop it and redistribute its weight proportionally across the remaining signals, do not silently assume a value.
 
 | Score | Status | Action |
 |-------|--------|--------|
@@ -113,23 +113,23 @@ If a signal isn't tracked, drop it and redistribute its weight proportionally ac
 | 4 | 7 days (with escalation email) |
 | After 4 | Hard cancel with a reactivation path |
 
-Retry on the same day of the billing cycle the original charge succeeded when possible — most billing providers' smart-retry logic already does this automatically.
+Retry on the same day of the billing cycle the original charge succeeded when possible, most billing providers' smart-retry logic already does this automatically.
 
 ### Decline type changes the strategy
 
 | Decline type | Example | Strategy |
 |--------------|---------|----------|
 | Soft (temporary) | Insufficient funds, processor timeout | Retry 3-5 times over 7-10 days |
-| Hard (permanent) | Card reported stolen, account closed | Don't retry — ask for a new payment method immediately |
+| Hard (permanent) | Card reported stolen, account closed | Don't retry, ask for a new payment method immediately |
 | Authentication required | 3D Secure / SCA | Route the customer to complete authentication, not a blind retry |
 
 ### Dunning email sequence
 
 | Email | Timing | Tone | Content |
 |-------|--------|------|---------|
-| 1 | Day 0 | Friendly alert | "Your payment didn't go through — update your card" |
-| 2 | Day 3 | Helpful reminder | "Quick reminder — update payment to keep access" |
-| 3 | Day 7 | Urgency | "Your account pauses in 3 days — update now" |
+| 1 | Day 0 | Friendly alert | "Your payment didn't go through, update your card" |
+| 2 | Day 3 | Helpful reminder | "Quick reminder, update payment to keep access" |
+| 3 | Day 7 | Urgency | "Your account pauses in 3 days, update now" |
 | 4 | Day 10 | Final notice | "Last chance to keep your account active" |
 
 Plain-text dunning emails typically recover better than heavily designed ones. Never phrase these as blaming the customer ("your payment failed," not "you failed to pay").
@@ -189,10 +189,10 @@ Rules:
 
 ## Common Mistakes
 
-- No cancel flow at all — instant cancel with no survey or offer leaves recoverable revenue on the table
+- No cancel flow at all, instant cancel with no survey or offer leaves recoverable revenue on the table
 - Same offer for every cancellation reason
 - Discounts deep enough (50%+) to train cancel-for-deal behavior
-- Ignoring involuntary churn — often the larger and easier-to-fix half of total churn
+- Ignoring involuntary churn, often the larger and easier-to-fix half of total churn
 - Guilt-trip survey or confirmation copy
 - Pauses longer than 3 months, which rarely reactivate
 - No post-cancel reactivation path or win-back trigger
@@ -227,7 +227,7 @@ This is the finding that reframes most churn work:
 And the same split shows up in expansion: only about **2%** of companies with ARPU under $25/month
 reach NRR above 100%, against nearly **half** of those charging over $500/month.
 
-So a low-ARPU product churning 6% a month is **not necessarily badly run** — it is operating where
+So a low-ARPU product churning 6% a month is **not necessarily badly run**, it is operating where
 churn is structurally high, because low price points attract the least-committed buyers and leave no
 budget for the onboarding and support that would retain them. Before treating that as a lifecycle
 problem, check whether it is a pricing problem. If a save-desk, a dunning stack and a better
@@ -241,7 +241,7 @@ enterprise churn produces a permanent sense of failure and no useful action.
 ### Involuntary churn is about a quarter of the problem
 
 A median monthly churn near **3.5%** splits roughly into **2.6% voluntary** and **0.8-0.9%
-involuntary** — failed payments, expired cards, and payment-method changes.
+involuntary**, failed payments, expired cards, and payment-method changes.
 
 That means roughly **a quarter of all churn is a billing failure rather than a decision**, and it is
 the cheapest churn to recover because the customer has not chosen to leave. Any churn programme that

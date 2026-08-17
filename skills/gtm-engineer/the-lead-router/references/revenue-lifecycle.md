@@ -17,11 +17,11 @@ Reference for the `revops` skill: lifecycle stage definitions, MQL scoring model
 
 ### PLG variant
 
-Replace MQL/SQL with **Product-Qualified Lead (PQL)** — triggered by a usage threshold (e.g., invited a teammate, hit a usage cap, used a specific feature) rather than a marketing engagement score. Route PQLs directly to sales when the usage signal indicates expansion or upgrade intent; skip the marketing-qualification step entirely.
+Replace MQL/SQL with **Product-Qualified Lead (PQL)**, triggered by a usage threshold (e.g., invited a teammate, hit a usage cap, used a specific feature) rather than a marketing engagement score. Route PQLs directly to sales when the usage signal indicates expansion or upgrade intent; skip the marketing-qualification step entirely.
 
 ---
 
-## MQL Scoring — Worked Example
+## MQL Scoring, Worked Example
 
 **Fit signals** (who they are, max 50 points)
 | Signal | Points |
@@ -46,7 +46,7 @@ Replace MQL/SQL with **Product-Qualified Lead (PQL)** — triggered by a usage t
 | Personal/free email on a B2B ICP | -10 |
 | Unsubscribed or marked spam | -50 (auto-disqualify) |
 
-**Threshold:** 50-80 combined points, calibrated against closed-won history — pull last quarter's won deals and check what score they'd have gotten with the model before locking the threshold.
+**Threshold:** 50-80 combined points, calibrated against closed-won history, pull last quarter's won deals and check what score they'd have gotten with the model before locking the threshold.
 
 **Recalibration:** quarterly. Buyer behavior shifts; a model tuned once and never revisited drifts stale within two quarters.
 
@@ -63,9 +63,9 @@ Replace MQL/SQL with **Product-Qualified Lead (PQL)** — triggered by a usage t
 
 Rules that apply regardless of method:
 - Route to the most specific match first, fall back to general
-- Always define a fallback owner — unassigned leads go cold fast
+- Always define a fallback owner, unassigned leads go cold fast
 - Round-robin should account for rep capacity (PTO, quota already hit)
-- Log every routing decision — needed to audit and re-tune later
+- Log every routing decision, needed to audit and re-tune later
 
 ---
 
@@ -97,20 +97,20 @@ Lifecycle stages above cover lead-to-opportunity. Once an opportunity exists, it
 | Closed Lost | Loss reason logged, competitor named if applicable | Post-mortem logged |
 
 **Hygiene rules to enforce, not just define:**
-- **Required-field gate** — a rep cannot advance a deal to the next stage with required fields blank. This is what turns the table above from documentation into an actual control.
-- **Stale-deal flag** — flag any deal sitting in one stage beyond roughly 2x the average time-in-stage for deals that eventually closed won. A deal in Demo for 40 days against a 15-day average close-won pattern is a flag, not a coincidence.
-- **Stage-skip detection** — flag deals that jump stages (Qualified straight to Proposal, skipping Discovery) since skipped discovery is the single most common cause of late-stage deals collapsing on undiscovered objections.
-- **Close-date discipline** — a pushed close date requires a logged reason. A silently-pushed date with no reason is a forecast lying to itself.
+- **Required-field gate**, a rep cannot advance a deal to the next stage with required fields blank. This is what turns the table above from documentation into an actual control.
+- **Stale-deal flag**, flag any deal sitting in one stage beyond roughly 2x the average time-in-stage for deals that eventually closed won. A deal in Demo for 40 days against a 15-day average close-won pattern is a flag, not a coincidence.
+- **Stage-skip detection**, flag deals that jump stages (Qualified straight to Proposal, skipping Discovery) since skipped discovery is the single most common cause of late-stage deals collapsing on undiscovered objections.
+- **Close-date discipline**, a pushed close date requires a logged reason. A silently-pushed date with no reason is a forecast lying to itself.
 
 ---
 
 ## Deal Desk (when a deal needs approval, not just tracking)
 
-Most orgs need this earlier than they think — as soon as a rep can offer a discount deep enough to change unit economics.
+Most orgs need this earlier than they think, as soon as a rep can offer a discount deep enough to change unit economics.
 
 **When to stand this up:** ACV above roughly $25K (adjust to the business's actual deal-size distribution), non-standard payment terms (net-90, quarterly-only billing), multi-year contracts with custom pricing, or custom legal/SLA terms.
 
-**Approval tiers by discount depth** — calibrate the exact bands to the business's real margin structure, but the shape holds broadly:
+**Approval tiers by discount depth**, calibrate the exact bands to the business's real margin structure, but the shape holds broadly:
 
 | Discount / Deal Characteristic | Approval Required |
 |---|---|
@@ -120,21 +120,21 @@ Most orgs need this earlier than they think — as soon as a rep can offer a dis
 | 40%+ discount, or any custom/non-standard terms | Deal desk review |
 | Multi-year or enterprise custom contract | Finance + Legal |
 
-**Exception tracking:** log every non-standard term granted, not just the approval outcome. If the same "exception" gets requested repeatedly, that's a signal it should become a standard published option — review the exception log quarterly rather than re-litigating the same one-off every time it comes up.
+**Exception tracking:** log every non-standard term granted, not just the approval outcome. If the same "exception" gets requested repeatedly, that's a signal it should become a standard published option, review the exception log quarterly rather than re-litigating the same one-off every time it comes up.
 
 ---
 
 ## Three-View Metrics Dashboard
 
-A single revops dashboard trying to serve a rep, a manager, and an exec at once serves none of them well — each needs a different grain and different metrics:
+A single revops dashboard trying to serve a rep, a manager, and an exec at once serves none of them well, each needs a different grain and different metrics:
 
-**Rep view** — deal-level, actionable today: my open deals by stage, deals with a stale-deal flag, deals missing required fields, tasks due today, leads assigned to me still inside the SLA window.
+**Rep view**, deal-level, actionable today: my open deals by stage, deals with a stale-deal flag, deals missing required fields, tasks due today, leads assigned to me still inside the SLA window.
 
-**Sales manager view** — team-level, this week/month: pipeline coverage ratio (target 3-4x quota), stage conversion rates by rep, average time-in-stage by rep, SLA-miss count by rep, forecast accuracy vs. last quarter's commit.
+**Sales manager view**, team-level, this week/month: pipeline coverage ratio (target 3-4x quota), stage conversion rates by rep, average time-in-stage by rep, SLA-miss count by rep, forecast accuracy vs. last quarter's commit.
 
-**Executive view** — company-level, this quarter: CAC, LTV:CAC ratio (target 3:1 to 5:1), pipeline velocity (deals x avg deal size x win rate / sales cycle length), revenue vs. target, pipeline coverage trend quarter over quarter.
+**Executive view**, company-level, this quarter: CAC, LTV:CAC ratio (target 3:1 to 5:1), pipeline velocity (deals x avg deal size x win rate / sales cycle length), revenue vs. target, pipeline coverage trend quarter over quarter.
 
-Building one dashboard with every metric and letting each audience ignore what doesn't apply to them is the common failure mode — it produces a dashboard nobody actually opens because everyone has to filter past metrics meant for someone else's job.
+Building one dashboard with every metric and letting each audience ignore what doesn't apply to them is the common failure mode, it produces a dashboard nobody actually opens because everyone has to filter past metrics meant for someone else's job.
 
 ---
 

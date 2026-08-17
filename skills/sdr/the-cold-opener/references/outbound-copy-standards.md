@@ -76,8 +76,8 @@ them, because the reader has seen the template:
 | "Hope this finds you well" / "Hope you're having a great week" | Costs a line, says nothing, signals template. |
 | "Quick question" as an opener or subject | The most-used opener in B2B outbound. Signals volume sending. |
 | "I'll keep this short" | Then be short. Saying it is the opposite of it. |
-| **Bio recap** — describing their company back to them from their own About page | They wrote it. Repeating it proves you read a page, not that you understood a situation. This is the most common "personalised" opener that still reads as automated. |
-| **Compliment with no bridge** — "I love what you're building" | Praise that leads nowhere. An observation has to imply a consequence, or it is filler with a nicer tone. |
+| **Bio recap**, describing their company back to them from their own About page | They wrote it. Repeating it proves you read a page, not that you understood a situation. This is the most common "personalised" opener that still reads as automated. |
+| **Compliment with no bridge**, "I love what you're building" | Praise that leads nowhere. An observation has to imply a consequence, or it is filler with a nicer tone. |
 | Congratulating a funding round with no read on what it changes | Everyone sent that email the same week. |
 
 **The specificity test:** could this exact opening line be sent unchanged to a different person
@@ -97,7 +97,7 @@ ladder, and every rung down costs credibility:
 5. **An adjective.** "Significant time savings." This is not proof. Do not ship it.
 
 Use the highest rung the user actually supplied. **Never move up the ladder by inventing the
-missing part** — do not attach a customer name to an unattributed stat, do not invent a
+missing part**, do not attach a customer name to an unattributed stat, do not invent a
 percentage for a mechanism, and do not convert "faster" into a number. If the user only gave you
 rung 4, ship rung 4 and tell them what rung 1 would need.
 
@@ -167,7 +167,7 @@ shorter version reads as a colleague noticing something; the longer one reads as
    rather than stated. Max 20 words. Something they could confirm, and that would break if sent to
    anyone else.
 2. **Who you are, compressed.** "I'm [name] at [company]." One line. Not "My name is X and I work at
-   a company called Y, which helps teams to…" — a long self-introduction spends the reader's attention
+   a company called Y, which helps teams to…", a long self-introduction spends the reader's attention
    on the sender at the exact moment it is worth the least.
 3. **What the product *is*.** Plain language, in one sentence. Not what it will do for them: that is
    the next line's job, and collapsing the two produces a claim before they know what is being
@@ -198,7 +198,7 @@ in?") outperforms them because it is answerable in one word.
 
 "One of about 15 lifecycle consultants we reached out to" is checkable and therefore credible. "A
 select group", "a few people", "a handful of teams" are unfalsifiable and read as sales language. If
-the real number cannot be stated, drop the scarcity framing rather than vaguen it — see the
+the real number cannot be stated, drop the scarcity framing rather than vaguen it, see the
 borrowed-urgency rule above.
 
 ### Subject lines for a cold first touch
@@ -245,7 +245,7 @@ that fails a check, and do not note the failure as a caveat instead of fixing it
 **Opening**
 
 5. Does the opening reference something specific and checkable about this reader?
-6. Would the opening survive the specificity test — would it break if sent to someone else?
+6. Would the opening survive the specificity test, would it break if sent to someone else?
 7. Is every tell from the fake-personalization table absent?
 
 **Proof**
@@ -257,8 +257,8 @@ that fails a check, and do not note the failure as a caveat instead of fixing it
 
 10. Is there exactly one ask, sized to the reader's current trust?
 10a. For a cold first touch: is the body 55-90 words rather than merely under the 120 ceiling?
-10b. Does it follow the five-part shape — observation, compressed self-intro, what the product *is*,
-    the bridge to their situation, one ask — with none of the five collapsed into another?
+10b. Does it follow the five-part shape, observation, compressed self-intro, what the product *is*,
+    the bridge to their situation, one ask, with none of the five collapsed into another?
 10c. Does the bridge sentence reference the observation specifically enough that it would not read
     identically to a different prospect?
 10d. Is the pain implied rather than assigned, so the reader supplies it instead of being told what
@@ -277,7 +277,7 @@ that fails a check, and do not note the failure as a caveat instead of fixing it
 12. Do more sentences start with the reader's situation than with "we" or the product name?
 13. Is category jargon absent unless the reader is product-aware or most-aware?
 14. Em dashes: none in short copy, and no clusters anywhere?
-15. Is formatting plain — no mid-sentence bold, no bullets in short messages, no emoji in subject lines?
+15. Is formatting plain, no mid-sentence bold, no bullets in short messages, no emoji in subject lines?
 
 **Voice**
 

@@ -4,7 +4,7 @@ Several skills in this pack promise something they cannot deliver from a single 
 direction of travel, a "what changed since last time", or a check against what was tried before.
 Those all require state that survives between runs, and an agent has none by default.
 
-This file defines where that state lives, what goes in it, and — the part most often missed — how a
+This file defines where that state lives, what goes in it, and, the part most often missed, how a
 skill behaves on the run where no state exists yet.
 
 ---
@@ -29,7 +29,7 @@ means a positioning change and a weekly score update land in the same file with 
 A snapshot that cannot be compared is not worth writing. Every entry carries:
 
 - **The date it was taken**, and the period it describes (they are different)
-- **The unit of comparison** — account ID, SKU, segment name, deal ID
+- **The unit of comparison**, account ID, SKU, segment name, deal ID
 - **The value**, and the method that produced it
 - **The thresholds in force at the time.** This is the one usually omitted and it invalidates
   everything else: if the cut points were recomputed between runs, a stage change may reflect a moved
@@ -49,7 +49,7 @@ that supersedes, not an edit to the old one.
 ## The first run
 
 **This is the case that must be designed, not discovered.** On the first run there is no prior
-snapshot, so every trend-bearing output is empty — and the failure mode is that the skill either
+snapshot, so every trend-bearing output is empty, and the failure mode is that the skill either
 invents a trend or silently omits its headline finding.
 
 The rule: **say plainly that this is a baseline, deliver everything that does not need history, and
@@ -58,7 +58,7 @@ name what the next run will add.**
 | Wrong | Right |
 |---|---|
 | Present a first snapshot as a trend | "This is a baseline. Direction of travel is unavailable for every row; the next run will have it." |
-| Omit the trend-dependent section | Show the section, marked `baseline — no prior run to compare` |
+| Omit the trend-dependent section | Show the section, marked `baseline: no prior run to compare` |
 | Reject or block because history is missing | Deliver, with the standard explicitly capped |
 | Emit the entire existing backlog as "new" | Record the backlog as the baseline, and report `n items recorded as pre-existing, not new` |
 
@@ -69,12 +69,12 @@ thinking nothing was wrong.
 
 ### First run must never mean automatic rejection
 
-Where a skill's standard requires checking history — a prior revert, a previous override, an earlier
-attempt at the same change — the absence of a ledger is **a stated limitation that caps the
+Where a skill's standard requires checking history, a prior revert, a previous override, an earlier
+attempt at the same change, the absence of a ledger is **a stated limitation that caps the
 standard, not a defect in the proposal.** A checker that rejects everything until a ledger exists can
 never approve a first proposal, and the ledger will never be created, so the deadlock is permanent.
 
-Say: *"unverifiable against history — no ledger exists yet"*, apply the remaining checks, and record
+Say: *"unverifiable against history, no ledger exists yet"*, apply the remaining checks, and record
 the verdict so the second run has something to check against.
 
 ---
@@ -95,7 +95,7 @@ A snapshot has a useful life too.
 ## Pruning
 
 Append-only files grow, and a state file that exceeds what can be read becomes a state file that is
-silently ignored — at which point every skill reading it loses its memory without any error.
+silently ignored, at which point every skill reading it loses its memory without any error.
 
 - **Roll up entries older than 90 days** into one summary line per unit, keeping the latest value and
   the count of prior observations.

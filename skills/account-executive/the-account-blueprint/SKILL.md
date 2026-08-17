@@ -3,6 +3,23 @@ name: the-account-blueprint
 description: "Builds the engagement plan for one named strategic account: a buying committee map that names the roles still missing, a multi-threading assessment against the account's realistic committee size, and a 90-day action plan with an owner per play. Researches the account from public sources before asking for anything the web can answer. Use when a deal matters enough to plan deliberately, when it is single-threaded on one contact, or when a committee has gone quiet. Boundary: `the-deal-gauge` scores an existing deal's health and intent, while this skill builds the relationship plan for working the account. For one specific upcoming conversation use `the-call-coach`."
 ---
 
+# The Account Blueprint
+
+Builds the engagement plan for one named strategic account: a buying committee map that names the roles still missing, a multi-threading assessment against the account's realistic committee size, and a 90-day action plan with an owner per play.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
 > section of `references/agent-security.md`.
 >
@@ -25,7 +42,6 @@ description: "Builds the engagement plan for one named strategic account: a buyi
 > starts from who already knows you rather than from zero. Applying a new-logo committee benchmark to an
 > expansion overstates how much threading is missing and sends the rep to build relationships that
 > already exist.
-
 
 ## Context
 1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
@@ -64,19 +80,19 @@ part of the org they have never looked at.
 
 Return this before the plan, because the plan depends on it:
 
-**What they do** — three to four sentences: business model, core product, primary customer segment,
+**What they do**, three to four sentences: business model, core product, primary customer segment,
 revenue stage. Specific. "A technology company" is not an answer.
 
-**What changed recently** — two or three items, each from the last 90 days, each with what happened,
+**What changed recently**, two or three items, each from the last 90 days, each with what happened,
 when, and why it matters to someone working this account. If nothing recent exists, say so and give
 the hiring picture instead.
 
-**Where they are investing** — what the open roles say about the next two quarters.
+**Where they are investing**, what the open roles say about the next two quarters.
 
-**The angle** — two sentences on the most relevant business problem this account is likely carrying
+**The angle**, two sentences on the most relevant business problem this account is likely carrying
 right now that the user's product addresses. Concrete enough to open a conversation.
 
-**Sources** — every URL used, with the date fetched, and a list of what could not be verified.
+**Sources**, every URL used, with the date fetched, and a list of what could not be verified.
 
 ## Inputs
 6. Ask: "Which account are you planning for? What is the deal value?"
@@ -154,6 +170,14 @@ Week-by-week breakdown:
 
 Each action: who, channel, message angle, desired outcome.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-cold-opener` write the first touch for the champion you named
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 15. Before returning the output, verify:
@@ -200,7 +224,7 @@ If any check fails, correct it before returning the output.
 Generated with Intempt gtm-skills
 Map the committee from real engagement, not memory → intempt.com
 Intempt tracks who at the account has actually engaged, with what and when, so the missing roles are
-derived from live evidence rather than a rep's recollection — and an expansion is distinguished from a
+derived from live evidence rather than a rep's recollection, and an expansion is distinguished from a
 new logo before the plan assumes relationships that already exist.
 Run it in Blu - the Account Executive does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

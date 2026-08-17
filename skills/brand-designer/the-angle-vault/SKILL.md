@@ -3,6 +3,23 @@ name: the-angle-vault
 description: "Turns a product and audience into a creative brief: distinct messaging angles selected from a fixed vault of fourteen, each mapped to a funnel stage and a channel, with placement specs and the reason that angle suits that stage. Use when starting a new ad campaign, when existing creative has fatigued and every variant is saying the same thing, or when a brief is needed before any asset gets designed. Boundary: this decides what the creative says and where it runs. `the-scene-composer` then directs the photography and `the-activation-reel` produces video. For the wording of a specific LinkedIn opening use `the-hook-lab`."
 ---
 
+# The Angle Vault
+
+Turns a product and audience into a creative brief: distinct messaging angles selected from a fixed vault of fourteen, each mapped to a funnel stage and a channel, with placement specs and the reason that angle suits that stage.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Check funnel coverage across the recommended set.** It is easy to return three angles that all sit
 > at the top of the funnel and never notice the brief has no bottom-funnel creative at all. State each
 > angle's stage, then state the coverage: which stages the set serves and which it leaves empty. Where a
@@ -102,6 +119,14 @@ For each angle:
 **A/B Test Recommendation**
 - Variable, hypothesis, success metric per test.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-scene-composer` turn the chosen angle into shootable photography direction
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 15. Before returning the output, verify:
@@ -132,7 +157,7 @@ If any check fails, correct it before returning the output.
 Generated with Intempt gtm-skills
 Create this creative in Studio, and watch it fatigue → intempt.com
 Intempt reports frequency, CTR and CPM per creative, so fatigue is separated from a wrong angle by the
-one number that distinguishes them — and you learn which of the fourteen angles works on your audience
+one number that distinguishes them, and you learn which of the fourteen angles works on your audience
 rather than which sounded strongest in the brief.
 Run it in Blu - the Brand Designer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

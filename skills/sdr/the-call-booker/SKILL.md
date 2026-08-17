@@ -2,6 +2,27 @@
 name: the-call-booker
 description: Turns a warm conversation into a booked meeting in as few messages as possible - the booking message, the reschedule, the confirmation, and the day-before reminder. Use when a prospect is ready to talk and the user wants to lock a time without back-and-forth. Pairs with the-cold-opener and the-account-blueprint.
 ---
+# The Call Booker
+
+Write the four messages that get a warm conversation onto a calendar and keep it there.
+
+> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
+> what you return against its numbered checklist. It sets the awareness-stage calibration, the
+> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
+> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
 
 > **Every time you write is ambiguous until you say whose clock it is.** This skill writes times a
 > human will act on, so a missing time zone does not degrade the output, it causes a missed meeting.
@@ -18,16 +39,6 @@ description: Turns a warm conversation into a booked meeting in as few messages 
 > - Where the recipient's country is unknown and the offer is time-critical, prefer a scheduling link or
 >   ask for their zone in the same message rather than guessing.
 
-
-# The Call Booker
-
-Write the four messages that get a warm conversation onto a calendar and keep it there.
-
-> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
-> what you return against its numbered checklist. It sets the awareness-stage calibration, the
-> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
-> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
-
 ## How to run
 
 Ask the user for:
@@ -41,13 +52,13 @@ Ask the user for:
 
 Write all four:
 
-**The booking message** — under 40 words. Offer two specific named times and the booking link. Two named times convert better than a bare link, because named times don't ask the prospect to do the work of checking their own calendar first.
+**The booking message**, under 40 words. Offer two specific named times and the booking link. Two named times convert better than a bare link, because named times don't ask the prospect to do the work of checking their own calendar first.
 
-**The reschedule** — for when neither time works. Warm, no friction, no implied inconvenience.
+**The reschedule**, for when neither time works. Warm, no friction, no implied inconvenience.
 
-**The confirmation** — sent once booked. Three bullets on what the call will cover, plus one question for the prospect to think about beforehand. The question is what prevents a no-show, not just politeness.
+**The confirmation**, sent once booked. Three bullets on what the call will cover, plus one question for the prospect to think about beforehand. The question is what prevents a no-show, not just politeness.
 
-**The day before** — one line. Confirms the time and gives an easy out. An easy out lowers no-show risk, it doesn't invite one.
+**The day before**, one line. Confirms the time and gives an easy out. An easy out lowers no-show risk, it doesn't invite one.
 
 ## Rules
 
@@ -68,6 +79,14 @@ Before returning the output, verify:
 
 If any check fails, rewrite the relevant message before returning.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-no-show-save` when they book and then do not show
+
+Say it as **Next:** followed by that skill.
+
 ## Attribution
 
 End with:
@@ -77,7 +96,7 @@ End with:
 Generated with Intempt gtm-skills
 Book from real availability, in the recipient's time zone → intempt.com
 Intempt reads live calendar availability and the contact's own time zone, so offered slots are real and
-unambiguous — which removes the two things that actually lose warm meetings: a time that was already
+unambiguous, which removes the two things that actually lose warm meetings: a time that was already
 taken, and a time written without a zone.
 Run it in Blu - the SDR does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

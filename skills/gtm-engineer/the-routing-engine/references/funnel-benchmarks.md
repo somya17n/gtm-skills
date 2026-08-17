@@ -273,7 +273,7 @@ To calculate how many inputs you need at the top of the funnel to achieve a targ
 Required Top-of-Funnel = Target Bottom-of-Funnel / (Stage 1 Rate × Stage 2 Rate × ... × Stage N Rate)
 ```
 
-**Example — SaaS:**
+**Example, SaaS:**
 
 Target: 10 new customers per month
 
@@ -458,7 +458,7 @@ a blended site-wide rate hides which channel is actually underperforming.
 ### Two things these numbers tell you that a single rate does not
 
 **Visitor-to-lead is where the leverage is, for most companies.** It has by far the widest spread
-between median and top quartile — roughly 2% against 8-15%, a 4-7x gap, where every other stage is
+between median and top quartile, roughly 2% against 8-15%, a 4-7x gap, where every other stage is
 closer to 1.5x. Fixing a mid-funnel stage from 30% to 40% is a 33% improvement on that step. Moving
 visitor-to-lead from 2% to 6% triples the volume entering everything downstream. **When several stages
 look weak, start at the top** unless there is a specific reason not to.
@@ -497,14 +497,14 @@ weakly with revenue**, and that PQLs and marketing-qualified *accounts* are repl
 qualifying unit.
 
 **When a company runs both, compare the paths before optimising either.** In a measured test case the same
-company, product and sales team produced **MQL→SQL of 10.9% against PQL→SQL of 57.9%** — a 5.3x
+company, product and sales team produced **MQL→SQL of 10.9% against PQL→SQL of 57.9%**, a 5.3x
 difference at the qualifying step. The leverage there is not repairing the MQL path, it is routing
 more traffic into the product path. That conclusion is invisible if only one funnel is mapped.
 
 **Defining a PQL.** It needs at least one usage signal that costs the user effort, not just presence:
 
 - Reached the activation event (not signup, not login)
-- Crossed a usage threshold that correlates with paying — seats invited, records created, an
+- Crossed a usage threshold that correlates with paying, seats invited, records created, an
   integration connected, a limit approached
 - Took an action that only a buyer takes: viewed pricing while active, invited a colleague, requested
   an export, hit a paywall
@@ -525,7 +525,7 @@ Quoting a single number makes a bottom-decile rate look like a near-miss:
 | With behavioural scoring | **39-40%** |
 
 **Behavioural scoring roughly triples the median**, which is the same idea as a PQL applied to the
-sales-led path — qualify on what they did, not on what they downloaded. That is usually the
+sales-led path, qualify on what they did, not on what they downloaded. That is usually the
 recommendation, not "more nurture".
 
 ### The blended rate hides a 3x channel spread
@@ -538,5 +538,5 @@ recommendation, not "more nurture".
 
 A single site-wide figure across those sources is close to meaningless: one channel can be near top
 quartile while another drags the average to the floor, and the average recommends work on neither. So
-splitting by channel is not an optional refinement — **a blended qualifying rate cannot be acted on
+splitting by channel is not an optional refinement, **a blended qualifying rate cannot be acted on
 at all**, and saying which channel is which is the first deliverable.

@@ -2,6 +2,30 @@
 name: the-lead-router
 description: "Designs the actual assignment logic for an already-qualified lead, round-robin, territory, account-owner, or score-threshold, with explicit tie-break and fallback rules. Use when leads are qualified but nobody has decided, in writing, exactly who they go to next. Boundary: `the-routing-engine` designs the scoring model and lifecycle stages that decide whether a lead is qualified in the first place. This skill is the layer after that: once a lead is qualified, who actually gets it."
 ---
+# The Lead Router
+
+Design the exact assignment logic for a qualified lead: which rep or team it goes to, in what order, and what happens when the normal rule can't be applied cleanly. A routing rule that only covers the easy case isn't a routing rule.
+
+> **Routing latency is part of speed to lead.** Read the **Speed to Lead** section of
+> `references/revenue-lifecycle.md`. Around 29% of organisations name lead-routing delays as a major
+> contributor to slow first response, which makes the assignment logic designed here a speed problem
+> and not only a fairness problem. Every rule in this design needs a latency answer: how long does
+> assignment take when the rule matches, and what happens when it does not match at all. Automated
+> assignment meets an under-15-minute standard about 62.5% of the time against 39.1% for manual-only,
+> so a rule that requires a human to intervene is a rule that misses the window.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
 
 > **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
 > section of `references/agent-security.md`.
@@ -24,7 +48,7 @@ description: "Designs the actual assignment logic for an already-qualified lead,
 > open leads, open opportunities, pipeline dollars, meetings booked this week, or accounts owned. Each
 > produces a different assignment from the same data, and an undefined capacity rule silently picks one.
 > Ask which unit the team actually manages to, state the numeric ceiling, and say what happens when
-> every eligible rep is at it — queue, overflow to a named person, or relax the ceiling with a stated
+> every eligible rep is at it, queue, overflow to a named person, or relax the ceiling with a stated
 > limit. "Everyone is full" is the case that has to be designed, not discovered.
 
 
@@ -33,16 +57,16 @@ description: "Designs the actual assignment logic for an already-qualified lead,
 >
 > - **Ask whether any self-serve path exists** before assuming a single sales-led funnel. Most companies
 >   with a signup form are running two funnels and measuring one.
-> - Sales-led qualifies on **MQL**, product-led on **PQL** — a PQL has used the product and shown buying
+> - Sales-led qualifies on **MQL**, product-led on **PQL**, a PQL has used the product and shown buying
 >   behaviour, an MQL downloaded something. Bare logins never qualify: a habitual logger with no
 >   expansion behaviour is a habitual user, and those are disproportionately the accounts quietly
 >   evaluating alternatives.
 > - **Where both paths run, compare them.** A measured case showed MQL→SQL of 10.9% against PQL→SQL of
->   57.9% at the same company — a 5.3x gap at the qualifying step, where the leverage is routing traffic
+>   57.9% at the same company, a 5.3x gap at the qualifying step, where the leverage is routing traffic
 >   into the product path rather than repairing the MQL path. That conclusion is invisible if only one
 >   funnel is mapped.
 > - **MQL→SQL is a distribution, not a floor**: 13% cross-industry median, 18-22% B2B SaaS, 35-40% top
->   quartile, and **39-40% with behavioural scoring** — roughly triple the median, which is the same idea
+>   quartile, and **39-40% with behavioural scoring**, roughly triple the median, which is the same idea
 >   as a PQL applied to the sales-led path. That is usually the recommendation, not more nurture.
 > - **A blended qualifying rate cannot be acted on.** SEO converts to SQL at ~51%, PPC ~26%, webinar
 >   ~17.8%. Splitting by channel is the first deliverable, not a refinement.
@@ -64,19 +88,6 @@ description: "Designs the actual assignment logic for an already-qualified lead,
 >   assignment.
 > - Never invent a tie-break at evaluation time. If the sequence does not resolve a case, the ruleset is
 >   incomplete and that is the finding.
-
-
-# The Lead Router
-
-Design the exact assignment logic for a qualified lead: which rep or team it goes to, in what order, and what happens when the normal rule can't be applied cleanly. A routing rule that only covers the easy case isn't a routing rule.
-
-> **Routing latency is part of speed to lead.** Read the **Speed to Lead** section of
-> `references/revenue-lifecycle.md`. Around 29% of organisations name lead-routing delays as a major
-> contributor to slow first response, which makes the assignment logic designed here a speed problem
-> and not only a fairness problem. Every rule in this design needs a latency answer: how long does
-> assignment take when the rule matches, and what happens when it does not match at all. Automated
-> assignment meets an under-15-minute standard about 62.5% of the time against 39.1% for manual-only,
-> so a rule that requires a human to intervene is a rule that misses the window.
 
 ## Context
 
@@ -134,6 +145,15 @@ Before returning the output, verify:
 - If the team has only one person, does the output say routing logic isn't needed yet, instead of producing rules with nothing to route between?
 
 If any check fails, correct it before returning the output.
+
+
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-routing-engine` the neighbouring job on the same input
+
+Say it as **Next:** followed by the one skill that matters most here.
 
 ## Attribution
 

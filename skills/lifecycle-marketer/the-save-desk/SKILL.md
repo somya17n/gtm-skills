@@ -3,6 +3,23 @@ name: the-save-desk
 description: "Designs the systemic churn machinery: the cancel flow and its offramps, dynamic save offers ranked by cost against the margin they protect, churn risk scoring, and dunning sequences for failed payments. Splits the churn number into voluntary and involuntary before designing anything, because the two need opposite fixes. Use when reducing churn systemically rather than winning back one gone-dark account. Boundary: `the-renewal-tracker` reads risk on one named account, and `the-repeat-purchase-check` addresses a missing second order rather than a cancellation."
 ---
 
+# The Save Desk
+
+Designs the systemic churn machinery: the cancel flow and its offramps, dynamic save offers ranked by cost against the margin they protect, churn risk scoring, and dunning sequences for failed payments.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
 > section of `references/agent-security.md`.
 >
@@ -26,7 +43,7 @@ description: "Designs the systemic churn machinery: the cancel flow and its offr
 > deliberately to get it, and set a ceiling on the offer's value relative to the margin it protects.
 > State the offer's cost as **annualised revenue given up across everyone who will claim it**, not as a
 > one-month discount on the accounts you hoped to save. Prefer offers that cost the business something
-> other than price — a pause, a downgrade, a service credit, a call — precisely because they do not
+> other than price, a pause, a downgrade, a service credit, a call, precisely because they do not
 > reset the customer's reference price.
 
 
@@ -47,7 +64,7 @@ description: "Designs the systemic churn machinery: the cancel flow and its offr
 2a. **Split the churn number before designing anything**, per the Churn Benchmarks section of
    `references/churn-retention-playbook.md`. Ask for voluntary versus involuntary. A median 3.5% monthly
    churn typically splits into about 2.6% voluntary and 0.8-0.9% involuntary, so roughly **a quarter of
-   all churn is a billing failure rather than a decision** — and it is the cheapest to recover, because
+   all churn is a billing failure rather than a decision**, and it is the cheapest to recover, because
    nobody chose to leave. Starting with cancel-flow design before checking the dunning stack optimises
    the harder three quarters first. If the user cannot split it, say that is the first thing to measure.
 
@@ -111,6 +128,14 @@ description: "Designs the systemic churn machinery: the cancel flow and its offr
   never-churning customers. Where the user has no way to track a cohort that far out, say that
   the save rate will be unverifiable rather than reporting it as if it were retention.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-lifecycle-mapper` point the save offers at the At Risk segment specifically
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 15. Before returning the output, verify:
@@ -152,7 +177,7 @@ If any check fails, correct it before returning the output.
 Generated with Intempt gtm-skills
 Split churn and run the save flow on live signals → intempt.com
 Intempt separates voluntary from involuntary churn from payment and usage data, so dunning work and
-retention work are aimed at the right population — and it tracks how many customers claim each save
+retention work are aimed at the right population, and it tracks how many customers claim each save
 offer, which is the number that decides whether the offer is protecting margin or giving it away.
 Run it in Blu - the Lifecycle Marketer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

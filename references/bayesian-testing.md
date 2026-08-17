@@ -33,7 +33,7 @@ Traffic is evenly distributed across all variants using a deterministic hash of 
 **How it works:**
 1. User ID is hashed (e.g., MurmurHash3)
 2. Hash modulo N determines variant assignment
-3. Assignment is sticky — same user always sees the same variant
+3. Assignment is sticky, same user always sees the same variant
 
 **When to use:**
 - Standard A/B testing where statistical rigor is paramount
@@ -75,7 +75,7 @@ Every experiment variant maintains a Bayesian state that is updated with each ob
 The posterior for each variant follows a Beta distribution:
 
 ```
-Prior:     Beta(alpha_0, beta_0)  — typically Beta(1, 1) = uniform prior
+Prior:     Beta(alpha_0, beta_0) , typically Beta(1, 1) = uniform prior
 Posterior: Beta(alpha_0 + successes, beta_0 + failures)
 ```
 
@@ -252,7 +252,7 @@ The system will not auto-declare a winner before both the minimum exposures AND 
 
 ## Exit Rules
 
-Exit rules define when an experiment should conclude. They are evaluated in priority order — the first satisfied rule triggers the action.
+Exit rules define when an experiment should conclude. They are evaluated in priority order, the first satisfied rule triggers the action.
 
 ### Rule Structure
 
@@ -300,11 +300,11 @@ The gap between theoretical testing and what actually happens in practice is rea
 
 ### Note on Apple Mail Privacy Protection (MPP)
 
-As of iOS 15+ (2021), Apple prefetches email content for ~50% of all email opens, inflating open rates by 30–50% in most B2B email lists. This makes email open rate A/B tests unreliable for users on Apple Mail.
+As of iOS 15+ (2021), Apple prefetches email content for ~50% of all email opens, inflating open rates by 30-50% in most B2B email lists. This makes email open rate A/B tests unreliable for users on Apple Mail.
 
 **What this means for testing:**
 - Do not use open rate as a primary optimization metric for A/B tests
-- Use **click rate** and **conversion rate** instead — these are not affected by MPP
+- Use **click rate** and **conversion rate** instead, these are not affected by MPP
 - If your list is >40% Apple Mail (check your ESP analytics), email A/B tests on subject lines may show false wins/losses
 - Click-to-open rate (CTOR) and click rate remain the most reliable email engagement signals
 
@@ -319,7 +319,7 @@ n = (Z_{1-alpha/2} + Z_{1-beta})^2 * (p1*(1-p1) + p2*(1-p2)) / (p2 - p1)^2
 
 Where:
   p1 = baseline conversion rate
-  p2 = p1 * (1 + delta)  — expected conversion rate with lift
+  p2 = p1 * (1 + delta) , expected conversion rate with lift
   Z_{1-alpha/2} = z-score for confidence level (1.645 for 90%, 1.96 for 95%, 2.576 for 99%)
   Z_{1-beta} = z-score for power (0.842 for 80% power, 1.282 for 90% power)
 ```

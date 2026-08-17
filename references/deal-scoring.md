@@ -178,7 +178,7 @@ Where:
 | Coverage Ratio | Health | Action |
 |---------------|--------|--------|
 | > 4x | Over-covered | Focus on quality and deal velocity, not new pipeline |
-| 3-4x | Healthy | Balanced — maintain pipeline generation cadence |
+| 3-4x | Healthy | Balanced, maintain pipeline generation cadence |
 | 2-3x | Thin | Increase pipeline generation, expand prospecting |
 | 1-2x | At Risk | Urgent pipeline generation needed, consider lowering target |
 | < 1x | Critical | Target likely unachievable, restructure pipeline plan |
@@ -189,8 +189,8 @@ Track coverage separately for each segment, product line, or team:
 
 ```
 Enterprise pipeline coverage: 3.2x (Healthy)
-Mid-Market pipeline coverage: 2.1x (Thin — increase prospecting)
-SMB pipeline coverage: 4.5x (Over-covered — focus on conversion)
+Mid-Market pipeline coverage: 2.1x (Thin, increase prospecting)
+SMB pipeline coverage: 4.5x (Over-covered, focus on conversion)
 ```
 
 ---
@@ -346,11 +346,11 @@ Measures the prospect's buying signals and readiness to purchase.
 
 | Range | Label | Action |
 |-------|-------|--------|
-| 80-100 | Very High Intent | Strike while hot — accelerate to proposal/close |
-| 60-79 | High Intent | Actively engaged — present proposal, push for next step |
-| 40-59 | Medium Intent | Interested but not ready — continue nurturing |
-| 20-39 | Low Intent | Casual interest — qualify harder, consider deprioritizing |
-| 0-19 | No Intent | Not buying — long-term nurture or disqualify |
+| 80-100 | Very High Intent | Strike while hot, accelerate to proposal/close |
+| 60-79 | High Intent | Actively engaged, present proposal, push for next step |
+| 40-59 | Medium Intent | Interested but not ready, continue nurturing |
+| 20-39 | Low Intent | Casual interest, qualify harder, consider deprioritizing |
+| 0-19 | No Intent | Not buying, long-term nurture or disqualify |
 
 ---
 
@@ -450,7 +450,7 @@ scores are worth. That accuracy is lower than most teams believe.
 **A 60% slip rate is the number that matters.** It means a deal sitting in Commit is more likely than not
 to move, so "Commit" describes a rep's confidence rather than a timing prediction. Reporting a Commit
 total as though it were next quarter's revenue is the single most common forecasting error, and it is not
-a modelling problem — it is a labelling one.
+a modelling problem, it is a labelling one.
 
 ### The misses are operational, not statistical
 

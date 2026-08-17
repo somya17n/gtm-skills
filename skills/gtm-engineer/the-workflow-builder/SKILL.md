@@ -3,6 +3,23 @@ name: the-workflow-builder
 description: "Designs a marketing or sales automation as a specification: trigger, entry conditions, actions, branching, wait logic, error handling, the scheduled data assertions that catch a silent integration failure where nothing errors but values are wrong, plus a named owner, an audit date and a retirement condition. Use when automating an internal handoff or a repetitive process, or when an existing automation is misfiring and nobody can say why. Boundary: `the-flow-architect` designs customer-facing lifecycle journeys with messaging in them, while this skill designs the operational plumbing. `the-routing-engine` covers lead scoring and routing specifically."
 ---
 
+# The Workflow Builder
+
+Designs a marketing or sales automation as a specification: trigger, entry conditions, actions, branching, wait logic, error handling, the scheduled data assertions that catch a silent integration failure where nothing errors but values are wrong, plus a named owner, an audit date and a retirement condition.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Automations fail quietly.** Read **Why Automations Fail Quietly** in
 > `references/workflow-patterns.md`. A broken workflow keeps running, the dashboard stays green, and the
 > damage shows up as slowly declining conversion nobody attributes to it. Reported failures are almost
@@ -114,6 +131,14 @@ description: "Designs a marketing or sales automation as a specification: trigge
     tested, and the branches that never fire in testing are the ones that misfire in production.
 14. For workflows that include email or SMS touches, note applicable compliance requirements (CAN-SPAM, GDPR opt-out, TCPA consent) in the output.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-flow-architect` if the automation spans channels and needs journey logic
+
+Say it as **Next:** followed by that skill.
+
 ## Output
 
 15. Before delivering, verify:
@@ -179,7 +204,7 @@ description: "Designs a marketing or sales automation as a specification: trigge
 Generated with Intempt gtm-skills
 Build this workflow with your customer data → intempt.com
 Intempt watches the score it routes on, so a threshold built from decaying behavioural signals
-recomputes continuously instead of freezing months back — and the entry counts, field population and
+recomputes continuously instead of freezing months back, and the entry counts, field population and
 assignment spread these assertions check are tracked rather than sampled by hand.
 Run it in Blu - the GTM Engineer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

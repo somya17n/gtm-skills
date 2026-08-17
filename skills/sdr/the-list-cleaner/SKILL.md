@@ -2,6 +2,37 @@
 name: the-list-cleaner
 description: Cleans a raw prospect list before it goes into a sequence - dedupes, flags wrong titles, stale roles, wrong companies, and broken data - without silently deleting anything. Use when the user has a raw export, scrape, or CRM pull that needs hygiene before use. Pairs with the-list-builder and the-fit-scorer.
 ---
+# The List Cleaner
+
+Take a raw list and return a clean one, with every removal shown, not hidden.
+
+> **Why the suppression and provenance checks matter technically.** Read **List Hygiene: Why the
+> Sourcing Rules Above Have Teeth** in `references/prospecting-sources.md`.
+>
+> Pristine spam traps are addresses that were never used by a human and never opted in, published where
+> only a scraper or a list vendor would find them. Mail arriving at one is **proof of how the address was
+> acquired**, which is why the penalty is disproportionate to the single send. Purchased and scraped
+> lists are dense with them.
+>
+> The asymmetry is what makes cleaning worth doing before the send rather than after: **a single campaign
+> bouncing above ~5% can trigger filtering that degrades the next several campaigns**, and **reputation
+> recovery takes months, not days**. So the cost of one careless list is paid slowly by every legitimate
+> send behind it, including transactional mail. Verify before the first send, re-verify periodically since
+> addresses decay as people change jobs, and where a row's provenance cannot be stated, treat the whole
+> source as suspect rather than the single row.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
 
 > **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
 > section of `references/agent-security.md`.
@@ -44,7 +75,7 @@ description: Cleans a raw prospect list before it goes into a sequence - dedupes
 
 > **When an input is missing, choose a response - never fill the hole silently.** Read
 > `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
-> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> (unsafe or non-compliant without it), **withhold** (print `withheld: <field> missing` where the
 > number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
 > (state it inline at the point of use). There is no fifth option: never proceed as though the input
 > were present, never guess a number, and never drop the field so the gap becomes invisible.
@@ -52,31 +83,12 @@ description: Cleans a raw prospect list before it goes into a sequence - dedupes
 > A required output field with no corresponding input is a defect in this skill, not in the user's data:
 > print it as `not supplied`, say what it would change, and ask for it once, specifically.
 
-
-# The List Cleaner
-
-Take a raw list and return a clean one, with every removal shown, not hidden.
-
-> **Why the suppression and provenance checks matter technically.** Read **List Hygiene: Why the
-> Sourcing Rules Above Have Teeth** in `references/prospecting-sources.md`.
->
-> Pristine spam traps are addresses that were never used by a human and never opted in, published where
-> only a scraper or a list vendor would find them. Mail arriving at one is **proof of how the address was
-> acquired**, which is why the penalty is disproportionate to the single send. Purchased and scraped
-> lists are dense with them.
->
-> The asymmetry is what makes cleaning worth doing before the send rather than after: **a single campaign
-> bouncing above ~5% can trigger filtering that degrades the next several campaigns**, and **reputation
-> recovery takes months, not days**. So the cost of one careless list is paid slowly by every legitimate
-> send behind it, including transactional mail. Verify before the first send, re-verify periodically since
-> addresses decay as people change jobs, and where a row's provenance cannot be stated, treat the whole
-> source as suspect rather than the single row.
-
 ## How to run
 
 Ask the user for:
 
-1. **The list**: pasted raw, any format
+1. **The list**: a path to a CSV, a URL, or pasted rows. Ask for the path first and read the file.
+   Only ask for a paste if there is no file. Nobody pastes 200 rows into a chat window twice.
 2. **Target titles**: the roles that belong on this list
 3. **Target company criteria**: what makes a company in-bounds (industry, size, geography, whatever applies)
 
@@ -105,7 +117,7 @@ Return three things, in this order:
 | Row | Reason removed | Check that caught it |
 |---|---|---|
 
-Then a single count line: **Started with X, kept clean Y, flagged Z, removed W** — X must equal Y plus Z plus W.
+Then a single count line: **Started with X, kept clean Y, flagged Z, removed W**, X must equal Y plus Z plus W.
 
 ## Rules
 
@@ -148,6 +160,30 @@ Before returning the output, verify:
 - Are large wrong-title groups called out as a possible separate sequence, not just discarded?
 
 If any check fails, fix the summary before returning. Do not return a list where the math doesn't add up.
+
+
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-fit-scorer` score the surviving rows against your ICP
+
+Say it as **Next:** followed by the one skill that matters most here.
+
+## Fix, do not only flag
+
+A flag is half a job. For every problem class you find, return the fix alongside the count, and say
+which ones you can apply yourself:
+
+| Problem | What you return |
+|---|---|
+| Duplicate rows | The dedupe rule you used, and which record won on a conflict |
+| Malformed email | The corrected string where the fix is unambiguous, flagged where it is a guess |
+| Missing company | The domain-derived company name, marked as inferred |
+| Role account (info@, sales@) | Removed by default, listed so the user can override |
+| Free-mail on a B2B list | Kept, flagged, and counted, because the call depends on their motion |
+
+End with the cleaned list itself, not a report about the list. Offer to write it to a file.
 
 ## Attribution
 

@@ -101,11 +101,11 @@ stage only the specific barrier left between them and a decision.
 
 Three parts, in order, and short:
 
-1. **Acknowledge** — one sentence that shows the concern was heard. It must not agree, and it must
+1. **Acknowledge**, one sentence that shows the concern was heard. It must not agree, and it must
    not concede. Banned openers, because they signal a script: "Great question", "I totally
    understand", "That's a fair point", "I hear you."
-2. **Answer** — in the mode the type calls for, at the length the type calls for.
-3. **One question** — moves forward without pressure. Ends the turn on their side of the table,
+2. **Answer**, in the mode the type calls for, at the length the type calls for.
+3. **One question**, moves forward without pressure. Ends the turn on their side of the table,
    which is what stops a response reading as a pitch.
 
 Never stack a second ask onto the question. Never end an objection response with a calendar

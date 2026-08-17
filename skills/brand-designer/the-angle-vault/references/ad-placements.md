@@ -216,7 +216,7 @@ Reference for ad creative specifications across all major platforms: dimensions,
 | **Aspect ratio** | 9:16 |
 | **Video length** | Up to 60 seconds |
 | **Behavior** | First ad seen when opening TikTok |
-| **Sound** | Required — autoplay with sound |
+| **Sound** | Required, autoplay with sound |
 
 ---
 
@@ -312,10 +312,10 @@ Google automatically generates ad combinations from uploaded assets:
 | **Hero image** | 600x300px (standard) or 600x400px (tall hero) |
 | **Inline content image** | 560px wide, auto height (20px padding on each side) |
 | **Retina-ready** | Upload at 2x resolution (1200x600 for a 600x300 display) |
-| **Alt text** | Required on every image — descriptive, not decorative |
+| **Alt text** | Required on every image, descriptive, not decorative |
 | **File format** | JPG (photos), PNG (graphics with transparency), GIF (simple animation) |
 | **Max file size** | < 200KB per image, < 800KB total for all images in email |
-| **Background images** | Unreliable — use VML for Outlook support, CSS for others |
+| **Background images** | Unreliable, use VML for Outlook support, CSS for others |
 
 ### Email-Specific Rules
 
@@ -323,7 +323,7 @@ Google automatically generates ad combinations from uploaded assets:
 |------|--------|
 | Total email width | 600px maximum (some clients use 640px) |
 | Text-to-image ratio | Minimum 60% text, 40% images |
-| Image blocking | Many clients block images by default — email must be readable without images |
+| Image blocking | Many clients block images by default, email must be readable without images |
 | Animated GIF | Supported by most clients. Keep under 500KB. First frame should convey the message (Outlook shows only first frame). |
 | SVG | Not supported in email. Use PNG/JPG. |
 | WebP | Not supported in email. Use JPG/PNG. |
@@ -338,9 +338,9 @@ No single authoritative benchmark exists for any of these numbers. Every platfor
 
 | Metric | Directional Range |
 |--------|-------------------|
-| CTR (blended, all formats) | roughly 0.3–1.0% |
-| CPC | roughly $6–20, highest of the major ad platforms |
-| CPL (SaaS lead gen) | roughly $80–200, higher for enterprise ICPs |
+| CTR (blended, all formats) | roughly 0.3-1.0% |
+| CPC | roughly $6-20, highest of the major ad platforms |
+| CPL (SaaS lead gen) | roughly $80-200, higher for enterprise ICPs |
 | Click → demo request conversion rate | roughly mid-single-digit to low-teens percent for strong landing pages |
 
 **LinkedIn SaaS notes:**
@@ -352,11 +352,11 @@ No single authoritative benchmark exists for any of these numbers. Every platfor
 
 | Metric | Directional Range |
 |--------|-------------------|
-| CTR (feed) | roughly 0.5–2%, varies widely by objective and creative |
-| CPC | roughly $0.50–2.00 for traffic/awareness objectives, higher for lead-gen objectives |
+| CTR (feed) | roughly 0.5-2%, varies widely by objective and creative |
+| CPC | roughly $0.50-2.00 for traffic/awareness objectives, higher for lead-gen objectives |
 | CPM | trending upward year over year across most accounts; no fixed number should be quoted |
-| ROAS (ecommerce) | roughly 1.5–3x is a common range; top performers run well above that |
-| CPL (lead gen) | roughly $15–80, wide swing by industry |
+| ROAS (ecommerce) | roughly 1.5-3x is a common range; top performers run well above that |
+| CPL (lead gen) | roughly $15-80, wide swing by industry |
 
 **What's generally true of Meta:**
 - CPMs have trended upward industry-wide for several years running; the exact rate varies too much by report to state a precise figure
@@ -367,19 +367,19 @@ No single authoritative benchmark exists for any of these numbers. Every platfor
 
 | Format | Directional CTR | Directional CPC | Directional CVR |
 |--------|-----------------|------------------|-------------------|
-| Search (overall) | roughly 4–7% | roughly $2–6 | roughly 4–8% |
-| Display (overall) | well under 1%, often around 0.3–0.6% | roughly $0.50–1.00 | well under 1%, often around 0.3–0.6% |
+| Search (overall) | roughly 4-7% | roughly $2-6 | roughly 4-8% |
+| Display (overall) | well under 1%, often around 0.3-0.6% | roughly $0.50-1.00 | well under 1%, often around 0.3-0.6% |
 | Shopping / Performance Max | varies enormously by catalog and margin; no reliable single range | n/a | n/a |
 
-Blended ROAS across Google Ads campaign types is commonly cited in the low-single-digits-to-mid-single-digits range (roughly 3–5x), but this varies enormously by industry and should not be quoted as a fixed benchmark.
+Blended ROAS across Google Ads campaign types is commonly cited in the low-single-digits-to-mid-single-digits range (roughly 3-5x), but this varies enormously by industry and should not be quoted as a fixed benchmark.
 
 ### TikTok Ads
 
 | Metric | Directional Range |
 |--------|-------------------|
-| CTR | roughly 0.5–2%, trending upward as the platform matures for direct response |
-| CPM | roughly $5–15, has been rising as more advertisers shift budget onto the platform |
-| ROAS (ecommerce) | roughly 1.5–2.5x is a common range |
+| CTR | roughly 0.5-2%, trending upward as the platform matures for direct response |
+| CPM | roughly $5-15, has been rising as more advertisers shift budget onto the platform |
+| ROAS (ecommerce) | roughly 1.5-2.5x is a common range |
 | CPA | varies enormously by vertical; no reliable single figure |
 
 Claims about an exact "best-performing video length" (e.g. a specific second range) are not backed by any verifiable published source and should not be cited as fact. Shorter, native-feeling video is directionally understood to outperform long-form ads, without a precise cutoff.
@@ -402,13 +402,13 @@ Claims about an exact "best-performing video length" (e.g. a specific second ran
 | Practice | Detail |
 |----------|--------|
 | Alt text | Descriptive alt text on all images. Functional images need functional descriptions. |
-| Text in images | Avoid placing critical text in images — it is not searchable, not translatable, not screen-reader accessible |
+| Text in images | Avoid placing critical text in images, it is not searchable, not translatable, not screen-reader accessible |
 | Color contrast | Minimum 4.5:1 contrast ratio for text on images (WCAG AA) |
 | Motion | Provide option to pause animated content |
 
 ### Safe Zones
 
-Always keep critical content (logos, CTA text, faces) within safe zones — areas guaranteed to be visible across all placements:
+Always keep critical content (logos, CTA text, faces) within safe zones, areas guaranteed to be visible across all placements:
 
 | Platform | Top Safe Zone | Bottom Safe Zone | Side Safe Zones |
 |----------|-------------|-----------------|-----------------|

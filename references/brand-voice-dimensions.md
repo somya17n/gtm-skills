@@ -50,7 +50,7 @@ The power dynamic between brand and audience.
 
 | Score | Label | Characteristics | Example |
 |-------|-------|----------------|---------|
-| 1-2 | Peer | "We're figuring this out together," humble, learning alongside | "We've been exploring this too — here's what we found" |
+| 1-2 | Peer | "We're figuring this out together," humble, learning alongside | "We've been exploring this too, here's what we found" |
 | 3-4 | Friendly Guide | Helpful without being preachy, suggestive not prescriptive | "You might want to try this approach" |
 | 5-6 | Knowledgeable | Confident opinions backed by evidence, balanced perspective | "Our data shows this approach works best" |
 | 7-8 | Expert | Definitive statements, research-backed, thought leadership | "The most effective strategy is X. Here's the evidence." |
@@ -312,7 +312,7 @@ The same message written at different dimension levels to illustrate the spectru
 ### Message: "Fix a common data integration problem"
 
 **Simple + Warm + Peer (2, 8, 2):**
-> "Data sync issues? We totally get it — we've dealt with the same headache. Here's the fix that worked for us."
+> "Data sync issues? We totally get it, we've dealt with the same headache. Here's the fix that worked for us."
 
 **Moderate + Professional + Expert (5, 5, 8):**
 > "Data integration failures are the #1 cause of pipeline disruption. Based on our analysis of 5,000 implementations, here's the proven resolution."
@@ -323,7 +323,7 @@ The same message written at different dimension levels to illustrate the spectru
 ### Message: "Invite someone to a product demo"
 
 **Casual + Energetic + Playful (3, 8, 7):**
-> "Want to see what all the fuss is about? Grab a spot in our live demo — it's 30 minutes of 'aha moments' with zero sales pitch. Promise."
+> "Want to see what all the fuss is about? Grab a spot in our live demo, it's 30 minutes of 'aha moments' with zero sales pitch. Promise."
 
 **Balanced + Balanced + Balanced (5, 5, 5):**
 > "Join us for a 30-minute product demo to see how Intempt can help your team drive engagement. We'll walk through the key features and answer your questions."
@@ -381,9 +381,9 @@ having one, because a threshold turns "does this sound like us" from an opinion 
 
 Three artifacts, not a report:
 
-1. **A pattern summary** — the strengths and failures that repeat across channels.
-2. **A gap list** — the specific places where current language contradicts the intended voice.
-3. **A north-star statement** — how the brand sounds at its best, in one paragraph, drawn from real
+1. **A pattern summary**, the strengths and failures that repeat across channels.
+2. **A gap list**, the specific places where current language contradicts the intended voice.
+3. **A north-star statement**, how the brand sounds at its best, in one paragraph, drawn from real
    sentences rather than aspiration.
 
 Where recognition itself is in question, a **blind content test** settles it: strip the branding, ask

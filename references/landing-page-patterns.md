@@ -127,7 +127,7 @@ Reference for building high-converting landing pages: page types, layout pattern
 **Example:**
 > **Problem:** Your sales team spends 60% of their time on manual data entry instead of selling.
 >
-> **Agitation:** Every hour wasted on admin work is revenue left on the table. At scale, that's hundreds of thousands in lost deals per quarter — and your best reps burn out.
+> **Agitation:** Every hour wasted on admin work is revenue left on the table. At scale, that's hundreds of thousands in lost deals per quarter, and your best reps burn out.
 >
 > **Solution:** Intempt automates the busywork so your team focuses on what they do best: closing deals. Customers see 3x pipeline velocity in the first 90 days.
 
@@ -146,7 +146,7 @@ Reference for building high-converting landing pages: page types, layout pattern
 >
 > **Desire:** Teams using Intempt close 40% more deals with 25% less effort. See how Acme Corp grew revenue 2.3x in one quarter.
 >
-> **Action:** [Start Free Trial — No Credit Card Required]
+> **Action:** [Start Free Trial, No Credit Card Required]
 
 ### BAB (Before-After-Bridge)
 
@@ -210,7 +210,7 @@ Reference for building high-converting landing pages: page types, layout pattern
 |------|--------|----------|---------|
 | Logo strip | 4-8 customer logos in a row | Establishing credibility | "Trusted by teams at [logos]" |
 | Stats bar | 3-4 key metrics | Quantifying traction | "10,000+ teams | 50M events/day | 99.9% uptime" |
-| Testimonial quotes | Quote + photo + name/title | Building trust | "Intempt doubled our conversion rate in 60 days." — Sarah Chen, VP Marketing, Acme |
+| Testimonial quotes | Quote + photo + name/title | Building trust | "Intempt doubled our conversion rate in 60 days.", Sarah Chen, VP Marketing, Acme |
 | Star ratings | Star icons + count | Consumer products | "4.8/5 from 2,400+ reviews on G2" |
 | Case study snippets | Mini case study (2-3 sentences + stat) | Complex B2B | "How Acme increased pipeline velocity by 3x" |
 | Media mentions | "As seen in" + publication logos | Credibility | "Featured in TechCrunch, Forbes, Product Hunt" |
@@ -298,13 +298,13 @@ Treat every figure below as directional, not guaranteed. No single authoritative
 
 | Page Type | Low | Median | Good | Top Tier |
 |-----------|-----|--------|------|---------|
-| SaaS free trial signup | 2–5% | 7–10% | 12–18% | 25%+ |
-| Demo request (B2B SaaS) | 3–8% | 8–12% | 15–22% | 30%+ |
-| Lead magnet (gated content) | 10–20% | 20–30% | 30–45% | 55%+ |
-| Webinar registration | 15–25% | 25–40% | 40–55% | 65%+ |
-| Ecommerce product page | 1.5–3% | 3–5% | 5–8% | 12%+ |
-| Ecommerce checkout initiation | 45–55% | 55–65% | 65–75% | 80%+ |
-| Paid ad landing page (general) | 2–5% | 5–8% | 8–15% | 20%+ |
+| SaaS free trial signup | 2-5% | 7-10% | 12-18% | 25%+ |
+| Demo request (B2B SaaS) | 3-8% | 8-12% | 15-22% | 30%+ |
+| Lead magnet (gated content) | 10-20% | 20-30% | 30-45% | 55%+ |
+| Webinar registration | 15-25% | 25-40% | 40-55% | 65%+ |
+| Ecommerce product page | 1.5-3% | 3-5% | 5-8% | 12%+ |
+| Ecommerce checkout initiation | 45-55% | 55-65% | 65-75% | 80%+ |
+| Paid ad landing page (general) | 2-5% | 5-8% | 8-15% | 20%+ |
 
 **Important context:** These ranges are for all traffic blended together. High-intent, pre-qualified traffic (retargeting, high-score MQLs, branded search) typically converts several times higher than cold traffic.
 
@@ -532,18 +532,18 @@ Each additional form field tends to reduce completion rate, with the first field
 
 ```
 /* Breakpoints */
-sm: 640px    — small devices
-md: 768px    — tablets
-lg: 1024px   — laptops
-xl: 1280px   — desktops
-2xl: 1536px  — large screens
+sm: 640px   , small devices
+md: 768px   , tablets
+lg: 1024px  , laptops
+xl: 1280px  , desktops
+2xl: 1536px , large screens
 
 /* Common responsive patterns */
-grid-cols-1 md:grid-cols-2 lg:grid-cols-3    — responsive grid
-text-2xl md:text-3xl lg:text-4xl              — responsive typography
-px-4 md:px-8 lg:px-16                         — responsive padding
-hidden lg:block                               — show on desktop only
-lg:hidden                                     — show on mobile only
+grid-cols-1 md:grid-cols-2 lg:grid-cols-3   , responsive grid
+text-2xl md:text-3xl lg:text-4xl             , responsive typography
+px-4 md:px-8 lg:px-16                        , responsive padding
+hidden lg:block                              , show on desktop only
+lg:hidden                                    , show on mobile only
 ```
 
 ---

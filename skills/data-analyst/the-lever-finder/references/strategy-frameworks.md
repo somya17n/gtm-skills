@@ -71,7 +71,7 @@ Reference for strategy by business maturity, channel prioritization, growth leve
 | 2 | Segment and personalize | One-size-fits-all breaks at scale. Build segment-specific strategies. |
 | 3 | Expand to enterprise | Move upmarket for larger deals and lower logo churn. |
 | 4 | Target > 100% NRR | Net dollar retention above 100% means you can grow even without new customers. |
-| 5 | Build the data infrastructure | Analytics, experimentation, attribution — make decisions with data. |
+| 5 | Build the data infrastructure | Analytics, experimentation, attribution, make decisions with data. |
 | 6 | International expansion | If product has global applicability, enter new geographies. |
 
 **Key metrics:**
@@ -137,7 +137,7 @@ Rate each channel on three dimensions (1-5 scale), then calculate priority score
 | Community | 4 | 1 | 3 | 12 | Long-term investment |
 
 **Notes:**
-- Score alone does not determine priority — strategic context matters
+- Score alone does not determine priority, strategic context matters
 - Low-score channels (outbound, partnerships) may be critical for enterprise segment
 - Balance short-term (high time score) and long-term (high scale score) channels
 - Re-evaluate quarterly as channels mature and saturate
@@ -146,7 +146,7 @@ Rate each channel on three dimensions (1-5 scale), then calculate priority score
 
 ## Growth Lever Hierarchy
 
-Ordered by impact. Fix levers from the bottom up — there is no point acquiring users who do not retain.
+Ordered by impact. Fix levers from the bottom up, there is no point acquiring users who do not retain.
 
 ```
 5. Revenue (Monetization)
@@ -169,7 +169,7 @@ Ordered by impact. Fix levers from the bottom up — there is no point acquiring
 
 | Lever | Impact of 10% Improvement | Compounding Effect |
 |-------|--------------------------|-------------------|
-| Retention | +10% more customers at every future point | Compounds indefinitely — the base grows |
+| Retention | +10% more customers at every future point | Compounds indefinitely, the base grows |
 | Activation | +10% of signups become active | Feeds retention pool |
 | Acquisition | +10% more visitors/leads | Only valuable if activation and retention work |
 | Referral | +10% more organic growth | Multiplier on acquisition |
@@ -191,9 +191,9 @@ Freemium/Free Trial → Onboard → Activate → Use → Expand → Refer
 |-------|---------------|---------|
 | Freemium/Free Trial | Self-serve signup, no sales contact required | Signups, cost per signup |
 | Onboard | In-product guidance, progressive disclosure, quick wins | Time to first value, setup completion |
-| Activate | Users reach "aha moment" — the action most correlated with retention | Activation rate, Day 1/7 retention |
+| Activate | Users reach "aha moment", the action most correlated with retention | Activation rate, Day 1/7 retention |
 | Use | Regular product usage becomes habitual | DAU/MAU, feature adoption, session depth |
-| Expand | Usage grows — more seats, higher tier, more features | Expansion MRR, ARPU growth |
+| Expand | Usage grows, more seats, higher tier, more features | Expansion MRR, ARPU growth |
 | Refer | Satisfied users invite colleagues and peers | Viral coefficient, referred signups |
 
 **Best for:** Low ACV ($0-$50K), high-volume, self-serve or low-touch products
@@ -372,12 +372,12 @@ How much will this move the needle on our core metric?
 
 | Score | Definition |
 |-------|-----------|
-| 10 | Transformative — 2x or more improvement on core metric |
-| 8-9 | Major — 50-100% improvement expected |
-| 6-7 | Significant — 25-50% improvement expected |
-| 4-5 | Moderate — 10-25% improvement expected |
-| 2-3 | Minor — < 10% improvement expected |
-| 1 | Negligible — marginal impact at best |
+| 10 | Transformative, 2x or more improvement on core metric |
+| 8-9 | Major, 50-100% improvement expected |
+| 6-7 | Significant, 25-50% improvement expected |
+| 4-5 | Moderate, 10-25% improvement expected |
+| 2-3 | Minor, < 10% improvement expected |
+| 1 | Negligible, marginal impact at best |
 
 ### Confidence (1-10)
 
@@ -385,12 +385,12 @@ How sure are we that the impact estimate is correct?
 
 | Score | Definition |
 |-------|-----------|
-| 10 | Near-certain — strong data, proven playbook, done this before |
-| 8-9 | High — good data, similar initiatives have worked |
-| 6-7 | Medium — some data, reasonable hypothesis |
-| 4-5 | Low-medium — limited data, educated guess |
-| 2-3 | Low — mostly speculation, no direct evidence |
-| 1 | Very low — pure gut feel |
+| 10 | Near-certain, strong data, proven playbook, done this before |
+| 8-9 | High, good data, similar initiatives have worked |
+| 6-7 | Medium, some data, reasonable hypothesis |
+| 4-5 | Low-medium, limited data, educated guess |
+| 2-3 | Low, mostly speculation, no direct evidence |
+| 1 | Very low, pure gut feel |
 
 ### Ease (1-10)
 
@@ -398,12 +398,12 @@ How easy is this to implement?
 
 | Score | Definition |
 |-------|-----------|
-| 10 | Trivial — can do in a day with existing tools and team |
-| 8-9 | Easy — 1-2 weeks, existing team, minor complexity |
-| 6-7 | Moderate — 2-4 weeks, requires some coordination |
-| 4-5 | Challenging — 4-8 weeks, cross-functional, moderate complexity |
-| 2-3 | Hard — 8-12 weeks, new capabilities needed, high complexity |
-| 1 | Very hard — 3+ months, major investment, high uncertainty |
+| 10 | Trivial, can do in a day with existing tools and team |
+| 8-9 | Easy, 1-2 weeks, existing team, minor complexity |
+| 6-7 | Moderate, 2-4 weeks, requires some coordination |
+| 4-5 | Challenging, 4-8 weeks, cross-functional, moderate complexity |
+| 2-3 | Hard, 8-12 weeks, new capabilities needed, high complexity |
+| 1 | Very hard, 3+ months, major investment, high uncertainty |
 
 ### Scoring Example
 
@@ -419,8 +419,8 @@ How easy is this to implement?
 
 - Score independently, then discuss as a team to calibrate
 - Re-score quarterly as confidence changes (experiments add data)
-- Do not let one dimension dominate — high-impact-but-impossible ideas should not win
-- Use ICE to rank, not to decide — strategic context and sequencing matter
+- Do not let one dimension dominate, high-impact-but-impossible ideas should not win
+- Use ICE to rank, not to decide, strategic context and sequencing matter
 - Track actual impact vs. predicted impact to improve future scoring accuracy
 - Combine with quarterly planning: Big Bet should be highest-ICE initiative, Medium Bets next two
 

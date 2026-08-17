@@ -15,23 +15,23 @@ Every research asset (transcript, review, ticket, survey response) can be mined 
 | Social | How do they want to be perceived by others? | "Look organized in front of their manager" |
 
 For each asset, also extract:
-- **Pain points** — prioritize pains mentioned unprompted and with emotional language over pains only surfaced when asked directly
-- **Trigger event** — what changed right before they started looking (team growth, a missed target, a competitor move, a new hire, an embarrassing incident)
-- **Desired outcome** — capture the exact quote, not a paraphrase
-- **Vocabulary** — the customer's exact words. "We were drowning in spreadsheets" carries more signal for copy than "manual process inefficiency"
-- **Alternatives considered** — including doing nothing, hiring someone, or building it internally
+- **Pain points**, prioritize pains mentioned unprompted and with emotional language over pains only surfaced when asked directly
+- **Trigger event**, what changed right before they started looking (team growth, a missed target, a competitor move, a new hire, an embarrassing incident)
+- **Desired outcome**, capture the exact quote, not a paraphrase
+- **Vocabulary**, the customer's exact words. "We were drowning in spreadsheets" carries more signal for copy than "manual process inefficiency"
+- **Alternatives considered**, including doing nothing, hiring someone, or building it internally
 
 ## Confidence Scoring
 
-Label every insight before presenting it — don't let a single loud quote pass as a validated pattern.
+Label every insight before presenting it, don't let a single loud quote pass as a validated pattern.
 
 | Confidence | Criteria |
 |------------|----------|
 | High | Theme appears in 3+ independent sources, mentioned unprompted, consistent across segments |
 | Medium | Theme appears in 2 sources, or only surfaced when prompted, or limited to one segment |
-| Low | Single source — could be an outlier, needs validation before acting on it |
+| Low | Single source, could be an outlier, needs validation before acting on it |
 
-**Minimum viable sample:** don't build a persona or draw a messaging conclusion from fewer than 5 independent data points in a segment. Fewer than 5 — present it as a hypothesis, not a finding.
+**Minimum viable sample:** don't build a persona or draw a messaging conclusion from fewer than 5 independent data points in a segment. Fewer than 5, present it as a hypothesis, not a finding.
 
 **Recency weighting:** weight sources from the last 12 months more heavily. A 3-year-old transcript may describe a product and a buyer that no longer exist.
 
@@ -42,9 +42,9 @@ Every source over-represents someone. Correct for it before generalizing:
 | Source | Skews Toward |
 |--------|--------------|
 | Online reviews (G2, Capterra, app stores) | Power users and people with strong opinions (positive or negative) |
-| Support tickets | Problems, not value — customers don't file a ticket to say things are going well |
+| Support tickets | Problems, not value, customers don't file a ticket to say things are going well |
 | Reddit / forums | Technical, skeptical users vs. the mainstream buyer |
-| NPS promoters | Low signal for improvement work — passives and detractors paired with verbatims are higher-value |
+| NPS promoters | Low signal for improvement work, passives and detractors paired with verbatims are higher-value |
 
 ## Where to Source Research When No Assets Exist
 
@@ -127,15 +127,15 @@ distortion, regardless of how many instances were found.
 
 ## Persona Construction Rules
 
-- Don't invent a detail you don't have data for — leave it blank rather than filling it in
-- Don't average across segments — a persona meant to represent everyone represents no one
+- Don't invent a detail you don't have data for, leave it blank rather than filling it in
+- Don't average across segments, a persona meant to represent everyone represents no one
 - Tag early-stage personas built from competitor reviews or adjacent-market proxies as **provisional**, and replace proxy evidence with first-party evidence as it arrives
-- Revisit personas quarterly — they decay as the market and the product change
+- Revisit personas quarterly, they decay as the market and the product change
 
 ## Persona Template
 
 ```
-## [Role/Title] — not a cute nickname unless the team specifically wants one
+## [Role/Title], not a cute nickname unless the team specifically wants one
 
 Profile: title range, company size, industry (if narrow), who they report to
 Primary job to be done: one sentence, functional job

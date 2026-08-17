@@ -17,7 +17,7 @@ Every missing input resolves to exactly one of these. Pick deliberately; do not 
 | Response | When | What it looks like |
 |---|---|---|
 | **Block** | The output would be unsafe, non-compliant, or actively misleading without it | Return no deliverable. State the one input needed and why it gates everything. |
-| **Withhold** | The overall output is sound but one figure or field would be fabricated | Deliver everything else. Print `withheld — <field> missing` where the number would go. Never a placeholder that reads like a value. |
+| **Withhold** | The overall output is sound but one figure or field would be fabricated | Deliver everything else. Print `withheld: <field> missing` where the number would go. Never a placeholder that reads like a value. |
 | **Degrade** | A weaker but still honest version exists | Deliver it, name the tier explicitly ("terciles not quintiles, because n=140"), and say what the stronger version would need. |
 | **Assume** | A conventional default exists and the answer is not sensitive to it | State the assumption inline at the point of use, not in a footnote. |
 
@@ -39,7 +39,7 @@ If a required section of the output format depends on an input the skill never a
 defect in the skill, not a problem with the user's data. Two obligations:
 
 1. **Print the field with `not supplied` and say what it would change.** A Coverage Ratio row that
-   silently disappears reads as an oversight; one that says `not supplied — needs your quota target,
+   silently disappears reads as an oversight; one that says `not supplied, needs your quota target,
    which decides whether this pipeline is thin or healthy` is useful.
 2. **Ask for it.** Once, specifically, at the end. Not as a generic "let me know if you have more
    data."
@@ -86,7 +86,7 @@ it. The two look identical in an output and support completely different decisio
 - A banned-word list built from words found in the copy is **observed**.
 - The same list built because the copy was clean and a default set was applied is **derived**.
 
-Write which. `derived — none of these appeared in the samples; applied as a default set` costs one
+Write which. `derived: none of these appeared in the samples; applied as a default set` costs one
 line and prevents a user from believing their writers have a habit they do not have.
 
 ---
@@ -100,7 +100,7 @@ they are formatted identically to reliable ones.
 - **Name the minimum that would support the claim** rather than asserting the sample is adequate.
 - Where n is below that minimum, either withhold the rate and give the raw counts, or degrade to a
   coarser cut and say so.
-- **A cohort, segment, or band below the floor is still shown** — it is not deleted — but it is
+- **A cohort, segment, or band below the floor is still shown**, it is not deleted, but it is
   marked, and it is excluded from any ranking or conclusion.
 
 ---
@@ -124,7 +124,7 @@ end:
 
 > **Not supplied:** quota target (Coverage Ratio withheld) · COGS for 1 of 4 SKUs (excluded from the
 > ranking, not merely percentage-withheld) · suppression list (**this list is not safe to send**).
-> **Stale:** inventory export dated 7 days ago, against a signal that moves daily — treat the cover
+> **Stale:** inventory export dated 7 days ago, against a signal that moves daily, treat the cover
 > figures as historical.
 
 Three lines, and the reader now knows exactly how much weight the output carries.

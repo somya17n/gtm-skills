@@ -22,7 +22,7 @@ Original price crossed out with the new price shown prominently. Urgency element
 **Visual direction:** Bold typography, red/orange accents for urgency, strikethrough on original price, countdown or urgency badge.
 **Copy focus:** Original price, new price, savings amount or percentage, deadline.
 **Best for:** Promotions, flash sales, clearance, seasonal discounts, renewal incentives.
-**Example:** "$299/mo ~~$499/mo~~ — Save 40% | Offer ends Friday"
+**Example:** "$299/mo ~~$499/mo~~, Save 40% | Offer ends Friday"
 
 ### 3. Full-Bleed Hero
 
@@ -38,7 +38,7 @@ Edge-to-edge product or lifestyle image with a bold headline overlaid. Maximum v
 Magazine-quality composition with mood lighting and lifestyle context. The product is part of a larger scene.
 
 **Visual direction:** Styled composition with intentional color palette, natural or studio lighting, environmental storytelling. Product is present but not isolated.
-**Copy focus:** Minimal — let the image speak. Brand name, subtle CTA.
+**Copy focus:** Minimal, let the image speak. Brand name, subtle CTA.
 **Best for:** Premium brands, Instagram feed ads, brand building, audience warming.
 **Example:** A laptop on a marble desk with a coffee cup and plants, soft morning light, with a subtle brand watermark.
 
@@ -62,12 +62,12 @@ Multiple products presented in a curated grid with a cohesive visual theme and c
 
 ### 7. UGC Hook
 
-User-generated content style — authentic, raw, social proof-driven. Looks like organic content, not a polished ad.
+User-generated content style, authentic, raw, social proof-driven. Looks like organic content, not a polished ad.
 
 **Visual direction:** Phone-quality camera, natural lighting, selfie or handheld perspective, real person using/reviewing the product. Minimal post-production.
 **Copy focus:** Testimonial or first-person narrative, "real customer" attribution, authentic language.
 **Best for:** Social media ads (especially TikTok, Instagram Reels), trust building, overcoming ad fatigue.
-**Example:** A real user doing a selfie-style video: "I tried [product] for 30 days — here's what happened..."
+**Example:** A real user doing a selfie-style video: "I tried [product] for 30 days, here's what happened..."
 
 ### 8. Product Demo
 
@@ -112,7 +112,7 @@ Testimonial, review, or rating centered with the customer's face and quote promi
 **Visual direction:** Large customer photo, prominent quote in large type, star rating, company logo, role/title attribution. Clean background.
 **Copy focus:** Direct customer quote (1-2 sentences), attribution (name, title, company), quantified result if available.
 **Best for:** Bottom-of-funnel trust building, retargeting, landing pages, email social proof sections.
-**Example:** Large headshot of Sarah Chen, VP Marketing at Acme: "Intempt doubled our conversion rate in 60 days. The ROI was clear in week one." — 5 stars, Acme logo.
+**Example:** Large headshot of Sarah Chen, VP Marketing at Acme: "Intempt doubled our conversion rate in 60 days. The ROI was clear in week one.", 5 stars, Acme logo.
 
 ### 13. Founder Story
 
@@ -121,7 +121,7 @@ Personal narrative from the founder or team. Behind-the-scenes, mission-driven, 
 **Visual direction:** Candid founder photo, informal setting (workshop, early office, product development), personal and approachable.
 **Copy focus:** Origin story, mission statement, why the company exists, personal motivation.
 **Best for:** Top-of-funnel brand building, early-stage company marketing, values-driven audiences, LinkedIn.
-**Example:** Founder in their garage/early office: "We started Intempt because we believed every team deserves enterprise-grade engagement tools — not just the Fortune 500."
+**Example:** Founder in their garage/early office: "We started Intempt because we believed every team deserves enterprise-grade engagement tools, not just the Fortune 500."
 
 ### 14. Comparison
 
@@ -130,13 +130,13 @@ Side-by-side comparison against a competitor or the status quo. Decision-support
 **Visual direction:** Two-column layout, clear "us vs. them" or "old way vs. new way" framing, checkmarks vs. X marks, your product highlighted.
 **Copy focus:** Feature-by-feature comparison, pricing comparison, "why switch" messaging.
 **Best for:** Bottom-of-funnel competitive displacement, comparison shopping searches, retargeting competitor visitors.
-**Example:** Two columns: "Manual Process" vs. "With Intempt" — showing time savings, error reduction, and cost comparison.
+**Example:** Two columns: "Manual Process" vs. "With Intempt", showing time savings, error reduction, and cost comparison.
 
 ---
 
 ## Funnel Stage Mapping
 
-### Top of Funnel (TOF) — Awareness
+### Top of Funnel (TOF), Awareness
 
 | Angle | Why It Works at TOF |
 |-------|-------------------|
@@ -144,7 +144,7 @@ Side-by-side comparison against a competitor or the status quo. Decision-support
 | UGC Hook | Feels organic, builds trust, blends into social feed |
 | Founder Story | Humanizes the brand, creates emotional connection, shareable |
 
-### Middle of Funnel (MOF) — Consideration
+### Middle of Funnel (MOF), Consideration
 
 | Angle | Why It Works at MOF |
 |-------|-------------------|
@@ -153,7 +153,7 @@ Side-by-side comparison against a competitor or the status quo. Decision-support
 | Comparison | Helps evaluate against alternatives, supports decision-making |
 | Value Prop | Summarizes key benefits, reinforces value proposition |
 
-### Bottom of Funnel (BOF) — Decision
+### Bottom of Funnel (BOF), Decision
 
 | Angle | Why It Works at BOF |
 |-------|-------------------|
@@ -197,12 +197,12 @@ Every creative asset starts with a brief that specifies these fields:
 |-------|-------------|---------|
 | **Angle** | One of the 14 creative angles | "Before/After" |
 | **Channel** | Target platform | "LinkedIn Single Image" |
-| **Funnel Stage** | TOF, MOF, or BOF | "MOF — Consideration" |
+| **Funnel Stage** | TOF, MOF, or BOF | "MOF, Consideration" |
 | **Messaging Hierarchy** | | |
-| — Headline | Primary message (5-10 words) | "Stop guessing. Start knowing." |
-| — Subline | Supporting message (10-20 words) | "See how Intempt turns raw data into actionable customer segments." |
-| — Proof | Evidence or social proof | "Trusted by 2,000+ growth teams" |
-| — CTA | Call to action (2-5 words) | "See It in Action" |
+|, Headline | Primary message (5-10 words) | "Stop guessing. Start knowing." |
+|, Subline | Supporting message (10-20 words) | "See how Intempt turns raw data into actionable customer segments." |
+|, Proof | Evidence or social proof | "Trusted by 2,000+ growth teams" |
+|, CTA | Call to action (2-5 words) | "See It in Action" |
 | **Visual Direction** | Describe the desired visual style | "Split screen: left side = messy spreadsheet (desaturated), right side = clean Intempt dashboard (vibrant). Professional, clean." |
 | **Placement Specs** | Dimensions, file format, size limits | "1200x627px, JPG, <150KB, LinkedIn Single Image" |
 
@@ -229,7 +229,7 @@ Patterns commonly observed and repeated across ad-creative practitioner communit
 
 ### Meta Hook Patterns That Stop the Scroll
 
-The first 3 seconds of a video ad — and the first line of static ad copy — determine whether your ad runs profitably or bleeds budget.
+The first 3 seconds of a video ad, and the first line of static ad copy, determine whether your ad runs profitably or bleeds budget.
 
 **The 5 proven Meta hook structures:**
 
@@ -253,7 +253,7 @@ The first 3 seconds of a video ad — and the first line of static ad copy — d
 
 The general finding across Meta and Google creative research: **pain-led copy outperforms benefit-led copy at the top of funnel (cold audiences). Benefit-led outperforms at the bottom of funnel (retargeting, warm audiences).**
 
-Mechanism: cold audiences don't yet trust your benefit claims. Pain resonates because it's recognizable as true before they know who you are. Once they've seen you before (warm), they're evaluating whether to act — benefits and proof close.
+Mechanism: cold audiences don't yet trust your benefit claims. Pain resonates because it's recognizable as true before they know who you are. Once they've seen you before (warm), they're evaluating whether to act, benefits and proof close.
 
 **A commonly repeated practitioner rule of thumb (directional, not tied to one verifiable study):**
 - TOF cold: Lead with problem agitation, end with benefit claim + proof
@@ -278,7 +278,7 @@ CTA: "See how" or "Watch the 2-minute demo"
 | Considered purchase ($50-500) | 50-100 words | Needs enough to overcome hesitation |
 | High-ticket / subscription | 100-200 words | More objections to address before click |
 | B2B SaaS (demo) | 50-125 words for feed; long-form for content-style | Audience needs context but has high attention cost |
-| TikTok (any) | Voice-over counts, not text — 15-34 seconds of natural speech | Platform penalizes text-heavy creatives |
+| TikTok (any) | Voice-over counts, not text, 15-34 seconds of natural speech | Platform penalizes text-heavy creatives |
 
 ---
 
@@ -294,7 +294,7 @@ Why it works: the feed is full of polished ads. Conversational copy reads like a
 
 **Qualification as a hook:**
 
-"This is not for everyone. If you [specific qualifier], keep reading." Exclusivity framing combined with a precise audience qualifier dramatically improves qualified click rate — you get fewer clicks but more buyers. This works especially well for higher-priced products.
+"This is not for everyone. If you [specific qualifier], keep reading." Exclusivity framing combined with a precise audience qualifier dramatically improves qualified click rate, you get fewer clicks but more buyers. This works especially well for higher-priced products.
 
 **Specific numbers over rounded estimates:**
 
@@ -308,26 +308,26 @@ The format that consistently outperforms polished video ads for DTC:
 
 **30-second UGC script structure:**
 ```
-0-3s: Hook — "[Problem] was ruining my [area of life]" or "I tried [product] for 30 days — here's what happened"
-4-12s: Agitate — Brief story of the problem or skepticism before trying the product
-13-22s: Turn — "Then I [started using / discovered / tried] [Product]"
-22-28s: Result — Specific, measurable outcome or emotional transformation
-28-30s: CTA — "[Brand name]. Link in bio." or direct to product page
+0-3s: Hook, "[Problem] was ruining my [area of life]" or "I tried [product] for 30 days, here's what happened"
+4-12s: Agitate, Brief story of the problem or skepticism before trying the product
+13-22s: Turn, "Then I [started using / discovered / tried] [Product]"
+22-28s: Result, Specific, measurable outcome or emotional transformation
+28-30s: CTA, "[Brand name]. Link in bio." or direct to product page
 ```
 
 **What makes UGC convert vs. just look authentic:**
 - Specific result in the turn moment: "I went from 2% to 7% email click rate" beats "my results were incredible"
-- Visible product use — not just holding the product, but showing the interaction
-- Face visible the entire time — faces drive completion rates
-- Natural speech patterns including hesitations — over-rehearsed UGC reads as scripted and loses the authenticity premium
+- Visible product use, not just holding the product, but showing the interaction
+- Face visible the entire time, faces drive completion rates
+- Natural speech patterns including hesitations, over-rehearsed UGC reads as scripted and loses the authenticity premium
 
-**The "ugly ad" principle:** Creatives that look intentionally rough (phone camera, natural lighting, no post-production) frequently outperform professionally shot ads on cold audiences because they bypass banner blindness. The mechanism is ad-format mimicry — they look like organic posts, not ads.
+**The "ugly ad" principle:** Creatives that look intentionally rough (phone camera, natural lighting, no post-production) frequently outperform professionally shot ads on cold audiences because they bypass banner blindness. The mechanism is ad-format mimicry, they look like organic posts, not ads.
 
 ---
 
 ### LinkedIn B2B Copy Structures
 
-LinkedIn feed copy operates differently from Meta — the audience is at work, in professional mode, and expects a certain register.
+LinkedIn feed copy operates differently from Meta, the audience is at work, in professional mode, and expects a certain register.
 
 **What converts on LinkedIn:**
 
@@ -352,9 +352,9 @@ LinkedIn feed copy operates differently from Meta — the audience is at work, i
    - CTA to the solution
 
 **What fails on LinkedIn:**
-- Clickbait hooks ("I quit my job and made $1M") — damages brand credibility in B2B
+- Clickbait hooks ("I quit my job and made $1M"), damages brand credibility in B2B
 - Features lists in ad copy ("We offer X, Y, Z integrations")
-- Formal press-release tone in feed ads — "We are pleased to announce..."
+- Formal press-release tone in feed ads, "We are pleased to announce..."
 - Generic stock photography, especially of people in suits. No verified LinkedIn-published A/B test backs an exact performance gap, but it is widely reported as underperforming real people and authentic team/product photos
 
 ---
@@ -376,7 +376,7 @@ Below: "Join 2,000+ teams who made the switch." + CTA
 ```
 0-5s: Show the painful before state visually (frustrated user, cluttered screen)
 5-15s: One line naming the problem: "Most teams are still doing this manually"
-15-25s: Show the after state — product solving the problem, not product features
+15-25s: Show the after state, product solving the problem, not product features
 25-30s: Specific outcome + CTA: "40% more pipeline. Book a demo."
 ```
 
@@ -404,7 +404,7 @@ calling them angles.
 
 Most brands have **three to five genuinely distinct angles** worth testing. Past that, what look like new
 angles are variations on the same core message. Recommending eight is not thoroughness, it is the same
-argument wearing different clothes — and it burns budget proving that.
+argument wearing different clothes, and it burns budget proving that.
 
 ### Diversity means differing on at least two axes
 
@@ -425,7 +425,7 @@ treated as **one ad**, so the test produces no signal at all. Different thumbnai
 A declining creative and a wrong-angle creative look the same on a dashboard, and they need opposite
 fixes. Separate them before recommending anything.
 
-**Fatigue signals** — the audience has seen it too many times:
+**Fatigue signals**, the audience has seen it too many times:
 
 | Signal | Threshold |
 |---|---|
@@ -447,5 +447,5 @@ The cost of waiting is steep: past 5-8 views, conversion rates fall by roughly *
 
 Recommending a refresh when the angle was never right is the most expensive mistake available here, and
 the most common. Ask for frequency before diagnosing fatigue. **If frequency is not available, say the
-diagnosis cannot be made rather than guessing from the CTR trend alone** — both causes produce a falling
+diagnosis cannot be made rather than guessing from the CTR trend alone**, both causes produce a falling
 CTR, and that is precisely why frequency is the input that separates them.

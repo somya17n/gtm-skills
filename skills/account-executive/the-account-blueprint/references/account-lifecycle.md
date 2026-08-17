@@ -107,11 +107,11 @@ Disqualified    (recovery)     (recovery)          (re-engagement)
 
 | Role | Description | Engagement Priority | Key Concerns |
 |------|-------------|-------------------|-------------|
-| **Champion** | Internal advocate who actively pushes for your solution. Has personal motivation and organizational influence. | Critical — nurture and arm with internal selling tools | "How does this make me look good?" "How do I build the business case?" |
-| **Economic Buyer** | Person with signing authority and budget control. Makes the final financial decision. | High — need their buy-in for deal to close | ROI, total cost of ownership, risk, strategic alignment |
-| **Technical Evaluator** | Assesses technical fit, integration requirements, security, and implementation feasibility. | High — can veto on technical grounds | API capabilities, security, data model, integration, scalability |
-| **End User** | Day-to-day user of the product. Their adoption determines success. | Medium — ensure usability and value realization | Ease of use, workflow fit, learning curve, daily value |
-| **Blocker** | Stakeholder who resists the purchase. May be attached to incumbent solution, skeptical of change, or have competing priorities. | High — identify and neutralize or convert early | Disruption, risk, learning curve, political implications |
+| **Champion** | Internal advocate who actively pushes for your solution. Has personal motivation and organizational influence. | Critical, nurture and arm with internal selling tools | "How does this make me look good?" "How do I build the business case?" |
+| **Economic Buyer** | Person with signing authority and budget control. Makes the final financial decision. | High, need their buy-in for deal to close | ROI, total cost of ownership, risk, strategic alignment |
+| **Technical Evaluator** | Assesses technical fit, integration requirements, security, and implementation feasibility. | High, can veto on technical grounds | API capabilities, security, data model, integration, scalability |
+| **End User** | Day-to-day user of the product. Their adoption determines success. | Medium, ensure usability and value realization | Ease of use, workflow fit, learning curve, daily value |
+| **Blocker** | Stakeholder who resists the purchase. May be attached to incumbent solution, skeptical of change, or have competing priorities. | High, identify and neutralize or convert early | Disruption, risk, learning curve, political implications |
 
 ### Engagement Approach per Role
 
@@ -136,7 +136,7 @@ Multi-threading = engaging multiple contacts at an account. Critical for deal re
 | 5+ contacts across multiple roles | Strong | Low risk |
 | 3-4 contacts across 2+ roles | Good | Moderate risk |
 | 2 contacts (e.g., champion + evaluator) | Adequate | Elevated risk |
-| 1 contact only (single-threaded) | Weak | High risk — deal depends on one person |
+| 1 contact only (single-threaded) | Weak | High risk, deal depends on one person |
 | 0 active contacts | Critical | Deal is dead; re-engagement needed |
 
 ### Multi-Threading Strategies
@@ -144,7 +144,7 @@ Multi-threading = engaging multiple contacts at an account. Critical for deal re
 | Strategy | Description | When to Use |
 |----------|-------------|-------------|
 | **Champion expansion** | Ask champion to introduce you to other stakeholders | After champion is committed and confident |
-| **Content-based threading** | Share relevant content tagged to specific roles | Ongoing — use industry reports for execs, technical docs for evaluators |
+| **Content-based threading** | Share relevant content tagged to specific roles | Ongoing, use industry reports for execs, technical docs for evaluators |
 | **Event-based threading** | Invite multiple contacts to webinars, dinners, conferences | During consideration/evaluation phase |
 | **Referral threading** | Leverage existing contacts at the account to introduce you to new teams | When entering new departments or business units |
 | **Executive threading** | Have your executive reach out to their executive | When deal is stalling or needs executive alignment |
@@ -305,8 +305,8 @@ Signals that a customer may not renew or may cancel.
 
 | Indicator | Severity | Detection Method |
 |-----------|----------|-----------------|
-| **Declining usage** (week-over-week decrease for 3+ weeks) | High | Product analytics — DAU/WAU trends |
-| **Support escalations** (2+ escalations in 30 days) | High | Support ticket data — severity and escalation flags |
+| **Declining usage** (week-over-week decrease for 3+ weeks) | High | Product analytics, DAU/WAU trends |
+| **Support escalations** (2+ escalations in 30 days) | High | Support ticket data, severity and escalation flags |
 | **Competitor evaluation** (visiting competitor sites, asking about alternatives) | High | Intent data, direct mentions in conversations |
 | **Contract renewal approaching** (< 60 days) with no renewal signal | High | CRM contract data |
 | **Champion departure** (key contact left the company) | Critical | LinkedIn monitoring, email bounces, direct notification |
@@ -335,7 +335,7 @@ Urgent Risk (health 20-39):
 Critical Risk (health 0-19):
   → VP/C-level escalation
   → Retention offer if warranted (discount, contract flexibility)
-  → Post-mortem if churn is likely — capture learnings
+  → Post-mortem if churn is likely, capture learnings
   → Begin transition planning (graceful offboarding)
 ```
 
@@ -359,7 +359,7 @@ So a "fully threaded" enterprise plan naming six people is covering roughly half
 actually decide.
 
 **Threading is worth more than almost anything else measurable.** Reaching five or more stakeholders
-has been reported closing at **~30% against ~5% single-threaded** — about a 6x difference. Other
+has been reported closing at **~30% against ~5% single-threaded**, about a 6x difference. Other
 studies put it at **+130% win rate on deals above $50K**, and cross-department threading at **+56%**.
 
 ### The contradiction to resolve before quoting either number

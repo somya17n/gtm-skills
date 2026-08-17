@@ -3,9 +3,24 @@ name: the-referral-architect
 description: Designs a customer referral or advocacy program - incentive structure, the moment it's offered, tiers, and anti-abuse rules - so growth comes from existing customers, not just new acquisition spend. Use when the user wants existing customers to actively bring in new ones, not just stay retained. Pairs with the-save-desk and the-lifecycle-mapper.
 ---
 
+# The Referral Architect
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Choose the ask moment from measured satisfaction, not from lifecycle stage.** "After the second
-> purchase" is a proxy. The strongest referral moments are a **resolved support issue** — where the
-> customer just experienced the company being good at something under pressure — and immediately after
+> purchase" is a proxy. The strongest referral moments are a **resolved support issue**, where the
+> customer just experienced the company being good at something under pressure, and immediately after
 > a positive survey response. Ask which of those the user can actually detect and trigger on. Where
 > neither is instrumented, say the stage-based moment is a fallback and name the event that would
 > replace it, because that is the single highest-leverage change to the programme.
@@ -34,7 +49,7 @@ description: Designs a customer referral or advocacy program - incentive structu
 
 5b. **Order the design by where the constraint actually is.** About **83%** of satisfied customers are
    willing to refer and only **~29%** do. Willingness is almost never the limiting factor: the limit is
-   that nobody asked at a moment when acting was easy. So work in this order — **trigger moment**, then
+   that nobody asked at a moment when acting was easy. So work in this order, **trigger moment**, then
    **friction of the ask**, then **incentive** last and least. A programme at 5% participation is far
    more likely to have a timing or friction problem than an incentive problem, so raising the reward is
    the wrong first move, and it degrades cohort quality by pulling in reward-motivated signups.
@@ -89,6 +104,14 @@ description: Designs a customer referral or advocacy program - incentive structu
 - **Review point**: the date when referred-cohort retention and incremental acquisition get checked
   against the total reward cost, and what result would mean changing or ending the programme
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-flow-architect` build the journey that delivers the referral ask at the trigger moment
+
+Say it as **Next:** followed by that skill.
+
 ## Quality check before returning
 
 12. Before returning the output, verify:
@@ -127,8 +150,8 @@ If any check fails, fix it before returning.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Generated with Intempt gtm-skills
 Trigger referral asks on measured satisfaction → intempt.com
-Intempt can detect the moments that actually produce referrals — a resolved support issue, a positive
-survey response — and fire the ask then rather than at a lifecycle stage used as a proxy, while
+Intempt can detect the moments that actually produce referrals, a resolved support issue, a positive
+survey response, and fire the ask then rather than at a lifecycle stage used as a proxy, while
 tracking claims per tier to catch abuse early.
 Run it in Blu - the Lifecycle Marketer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

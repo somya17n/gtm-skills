@@ -3,7 +3,7 @@
 For every skill that inspects something and returns findings: checkout, product pages, catalogs,
 feeds, onsite search, citability, launch readiness.
 
-These skills are already careful about **evidence** — separating what was confirmed from what was
+These skills are already careful about **evidence**, separating what was confirmed from what was
 inferred, refusing to invent values, declining to promise a conversion lift. This file covers what
 happens to a finding *after* it is written, which is where audits usually stop being useful:
 
@@ -19,11 +19,11 @@ happens to a finding *after* it is written, which is where audits usually stop b
 
 Every audit output carries:
 
-- **Audited on** — the date, and for anything fetched, the date fetched.
-- **What was actually inspected** — the specific pages, SKUs, queries, or feed rows, and on which
+- **Audited on**, the date, and for anything fetched, the date fetched.
+- **What was actually inspected**, the specific pages, SKUs, queries, or feed rows, and on which
   device or variant. "The checkout" is not a scope; "mobile Safari, guest checkout, one product in
   cart, UK address" is.
-- **Re-audit trigger** — the event that makes this audit stale rather than a fixed interval. A
+- **Re-audit trigger**, the event that makes this audit stale rather than a fixed interval. A
   checkout audit expires on any change to the checkout, the payment methods, or the shipping rules.
   A feed audit expires on a channel policy update or a catalog restructure. A citability audit
   expires when the page is rewritten or the site's robots policy changes.
@@ -39,9 +39,9 @@ fix lands on something that already moved.
 A single ranked list conflates two different questions and produces a list nobody finishes. Every
 finding carries both:
 
-- **Severity** — what it costs if left alone. Prefer a mechanism over an adjective: "blocks approval
+- **Severity**, what it costs if left alone. Prefer a mechanism over an adjective: "blocks approval
   on this channel", "no payment method for this market", "the page never answers the price question".
-- **Effort** — the honest cost to fix: a copy change, a template change, a config change, or an
+- **Effort**, the honest cost to fix: a copy change, a template change, a config change, or an
   engineering ticket. If it is unknown, say unknown rather than guessing low.
 
 Group the output so the sequence is obvious:
@@ -73,7 +73,7 @@ unattributable movement, so nothing is learned and the same debate repeats at th
 priority order:
 
 1. Ship the single highest-severity, lowest-effort fix on its own, with its baseline recorded.
-2. Batch the cheap wins together — individually too small to measure, and that is fine, so long as
+2. Batch the cheap wins together, individually too small to measure, and that is fine, so long as
    nobody later claims a specific one caused the change.
 3. Give each high-effort item its own measurement window.
 

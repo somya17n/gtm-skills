@@ -34,14 +34,14 @@ A value metric is good if the answer to "as the customer uses more of this, do t
 | Tier | Role | Pricing logic |
 |------|------|---------------|
 | Good (entry) | Get them in the door | Core features only, tightest usage limits, lowest price |
-| Better (recommended) | Where most customers should land | Full features, reasonable limits — this is the anchor price |
+| Better (recommended) | Where most customers should land | Full features, reasonable limits, this is the anchor price |
 | Best (premium) | Capture the top of willingness-to-pay | Everything + advanced capability, typically 2-3x the Better price |
 
-Differentiate tiers with feature gating, usage limits, support level (email → priority → dedicated), or access (API, SSO, custom branding) — never differentiate on more than 2-3 of these at once or the comparison table becomes unreadable.
+Differentiate tiers with feature gating, usage limits, support level (email → priority → dedicated), or access (API, SSO, custom branding), never differentiate on more than 2-3 of these at once or the comparison table becomes unreadable.
 
 ## Pricing Research Methods
 
-**Van Westendorp Price Sensitivity Meter** — ask four questions per persona:
+**Van Westendorp Price Sensitivity Meter**, ask four questions per persona:
 1. At what price would this be too expensive to consider?
 2. At what price would this be so cheap you'd question the quality?
 3. At what price is it expensive, but you'd still consider it?
@@ -49,7 +49,7 @@ Differentiate tiers with feature gating, usage limits, support level (email → 
 
 Plot the four curves; the intersections mark the acceptable price range and the optimal price point.
 
-**MaxDiff** — show respondents sets of features, ask which matters most and which matters least. Aggregate results rank every feature's relative importance and directly inform tier packaging (put the highest-ranked features in Better, not Best).
+**MaxDiff**, show respondents sets of features, ask which matters most and which matters least. Aggregate results rank every feature's relative importance and directly inform tier packaging (put the highest-ranked features in Better, not Best).
 
 ## Signals It's Time to Raise Prices
 
@@ -60,16 +60,16 @@ Plot the four curves; the intersections mark the acceptable price range and the 
 | Product | Meaningful value added since the last pricing change; product materially more mature/stable |
 
 **Price increase strategies, in order of customer-friendliness:**
-1. Grandfather existing customers — new price applies to new customers only
-2. Delayed increase — announce 3-6 months out
-3. Tie the increase to added value — raise price alongside a feature release
-4. Full plan restructure — new tiers entirely, used when packaging itself is broken, not just the number
+1. Grandfather existing customers, new price applies to new customers only
+2. Delayed increase, announce 3-6 months out
+3. Tie the increase to added value, raise price alongside a feature release
+4. Full plan restructure, new tiers entirely, used when packaging itself is broken, not just the number
 
 ## Pricing Psychology on the Page
 
-- **Anchoring** — show the higher-priced tier first so the middle tier looks reasonable by comparison
-- **Decoy effect** — structure the middle tier to be the objectively best value, not just the default recommendation
-- **Charm vs round pricing** — $49 reads as value-focused; $50 reads as premium/confident. Match to positioning, don't default to charm pricing everywhere
+- **Anchoring**, show the higher-priced tier first so the middle tier looks reasonable by comparison
+- **Decoy effect**, structure the middle tier to be the objectively best value, not just the default recommendation
+- **Charm vs round pricing**, $49 reads as value-focused; $50 reads as premium/confident. Match to positioning, don't default to charm pricing everywhere
 
 ## Underpricing Is a Failure Mode
 
@@ -124,14 +124,14 @@ change starts from scratch.
 
 Every pricing recommendation ships with:
 
-- **Decisions** — value metric, tiers, price points, and the annual discount, each with the one
+- **Decisions**, value metric, tiers, price points, and the annual discount, each with the one
   reason it was chosen.
-- **Assumptions to monitor** — the numbers the decision rests on, each with the value used and
+- **Assumptions to monitor**, the numbers the decision rests on, each with the value used and
   where it came from. Any figure the user could not supply is listed as an assumption, never as a
   fact.
-- **What would change the answer** — the specific movement in an assumption that would trigger a
+- **What would change the answer**, the specific movement in an assumption that would trigger a
   revisit. "If cost-to-serve on the entry tier passes X" is checkable; "if things change" is not.
-- **First review date** — an actual date. Default to 90 days after a new price goes live, or one
+- **First review date**, an actual date. Default to 90 days after a new price goes live, or one
   full renewal cycle for annual plans, whichever is longer.
 
 ---
@@ -162,7 +162,7 @@ loses deals, so discount less and win more.
 **Do not draw that conclusion.** The relationship is almost certainly confounded, and the direction of
 causation runs mostly the other way:
 
-- Deals that need a heavy discount are usually **already weak** — competitive, price-sensitive, poorly
+- Deals that need a heavy discount are usually **already weak**, competitive, price-sensitive, poorly
   qualified, or championed by someone without budget authority. The weakness produces both the discount
   request and the loss.
 - A rep discounts when they feel the deal slipping. The discount is a **symptom of the slip**, recorded
@@ -170,8 +170,8 @@ causation runs mostly the other way:
 - Strong deals close at list because they were strong, not because nobody offered a discount.
 
 So the honest reading is: **a large discount request is a diagnostic signal about deal quality**, not a
-lever to withhold. When a deal needs 20% off to move, the question is what is actually wrong with it —
-qualification, champion strength, competitive position, or fit — and whether the discount is buying a
+lever to withhold. When a deal needs 20% off to move, the question is what is actually wrong with it , 
+qualification, champion strength, competitive position, or fit, and whether the discount is buying a
 close or delaying a loss.
 
 What follows for practice:

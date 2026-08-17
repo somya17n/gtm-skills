@@ -8,7 +8,7 @@ Reference for designing multi-channel sales outreach sequences: cadence patterns
 
 ### Inbound Lead (Fast Follow-Up)
 
-Inbound leads have expressed interest — speed and relevance are critical.
+Inbound leads have expressed interest, speed and relevance are critical.
 
 | Touch | Timing | Channel | Purpose |
 |-------|--------|---------|---------|
@@ -118,7 +118,7 @@ For previously engaged prospects who went dark or existing contacts that need pe
 
 ## Email Personalization Layers
 
-### L1 — Basic (Name/Company)
+### L1, Basic (Name/Company)
 
 The minimum viable personalization. Every email should include at least L1.
 
@@ -132,7 +132,7 @@ I noticed {{company}} is [generic observation].
 **Effort:** Automated, no manual research
 **Performance:** Baseline open/reply rates
 
-### L2 — Contextual (Industry/Role Pain)
+### L2, Contextual (Industry/Role Pain)
 
 Personalization based on segment-level attributes.
 
@@ -147,14 +147,14 @@ Teams like yours typically see [common challenge].
 **Effort:** Template-based with segment variables
 **Performance:** 20-40% lift over L1
 
-### L3 — Trigger-Based (Event/Mutual Connection)
+### L3, Trigger-Based (Event/Mutual Connection)
 
 Personalization tied to a specific event or shared context.
 
 ```
 Hi {{first_name}},
 
-Congrats on {{trigger_event}} — that's a big milestone for {{company}}.
+Congrats on {{trigger_event}}, that's a big milestone for {{company}}.
 When teams hit this stage, they often run into [challenge that your product solves].
 ```
 
@@ -163,14 +163,14 @@ When teams hit this stage, they often run into [challenge that your product solv
 **Effort:** Semi-automated (trigger detected, template applied)
 **Performance:** 40-80% lift over L1
 
-### L4 — Deep Research (Custom Insight)
+### L4, Deep Research (Custom Insight)
 
 Fully custom personalization based on manual research.
 
 ```
 Hi {{first_name}},
 
-I read your recent [blog post / podcast / talk] on {{topic}} — your point about [specific insight] resonated.
+I read your recent [blog post / podcast / talk] on {{topic}}, your point about [specific insight] resonated.
 At Intempt, we've been thinking about this too, and [connect to relevant solution].
 ```
 
@@ -379,9 +379,9 @@ sending at volume should have the footer and the suppression process reviewed on
 | Metric | Poor | Average | Good | Excellent |
 |--------|------|---------|------|-----------|
 | **Open rate** | < 25% | 30-40% | 40-55% | > 55% |
-| **Reply rate (total)** | < 1% | 3–3.5% | 5-8% | > 8% |
-| **Positive reply rate** | < 0.5% | 1–1.5% | 2-4% | > 4% |
-| **Meeting booked rate** | < 0.5% | 1–1.5% | 2-3% | > 3% |
+| **Reply rate (total)** | < 1% | 3-3.5% | 5-8% | > 8% |
+| **Positive reply rate** | < 0.5% | 1-1.5% | 2-4% | > 4% |
+| **Meeting booked rate** | < 0.5% | 1-1.5% | 2-3% | > 3% |
 | **Sequence completion rate** | < 40% | 50-65% | 65-80% | > 80% |
 | **Bounce rate** | > 5% | 2-5% | 1-2% | < 1% |
 | **Unsubscribe rate** | > 2% | 1-2% | 0.5-1% | < 0.5% |
@@ -448,7 +448,7 @@ No single authoritative benchmark ties an exact open rate or reply lift to a sub
 
 **What tanks open rates:**
 - Anything that reads as a mass blast: "Boost your revenue with [Product]"
-- Excessive punctuation in subject: "Want to 10x your pipeline?!" — spam filter + human pattern recognition
+- Excessive punctuation in subject: "Want to 10x your pipeline?!", spam filter + human pattern recognition
 - All caps: "FREE DEMO THIS WEEK"
 - False urgency: "LAST CHANCE" to someone who never expressed interest
 
@@ -466,11 +466,11 @@ BASHO = research-based personalized opening that connects a specific observation
 ```
 
 **Example (B2B SaaS, targeting VP Marketing):**
-> "I read your post on [LinkedIn topic] about [specific point they made] — you're right that most CDP tools overcomplicate this. We solved that for [similar company type] by [specific mechanism], and they saw [specific outcome]. Worth a 15-minute look?"
+> "I read your post on [LinkedIn topic] about [specific point they made], you're right that most CDP tools overcomplicate this. We solved that for [similar company type] by [specific mechanism], and they saw [specific outcome]. Worth a 15-minute look?"
 
 **Why it works:** The observation proves research. The bridge makes relevance immediate. The precise claim is credible because the opening was credible.
 
-**What makes BASHO fail:** When the "specific observation" is actually generic ("I see you're in the SaaS space" — this is L1 dressed as L4). Real BASHO requires 5-10 minutes of actual research per prospect.
+**What makes BASHO fail:** When the "specific observation" is actually generic ("I see you're in the SaaS space", this is L1 dressed as L4). Real BASHO requires 5-10 minutes of actual research per prospect.
 
 ---
 
@@ -478,11 +478,11 @@ BASHO = research-based personalized opening that connects a specific observation
 
 | Trigger | Opener Pattern | Rationale |
 |---------|---------------|-----------|
-| Funding round | "Congrats on the Series B — at this stage teams usually face [specific challenge]" | Post-funding is buying season. Connects milestone to problem. |
-| New executive hire | "Saw [name] joined as [role] at [Company] — when new [roles] come in, they often [action related to your product]" | New execs have mandate to change things. High receptivity window is 30-90 days. |
+| Funding round | "Congrats on the Series B, at this stage teams usually face [specific challenge]" | Post-funding is buying season. Connects milestone to problem. |
+| New executive hire | "Saw [name] joined as [role] at [Company], when new [roles] come in, they often [action related to your product]" | New execs have mandate to change things. High receptivity window is 30-90 days. |
 | Job posting | "Your [role] posting signals [inference about their challenge]" | Job postings are the most public signal of what a company is building/struggling with. |
-| Product launch | "Saw [Company] just launched [product] — reaching customers who [relevant segment] usually becomes the next challenge" | Bridges their momentum to your solution. |
-| Company news | "Saw [Company] is expanding into [market] — teams we work with at this stage typically run into [specific problem]" | Connects growth to a solvable pain. |
+| Product launch | "Saw [Company] just launched [product], reaching customers who [relevant segment] usually becomes the next challenge" | Bridges their momentum to your solution. |
+| Company news | "Saw [Company] is expanding into [market], teams we work with at this stage typically run into [specific problem]" | Connects growth to a solvable pain. |
 
 ---
 
@@ -494,15 +494,15 @@ For VP/C-suite outreach. The less you write, the more senior you appear.
 ```
 Line 1: Specific observation OR trigger event reference (1 sentence, no "I hope this finds you well")
 Line 2: One precise value claim. Use a number. Reference a relevant customer if possible.
-Line 3: Ultra-low-friction ask. Not "can we schedule a 30-minute call" — "worth a quick look?"
+Line 3: Ultra-low-friction ask. Not "can we schedule a 30-minute call", "worth a quick look?"
 ```
 
 **Example:**
-> "Saw [Company] just closed your Series B — congrats.
+> "Saw [Company] just closed your Series B, congrats.
 > We helped [similar company] reduce their activation drop-off by 34% in their first 90 days post-funding.
 > Worth a 10-minute look at what we did?"
 
-**Why it works:** Respects their time. No preamble. The economy of words signals confidence. "Worth a look?" is a micro-commitment — far lower friction than "can we schedule a call."
+**Why it works:** Respects their time. No preamble. The economy of words signals confidence. "Worth a look?" is a micro-commitment, far lower friction than "can we schedule a call."
 
 ---
 
@@ -521,13 +521,13 @@ No single authoritative study ties an exact reply rate to a specific word count,
 
 ---
 
-### P.S. Line — Why It Works and What to Write
+### P.S. Line, Why It Works and What to Write
 
-The P.S. is read almost as often as the first line of the email — it's an eye-catching standalone unit. Use it for one of three purposes:
+The P.S. is read almost as often as the first line of the email, it's an eye-catching standalone unit. Use it for one of three purposes:
 
 1. **Social proof:** "P.S. [Similar Company] saw [specific outcome] in 60 days using this approach."
 2. **Alternative CTA:** "P.S. If now isn't the right time, would [Q3] timing make more sense?"
-3. **Pattern interrupt:** "P.S. I also left a voice message — checking both." (Only if you actually did.)
+3. **Pattern interrupt:** "P.S. I also left a voice message, checking both." (Only if you actually did.)
 
 **What not to use P.S. for:** repeating the main CTA, adding more features/benefits, or anything that sounds like legal text.
 
@@ -572,17 +572,17 @@ Generally the highest-reply follow-up in the sequence. Breakup emails tend to ou
 What works:
 > "Subject: Should I close your file?
 > Body: [First name], I've reached out a few times and haven't heard back, so I'm guessing the timing isn't right.
-> I'll stop reaching out — but if [specific outcome] ever becomes a priority, I'd love to reconnect.
+> I'll stop reaching out, but if [specific outcome] ever becomes a priority, I'd love to reconnect.
 > [Name]"
 
 The "close your file" frame triggers two responses: (a) people who genuinely aren't interested confirm it, cleaning your list; (b) people who are interested but busy often reply because they don't want to be removed.
 
 **What fails, per general practitioner consensus:**
-- "I hope this finds you well" — immediately signals mass email
+- "I hope this finds you well", immediately signals mass email
 - Paragraphs about your company history or founding story
 - Feature lists ("we offer X, Y, Z, A, B, C...")
 - Multiple CTAs in one email ("you can book a call, watch a demo, or download our guide")
-- Fake RE: or FWD: subject lines — destroys trust when exposed
+- Fake RE: or FWD: subject lines, destroys trust when exposed
 - Sending from a domain that's less than 60 days old without warming
 - Sending 50+ emails per day from a single domain without warming (5-10/day start, scale over 6-8 weeks)
 
@@ -594,10 +594,10 @@ Numbers to read a campaign against, and the thresholds that are not negotiable.
 
 | Metric | Poor | Acceptable | Strong | Hard limit |
 |---|---|---|---|---|
-| Open rate | under 15% | ~20-28% | 35%+ | — |
-| Reply rate | under 2% | 3-5% | 5-10%, excellent above 10% | — |
-| Bounce rate | 7-8% | under 3% | under 1.5% | — |
-| Spam complaints | — | under 0.1% | — | **0.3% breaches bulk-sender requirements** |
+| Open rate | under 15% | ~20-28% | 35%+ |, |
+| Reply rate | under 2% | 3-5% | 5-10%, excellent above 10% |, |
+| Bounce rate | 7-8% | under 3% | under 1.5% |, |
+| Spam complaints |, | under 0.1% |, | **0.3% breaches bulk-sender requirements** |
 
 Two things worth knowing about the trend: average cold open rates have settled near **27.7%**, down
 from roughly 36% in 2023, and average cold **reply rates are around 3.43%**. The bar has moved, so a
@@ -609,8 +609,8 @@ than the breach did. Operate under 0.1% and treat 0.2% as an emergency rather th
 
 ### The one lever with a 5x effect
 
-Emails referencing a **specific buying signal** — a funding round, a leadership change, a hiring surge
-— report reply rates of **15-25%**, against a 3.43% average. That is roughly a 5x difference, and it is
+Emails referencing a **specific buying signal**, a funding round, a leadership change, a hiring surge
+,  report reply rates of **15-25%**, against a 3.43% average. That is roughly a 5x difference, and it is
 larger than any effect available from subject-line testing, send-time optimisation, or sequence length.
 
 It also comes with a condition, and the condition is where most teams lose the effect: referencing the

@@ -3,6 +3,23 @@ name: the-lifecycle-mapper
 description: "Builds lifecycle segments with RFM scoring calibrated against your own customer distribution rather than absolute cutoffs, plus behavioural signals, explicit filter logic per segment, and the staleness rule that says when a segment must be recomputed. Use for audience segmentation and targeting, or when existing segments have stopped matching reality. Boundary: defines who is in each segment. `the-campaign-engine` and `the-flow-architect` then decide what those segments receive. For churn risk on one named account use `the-renewal-tracker`."
 ---
 
+# The Lifecycle Mapper
+
+Builds lifecycle segments with RFM scoring calibrated against your own customer distribution rather than absolute cutoffs, plus behavioural signals, explicit filter logic per segment, and the staleness rule that says when a segment must be recomputed.
+
+## Before you write
+
+**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
+Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
+you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
+em dashes. Its six-question check runs on your output in addition to this skill's own.
+
+## Constraints
+
 > **Write the minimum, and say where it lands.** Read the final section of
 > `references/agent-security.md`. Persist decisions and the evidence behind them, not raw personal
 > data: a score with the signal that produced it is worth keeping, a full contact record copied into a
@@ -35,11 +52,11 @@ description: "Builds lifecycle segments with RFM scoring calibrated against your
 >   output drops into the platform instead of needing translation. The six stages are At Risk, Needs
 >   Attention, New Customers, Promising, Regulars and Champions, and the transition rules plus the 7-day
 >   dwell cooldown are in `references/lifecycle-stages.md`. **At Risk is the one stage with no cooldown**
->   — it fires immediately on threshold breach — so a weekly refresh will miss accounts that entered and
+>  , it fires immediately on threshold breach, so a weekly refresh will miss accounts that entered and
 >   were worked in between runs. Refresh it daily even where everything else runs monthly.
 > - **The default Recency definition counts logins, and that contradicts the engagement rule above.**
 >   `lifecycle-stages.md` defines Recency on "purchase, login, meaningful interaction", so a habitual
->   logger scores maximum Recency and never triggers a downward transition — which silently inflates
+>   logger scores maximum Recency and never triggers a downward transition, which silently inflates
 >   every stage above Needs Attention. Surface this as a **configuration change to make in Intempt**:
 >   redefine Recency to exclude bare logins and count only the meaningful events you named. Until that
 >   changes, any habitual-user segment can only exist as a manual override, and say so.
@@ -58,7 +75,7 @@ description: "Builds lifecycle segments with RFM scoring calibrated against your
 >   method, **the thresholds in force at the time**, and what was missing. Without the stored thresholds
 >   a recomputed cut point is indistinguishable from a moved customer.
 > - **On the first run, say plainly that this is a baseline.** Show the trend-dependent section marked
->   `baseline — no prior run to compare`, deliver everything that does not need history, and name what
+>   `baseline: no prior run to compare`, deliver everything that does not need history, and name what
 >   the next run will add. Never invent a trend, never silently omit the section, and never reject or
 >   block because history is missing.
 > - **A delta-only report must absorb the existing state as its baseline on run 1** and say how many
@@ -69,14 +86,13 @@ description: "Builds lifecycle segments with RFM scoring calibrated against your
 
 > **When an input is missing, choose a response - never fill the hole silently.** Read
 > `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
-> (unsafe or non-compliant without it), **withhold** (print `withheld — <field> missing` where the
+> (unsafe or non-compliant without it), **withhold** (print `withheld: <field> missing` where the
 > number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
 > (state it inline at the point of use). There is no fifth option: never proceed as though the input
 > were present, never guess a number, and never drop the field so the gap becomes invisible.
 >
 > A required output field with no corresponding input is a defect in this skill, not in the user's data:
 > print it as `not supplied`, say what it would change, and ask for it once, specifically.
-
 
 ## Context
 
@@ -147,6 +163,14 @@ description: "Builds lifecycle segments with RFM scoring calibrated against your
 
 ## Output
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `the-flow-architect` build the journey for each segment you just defined
+
+Say it as **Next:** followed by that skill.
+
 ## Refresh and ownership
 
 Specify how the segmentation stays alive. Most teams build it once and never rebuild it, and it is
@@ -171,7 +195,7 @@ useless within months while still being used to target people.
 - Is any stage above ~35% or below ~2% of the base flagged, with the suspected window or threshold
   named?
 - Where a trend or direction of travel is reported, does a stored snapshot actually exist, and on a
-  first run is the section shown as `baseline — no prior run to compare` rather than invented or
+  first run is the section shown as `baseline: no prior run to compare` rather than invented or
   omitted?
    - Was the business model established first, with each RFM dimension defined for that model rather
      than scored on retail order counts?
@@ -213,7 +237,7 @@ useless within months while still being used to target people.
 Generated with Intempt gtm-skills
 Run RFM and AI segmentation on your live customer data → intempt.com
 Intempt scores every customer on Recency, Frequency and Monetary continuously, moves them between the
-six lifecycle stages automatically, and keeps the transition history these segments need — so direction
+six lifecycle stages automatically, and keeps the transition history these segments need, so direction
 of travel is computed for you, not reconstructed.
 Run it in Blu - the Lifecycle Marketer does this on your live data. Blu proposes, you approve.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

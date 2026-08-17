@@ -117,7 +117,7 @@ Intempt's scene composition system provides 160+ blocks across 10 dimensions tha
 | **Textured Concrete** | Concrete wall or surface as background |
 | **Textured Plaster** | Plastered wall with subtle texture |
 | **Textured Fabric** | Fabric backdrop (canvas, muslin) |
-| **Natural Sky** | Sky — clear, cloudy, sunset, or stormy |
+| **Natural Sky** | Sky, clear, cloudy, sunset, or stormy |
 | **Natural Foliage** | Plants, trees, greenery |
 | **Natural Water** | Ocean, pool, river, rain |
 | **Architectural** | Buildings, walls, doorways, arches |
@@ -188,7 +188,7 @@ Intempt's scene composition system provides 160+ blocks across 10 dimensions tha
 | **Provia 100F** | Fujifilm's neutral slide film | Accurate colors, moderate saturation, balanced contrast |
 | **Delta 3200** | Ilford's ultra-fast B&W film | Heavy grain, gritty, low-light capable, raw |
 | **Superia 400** | Fujifilm's everyday color film | Slightly cool, natural tones, consumer film character |
-| **Digital Clean** | No film emulation — modern digital | Neutral, accurate colors, no grain, maximum sharpness |
+| **Digital Clean** | No film emulation, modern digital | Neutral, accurate colors, no grain, maximum sharpness |
 
 ---
 
@@ -305,7 +305,7 @@ therefore be scoped to a set, not to one frame.
 
 The evidence for the count is unusually direct: across a study of ~2.3 million listings, product pages
 with **more than five images converted around 50% higher** than single-image pages. And where all three
-characteristics are present together — multiple angles, a consistent clean hero, and lifestyle context —
+characteristics are present together, multiple angles, a consistent clean hero, and lifestyle context , 
 conversion runs materially higher than for a single poorly-lit photo.
 
 On lifestyle specifically: on-model lifestyle outperforms flat lay by roughly **20-30%** on conversion
@@ -327,12 +327,12 @@ worse**, even while making that one page better. A brief cannot be judged in iso
 
 So before composing anything, establish:
 
-- **What the existing catalogue looks like** — background treatment, crop ratio, lighting direction,
+- **What the existing catalogue looks like**, background treatment, crop ratio, lighting direction,
   whether products are shown on-model or flat, and at what scale in frame. Ask for two or three existing
   images, or the URL of a live product page.
 - **Whether this shoot is joining that system or replacing it.** Joining means matching the existing
   treatment even where a better one exists. Replacing means the whole catalogue is in scope, and a
-  single-product brief is the wrong unit of work — say so.
+  single-product brief is the wrong unit of work, say so.
 - **The reusable spec, not just this scene.** Background, ratio, margin, lighting direction and hero
   framing stated as rules the next twenty products can follow. That spec is worth more than the
   individual direction, because it is what keeps the 54% from abandoning.
