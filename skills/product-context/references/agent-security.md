@@ -62,7 +62,7 @@ bearer token in a webhook example.
 
 ## 3. Interpolated content in emitted markup or code must be escaped
 
-`the-page-shipper` emits HTML, `the-activation-reel` emits TSX, and several skills produce snippets
+`landing-page` emits HTML, `onboarding-video` emits TSX, and several skills produce snippets
 that a user will paste into a live site. Anything that reaches those templates from an untrusted
 source, a testimonial, a scraped headline, a product description, a customer name, a proof point, is
 an injection vector, and the resulting XSS lands on the user's own domain and their own visitors.

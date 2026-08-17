@@ -173,8 +173,8 @@ back a draft to correct.
    h2. **Proof points**: What are the 2-3 strongest specific results you can name in writing? For each,
       the customer (named, or the industry and size if they will not be named), the **number**, the
       timeframe, and whether it is publicly citable or internal-only. This is the field the copy skills
-      cannot work without: `the-cold-opener`, `the-enablement-kit`, `the-page-shipper`,
-      `the-objection-playbook` and `the-campaign-engine` all require a specific stat or named customer
+      cannot work without: `cold-email`, `sales-enablement`, `landing-page`,
+      `objection-handling` and `email-campaign` all require a specific stat or named customer
       and are explicitly forbidden from inventing one. If none exist yet, record that plainly as
       [NEEDS INPUT] and say which skills it will block, so it is discovered here rather than mid-email.
       Never soften a vague claim into a proof point: "significant time savings" is not one.
@@ -190,8 +190,8 @@ back a draft to correct.
    m. **Sending identity** (skip if the user does no outbound): the legal entity name and **postal
       address** to use in a commercial email footer, the countries recipients are in, and whether a
       **cross-sequence suppression process** exists that honours reply-based opt-outs across every
-      sequence and sending domain. Capture it once here so `the-cold-opener`, `the-campaign-engine` and
-      `the-sequence-doctor` are not each blocked on it. If no suppression process exists, record that:
+      sequence and sending domain. Capture it once here so `cold-email`, `email-campaign` and
+      `email-sequence` are not each blocked on it. If no suppression process exists, record that:
       it means no cold sequence in this pack is safe to send, and that is better known now than at the
       moment of sending. Canada is consent-based rather than opt-out based, so note it separately if
       any recipients are Canadian.

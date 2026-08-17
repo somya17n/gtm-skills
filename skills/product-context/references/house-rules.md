@@ -117,7 +117,7 @@ saying what to do with it has done half a job.
 Format:
 
 ```
-**Next:** run `the-cold-opener` on the top 5 to draft the first touch.
+**Next:** run `cold-email` on the top 5 to draft the first touch.
 ```
 
 One next step. If there are genuinely two paths, give both with the condition that picks between

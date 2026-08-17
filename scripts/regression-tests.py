@@ -51,7 +51,7 @@ print("\n1. anomaly-alert / spike poisons the baseline")
 print("   baseline 100x20 -> spike 400. If the spike stays in the window,")
 print("   a NORMAL 100 then scores z=%.2f against mean %.1f sd %.1f" % (z_norm_after_spike, mu2, sd2))
 print("   -> normal days flagged, or real ones masked. Guard:",
-      guard("the-anomaly-alert", ["exclude", "baseline"], "spike exclusion"))
+      guard("anomaly-detection", ["exclude", "baseline"], "spike exclusion"))
 
 sustained = [100] * 20 + [130] * 10        # step change, becomes the new normal
 m3 = sum(sustained[-20:]) / 20
@@ -59,7 +59,7 @@ s3 = (sum((x - m3) ** 2 for x in sustained[-20:]) / 20) ** 0.5
 print("\n2. anomaly-alert / sustained shift goes quiet")
 print("   +30%% step change: by day 10 the rolling window has absorbed it")
 print("   (mean %.1f), z=%.2f -> silent. A 30%% shift must not be silent." % (m3, abs(130 - m3) / s3))
-print("   Guard:", guard("the-anomaly-alert", ["sustained"], "sustained shift"))
+print("   Guard:", guard("anomaly-detection", ["sustained"], "sustained shift"))
 
 drift = [100 * (1.02 ** i) for i in range(30)]   # 2%/day compounding
 zs = []
@@ -72,7 +72,7 @@ print("\n3. anomaly-alert / gradual drift invisible")
 print("   2%%/day compounding = %.0f%% total drift, yet max daily z=%.2f"
       % ((drift[-1] / drift[0] - 1) * 100, max(zs)))
 print("   -> never trips a z-threshold. Guard:",
-      guard("the-anomaly-alert", ["drift"], "drift detection"))
+      guard("anomaly-detection", ["drift"], "drift detection"))
 
 # --- 4. margin-builder: missing COGS inverts the ranking -----------------
 prods = [("A", 1000, 0.80), ("B", 300, 0.10), ("C", 240, 0.05)]
@@ -84,7 +84,7 @@ print("   revenue order %s vs margin order %s"
 print("   A: $%d rev but $%d margin; B: $%d rev, $%d margin"
       % (1000, 1000 * .2, 300, 300 * .9))
 print("   -> ranking on revenue promotes the worst product. Guard:",
-      guard("the-margin-builder", ["cogs"], "COGS required"))
+      guard("contribution-margin", ["cogs"], "COGS required"))
 
 # --- 5-6. inventory: censored demand + X>Y contradiction ----------------
 sold, days_in_stock, days = 100, 20, 60
@@ -96,12 +96,12 @@ print("   sold 100 units but in stock only %d of %d days." % (days_in_stock, day
 print("   naive days-of-cover %.1f vs true %.1f (rate %.2f/d vs %.2f/d)"
       % (naive, sold / true_rate / (sold / days_in_stock) * 0 + (sold / true_rate), true_rate, censored))
 print("   -> stockouts read as low demand and get under-ordered. Guard:",
-      guard("the-inventory-risk-scanner", ["out of stock"], "censored demand"))
+      guard("inventory-planning", ["out of stock"], "censored demand"))
 
 # --- 7. shipping band boundaries ---------------------------------------
 print("\n6. shipping bands / boundary ownership")
 print("   a 5.00kg order with bands '0-5' and '5-10' matches both or neither.")
-print("   Guard:", guard("the-shipping-recovery-check", ["inclusive", "exclusive"], "band boundaries"))
+print("   Guard:", guard("shipping-cost-analysis", ["inclusive", "exclusive"], "band boundaries"))
 
 # --- 8. cohort partial cells -------------------------------------------
 # same true churn, but the newest cohort's month is only 40% elapsed
@@ -114,7 +114,7 @@ print("\n7. cohort-tracker / partial period fakes improvement")
 print("   month-2 retention: complete %.1f%% vs partial-cell %.1f%%  = +%.1fpp"
       % (r_full * 100, r_part * 100, (r_part - r_full) * 100))
 print("   churn is IDENTICAL - the cell just isn't finished. Guard:",
-      guard("the-cohort-tracker", ["partial"], "partial period"))
+      guard("cohort-analysis", ["partial"], "partial period"))
 
 # --- 9. promo baseline contamination ------------------------------------
 pre = [100, 100, 100, 160, 100]     # day 4 = a prior promo
@@ -125,7 +125,7 @@ print("\n8. promo-impact / contaminated baseline")
 print("   baseline containing a prior promo: lift reads %.1f%% vs clean %.1f%%"
       % (naive_lift * 100, clean_lift * 100))
 print("   -> understates, and can flip pull-forward into 'positive'. Guard:",
-      guard("the-promo-impact-check", ["baseline"], "clean baseline"))
+      guard("promo-roi", ["baseline"], "clean baseline"))
 
 # --- 10. returns lag + benchmark annualisation --------------------------
 shipped_recent, returns_seen, lag_share = 1000, 20, 0.45   # 45% of returns land by now
@@ -136,13 +136,13 @@ print("   %d returns on %d shipped = %.1f%% naive, but only %.0f%% of returns ha
       % (returns_seen, shipped_recent, naive_rate * 100, lag_share * 100))
 print("   true ~%.1f%% -> bias %.1fpp, and the sign flips vs older cohorts. Guard:"
       % (adj_rate * 100, (adj_rate - naive_rate) * 100),
-      guard("the-returns-miner", ["lag"], "returns lag"))
+      guard("ecommerce-returns", ["lag"], "returns lag"))
 
 m = 0.05
 print("\n10. benchmark / multiply-annualisation")
 print("    5%%/month compounded = %.0f%% a year, not 5x12=%d%%"
       % (((1 + m) ** 12 - 1) * 100, m * 12 * 100))
-print("    Guard:", guard("the-benchmark-check", ["compound"], "compounding"))
+print("    Guard:", guard("benchmark-analysis", ["compound"], "compounding"))
 
 print()
 print("=" * 78)
