@@ -1,6 +1,6 @@
 ---
 name: the-deal-gauge
-description: "Scores one deal in depth on two independent axes, health and buyer intent, tracks the direction of travel since the last review, checks MEDDIC or BANT completeness, and returns a prioritised list of three to five specific next steps from where the deal lands. Use when a single deal needs an honest read before a forecast call, a renewal conversation, or a decision to keep investing in it. Boundary: `the-pipeline-scanner` triages the whole pipeline to decide which deals deserve this level of attention. For renewal risk on an existing customer use `the-renewal-tracker`."
+description: "Scores one deal in depth on two independent axes, health and buyer intent, tracks the direction of travel since the last review, checks MEDDIC or BANT completeness, and returns a prioritised list of three to five specific next steps from where the deal lands. Use when a single deal needs an honest read before a forecast call, a renewal conversation, or a decision to keep investing in it. Boundary: `the-pipeline-scanner` triages the whole pipeline to decide which deals deserve this level of attention. For renewal risk on an existing customer use `the-deal-gauge`."
 ---
 
 # The Deal Gauge
@@ -173,6 +173,41 @@ End by naming what runs next, in one line:
 - `the-negotiation-coach` if the risk it surfaced is pricing or terms
 
 Say it as **Next:** followed by that skill.
+
+## Renewal mode
+
+An upcoming renewal scores on the same two axes as a new deal, health and intent, but the signals
+differ and the failure mode is different. A new deal dies loudly. A renewal dies quietly, and the
+first hard evidence is the non-renewal notice.
+
+Run this mode when the user names a renewal date rather than a close date.
+
+**Ask for:**
+
+1. Account name, contract value, days until renewal
+2. Usage trend over the last 90 days: growing, flat, or declining, and by how much if known
+3. Relationship changes: has the champion left or changed role, has the committee changed, what is
+   support volume and sentiment doing
+4. Anything the account has actually said about renewing, expanding, or leaving
+
+If there is no usage data, score on relationship and stated intent, and name usage as the missing
+input. Do not infer a trend from silence.
+
+**Return, in this order:**
+
+- **The one action.** The single highest-leverage thing to do before the renewal date, with an owner
+  and a date. Not a checklist of five. This goes first because it is the only line that changes the
+  outcome.
+- **Risk: Low / Medium / High**, and the one or two signals that drove it.
+- **The evidence.** Each signal used, marked green flag or red flag. Never use a signal without
+  showing it.
+- **What changed in the last 90 days.** A static risk read is worth much less than one that names
+  what is new.
+- **If this were a new deal.** One sentence on the score this account would get on a fresh sales
+  process, so the user can see whether the renewal is carried by fit or by inertia.
+
+The account whose usage quietly halved while everyone stayed friendly is the one this mode exists to
+catch.
 
 ## Quality check before returning
 

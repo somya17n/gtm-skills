@@ -115,10 +115,10 @@ Builds and works the list, so outbound isn't a stale spreadsheet from last quart
 | **the-list-builder** | Builds and qualifies a prospect list from your ICP, every lead scored Hot/Warm/Cold/Skip with cited evidence. |
 | **the-fit-scorer** | Scores an account list against your ICP criteria and returns priority tiers with a one-sentence rationale per account. |
 | **the-cold-opener** | Turns prospect research, a trigger signal, and a value prop into a complete cold email body under 120 words. |
-| **the-subject-line-lab** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
+| **the-cold-opener** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
 | **the-sequence-doctor** | Audits a full cold email sequence, diagnoses each email's specific weakness, and rewrites the three worst-performing ones. |
 | **the-reply-classifier** | Sorts a batch of replies into Interested/Later/Referred/Objection/Dead/Angry with evidence and the next action for each. |
-| **the-inbox-zero-enforcer** | Processes a full unhandled inbox into Drafted/Escalated/Scheduled/Closed so nothing sits unworked. |
+| **the-reply-classifier** | Processes a full unhandled inbox into Drafted/Escalated/Scheduled/Closed so nothing sits unworked. |
 | **the-list-cleaner** | Dedupes and flags a raw list, wrong titles, stale roles, wrong companies, broken data, before it hits a sequence. |
 | **the-call-booker** | Writes the booking message, reschedule, confirmation, and day-before reminder that gets a warm lead onto a calendar. |
 | **the-no-show-save** | Writes the 3-stage recovery sequence for a missed meeting, plus when to stop trying based on no-show history. |
@@ -136,7 +136,7 @@ Runs the deal from first call to signature, and tells you honestly when it's sta
 | **the-account-blueprint** | Account engagement plans with buying committee mapping and a 90-day week-by-week action plan per stakeholder. |
 | **the-deal-gauge** | Dual-axis scoring (health + intent) with independent trend tracking and full MEDDIC/BANT completeness checks. |
 | **the-win-loss-analyzer** | Ranks the real, evidence-backed reasons deals close or die across a batch of closed-won and closed-lost deals. |
-| **the-renewal-tracker** | Scores an existing account's renewal risk from usage and relationship signals, with the one highest-leverage action. |
+| **the-deal-gauge** | Scores an existing account's renewal risk from usage and relationship signals, with the one highest-leverage action. |
 | **the-negotiation-coach** | Preps anchor, concession ladder, walk-away point, and calibrated questions for one specific deal negotiation. |
 | **the-objection-playbook** | Outputs the five most likely objections for a persona, each with an acknowledgment, response, and follow-up question. |
 

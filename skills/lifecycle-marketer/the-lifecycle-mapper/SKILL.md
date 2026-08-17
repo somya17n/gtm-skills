@@ -1,6 +1,6 @@
 ---
 name: the-lifecycle-mapper
-description: "Builds lifecycle segments with RFM scoring calibrated against your own customer distribution rather than absolute cutoffs, plus behavioural signals, explicit filter logic per segment, and the staleness rule that says when a segment must be recomputed. Use for audience segmentation and targeting, or when existing segments have stopped matching reality. Boundary: defines who is in each segment. `the-campaign-engine` and `the-flow-architect` then decide what those segments receive. For churn risk on one named account use `the-renewal-tracker`."
+description: "Builds lifecycle segments with RFM scoring calibrated against your own customer distribution rather than absolute cutoffs, plus behavioural signals, explicit filter logic per segment, and the staleness rule that says when a segment must be recomputed. Use for audience segmentation and targeting, or when existing segments have stopped matching reality. Boundary: defines who is in each segment. `the-campaign-engine` and `the-flow-architect` then decide what those segments receive. For churn risk on one named account use `the-deal-gauge`."
 ---
 
 # The Lifecycle Mapper

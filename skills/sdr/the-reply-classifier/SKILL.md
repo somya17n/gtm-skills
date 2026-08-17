@@ -1,6 +1,6 @@
 ---
 name: the-reply-classifier
-description: Sorts a batch of inbound sales replies into Interested, Later, Referred, Objection, Dead, or Angry, with the evidence and next action for each. Use when the user has replies piling up and needs to know what to do with each one, not just what it says. Pairs with the-inbox-zero-enforcer.
+description: Sorts a batch of inbound sales replies into Interested, Later, Referred, Objection, Dead, or Angry, with the evidence and next action for each. Use when the user has replies piling up and needs to know what to do with each one, not just what it says. Pairs with the-reply-classifier.
 ---
 # The Reply Classifier
 
@@ -175,6 +175,36 @@ without one the removal will not hold.
 **Resume later**, every AUTO-REPLY with a return date, and the date the original sequence step
 should resume. Separate this from The dates, which is for dates a human actually committed to. Mixing
 them turns a vacation notice into a fabricated follow-up commitment.
+
+## Batch mode: clearing a whole inbox
+
+When the user hands over a whole unhandled inbox rather than a few replies, classify the batch and
+then run it down to zero. Do not return classifications alone, that leaves the work where it was.
+
+Sort every item into one of five piles and act on each:
+
+| Pile | What you do |
+|---|---|
+| Draft | Write the reply, ready to send |
+| Escalate | Name who it goes to and why, in one line |
+| Schedule | Say the date it comes back and what triggers it |
+| Close | Say why it needs nothing |
+| Blocked | Name the one thing you need from the user |
+
+Then three closing lines, in this order:
+
+**Do this first.** One item, with the one-line reason it is the highest-leverage thing in the batch.
+This is the line most people will read and act on, so it goes at the top of the closing block, not
+the bottom.
+
+**Oldest.** What has been sitting longest and how long. Be blunt, not diplomatic. "Eleven days" is
+the useful version.
+
+**The count.** Started with X, drafted Y, escalated Z, scheduled A, closed B. The four must sum to X.
+If they do not, you lost something, go back and find it.
+
+Anything needing action today goes above the fold. A uniform table of everything is the format this
+mode exists to replace.
 
 ## Rules
 

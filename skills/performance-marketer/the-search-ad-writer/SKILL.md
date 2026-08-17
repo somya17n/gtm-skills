@@ -1,6 +1,6 @@
 ---
 name: the-search-ad-writer
-description: "Writes a complete Google responsive search ad from real query intent and claims the landing page can support, then validates every headline, description, path, sitelink and callout against its character limit, since each asset has to work alone and beside the others. Use when a focused ad group needs credible copy. Boundary: `the-copy-formula-picker` writes long-form paid-social primary text with no character ceiling, and `the-subject-line-lab` writes email subject lines."
+description: "Writes a complete Google responsive search ad from real query intent and claims the landing page can support, then validates every headline, description, path, sitelink and callout against its character limit, since each asset has to work alone and beside the others. Use when a focused ad group needs credible copy. Boundary: `the-copy-formula-picker` writes long-form paid-social primary text with no character ceiling, and `the-cold-opener` writes email subject lines."
 ---
 # The Search Ad Writer
 

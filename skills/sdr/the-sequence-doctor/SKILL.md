@@ -1,6 +1,6 @@
 ---
 name: the-sequence-doctor
-description: "Audits a cold outbound email sequence: a gap analysis per email, full rewrites of the three weakest, and a recommendation for any missing step in the sequence shape. Use when reply rates are low and the cause is unclear, or to review a new sequence before it launches. Boundary: audits and rewrites an existing multi-email sequence. `the-cold-opener` writes one first-touch email from scratch, and `the-subject-line-lab` handles subject lines only."
+description: "Audits a cold outbound email sequence: a gap analysis per email, full rewrites of the three weakest, and a recommendation for any missing step in the sequence shape. Use when reply rates are low and the cause is unclear, or to review a new sequence before it launches. Boundary: audits and rewrites an existing multi-email sequence. `the-cold-opener` writes one first-touch email from scratch, and `the-cold-opener` handles subject lines only."
 ---
 # The Sequence Doctor
 

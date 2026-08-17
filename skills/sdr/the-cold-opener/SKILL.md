@@ -1,10 +1,10 @@
 ---
 name: the-cold-opener
-description: Takes prospect research, a specific trigger signal, and a product value prop, and writes a complete cold email body under 120 words, personalized to the signal. Use when the user wants to write a cold email to a specific prospect using their research inputs. Pairs with the-account-blueprint, the-list-builder, and the-subject-line-lab.
+description: Takes prospect research, a specific trigger signal, and a product value prop, and writes a complete cold email body under 120 words, personalized to the signal. Use when the user wants to write a cold email to a specific prospect using their research inputs. Pairs with the-account-blueprint, the-list-builder, and the-cold-opener.
 ---
 # The Cold Opener
 
-Write a complete, personalized cold email body from the user's research inputs. Under 120 words. Structured around a specific trigger. Ready to send after subject line testing with `the-subject-line-lab`.
+Write a complete, personalized cold email body from the user's research inputs. Under 120 words. Structured around a specific trigger. Ready to send after subject line testing with `the-cold-opener`.
 
 > **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
 > what you return against its numbered checklist. It sets the awareness-stage calibration, the
@@ -103,8 +103,31 @@ Hi [First name],
 **Hook rationale:** [One sentence explaining why the opening maps to the specific trigger provided]
 
 **Subject lines:** always return three, scored, with a recommendation. Never hand back a blank
-subject line for another skill to fill. Run `the-subject-line-lab` only when the user wants to test a
+subject line for another skill to fill. Run `the-cold-opener` only when the user wants to test a
 wider spread against an existing body.
+
+## Subject lines
+
+Every email ships with subject lines. Never hand back a blank for another skill to fill.
+
+Return three by default, five if the user says they will split-test. Score each on three axes out of
+ten, one line of reason each, no paragraph:
+
+- **Specificity**: does it reference something concrete, or could it be sent to anyone?
+- **Relevance**: does it match what this persona actually cares about, not what you find interesting?
+- **Curiosity**: is there a real reason to open, without being a tease that the body does not pay off?
+
+Then: **Recommended pick**, one sentence on why it goes first, and which one to test against it.
+
+Rules that decide most of it:
+
+- Under 50 characters. Mobile truncates and mobile is most of the opens.
+- No "Quick question", no "Following up", no "Idea for {company}". These are the three most-sent
+  subject lines in B2B and they read as a mail merge.
+- No fake reply prefixes (`Re:`, `Fwd:`) and no fake urgency.
+- The subject has to be honest about the body. A subject the email does not deliver on costs the
+  next send too, not only this one.
+- If the trigger is strong, the trigger IS the subject. Specificity beats cleverness every time.
 
 ## Rules
 

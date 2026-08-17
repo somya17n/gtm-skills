@@ -1,6 +1,6 @@
 ---
 name: the-hook-lab
-description: "Takes a LinkedIn post draft and generates four scored hook variants for the opening one or two lines before the see-more cutoff, each built on a distinct psychological framework, with a recommendation and the reason it wins. Use when a post's opening feels flat, or when testing hooks before publishing. Boundary: LinkedIn post openings only. `the-subject-line-lab` does the equivalent job for cold email subject lines, and `the-cold-opener` writes the opening line of a cold email body."
+description: "Takes a LinkedIn post draft and generates four scored hook variants for the opening one or two lines before the see-more cutoff, each built on a distinct psychological framework, with a recommendation and the reason it wins. Use when a post's opening feels flat, or when testing hooks before publishing. Boundary: LinkedIn post openings only. `the-cold-opener` does the equivalent job for cold email subject lines, and `the-cold-opener` writes the opening line of a cold email body."
 ---
 # The Hook Lab
 

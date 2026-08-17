@@ -1,6 +1,6 @@
 ---
 name: the-save-desk
-description: "Designs the systemic churn machinery: the cancel flow and its offramps, dynamic save offers ranked by cost against the margin they protect, churn risk scoring, and dunning sequences for failed payments. Splits the churn number into voluntary and involuntary before designing anything, because the two need opposite fixes. Use when reducing churn systemically rather than winning back one gone-dark account. Boundary: `the-renewal-tracker` reads risk on one named account, and `the-repeat-purchase-check` addresses a missing second order rather than a cancellation."
+description: "Designs the systemic churn machinery: the cancel flow and its offramps, dynamic save offers ranked by cost against the margin they protect, churn risk scoring, and dunning sequences for failed payments. Splits the churn number into voluntary and involuntary before designing anything, because the two need opposite fixes. Use when reducing churn systemically rather than winning back one gone-dark account. Boundary: `the-deal-gauge` reads risk on one named account, and `the-repeat-purchase-check` addresses a missing second order rather than a cancellation."
 ---
 
 # The Save Desk
