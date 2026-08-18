@@ -44,11 +44,11 @@ Builds the on-brand asset and the content around it, so nothing ships off-voice 
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-angle-vault** | Creative briefs using 14 proven angles mapped to funnel stages and channels. Includes messaging hierarchy with character limits and exact ad placement specs for every platform. |
-| **the-scene-composer** | Photography direction using a composable scene system, 160+ blocks across 10 dimensions (lighting, camera, surface, props, background, color, style, film type, scene, pose). |
-| **the-voice-fingerprint** | Analyzes your content samples to extract a reusable voice profile, 6 dimensions rated 1-10, vocabulary rules, sentence patterns, and channel-specific adaptations. |
-| **the-activation-reel** | Short, conversion-focused onboarding videos built in Remotion for iOS, Android, or web. Maps each beat to a conversion milestone on the path to activation. |
-| **the-hook-lab** | Four scored hook variants for any post draft, each using a distinct psychological framework, with a recommendation and rug-pull check. |
+| **creative-brief** | Creative briefs using 14 proven angles mapped to funnel stages and channels. Includes messaging hierarchy with character limits and exact ad placement specs for every platform. |
+| **product-photography** | Photography direction using a composable scene system, 160+ blocks across 10 dimensions (lighting, camera, surface, props, background, color, style, film type, scene, pose). |
+| **tone-of-voice** | Analyzes your content samples to extract a reusable voice profile, 6 dimensions rated 1-10, vocabulary rules, sentence patterns, and channel-specific adaptations. |
+| **onboarding-video** | Short, conversion-focused onboarding videos built in Remotion for iOS, Android, or web. Maps each beat to a conversion milestone on the path to activation. |
+| **hook-writer** | Four scored hook variants for any post draft, each using a distinct psychological framework, with a recommendation and rug-pull check. |
 
 ### Job 2: Lifecycle Marketer (7 skills)
 
@@ -58,12 +58,12 @@ Runs the flows that fire on their own, welcome, recovery, win-back, so retention
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-flow-architect** | Multi-channel automation flows with conditional branching, holdout groups, and channel guardrails. Outputs a complete journey blueprint with node-by-node detail. |
-| **the-lifecycle-mapper** | Lifecycle segmentation using a 6-stage model (At Risk to Champions) with RFM scoring and behavioral signals. Tells you who to target and why. |
-| **the-referral-architect** | Designs a customer referral program, trigger moment, two-sided incentive sized against real customer value, tiers, and anti-abuse rules. |
-| **the-save-desk** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences, the systemic retention layer, not a one-off email. Now also covers delivery-cycle products: pause/skip vs. cancellation, and frequency mismatch as a churn cause. |
-| **the-repeat-purchase-check** *(new)* | Reviews the post-first-purchase repeat-buy flow, reorder prompts, replenishment timing, second-purchase incentives, and names what's blocking a second order. |
-| **the-promo-impact-check** *(new)* | Measures the after-the-fact impact of a promotion or discount already run: lift, margin cost, and the post-promo dip, over a stated recovery period. |
+| **customer-journey** | Multi-channel automation flows with conditional branching, holdout groups, and channel guardrails. Outputs a complete journey blueprint with node-by-node detail. |
+| **customer-segmentation** | Lifecycle segmentation using a 6-stage model (At Risk to Champions) with RFM scoring and behavioral signals. Tells you who to target and why. |
+| **referral-program** | Designs a customer referral program, trigger moment, two-sided incentive sized against real customer value, tiers, and anti-abuse rules. |
+| **churn-reduction** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences, the systemic retention layer, not a one-off email. Now also covers delivery-cycle products: pause/skip vs. cancellation, and frequency mismatch as a churn cause. |
+| **repeat-purchase-rate** *(new)* | Reviews the post-first-purchase repeat-buy flow, reorder prompts, replenishment timing, second-purchase incentives, and names what's blocking a second order. |
+| **promo-roi** *(new)* | Measures the after-the-fact impact of a promotion or discount already run: lift, margin cost, and the post-promo dip, over a stated recovery period. |
 
 ### Job 3: Experimentation Lead (10 skills)
 
@@ -73,16 +73,16 @@ Decides what ships and what dies, with a number attached instead of a gut feelin
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-hypothesis-engine** | Bayesian A/B test design with Thompson sampling, sample size calculations, guardrails, and exit criteria. Not just "test this," a full statistical brief. |
-| **the-page-shipper** | Conversion-optimized landing pages. Outputs deployable HTML + Tailwind CSS, not a wireframe, a working page. |
-| **the-variant-router** | Rules that map audience segments to content variants. Condition, experience, measurement plan. Priority-ordered with a default fallback. |
-| **the-price-point-finder** | Value metric selection, tier structure, price points, and price-increase timing, refuses to guess at your churn or conversion numbers. |
-| **the-leak-finder** | Diagnoses funnel drop-offs against industry benchmarks, identifies root causes, calculates the math to hit your targets, and prioritizes fixes. |
-| **the-first-mile-mapper** | Designs the post-signup activation flow, what happens before the "aha moment," in what order, and how drop-off gets diagnosed. |
-| **the-search-merchandiser** *(new)* | Reviews onsite search query logs, zero-result queries, synonym gaps, and merchandising rules, and refuses to run without a real query export. |
-| **the-spend-waste-finder** *(new)* | Triages which ad channels, campaigns, or audiences are wasting spend using ROAS, CAC, and spend concentration. |
-| **the-checkout-auditor** *(new)* | A direct UX audit of a checkout flow, form fields, payment coverage, trust signals, step count, from a walkthrough or screenshots. |
-| **the-pdp-reviewer** *(new)* | Reviews an existing product detail page and returns a prioritized edit brief, not a new page build. |
+| **ab-test** | Bayesian A/B test design with Thompson sampling, sample size calculations, guardrails, and exit criteria. Not just "test this," a full statistical brief. |
+| **landing-page** | Conversion-optimized landing pages. Outputs deployable HTML + Tailwind CSS, not a wireframe, a working page. |
+| **website-personalization** | Rules that map audience segments to content variants. Condition, experience, measurement plan. Priority-ordered with a default fallback. |
+| **pricing-strategy** | Value metric selection, tier structure, price points, and price-increase timing, refuses to guess at your churn or conversion numbers. |
+| **conversion-funnel** | Diagnoses funnel drop-offs against industry benchmarks, identifies root causes, calculates the math to hit your targets, and prioritizes fixes. |
+| **onboarding-flow** | Designs the post-signup activation flow, what happens before the "aha moment," in what order, and how drop-off gets diagnosed. |
+| **onsite-search** *(new)* | Reviews onsite search query logs, zero-result queries, synonym gaps, and merchandising rules, and refuses to run without a real query export. |
+| **paid-media-audit** *(new)* | Triages which ad channels, campaigns, or audiences are wasting spend using ROAS, CAC, and spend concentration. |
+| **checkout-optimization** *(new)* | A direct UX audit of a checkout flow, form fields, payment coverage, trust signals, step count, from a walkthrough or screenshots. |
+| **product-page-optimization** *(new)* | Reviews an existing product detail page and returns a prioritized edit brief, not a new page build. |
 
 ### Job 4: Data Analyst (10 skills)
 
@@ -92,17 +92,17 @@ Explains what moved and why, before anyone has to ask.
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-kpi-blueprint** | KPI dashboard specs with metric formulas, visualization types, alert thresholds, and section-by-section layout. Includes 8 templates. |
-| **the-lever-finder** | Growth strategy recommendations based on your business maturity. Identifies your top 3 growth levers and builds a quarterly plan. |
-| **the-cohort-tracker** | Groups customers by acquisition period and tracks retention or revenue across the periods that follow, as a cohort table. Now also computes a CAC payback window per cohort when acquisition spend is supplied. |
-| **the-benchmark-check** | Checks one of your metrics against a stated benchmark source, with an honest confidence read on how solid that comparison actually is. |
-| **the-anomaly-alert** | Flags which points in a metric's recent history are genuinely outside its normal range, using a stated trailing-average method. |
-| **the-margin-builder** *(new)* | Computes CM1/CM2/CM3 contribution margin for a product, order, or SKU set from the cost and revenue inputs you provide right now. |
-| **the-shipping-recovery-check** *(new)* | Isolates shipping cost recovery: real carrier cost vs. what's charged, and where a free-shipping threshold sits against median order value. |
-| **the-inventory-risk-scanner** *(new)* | SKU-level stockout and overstock risk from sales velocity, on-hand units, and lead time, with stated days-of-cover thresholds. |
-| **the-catalog-auditor** *(new)* | Audits product catalog completeness (titles, attributes, images, descriptions) at SKU scale, not a sampled spot-check. |
-| **the-returns-miner** *(new)* | Groups structured return and RMA reason codes to specific SKUs and surfaces the highest-volume root causes. |
-| **the-weekly-reporter** *(new)* | One weekly operating readout pulled from performance, traffic, lifecycle, inventory, and support exports, what changed, what didn't, and the 3 next actions. |
+| **kpi-dashboard** | KPI dashboard specs with metric formulas, visualization types, alert thresholds, and section-by-section layout. Includes 8 templates. |
+| **growth-strategy** | Growth strategy recommendations based on your business maturity. Identifies your top 3 growth levers and builds a quarterly plan. |
+| **cohort-analysis** | Groups customers by acquisition period and tracks retention or revenue across the periods that follow, as a cohort table. Now also computes a CAC payback window per cohort when acquisition spend is supplied. |
+| **benchmark-analysis** | Checks one of your metrics against a stated benchmark source, with an honest confidence read on how solid that comparison actually is. |
+| **anomaly-detection** | Flags which points in a metric's recent history are genuinely outside its normal range, using a stated trailing-average method. |
+| **contribution-margin** *(new)* | Computes CM1/CM2/CM3 contribution margin for a product, order, or SKU set from the cost and revenue inputs you provide right now. |
+| **shipping-cost-analysis** *(new)* | Isolates shipping cost recovery: real carrier cost vs. what's charged, and where a free-shipping threshold sits against median order value. |
+| **inventory-planning** *(new)* | SKU-level stockout and overstock risk from sales velocity, on-hand units, and lead time, with stated days-of-cover thresholds. |
+| **product-catalog-audit** *(new)* | Audits product catalog completeness (titles, attributes, images, descriptions) at SKU scale, not a sampled spot-check. |
+| **ecommerce-returns** *(new)* | Groups structured return and RMA reason codes to specific SKUs and surfaces the highest-volume root causes. |
+| **weekly-report** *(new)* | One weekly operating readout pulled from performance, traffic, lifecycle, inventory, and support exports, what changed, what didn't, and the 3 next actions. |
 
 ### Job 5: SDR (11 skills)
 
@@ -112,16 +112,16 @@ Builds and works the list, so outbound isn't a stale spreadsheet from last quart
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-list-builder** | Builds and qualifies a prospect list from your ICP, every lead scored Hot/Warm/Cold/Skip with cited evidence. |
-| **the-fit-scorer** | Scores an account list against your ICP criteria and returns priority tiers with a one-sentence rationale per account. |
-| **the-cold-opener** | Turns prospect research, a trigger signal, and a value prop into a complete cold email body under 120 words. |
-| **the-subject-line-lab** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
-| **the-sequence-doctor** | Audits a full cold email sequence, diagnoses each email's specific weakness, and rewrites the three worst-performing ones. |
-| **the-reply-classifier** | Sorts a batch of replies into Interested/Later/Referred/Objection/Dead/Angry with evidence and the next action for each. |
-| **the-inbox-zero-enforcer** | Processes a full unhandled inbox into Drafted/Escalated/Scheduled/Closed so nothing sits unworked. |
-| **the-list-cleaner** | Dedupes and flags a raw list, wrong titles, stale roles, wrong companies, broken data, before it hits a sequence. |
-| **the-call-booker** | Writes the booking message, reschedule, confirmation, and day-before reminder that gets a warm lead onto a calendar. |
-| **the-no-show-save** | Writes the 3-stage recovery sequence for a missed meeting, plus when to stop trying based on no-show history. |
+| **lead-list** | Builds and qualifies a prospect list from your ICP, every lead scored Hot/Warm/Cold/Skip with cited evidence. |
+| **lead-scoring** | Scores an account list against your ICP criteria and returns priority tiers with a one-sentence rationale per account. |
+| **cold-email** | Turns prospect research, a trigger signal, and a value prop into a complete cold email body under 120 words. |
+| **cold-email** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
+| **email-sequence** | Audits a full cold email sequence, diagnoses each email's specific weakness, and rewrites the three worst-performing ones. |
+| **inbox-management** | Sorts a batch of replies into Interested/Later/Referred/Objection/Dead/Angry with evidence and the next action for each. |
+| **inbox-management** | Processes a full unhandled inbox into Drafted/Escalated/Scheduled/Closed so nothing sits unworked. |
+| **list-cleaning** | Dedupes and flags a raw list, wrong titles, stale roles, wrong companies, broken data, before it hits a sequence. |
+| **appointment-setting** | Writes the booking message, reschedule, confirmation, and day-before reminder that gets a warm lead onto a calendar. |
+| **missed-meeting-email** | Writes the 3-stage recovery sequence for a missed meeting, plus when to stop trying based on no-show history. |
 
 ### Job 6: Account Executive (8 skills)
 
@@ -131,14 +131,14 @@ Runs the deal from first call to signature, and tells you honestly when it's sta
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-call-coach** | Pre-meeting prep and post-meeting coaching, talk ratio analysis, BANT/MEDDIC scoring, specific rewrites. |
-| **the-pipeline-scanner** | Full pipeline health analysis, stuck deals, risk signals, forecast by category, coverage ratio. |
-| **the-account-blueprint** | Account engagement plans with buying committee mapping and a 90-day week-by-week action plan per stakeholder. |
-| **the-deal-gauge** | Dual-axis scoring (health + intent) with independent trend tracking and full MEDDIC/BANT completeness checks. |
-| **the-win-loss-analyzer** | Ranks the real, evidence-backed reasons deals close or die across a batch of closed-won and closed-lost deals. |
-| **the-renewal-tracker** | Scores an existing account's renewal risk from usage and relationship signals, with the one highest-leverage action. |
-| **the-negotiation-coach** | Preps anchor, concession ladder, walk-away point, and calibrated questions for one specific deal negotiation. |
-| **the-objection-playbook** | Outputs the five most likely objections for a persona, each with an acknowledgment, response, and follow-up question. |
+| **call-preparation** | Pre-meeting prep and post-meeting coaching, talk ratio analysis, BANT/MEDDIC scoring, specific rewrites. |
+| **pipeline-review** | Full pipeline health analysis, stuck deals, risk signals, forecast by category, coverage ratio. |
+| **account-plan** | Account engagement plans with buying committee mapping and a 90-day week-by-week action plan per stakeholder. |
+| **opportunity-scoring** | Dual-axis scoring (health + intent) with independent trend tracking and full MEDDIC/BANT completeness checks. |
+| **win-loss-analysis** | Ranks the real, evidence-backed reasons deals close or die across a batch of closed-won and closed-lost deals. |
+| **opportunity-scoring** | Scores an existing account's renewal risk from usage and relationship signals, with the one highest-leverage action. |
+| **price-negotiation** | Preps anchor, concession ladder, walk-away point, and calibrated questions for one specific deal negotiation. |
+| **objection-handling** | Outputs the five most likely objections for a persona, each with an acknowledgment, response, and follow-up question. |
 
 ### Job 7: GTM Engineer (7 skills)
 
@@ -148,13 +148,13 @@ Builds the systems everyone else's work runs on top of.
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-routing-engine** | Designs the lead-to-opportunity layer, MQL scoring model, routing rules, and speed-to-lead SLAs. |
-| **the-enablement-kit** | One-pagers, ROI calculators, proposal templates, and playbooks mapped to persona and deal stage. |
-| **the-workflow-builder** | Marketing and sales automation workflows, trigger, condition, action, with error handling and retries. |
-| **the-transcript-miner** | Extracts deal signals, objections, confirmed pain points, and a stakeholder map from a raw sales call transcript. |
-| **the-competitor-dossier** | Deep-dives one competitor's public site into a structured profile, positioning, pricing, weaknesses. |
-| **the-lead-router** | Designs the actual assignment logic for a qualified lead, round-robin, territory, or score-threshold, with tie-break and fallback rules. |
-| **the-launch-readiness-check** *(new)* | A pre-launch go/no-go checklist for a specific product or campaign launch. |
+| **lead-management** | Designs the lead-to-opportunity layer, MQL scoring model, routing rules, and speed-to-lead SLAs. |
+| **sales-enablement** | One-pagers, ROI calculators, proposal templates, and playbooks mapped to persona and deal stage. |
+| **marketing-automation** | Marketing and sales automation workflows, trigger, condition, action, with error handling and retries. |
+| **call-notes** | Extracts deal signals, objections, confirmed pain points, and a stakeholder map from a raw sales call transcript. |
+| **competitive-analysis** | Deep-dives one competitor's public site into a structured profile, positioning, pricing, weaknesses. |
+| **lead-routing** | Designs the actual assignment logic for a qualified lead, round-robin, territory, or score-threshold, with tie-break and fallback rules. |
+| **product-launch-checklist** *(new)* | A pre-launch go/no-go checklist for a specific product or campaign launch. |
 
 ### Job 8: Performance Marketer (30 skills) *(new)*
 
@@ -180,49 +180,49 @@ paused change, and no skill invents a number.
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-brand-kit-reader** | Reads a live site into a working brand kit, offer, proof, voice, colour and type, plus an honest list of what the site never says. |
-| **the-verbatim-miner** | Mines reviews, threads and tickets for the exact words buyers use, sorted into triggers, pains, outcomes, objections and alternatives, with a source count per theme. |
-| **the-ad-library-miner** | Reads competitors' live ads for the two honest signals the Ad Library gives, variation count and longevity, then maps the white space nobody is running. |
-| **the-promise-sharpener** | Turns a mined pain into one promise line under 12 words, tested against the one-second rule, the anyone-test, and whether the offer actually keeps it. |
-| **the-angle-spread** | Five or six genuinely different angles for one offer, each a different WHO, PAIN and PROMISE, with what the algorithm learns from each. |
-| **the-copy-formula-picker** | Picks the two best-fit copywriting formulas for the placement and writes both with the structural beats labelled inline. |
-| **the-creative-producer** | Turns approved angles into finished on-brand ad images and stages only the human-picked keepers in the account library, with hashes. |
-| **the-targeting-verdict** | Sizes what targeting actually remains and returns one verdict, frequently "go broad and fix the message instead". |
-| **the-campaign-drafter** | The whole campaign as a paused draft, one objective, one broad ad set, one ad per angle, blocked if the conversion event is unverified. |
-| **the-lead-form-builder** | Native lead forms with one qualifying question that filters bots, drafted for review, and never a response time the business has not confirmed. |
-| **the-product-set-builder** | Catalog and product sets for dynamic ads, treating each set as a promise, gated on the pixel-to-catalog identifier match. |
-| **the-morning-ad-audit** | The read-only daily pass over one ad account, at most five findings ranked by dollars at stake, ending in "No changes were made." |
-| **the-fatigue-check** | The two-condition fatigue rule, plus a "looks tired, is not" section naming the auction shift or tracking break that is the likelier cause. |
-| **the-scale-pacer** | Budget rules that scale a winner without resetting learning, ~20% steps, pause rules, spend caps, all drafted for approval. |
-| **the-angle-scoreboard** | Reads the account by angle, separates platform-attributed numbers from your own, and ends with at most three supported decisions. |
-| **the-pixel-audit** | Audits whether the pixel and server-side events tell the truth, deduplication keys first, since a doubled count is a tracking break until proven otherwise. |
+| **brand-guidelines** | Reads a live site into a working brand kit, offer, proof, voice, colour and type, plus an honest list of what the site never says. |
+| **voice-of-customer** | Mines reviews, threads and tickets for the exact words buyers use, sorted into triggers, pains, outcomes, objections and alternatives, with a source count per theme. |
+| **meta-ad-library** | Reads competitors' live ads for the two honest signals the Ad Library gives, variation count and longevity, then maps the white space nobody is running. |
+| **value-proposition** | Turns a mined pain into one promise line under 12 words, tested against the one-second rule, the anyone-test, and whether the offer actually keeps it. |
+| **ad-concepts** | Five or six genuinely different angles for one offer, each a different WHO, PAIN and PROMISE, with what the algorithm learns from each. |
+| **ad-copy** | Picks the two best-fit copywriting formulas for the placement and writes both with the structural beats labelled inline. |
+| **ad-design** | Turns approved angles into finished on-brand ad images and stages only the human-picked keepers in the account library, with hashes. |
+| **audience-targeting** | Sizes what targeting actually remains and returns one verdict, frequently "go broad and fix the message instead". |
+| **google-ads-campaign** | The whole campaign as a paused draft, one objective, one broad ad set, one ad per angle, blocked if the conversion event is unverified. |
+| **lead-form** | Native lead forms with one qualifying question that filters bots, drafted for review, and never a response time the business has not confirmed. |
+| **product-feed** | Catalog and product sets for dynamic ads, treating each set as a promise, gated on the pixel-to-catalog identifier match. |
+| **daily-ad-check** | The read-only daily pass over one ad account, at most five findings ranked by dollars at stake, ending in "No changes were made." |
+| **ad-fatigue** | The two-condition fatigue rule, plus a "looks tired, is not" section naming the auction shift or tracking break that is the likelier cause. |
+| **scaling-facebook-ads** | Budget rules that scale a winner without resetting learning, ~20% steps, pause rules, spend caps, all drafted for approval. |
+| **facebook-ads-audit** | Reads the account by angle, separates platform-attributed numbers from your own, and ends with at most three supported decisions. |
+| **meta-pixel** | Audits whether the pixel and server-side events tell the truth, deduplication keys first, since a doubled count is a tracking break until proven otherwise. |
 
 **Paid search (12)**
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-search-term-miner** | Sorts the queries Google actually bought into keep, review and exclude, business fit first, and states that the report covers reported terms only. |
-| **the-negative-keyword-builder** | Approval-ready negatives at the narrowest useful scope, every row collision-checked against protected searches, because a bad negative leaves no evidence. |
-| **the-query-promoter** | Gives a proven query a deliberate keyword, ad group and page, or holds it rather than routing to the homepage by default. |
-| **the-search-intent-mapper** | Clusters queries by the answer each searcher needs, one promise per cluster, and reports unanswerable intent as a gap. |
-| **the-search-ad-writer** | A complete responsive search ad validated against every character limit, with a claim ledger tying each line to what the page supports. |
-| **the-quality-score-fixer** | Names which of the three components is the weak link behind a keyword worth keeping, with no fake cost-saving forecast. |
-| **the-conversion-goal-audit** | Decides whether conversion data can be trusted to bid on, marking every conclusion observed or suspected. |
-| **the-bid-strategy-picker** | Matches bidding to a trusted goal and mature data, asserting no universal conversion minimum, with a rollback and a fair read date. |
-| **the-search-scorecard** | Five to seven business-led numbers, each with its formula, source, target and caveat. |
-| **the-search-week-review** | Two complete equal periods compared, movement attributed to real entities, verdict held until conversion delay has elapsed. |
-| **the-delivery-triage** | Works the delivery blockers in dependency order and keeps observed blockers separate from suspected causes. |
-| **the-change-plan-builder** | Findings turned into an ordered plan where every item has an exact current state, a rollback, and a measurement window. |
+| **search-term-report** | Sorts the queries Google actually bought into keep, review and exclude, business fit first, and states that the report covers reported terms only. |
+| **negative-keywords** | Approval-ready negatives at the narrowest useful scope, every row collision-checked against protected searches, because a bad negative leaves no evidence. |
+| **keyword-expansion** | Gives a proven query a deliberate keyword, ad group and page, or holds it rather than routing to the homepage by default. |
+| **keyword-intent** | Clusters queries by the answer each searcher needs, one promise per cluster, and reports unanswerable intent as a gap. |
+| **responsive-search-ads** | A complete responsive search ad validated against every character limit, with a claim ledger tying each line to what the page supports. |
+| **google-ads-quality-score** | Names which of the three components is the weak link behind a keyword worth keeping, with no fake cost-saving forecast. |
+| **conversion-tracking** | Decides whether conversion data can be trusted to bid on, marking every conclusion observed or suspected. |
+| **smart-bidding** | Matches bidding to a trusted goal and mature data, asserting no universal conversion minimum, with a rollback and a fair read date. |
+| **ppc-reporting** | Five to seven business-led numbers, each with its formula, source, target and caveat. |
+| **google-ads-review** | Two complete equal periods compared, movement attributed to real entities, verdict held until conversion delay has elapsed. |
+| **google-ads-troubleshooting** | Works the delivery blockers in dependency order and keeps observed blockers separate from suspected causes. |
+| **google-ads-changes** | Findings turned into an ordered plan where every item has an exact current state, a rollback, and a measurement window. |
 
 **Cross-platform (2)**
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-cpa-diagnosis** | One ranked list of why acquisition cost moved across both platforms, each cause marked observed or suspected, including the read neither account gives alone: whether the two are bidding into the same people. |
-| **the-budget-reallocator** | Donors, recipients and three transfer scenarios across both platforms, ranked on marginal rather than average cost, every projected figure labelled as a projection. |
+| **cost-per-acquisition** | One ranked list of why acquisition cost moved across both platforms, each cause marked observed or suspected, including the read neither account gives alone: whether the two are bidding into the same people. |
+| **budget-optimization** | Donors, recipients and three transfer scenarios across both platforms, ranked on marginal rather than average cost, every projected figure labelled as a projection. |
 
 *Not built on purpose: a ROAS forecaster.* Every skill here refuses to invent a number, and
-`the-quality-score-fixer` explicitly forecasts no cost saving because no reliable conversion from
+`google-ads-quality-score` explicitly forecasts no cost saving because no reliable conversion from
 score to click cost exists. A forecasting skill would contradict the rule that makes the other 29
 worth trusting.
 
@@ -239,14 +239,14 @@ budget, or edit your catalog without you approving it.
 
 | Skill | What You Get |
 |-------|-------------|
-| **the-loop-designer** | Turns a recurring store question into a runnable loop: cadence, an objective gate that can fail, a stop condition, and a ceiling. Refuses to emit a loop whose gate can't evaluate false. |
-| **the-loop-ledger** | The state file at `.agents/store-loop-ledger.md` that every loop reads and appends to. What ran, what it flagged, what changed, what to stop flagging. The agent forgets between runs; this doesn't. |
-| **the-store-pulse** | The daily exception pass over orders, revenue, and spend. Reports only what moved outside its own trailing band, ranked by dollars at stake, not percentage. |
-| **the-margin-sentry** | Reruns the contribution-margin stack on a cadence and reports *crossings*: which SKUs went unprofitable since last run, split into losing-before-ads vs losing-only-because-of-ads. |
-| **the-stockout-spend-guard** | Cross-checks live ad spend against on-hand units and proposes pausing spend on what you can't ship. Matches on the grain the ads target, so a variant ad isn't checked against parent stock. |
-| **the-feed-watch** | Runs the feed audit repeatedly and reports the delta, so an overnight disapproval isn't buried under 400 known issues. Separates new from regressed, grouped by cause. |
-| **the-launch-watch** | Watches a new product's first weeks against pre-set signal thresholds and a hard test budget, then closes itself. Won't state a verdict on a sample below your minimum. |
-| **the-loop-auditor** | The checker in a maker-checker pair. Reviews another loop's proposal by trying to refute it, and defaults to reject. Catches gates that could never have failed. |
+| **automation-design** | Turns a recurring store question into a runnable loop: cadence, an objective gate that can fail, a stop condition, and a ceiling. Refuses to emit a loop whose gate can't evaluate false. |
+| **automation-ledger** | The state file at `.agents/store-loop-ledger.md` that every loop reads and appends to. What ran, what it flagged, what changed, what to stop flagging. The agent forgets between runs; this doesn't. |
+| **daily-sales-report** | The daily exception pass over orders, revenue, and spend. Reports only what moved outside its own trailing band, ranked by dollars at stake, not percentage. |
+| **margin-monitoring** | Reruns the contribution-margin stack on a cadence and reports *crossings*: which SKUs went unprofitable since last run, split into losing-before-ads vs losing-only-because-of-ads. |
+| **stockout-alerts** | Cross-checks live ad spend against on-hand units and proposes pausing spend on what you can't ship. Matches on the grain the ads target, so a variant ad isn't checked against parent stock. |
+| **shopping-feed** | Runs the feed audit repeatedly and reports the delta, so an overnight disapproval isn't buried under 400 known issues. Separates new from regressed, grouped by cause. |
+| **product-launch-tracking** | Watches a new product's first weeks against pre-set signal thresholds and a hard test budget, then closes itself. Won't state a verdict on a sample below your minimum. |
+| **automation-review** | The checker in a maker-checker pair. Reviews another loop's proposal by trying to refute it, and defaults to reject. Catches gates that could never have failed. |
 
 ---
 
@@ -357,16 +357,16 @@ Or just say: *"Help me set up my product context."*
 
 Tell Claude what you need in plain language:
 
-- *"Design a journey for onboarding new users"* (the-flow-architect)
-- *"Score this deal, here's what I know about it"* (the-deal-gauge)
-- *"Build me a landing page for our free trial"* (the-page-shipper)
-- *"Prep me for my demo with Acme Corp tomorrow"* (the-account-blueprint)
-- *"Where's my funnel leaking?"* (the-leak-finder)
-- *"What should our growth strategy be this quarter?"* (the-lever-finder)
-- *"Create a creative brief for LinkedIn ads"* (the-angle-vault)
-- *"Analyze my pipeline, here are my current deals"* (the-pipeline-scanner)
-- *"Is this quarter's churn rate actually bad?"* (the-benchmark-check)
-- *"Who should this inbound lead get routed to?"* (the-lead-router)
+- *"Design a journey for onboarding new users"* (customer-journey)
+- *"Score this deal, here's what I know about it"* (opportunity-scoring)
+- *"Build me a landing page for our free trial"* (landing-page)
+- *"Prep me for my demo with Acme Corp tomorrow"* (account-plan)
+- *"Where's my funnel leaking?"* (conversion-funnel)
+- *"What should our growth strategy be this quarter?"* (growth-strategy)
+- *"Create a creative brief for LinkedIn ads"* (creative-brief)
+- *"Analyze my pipeline, here are my current deals"* (pipeline-review)
+- *"Is this quarter's churn rate actually bad?"* (benchmark-analysis)
+- *"Who should this inbound lead get routed to?"* (lead-routing)
 
 You don't need to know the skill name. Describe the job and the right one activates.
 
@@ -374,13 +374,13 @@ You don't need to know the skill name. Describe the job and the right one activa
 
 Don't install all 98 on day one. You'll use nine of them and forget the rest.
 
-**Week one:** set up `product-context`, then run `the-account-blueprint` and `the-cold-opener` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
+**Week one:** set up `product-context`, then run `account-plan` and `cold-email` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
 
-**Week two:** add `the-objection-playbook` and `the-pipeline-scanner`. Sorting stalled deals and objections is where most pipelines actually leak.
+**Week two:** add `objection-handling` and `pipeline-review`. Sorting stalled deals and objections is where most pipelines actually leak.
 
-**Week three:** add `the-list-builder`, `the-fit-scorer`, and `the-signal-queue`, so you stop working a stale list.
+**Week three:** add `lead-list`, `lead-scoring`, and `intent-data`, so you stop working a stale list.
 
-**Week four:** add `the-flow-architect`, `the-page-shipper`, and `the-kpi-blueprint`, and let the whole thing run.
+**Week four:** add `customer-journey`, `landing-page`, and `kpi-dashboard`, and let the whole thing run.
 
 ## What to Never Hand Over
 
@@ -421,9 +421,9 @@ Skills are independent, use any one on its own. But they're more powerful togeth
  └─────────────┘
 ```
 
-**Example flow:** Run `the-lifecycle-mapper` to identify at-risk customers, feed that into `the-flow-architect` to design a retention flow, use `the-flow-architect` for the email content, set up `the-hypothesis-engine` to test two approaches, track results with `the-kpi-blueprint`.
+**Example flow:** Run `customer-segmentation` to identify at-risk customers, feed that into `customer-journey` to design a retention flow, use `customer-journey` for the email content, set up `ab-test` to test two approaches, track results with `kpi-dashboard`.
 
-**Paid flow:** Run `the-brand-kit-reader` on your site, mine real language with `the-verbatim-miner`, sharpen one line with `the-promise-sharpener`, spread it into angles with `the-angle-spread`, make the images with `the-creative-producer`, and launch a paused draft with `the-campaign-drafter`. Then read daily with `the-morning-ad-audit` and decide weekly with `the-angle-scoreboard`.
+**Paid flow:** Run `brand-guidelines` on your site, mine real language with `voice-of-customer`, sharpen one line with `value-proposition`, spread it into angles with `ad-concepts`, make the images with `ad-design`, and launch a paused draft with `google-ads-campaign`. Then read daily with `daily-ad-check` and decide weekly with `facebook-ads-audit`.
 
 ---
 
@@ -448,7 +448,7 @@ No. You need to type sentences. That's it. Claude Code runs in a terminal, but a
 Not necessarily. Claude Code and Cowork work with a regular Claude subscription (Pro at $20/mo, Max at $100/mo). An API key is only needed if you prefer pay-per-use billing.
 
 **Can I use just one skill?**
-Absolutely. Every skill works independently. Use `the-campaign-engine` without ever touching `the-deal-gauge`. But if you set up `product-context` first, the output will be tailored to your business.
+Absolutely. Every skill works independently. Use `email-campaign` without ever touching `opportunity-scoring`. But if you set up `product-context` first, the output will be tailored to your business.
 
 **Can my team use this?**
 Yes. Share the repo. Each person's `product-context` is local to their machine, so the same skills produce output customized to whoever is using them.

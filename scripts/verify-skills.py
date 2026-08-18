@@ -67,7 +67,10 @@ for p in SK:
     if desc and not re.search(r"\b(Boundary|Pairs with|differs from|Not for)\b", desc, re.I):
         P.append("no boundary clause - may collide with a neighbouring skill")
     rec["desc_main"] = re.split(r"Boundary:", desc)[0]
-    rec["desc_refs"] = set(re.findall(r"`(the-[a-z-]+|product-context)`", desc))
+    # Any backticked slug counts as a cross-reference. Skill names lost the `the-` prefix in the
+    # keyword rename, so this can no longer key off it. Non-skill slugs landing in the set are
+    # harmless: it is only ever tested for membership of another skill's name.
+    rec["desc_refs"] = set(re.findall(r"`([a-z][a-z0-9-]{2,})`", desc))
 
     # 2. body sections
     heads = re.findall(r"^##+ (.+)$", body, re.M)
