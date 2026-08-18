@@ -83,9 +83,28 @@ This skill has two modes. Ask: "Do you need pre-meeting prep or post-meeting coa
 
 End by naming what runs next, in one line:
 
-- `call-notes` after the call, mine the transcript for what was actually said
+**This skill has two modes and each needs its own next step.** The block below sits above Mode B, so
+say the right one for whichever mode you actually ran.
+
+- After **Mode A** (pre-call prep): `call-notes` once the call has happened, to mine the transcript
+  for what was actually said rather than what was planned.
+- After **Mode B** (post-call coaching): `opportunity-scoring` on the deal, because a coaching read
+  and a deal read from the same call answer different questions and the second one decides forecast.
 
 Say it as **Next:** followed by that skill.
+
+## Before you return
+
+**A check you cannot answer from the inputs you asked for is conditional, not skippable.** If
+anything this skill verifies needs data the Inputs section never collects, run it only when the user
+supplied that data. Otherwise say the check did not run and name the input it needed. Never skip it
+silently, and never invent the data to make it pass.
+
+**Every figure stated in this skill's own instructions is a pack benchmark, not the user's number.**
+Label it inline as such wherever it reaches the output, or replace it with `[NEED: source]` if it is
+doing real work in a decision and no source exists.
+
+Then run the nine-question check in `references/house-rules.md`.
 
 ## Mode B: Post-meeting coaching
 

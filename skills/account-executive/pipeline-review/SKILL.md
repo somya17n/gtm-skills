@@ -103,6 +103,19 @@ volunteers that they have them.
 State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
 The rest of the method in `references/house-rules.md` rule 8 applies.
 
+## Before you return
+
+**A check you cannot answer from the inputs you asked for is conditional, not skippable.** If
+anything this skill verifies needs data the Inputs section never collects, run it only when the user
+supplied that data. Otherwise say the check did not run and name the input it needed. Never skip it
+silently, and never invent the data to make it pass.
+
+**Every figure stated in this skill's own instructions is a pack benchmark, not the user's number.**
+Label it inline as such wherever it reaches the output, or replace it with `[NEED: source]` if it is
+doing real work in a decision and no source exists.
+
+Then run the nine-question check in `references/house-rules.md`.
+
 ## Output
 13. Before formatting the report, verify:
 - Are deals with no recorded two-way buyer contact reported as never-started and routed to removal,

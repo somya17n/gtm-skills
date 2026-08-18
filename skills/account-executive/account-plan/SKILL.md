@@ -169,6 +169,19 @@ Say it as **Next:** followed by that skill.
 
 ## Quality check before returning
 
+**Scope of these checks.** Two rules before you run them, because testing found both failures in
+most skills in this pack:
+
+- **A check you cannot answer from the inputs you asked for is conditional, not skippable.** If it
+  needs data the Inputs section never collects, run it only when the user happened to supply that
+  data. Otherwise say the check did not run and name the input it needed. Never skip it silently,
+  and never invent the data to make it pass. Inventing is the likelier failure and the worse one.
+- **Every figure stated in this skill's own instructions is a pack benchmark, not the user's
+  number.** Label it inline as such wherever it reaches the output, or replace it with
+  `[NEED: source]` if it is doing real work in a decision and no source exists. House rules 4b and
+  4c have the full version.
+
+
 15. Before returning the output, verify:
 - Was new-logo versus expansion established, and does the committee map and 90-day plan reflect
   inherited relationships where this is an expansion?

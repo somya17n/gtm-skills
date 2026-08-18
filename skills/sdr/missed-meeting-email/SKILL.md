@@ -60,6 +60,8 @@ Ask the user for:
 
 ## Output format
 
+**Answer first.** The hour-one message comes first, ready to send. The reasoning and the later stages go below it. House rule 2 governs, and it outranks the running order below.
+
 Write three messages:
 
 **The hour one**, sent within 60 minutes of the miss. Assumes something came up, because it usually did. Under 30 words. Zero guilt. One click to rebook.
@@ -79,6 +81,19 @@ Then one section:
 - The day-two message must differ from the hour-one message in more than just wording. It needs an actually different angle or reason to reply.
 
 ## Quality check before returning
+
+**Scope of these checks.** Two rules before you run them, because testing found both failures in
+most skills in this pack:
+
+- **A check you cannot answer from the inputs you asked for is conditional, not skippable.** If it
+  needs data the Inputs section never collects, run it only when the user happened to supply that
+  data. Otherwise say the check did not run and name the input it needed. Never skip it silently,
+  and never invent the data to make it pass. Inventing is the likelier failure and the worse one.
+- **Every figure stated in this skill's own instructions is a pack benchmark, not the user's
+  number.** Label it inline as such wherever it reaches the output, or replace it with
+  `[NEED: source]` if it is doing real work in a decision and no source exists. House rules 4b and
+  4c have the full version.
+
 
 Before returning the output, verify:
 - Was the no-show count for this contact established, and does the tone of message 1 reflect whether
