@@ -14,7 +14,9 @@ Find the products still being advertised that the store cannot ship. This is the
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -31,6 +33,10 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > without it and that any SKU with a known inbound should be removed before acting.
 
 ## How to run
+
+
+**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
+produce the output, then ask for the rest. Do not ask for all of them before writing anything.
 
 1. **Current inventory export**: SKU and on-hand units. Variant-level if the ads point at variants, because a parent product in stock can have the advertised size sold out.
 2. **Active ad spend by product** over the last 7 days, from whichever channels are running. Products with zero spend are out of scope.

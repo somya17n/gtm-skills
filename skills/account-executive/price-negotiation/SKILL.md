@@ -37,7 +37,9 @@ Build the negotiation plan for one deal before the conversation happens, not a g
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -106,7 +108,10 @@ If any check fails, fix it before returning.
 
 End by naming what runs next, in one line:
 
-- `contribution-margin` the usual next step from here
+- `opportunity-scoring` re-score the deal once terms move, because an above-median discount request
+  is itself a signal about how the deal is really going
+- `contribution-margin` only if you did NOT already have the margin going in. The Constraints section
+  asks for it up front, so on most runs this is already done and naming it here is a dead end.
 
 Say it as **Next:** followed by the one skill that matters most here.
 

@@ -16,7 +16,9 @@ Generate four hook variants for a LinkedIn post and recommend the strongest one.
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -55,6 +57,9 @@ Breaks the reader's expected take on the topic.
 
 **3. Specific Stat**: [hook text]
 Leads with a real number pulled from the draft or the user's input, never a fabricated statistic.
+**If the input contains no number, do not write this variant.** Say so in one line and replace it
+with a second Curiosity Gap or Contrarian variant. Inventing a plausible industry statistic to fill
+the slot is the single worst thing this skill can do, because it looks researched and is not.
 
 **4. Contrarian Stance**: [hook text]
 A direct, polarizing point of view stated in one line.
@@ -89,6 +94,7 @@ If any check fails, correct it before returning the output.
 
 End by naming what runs next, in one line:
 
+- `tone-of-voice` check the winning hook against the brand voice before it publishes
 - `cold-email` if this was for email, not LinkedIn
 
 Say it as **Next:** followed by the one skill that matters most here.

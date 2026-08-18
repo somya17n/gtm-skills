@@ -16,7 +16,9 @@ Write a complete, personalized cold email body from the user's research inputs. 
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -44,6 +46,10 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
    emailed on an opt-out assumption.
 
 ## How to run
+
+
+**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
+produce the output, then ask for the rest. Do not ask for all of them before writing anything.
 
 Ask the user for these inputs. If any are missing, ask for them before writing. Do not fill in company details from memory or guesswork.
 

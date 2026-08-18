@@ -20,7 +20,9 @@ Build a cohort retention or revenue table: group customers by the period they we
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -51,6 +53,10 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 >   scored on the same scale, and averaging them hides which is which.
 
 ## How to run
+
+
+**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
+produce the output, then ask for the rest. Do not ask for all of them before writing anything.
 
 Ask the user for these inputs. If any are missing, ask before building the table. Do not invent figures to fill gaps.
 
@@ -140,7 +146,10 @@ Say it as **Next:** followed by the one skill that matters most here.
 
 ## Quick mode
 
-Minimum to run: **acquisition month and the metric, per customer.** Two columns.
+Minimum to run: **acquisition month, the metric per customer, and the date the data was pulled.**
+Three things, not two. The pull date is not optional even here: without it you cannot tell a cell
+that is genuinely `N/A` from one that is `partial`, and the whole point of this skill is not
+reading a trend off a half-finished period.
 
 Never stop at the table. The table is the input to the answer, not the answer. Always close with
 which cohort broke the pattern, the most likely reason given what changed in that period, and

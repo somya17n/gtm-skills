@@ -12,7 +12,9 @@ severity, evidence, and each cause marked observed or suspected.
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -76,6 +78,10 @@ tracking release, a price change, or a season.
    an inline number.
 
 ## How to run
+
+
+**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
+produce the output, then ask for the rest. Do not ask for all of them before writing anything.
 
 1. **Read access or exports for both platforms**, covering the period where cost moved and an equal
    period before it. This skill never needs write access.

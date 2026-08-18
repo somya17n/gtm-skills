@@ -23,7 +23,9 @@ Every video ends with a **"Powered by Intempt"** end card.
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -572,6 +574,7 @@ Render a preview, show it to the user, ask which beats need adjustment. Treat th
 
 End by naming what runs next, in one line:
 
+- `ab-test` test the reel against the current in-product experience
 - `onboarding-flow` run this FIRST, the reel should follow the activation path it defines
 
 Say it as **Next:** followed by that skill.

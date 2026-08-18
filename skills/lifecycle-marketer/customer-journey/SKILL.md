@@ -12,7 +12,9 @@ Designs a multi-channel customer journey: the node sequence, conditional branchi
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -107,6 +109,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 End by naming what runs next, in one line:
 
+- `email-campaign` write the messages each node in the journey sends
 - `customer-segmentation` run this FIRST if the segments the flow targets are not defined yet
 
 Say it as **Next:** followed by that skill.

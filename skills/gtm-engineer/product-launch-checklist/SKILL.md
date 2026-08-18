@@ -17,13 +17,19 @@ Take a launch that's about to go live and produce a go, go-with-conditions, or h
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
+Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
+more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
+sharpen it. Five in one breath is the limit people actually answer.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
 em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 ## How to run
+
+
+**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
+produce the output, then ask for the rest. Do not ask for all of them before writing anything.
 
 Ask the user for these inputs. If any are missing, ask before scoring anything.
 
