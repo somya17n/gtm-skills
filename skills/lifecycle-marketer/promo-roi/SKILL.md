@@ -145,6 +145,18 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+Do not ask the user to define the recovery window. Propose one.
+
+Default to a window matching their purchase cycle: roughly one cycle after the promo ends, so
+pull-forward has time to show up. If the cycle is unknown, use 30 days for consumables and 90 for
+considered purchases, say which you picked and why, and let them override. A question the skill can
+answer itself should not be asked.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

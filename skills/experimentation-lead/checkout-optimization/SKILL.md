@@ -133,6 +133,18 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+**Ask for the URL first and walk the flow yourself** where the pages are publicly reachable, which
+they usually are up to the payment step.
+
+Only ask for screenshots of what you cannot reach: the logged-in steps, the payment page, the error
+states. Asking for a full screenshot set up front is a bigger job than the audit is worth to
+someone who has not seen the output yet.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

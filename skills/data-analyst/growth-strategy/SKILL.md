@@ -94,6 +94,21 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by that skill.
 
+## Quick mode
+
+**Infer the maturity read, do not interrogate for it.** Testing flagged exactly this: it kept
+asking instead of working from what it already had.
+
+Team size, traffic, revenue and whether they have a lifecycle programme already tell you the stage.
+State the read you made and the evidence for it in two lines, then let the user correct it. One
+correction beats five questions.
+
+Lead with the **top three levers, ranked, with the recommendation.** The full scored list goes below
+under its own heading, not above the answer.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Output
 
 13. Before delivering, verify:

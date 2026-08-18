@@ -107,6 +107,18 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+Most stores do not log zero-result queries. Do not stop there.
+
+Without the log, work from the catalog instead: the terms shoppers would plausibly use for each
+category, checked against what the catalog actually calls them. The gap between the two IS the
+synonym list, and it is derivable without any search data. Say it is catalog-derived rather than
+observed, and name query logging as the thing that would make it exact.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

@@ -152,6 +152,16 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+Minimum to run: **price and unit cost.** That gives CM1, which is where most of the surprise lives.
+Add shipping and payment fees for CM2, and ad spend for CM3, whenever the user has them. Never block
+on the full stack. Say which CM level you got to in the first line, and name the one missing cost
+most likely to change the ranking.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

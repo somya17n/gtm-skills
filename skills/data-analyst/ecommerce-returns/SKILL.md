@@ -146,6 +146,18 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by that skill.
 
+## Quick mode
+
+A messy export is normal. Take it.
+
+If reason codes are free text rather than a clean taxonomy, group them yourself into fit, quality,
+not-as-described, damaged, changed-mind and other, then say you did and show the grouping so the user
+can correct it. If returns are not tied to SKUs, work at category level and say so. Refusing a messy
+CSV means refusing most real stores.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

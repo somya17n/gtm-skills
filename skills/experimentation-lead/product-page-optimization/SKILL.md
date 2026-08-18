@@ -112,6 +112,17 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+**Ask for the URL and fetch the page yourself.** Do not ask anyone to paste a product page.
+
+Fetch the page, then ask only for what is not on it: the conversion rate if they have it, and the
+return reasons for that SKU if any. If reviews and buyer questions are on the page, read them from
+there. If the page cannot be fetched, ask for a screenshot, and only then for a paste.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

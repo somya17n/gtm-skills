@@ -147,30 +147,53 @@ back a draft to correct.
    surfaces disagreements between what the site says and what the founder believes, which is itself
    worth recording.
 
-7. Then ask only for the gaps from step 5, ONE AT A TIME. Wait for each answer before asking the next. If the user provides multiple answers at once, accept them and only ask remaining questions.
+### Ask five now, the rest on demand
 
-   a. **Company**: What is your company name, website URL, and a one-line description of what you do?
+Thirteen questions in a row is why people abandon setup. Testing found exactly this: "a lot of need
+input spaces where I have to provide the input, for me it's confusing."
 
-   b. **Business model**: Which best describes your model: SaaS, eCommerce, marketplace, or other?
+So the list below is tiered. **Only a, b, c, e and h2 are asked during setup.** Those five make the
+context file useful to every skill in the pack. Everything else is written into the file as
+`[NOT YET SET]` with the skills it blocks named beside it, and gets filled the first time one of
+those skills actually needs it.
 
-   c. **ICP**: Who is your ideal customer? (persona/title, company size, industry)
+Say this at the start, so the user knows the short version is deliberate and not a shortcut:
 
-   c2. **Pain points**: What are their top 2-3 pain points?
+```
+Five questions and you're set up. I'll leave the rest blank and ask only if a skill needs one.
+```
 
-   d. **Buying committee**: Who else is involved in the buying decision? List each role and their primary concern. If single decision-maker or B2C, note that and skip buying committee mapping.
+When a later skill hits a `[NOT YET SET]` field, it asks for that one field, then writes it back.
+The file fills itself over weeks of real use rather than in one sitting where half the answers are
+guesses anyway.
 
-   e. **Brand voice**: Pick a voice: warm, bold, playful, authoritative, or direct. Are there any banned words or required themes?
+Never ask for a field the research in Phase 0 already answered. Bring those back as a draft to
+correct, never as a question.
 
-   f. **Customer lifecycle**: Use the default 6 stages (At Risk, Needs Attention, New, Promising, Regulars, Champions) or define custom stages? If the user picks defaults, read `references/lifecycle-stages.md` for default stage definitions and scoring weights.
+7. Ask for the gaps from step 5, ONE AT A TIME, tier 1 only during setup. Wait for each answer before asking the next. If the user provides multiple answers at once, accept them and only ask remaining questions.
 
-   g. **Scoring**: What does "high intent" look like for your business? What does "at risk" look like?
+   a. **Company** _(tier 1, asked at setup)_: What is your company name, website URL, and a one-line description of what you do?
 
-   h. **Design**: where does the brand system actually live? Ask for the pointer (a tokens file, a
+   b. **Business model** _(tier 1, asked at setup)_: Which best describes your model: SaaS, eCommerce, marketplace, or other?
+
+   c. **ICP** _(tier 1, asked at setup)_: Who is your ideal customer? (persona/title, company size, industry)
+
+   c2. **Pain points** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: What are their top 2-3 pain points?
+
+   d. **Buying committee** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: Who else is involved in the buying decision? List each role and their primary concern. If single decision-maker or B2C, note that and skip buying committee mapping.
+
+   e. **Brand voice** _(tier 1, asked at setup)_: Pick a voice: warm, bold, playful, authoritative, or direct. Are there any banned words or required themes?
+
+   f. **Customer lifecycle** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: Use the default 6 stages (At Risk, Needs Attention, New, Promising, Regulars, Champions) or define custom stages? If the user picks defaults, read `references/lifecycle-stages.md` for default stage definitions and scoring weights.
+
+   g. **Scoring** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: What does "high intent" look like for your business? What does "at risk" look like?
+
+   h. **Design** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: where does the brand system actually live? Ask for the pointer (a tokens file, a
       Figma library, a brand PDF, a repo path) and record that, plus style preference (minimal,
       editorial, bold, luxury) and any preferred creative angles or imagery. Record exact values only
       if the user supplies them; never transcribe a hex code inferred from a screenshot or a word.
 
-   h2. **Proof points**: What are the 2-3 strongest specific results you can name in writing? For each,
+   h2. **Proof points** _(tier 1, asked at setup: the copy skills hard-fail without it)_: What are the 2-3 strongest specific results you can name in writing? For each,
       the customer (named, or the industry and size if they will not be named), the **number**, the
       timeframe, and whether it is publicly citable or internal-only. This is the field the copy skills
       cannot work without: `cold-email`, `sales-enablement`, `landing-page`,
@@ -179,15 +202,15 @@ back a draft to correct.
       [NEEDS INPUT] and say which skills it will block, so it is discovered here rather than mid-email.
       Never soften a vague claim into a proof point: "significant time savings" is not one.
 
-   i. **Metrics**: What is your north star metric? List 2-3 secondary metrics and current baselines if known.
+   i. **Metrics** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: What is your north star metric? List 2-3 secondary metrics and current baselines if known.
 
-   j. **Competitive landscape**: Who are your 2-3 main competitors, and for each, the one-line reason a prospect picks you over them (or them over you)? If the user doesn't know, note it as [NEEDS INPUT] rather than guessing a competitor's positioning.
+   j. **Competitive landscape** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: Who are your 2-3 main competitors, and for each, the one-line reason a prospect picks you over them (or them over you)? If the user doesn't know, note it as [NEEDS INPUT] rather than guessing a competitor's positioning.
 
-   k. **Objections**: What are the top 2-3 objections you hear in sales or support, and how do you actually respond to each? If none are known yet, note [NEEDS INPUT].
+   k. **Objections** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: What are the top 2-3 objections you hear in sales or support, and how do you actually respond to each? If none are known yet, note [NEEDS INPUT].
 
-   l. **Switching dynamics**: What pushes a customer to finally switch away from their current solution (or from doing nothing), and what makes them anxious about switching to you? One or two sentences each is enough.
+   l. **Switching dynamics** _(tier 2, leave as [NOT YET SET] until a skill needs it)_: What pushes a customer to finally switch away from their current solution (or from doing nothing), and what makes them anxious about switching to you? One or two sentences each is enough.
 
-   m. **Sending identity** (skip if the user does no outbound): the legal entity name and **postal
+   m. **Sending identity** _(tier 2, leave as [NOT YET SET] until a skill needs it)_ (skip if the user does no outbound): the legal entity name and **postal
       address** to use in a commercial email footer, the countries recipients are in, and whether a
       **cross-sequence suppression process** exists that honours reply-based opt-outs across every
       sequence and sending domain. Capture it once here so `cold-email`, `email-campaign` and

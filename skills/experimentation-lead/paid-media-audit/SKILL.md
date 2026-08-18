@@ -96,6 +96,17 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+Start at channel level. **Spend and revenue per channel is enough for a first pass**, and it is
+usually enough to find where the waste is.
+
+Only ask for campaign, ad set and audience breakdowns for the one or two channels that look wrong.
+Asking for the full export up front is how this skill gets abandoned before it runs once.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

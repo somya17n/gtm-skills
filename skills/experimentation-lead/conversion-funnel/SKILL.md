@@ -117,6 +117,18 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by that skill.
 
+## Quick mode
+
+A rough description beats nothing. Take it.
+
+If the user has stage-by-stage numbers, use them. If they have a screenshot of a funnel report, read
+it. If they only have "about 10,000 visitors and 40 orders", work with that: it still gives an
+overall rate to compare against benchmarks, and it still tells you which stage to instrument first.
+Say which mode you ran in.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Quality check before returning
 
 14. Before returning the output, verify:

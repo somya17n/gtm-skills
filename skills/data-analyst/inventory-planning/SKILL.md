@@ -155,6 +155,16 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+Minimum to run: **SKU, units on hand, units sold in the last 30 days.** Three columns, any format.
+That is enough for days-of-cover and a stockout list, which is most of the value. Lead times, safety
+stock and supplier terms sharpen the reorder dates; without them, say the dates are cover-based and
+assume nothing about resupply.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

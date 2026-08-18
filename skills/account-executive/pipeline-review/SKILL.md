@@ -85,6 +85,18 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by that skill.
 
+## Quick mode
+
+Most people do not know their own stage-velocity norms, so do not open by asking for them.
+
+Derive the norms from the export itself: median days in stage across the deals present is a
+serviceable baseline, and it is theirs rather than an industry average. Say it is self-derived and
+note that it skews if the pipeline is unusually young. Only ask for stated norms if the user
+volunteers that they have them.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Output
 13. Before formatting the report, verify:
 - Are deals with no recorded two-way buyer contact reported as never-started and routed to removal,

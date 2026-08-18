@@ -110,6 +110,16 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+Minimum to run: **what you charge for shipping, and one real carrier invoice total for a month.**
+Zone-level cost is the full method, and almost nobody tracks it. With the blended number you can
+still say whether shipping is subsidised overall and by roughly how much. Say it is blended, not
+banded, and name zone data as the one input that would change the answer.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:

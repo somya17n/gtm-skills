@@ -127,6 +127,19 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by that skill.
 
+## Quick mode
+
+**Quick mode is the default for a first pass.** Full mode is the Bayesian design with priors,
+power and a stopping rule, and it reads like a research paper to someone who wanted to know whether
+to bother.
+
+Quick mode: the hypothesis written so it can fail, the one metric that decides it, the minimum
+sample per variant, and roughly how long that takes at their traffic. Four lines. Offer full mode
+after, and only run it if they say yes or the decision is expensive or hard to reverse.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Quality check before returning
 
 15. Before returning the output, verify:

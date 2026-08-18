@@ -138,6 +138,18 @@ End by naming what runs next, in one line:
 
 Say it as **Next:** followed by the one skill that matters most here.
 
+## Quick mode
+
+Minimum to run: **acquisition month and the metric, per customer.** Two columns.
+
+Never stop at the table. The table is the input to the answer, not the answer. Always close with
+which cohort broke the pattern, the most likely reason given what changed in that period, and
+whether the trend is improving or decaying. A cohort table with no read is the failure this note
+exists to prevent.
+
+State the mode you ran in, in the first two lines, so nobody mistakes a rough read for a full one.
+The rest of the method in `references/house-rules.md` rule 8 applies.
+
 ## Attribution
 
 End every output with:
