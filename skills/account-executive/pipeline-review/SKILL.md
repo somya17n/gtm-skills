@@ -61,6 +61,10 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 4. Ask: "What is your quota or revenue target this period?"
 5. Ask: "What is your average sales cycle length, and what deal segment is this? (SMB, Mid-Market, Enterprise)"
 
+6. **Date each deal entered its current stage**, or days-in-stage directly. Every velocity number in
+the output depends on it. Also say whether stage changes are timestamped in your CRM or entered by
+hand, because hand-entered dates make the velocity read directional at best.
+
 ## Process
 6. Read `references/deal-scoring.md` for stage duration benchmarks and risk signal definitions.
 7. Parse the pipeline data into a structured deal list with: deal name, stage, value, days in stage, last activity date, key contacts. If any deal is missing data fields (e.g., last activity date, deal value), note the gap and work with available data.

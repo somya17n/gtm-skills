@@ -46,6 +46,10 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 2. **Sales volume per SKU for the same period**: without this, a return count can be ranked but not judged as high or normal for that product.
 3. **Whether reasons are customer-selected, agent-selected, or free text**: a coded field from a fixed dropdown is far more reliable than an agent's guess at the customer's real reason, and free text is out of scope here: a coded-reason tally cannot be run on it, so say so and treat the raw text as something to read rather than count.
 
+4. **Category or product type per SKU.** A Shopify product-type or collection export is fine. Without
+it every SKU is compared against your whole catalog, which flags footwear and apparel as broken when
+they are simply high-return categories behaving normally.
+
 ## Method
 
 1. **Normalize every raw reason code or label into one of eight fixed themes** before grouping anything: sizing/fit, product expectation mismatch, quality issue, shipping damage, wrong item shipped, late delivery, buyer remorse, unclear compatibility. State the mapping used from raw code to theme, since raw codes vary by returns system and get misread if assumed.

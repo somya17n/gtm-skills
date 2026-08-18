@@ -53,6 +53,10 @@ Ask the user for:
 2. **Closed-lost deals**: for each, company, deal size, stage it died at, and the reason it was lost in the rep's own words
 3. **Minimum sample size check**: if fewer than 5 deals total are provided, tell the user the sample is too small for a reliable pattern and ask if they want to proceed anyway with that caveat stated in the output
 
+4. **What they did next, per loss.** Who they bought instead, whether they renewed the incumbent, or
+where the trial stalled. Say if you do not have it. The quality check asks you to corroborate stated
+reasons against behaviour, and without this the check cannot run, so it gets skipped or invented.
+
 ## Output format
 
 **The ranking**, a table of every distinct reason that appeared across both lists, ranked by frequency:

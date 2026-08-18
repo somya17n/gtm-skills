@@ -1,5 +1,12 @@
 # Dashboard Templates
 
+
+> **Provenance.** The numbers in this file are **pack benchmarks**, not the reader's own data, and
+> most carry no named study behind them. When you state one in output, label it inline as a pack
+> benchmark so nobody mistakes it for a figure derived from their business. Where a number is doing
+> real work in a decision and you cannot name a source for it, write `[NEED: source]` instead of the
+> number. House rule 4b covers this and binds every skill that reads this file.
+
 Reference for 8 out-of-the-box dashboard templates, metric calculation formulas, cohort analysis methodology, attribution models, and alert thresholds for anomaly detection.
 
 ---

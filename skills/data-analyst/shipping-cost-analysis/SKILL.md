@@ -34,6 +34,10 @@ Ask the user for these inputs. If any are missing, ask before banding anything.
 3. **Current free-shipping threshold**, if one exists.
 4. **Known surcharges**: fuel, residential, oversize, remote area, or address-correction charges, and whether they're broken out on the invoice or bundled into one total.
 
+5. **The exact date range the export covers, and whether it was a normal trading month.** One month of
+carrier invoices is not seasonal truth. If the period included a promo, a peak or a holiday, say so,
+because the answer changes and the skill's own rule says to flag it.
+
 ## Method
 
 1. **Exclude refund, adjustment, and unreadable rows before computing anything.** A negative order value is a refund or adjustment, not an order; a row with a blank or unreadable order value or shipping cost can't be banded or totaled honestly either. Drop both kinds from every band, zone, and total, and report each excluded count separately (refunds/adjustments vs. unreadable) so totals stay consistent and a blank-cost row never gets silently treated as zero cost.

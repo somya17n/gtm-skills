@@ -54,6 +54,11 @@ Ask the user for these inputs. If any are missing, note the gap in the output ra
 4. **The owner's goal**: revenue, margin, new customers, repeat rate, or operational stability. This decides which changes count as material.
 5. **Outputs from other skills, if the user ran them this week**: a `contribution-margin` read, a `cohort-analysis` table, a `checkout-optimization` finding, etc. Treat these as first-class inputs, not just narrative color.
 
+6. **Eight weeks of history for each metric you want classified**, not just this week and one comparison
+period. Classifying a move as normal or unusual needs the metric's own variability, and two points
+cannot give you that. If you only have two, say so and the moves get reported without a
+normal-or-not verdict rather than with a guessed one.
+
 ## Method
 
 1. Summarize the week's numbers against the comparison period: revenue, orders, traffic, conversion rate, order value, and any category totals the user supplied (traffic, lifecycle, inventory, support, returns).

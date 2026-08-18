@@ -109,6 +109,38 @@ that sounds right.
 
 Being caught inventing one number costs more trust than twenty honest gaps.
 
+## 4b. Label every number that is not the user's
+
+Live-testing found this in nine skills out of twenty-six. A skill hardcodes a benchmark ("around 70%
+of carts are abandoned", "deals discounted 15%+ close at ~19%"), tells the model to state it, and
+names no source. It arrives in the output looking exactly like a number derived from the user's own
+data, and the reader has no way to tell the difference.
+
+Three labels, one of which must appear beside every figure you state:
+
+- **The user's own.** From data they gave you. No label needed.
+- **`pack benchmark`.** From a reference file in this pack. Say so inline: "12-15% is the pack
+  benchmark, not your number." The reader then knows to sanity-check it against their own data.
+- **`[NEED: source]`.** You are about to state a third-party statistic and cannot name where it came
+  from. Write the marker instead of the number. It is better to ship a visible hole than an
+  authoritative-looking figure nobody can check.
+
+This binds reference files too. A benchmark table in `references/` that carries no publisher, study
+and year is a `[NEED: source]`, however confident it reads.
+
+## 4c. Every check must be answerable from the inputs you asked for
+
+Found in seven skills. The quality check demands the output be corroborated against data the input
+list never collects, so the skill cannot pass its own gate on its own inputs. The model then either
+ignores the check or invents the data to satisfy it, and inventing is the likelier of the two.
+
+Before returning, read your own check list against your own input list. If a check needs something
+the skill never asks for, one of the two is wrong. Add the input, or scope the check to the runs
+where that input exists.
+
+The same applies to a quick mode: if the quick path collects less, the checks it runs have to be the
+subset that path can actually answer.
+
 ## 5. Point at what comes next
 
 Every skill ends by naming the skill that runs next, and why. A skill that produces a list without

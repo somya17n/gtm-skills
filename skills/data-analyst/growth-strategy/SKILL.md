@@ -63,6 +63,10 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 4. Ask: "What's your current biggest challenge?"
 5. Ask: "What channels are you currently using? What's working and what isn't?"
 
+6. **Per channel: monthly spend or hours, leads or demos produced, and closed-won if you track it.**
+If your attribution stops earlier than closed-won, say where it stops. The Channel Priorities table
+is a required output and this is the only input that feeds it.
+
 ## Process
 
 6. Read `.agents/product-context.md` to pull business model, north star metric, current baselines, lifecycle stages, and ICP.
