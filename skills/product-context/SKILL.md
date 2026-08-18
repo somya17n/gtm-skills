@@ -253,6 +253,15 @@ correct, never as a question.
 
 17. Write the assembled document to `.agents/product-context.md`, with **Version** and **Changelog** (newest entry first) as the final section at the bottom of the file.
 
+## Chain with
+
+End by naming what runs next, in one line:
+
+- `competitive-analysis` to fill the competitor fields with real research instead of leaving them
+  `[NOT YET SET]`, since that is the tier-2 field the most skills end up waiting on
+
+Say it as **Next:** followed by that skill.
+
 ## Output
 
 18. Before writing the file, verify:

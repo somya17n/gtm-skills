@@ -43,6 +43,24 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > first failure. A project that does not build is worse than a spec, because the user discovers it after
 > installing dependencies.
 
+## Inputs
+
+Ask for these five before planning a single beat. The activation event is the one this skill cannot
+run without, because every shot is built backward from it.
+
+1. **The activation event.** The exact moment a new user first gets real value. Not signup, not
+   onboarding-complete. If the user is not sure, ask what a customer does in week one that predicts
+   they stay, and use that.
+2. **Platform.** iOS, Android, or web. It sets the frame size and the cursor rules.
+3. **The path to that event.** The screens a new user passes through to reach it, in order.
+4. **Brand.** Colours, logo, and font, or the pointer to where they live. If
+   `.agents/product-context.md` has a design section, read it and confirm rather than asking again.
+5. **Length.** Seconds, and where it will play (in-product, app store, paid social). Say 30 seconds
+   in-product if they have no view.
+
+If they cannot name the activation event, stop and work that out first. A video built around
+signup-complete sells the wrong moment, and no amount of motion polish fixes it.
+
 ## Conversion context: why this matters
 
 Intempt's SaaS product funnel benchmark:
