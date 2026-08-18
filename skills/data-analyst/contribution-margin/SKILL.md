@@ -74,7 +74,12 @@ Build the stack in this exact order. Never blend fixed overhead into it.
 4. **CM1** = product revenue − COGS. Never substitute net revenue here; shipping charged to the customer is not product margin, and folding it in inflates CM1 for any SKU with high shipping revenue relative to product price.
 5. **Payment fee** = (net revenue × payment fee %) + (fixed per-order fee × order count). The fixed fee is per *order*, not per unit: use the orders count if given, else convert with average units per order, else charge it per unit and flag that this overstates fees on multi-unit baskets.
 6. **Platform fee** = net revenue × platform/channel fee %.
-7. **CM2** = CM1 − payment fee − platform fee − shipping cost − packaging cost. Missing lines count as 0 and get named in missing data, never folded in silently. **CM2%** = CM2 ÷ net revenue × 100, withheld (state "withheld, COGS missing" instead of a number) for any SKU flagged in step 3.
+7. **CM2** = CM1 + shipping charged to customer − payment fee − platform fee − shipping cost
+   − packaging cost. The shipping the customer paid has to be credited back here, because CM1
+   deliberately excluded it while the shipping you paid the carrier is being subtracted. Leave it
+   out and every SKU that charges for delivery is understated by the whole shipping line, which is
+   enough to flip a profitable SKU to negative. The same reasoning is why **CM2%** divides by net
+   revenue: the denominator already includes shipping revenue, so the numerator has to as well. Missing lines count as 0 and get named in missing data, never folded in silently. **CM2%** = CM2 ÷ net revenue × 100, withheld (state "withheld, COGS missing" instead of a number) for any SKU flagged in step 3.
 8. **CM3** = CM2 − ad spend (missing ad spend treated as 0, flagged the same way).
 9. **Breakeven ROAS** = net revenue ÷ CM2, only when CM2 > 0 and COGS was present. If CM2 ≤ 0, say the SKU is already unprofitable before any ad ran.
 10. **Rank SKUs by dollar contribution (CM2 or CM3), never by margin percentage alone.** A 60%-margin SKU selling 4 units matters less than a 22%-margin SKU carrying the catalog.

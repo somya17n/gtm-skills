@@ -66,4 +66,41 @@ for n, ps in sorted(problems.items(), key=lambda x: -len(x[1])):
     print("\n  %s (%d)" % (n, len(ps)))
     for p in ps[:5]:
         print("     - " + p[:130])
+
+# ---------------------------------------------------------------------------
+# WARNING SECTION, non-blocking.
+#
+# Live-testing found the single most common defect across the pack: a skill states an
+# external statistic ("around 70% of carts are abandoned") with no source anywhere near
+# it, then instructs the model to repeat it to the user. That violates house rule 4 on
+# every run, and the user cannot tell an unsourced number from a sourced one.
+#
+# This does NOT fail the build, because the same shapes appear in weightings ("velocity:
+# 25%"), thresholds the skill itself defines ("more than 25% away"), and worked-example
+# arithmetic. Those are legitimate. Someone has to look. It is here so the list is short
+# and in front of you rather than discovered by a user.
+CLAIM = re.compile(r'(?:around |roughly |about |~|median |average |typical(?:ly)? )?\b\d{1,3}(?:\.\d)?%', re.I)
+EXTERNAL = re.compile(r'\b(of (teams|customers|buyers|shoppers|companies|users|deals|carts)'
+                      r'|industry|benchmark|abandon|convert at|close at|studies|study)\b', re.I)
+SOURCED = re.compile(r'source|according to|per [A-Z]|Institute|study|report|\bn=|\[NEED|references/', re.I)
+
+warn = collections.defaultdict(list)
+for f in FILES:
+    name = f.replace("\\", "/").split("/")[-2]
+    t = open(f, encoding="utf-8").read()
+    for m in CLAIM.finditer(t):
+        ctx = t[max(0, m.start() - 220):m.end() + 220]
+        if EXTERNAL.search(ctx) and not SOURCED.search(ctx):
+            warn[name].append(re.sub(r'\s+', ' ', t[max(0, m.start() - 60):m.end() + 60]).strip())
+
+if warn:
+    print("\n" + "=" * 70)
+    print("WARNING: statistic with no source nearby (%d skills, %d spots). Not a build failure."
+          % (len(warn), sum(len(v) for v in warn.values())))
+    print("Check each: a weighting or a threshold the skill defines is fine, a borrowed")
+    print("benchmark is not. Add the source, or write it as [NEED: source].")
+    print("=" * 70)
+    for n, spots in sorted(warn.items(), key=lambda x: -len(x[1])):
+        print("  %-28s %d" % (n, len(spots)))
+
 sys.exit(1 if problems else 0)

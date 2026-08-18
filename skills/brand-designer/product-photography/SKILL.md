@@ -159,7 +159,8 @@ Say it as **Next:** followed by that skill.
 | Color Palette | [colors] | [why] |
 
 **Character Direction** (if applicable)
-- Type, wardrobe, pose, identity slot.
+- Role, action, wardrobe, framing. Describe the person by what they are doing. State no demographic
+  unless the user asked for one.
 
 **Technical Specs**
 - Aspect ratio, resolution, export format.

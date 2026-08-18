@@ -52,6 +52,11 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## How to run
 
+Ask the first five. Produce the playbook from those, then offer to sharpen it with the rest. Seven
+questions before any output is the thing the five-question rule exists to prevent.
+
+**Ask now:** 1, 2, 3, 6 and 7 below. **Ask after the first pass:** 4, 5 and the optional one.
+
 Ask the user for:
 1. Their product description in one sentence (what it does and what problem it solves)
 2. Their ICP (company size, industry, current tool stack if known)

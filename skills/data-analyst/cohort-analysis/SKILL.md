@@ -71,8 +71,8 @@ A cohort table: acquisition period as rows, periods-since-acquisition as columns
 ```
 Cohort         Month 0   Month 1   Month 2   Month 3
 Jan 2026        100%       62%       48%       41%
-Feb 2026        100%       65%       51%       N/A
-Mar 2026        100%       68%       N/A       N/A
+Feb 2026        100%       65%       51%       partial
+Mar 2026        100%       68%       partial   N/A
 ```
 
 Below the table:
