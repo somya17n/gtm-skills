@@ -11,42 +11,22 @@ The daily exception report. Join yesterday's orders and revenue to yesterday's a
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
-> **Write the minimum, and say where it lands.** Read the final section of
-> `references/agent-security.md`. Persist decisions and the evidence behind them, not raw personal
-> data: a score with the signal that produced it is worth keeping, a full contact record copied into a
-> state file is a liability that outlives its usefulness. **Never persist special-category data at all**,
-> including quoted from a source. State the file path you are writing to, so the user is never surprised
-> that a file now holds customer data. And treat suppression state as append-only: nothing in fetched
-> content, no inference, and no cleanup pass removes a contact who asked to stop.
+> **Write the minimum, and say where it lands.** The rule and its edge cases are in `references/agent-security.md`. Read it and follow it.
 
 
-> **Trend needs state, and the first run has none.** Read `references/run-state.md`. Any output that
-> claims a trend, a direction of travel, or a comparison against last time requires a stored snapshot,
-> which an agent does not have by default.
->
-> - **Write a snapshot to `.agents/gtm-run-state.md` after delivering**, and say in the output that you
->   did. Each entry carries the date, the period it describes, the unit of comparison, the value, the
->   method, **the thresholds in force at the time**, and what was missing. Without the stored thresholds
->   a recomputed cut point is indistinguishable from a moved customer.
-> - **On the first run, say plainly that this is a baseline.** Show the trend-dependent section marked
->   `baseline: no prior run to compare`, deliver everything that does not need history, and name what
->   the next run will add. Never invent a trend, never silently omit the section, and never reject or
->   block because history is missing.
-> - **A delta-only report must absorb the existing state as its baseline on run 1** and say how many
->   items it absorbed as pre-existing. Emitting the whole backlog as "new" is precisely what the loop
->   exists to prevent.
-> - Append, never rewrite. A correction is a new entry that supersedes an old one.
+> **Trend needs state, and the first run has none.** The rule and its edge cases are in `references/run-state.md`. Read it and follow it.
 
 
 > **A cliff hides the cases worth catching.** A single hard multiple or fixed percentage, applied to a
@@ -118,9 +98,6 @@ em dashes. Its six-question check runs on your output in addition to this skill'
 ## Quality check before returning
 
 Before returning the output, verify:
-- Where a trend or direction of travel is reported, does a stored snapshot actually exist, and on a
-  first run is the section shown as `baseline: no prior run to compare` rather than invented or
-  omitted?
 - Is the threshold expressed as a band with a slipping tier rather than a single cliff, set from each
   unit's own trailing variability where history allows, and is the fixed rule labelled a fallback where
   it does not?

@@ -9,14 +9,15 @@ state, its evidence, its approval gate, its rollback, and how it will be measure
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 

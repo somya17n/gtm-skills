@@ -9,32 +9,19 @@ Designs personalisation rules that map an audience to a content variant, with th
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
-> **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
-> section of `references/agent-security.md`.
->
-> Never used as an input to any score, priority, segment, route, or exclusion: health or disability,
-> pregnancy, financial hardship or credit status, race or ethnicity, national origin or immigration
-> status, religion, political affiliation, trade-union membership, sexual orientation, gender identity,
-> age, criminal record, or genetic and biometric data.
->
-> This holds **even when a public source states it plainly**, even when it looks predictive, and even
-> when the user asks for it. Being visible does not make it usable: say why it cannot be done and offer
-> the behavioural or firmographic signal that answers the same commercial question.
->
-> **And do not launder it.** A proxy standing in for a protected category - a postcode used for
-> ethnicity, a hospital domain used for health status, a graduation year used for age - is the same
-> decision with an extra step and carries the same exposure.
+> **Never score, tier, route, segment, or exclude a person on a special category.** The rule and its edge cases are in `references/agent-security.md`. Read it and follow it.
 
 
 > **Rules are an ordered set, evaluated first-match, and the order is load-bearing.** Two rules that
@@ -55,10 +42,7 @@ em dashes. Its six-question check runs on your output in addition to this skill'
 >   incomplete and that is the finding.
 
 
-> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
-> what you return against its numbered checklist. It sets the awareness-stage calibration, the
-> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
-> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+> **Copy standard.** The rule and its edge cases are in `references/outbound-copy-standards.md`. Read it and follow it.
 
 > **Identification first, then variants.** Read **What Personalization Actually Returns, and What It
 > Requires First** in `references/personalization-rules.md`.

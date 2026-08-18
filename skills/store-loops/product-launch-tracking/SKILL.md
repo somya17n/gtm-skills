@@ -11,14 +11,15 @@ New products live or die on early signal, and watching each one by hand is exact
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 ## How to run
 
 1. **Which products launched, and on what date.** The window is per product, not per store, so a launch on day 9 of another product's window starts its own.

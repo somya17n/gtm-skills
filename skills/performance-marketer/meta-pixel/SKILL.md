@@ -9,14 +9,15 @@ gets made on top of the numbers they produce.
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -157,15 +158,9 @@ Before returning the output, verify:
 - Does every event row carry a last-fired date, so a stop is visible as a date rather than a trend?
 - Is the view-through share stated separately from click-through?
 - Is anything modelled labelled as modelled, with the reconciliation caveat stated?
-- Does every finding name the window of past reporting it casts doubt on?
 - Is the list of what could not be checked present, and does the verdict acknowledge it?
 - Is the re-audit trigger an event rather than a date?
 - Were any customer field values reproduced? If so, remove them before returning.
-- Does the output end with `No changes were made.`?
-
-If any check fails, correct it before returning the output.
-
-*Adapted from the MIT-licensed Meta Ads Skills by Kelpi (kelpi.ai). Full notice: NOTICE at the pack root.*
 
 
 ## Chain with

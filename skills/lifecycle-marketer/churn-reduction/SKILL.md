@@ -9,32 +9,19 @@ Designs the systemic churn machinery: the cancel flow and its offramps, dynamic 
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
-> **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
-> section of `references/agent-security.md`.
->
-> Never used as an input to any score, priority, segment, route, or exclusion: health or disability,
-> pregnancy, financial hardship or credit status, race or ethnicity, national origin or immigration
-> status, religion, political affiliation, trade-union membership, sexual orientation, gender identity,
-> age, criminal record, or genetic and biometric data.
->
-> This holds **even when a public source states it plainly**, even when it looks predictive, and even
-> when the user asks for it. Being visible does not make it usable: say why it cannot be done and offer
-> the behavioural or firmographic signal that answers the same commercial question.
->
-> **And do not launder it.** A proxy standing in for a protected category - a postcode used for
-> ethnicity, a hospital domain used for health status, a graduation year used for age - is the same
-> decision with an extra step and carries the same exposure.
+> **Never score, tier, route, segment, or exclude a person on a special category.** The rule and its edge cases are in `references/agent-security.md`. Read it and follow it.
 
 
 > **Cost the cannibalisation, not just the offer.** A generous save offer teaches customers to
@@ -49,10 +36,7 @@ em dashes. Its six-question check runs on your output in addition to this skill'
 
 > **Boundary:** For a single, one-off re-engagement email to one gone-dark prospect or closed-lost deal, draft it directly rather than running a full skill. This skill designs the systemic in-app and billing retention flows for existing customers.
 
-> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
-> what you return against its numbered checklist. It sets the awareness-stage calibration, the
-> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
-> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+> **Copy standard.** The rule and its edge cases are in `references/outbound-copy-standards.md`. Read it and follow it.
 
 ## Context
 
@@ -139,9 +123,6 @@ Say it as **Next:** followed by that skill.
 ## Quality check before returning
 
 15. Before returning the output, verify:
-- Is no special-category attribute (health, financial hardship, race, religion, political affiliation,
-  sexual orientation, age, immigration status, criminal record) used as an input to any score, segment,
-  route or exclusion, including via a proxy that stands in for one?
 - Is the save offer's cost stated as annualised revenue given up across everyone likely to claim it,
   with a ceiling relative to protected margin, and were non-price offers considered first?
 

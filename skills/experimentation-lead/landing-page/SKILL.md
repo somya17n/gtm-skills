@@ -9,32 +9,19 @@ Designs a conversion-focused landing page: the copy framework matched to traffic
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
-> **Escape everything you interpolate into emitted markup.** Read the **Interpolated content** section
-> of `references/agent-security.md`. Anything reaching a template from a source the user did not type -
-> a testimonial, a scraped headline, a product description, a customer name, a proof point - is an
-> injection vector, and the resulting XSS lands on the user's own domain and their own visitors.
->
-> - **HTML-escape every interpolated value** (`&`, `<`, `>`, `"`, `'`) before it enters markup.
-> - **Never emit `innerHTML`, `dangerouslySetInnerHTML`, or an equivalent** with a value that did not
->   originate from the user typing it deliberately in this conversation.
-> - **Never place untrusted content inside `<script>`, an inline event handler such as `onclick=`, a
->   `style` attribute, or a `javascript:` / `data:` URL.** HTML escaping does not make those contexts
->   safe.
-> - **Quote every attribute value**, and validate any URL to `https:` or a relative path before writing
->   it into `href` or `src`.
-> - Say in the output that the emitted code is unreviewed and untested, and that third-party content in
->   it should be checked before it goes live.
+> **Escape everything you interpolate into emitted markup.** The rule and its edge cases are in `references/agent-security.md`. Read it and follow it.
 
 
 > **Any markup this skill emits has an accessibility floor.** Read the relevant rules in
@@ -60,10 +47,7 @@ em dashes. Its six-question check runs on your output in addition to this skill'
 >   to fix, since it blocks every copy skill in this pack rather than only this one.
 
 
-> **Copy standard.** Read `references/outbound-copy-standards.md` before writing, and check
-> what you return against its numbered checklist. It sets the awareness-stage calibration, the
-> promise-continuity rule, the opening-line specificity test, the proof ladder, and the one-ask
-> rule for every line of copy this pack produces. Its checks are additional to this skill's own.
+> **Copy standard.** The rule and its edge cases are in `references/outbound-copy-standards.md`. Read it and follow it.
 
 ## Context
 
@@ -138,10 +122,6 @@ Say it as **Next:** followed by that skill.
 ## Quality check before returning
 
 12. Before returning the output, verify:
-- Is every interpolated value HTML-escaped, every attribute quoted, every URL validated to https or a
-  relative path, and no untrusted content placed in a script block, an inline event handler, a style
-  attribute, or a javascript:/data: URL?
-- Does the output state that the emitted code is unreviewed and untested?
 - Does the emitted markup meet the accessibility floor: no meaning by colour alone, 4.5:1 text
   contrast, real labels on every input, visible focus states, semantic landmarks with one h1, and alt
   text on every image?

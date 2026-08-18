@@ -9,32 +9,19 @@ Builds the engagement plan for one named strategic account: a buying committee m
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
-> **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
-> section of `references/agent-security.md`.
->
-> Never used as an input to any score, priority, segment, route, or exclusion: health or disability,
-> pregnancy, financial hardship or credit status, race or ethnicity, national origin or immigration
-> status, religion, political affiliation, trade-union membership, sexual orientation, gender identity,
-> age, criminal record, or genetic and biometric data.
->
-> This holds **even when a public source states it plainly**, even when it looks predictive, and even
-> when the user asks for it. Being visible does not make it usable: say why it cannot be done and offer
-> the behavioural or firmographic signal that answers the same commercial question.
->
-> **And do not launder it.** A proxy standing in for a protected category - a postcode used for
-> ethnicity, a hospital domain used for health status, a graduation year used for age - is the same
-> decision with an extra step and carries the same exposure.
+> **Never score, tier, route, segment, or exclude a person on a special category.** The rule and its edge cases are in `references/agent-security.md`. Read it and follow it.
 
 
 > **Ask whether this is a new logo or an expansion.** The plan differs substantially: an expansion
@@ -181,9 +168,6 @@ Say it as **Next:** followed by that skill.
 ## Quality check before returning
 
 15. Before returning the output, verify:
-- Is no special-category attribute (health, financial hardship, race, religion, political affiliation,
-  sexual orientation, age, immigration status, criminal record) used as an input to any score, segment,
-  route or exclusion, including via a proxy that stands in for one?
 - Was new-logo versus expansion established, and does the committee map and 90-day plan reflect
   inherited relationships where this is an expansion?
 

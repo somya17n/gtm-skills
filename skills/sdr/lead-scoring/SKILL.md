@@ -21,32 +21,19 @@ Score an account list against ICP criteria and return a ranked priority table wi
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
-> **Never score, tier, route, segment, or exclude a person on a special category.** Read the relevant
-> section of `references/agent-security.md`.
->
-> Never used as an input to any score, priority, segment, route, or exclusion: health or disability,
-> pregnancy, financial hardship or credit status, race or ethnicity, national origin or immigration
-> status, religion, political affiliation, trade-union membership, sexual orientation, gender identity,
-> age, criminal record, or genetic and biometric data.
->
-> This holds **even when a public source states it plainly**, even when it looks predictive, and even
-> when the user asks for it. Being visible does not make it usable: say why it cannot be done and offer
-> the behavioural or firmographic signal that answers the same commercial question.
->
-> **And do not launder it.** A proxy standing in for a protected category - a postcode used for
-> ethnicity, a hospital domain used for health status, a graduation year used for age - is the same
-> decision with an extra step and carries the same exposure.
+> **Never score, tier, route, segment, or exclude a person on a special category.** The rule and its edge cases are in `references/agent-security.md`. Read it and follow it.
 
 
 > **Expressed incumbent pain is a strong signal, and it is missing from most scoring models.** A
@@ -62,15 +49,7 @@ em dashes. Its six-question check runs on your output in addition to this skill'
 > because a tier gate resting on an undefined word is not a gate.
 
 
-> **When an input is missing, choose a response - never fill the hole silently.** Read
-> `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
-> (unsafe or non-compliant without it), **withhold** (print `withheld: <field> missing` where the
-> number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
-> (state it inline at the point of use). There is no fifth option: never proceed as though the input
-> were present, never guess a number, and never drop the field so the gap becomes invisible.
->
-> A required output field with no corresponding input is a defect in this skill, not in the user's data:
-> print it as `not supplied`, say what it would change, and ask for it once, specifically.
+> **When an input is missing, choose a response - never fill the hole silently.** The rule and its edge cases are in `references/missing-input-protocol.md`. Read it and follow it.
 
 ## Context
 
@@ -116,9 +95,6 @@ An account needs a real, named contact who holds the required role from the user
 ## Quality check before returning
 
 Before returning the output, verify:
-- Is no special-category attribute (health, financial hardship, race, religion, political affiliation,
-  sexual orientation, age, immigration status, criminal record) used as an input to any score, segment,
-  route or exclusion, including via a proxy that stands in for one?
 - Is expressed incumbent pain scored as a strong signal where present, rather than falling through the
   model as no-signal?
 - Is every required-role contact marked `confirmed` or `asserted`, with an unverified export row

@@ -9,14 +9,15 @@ Reads a whole pipeline export and returns only what genuinely needs attention: d
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -27,15 +28,7 @@ em dashes. Its six-question check runs on your output in addition to this skill'
 > forecast, and it should be reported under **Remove from pipeline** rather than under Stuck.
 
 
-> **When an input is missing, choose a response - never fill the hole silently.** Read
-> `references/missing-input-protocol.md`. Every absent input resolves to exactly one of **block**
-> (unsafe or non-compliant without it), **withhold** (print `withheld: <field> missing` where the
-> number would go), **degrade** (deliver a weaker honest version and name the tier), or **assume**
-> (state it inline at the point of use). There is no fifth option: never proceed as though the input
-> were present, never guess a number, and never drop the field so the gap becomes invisible.
->
-> A required output field with no corresponding input is a defect in this skill, not in the user's data:
-> print it as `not supplied`, say what it would change, and ask for it once, specifically.
+> **When an input is missing, choose a response - never fill the hole silently.** The rule and its edge cases are in `references/missing-input-protocol.md`. Read it and follow it.
 
 
 > **A cliff hides the cases worth catching.** A single hard multiple or fixed percentage, applied to a
@@ -53,18 +46,7 @@ em dashes. Its six-question check runs on your output in addition to this skill'
 >   and falling need opposite responses, and a level-only test cannot tell them apart.
 
 
-> **What a score is worth downstream.** Read **Forecast Accuracy: What "Commit" Is Actually Worth** in
-> `references/deal-scoring.md`. Typical B2B forecast accuracy runs ±15-25%, only ~7% of companies reach
-> 90%+, and **around 60% of forecasted deals slip to the next quarter**. A 60% slip rate means a deal in
-> Commit is more likely than not to move, so Commit describes a rep's confidence rather than a timing
-> prediction.
->
-> Forecast error clusters around four operational causes, none of which a better weighting fixes: rep
-> subjectivity, CRM data gaps, stages defined by seller activity rather than buyer evidence, and no
-> reconciliation between sales and finance records. So **re-tuning weights on data the reps enter about
-> themselves moves nothing** - fix the stage definitions and the input provenance first. Define stages by
-> what the buyer did ("confirmed budget, timeline and decision process"), not by what the seller did
-> ("ran a demo"): only the first predicts anything.
+> **What a score is worth downstream.** The rule and its edge cases are in `references/deal-scoring.md`. Read it and follow it.
 
 ## Context
 1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.

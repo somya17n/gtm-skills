@@ -9,14 +9,15 @@ Designs the post-signup activation path: what happens between signup and first r
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -28,24 +29,7 @@ em dashes. Its six-question check runs on your output in addition to this skill'
 > say that rather than delivering a flow whose drop-off can never be measured.
 
 
-> **Map both funnels before optimising either.** Read **The Product-Qualified Path, and Why MQL Alone
-> Is the Wrong Model** in `references/funnel-benchmarks.md`.
->
-> - **Ask whether any self-serve path exists** before assuming a single sales-led funnel. Most companies
->   with a signup form are running two funnels and measuring one.
-> - Sales-led qualifies on **MQL**, product-led on **PQL**, a PQL has used the product and shown buying
->   behaviour, an MQL downloaded something. Bare logins never qualify: a habitual logger with no
->   expansion behaviour is a habitual user, and those are disproportionately the accounts quietly
->   evaluating alternatives.
-> - **Where both paths run, compare them.** A measured case showed MQL→SQL of 10.9% against PQL→SQL of
->   57.9% at the same company, a 5.3x gap at the qualifying step, where the leverage is routing traffic
->   into the product path rather than repairing the MQL path. That conclusion is invisible if only one
->   funnel is mapped.
-> - **MQL→SQL is a distribution, not a floor**: 13% cross-industry median, 18-22% B2B SaaS, 35-40% top
->   quartile, and **39-40% with behavioural scoring**, roughly triple the median, which is the same idea
->   as a PQL applied to the sales-led path. That is usually the recommendation, not more nurture.
-> - **A blended qualifying rate cannot be acted on.** SEO converts to SQL at ~51%, PPC ~26%, webinar
->   ~17.8%. Splitting by channel is the first deliverable, not a refinement.
+> **Map both funnels before optimising either.** The rule and its edge cases are in `references/funnel-benchmarks.md`. Read it and follow it.
 
 
 > **Boundary:** This skill designs the activation flow and strategy. For producing one specific video asset for one moment in that flow, use `onboarding-video`. For the lifecycle email/SMS sequence that supports onboarding, use `email-campaign`. For diagnosing drop-off with actual funnel numbers already in hand, use `conversion-funnel`.

@@ -13,14 +13,15 @@ Map the five most likely objections from a target persona and return a specific 
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -101,11 +102,6 @@ barrier.
 
 ## Quality check before returning
 
-Before returning the output, verify:
-- Does every quantified claim trace to a Proof Points row in the context file, with anything
-  unavailable written as [PROOF NEEDED: <claim>] rather than softened into a vague outcome, and is any
-  internal-only figure kept out of prospect-facing copy?
-
 - Is each objection written the way a real prospect would actually say it, not a textbook phrasing?
 - Does every response avoid "great question" and "I totally understand"?
 - Is each response the length its objection TYPE calls for, not a uniform paragraph? A practical
@@ -128,11 +124,12 @@ Before returning the output, verify:
   return the ones that exist and say so rather than inventing filler.
 - Is every response within roughly three times the length of its objection, giving one reason
   rather than a stack?
-- Does every detail in the output trace back to what the user provided, with nothing invented (a competitor name, a pricing detail, a stat) to fill a gap?
 
+Then run the nine-question check in `references/house-rules.md`. It covers the rules that
+apply to every skill, so they are not repeated here.
+
+Before returning the output, verify:
 If any check fails, rewrite the relevant section before returning. Do not return a draft that fails a check.
-
-
 ## Chain with
 
 End by naming what runs next, in one line:

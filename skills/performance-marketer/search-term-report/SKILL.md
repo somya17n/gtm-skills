@@ -9,14 +9,15 @@ business fit first and evidence second, and states plainly what the report does 
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -146,11 +147,6 @@ Before returning the output, verify:
 - Is the exclude total scoped to this report rather than to account spend?
 - Does every "needs review" row say what would settle it?
 - Were any queries containing personal or special-category data quoted or persisted? If so, remove them.
-- Does the output end with `No changes were made.`?
-
-If any check fails, correct it before returning the output.
-
-*Adapted from the MIT-licensed Google Ads Skills by Kelpi (kelpi.ai). Full notice: NOTICE at the pack root.*
 
 
 ## Chain with

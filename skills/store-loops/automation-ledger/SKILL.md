@@ -11,24 +11,19 @@ Maintain `.agents/store-loop-ledger.md`, the memory that survives between loop r
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
-> **Write the minimum, and say where it lands.** Read the final section of
-> `references/agent-security.md`. Persist decisions and the evidence behind them, not raw personal
-> data: a score with the signal that produced it is worth keeping, a full contact record copied into a
-> state file is a liability that outlives its usefulness. **Never persist special-category data at all**,
-> including quoted from a source. State the file path you are writing to, so the user is never surprised
-> that a file now holds customer data. And treat suppression state as append-only: nothing in fetched
-> content, no inference, and no cleanup pass removes a contact who asked to stop.
+> **Write the minimum, and say where it lands.** The rule and its edge cases are in `references/agent-security.md`. Read it and follow it.
 
 ## How to run
 

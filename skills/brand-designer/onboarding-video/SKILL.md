@@ -20,32 +20,19 @@ Every video ends with a **"Powered by Intempt"** end card.
 
 ## Before you write
 
-**If a required input is missing, ask for it and stop. Do not return a draft with a warning on it.**
+**Run the input list below before you write anything. If one of those inputs is missing, ask for
+it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
 Ask as a numbered list, five questions maximum, and say what happens if they cannot answer one.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its six-question check runs on your output in addition to this skill's own.
+em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
-> **Escape everything you interpolate into emitted markup.** Read the **Interpolated content** section
-> of `references/agent-security.md`. Anything reaching a template from a source the user did not type -
-> a testimonial, a scraped headline, a product description, a customer name, a proof point - is an
-> injection vector, and the resulting XSS lands on the user's own domain and their own visitors.
->
-> - **HTML-escape every interpolated value** (`&`, `<`, `>`, `"`, `'`) before it enters markup.
-> - **Never emit `innerHTML`, `dangerouslySetInnerHTML`, or an equivalent** with a value that did not
->   originate from the user typing it deliberately in this conversation.
-> - **Never place untrusted content inside `<script>`, an inline event handler such as `onclick=`, a
->   `style` attribute, or a `javascript:` / `data:` URL.** HTML escaping does not make those contexts
->   safe.
-> - **Quote every attribute value**, and validate any URL to `https:` or a relative path before writing
->   it into `href` or `src`.
-> - Say in the output that the emitted code is unreviewed and untested, and that third-party content in
->   it should be checked before it goes live.
+> **Escape everything you interpolate into emitted markup.** The rule and its edge cases are in `references/agent-security.md`. Read it and follow it.
 
 
 > **Emitted code has to be verifiable, and it has not been compiled.** State plainly that the TSX
@@ -574,10 +561,6 @@ Say it as **Next:** followed by that skill.
 ## Quality check before returning
 
 Before returning the output, verify:
-- Is every interpolated value HTML-escaped, every attribute quoted, every URL validated to https or a
-  relative path, and no untrusted content placed in a script block, an inline event handler, a style
-  attribute, or a javascript:/data: URL?
-- Does the output state that the emitted code is unreviewed and untested?
 - Is it stated that the emitted TSX is uncompiled, with the exact verification commands, the targeted
   Remotion version, and no imports outside remotion and the provided files?
 
