@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 82 skills organized around the 8 real jobs on a GTM team, plus 9 store loops that run those skills on a schedule, plus one shared setup skill (92 total), not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
+**Your AI go-to-market team.** 90 skills organized around the 8 real jobs on a GTM team, plus 9 store automations that run those skills on a schedule, and every skill builds its own product context, not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -28,13 +28,12 @@ So that's how this is organized. Eight jobs. Five to thirty skills behind each o
 
 ## What's Inside
 
-82 skills across 8 jobs, 9 store loops, plus one shared setup skill (product-context), 92 total. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
+90 skills across 8 jobs, including 9 store automations that run on a schedule. Every skill researches and builds its own product context, so there is no setup skill to run first. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
 
 ### Foundation
 
 | Skill | What You Get |
 |-------|-------------|
-| **product-context** | Set up once, your ICP, brand voice, lifecycle stages, scoring model, and design preferences. The skills that read it pick it up automatically, so their output is tailored to your business without asking again. 67 of the other 97 skills read it; the other 30 are standalone by design and ask inline for what they need. Those 30 are the ones whose output does not depend on your positioning: calculations over numbers you supply (margin, cohorts, returns, chargebacks, anomalies) and the store loops, which read their own `.agents/store-loop-ledger.md` instead. To see the current list, run `grep -rl product-context skills/ --include=SKILL.md`. |
 
 ### Job 1: Brand Designer (5 skills)
 
@@ -63,7 +62,7 @@ Runs the flows that fire on their own, welcome, recovery, win-back, so retention
 | **referral-program** | Designs a customer referral program, trigger moment, two-sided incentive sized against real customer value, tiers, and anti-abuse rules. |
 | **churn-reduction** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences, the systemic retention layer, not a one-off email. Now also covers delivery-cycle products: pause/skip vs. cancellation, and frequency mismatch as a churn cause. |
 | **repeat-purchase-rate** *(new)* | Reviews the post-first-purchase repeat-buy flow, reorder prompts, replenishment timing, second-purchase incentives, and names what's blocking a second order. |
-| **promo-roi** *(new)* | Measures the after-the-fact impact of a promotion or discount already run: lift, margin cost, and the post-promo dip, over a stated recovery period. |
+| **promotional-campaigns** *(new)* | Measures the after-the-fact impact of a promotion or discount already run: lift, margin cost, and the post-promo dip, over a stated recovery period. |
 
 ### Job 3: Experimentation Lead (10 skills)
 
@@ -79,7 +78,7 @@ Decides what ships and what dies, with a number attached instead of a gut feelin
 | **pricing-strategy** | Value metric selection, tier structure, price points, and price-increase timing, refuses to guess at your churn or conversion numbers. |
 | **conversion-funnel** | Diagnoses funnel drop-offs against industry benchmarks, identifies root causes, calculates the math to hit your targets, and prioritizes fixes. |
 | **onboarding-flow** | Designs the post-signup activation flow, what happens before the "aha moment," in what order, and how drop-off gets diagnosed. |
-| **onsite-search** *(new)* | Reviews onsite search query logs, zero-result queries, synonym gaps, and merchandising rules, and refuses to run without a real query export. |
+| **site search** *(new)* | Reviews onsite search query logs, zero-result queries, synonym gaps, and merchandising rules, and refuses to run without a real query export. |
 | **paid-media-audit** *(new)* | Triages which ad channels, campaigns, or audiences are wasting spend using ROAS, CAC, and spend concentration. |
 | **checkout-optimization** *(new)* | A direct UX audit of a checkout flow, form fields, payment coverage, trust signals, step count, from a walkthrough or screenshots. |
 | **product-page-optimization** *(new)* | Reviews an existing product detail page and returns a prioritized edit brief, not a new page build. |
@@ -225,9 +224,9 @@ paused change, and no skill invents a number.
 score to click cost exists. A forecasting skill would contradict the rule that makes the other 29
 worth trusting.
 
-### Store Loops (9 skills)
+### Store Automation (9 skills)
 
-`npx skills add sidchaudhary/gtm-skills/skills/store-loops`
+`npx skills add sidchaudhary/gtm-skills/skills/store-automation`
 
 Not a job - a mechanism. The 8 jobs above answer a question once. These run that answer on a
 schedule, diff it against the last run, and stop when a gate fails. Built for a Shopify store
@@ -342,10 +341,9 @@ Start a conversation inside the project and ask for what you need.
 
 ### Step 3: Set up your product context (2 minutes)
 
-Before using any skill, run product-context once. It asks 9 quick questions about your business and saves the answers so every skill produces tailored output.
+There is no setup step. Every skill researches your business itself the first time you run one: it reads your site for positioning, offer, voice and proof, asks at most three things research cannot answer, and saves what it learned to `.agents/the shared context file.md` so the next skill does not repeat the work.
 
 ```
-/gtm:product-context
 ```
 
 Or just say: *"Help me set up my product context."*
@@ -371,9 +369,9 @@ You don't need to know the skill name. Describe the job and the right one activa
 
 ## The Order to Build Them In
 
-Don't install all 92 on day one. You'll use nine of them and forget the rest.
+Don't install all 90 on day one. You'll use nine of them and forget the rest.
 
-**Week one:** set up `product-context`, then run `account-plan` and `cold-email` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
+**Week one:** run `account-plan` and `cold-email` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
 
 **Week two:** add `objection-handling` and `pipeline-review`. Sorting stalled deals and objections is where most pipelines actually leak.
 
@@ -401,7 +399,6 @@ Skills are independent, use any one on its own. But they're more powerful togeth
 
 ```
                     ┌─────────────────────┐
-                    │  product-context     │ ← Set up once
                     │  (your business DNA) │
                     └─────────┬───────────┘
                               │ feeds into everything
@@ -447,10 +444,10 @@ No. You need to type sentences. That's it. Claude Code runs in a terminal, but a
 Not necessarily. Claude Code and Cowork work with a regular Claude subscription (Pro at $20/mo, Max at $100/mo). An API key is only needed if you prefer pay-per-use billing.
 
 **Can I use just one skill?**
-Absolutely. Every skill works independently. Use `email-campaign` without ever touching `opportunity-scoring`. But if you set up `product-context` first, the output will be tailored to your business.
+Absolutely. Every skill works independently. Use `email-campaign` without ever touching `opportunity-scoring`. The first skill you run builds the shared context file, and every skill after it reads from your business.
 
 **Can my team use this?**
-Yes. Share the repo. Each person's `product-context` is local to their machine, so the same skills produce output customized to whoever is using them.
+Yes. Share the repo. Each person's the shared context file is local to their machine, so the same skills produce output customized to whoever is using them.
 
 **What if I already use [Klaviyo / HubSpot / Salesforce / etc.]?**
 These skills design the *strategy*, what to build, who to target, what to say. You execute in whatever tools you already use. Skills handle the thinking layer; your existing stack handles the doing layer.

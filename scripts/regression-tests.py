@@ -125,7 +125,7 @@ print("\n8. promo-impact / contaminated baseline")
 print("   baseline containing a prior promo: lift reads %.1f%% vs clean %.1f%%"
       % (naive_lift * 100, clean_lift * 100))
 print("   -> understates, and can flip pull-forward into 'positive'. Guard:",
-      guard("promo-roi", ["baseline"], "clean baseline"))
+      guard("promotional-campaigns", ["baseline"], "clean baseline"))
 
 # --- 10. returns lag + benchmark annualisation --------------------------
 shipped_recent, returns_seen, lag_share = 1000, 20, 0.45   # 45% of returns land by now

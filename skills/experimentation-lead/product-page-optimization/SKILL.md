@@ -47,7 +47,12 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask inline for the competitive landscape, brand voice, and banned-word list.
+1. Check for `.agents/product-context.md`. If missing, **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+and run another skill first.** Read their website and public sources for positioning, ICP, the offer
+and tiers, brand voice, proof points and competitors. Ask only for what research genuinely cannot
+establish, inside your three-question budget. Then write what you learned to
+`.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+you created it and what you inferred rather than observed. The parts this skill needs most are the competitive landscape, brand voice, and banned-word list.
 2. Read `.agents/product-context.md` for the competitive landscape, brand voice, and banned-word list. Any input below that these already cover is usually recorded there: pull it and confirm with the user rather than asking them to restate it.
 3. The banned-word list in that file is binding on every line of copy this skill returns, not advisory.
 
