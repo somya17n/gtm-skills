@@ -1,6 +1,6 @@
 ---
 name: meta-ad-library
-description: "Reads a rival's live ads in the public Meta Ad Library and separates proven messages from noise using two signals, how many creative variations one message has and how long it has kept running, then turns the survivors into opportunities for your own offer. Use before writing angles, or when yours have all plateaued. Boundary: `competitive-analysis` profiles a rival's positioning, pricing and weak spots from their website; this reads only what they are paying to say right now, and feeds `ad-concepts`."
+description: "Reads a rival's live ads in the public Meta Ad Library and separates proven messages from noise using two signals, how many creative variations one message has and how long it has kept running, then turns the survivors into opportunities for your own offer. Use before writing angles, or when yours have all plateaued. Boundary: `competitive-analysis` profiles a rival's positioning, pricing and weak spots from their website; this reads only what they are paying to say right now, and feeds `ad-angles`."
 ---
 # The Ad Library Miner
 
@@ -9,12 +9,21 @@ ones they are still guessing at, and turns the gaps into angle opportunities.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -79,6 +88,17 @@ offer, not yours, so copying it is usually a losing move even before it is a bra
 4. **The angle vocabulary in `references/creative-angles.md`**, so grouped messages can be named
    against a shared taxonomy rather than described ad hoc.
 
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- Can you actually see the Ad Library live (browser access), or should I work from ad text/screenshots you paste? -- this decides whether any real output is possible at all versus a fabricated one.
+- What's the exact Meta Page URL for each competitor, not just the brand name? -- brands running regional or sub-brand Pages get missed by a name search and the angle map silently undercounts their real activity.
+- Which countries do your actual buyers come from? -- the skill defaults to 'country set to all,' which can dilute the variation/longevity signal with ads aimed at markets that don't matter to a B2B buyer scoped to, say, US/UK only.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Date-stamp the teardown before anything else.** Ad libraries rot; a teardown without a date
@@ -96,7 +116,7 @@ offer, not yours, so copying it is usually a losing move even before it is a bra
    worth more than the proven-angle list.
 8. **Write three to five angle hypotheses for your offer**, each either a proven market angle re-aimed
    at your differentiator, or a gap angle nobody is running.
-9. **Output directions, never text.** Hand the hypotheses to `ad-concepts` to become copy. Never
+9. **Output directions, never text.** Hand the hypotheses to `ad-angles` to become copy. Never
    reproduce a competitor's wording.
 
 ## Output format
@@ -167,6 +187,31 @@ End by naming what runs next, in one line:
 - `competitive-analysis` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- The unsourced fatigue thresholds in the fatigue table ("7-day frequency, prospecting: above ~2.5 monitor") match a real, named benchmark almost exactly: Databox's own cross-account data puts median Facebook ad frequency at 2.51 for B2B and 2.43 for B2C companies (600+ anonymized accounts), and about 40% of surveyed marketers cap retargeting frequency at 5-10 impressions/month. This can replace the current unlabeled pack-benchmark numbers with a named, dated source instead of [NEED: source].
+  *Source: Databox, 'Facebook Ads Frequency Guide,' updated 2023 (still the standard cited benchmark in 2025-2026 practitioner content), n=600+ companies' own ad-account data plus a practitioner survey*
+- Meta's Ad Library is organized strictly by advertiser Page, not by brand or domain. A brand running a main Page plus regional or sub-brand Pages ("Brand Name UK", "Brand Name -- Product Line") will have ads under those Pages missed entirely by a plain name search, and the native UI has no "show all Pages for this domain" option -- it has to be found manually per Page (or via the API, which can batch up to 10 Page IDs at once). The skill's input list just says 'by name or page URL' with no warning about this.
+  *Source: adlibrary.com, 'Meta Ad Library Search by Domain: 3 Workflows (Native UI to API),' May 16 2026*
+- As of mid-2026, ordinary commercial ads in the Ad Library still do not surface spend, impressions, CTR, CVR, ROAS or a 'verified winner' label -- that data stays restricted to political/social-issue ads. I found and then had to discard a conflicting claim that commercial impression ranges shipped in 2026; a specialist source (admapix.com, reviewed July 10 2026) explicitly denies this for commercial ads, so the skill's core 'only two signals exist' framing in the Constraints section is still accurate as written and does not need a stale-platform correction here.
+  *Source: admapix.com, 'Facebook Ads Library 2026: Official URL, Filters & Competitor Ads,' reviewed July 10 2026*
+
+## Two things that break this skill in practice
+
+**The Ad Library is a JavaScript app, not a page you can fetch.** `facebook.com/ads/library` renders
+client-side, so a fetch-only agent gets an empty shell and may report "no ads found" for an
+advertiser running dozens. Try it, and if you cannot render it, say so plainly and ask for pasted ad
+text or screenshots per competitor. Silence here reads as evidence of absence, which is the worst
+possible failure for a competitive skill.
+
+**Advantage+ Creative inflates the variation count.** The whole method rests on "nobody makes twelve
+versions of a loser", but Meta auto-generates crops, backgrounds and headline rewordings now. Collapse
+near-identical variants of the same underlying asset into one before counting toward the 3-plus
+threshold, or you will read machine output as human conviction.
 
 ## Attribution
 

@@ -9,17 +9,37 @@ paths, sitelinks and callouts, every asset counted against its limit before it i
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
 em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+
+## Stating the character limits honestly
+
+The rule is never to quote a limit as current without saying when it was checked. If this session
+cannot browse, do not go silent and do not guess. Print:
+
+`Limits used: pack reference (references/paid-search-mechanics.md), not verified against Google's
+live docs this session.`
+
+Google has moved these before. A limit quoted with false confidence produces ads that get truncated
+or rejected, and the user has no way to know which.
 
 ## Constraints
 
@@ -84,6 +104,17 @@ substantiated is the expensive kind of good writing.
    path 15, sitelink text 25 with 35-character description lines, callout 25. Verify against the
    platform's current documentation before shipping, and say that you did.
 
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What is this ad group's current CPA, CVR or CTR from the last full reporting period, so the new headlines have a real baseline instead of only a character-limit pass?.
+- Is Smart Bidding (Maximize Conversions / Target CPA) already running on this ad group, and how recently did it last change? New assets reset part of the learning period, so judging results during that window is invalid.
+- Which specific claims has legal or brand already ruled out for this offer, if any? The skill assumes this list exists but never actually asks the user to name it.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Read the landing page before writing a word.** List what it actually promises, what it proves,
@@ -108,6 +139,8 @@ substantiated is the expensive kind of good writing.
     what testing is being given up.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Ad group:** name, dominant intent, final URL.
 
@@ -176,6 +209,18 @@ End by naming what runs next, in one line:
 - `ad-copy` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- RSAs with 'Average' Ad Strength outperformed 'Good' and 'Excellent' on CPA and conversion rate, and sentence case beat title case on ROAS, CPA and CTR, across 1M+ ads and 22K+ accounts.
+  *Source: Optmyzr, 'Ad Strength & Creative Study: Data & Learnings From 1M+ Ads', September 2024*
+- Full per-headline and per-description performance stats (impressions, clicks, conversions, cost) for RSAs only became available for dates on or after June 5, 2025, before that, Google only reported combination-level performance, not per-asset.
+  *Source: Google Ads Help, 'About the ad-level asset report for responsive search ads', support.google.com/google-ads/answer/9564897 (checked 2026-08-19)*
+- Headlines under 20 characters ran $9.35 CPA vs $18.27 for longer headlines, with higher CTR (11.77% vs 10.52%) and conversion rate (10.39% vs 8.61%), across roughly 20,000 accounts.
+  *Source: Optmyzr, 'What Actually Drives RSA Performance (Hint: It's Not Ad Strength)', April 2026*
 
 ## Attribution
 

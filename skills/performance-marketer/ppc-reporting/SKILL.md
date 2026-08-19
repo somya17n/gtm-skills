@@ -9,12 +9,21 @@ source, its target and the caveat that stops it being over-read.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -75,8 +84,10 @@ scorecard less likely to be read at all.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **The business outcome** this account exists to produce, in one sentence.
 2. **The primary conversion action**, confirmed as the business outcome rather than assumed from its
@@ -87,6 +98,17 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 5. **Read access or an export** covering a complete period.
 6. **The metric definitions in `references/paid-search-mechanics.md`** for primary versus secondary
    actions, count settings, and why an all-conversions figure is not a business number.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- Does the reported conversion value in your export include tax and shipping, or is it net of both? (Required by the skill's own Input Integrity constraint, but never asked in the input list -- changes whether conversion value can ever be labeled toward revenue.).
+- Is the primary conversion action's Count setting 'Every' or 'One'? (Determines whether one lead submitting a form five times counts as 5 conversions or 1 -- directly changes the CPA and conversion-rate numbers, not just their interpretation.).
+- Has the bid strategy, budget, or target changed in the last 1-2 weeks? (If the account is still in a Google Ads learning period, this period's numbers are not evidence per the skill's own mechanics reference, but the input list never asks, so a scorecard could report on an unstable account with no caveat.).
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -110,6 +132,8 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    deserves a deeper look.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **The business question:** one sentence, stated before any metric.
 
@@ -178,6 +202,18 @@ End by naming what runs next, in one line:
 - `facebook-ads-audit` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- references/paid-search-mechanics.md §7 states the search-terms report omits low-activity queries 'and has done since 2020' with no citation. The actual event: Google announced Sept 1, 2020 that the report would only show terms with 'significant' query volume, framed as a privacy change, with no published numeric threshold. Cite Search Engine Land's contemporaneous coverage instead of the bare 'since 2020' claim, and keep the threshold itself labeled as unpublished/estimated rather than implying precision.
+  *Source: Search Engine Land, "Google Ads to limit Search Terms reporting, citing privacy" (Ginny Marvin), Sept 2020*
+- paid-search-mechanics.md §5 correctly refuses to state a hard conversion threshold for Smart Bidding ('any skill quoting a hard N conversions per month is overstating a rule of thumb') but gives the reader nothing to anchor against. Google's own stated (non-binding) guidance is 30 conversions in the trailing 30 days at the campaign level before enabling Target CPA / Maximize Conversions, and 50 conversions for Target ROAS. Naming this explicitly as a labeled pack benchmark with its source would let ppc-reporting flag 'below Google's own stated 30-conversion guidance for tCPA' instead of staying silent.
+  *Source: Google Ads Help, "About Smart Bidding" (support.google.com/google-ads/answer/7065882)*
+- Google recalibrated GA4's data-driven attribution model in April 2026, changing historical attributed-conversion counts across that date boundary with no campaign-performance cause -- exactly the 'changing the model changes historical numbers' risk §4 already warns about, but without naming the dated event. Also newly documented: DDA needs at least 400 conversions on the specific key event and 20,000 total conversions in the lookback window to activate; below that floor GA4 silently falls back to last-click with no visible flag. A scorecard spanning April 2026, or running on a low-volume account, should name this as the reason for an unexplained swing rather than reading it as a performance change.
+  *Source: GroAS, "GA4 Update April 2026: What Changed, What Broke For Google Ads Advertisers" (2026); ALM Corp, "GA4 Attribution Model Restructure (April 2026)" (2026)*
 
 ## Attribution
 

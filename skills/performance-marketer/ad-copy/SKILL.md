@@ -9,12 +9,21 @@ labelled, and diagnoses existing copy that reads well and does not convert.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -70,13 +79,24 @@ work; if it fails the one-second test for the WHO, no formula underneath can sav
 
 ## How to run
 
-1. **The angle**: WHO, PAIN verbatim where possible, and PROMISE, ideally from `ad-concepts` and
+1. **The angle**: WHO, PAIN verbatim where possible, and PROMISE, ideally from `ad-angles` and
    `value-proposition`.
 2. **The placement**: cold paid-social primary text, retargeting, or a landing-page hero. This decides
    which formulas are eligible.
 3. **The voice**: three adjectives plus one verbatim brand phrase.
 4. **Real proof**, or an explicit "none". None is a valid answer and changes the output honestly.
 5. **Existing copy**, if the job is diagnosis rather than drafting.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What should the CTA literally say and where does it point (free trial signup, demo call, pricing page)? The skill mandates exactly one CTA but never asks what the offer or destination is, so the CTA line has to be invented rather than matched to the actual funnel step.
+- Which exact placement -- Facebook Feed, Instagram Feed, or Stories/Reels? The skill treats 'cold paid-social primary text' as one bucket with one length rule, but the real visible-text cutoff differs materially by placement (Feed ~125 characters, Reels/Stories shorter still).
+- Is Advantage+ Creative / automatic text optimization on or off for this ad set? If on, Meta can reorder or recombine the exact draft and first line the skill labels and tests, which the skill never accounts for.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -87,7 +107,9 @@ work; if it fails the one-second test for the WHO, no formula underneath can sav
 2. **Rule out formulas the placement cannot carry.** A story structure in cold primary text is length
    the reader has not agreed to give.
 3. **Write one version per formula.** For paid-social primary text: the first line must work standalone
-   because it is all most people see before the truncation, under 125 words total, no hashtags, one
+   because Meta truncates the Feed at roughly 125 CHARACTERS and that first line is all most people
+   see. Write the hook inside that budget. Total primary text can run longer, but assume everything
+   past ~125 characters sits behind See more. No hashtags, one
    call to action.
 4. **Label each structural beat inline** in a copy of the draft, so the formula is visible and
    learnable by reading rather than asserted.
@@ -102,6 +124,8 @@ work; if it fails the one-second test for the WHO, no formula underneath can sav
 9. **Use one call to action.** Two asks split attention and lower both.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Placement and formulas chosen:** the two, each with a one-line reason, plus which were ruled out and
 why.
@@ -125,7 +149,9 @@ and the rewrite.
   filled with a lie.
 - Never mock the person with the pain. Agitate the problem, not the reader.
 - Never write more than one call to action.
-- Never exceed 125 words in paid-social primary text, and never rely on a first line that fails alone.
+- The hook must land inside the first ~125 CHARACTERS of paid-social primary text, which is where
+  Meta truncates the Feed. Never rely on a first line that fails alone. See
+  `references/ad-placements.md`, which states the 125-character figure per placement.
 - Never use hashtags in paid-social primary text.
 - Never pick a story formula for cold traffic because it reads better in a document.
 - Never present a labelled draft without also giving the clean version - the labels are for learning,
@@ -153,7 +179,8 @@ Before returning the output, verify:
 - Does each first line work standalone, and was it tested against the one-second rule for the WHO?
 - Is every proof beat traceable to real supplied proof, with omissions stated rather than filled?
 - Is there exactly one call to action per draft?
-- Is paid-social primary text under 125 words and free of hashtags?
+- Does the hook land inside the first ~125 characters, the Feed truncation point, rather than
+  relying on text that sits behind See more? Free of hashtags?
 - Does the agitation name the pain without mocking the person?
 - Where existing copy was supplied, is there a named formula, a named missing beat, and a rewrite?
 
@@ -169,6 +196,18 @@ End by naming what runs next, in one line:
 - `responsive-search-ads` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- WordStream's 2025 cross-industry Facebook Ads benchmark study reports average Feed CTR of 1.71% (traffic campaigns) and 2.59% (lead-gen), average CPC of $0.70 (traffic) and $1.92 (lead-gen), and average CPM around $11.54 -- real, sourced figures that could replace the pack's unsourced 'roughly 0.5-2% CTR' / '$0.50-2.00 CPC' Meta ranges.
+  *Source: WordStream, 'Facebook Ads Benchmarks 2025: New Data, Trends & Insights for Your Industry,' wordstream.com/blog/facebook-ads-benchmarks-2025, 2025.*
+- Meta's own live Ads Guide confirms Facebook Feed primary text is recommended at 50-150 characters and truncates behind 'See more' at roughly 125 characters on mobile -- a character limit, not a word limit, confirming Finding 1 above with primary vendor documentation.
+  *Source: Meta, Facebook Ads Guide, facebook.com/business/ads-guide, live product documentation, accessed 2026.*
+- Meta's Advantage+ Creative 'text optimization' enhancement, on by default at the ad-account level, can reorder, recombine, and swap which primary text/headline pairing each viewer sees at delivery time. Long-standing independent Meta ads authority Jon Loomer recommends turning it off account-wide and enabling it only ad-by-ad, because it hands the algorithm control over what the advertiser actually wrote.
+  *Source: Jon Loomer Digital, 'Which Advantage+ Creative Enhancements Should You Turn On?' and '4 Reasons Advantage+ Creative is On,' jonloomer.com, 2026.*
 
 ## Attribution
 

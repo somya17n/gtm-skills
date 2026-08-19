@@ -285,6 +285,10 @@ CTA: "See how" or "Watch the 2-minute demo"
 | Considered purchase ($50-500) | 50-100 words | Needs enough to overcome hesitation |
 | High-ticket / subscription | 100-200 words | More objections to address before click |
 | B2B SaaS (demo) | 50-125 words for feed; long-form for content-style | Audience needs context but has high attention cost |
+
+> **Word counts here are TOTAL copy length, not what the reader sees.** Meta truncates Feed primary
+> text at roughly 125 **characters**. Copy may run longer than that, but the hook has to land inside
+> it or most readers never see the point. See `ad-placements.md` for the per-placement figures.
 | TikTok (any) | Voice-over counts, not text, 15-34 seconds of natural speech | Platform penalizes text-heavy creatives |
 
 ---

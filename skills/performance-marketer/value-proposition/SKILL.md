@@ -1,6 +1,6 @@
 ---
 name: value-proposition
-description: "Turns a mined buyer pain into one specific promise line and stress-tests it against the one-second recognition test, on the rule that promises fail by generalising, since a promise to everyone reads to the delivery system as a promise to nobody. Use after mining a pain and before that pain becomes copy, or when an ad earns impressions but no clicks. Boundary: `voice-of-customer` supplies the raw pain and `ad-concepts` turns sharpened lines into whole angles, while `hook-writer` scores social openings against psychological frameworks instead."
+description: "Mines real buyer language from reviews, forums, tickets and competitor ad comments, then turns the strongest pain into one specific promise line and stress-tests it against the one-second recognition test, on the rule that promises fail by generalising, since a promise to everyone reads to the delivery system as a promise to nobody. Use after mining a pain and before that pain becomes copy, or when an ad earns impressions but no clicks. Boundary: `value-proposition` supplies the raw pain and `ad-angles` turns sharpened lines into whole angles, while `hook-writer` scores social openings against psychological frameworks instead."
 ---
 # The Promise Sharpener
 
@@ -9,12 +9,21 @@ recognises it at scrolling speed, and honest enough that the offer keeps it.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -52,6 +61,41 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > (state it inline at the point of use). There is no fifth option: never invent a mechanism to make a
 > superlative defensible.
 
+## Phase 1: mine the voice before you write a word
+
+A promise you invented is a guess. A promise built from what buyers already said passes the
+one-second test because the reader thinks "that is exactly what I said". Marketers write "creative
+fatigue"; owners write "the exact same ads that cost me six dollars a lead now cost thirty". Mine the
+second kind. Do this before Phase 2, always, and go and get the material yourself rather than asking
+for it.
+
+**Where to get it, in order.** Their own reviews and their competitors' reviews (G2 blocks automated
+fetching and returns 403, Capterra generally does not, so paste or export for G2). Forum and
+subreddit threads where people describe the problem without a vendor listening. Support tickets and
+sales-call notes if they have them. Comment sections under competitor ads in the Meta Ad Library.
+
+**How to mine it.**
+
+1. **Verbatim only.** A cleaned-up quote is a fabricated quote. Keep spelling, grammar and profanity
+   as written, or mark clearly where you truncated.
+2. **Sort into five banks.** TRIGGERS, the moment the search started. PAINS, the problem in their
+   words, especially the emotional ones. DESIRED OUTCOMES, what better looks like to them.
+   OBJECTIONS, why they hesitate. ALTERNATIVES, what they do instead, including nothing.
+3. **Source and date beside every quote.** A quote that cannot be checked does not get used.
+4. **Count independent sources per theme.** This is what separates a pattern from an anecdote. Mark
+   anything appearing exactly once as such, and never build the primary promise on it.
+5. **Star the buyer-isms**, the five to ten quotes vivid enough to run as a hook with no rewriting.
+6. **Build the jargon kill-list**, the words the business uses that no buyer ever did, with the
+   buyer's word beside each. This usually improves copy faster than anything you add.
+7. **Mine the losing half too.** Churned customers and one-star reviews carry the objections that
+   never reach a salesperson.
+
+**Carry into the output:** the five banks as a table (quote, source, date, theme, sources carrying
+it), the buyer-isms shortlist, the jargon kill-list, anything that appeared once listed separately,
+and any identifiable quote that needs a permission check before it runs in a paid ad.
+
+The promise you build in Phase 2 has to trace to a starred quote. If it does not, you invented it.
+
 ## Doctrine
 
 An angle lives or dies on its promise line, and promises fail in one predictable way: they
@@ -72,13 +116,24 @@ and say what happens if it fails.
 ## How to run
 
 1. **The offer in one line.**
-2. **Three to five verbatim pain quotes**, each with who said it, ideally from `voice-of-customer`.
+2. **Three to five verbatim pain quotes**, each with who said it, ideally from `value-proposition`.
    Paraphrased pains produce paraphrased promises.
 3. **The mechanism**: how the offer actually delivers the outcome, because a promise without a
    mechanism is a superlative.
 4. **The proof available**: testimonials, data, guarantees, or nothing. Nothing is a valid answer and
    changes the recommendation.
 5. **Any claim legal or brand has already ruled out.**
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What is the current CTR or CPA on the ad or page this line is replacing? The skill's own description says to use it 'when an ad earns impressions but no clicks,' but the input list never asks for that baseline, so there's no number to check the new line against later.
+- Which exact placement is this going into (Meta feed ad, Google RSA headline, landing page H1)? The 12-word/one-second test is calibrated to a social feed; a Google RSA headline is capped at 30 characters and a landing page H1 has no such limit, so the same line can pass the test and still not fit, or under-use the room it has.
+- You gave one pain quote, not the 3-5 the skill asks for, is that one representative of your typical buyer, or your most extreme case? The output is materially narrower on one quote and the skill never flags that back to the user, it just runs.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -102,6 +157,8 @@ and say what happens if it fails.
    becomes a task rather than a silent downgrade.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Offer:** the one-line offer these promises all sell.
 
@@ -163,9 +220,21 @@ If any check fails, correct it before returning the output.
 
 End by naming what runs next, in one line:
 
-- `voice-of-customer` the neighbouring job on the same input
+- `value-proposition` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- A randomized A/B test across 10,000 search-ad keywords found keyword/audience-specific ad copy beat generic copy by +8-9% clicks and +8-12% impressions (with an early round showing +121bps mobile CTR lift, p=0.055). This is a real, citable number the skill's whole doctrine ('narrow promises beat generic ones') currently asserts with zero source, it could replace the unsourced assertion in the Doctrine section.
+  *Source: arXiv paper 2506.17863, "LLMs for Customized Marketing Content Generation and Evaluation at Scale," 2025*
+- Google Ads' official spec caps each Responsive Search Ad headline at 30 characters (up to 15 headlines, 2-3 shown at once). The skill's 12-word cap is calibrated to a feed-ad/caption context; a 12-word promise line ('Matching every invoice line item to your bank feed automatically' = 65 characters) is roughly 2x too long to ever run as a Google RSA headline. The skill never distinguishes channel, so a line that passes its own word-count rule can be structurally unusable on the platform half its target users (B2B SaaS, $5k-50k/month) are running.
+  *Source: Google Ads Help, "About responsive search ads," support.google.com/google-ads/answer/7684791 (accessed 2026)*
+- Meta's Advantage+ Creative 'Text Improvements' enhancement is on by default for new campaigns and re-pairs headline/primary text/description combinations at delivery time based on predicted response, so the exact promise line this skill outputs is not guaranteed to be the line Meta actually serves; in claims-sensitive verticals a re-paired combination can put a restricted claim next to the wrong asset, which is exactly the 'the offer keeps it' risk this skill is built to catch, except the algorithm can undo the fix after the fact.
+  *Source: HyperFX, "Meta Advantage+ Creative Enhancements Issues: How to Disable, Override, and Fix in 2026"; corroborated by SparkUGC and Leapbuzz 2026 guides on Advantage+ Creative default settings*
 
 ## Attribution
 

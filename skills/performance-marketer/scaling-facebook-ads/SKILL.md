@@ -9,12 +9,21 @@ without resetting what it learned - as rules the user approves by name.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -78,8 +87,10 @@ learning reset wearing a growth costume.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **The last 14 days by ad set**: spend, results, cost per result.
 2. **The target cost per result**, from the business's loop math rather than any published benchmark.
@@ -90,6 +101,29 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    restarting.
 6. **The mechanics in `references/paid-social-mechanics.md`** for what counts as a significant edit
    and why increments avoid the reset.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What is [ad set]'s current daily or lifetime budget? (needed to fill in the Scaling schedule's Budget before/after columns, which the input list never collects).
+- What is your month-one (or first-purchase) customer value? (needed to run the Loop check / profitability-at-scale gate the skill says must run before any scaling is proposed; currently only surfaced via product-context, not the main input list).
+- Is this ad set's budget set manually (ABO) or is it running under Advantage+ / campaign budget optimization? (the 20%-per-day increment model only works on a manual ad-set budget; Meta defaults new Sales/Leads/App campaigns to Advantage+ budget where there is no per-ad-set lever to raise).
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
+## Read the account before you write a scaling rule
+
+A scaling schedule written without the account's real numbers is arithmetic on invented inputs.
+
+Get the current daily or lifetime budget per ad set, the ad's own cost per result, and how long it
+has been running since the last significant edit. Without the current budget there is no step size
+to compute, so that is one of your three questions.
+
+Check for a recent significant edit before proposing any increase. Meta restarts the learning phase
+on budget changes past a threshold, on creative swaps, and when a new ad joins the ad set, and
+scaling an ad that is already back in learning is how people conclude that scaling broke it.
 
 ## Method
 
@@ -183,6 +217,25 @@ End by naming what runs next, in one line:
 - `stockout-alerts` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta's own significant-edit threshold for resetting the ad learning phase is a budget/bid change of more than 20% in a single edit at the campaign or ad set level; this is Meta's own documented mechanic, not the pack's opinion, so the skill's Doctrine/Rules language ('increments of roughly twenty percent') can cite it directly instead of stating it as unsourced pack lore.
+  *Source: Meta Business Help Center, "Significant Edits and Learning Phase" / "Last Significant Edit," corroborated by WordStream, "Facebook Learning Phase" (cites Meta's own documentation on the 20% single-day threshold)*
+- Starting February 2025, Meta merged its manual and Advantage+ campaign build flows into one setup and made AI-driven (Advantage+ campaign) budget optimization the default for new Sales, Leads, and App Promotion campaigns. On an account running this default, there is no per-ad-set daily budget to raise by 20%, Meta's algorithm reallocates spend across ad sets inside the campaign automatically. The skill's entire model assumes ad-set-level manual (ABO) budgets and never asks whether the account is actually running under that structure.
+  *Source: Search Engine Land, "Meta simplifies Advantage+ campaign setup, adds leads campaigns," February 2025*
+- Meta's own guidance is that an ad set typically needs about 50 optimization events (results) within a 7-day period to exit the learning phase and produce a stable read; a 14-day calendar window with very few results (like an ad set with 3 leads in 14 days) is not actually 'enough spend to judge' even though it clears the skill's literal 14-day window.
+  *Source: Tinuiti, "What is the Facebook Learning Phase? [2020 Update]" (cites Meta's own guidance on the ~50-optimization-event/7-day threshold)*
+
+## Label the pack numbers
+
+The 20% step size and the 2-3x target-cost pause multiplier are pack-authored, not the user's and
+not from a named study. Wherever either reaches a table cell or a rule in the output, append
+**(pack benchmark, not your number)**. House rule 4b covers why: an unlabelled number reads as
+derived from the account, and the reader has no way to tell.
 
 ## Attribution
 

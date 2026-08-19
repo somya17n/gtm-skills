@@ -14,9 +14,11 @@ The daily exception report. Join yesterday's orders and revenue to yesterday's a
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -48,8 +50,10 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **Yesterday's order export**: order count, gross revenue, discounts, and refunds. Product-level rows if available, store-level totals if not.
 2. **Yesterday's ad spend** by channel, and by product or campaign if the export carries it.

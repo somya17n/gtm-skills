@@ -1,6 +1,6 @@
 ---
 name: search-term-report
-description: "Sorts the queries Google actually bought into keep, review and exclude candidates, using business fit first and performance evidence second, on the rule that a query with no conversions can be plain waste, an under-tested one, or simply a slow-converting offer. Use weekly or monthly, whenever the search-term report gets reviewed. Boundary: `voice-of-customer` mines customer language for copy rather than bought queries. Confirmed candidates go to `negative-keywords` and winners to `keyword-expansion`."
+description: "Sorts the queries Google actually bought into keep, review and exclude candidates, using business fit first and performance evidence second, on the rule that a query with no conversions can be plain waste, an under-tested one, or simply a slow-converting offer. Use weekly or monthly, whenever the search-term report gets reviewed. Boundary: `value-proposition` mines customer language for copy rather than bought queries. Confirmed candidates go to `negative-keywords` and winners to `keyword-expansion`."
 ---
 # The Search Term Miner
 
@@ -9,12 +9,21 @@ business fit first and evidence second, and states plainly what the report does 
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -74,8 +83,10 @@ exactly the businesses with the longest consideration cycles.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **The search-terms export**, or read access, with campaign, ad group, triggering keyword, match
    type, clicks, spend, conversions and value.
@@ -85,6 +96,17 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 5. **Known exclusions**: what the business does not sell, does not ship to, or will not serve.
 6. **The match-type and reporting mechanics in `references/paid-search-mechanics.md`**, in particular
    that the report omits low-activity queries.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- Is your primary conversion action actually set to Primary (not Secondary) in Google Ads, and is Count set to One or Every? This decides whether any CPA in the output means what it looks like it means.
+- What sample size, in clicks or conversions, do you want before a label counts as confident versus 'needs more data'? No floor is asked for, so the Confidence column gets invented per run instead of driven by a number the user chose.
+- Does this export include Performance Max search-term rows, or Search campaigns only? PMax rows carry no triggering keyword or match type, which breaks the table's required Keyword/Match-type columns and changes what 'reported terms only' can honestly claim.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -111,6 +133,8 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
     for match-type and collision checks; queries worth owning go to `keyword-expansion`.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Scope:** date range, currency, timezone, primary conversion, conversion delay, and the explicit note
 that the report covers reported terms only.
@@ -172,9 +196,21 @@ Before returning the output, verify:
 
 End by naming what runs next, in one line:
 
-- `voice-of-customer` the neighbouring job on the same input
+- `value-proposition` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Practitioner analyses put a real magnitude on the report's known gap: Adthena's account analysis found roughly 51% of spend on average sits in unreported 'other' search terms, with a range of 20-80% across accounts, and one case study saw hidden-query share jump from 1.2% to 20.9% of clicks (a 1,741% increase) after a threshold change. The skill's reference file states the omission as a bare fact with no size to it.
+  *Source: Search Engine Land, "Google Ads hidden search terms cost advertisers - big time" (2024), citing Adthena account-level analysis*
+- Google rolled out an actual Search Terms report for Performance Max campaigns (literal queries, not just category-level themes) starting around April 2025, replacing the old PMax 'search term insights' view for a growing share of advertisers through 2025-2026. The skill and its mechanics reference still describe 'the search-terms report' as if it only ever means classic Search campaigns.
+  *Source: Google Ads Help, "About the search terms report in Performance Max" (support.google.com/google-ads/answer/16327396); Analyzify, "Performance Max Search Terms in Google Ads Update" (2025)*
+- The same hidden-search-term data skews expensive: one analysis found hidden ('other') queries running about 456% more costly than tracked ones, concentrated in brand terms. That means Method step 7 ('rank exclude candidates by spend inside this report') is ranking only the cheaper, visible slice of waste and can systematically miss the worst offenders, not just the low-volume ones the skill already warns about.
+  *Source: Search Engine Land, "Google Ads hidden search terms cost advertisers - big time" (2024), citing agency/Adthena cost-per-hidden-term data*
 
 ## Attribution
 

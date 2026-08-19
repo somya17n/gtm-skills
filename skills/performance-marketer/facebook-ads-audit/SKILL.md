@@ -9,12 +9,21 @@ and ends with at most three decisions the data actually supports.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -85,6 +94,17 @@ individual ad noise hides the message-level pattern that is the only thing actua
 4. **The business's own record of new customers and revenue** for the same period, from the store or
    CRM rather than the platform, so a blended cost per customer can be computed.
 5. **The attribution window in force**, and any change to it inside the period.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What's your average lead-to-paying-customer sales cycle length in days, so blended cost per customer gets computed on a cohort that's had time to convert instead of the same 30-day window as spend?.
+- Are any of your campaigns running as Meta Advantage+ Shopping or Sales rather than manual campaign/ad-set structure? Advantage+ often can't report which specific creative or angle drove a given conversion, only which asset got impressions.
+- What exact event counts as a 'result' in Ads Manager (purchase, lead, demo booked, add-to-cart), and is it the same event your CRM logs as a new customer, or a proxy several steps upstream of it?.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -177,6 +197,29 @@ End by naming what runs next, in one line:
 - `ppc-reporting` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta permanently removed the 7-day-view and 28-day-view attribution windows on January 12, 2026. The default is now 7-day-click plus 1-day-view only, and reported conversions dropped 15-40% overnight for many advertisers with zero change in real performance, hitting B2B and other long-sales-cycle accounts hardest since they relied most on the deprecated 8-28 day window.
+  *Source: ppc.land, "Meta restricts attribution windows and data retention in Ads Insights API," 2026; corroborated by Supermetrics docs, "Facebook Ads: New historical limitations, attribution window and metric removals - January 12, 2026," 2026.*
+- Meta's delivery algorithm treats roughly 50 optimization events (conversions) per ad set within a rolling 7-day window as the signal floor before it considers the data reliable enough to stabilize delivery. Advantage+ Shopping campaigns lowered that floor to roughly 25 conversions per week as of 2026.
+  *Source: pigeondigital.com, "The 50-Conversions-a-Week Rule: How Meta's Learning Phase Really Works in 2026," 2026; 1clickreport.com, "Advantage+ Shopping 25-Conversion Rule 2026: Setup Guide," 2026.*
+- Advantage+ campaigns, which Meta pushes as the default for most SMB accounts by 2025-2026, report which individual creative asset received impressions but not which final ad combination (image plus headline plus copy) drove a given conversion. The angle-level mapping this skill's Input #3 assumes is readable from the account may not exist for accounts running Advantage+.
+  *Source: stackmatix.com, "Meta Advantage+ Shopping Campaigns: Setup, Strategy, and Results," 2026.*
+
+## What counts as enough sample
+
+"Sample adequate" is unfalsifiable without a floor, so use one and print it.
+
+Meta's own delivery guidance treats roughly **50 conversions per ad set per week** as the signal
+threshold for standard campaigns, and about **25 per week** for Advantage+ Shopping. Both are pack
+benchmarks, not the user's numbers, so label them as such wherever they appear.
+
+Print the actual n beside the verdict: `n=18/week, below the 50 floor, verdict directional only`.
+A reader can argue with that. They cannot argue with the word "adequate".
 
 ## Attribution
 

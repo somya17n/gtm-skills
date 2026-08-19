@@ -9,12 +9,21 @@ return at most five findings ranked by dollars at stake, and change nothing.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -90,8 +99,10 @@ that does the work.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **The account**, and read access to it - a connected ads MCP, or pasted exports. Read access is
    enough; this skill never needs write access and should not be given it.
@@ -106,6 +117,45 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    significant edit resets, and why a fatigue baseline has to be the ad's own rather than the
    account average.
 
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- Which single conversion event counts as 'the result' when different ad sets optimize toward different events (demo booked vs. trial started vs. purchase) - without naming one, CPR gets compared across ad sets as if it measured the same thing.
+- Do you have an independent count of conversions for the same window from outside the ad platform (CRM entries, orders), so a Pixel/CAPI dedup break can be caught against ground truth instead of only against the platform's own two reporting paths?.
+- Were any campaigns, ad sets, or ads edited - budget, audience, creative, or optimization event - in the last 7 days, and when? A significant edit resets the learning phase, which makes a straight week-over-week comparison unfair to whatever was just changed.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
+## Both platforms, one pass
+
+This runs across Meta and Google together, not one of them. A morning check that covers half the
+spend sends people to the wrong platform for the answer.
+
+Pull the same window from both, note that the two report differently, and say so in the output:
+Meta's default attribution and Google's are not the same measurement, so a cross-platform number is
+a comparison of two conventions rather than one fact. Where a platform could not be read, name it
+rather than quietly reporting on the other alone.
+
+## Is that ad tired, or is its owner impatient
+
+Absorbed from the retired ad-fatigue skill, because this is where the question actually gets asked.
+
+**Two conditions, both required, before calling fatigue:**
+
+1. Frequency above roughly 4.0 on the ad set, and
+2. Click-through rate down 30 percent or more against **that ad's own baseline**, not against an
+   account average or a benchmark.
+
+One condition alone is not fatigue. High frequency with stable CTR means the audience is small and
+the ad is still working. Falling CTR at low frequency is usually a creative or targeting problem
+rather than wear-out, and swapping creative will not fix it.
+
+Both numbers are pack benchmarks, not the user's, so label them as such. Before calling fatigue,
+check for a recent significant edit on the ad set: a creative swap, a budget change or a new ad
+added restarts the learning phase and produces exactly the same shape in the numbers.
+
 ## Method
 
 1. **Assert the input is real before analysing it.** Count rows. Zero rows, or zero spend on an
@@ -118,7 +168,7 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    by dollars, not by percentage.
 5. **Fading ads**: flag only where frequency is above 4.0 **and** click-through is down 30% or more
    against that ad's own prior-window baseline. Both conditions, always. Hand the refresh-or-retire
-   call to `ad-fatigue` rather than making it here.
+   call to `daily-ad-check` rather than making it here.
 6. **Starved tests**: ads that never received enough spend to be judged, because the platform picked
    a favourite early. Name the ads that never got a real test and what they would have needed.
 7. **Tracking health**: events that stopped firing, counts that doubled, or a mismatch that makes the
@@ -203,6 +253,18 @@ End by naming what runs next, in one line:
 - `daily-sales-report` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta's Andromeda retrieval engine, globally live across Facebook/Instagram/Messenger by October 2025, reads ad creative directly with a deep neural net (running on NVIDIA Grace Hopper and Meta's own MTIA chips) to filter tens of millions of candidate ads down to a few thousand before ranking - matching users to the creative's actual content rather than the advertiser's manual audience selection. This gives the skill's currently unsourced claim 'delivery reads the creative' a named, dated mechanism.
+  *Source: Meta's Andromeda announcement (Dec 2, 2024), as reported in 'What Is Andromeda? Meta's AI Ranking Engine for Advertisers' (AdLibrary, 2026) and 'How Meta's Ads Algorithm Works in 2026: Lattice, UTIS & Andromeda' (Greghal.no, 2026)*
+- Meta reclassified Detailed Targeting inputs as advisory 'suggestions' rather than strict filters in February 2026 (after removing several targeting options outright in January 2026), and made Advantage+ the default for new campaigns that same month. This is more specific and more current than the file's existing hedge ('interest-based micro-targeting reduced'), and it matters operationally: Advantage+ campaigns don't expose the same manual per-ad-set audience control the skill's 'one broad ad set' structure advice assumes.
+  *Source: 'Meta Broad Targeting 2026: Why Advantage+ Audiences Replace Interest Targeting' (Adligator, 2026) and 'Advantage+ Detailed Targeting 2026: Complete Guide' (1ClickReport, 2026)*
+- The concrete, checkable causes of a Pixel/CAPI dedup break: event_id sent on only one side, a casing or whitespace mismatch between the two event_ids, or a GTM Server-Side relay adding latency that pushes the two events past the matching window. The skill's tracking section says a doubled count 'is far more often a dedup break than a doubling of sales' but gives the operator nothing concrete to go check.
+  *Source: 'Meta CAPI Event Deduplication with event_id' (TrackingHippo, 2026) and 'Fix CAPI Event Duplication Without Losing Data' (UseCortana, 2026)*
 
 ## Attribution
 

@@ -1,6 +1,6 @@
 ---
 name: meta-pixel
-description: "Checks whether the Meta pixel and its server-side events are telling the truth: events that quietly stopped firing, one purchase counted twice, deduplication keys that do not match, and attribution windows that flatter. Use before trusting any reported number, and before building catalog or retargeting work on top of it. Boundary: `conversion-tracking` does the equivalent for Google conversion actions and goals, and `marketing-automation` designs the automation that fires events; this only audits what arrived."
+description: "Checks whether the Meta pixel and its server-side events are telling the truth: events that quietly stopped firing, one purchase counted twice, deduplication keys that do not match, and attribution windows that flatter. Use before trusting any reported number, and before building catalog or retargeting work on top of it. Boundary: `google-ads-conversion-tracking` does the equivalent for Google conversion actions and goals, and `marketing-automation` designs the automation that fires events; this only audits what arrived."
 ---
 # The Pixel Audit
 
@@ -9,12 +9,21 @@ gets made on top of the numbers they produce.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -81,18 +90,34 @@ hypothesis before treating it as good news.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **Read access to the ad account and the events manager**, or exports covering both. This audit is
    read-only and needs no write access.
 2. **The event list** with volumes by day over at least 30 days, so a stop is visible as a cliff
    rather than as noise.
 3. **Whether the Conversions API is live**, and if so how `event_id` is generated on each side.
-4. **The domain verification and event priority ordering**, if Aggregated Event Measurement applies.
+4. **Domain verification status** in Business Manager. Do NOT ask about manual event priority
+   ranking by default: Meta removed the 8-event ranking and deleted the standalone AEM tab from
+   Events Manager in June 2025, and eligible events are auto-aggregated now. Ask about ranking only
+   if the account still shows the legacy AEM tab, which a few do.
 5. **The attribution window currently set**, and any change to it inside the reporting period.
 6. **The mechanics in `references/paid-social-mechanics.md`** for deduplication keys, standard event
    semantics, match quality, and how windows and modelled conversions behave.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What is the click-through vs view-through split for the events you're auditing, pulled from Ads Manager's breakdown menu? (Required by the skill's own rule against merging the two, but never asked for.).
+- Are you running Conversions API through a manual server-side implementation or through Meta's Conversions API Gateway (CAPIG)? The two have structurally different event_id/dedup failure modes, and the skill's dedup check should branch on this but currently doesn't ask.
+- What is your event match quality (EMQ) score for the audited events right now (0-10, or Poor/OK/Good/Great in Events Manager)? Method step 5 requires reporting this as a number but no input collects it.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -186,9 +211,21 @@ Before returning the output, verify:
 
 End by naming what runs next, in one line:
 
-- `conversion-tracking` the neighbouring job on the same input
+- `google-ads-conversion-tracking` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta removed the 8-event manual priority ranking for Aggregated Event Measurement in June 2025 and deleted the standalone AEM configuration tab from Events Manager; all eligible standard and custom web events are now auto-aggregated with no manual list or ranking required. This makes the skill's input #4 ('domain verification and event priority ordering') and the AEM bullet in references/paid-social-mechanics.md stale for most 2026 accounts.
+  *Source: Jon Loomer Digital, "Meta Announces Big Changes to Website Conversion Campaigns" and "The Changes to AEM and Conversion Campaigns," 2025*
+- Meta's own Event Match Quality scoring gives a concrete, sourceable band the skill currently has no threshold for: EMQ is graded 0-10 (or Poor/OK/Good/Great), with 6+ considered 'Good' and 8+ considered 'Great' / optimal for CAPI-driven optimization. The skill's Method step 5 says to 'report it as a number rather than healthy or unhealthy' but has no sourced number to compare against, which is exactly the gap house rule 4b flags as [NEED: source].
+  *Source: CustomerLabs, "What is EMQ Score? How to Score 8+ on Meta CAPI," 2026*
+- Meta's Conversions API Gateway (CAPIG), simplified further by the one-click CAPI setup Meta shipped in April 2026, auto-generates and matches event_id between pixel and server events, so the classic 'mismatched event_id causes double counting' failure the skill's Method step 3 centers on does not occur the same way for CAPIG accounts. The skill has no question distinguishing manual server-side CAPI from CAPIG, so it risks running the wrong diagnostic against an account where Meta generates event_id automatically.
+  *Source: Meta for Developers, "Conversions API Gateway" documentation; Stape.io, "Should I Configure Event Deduplication When Using Meta Conversions API Gateway," 2026*
 
 ## Attribution
 

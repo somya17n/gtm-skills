@@ -9,12 +9,21 @@ drafts the smallest credible test for that component alone.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -81,6 +90,17 @@ its rating is the most common way this diagnostic causes harm.
 4. **The landing pages**, and what each actually delivers.
 5. **The ad-group structure**, because ad relevance problems are usually structural - one ad group
    answering several intents.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What date range do the keyword-level export and the business-performance export cover, and does it line up with Google's fixed 90-day window for component comparisons?.
+- Are these campaigns on manual or enhanced CPC, or on automated Smart Bidding (Target CPA/ROAS)? It changes whether a bid-based fix is even on the table and how stale a below-average reading likely is.
+- How much of monthly spend runs through Performance Max or broad-match-heavy campaigns versus standard Search with visible keyword-level Quality Score? The skill can only diagnose the latter.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -172,6 +192,30 @@ End by naming what runs next, in one line:
 - `product-page-optimization` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google's own help documentation states each Quality Score component is rated Above average / Average / Below average by comparison against other advertisers whose ads showed for the exact same search over the trailing 90 days, and confirms the Quality Score number itself is never an auction input; only real-time re-evaluations of the same three signals are used at auction time.
+  *Source: Google Ads Help, "About Quality Score for Search campaigns," support.google.com/google-ads/answer/6167118 (accessed August 2026)*
+- Optmyzr CEO Frederick Vallaeys' 2026 analysis names the exact mechanism behind the skill's own doctrine: accounts running broad match plus Smart Bidding routinely show keywords flagged 'below average' on a component while those same keywords hit target CPA/ROAS with healthy impression share, because the visible score is an aggregate of historical exact-match behavior, not a live per-auction rating.
+  *Source: Optmyzr blog, "Does Quality Score Still Matter in 2026? How to Interpret It in Automation-Heavy Google Ads Accounts," optmyzr.com/blog/google-ads-quality-score (2026)*
+- Performance Max campaigns carry no keyword-level Quality Score at all. Google instead rates individual assets Low/Good/Best and rates each asset group's overall Ad Strength as Poor/Average/Good/Excellent, a different mechanism the skill cannot diagnose with its current method.
+  *Source: Google Ads Help, "About asset group reporting for Performance Max" (support.google.com/google-ads/answer/13872527) and "About Performance Max Ad Strength" (support.google.com/google-ads/answer/14143250), accessed August 2026*
+
+## Quick mode
+
+Full mode wants five data cuts. Most people arrive with two.
+
+**Minimum: the component-ratings export and per-keyword spend and CPA.** That runs the ranking and
+names the weak component per keyword worth keeping, which is most of the value. Skip the
+smallest-credible-test drafting for any component you cannot see, and say which.
+
+State that you ran quick mode in the first two lines. Also state the date range of both exports:
+Google benchmarks components over a trailing 90 days, so a 7-day export and a 90-day component
+rating are not describing the same thing.
 
 ## Attribution
 

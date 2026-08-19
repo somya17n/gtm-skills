@@ -9,12 +9,21 @@ only the chosen ones in the ad account's image library with their hashes.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -71,12 +80,25 @@ degrades delivery.
 
 1. **Read `product-context`** for brand colours, fonts, imagery treatment, and the claims the business
    has agreed it can make.
-2. **If `product-context` has not been set up**, take the brand kit from `brand-guidelines` and say
+2. **If `product-context` has not been set up**, take the brand kit from `brand-kit` and say
    in the output that the visual rules came from a site read rather than stored context.
 
 ## How to run
 
-1. **The approved angles**, ideally from `ad-concepts`, each with its WHO, PAIN and PROMISE.
+
+**Placement decides the file, so ask first.**
+
+- **Which platforms and placements these run in.** Feed, Stories, Reels, TikTok, Facebook
+   right-hand column, LinkedIn. One square file does not serve them: `references/ad-placements.md`
+   has the required ratio per destination, and a 1:1 asset in a 9:16 Story is letterboxed with dead
+   space top and bottom, which reads as an ad before anyone reads the copy.
+- **Approved claims or proof points** the business can actually put on an image. This is separate
+   from colours, fonts and imagery treatment. Without it, every on-image claim is withheld rather
+   than guessed, per `references/missing-input-protocol.md`.
+
+Generate the ratio set the chosen placements need, not a fixed square.
+
+1. **The approved angles**, ideally from `ad-angles`, each with its WHO, PAIN and PROMISE.
 2. **The brand kit**: colours as hex, fonts, imagery treatment, and the verbatim phrases that sound
    like the brand.
 3. **An image-generation capability** for the visuals.
@@ -84,6 +106,17 @@ degrades delivery.
    the specs are still a usable deliverable.
 5. **The placement specs in `references/ad-placements.md`** for the format and safe areas each
    destination requires.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- Which platform(s) and placement(s) will these run in (Meta feed, Stories/Reels, LinkedIn, TikTok, Google Display)? The required dimensions and aspect ratio differ completely and the skill defaults to one 1080x1080 square regardless.
+- What claims or proof points is the business approved to state (specific stats, review scores, guarantees, customer counts)? Needed to actually fill the 'Claim support' column rather than the model guessing what counts as safe.
+- Can you provide real product screenshots or a screen recording to feature, or should visuals be illustration only? For B2B SaaS specifically, real UI screenshots and demo stills are reported to outperform generic illustration, which changes the visual idea in every brief.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -101,7 +134,7 @@ degrades delivery.
 6. **Check each image visibly matches a different angle.** Six images for six angles that all look
    like the same ad is one creative with six file names.
 7. **Upload only the keepers** to the account image library, and return the image hashes ready for
-   `google-ads-campaign`.
+   `facebook-ads-campaign`.
 8. **Say what was not uploaded and why**, so a rejected image is a recorded decision rather than a
    missing file somebody re-requests next week.
 
@@ -174,6 +207,18 @@ End by naming what runs next, in one line:
 - `product-photography` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- For 2026, three aspect ratios (1:1, 4:5 for Feed, 9:16 for Stories/Reels/full-screen) cover roughly 90% of Meta ad delivery under Advantage+ Creative, which crops or scales whatever single asset is supplied to fit each placement; supplying only a 1:1 square, as this skill's Method step 3 hardcodes, undersupplies most placements rather than being a safe universal default.
+  *Source: TheOptimizer.io, "Meta Ad Sizes & Dimensions for 2026" (2026); corroborated by Blip, "Meta Ads Placement Customization Guide 2026" (2026)*
+- Meta removed the hard 20% text rejection rule in September 2020 (an image with more text no longer gets disapproved or reach-limited), but images with heavy text overlay still get delivered less by the algorithm, so the skill's 'never exceed eight words' rule is a delivery lever, not a compliance requirement, and reads more authoritatively than it is without that distinction stated.
+  *Source: Adzooma, "Facebook Advertising Removes 20% Text Rule on Images" (2020); Social News Desk, "Facebook's 20% Text Rule Is Gone" (2020)*
+- For B2B SaaS specifically (half this skill's stated audience), UGC/lifestyle-style 'native' creative is reported to underperform; what wins instead is real product screenshots, screen-recording demo stills, and customer logo walls, the opposite of the generic-illustration default this skill's briefs lean toward under its 'no fake interface' rule. The skill never asks whether the user can supply real product UI to feature.
+  *Source: Superscale.ai, "Static ads in 2026: the performance marketer's playbook" (2026); SaaS Hero, "50+ B2B SaaS Ad Examples That Convert in 2026" (2026)*
 
 ## Attribution
 

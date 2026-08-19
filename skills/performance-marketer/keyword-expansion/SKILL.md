@@ -9,12 +9,21 @@ that answers it - or holds the promotion when no honest home exists.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -69,8 +78,10 @@ makes performance worse.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **The proven queries**, from `search-term-report` - converting or high-value, with their evidence.
 2. **The existing keyword set**, including match types, across every campaign. This is what the
@@ -81,6 +92,17 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 5. **The available landing pages** and what each actually answers.
 6. **The match-type mechanics in `references/paid-search-mechanics.md`**, including close-variant
    behaviour and how negatives interact with a newly promoted keyword.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What conversion volume and CPA does the existing keyword currently have (the one a new promotion would split volume from), not just its match type, so cannibalisation can actually be judged rather than just flagged as a risk?.
+- What is the current ad copy (headline and description) running in the destination ad group, not just its stated promise, so the ad-message fit check in step 7 has something to check against?.
+- What revenue (not just conversion count) did each proven query generate? The skill's own closing line claims promotion should be justified 'by money received rather than a conversion count,' but the input list (item 1) only asks for queries that are 'converting or high-value, with their evidence' - it never operationalises 'evidence' as revenue, so a promotion can still run on raw conversion count despite the skill's stated philosophy.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -171,6 +193,18 @@ End by naming what runs next, in one line:
 - `search-term-report` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google Ads negative keywords do NOT match close variants the way positive keywords do (this asymmetry is undocumented in the skill). A negative match-type keyword only blocks the literal form (e.g. negative broad 'flowers' still lets 'red flower' singular through), so the skill's Method step 2 ('Check the negatives ... a promotion into a blocked ad group looks fine in the account and never serves') can miss the reverse failure: a negative that looks like it should block a promoted keyword's close variant actually doesn't, letting a promotion serve traffic the account meant to exclude, or vice versa look blocked when it isn't.
+  *Source: Google Ads Help, 'About negative keywords' (support.google.com/google-ads/answer/2453972)*
+- Google now withholds roughly 40% of search-term data from the Search Terms Report on privacy grounds (industry analysis found this rises far higher, up to ~85% of spend on some keywords, mostly on broad match). This directly undercuts Input #1 ('the proven queries, from search-term-report ... with their evidence') - a large, systematically-biased share of real converting queries the account already paid for never surfaces as a promotable candidate at all, so 'no proven queries found' can mean 'nothing converted' or 'Google hid it,' and the skill has no way to distinguish the two.
+  *Source: Search Engine Land, 'Google Ads hidden search terms cost advertisers - big time' (2024)*
+- Exact match close variants were expanded to include 'same meaning' paraphrases and implied words (not just plurals/misspellings/word order), so an exact-match keyword can now serve queries the account never tested - e.g. [yosemite camping] serving 'campsites in yosemite'. This is a live, ongoing platform mechanic (Google has widened it multiple times since the 2014 baseline), so the skill's Method step 4 claim that 'exact isolates a proven query' is weaker than it reads and should say exact isolates the query only up to Google's current close-variant definition, with a pointer to check it rather than treating it as fixed.
+  *Source: Google Ads Help, 'Keyword close variants: Definition' (support.google.com/google-ads/answer/9342105)*
 
 ## Attribution
 

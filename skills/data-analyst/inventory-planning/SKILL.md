@@ -17,9 +17,11 @@ Score each SKU's stockout and overstock risk from on-hand units, sales velocity,
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -40,8 +42,14 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**Campaign start AND end date** for any planned promotion. The start date is not optional: the
+uplift only applies from that date, and applying it from today produces a run-out date that is too
+early for every future-dated campaign.
+
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 Ask the user for these inputs. If any are missing, ask before scoring anything.
 
@@ -94,7 +102,20 @@ Ask the user for these inputs. If any are missing, ask before scoring anything.
    - Never report an empty safe-to-promote set as though nothing were promotable. Say the window
      collapsed and why.
 5. **Safe to promote**: days of cover strictly between X and Y, with no promo conflict (step 6). If margin data is missing, say the promote/protect call needs a margin check.
-6. **Promo conflict check**: baseline days of cover is a floor on risk during a campaign, not a real projection, since the campaign itself accelerates velocity beyond what days of cover was built on. Ask for an expected uplift multiplier (e.g. "2x normal velocity"); if the user doesn't have one, default to 2x and say so. Recompute run-out date = today + (on-hand units ÷ (baseline velocity × uplift multiplier)) for featured SKUs, and flag stockout risk if that accelerated run-out date falls before the campaign's end date, even when the baseline-velocity run-out date would have looked safe.
+6. **Promo conflict check**: baseline days of cover is a floor on risk during a campaign, not a real projection, since the campaign itself accelerates velocity beyond what days of cover was built on. Ask for an expected uplift multiplier (e.g. "2x normal velocity"); if the user doesn't have one, default to 2x and say so. **Deplete in two phases, because velocity only rises once the campaign starts.**
+
+   Applying the uplift from today is wrong for any campaign that has not started yet, and wrong in
+   the direction that raises a false alarm.
+
+   - **Phase 1, today to campaign start.** Units consumed = baseline velocity x days until the
+     campaign opens. If that already exceeds on-hand, the SKU runs out **before** the campaign
+     opens: report that date and say the campaign is the wrong problem.
+   - **Phase 2, inside the campaign.** Remaining units / (baseline velocity x uplift multiplier) =
+     days of cover once elevated. Run-out date = campaign start + that number of days.
+
+   Flag stockout risk when the run-out date falls before the campaign's end date, even where the
+   baseline run-out date looked safe. Show both dates and the multiplier, so the reader can see
+   which phase consumed the stock.
 7. **Incoming stock**: if quantity and ETA are known, add incoming units to on-hand as of that ETA when judging whether a stockout resolves in time, and state whether the ETA lands before or after the projected run-out date.
 8. **User-supplied thresholds override the defaults.** Use theirs and say so.
 8a. **Report the thresholds actually used per SKU**, both X and Y, alongside its days of cover. A

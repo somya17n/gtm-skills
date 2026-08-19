@@ -1,6 +1,6 @@
 ---
 name: cost-per-acquisition
-description: "Takes results from both ad platforms at once and returns one ranked list of why acquisition cost moved, each cause carrying a severity and the evidence behind it, and including the read neither account can produce alone: whether the two are bidding into the same people and inflating each other. Use when acquisition cost climbed on both platforms and the reason is not obvious in either one. Boundary: `daily-ad-check` and `ad-fatigue` look only inside one paid-social account, `google-ads-troubleshooting` works one search account's serving levels in dependency order, and `paid-media-audit` triages waste across every channel without joining platforms; this one joins two and ranks causes."
+description: "Takes results from both ad platforms at once and returns one ranked list of why acquisition cost moved, each cause carrying a severity and the evidence behind it, and including the read neither account can produce alone: whether the two are bidding into the same people and inflating each other. Use when acquisition cost climbed on both platforms and the reason is not obvious in either one. Boundary: `daily-ad-check` and `daily-ad-check` look only inside one paid-social account, `google-ads-troubleshooting` works one search account's serving levels in dependency order, and `paid-media-audit` triages waste across every channel without joining platforms; this one joins two and ranks causes."
 ---
 # The CPA Diagnosis
 
@@ -9,12 +9,21 @@ severity, evidence, and each cause marked observed or suspected.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -80,8 +89,10 @@ tracking release, a price change, or a season.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **Read access or exports for both platforms**, covering the period where cost moved and an equal
    period before it. This skill never needs write access.
@@ -95,13 +106,24 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 6. **The mechanics in `references/paid-search-mechanics.md` and `references/paid-social-mechanics.md`**
    for the cause lists on each side and what each signal can and cannot establish.
 
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- What was CPA before the change and what is it now, in dollars, and over what exact date range did it move? (the skill jumps straight to platform exports without first pinning down the magnitude and window that actually triggered the request, so 'an equal period before it' is left for the agent to guess).
+- What audiences, customer-match lists, or geographic targets is Google Ads using? (needed to actually test the self-competition/overlap read against Meta's audience - the current input list only asks for this on the Meta side).
+- Were there any recent edits to Meta ad sets beyond new creative - budget changes, targeting changes, bid or optimization-event changes - in the window? (the input list asks for 'creative launch dates' but not edits, and an edit is what resets the learning phase per the skill's own mechanics reference).
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Normalise before comparing.** Convert to one currency, align to one timezone, and state both
    attribution windows. Where the two define a conversion differently, say so and stop treating the
    two cost figures as the same measure.
 2. **Rule out counting before buying.** If cost moved but impressions, clicks and spend did not, this
-   is a measurement incident: route to `meta-pixel` and `conversion-tracking` and do not
+   is a measurement incident: route to `meta-pixel` and `google-ads-conversion-tracking` and do not
    diagnose delivery on top of a broken denominator.
 3. **Check for a shared external cause first**, because it is cheap to test and it explains both
    platforms at once: a landing page or checkout failure, a tracking release, a price change, a
@@ -122,9 +144,11 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 8. **Name the next check for each suspected cause**, and where it has to happen - which account,
    which report, or which system outside the ad platforms entirely.
 9. **Recommend no bid or budget change from this diagnosis alone.** Hand the ordering to
-   `google-ads-changes` and any reallocation to `budget-optimization`.
+   `google-ads-change-plan` and any reallocation to `budget-reallocation`.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Scope:** both periods, the currencies and timezones normalised, both attribution windows, and the
 conversion definitions on each side.
@@ -197,6 +221,18 @@ End by naming what runs next, in one line:
 - `daily-ad-check` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta permanently removed the 7-day-view and 28-day-view attribution windows on January 12, 2026, shrinking every account to 7-day click + 1-day view. Accounts that had been using the longer windows saw reported conversions drop 15-40% overnight, and the deprecated windows now return empty data silently with no error - a reporting tool still pointed at them shows blanks, not a warning. Any CPA before/after comparison that straddles that date is comparing two different measurement systems, not two periods of real performance, which is precisely the 'shared external cause' this skill's Method step 3 is supposed to catch before blaming either platform.
+  *Source: Supermetrics Help Docs, 'Facebook Ads: New historical limitations, attribution window and metric removals', Jan 12 2026 (the same dated change is independently described by Conversios.io's 'Meta Attribution Window Changes 2026' and Jetfuel Agency's 'Meta Attribution 2026: 1-Day vs 7-Day (Jan 12 Update)').*
+- Performance Max routinely serves on an advertiser's own branded search queries and claims credit for them, so reported CPA/CAC rises for real (you're now paying for what was free organic traffic) without any bid-strategy or Quality-Score story to explain it. Practitioner benchmarks for B2B SaaS accounts put a healthy branded share of PMax search-term-insights traffic at 8-15%; 25%+ signals severe cannibalization, usually paired with no dedicated brand Search campaign or one funded too thin.
+  *Source: GrowthSpree, 'Branded Search Cannibalization in B2B SaaS Google Ads (2026)', 2026; corroborated by Paid Media World, 'Performance Max Brand Cannibalization: How to Stop Google from Stealing Your Brand Search Revenue', 2026.*
+- Meta's own documentation states the learning-phase exit threshold as roughly 50 optimization events within a rolling 7-day window (it resets if a set later falls below 50 in any 7-day window, it isn't a one-time finish line), with costs running 20-50% higher while an ad set is in that state and most well-funded ad sets exiting within 3-7 days. The skill currently hedges this as an anonymous 'commonly cited figure... treated as an order of magnitude, not a promise,' when it can instead be attributed to Meta directly.
+  *Source: Cometly, 'Facebook Ads Learning Phase Optimization Tips (2026)', citing Meta Business Help Center guidance, cross-checked against Coinis's and Benly.ai's independent 2026 summaries of the same Meta documentation.*
 
 ## Attribution
 

@@ -9,12 +9,21 @@ angles actually being run, and says whether dynamic ads are ready to test.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -81,6 +90,24 @@ different buyers, not folders. A set nobody wrote an angle for is inventory, not
 4. **The angles in flight**, so sets mirror promises rather than merchandising categories.
 5. **The field requirements in `references/paid-social-mechanics.md`**, and the variant-grain rule
    that decides whether a set is checked against parent or variant stock.
+
+## Read the actual catalog before proposing anything
+
+Do not design product sets against an imagined catalog. Get the real one first.
+
+1. **Ask for Commerce Manager catalog diagnostics** (rejected items, missing image, missing price,
+   out of stock but still eligible) or the feed export itself. This is one of your three questions
+   and it is worth spending.
+2. **Check which integration feeds purchase events** before accepting any claim that the pixel and
+   catalog match. The native Shopify and BigCommerce channel apps send the parent product ID as
+   `content_ids` while the catalog is keyed to variant IDs, which produces a silent zero-percent
+   match rate that the merchant reads as working. This is the single most common failure in the
+   commonest stack, so ask which path they use rather than trusting a verified claim.
+3. **Report catalog health as counts, not adjectives.** "412 of 1,840 items rejected, 96 missing a
+   price" is actionable. "Catalog health is good" is not.
+
+If the diagnostics are not supplied, print the catalog health row as not supplied and say which part
+of the recommendation is weaker for it. Do not model product sets on a catalog you have not seen.
 
 ## Method
 

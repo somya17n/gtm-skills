@@ -9,12 +9,21 @@ next - without changing anything.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -79,8 +88,10 @@ delay has passed will be wrong in a predictable direction roughly as often as it
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **Read access or an export** for two complete, equal periods in the account timezone.
 2. **The primary conversion action**, and its known conversion delay.
@@ -89,6 +100,17 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    release, a new conversion action, or a site change.
 5. **The prior review** from `.agents/gtm-run-state.md`.
 6. **The delivery hierarchy in `references/paid-search-mechanics.md`**, for ordering the next checks.
+
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
+
+- Was there a tracking outage or gap in either period (distinct from a deliberate change), and how many hours did it cover? The quality check demands withholding any missing-tracking hours, but the 5 collected inputs only ask about deliberate 'changes,' not passive outages the user might not think to mention.
+- Is the primary conversion action native to Google Ads or imported from GA4 as a key event? This decides whether the Ads-native 1-90 day click-through window or GA4's 30-day acquisition / 90-day other-event lookback governs the conversion-delay assumption.
+- What does Google Ads' own Conversion lag reporting view show as the observed/forecasted lag for this conversion action, rather than a remembered estimate?.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
 
 ## Method
 
@@ -178,6 +200,28 @@ End by naming what runs next, in one line:
 - `weekly-report` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google Ads' own UI already computes what this skill asks the user to state from memory: a per-conversion-action 'Conversion lag reporting' view showing the observed lag distribution and a forecasted final conversion count, specifically because CPA looks inflated and ROAS deflated in the days right after a period closes.
+  *Source: Google Ads Help, 'About conversion lag reporting' and 'Find your conversion lag reporting data' (support.google.com/google-ads/answer/9347141 and /9347065), 2026*
+- Google Ads' Change History report holds a 2-year, filterable log of budget, bid-strategy, keyword, conversion-action and status changes, including changes made via API, automated rules, or Google Ads Editor, an objective source the skill never points the user to for its own comparability check.
+  *Source: Google Ads Help, 'About change history' (support.google.com/google-ads/answer/19888), 2026*
+- Current Google Analytics Help documentation confirms GA4's default attribution lookback window is 30 days for acquisition key events (first_visit/first_open) and 90 days for all other key events. Where a B2B SaaS imports a GA4 key event as its Google Ads primary conversion (common for demo-request/signup goals), the effective attribution window is GA4's 30/90-day setting, not the Ads-native 1-90-day click-through window this skill's own paid-search-mechanics.md reference describes, a real gap for exactly the long-cycle B2B accounts this skill targets.
+  *Source: Google Analytics Help, 'Select attribution settings' (support.google.com/analytics/answer/10597962), current as of 2026*
+
+## First run is not empty
+
+Run-state gating applies to multi-week trend narrative only, the "third bad week running" kind of
+claim that genuinely needs history. It does not apply to the period-over-period comparison, which is
+the point of the skill and works from the two periods in front of you.
+
+On a first run: deliver the full comparison, and mark only the trend commentary as
+`baseline: no prior run to compare`. A first run that returns nothing useful teaches the user the
+skill is broken, and they do not come back for the second run where it would have worked.
 
 ## Attribution
 
