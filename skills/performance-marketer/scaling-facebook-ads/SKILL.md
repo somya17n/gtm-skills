@@ -113,6 +113,18 @@ three questions on what is genuinely left:
 If the user cannot answer one, say which part of the output is weaker for it rather than
 proceeding as though it were answered.
 
+## Read the account before you write a scaling rule
+
+A scaling schedule written without the account's real numbers is arithmetic on invented inputs.
+
+Get the current daily or lifetime budget per ad set, the ad's own cost per result, and how long it
+has been running since the last significant edit. Without the current budget there is no step size
+to compute, so that is one of your three questions.
+
+Check for a recent significant edit before proposing any increase. Meta restarts the learning phase
+on budget changes past a threshold, on creative swaps, and when a new ad joins the ad set, and
+scaling an ad that is already back in learning is how people conclude that scaling broke it.
+
 ## Method
 
 1. **Assert the input is real** and that the window is long enough to contain a judgement. A winner

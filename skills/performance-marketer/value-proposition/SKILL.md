@@ -1,6 +1,6 @@
 ---
 name: value-proposition
-description: "Turns a mined buyer pain into one specific promise line and stress-tests it against the one-second recognition test, on the rule that promises fail by generalising, since a promise to everyone reads to the delivery system as a promise to nobody. Use after mining a pain and before that pain becomes copy, or when an ad earns impressions but no clicks. Boundary: `voice-of-customer` supplies the raw pain and `ad-angles` turns sharpened lines into whole angles, while `hook-writer` scores social openings against psychological frameworks instead."
+description: "Mines real buyer language from reviews, forums, tickets and competitor ad comments, then turns the strongest pain into one specific promise line and stress-tests it against the one-second recognition test, on the rule that promises fail by generalising, since a promise to everyone reads to the delivery system as a promise to nobody. Use after mining a pain and before that pain becomes copy, or when an ad earns impressions but no clicks. Boundary: `value-proposition` supplies the raw pain and `ad-angles` turns sharpened lines into whole angles, while `hook-writer` scores social openings against psychological frameworks instead."
 ---
 # The Promise Sharpener
 
@@ -61,6 +61,41 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > (state it inline at the point of use). There is no fifth option: never invent a mechanism to make a
 > superlative defensible.
 
+## Phase 1: mine the voice before you write a word
+
+A promise you invented is a guess. A promise built from what buyers already said passes the
+one-second test because the reader thinks "that is exactly what I said". Marketers write "creative
+fatigue"; owners write "the exact same ads that cost me six dollars a lead now cost thirty". Mine the
+second kind. Do this before Phase 2, always, and go and get the material yourself rather than asking
+for it.
+
+**Where to get it, in order.** Their own reviews and their competitors' reviews (G2 blocks automated
+fetching and returns 403, Capterra generally does not, so paste or export for G2). Forum and
+subreddit threads where people describe the problem without a vendor listening. Support tickets and
+sales-call notes if they have them. Comment sections under competitor ads in the Meta Ad Library.
+
+**How to mine it.**
+
+1. **Verbatim only.** A cleaned-up quote is a fabricated quote. Keep spelling, grammar and profanity
+   as written, or mark clearly where you truncated.
+2. **Sort into five banks.** TRIGGERS, the moment the search started. PAINS, the problem in their
+   words, especially the emotional ones. DESIRED OUTCOMES, what better looks like to them.
+   OBJECTIONS, why they hesitate. ALTERNATIVES, what they do instead, including nothing.
+3. **Source and date beside every quote.** A quote that cannot be checked does not get used.
+4. **Count independent sources per theme.** This is what separates a pattern from an anecdote. Mark
+   anything appearing exactly once as such, and never build the primary promise on it.
+5. **Star the buyer-isms**, the five to ten quotes vivid enough to run as a hook with no rewriting.
+6. **Build the jargon kill-list**, the words the business uses that no buyer ever did, with the
+   buyer's word beside each. This usually improves copy faster than anything you add.
+7. **Mine the losing half too.** Churned customers and one-star reviews carry the objections that
+   never reach a salesperson.
+
+**Carry into the output:** the five banks as a table (quote, source, date, theme, sources carrying
+it), the buyer-isms shortlist, the jargon kill-list, anything that appeared once listed separately,
+and any identifiable quote that needs a permission check before it runs in a paid ad.
+
+The promise you build in Phase 2 has to trace to a starred quote. If it does not, you invented it.
+
 ## Doctrine
 
 An angle lives or dies on its promise line, and promises fail in one predictable way: they
@@ -81,7 +116,7 @@ and say what happens if it fails.
 ## How to run
 
 1. **The offer in one line.**
-2. **Three to five verbatim pain quotes**, each with who said it, ideally from `voice-of-customer`.
+2. **Three to five verbatim pain quotes**, each with who said it, ideally from `value-proposition`.
    Paraphrased pains produce paraphrased promises.
 3. **The mechanism**: how the offer actually delivers the outcome, because a promise without a
    mechanism is a superlative.
@@ -185,7 +220,7 @@ If any check fails, correct it before returning the output.
 
 End by naming what runs next, in one line:
 
-- `voice-of-customer` the neighbouring job on the same input
+- `value-proposition` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
 

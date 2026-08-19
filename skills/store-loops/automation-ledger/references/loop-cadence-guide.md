@@ -64,7 +64,7 @@ Every loop needs all nine parts filled in. A loop missing any of these is not re
 
 | Loop type | Example | Scheduling approach |
 |-----------|---------|------------------------|
-| Fixed-cadence review | Weekly SEO opportunity scan, weekly ad-fatigue check | Calendar cron (e.g. every Monday 9am) |
+| Fixed-cadence review | Weekly SEO opportunity scan, weekly daily-ad-check check | Calendar cron (e.g. every Monday 9am) |
 | Monitor-until-threshold | Churn-risk watch, launch-day tracking | Dynamic pacing that reacts to state, not a fixed clock |
 | High-judgment / manual | Anything requiring a strategic call each run | "Run this every Monday" as a standing instruction is a legitimate loop, the value is the repeatable body, not full automation |
 

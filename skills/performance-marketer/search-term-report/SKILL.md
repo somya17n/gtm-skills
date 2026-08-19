@@ -1,6 +1,6 @@
 ---
 name: search-term-report
-description: "Sorts the queries Google actually bought into keep, review and exclude candidates, using business fit first and performance evidence second, on the rule that a query with no conversions can be plain waste, an under-tested one, or simply a slow-converting offer. Use weekly or monthly, whenever the search-term report gets reviewed. Boundary: `voice-of-customer` mines customer language for copy rather than bought queries. Confirmed candidates go to `negative-keywords` and winners to `keyword-expansion`."
+description: "Sorts the queries Google actually bought into keep, review and exclude candidates, using business fit first and performance evidence second, on the rule that a query with no conversions can be plain waste, an under-tested one, or simply a slow-converting offer. Use weekly or monthly, whenever the search-term report gets reviewed. Boundary: `value-proposition` mines customer language for copy rather than bought queries. Confirmed candidates go to `negative-keywords` and winners to `keyword-expansion`."
 ---
 # The Search Term Miner
 
@@ -196,7 +196,7 @@ Before returning the output, verify:
 
 End by naming what runs next, in one line:
 
-- `voice-of-customer` the neighbouring job on the same input
+- `value-proposition` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
 

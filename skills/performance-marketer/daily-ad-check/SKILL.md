@@ -128,6 +128,34 @@ three questions on what is genuinely left:
 If the user cannot answer one, say which part of the output is weaker for it rather than
 proceeding as though it were answered.
 
+## Both platforms, one pass
+
+This runs across Meta and Google together, not one of them. A morning check that covers half the
+spend sends people to the wrong platform for the answer.
+
+Pull the same window from both, note that the two report differently, and say so in the output:
+Meta's default attribution and Google's are not the same measurement, so a cross-platform number is
+a comparison of two conventions rather than one fact. Where a platform could not be read, name it
+rather than quietly reporting on the other alone.
+
+## Is that ad tired, or is its owner impatient
+
+Absorbed from the retired ad-fatigue skill, because this is where the question actually gets asked.
+
+**Two conditions, both required, before calling fatigue:**
+
+1. Frequency above roughly 4.0 on the ad set, and
+2. Click-through rate down 30 percent or more against **that ad's own baseline**, not against an
+   account average or a benchmark.
+
+One condition alone is not fatigue. High frequency with stable CTR means the audience is small and
+the ad is still working. Falling CTR at low frequency is usually a creative or targeting problem
+rather than wear-out, and swapping creative will not fix it.
+
+Both numbers are pack benchmarks, not the user's, so label them as such. Before calling fatigue,
+check for a recent significant edit on the ad set: a creative swap, a budget change or a new ad
+added restarts the learning phase and produces exactly the same shape in the numbers.
+
 ## Method
 
 1. **Assert the input is real before analysing it.** Count rows. Zero rows, or zero spend on an
@@ -140,7 +168,7 @@ proceeding as though it were answered.
    by dollars, not by percentage.
 5. **Fading ads**: flag only where frequency is above 4.0 **and** click-through is down 30% or more
    against that ad's own prior-window baseline. Both conditions, always. Hand the refresh-or-retire
-   call to `ad-fatigue` rather than making it here.
+   call to `daily-ad-check` rather than making it here.
 6. **Starved tests**: ads that never received enough spend to be judged, because the platform picked
    a favourite early. Name the ads that never got a real test and what they would have needed.
 7. **Tracking health**: events that stopped firing, counts that doubled, or a mismatch that makes the

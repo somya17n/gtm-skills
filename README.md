@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 88 skills organized around the 8 real jobs on a GTM team, plus 9 store loops that run those skills on a schedule, plus one shared setup skill (98 total), not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
+**Your AI go-to-market team.** 82 skills organized around the 8 real jobs on a GTM team, plus 9 store loops that run those skills on a schedule, plus one shared setup skill (92 total), not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -28,7 +28,7 @@ So that's how this is organized. Eight jobs. Five to thirty skills behind each o
 
 ## What's Inside
 
-88 skills across 8 jobs, 9 store loops, plus one shared setup skill (product-context), 98 total. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
+82 skills across 8 jobs, 9 store loops, plus one shared setup skill (product-context), 92 total. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
 
 ### Foundation
 
@@ -156,7 +156,7 @@ Builds the systems everyone else's work runs on top of.
 | **lead-routing** | Designs the actual assignment logic for a qualified lead, round-robin, territory, or score-threshold, with tie-break and fallback rules. |
 | **product-launch-checklist** *(new)* | A pre-launch go/no-go checklist for a specific product or campaign launch. |
 
-### Job 8: Performance Marketer (30 skills) *(new)*
+### Job 8: Performance Marketer (27 skills)
 
 `npx skills add sidchaudhary/gtm-skills/skills/performance-marketer`
 
@@ -181,7 +181,7 @@ paused change, and no skill invents a number.
 | Skill | What You Get |
 |-------|-------------|
 | **brand-kit** | Reads a live site into a working brand kit, offer, proof, voice, colour and type, plus an honest list of what the site never says. |
-| **voice-of-customer** | Mines reviews, threads and tickets for the exact words buyers use, sorted into triggers, pains, outcomes, objections and alternatives, with a source count per theme. |
+| **value-proposition** | Mines reviews, threads and tickets for the exact words buyers use, sorted into triggers, pains, outcomes, objections and alternatives, with a source count per theme. |
 | **meta-ad-library** | Reads competitors' live ads for the two honest signals the Ad Library gives, variation count and longevity, then maps the white space nobody is running. |
 | **value-proposition** | Turns a mined pain into one promise line under 12 words, tested against the one-second rule, the anyone-test, and whether the offer actually keeps it. |
 | **ad-angles** | Five or six genuinely different angles for one offer, each a different WHO, PAIN and PROMISE, with what the algorithm learns from each. |
@@ -189,10 +189,9 @@ paused change, and no skill invents a number.
 | **ad-design** | Turns approved angles into finished on-brand ad images and stages only the human-picked keepers in the account library, with hashes. |
 | **meta-audience-targeting** | Sizes what targeting actually remains and returns one verdict, frequently "go broad and fix the message instead". |
 | **facebook-ads-campaign** | The whole campaign as a paused draft, one objective, one broad ad set, one ad per angle, blocked if the conversion event is unverified. |
-| **lead-form** | Native lead forms with one qualifying question that filters bots, drafted for review, and never a response time the business has not confirmed. |
 | **product-feed** | Catalog and product sets for dynamic ads, treating each set as a promise, gated on the pixel-to-catalog identifier match. |
 | **daily-ad-check** | The read-only daily pass over one ad account, at most five findings ranked by dollars at stake, ending in "No changes were made." |
-| **ad-fatigue** | The two-condition fatigue rule, plus a "looks tired, is not" section naming the auction shift or tracking break that is the likelier cause. |
+| **daily-ad-check** | The two-condition fatigue rule, plus a "looks tired, is not" section naming the auction shift or tracking break that is the likelier cause. |
 | **scaling-facebook-ads** | Budget rules that scale a winner without resetting learning, ~20% steps, pause rules, spend caps, all drafted for approval. |
 | **facebook-ads-audit** | Reads the account by angle, separates platform-attributed numbers from your own, and ends with at most three supported decisions. |
 | **meta-pixel** | Audits whether the pixel and server-side events tell the truth, deduplication keys first, since a doubled count is a tracking break until proven otherwise. |
@@ -372,7 +371,7 @@ You don't need to know the skill name. Describe the job and the right one activa
 
 ## The Order to Build Them In
 
-Don't install all 98 on day one. You'll use nine of them and forget the rest.
+Don't install all 92 on day one. You'll use nine of them and forget the rest.
 
 **Week one:** set up `product-context`, then run `account-plan` and `cold-email` (Account Executive and SDR research plus voice). Those two alone change your reply rate.
 
@@ -423,7 +422,7 @@ Skills are independent, use any one on its own. But they're more powerful togeth
 
 **Example flow:** Run `customer-segmentation` to identify at-risk customers, feed that into `customer-journey` to design a retention flow, use `customer-journey` for the email content, set up `ab-test` to test two approaches, track results with `kpi-dashboard`.
 
-**Paid flow:** Run `brand-kit` on your site, mine real language with `voice-of-customer`, sharpen one line with `value-proposition`, spread it into angles with `ad-angles`, make the images with `ad-design`, and launch a paused draft with `facebook-ads-campaign`. Then read daily with `daily-ad-check` and decide weekly with `facebook-ads-audit`.
+**Paid flow:** Run `brand-kit` on your site, mine real language with `value-proposition`, sharpen one line with `value-proposition`, spread it into angles with `ad-angles`, make the images with `ad-design`, and launch a paused draft with `facebook-ads-campaign`. Then read daily with `daily-ad-check` and decide weekly with `facebook-ads-audit`.
 
 ---
 
@@ -495,7 +494,7 @@ actually cited by something, and exits non-zero if not, so it can run in CI.
 | `creative-angles.md` | 14 angles, funnel mapping, channel performance matrix |
 | `scene-composition.md` | 160+ blocks across 10 dimensions, 32 curated presets |
 | `ad-placements.md` | Specs for Facebook, Instagram, LinkedIn, TikTok, Pinterest, Google, Email |
-| `paid-social-mechanics.md` | Campaign hierarchy, the learning phase, pixel/CAPI deduplication, catalog fields, lead-form mechanics, per-ad fatigue baselines |
+| `paid-social-mechanics.md` | Campaign hierarchy, the learning phase, pixel/CAPI deduplication, catalog fields, per-ad fatigue baselines |
 | `paid-search-mechanics.md` | RSA asset character limits, negative match-type mechanics, the three Quality Score components, conversion-action settings, bid strategy families, delivery-blocker order |
 | `brand-voice-dimensions.md` | 6 voice dimensions, vocabulary profiling, channel adaptations |
 | `dashboard-templates.md` | 8 dashboard templates, metric formulas, attribution models |

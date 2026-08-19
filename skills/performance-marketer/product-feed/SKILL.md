@@ -91,6 +91,24 @@ different buyers, not folders. A set nobody wrote an angle for is inventory, not
 5. **The field requirements in `references/paid-social-mechanics.md`**, and the variant-grain rule
    that decides whether a set is checked against parent or variant stock.
 
+## Read the actual catalog before proposing anything
+
+Do not design product sets against an imagined catalog. Get the real one first.
+
+1. **Ask for Commerce Manager catalog diagnostics** (rejected items, missing image, missing price,
+   out of stock but still eligible) or the feed export itself. This is one of your three questions
+   and it is worth spending.
+2. **Check which integration feeds purchase events** before accepting any claim that the pixel and
+   catalog match. The native Shopify and BigCommerce channel apps send the parent product ID as
+   `content_ids` while the catalog is keyed to variant IDs, which produces a silent zero-percent
+   match rate that the merchant reads as working. This is the single most common failure in the
+   commonest stack, so ask which path they use rather than trusting a verified claim.
+3. **Report catalog health as counts, not adjectives.** "412 of 1,840 items rejected, 96 missing a
+   price" is actionable. "Catalog health is good" is not.
+
+If the diagnostics are not supplied, print the catalog health row as not supplied and say which part
+of the recommendation is weaker for it. Do not model product sets on a catalog you have not seen.
+
 ## Method
 
 1. **List existing catalogs and their product counts first.** If one exists, audit it rather than

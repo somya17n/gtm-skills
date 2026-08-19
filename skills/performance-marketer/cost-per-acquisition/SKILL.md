@@ -1,6 +1,6 @@
 ---
 name: cost-per-acquisition
-description: "Takes results from both ad platforms at once and returns one ranked list of why acquisition cost moved, each cause carrying a severity and the evidence behind it, and including the read neither account can produce alone: whether the two are bidding into the same people and inflating each other. Use when acquisition cost climbed on both platforms and the reason is not obvious in either one. Boundary: `daily-ad-check` and `ad-fatigue` look only inside one paid-social account, `google-ads-troubleshooting` works one search account's serving levels in dependency order, and `paid-media-audit` triages waste across every channel without joining platforms; this one joins two and ranks causes."
+description: "Takes results from both ad platforms at once and returns one ranked list of why acquisition cost moved, each cause carrying a severity and the evidence behind it, and including the read neither account can produce alone: whether the two are bidding into the same people and inflating each other. Use when acquisition cost climbed on both platforms and the reason is not obvious in either one. Boundary: `daily-ad-check` and `daily-ad-check` look only inside one paid-social account, `google-ads-troubleshooting` works one search account's serving levels in dependency order, and `paid-media-audit` triages waste across every channel without joining platforms; this one joins two and ranks causes."
 ---
 # The CPA Diagnosis
 
