@@ -19,9 +19,11 @@ arithmetic shown, what you ruled out and why, and what would change the recommen
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -89,8 +91,9 @@ the plan.
 5. **The dependency hierarchy in `references/paid-search-mechanics.md`** for the tracking, serving and
    efficiency ordering.
 
-**Also ask, because the answer changes the output.** Live testing found this skill produced a
-confident result without knowing these:
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
 
 - Which conversion action is currently Primary vs Secondary for everything bidding could optimize toward, and is your $245 CPA figure measured against Add to Cart or against Purchase -- since finding #1 means those two numbers are not the same thing?.
 - What is the re-audit trigger for each finding (the specific event -- new conversion action added, ad group restructure, campaign relaunch -- that makes it stale), not just the date it was pulled?.

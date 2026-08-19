@@ -19,9 +19,11 @@ arithmetic shown, what you ruled out and why, and what would change the recommen
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -102,8 +104,9 @@ substantiated is the expensive kind of good writing.
    path 15, sitelink text 25 with 35-character description lines, callout 25. Verify against the
    platform's current documentation before shipping, and say that you did.
 
-**Also ask, because the answer changes the output.** Live testing found this skill produced a
-confident result without knowing these:
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
 
 - What is this ad group's current CPA, CVR or CTR from the last full reporting period, so the new headlines have a real baseline instead of only a character-limit pass?.
 - Is Smart Bidding (Maximize Conversions / Target CPA) already running on this ad group, and how recently did it last change? New assets reset part of the learning period, so judging results during that window is invalid.

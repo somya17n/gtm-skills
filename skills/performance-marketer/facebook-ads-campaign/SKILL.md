@@ -19,9 +19,11 @@ arithmetic shown, what you ruled out and why, and what would change the recommen
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -79,8 +81,10 @@ add a second ad set, you probably need a different angle instead.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **Approved creatives with their image hashes**, from `ad-design`, and the copy for each.
 2. **The approved angles**, one per ad, each named so the structure table is readable.
@@ -92,8 +96,9 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 6. **The structure mechanics in `references/paid-social-mechanics.md`** for what a significant edit
    resets and why ad-set proliferation starves learning.
 
-**Also ask, because the answer changes the output.** Live testing found this skill produced a
-confident result without knowing these:
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
 
 - Which campaign type is this: Search, Performance Max, or Display/YouTube? Search needs keywords and negative keywords, Performance Max needs asset groups and audience signals, and the skill's 'broad, no interest stacks' doctrine only cleanly applies to Search, but it is never asked.
 - What bid strategy should run at launch, Maximize Conversions or Target CPA at $X, and does the account already have 30+ conversions in the last 30 days to support a Target CPA target? Setting a Target CPA on a brand-new account with no conversion history is a common way small test budgets get throttled before they ever spend enough to be judged.

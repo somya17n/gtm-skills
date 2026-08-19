@@ -19,9 +19,11 @@ arithmetic shown, what you ruled out and why, and what would change the recommen
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -86,8 +88,9 @@ offer, not yours, so copying it is usually a losing move even before it is a bra
 4. **The angle vocabulary in `references/creative-angles.md`**, so grouped messages can be named
    against a shared taxonomy rather than described ad hoc.
 
-**Also ask, because the answer changes the output.** Live testing found this skill produced a
-confident result without knowing these:
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
 
 - Can you actually see the Ad Library live (browser access), or should I work from ad text/screenshots you paste? -- this decides whether any real output is possible at all versus a fabricated one.
 - What's the exact Meta Page URL for each competitor, not just the brand name? -- brands running regional or sub-brand Pages get missed by a name search and the angle map silently undercounts their real activity.

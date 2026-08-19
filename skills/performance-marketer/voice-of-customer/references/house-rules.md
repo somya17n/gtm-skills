@@ -20,24 +20,38 @@ draft anyway" is a failure, not a hedge.
 When something is missing:
 
 ```
-I need a few things before I can write this:
+I read your site and pulled the offer, pricing and proof points. Three things I could not get:
 
-1. Company name and what they sell
-2. The trigger (what happened that makes now the moment)
-3. Your one-line product description
+1. The trigger, what happened that makes now the moment for this account
+2. Which tier this campaign should point at
+3. Anything you will not let me claim in writing
 
-Paste what you have. If you don't have 2, say so and I'll work from 1 and 3.
+Answer what you can. If you skip one I will state what I assumed instead and you can correct it.
 ```
 
 Rules for the ask:
 
+- **Three questions. Hard cap.** Not five, not "three plus a couple of quick ones". Three. If the
+  skill needs fifteen inputs, three of them unblock a first pass, so ask those, produce the work,
+  and ask for the rest only if the user wants it sharpened. Every question past the third is one the
+  user has to stop and go look up, and most of them never come back.
+- **Derive it before you ask for it.** A question is the last resort, not the first move. Before
+  anything reaches the list of three, try in this order:
+  1. **`.agents/product-context.md`.** Never ask for something already recorded there.
+  2. **Fetch it.** If they named a company, a site, a product or a competitor, go read it. Pricing,
+     positioning, proof points, voice, the offer, the tiers: all of it is usually on the page. A
+     skill that asks "what is your pricing" about a company with a public pricing page has wasted
+     one of its three.
+  3. **Compute it.** Anything derivable from a number they already gave you is not a question.
+  4. **Research it.** Platform defaults, current specs and benchmarks are yours to look up, not
+     theirs to supply.
+  5. **Infer it, and say you inferred it.** A stated assumption the user can correct in one word
+     beats a question that stops the work.
 - **Number the questions.** A paragraph of questions gets one answer.
-- **Ask for what you actually cannot proceed without.** Nice-to-haves go in a separate line marked
-  optional, or get dropped.
-- **Five questions maximum in the first ask.** If the skill genuinely needs fifteen inputs, ask for
-  the five that unblock a first pass, produce it, then ask for the rest to sharpen it.
 - **Say what happens if they don't have one.** People abandon forms they can't complete.
-- **Check `.agents/product-context.md` first.** Never ask for something already recorded there.
+- **Everything else becomes a stated assumption, not a fourth question.** Write what you assumed and
+  what would change if it is wrong. The user corrects the one that matters and ignores the rest,
+  which is faster for them than answering all of them up front.
 
 The exception is a skill the user invoked with everything already in the message. Then just do the
 work.

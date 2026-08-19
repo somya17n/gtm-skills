@@ -19,9 +19,11 @@ arithmetic shown, what you ruled out and why, and what would change the recommen
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -87,8 +89,9 @@ and say what happens if it fails.
    changes the recommendation.
 5. **Any claim legal or brand has already ruled out.**
 
-**Also ask, because the answer changes the output.** Live testing found this skill produced a
-confident result without knowing these:
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
 
 - What is the current CTR or CPA on the ad or page this line is replacing? The skill's own description says to use it 'when an ad earns impressions but no clicks,' but the input list never asks for that baseline, so there's no number to check the new line against later.
 - Which exact placement is this going into (Meta feed ad, Google RSA headline, landing page H1)? The 12-word/one-second test is calibrated to a social feed; a Google RSA headline is capped at 30 characters and a landing page H1 has no such limit, so the same line can pass the test and still not fit, or under-use the room it has.

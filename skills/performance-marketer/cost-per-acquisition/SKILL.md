@@ -19,9 +19,11 @@ arithmetic shown, what you ruled out and why, and what would change the recommen
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.
-Ask as a numbered list and say what happens if they cannot answer one. If the list below runs to
-more than five, ask the five that unblock a first pass, produce that, then ask for the rest to
-sharpen it. Five in one breath is the limit people actually answer.
+**Ask at most THREE questions. Hard cap.** Before anything becomes a question, get it yourself:
+read `.agents/product-context.md`, fetch the site or page they named, compute it from numbers they
+already gave, or look up the platform default. Whatever is left after that, and everything past the
+third question, becomes a stated assumption the user corrects in one word rather than a question
+that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
@@ -87,8 +89,10 @@ tracking release, a price change, or a season.
 ## How to run
 
 
-**This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
-produce the output, then ask for the rest. Do not ask for all of them before writing anything.
+**The list below is longer than three, and three is the cap.** Most of it you can get without
+asking: read the context file, fetch the URL they named, compute it, or look up the platform
+default. Ask only for the three that genuinely cannot be derived and that most change the output.
+State the rest as assumptions, marked as assumptions, and let the user correct the one that matters.
 
 1. **Read access or exports for both platforms**, covering the period where cost moved and an equal
    period before it. This skill never needs write access.
@@ -102,8 +106,9 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 6. **The mechanics in `references/paid-search-mechanics.md` and `references/paid-social-mechanics.md`**
    for the cause lists on each side and what each signal can and cannot establish.
 
-**Also ask, because the answer changes the output.** Live testing found this skill produced a
-confident result without knowing these:
+**Get these before you write, and derive before you ask.** Live testing found this skill producing
+confident results without knowing them. Fetch, compute or look up whatever you can, then spend your
+three questions on what is genuinely left:
 
 - What was CPA before the change and what is it now, in dollars, and over what exact date range did it move? (the skill jumps straight to platform exports without first pinning down the magnitude and window that actually triggered the request, so 'an equal period before it' is left for the agent to guess).
 - What audiences, customer-match lists, or geographic targets is Google Ads using? (needed to actually test the self-competition/overlap read against Meta's audience - the current input list only asks for this on the Meta side).
