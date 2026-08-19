@@ -180,14 +180,14 @@ paused change, and no skill invents a number.
 
 | Skill | What You Get |
 |-------|-------------|
-| **brand-guidelines** | Reads a live site into a working brand kit, offer, proof, voice, colour and type, plus an honest list of what the site never says. |
+| **brand-kit** | Reads a live site into a working brand kit, offer, proof, voice, colour and type, plus an honest list of what the site never says. |
 | **voice-of-customer** | Mines reviews, threads and tickets for the exact words buyers use, sorted into triggers, pains, outcomes, objections and alternatives, with a source count per theme. |
 | **meta-ad-library** | Reads competitors' live ads for the two honest signals the Ad Library gives, variation count and longevity, then maps the white space nobody is running. |
 | **value-proposition** | Turns a mined pain into one promise line under 12 words, tested against the one-second rule, the anyone-test, and whether the offer actually keeps it. |
-| **ad-concepts** | Five or six genuinely different angles for one offer, each a different WHO, PAIN and PROMISE, with what the algorithm learns from each. |
+| **ad-angles** | Five or six genuinely different angles for one offer, each a different WHO, PAIN and PROMISE, with what the algorithm learns from each. |
 | **ad-copy** | Picks the two best-fit copywriting formulas for the placement and writes both with the structural beats labelled inline. |
 | **ad-design** | Turns approved angles into finished on-brand ad images and stages only the human-picked keepers in the account library, with hashes. |
-| **audience-targeting** | Sizes what targeting actually remains and returns one verdict, frequently "go broad and fix the message instead". |
+| **meta-audience-targeting** | Sizes what targeting actually remains and returns one verdict, frequently "go broad and fix the message instead". |
 | **facebook-ads-campaign** | The whole campaign as a paused draft, one objective, one broad ad set, one ad per angle, blocked if the conversion event is unverified. |
 | **lead-form** | Native lead forms with one qualifying question that filters bots, drafted for review, and never a response time the business has not confirmed. |
 | **product-feed** | Catalog and product sets for dynamic ads, treating each set as a promise, gated on the pixel-to-catalog identifier match. |
@@ -207,19 +207,19 @@ paused change, and no skill invents a number.
 | **keyword-intent** | Clusters queries by the answer each searcher needs, one promise per cluster, and reports unanswerable intent as a gap. |
 | **responsive-search-ads** | A complete responsive search ad validated against every character limit, with a claim ledger tying each line to what the page supports. |
 | **google-ads-quality-score** | Names which of the three components is the weak link behind a keyword worth keeping, with no fake cost-saving forecast. |
-| **conversion-tracking** | Decides whether conversion data can be trusted to bid on, marking every conclusion observed or suspected. |
+| **google-ads-conversion-tracking** | Decides whether conversion data can be trusted to bid on, marking every conclusion observed or suspected. |
 | **smart-bidding** | Matches bidding to a trusted goal and mature data, asserting no universal conversion minimum, with a rollback and a fair read date. |
 | **ppc-reporting** | Five to seven business-led numbers, each with its formula, source, target and caveat. |
 | **google-ads-review** | Two complete equal periods compared, movement attributed to real entities, verdict held until conversion delay has elapsed. |
 | **google-ads-troubleshooting** | Works the delivery blockers in dependency order and keeps observed blockers separate from suspected causes. |
-| **google-ads-changes** | Findings turned into an ordered plan where every item has an exact current state, a rollback, and a measurement window. |
+| **google-ads-change-plan** | Findings turned into an ordered plan where every item has an exact current state, a rollback, and a measurement window. |
 
 **Cross-platform (2)**
 
 | Skill | What You Get |
 |-------|-------------|
 | **cost-per-acquisition** | One ranked list of why acquisition cost moved across both platforms, each cause marked observed or suspected, including the read neither account gives alone: whether the two are bidding into the same people. |
-| **budget-optimization** | Donors, recipients and three transfer scenarios across both platforms, ranked on marginal rather than average cost, every projected figure labelled as a projection. |
+| **budget-reallocation** | Donors, recipients and three transfer scenarios across both platforms, ranked on marginal rather than average cost, every projected figure labelled as a projection. |
 
 *Not built on purpose: a ROAS forecaster.* Every skill here refuses to invent a number, and
 `google-ads-quality-score` explicitly forecasts no cost saving because no reliable conversion from
@@ -423,7 +423,7 @@ Skills are independent, use any one on its own. But they're more powerful togeth
 
 **Example flow:** Run `customer-segmentation` to identify at-risk customers, feed that into `customer-journey` to design a retention flow, use `customer-journey` for the email content, set up `ab-test` to test two approaches, track results with `kpi-dashboard`.
 
-**Paid flow:** Run `brand-guidelines` on your site, mine real language with `voice-of-customer`, sharpen one line with `value-proposition`, spread it into angles with `ad-concepts`, make the images with `ad-design`, and launch a paused draft with `facebook-ads-campaign`. Then read daily with `daily-ad-check` and decide weekly with `facebook-ads-audit`.
+**Paid flow:** Run `brand-kit` on your site, mine real language with `voice-of-customer`, sharpen one line with `value-proposition`, spread it into angles with `ad-angles`, make the images with `ad-design`, and launch a paused draft with `facebook-ads-campaign`. Then read daily with `daily-ad-check` and decide weekly with `facebook-ads-audit`.
 
 ---
 

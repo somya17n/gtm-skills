@@ -1,6 +1,6 @@
 ---
 name: value-proposition
-description: "Turns a mined buyer pain into one specific promise line and stress-tests it against the one-second recognition test, on the rule that promises fail by generalising, since a promise to everyone reads to the delivery system as a promise to nobody. Use after mining a pain and before that pain becomes copy, or when an ad earns impressions but no clicks. Boundary: `voice-of-customer` supplies the raw pain and `ad-concepts` turns sharpened lines into whole angles, while `hook-writer` scores social openings against psychological frameworks instead."
+description: "Turns a mined buyer pain into one specific promise line and stress-tests it against the one-second recognition test, on the rule that promises fail by generalising, since a promise to everyone reads to the delivery system as a promise to nobody. Use after mining a pain and before that pain becomes copy, or when an ad earns impressions but no clicks. Boundary: `voice-of-customer` supplies the raw pain and `ad-angles` turns sharpened lines into whole angles, while `hook-writer` scores social openings against psychological frameworks instead."
 ---
 # The Promise Sharpener
 

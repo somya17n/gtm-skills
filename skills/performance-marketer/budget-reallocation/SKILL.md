@@ -1,5 +1,5 @@
 ---
-name: budget-optimization
+name: budget-reallocation
 description: "Ranks every line on both platforms by what a conversion actually costs there, names which are donors and which are recipients, and models three transfer sizes with the projected conversions and blended return for each, including moving money between platforms rather than only within one. Proposes scenarios for approval and moves nothing. Use when the split between platforms was set by history rather than by evidence. Boundary: `scaling-facebook-ads` adds budget to one proven winner in small steps without resetting its learning, `paid-media-audit` finds waste without proposing where it should go instead, and `stockout-alerts` pauses for stock reasons; this shifts money between existing lines."
 ---
 # The Budget Reallocator

@@ -115,7 +115,7 @@ proceeding as though it were answered.
 6. **Decide refresh or retire per flagged ad.** Refresh means the same angle in a new execution.
    Retire means the message is exhausted, not the image.
 7. **Check for a dead angle across executions.** If three executions of one angle have all decayed
-   quickly, the angle is finished - route to `ad-concepts` rather than producing a fourth.
+   quickly, the angle is finished - route to `ad-angles` rather than producing a fourth.
 8. **Rank by spend at stake**, so the expensive decision is read first.
 9. **Change nothing.** Refresh and retire are human decisions.
 

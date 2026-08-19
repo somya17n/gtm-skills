@@ -1,6 +1,6 @@
 ---
 name: smart-bidding
-description: "Matches a Google Ads bidding approach to a trusted conversion goal, the observed volume, the conversion delay and the business target, then drafts the plan for judging it, changing one major variable at a time and reading the result only after the data matures. Use before changing strategy, target cost, target return or budget. Boundary: `conversion-tracking` must pass first, because bidding will optimise whatever goal it is handed, and `scaling-facebook-ads` paces paid-social increments instead."
+description: "Matches a Google Ads bidding approach to a trusted conversion goal, the observed volume, the conversion delay and the business target, then drafts the plan for judging it, changing one major variable at a time and reading the result only after the data matures. Use before changing strategy, target cost, target return or budget. Boundary: `google-ads-conversion-tracking` must pass first, because bidding will optimise whatever goal it is handed, and `scaling-facebook-ads` paces paid-social increments instead."
 ---
 # The Bid Strategy Picker
 
@@ -43,7 +43,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > limits the recommendation to.
 
 
-> **A strategy cannot outperform the goal it is given.** `conversion-tracking` is a prerequisite,
+> **A strategy cannot outperform the goal it is given.** `google-ads-conversion-tracking` is a prerequisite,
 > not a suggestion. If the conversion data has not been verified as trustworthy, this skill holds
 > rather than recommending, because an excellent strategy aimed at the wrong event scales the error
 > faster than a bad strategy aimed at the right one.
@@ -78,7 +78,7 @@ together cannot tell you which one mattered, and it will be read as though it co
 **This skill lists more than five inputs.** Pick the five that unblock a first pass, ask those,
 produce the output, then ask for the rest. Do not ask for all of them before writing anything.
 
-1. **The `conversion-tracking` verdict.** Without a pass, this skill holds.
+1. **The `google-ads-conversion-tracking` verdict.** Without a pass, this skill holds.
 2. **The current strategy, target, and budget**, per campaign.
 3. **Recent conversion volume** over a period long enough to be meaningful for this business, and the
    **conversion delay**.
@@ -93,7 +93,7 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 ## Method
 
 1. **Check the goal first.** If conversion data is unverified or untrustworthy, hold and route to
-   `conversion-tracking`. State the hold as the output; do not offer a provisional recommendation.
+   `google-ads-conversion-tracking`. State the hold as the output; do not offer a provisional recommendation.
 2. **Check data maturity before reading any performance figure.** A cost per acquisition whose most
    recent days sit inside the conversion-delay window is not mature and must not be called good or bad.
 3. **Assess volume against this campaign's own cycle**, not against an invented minimum. Do not assert
@@ -180,7 +180,7 @@ If any check fails, correct it before returning the output.
 
 End by naming what runs next, in one line:
 
-- `conversion-tracking` the neighbouring job on the same input
+- `google-ads-conversion-tracking` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
 

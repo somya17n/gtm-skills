@@ -71,7 +71,7 @@ degrades delivery.
 
 1. **Read `product-context`** for brand colours, fonts, imagery treatment, and the claims the business
    has agreed it can make.
-2. **If `product-context` has not been set up**, take the brand kit from `brand-guidelines` and say
+2. **If `product-context` has not been set up**, take the brand kit from `brand-kit` and say
    in the output that the visual rules came from a site read rather than stored context.
 
 ## How to run
@@ -89,7 +89,7 @@ degrades delivery.
 
 Generate the ratio set the chosen placements need, not a fixed square.
 
-1. **The approved angles**, ideally from `ad-concepts`, each with its WHO, PAIN and PROMISE.
+1. **The approved angles**, ideally from `ad-angles`, each with its WHO, PAIN and PROMISE.
 2. **The brand kit**: colours as hex, fonts, imagery treatment, and the verbatim phrases that sound
    like the brand.
 3. **An image-generation capability** for the visuals.

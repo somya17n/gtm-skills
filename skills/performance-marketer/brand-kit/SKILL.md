@@ -1,5 +1,5 @@
 ---
-name: brand-guidelines
+name: brand-kit
 description: "Reads a public website into a working brand kit, the offer and the proof and the voice and the colour and type, so ads can be written and designed without anyone writing a creative brief first. Use before building any creative, or when ads keep coming out looking like they belong to nobody. Boundary: `tone-of-voice` scores an existing body of writing across six dimensions from samples you supply; this extracts a whole kit from a live site in one pass, and writes nothing back to `product-context`."
 ---
 # The Brand Kit Reader

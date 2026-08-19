@@ -1,5 +1,5 @@
 ---
-name: conversion-tracking
+name: google-ads-conversion-tracking
 description: "Decides whether Google Ads conversion data can be trusted to optimise against: which actions are primary, whether two actions count one event, whether a page view is drowning a demo, and what account evidence simply cannot prove without seeing the site or the CRM. Use before any bid, budget or target recommendation. Boundary: `meta-pixel` does the equivalent for the Meta pixel and its server-side events, and the findings here feed `smart-bidding`."
 ---
 # The Conversion Goal Audit
@@ -41,7 +41,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 
 > **Findings discipline.** Read `references/audit-findings-discipline.md` before writing the output.
-> A conversion-tracking finding invalidates the performance conclusions drawn while it was live, so
+> A google-ads-conversion-tracking finding invalidates the performance conclusions drawn while it was live, so
 > each one names the window of past reporting it casts doubt on. The re-audit trigger is an event -
 > a new conversion action, a site release, a CRM import change - not a date on a calendar.
 

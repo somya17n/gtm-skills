@@ -1,6 +1,6 @@
 ---
 name: facebook-ads-campaign
-description: "Builds a whole Meta ads campaign as a paused draft for review, one objective, one broad ad set, a small daily test budget and one ad per approved angle, keeping the structure simple on purpose because small budgets die of too much structure rather than too little. Use after creatives are approved and it is time to go live. Boundary: `email-campaign` composes lifecycle campaigns on owned channels, `google-ads-changes` sequences edits to an account already running, and `product-launch-tracking` monitors afterwards."
+description: "Builds a whole Meta ads campaign as a paused draft for review, one objective, one broad ad set, a small daily test budget and one ad per approved angle, keeping the structure simple on purpose because small budgets die of too much structure rather than too little. Use after creatives are approved and it is time to go live. Boundary: `email-campaign` composes lifecycle campaigns on owned channels, `google-ads-change-plan` sequences edits to an account already running, and `product-launch-tracking` monitors afterwards."
 ---
 # The Campaign Drafter
 

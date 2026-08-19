@@ -70,7 +70,7 @@ work; if it fails the one-second test for the WHO, no formula underneath can sav
 
 ## How to run
 
-1. **The angle**: WHO, PAIN verbatim where possible, and PROMISE, ideally from `ad-concepts` and
+1. **The angle**: WHO, PAIN verbatim where possible, and PROMISE, ideally from `ad-angles` and
    `value-proposition`.
 2. **The placement**: cold paid-social primary text, retargeting, or a landing-page hero. This decides
    which formulas are eligible.

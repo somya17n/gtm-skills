@@ -111,7 +111,7 @@ proceeding as though it were answered.
    attribution windows. Where the two define a conversion differently, say so and stop treating the
    two cost figures as the same measure.
 2. **Rule out counting before buying.** If cost moved but impressions, clicks and spend did not, this
-   is a measurement incident: route to `meta-pixel` and `conversion-tracking` and do not
+   is a measurement incident: route to `meta-pixel` and `google-ads-conversion-tracking` and do not
    diagnose delivery on top of a broken denominator.
 3. **Check for a shared external cause first**, because it is cheap to test and it explains both
    platforms at once: a landing page or checkout failure, a tracking release, a price change, a
@@ -132,7 +132,7 @@ proceeding as though it were answered.
 8. **Name the next check for each suspected cause**, and where it has to happen - which account,
    which report, or which system outside the ad platforms entirely.
 9. **Recommend no bid or budget change from this diagnosis alone.** Hand the ordering to
-   `google-ads-changes` and any reallocation to `budget-optimization`.
+   `google-ads-change-plan` and any reallocation to `budget-reallocation`.
 
 ## Output format
 

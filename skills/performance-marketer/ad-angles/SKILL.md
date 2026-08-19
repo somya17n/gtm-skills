@@ -1,5 +1,5 @@
 ---
-name: ad-concepts
+name: ad-angles
 description: "Writes five or six genuinely different advertising angles for a single fixed offer, each naming a different buyer, a different pain and a different promised outcome, so the delivery system has something specific to aim with instead of one message wearing six costumes. Use when launching an offer, or when testing has killed the angles you had. Boundary: `creative-brief` briefs from a fixed library of fourteen angles mapped to funnel stages and placements; this invents new ones for one offer. Feed it `voice-of-customer` output and sharpen each line with `value-proposition`."
 ---
 # The Angle Spread
@@ -82,7 +82,7 @@ a dead angle are still dead.
 ## How to run
 
 1. **The offer in one line** - what it is, what it costs, what it gets someone.
-2. **A brand kit**, ideally from `brand-guidelines`: voice, proof, and what the brand will not say.
+2. **A brand kit**, ideally from `brand-kit`: voice, proof, and what the brand will not say.
 3. **Verbatim buyer pains**, ideally from `voice-of-customer`. Angles built from real quotes beat
    angles built from imagination, and the difference shows in the first week.
 4. **What has already been tested and died**, so this does not regenerate a known loser.

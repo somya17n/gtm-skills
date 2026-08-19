@@ -1,6 +1,6 @@
 ---
-name: audience-targeting
-description: "Researches what targeting is actually left on Meta after interest categories were retired, sizes the first-party customer lists and lookalike seeds that remain, and returns an honest verdict that is often go broad and fix the message instead. Use before a launch when you hold a list worth seeding, or when delivery keeps landing in the wrong crowd. Boundary: `customer-segmentation` designs owned-audience stages for channels you control; this only decides what to tell an ad platform. When the verdict is a message problem it hands off to `ad-concepts`."
+name: meta-audience-targeting
+description: "Researches what targeting is actually left on Meta after interest categories were retired, sizes the first-party customer lists and lookalike seeds that remain, and returns an honest verdict that is often go broad and fix the message instead. Use before a launch when you hold a list worth seeding, or when delivery keeps landing in the wrong crowd. Boundary: `customer-segmentation` designs owned-audience stages for channels you control; this only decides what to tell an ad platform. When the verdict is a message problem it hands off to `ad-angles`."
 ---
 # The Targeting Verdict
 
@@ -102,7 +102,7 @@ proceeding as though it were answered.
    the proposed options, reasoning from what the creative already signals about who it is for.
 6. **Reach a verdict, and make it single.** A list of options with no recommendation is the failure
    mode this skill exists to avoid.
-7. **Where the verdict is broad, say so plainly** and hand the real work to `ad-concepts`. The
+7. **Where the verdict is broad, say so plainly** and hand the real work to `ad-angles`. The
    lever is specificity in the creative, not narrowness in the audience.
 8. **Wait for a named pick before creating anything**, and say what will be created when the user
    names it.
@@ -160,7 +160,7 @@ Before returning the output, verify:
 - Were retired targeting options checked for, and any existing use of them flagged?
 - Is the broad comparison argued from the budget and the creative's signal, in two sentences?
 - Are first-party proposals clearly marked as drafts that were not created?
-- If the verdict is broad, is the handoff to `ad-concepts` stated?
+- If the verdict is broad, is the handoff to `ad-angles` stated?
 - Does the output confirm that nothing was created, and name what would create it?
 
 If any check fails, correct it before returning the output.
@@ -172,7 +172,7 @@ If any check fails, correct it before returning the output.
 
 End by naming what runs next, in one line:
 
-- `ad-concepts` if the verdict is broad, since the creative now carries the targeting signal
+- `ad-angles` if the verdict is broad, since the creative now carries the targeting signal
 - `customer-segmentation` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.

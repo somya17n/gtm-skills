@@ -1,5 +1,5 @@
 ---
-name: google-ads-changes
+name: google-ads-change-plan
 description: "Turns a pile of Google Ads findings into an ordered change plan that respects dependencies, tracking before bidding and query evidence before negatives, naming each entity, its current state, the evidence behind the move, a rollback, and how the result gets measured. Use after analysis is done and the next move has to be unambiguous. Boundary: `automation-review` reviews another proposal by trying to refute it; this sequences approved findings into reversible steps, and `facebook-ads-campaign` builds from nothing."
 ---
 # The Change Plan Builder

@@ -1,6 +1,6 @@
 ---
 name: meta-pixel
-description: "Checks whether the Meta pixel and its server-side events are telling the truth: events that quietly stopped firing, one purchase counted twice, deduplication keys that do not match, and attribution windows that flatter. Use before trusting any reported number, and before building catalog or retargeting work on top of it. Boundary: `conversion-tracking` does the equivalent for Google conversion actions and goals, and `marketing-automation` designs the automation that fires events; this only audits what arrived."
+description: "Checks whether the Meta pixel and its server-side events are telling the truth: events that quietly stopped firing, one purchase counted twice, deduplication keys that do not match, and attribution windows that flatter. Use before trusting any reported number, and before building catalog or retargeting work on top of it. Boundary: `google-ads-conversion-tracking` does the equivalent for Google conversion actions and goals, and `marketing-automation` designs the automation that fires events; this only audits what arrived."
 ---
 # The Pixel Audit
 
@@ -199,7 +199,7 @@ Before returning the output, verify:
 
 End by naming what runs next, in one line:
 
-- `conversion-tracking` the neighbouring job on the same input
+- `google-ads-conversion-tracking` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
 

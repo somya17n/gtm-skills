@@ -1,6 +1,6 @@
 ---
 name: meta-ad-library
-description: "Reads a rival's live ads in the public Meta Ad Library and separates proven messages from noise using two signals, how many creative variations one message has and how long it has kept running, then turns the survivors into opportunities for your own offer. Use before writing angles, or when yours have all plateaued. Boundary: `competitive-analysis` profiles a rival's positioning, pricing and weak spots from their website; this reads only what they are paying to say right now, and feeds `ad-concepts`."
+description: "Reads a rival's live ads in the public Meta Ad Library and separates proven messages from noise using two signals, how many creative variations one message has and how long it has kept running, then turns the survivors into opportunities for your own offer. Use before writing angles, or when yours have all plateaued. Boundary: `competitive-analysis` profiles a rival's positioning, pricing and weak spots from their website; this reads only what they are paying to say right now, and feeds `ad-angles`."
 ---
 # The Ad Library Miner
 
@@ -106,7 +106,7 @@ proceeding as though it were answered.
    worth more than the proven-angle list.
 8. **Write three to five angle hypotheses for your offer**, each either a proven market angle re-aimed
    at your differentiator, or a gap angle nobody is running.
-9. **Output directions, never text.** Hand the hypotheses to `ad-concepts` to become copy. Never
+9. **Output directions, never text.** Hand the hypotheses to `ad-angles` to become copy. Never
    reproduce a competitor's wording.
 
 ## Output format

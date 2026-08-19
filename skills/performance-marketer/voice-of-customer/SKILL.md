@@ -109,7 +109,7 @@ proceeding as though it were answered.
 7. **Mine the losing half.** Do not stop at happy reviews - objections and alternatives are where the
    funnel actually leaks, and they are the half most miners skip.
 8. **Map each strong pain to a candidate angle**: who said it, and what promise would answer it, ready
-   to hand to `value-proposition` and then `ad-concepts`.
+   to hand to `value-proposition` and then `ad-angles`.
 9. **Flag any permission risk** where a starred quote is identifiable, so a legal check happens before
    the words appear in an ad rather than after.
 
