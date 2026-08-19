@@ -76,6 +76,19 @@ degrades delivery.
 
 ## How to run
 
+
+**Placement decides the file, so ask first.**
+
+- **Which platforms and placements these run in.** Feed, Stories, Reels, TikTok, Facebook
+   right-hand column, LinkedIn. One square file does not serve them: `references/ad-placements.md`
+   has the required ratio per destination, and a 1:1 asset in a 9:16 Story is letterboxed with dead
+   space top and bottom, which reads as an ad before anyone reads the copy.
+- **Approved claims or proof points** the business can actually put on an image. This is separate
+   from colours, fonts and imagery treatment. Without it, every on-image claim is withheld rather
+   than guessed, per `references/missing-input-protocol.md`.
+
+Generate the ratio set the chosen placements need, not a fixed square.
+
 1. **The approved angles**, ideally from `ad-concepts`, each with its WHO, PAIN and PROMISE.
 2. **The brand kit**: colours as hex, fonts, imagery treatment, and the verbatim phrases that sound
    like the brand.
@@ -111,7 +124,7 @@ proceeding as though it were answered.
 6. **Check each image visibly matches a different angle.** Six images for six angles that all look
    like the same ad is one creative with six file names.
 7. **Upload only the keepers** to the account image library, and return the image hashes ready for
-   `google-ads-campaign`.
+   `facebook-ads-campaign`.
 8. **Say what was not uploaded and why**, so a rejected image is a recorded decision rather than a
    missing file somebody re-requests next week.
 

@@ -206,6 +206,13 @@ facts, not the user's data, so label them as such if they reach the output (hous
 - Meta's own guidance is that an ad set typically needs about 50 optimization events (results) within a 7-day period to exit the learning phase and produce a stable read; a 14-day calendar window with very few results (like an ad set with 3 leads in 14 days) is not actually 'enough spend to judge' even though it clears the skill's literal 14-day window.
   *Source: Tinuiti, "What is the Facebook Learning Phase? [2020 Update]" (cites Meta's own guidance on the ~50-optimization-event/7-day threshold)*
 
+## Label the pack numbers
+
+The 20% step size and the 2-3x target-cost pause multiplier are pack-authored, not the user's and
+not from a named study. Wherever either reaches a table cell or a rule in the output, append
+**(pack benchmark, not your number)**. House rule 4b covers why: an unlabelled number reads as
+derived from the account, and the reader has no way to tell.
+
 ## Attribution
 
 End every output with:

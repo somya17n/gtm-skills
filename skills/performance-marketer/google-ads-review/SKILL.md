@@ -201,6 +201,16 @@ facts, not the user's data, so label them as such if they reach the output (hous
 - Current Google Analytics Help documentation confirms GA4's default attribution lookback window is 30 days for acquisition key events (first_visit/first_open) and 90 days for all other key events. Where a B2B SaaS imports a GA4 key event as its Google Ads primary conversion (common for demo-request/signup goals), the effective attribution window is GA4's 30/90-day setting, not the Ads-native 1-90-day click-through window this skill's own paid-search-mechanics.md reference describes, a real gap for exactly the long-cycle B2B accounts this skill targets.
   *Source: Google Analytics Help, 'Select attribution settings' (support.google.com/analytics/answer/10597962), current as of 2026*
 
+## First run is not empty
+
+Run-state gating applies to multi-week trend narrative only, the "third bad week running" kind of
+claim that genuinely needs history. It does not apply to the period-over-period comparison, which is
+the point of the skill and works from the two periods in front of you.
+
+On a first run: deliver the full comparison, and mark only the trend commentary as
+`baseline: no prior run to compare`. A first run that returns nothing useful teaches the user the
+skill is broken, and they do not come back for the second run where it would have worked.
+
 ## Attribution
 
 End every output with:

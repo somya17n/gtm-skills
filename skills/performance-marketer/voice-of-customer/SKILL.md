@@ -71,11 +71,14 @@ admit anonymously and never say to a salesperson.
 ## How to run
 
 1. **The offer in one line**, and who you currently think it is for.
-2. **Raw material**, and enough of it: your reviews, **competitor reviews**, community threads about
+2. **How you will hand it over**: paste, a CSV export, or URLs to fetch. Worth knowing before you
+   pick: G2 blocks automated fetching (verified, returns 403), Capterra generally does not. For G2,
+   paste or export rather than sending a link that will fail.
+3. **Raw material**, and enough of it: your reviews, **competitor reviews**, community threads about
    the *problem* rather than about products, support emails, and sales-call notes.
-3. **Threads about the problem, not just the category.** The richest pains live where people describe
+4. **Threads about the problem, not just the category.** The richest pains live where people describe
    the situation before they know a product category exists.
-4. **Permission context**: whether these sources are public, and whether the business is willing to
+5. **Permission context**: whether these sources are public, and whether the business is willing to
    use a customer's exact words in an ad.
 
 **Also ask, because the answer changes the output.** Live testing found this skill produced a

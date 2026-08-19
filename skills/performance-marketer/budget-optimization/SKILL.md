@@ -218,6 +218,15 @@ facts, not the user's data, so label them as such if they reach the output (hous
 - The Meta '20% per edit, no more than daily' budget-increase convention that paid-social-mechanics.md already correctly hedges as 'a convention, not a published threshold' has a specific, verifiable practitioner source available, so the file can cite something concrete instead of an unattributed 'widely used rule of thumb.' The source itself explicitly labels it 'Meta's widely cited guideline,' not an official Meta document, confirming the skill's existing caveat is accurate as written.
   *Source: ROASPIG Blog, "How Often Should You Increase Budget on Meta Ads?", roaspig.com/blog/budget-increase-frequency-meta-ads/, 2026 (verified by direct fetch).*
 
+## The volume floor, printed not implied
+
+A donor or recipient verdict off four conversions is noise wearing a table's clothes.
+
+Use the floor in `references/data-input-integrity.md` and **print n next to every verdict**, e.g.
+`n=10, below the floor, verdict weak`. Where a line is under the floor it goes in a
+too-new-to-judge bucket rather than getting a direction, and the output says how much more data
+would settle it.
+
 ## Attribution
 
 End every output with:

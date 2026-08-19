@@ -195,6 +195,18 @@ facts, not the user's data, so label them as such if they reach the output (hous
 - Performance Max campaigns carry no keyword-level Quality Score at all. Google instead rates individual assets Low/Good/Best and rates each asset group's overall Ad Strength as Poor/Average/Good/Excellent, a different mechanism the skill cannot diagnose with its current method.
   *Source: Google Ads Help, "About asset group reporting for Performance Max" (support.google.com/google-ads/answer/13872527) and "About Performance Max Ad Strength" (support.google.com/google-ads/answer/14143250), accessed August 2026*
 
+## Quick mode
+
+Full mode wants five data cuts. Most people arrive with two.
+
+**Minimum: the component-ratings export and per-keyword spend and CPA.** That runs the ranking and
+names the weak component per keyword worth keeping, which is most of the value. Skip the
+smallest-credible-test drafting for any component you cannot see, and say which.
+
+State that you ran quick mode in the first two lines. Also state the date range of both exports:
+Google benchmarks components over a trailing 90 days, so a 7-day export and a 90-day component
+rating are not describing the same thing.
+
 ## Attribution
 
 End every output with:

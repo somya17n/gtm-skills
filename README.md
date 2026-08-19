@@ -188,7 +188,7 @@ paused change, and no skill invents a number.
 | **ad-copy** | Picks the two best-fit copywriting formulas for the placement and writes both with the structural beats labelled inline. |
 | **ad-design** | Turns approved angles into finished on-brand ad images and stages only the human-picked keepers in the account library, with hashes. |
 | **audience-targeting** | Sizes what targeting actually remains and returns one verdict, frequently "go broad and fix the message instead". |
-| **google-ads-campaign** | The whole campaign as a paused draft, one objective, one broad ad set, one ad per angle, blocked if the conversion event is unverified. |
+| **facebook-ads-campaign** | The whole campaign as a paused draft, one objective, one broad ad set, one ad per angle, blocked if the conversion event is unverified. |
 | **lead-form** | Native lead forms with one qualifying question that filters bots, drafted for review, and never a response time the business has not confirmed. |
 | **product-feed** | Catalog and product sets for dynamic ads, treating each set as a promise, gated on the pixel-to-catalog identifier match. |
 | **daily-ad-check** | The read-only daily pass over one ad account, at most five findings ranked by dollars at stake, ending in "No changes were made." |
@@ -423,7 +423,7 @@ Skills are independent, use any one on its own. But they're more powerful togeth
 
 **Example flow:** Run `customer-segmentation` to identify at-risk customers, feed that into `customer-journey` to design a retention flow, use `customer-journey` for the email content, set up `ab-test` to test two approaches, track results with `kpi-dashboard`.
 
-**Paid flow:** Run `brand-guidelines` on your site, mine real language with `voice-of-customer`, sharpen one line with `value-proposition`, spread it into angles with `ad-concepts`, make the images with `ad-design`, and launch a paused draft with `google-ads-campaign`. Then read daily with `daily-ad-check` and decide weekly with `facebook-ads-audit`.
+**Paid flow:** Run `brand-guidelines` on your site, mine real language with `voice-of-customer`, sharpen one line with `value-proposition`, spread it into angles with `ad-concepts`, make the images with `ad-design`, and launch a paused draft with `facebook-ads-campaign`. Then read daily with `daily-ad-check` and decide weekly with `facebook-ads-audit`.
 
 ---
 

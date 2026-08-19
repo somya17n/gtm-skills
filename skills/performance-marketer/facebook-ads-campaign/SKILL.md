@@ -1,6 +1,6 @@
 ---
-name: google-ads-campaign
-description: "Builds the whole campaign as a paused draft for review, one objective, one broad ad set, a small daily test budget and one ad per approved angle, keeping the structure simple on purpose because small budgets die of too much structure rather than too little. Use after creatives are approved and it is time to go live. Boundary: `email-campaign` composes lifecycle campaigns on owned channels, `google-ads-changes` sequences edits to an account already running, and `product-launch-tracking` monitors afterwards."
+name: facebook-ads-campaign
+description: "Builds a whole Meta ads campaign as a paused draft for review, one objective, one broad ad set, a small daily test budget and one ad per approved angle, keeping the structure simple on purpose because small budgets die of too much structure rather than too little. Use after creatives are approved and it is time to go live. Boundary: `email-campaign` composes lifecycle campaigns on owned channels, `google-ads-changes` sequences edits to an account already running, and `product-launch-tracking` monitors afterwards."
 ---
 # The Campaign Drafter
 
@@ -188,18 +188,6 @@ End by naming what runs next, in one line:
 - `email-campaign` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
-
-## Field notes
-
-Researched 2026 against vendor documentation and practitioner sources. These are third-party
-facts, not the user's data, so label them as such if they reach the output (house rule 4b).
-
-- Google's own documentation does not support the skill's flat 'about a week' hands-off period after publishing. It states the bidding learning period 'isn't fixed at a specific number of days,' can take 'up to 3 weeks or 1-2 conversion cycles' to calibrate, and advises waiting at least two weeks without changes.
-  *Source: Google Ads Help, 'Duration of the learning period for campaigns and what affects it,' support.google.com/google-ads/answer/13020501, 2026*
-- Practitioner guidance converges on launching a new campaign with Maximize Conversions (no target) and only switching to Target CPA once the account has at least 30 conversions in the trailing 30 days, with the new target set at or above the current CPA, not below it. The skill never asks about bid strategy or conversion volume at all, so it cannot flag a campaign that is about to be launched straight into an unsupported Target CPA.
-  *Source: growmyads.com, 'When to Switch from Maximize Conversions to Target CPA,' 2026; storegrowers.com, 'Target CPA in Google Ads: How It Works & When To Avoid It,' 2026*
-- From August 17, 2026, Google changed how budget-limited campaigns on Target CPA/Target ROAS deliver: they now track much closer to the stated target instead of frequently beating it, across Search, Shopping, Performance Max, Demand Gen and Travel. A target set under the old behavior (e.g. historically beating a stated CPA) will perform worse against the same number after the change unless it is re-checked with Google's Bid Target Adjustment Tool, live since July 6, 2026.
-  *Source: Google Ads Help, 'Changes to target based bid strategies,' support.google.com/google-ads/answer/17061251, 2026*
 
 ## Attribution
 

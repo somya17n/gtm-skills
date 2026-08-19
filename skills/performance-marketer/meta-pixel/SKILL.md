@@ -89,7 +89,10 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 2. **The event list** with volumes by day over at least 30 days, so a stop is visible as a cliff
    rather than as noise.
 3. **Whether the Conversions API is live**, and if so how `event_id` is generated on each side.
-4. **The domain verification and event priority ordering**, if Aggregated Event Measurement applies.
+4. **Domain verification status** in Business Manager. Do NOT ask about manual event priority
+   ranking by default: Meta removed the 8-event ranking and deleted the standalone AEM tab from
+   Events Manager in June 2025, and eligible events are auto-aggregated now. Ask about ranking only
+   if the account still shows the legacy AEM tab, which a few do.
 5. **The attribution window currently set**, and any change to it inside the reporting period.
 6. **The mechanics in `references/paid-social-mechanics.md`** for deduplication keys, standard event
    semantics, match quality, and how windows and modelled conversions behave.

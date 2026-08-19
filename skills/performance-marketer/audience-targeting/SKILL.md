@@ -172,6 +172,7 @@ If any check fails, correct it before returning the output.
 
 End by naming what runs next, in one line:
 
+- `ad-concepts` if the verdict is broad, since the creative now carries the targeting signal
 - `customer-segmentation` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.

@@ -190,6 +190,19 @@ facts, not the user's data, so label them as such if they reach the output (hous
 - As of mid-2026, ordinary commercial ads in the Ad Library still do not surface spend, impressions, CTR, CVR, ROAS or a 'verified winner' label -- that data stays restricted to political/social-issue ads. I found and then had to discard a conflicting claim that commercial impression ranges shipped in 2026; a specialist source (admapix.com, reviewed July 10 2026) explicitly denies this for commercial ads, so the skill's core 'only two signals exist' framing in the Constraints section is still accurate as written and does not need a stale-platform correction here.
   *Source: admapix.com, 'Facebook Ads Library 2026: Official URL, Filters & Competitor Ads,' reviewed July 10 2026*
 
+## Two things that break this skill in practice
+
+**The Ad Library is a JavaScript app, not a page you can fetch.** `facebook.com/ads/library` renders
+client-side, so a fetch-only agent gets an empty shell and may report "no ads found" for an
+advertiser running dozens. Try it, and if you cannot render it, say so plainly and ask for pasted ad
+text or screenshots per competitor. Silence here reads as evidence of absence, which is the worst
+possible failure for a competitive skill.
+
+**Advantage+ Creative inflates the variation count.** The whole method rests on "nobody makes twelve
+versions of a loser", but Meta auto-generates crops, backgrounds and headline rewordings now. Collapse
+near-identical variants of the same underlying asset into one before counting toward the 3-plus
+threshold, or you will read machine output as human conviction.
+
 ## Attribution
 
 End every output with:

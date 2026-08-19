@@ -200,6 +200,17 @@ facts, not the user's data, so label them as such if they reach the output (hous
 - Advantage+ campaigns, which Meta pushes as the default for most SMB accounts by 2025-2026, report which individual creative asset received impressions but not which final ad combination (image plus headline plus copy) drove a given conversion. The angle-level mapping this skill's Input #3 assumes is readable from the account may not exist for accounts running Advantage+.
   *Source: stackmatix.com, "Meta Advantage+ Shopping Campaigns: Setup, Strategy, and Results," 2026.*
 
+## What counts as enough sample
+
+"Sample adequate" is unfalsifiable without a floor, so use one and print it.
+
+Meta's own delivery guidance treats roughly **50 conversions per ad set per week** as the signal
+threshold for standard campaigns, and about **25 per week** for Advantage+ Shopping. Both are pack
+benchmarks, not the user's numbers, so label them as such wherever they appear.
+
+Print the actual n beside the verdict: `n=18/week, below the 50 floor, verdict directional only`.
+A reader can argue with that. They cannot argue with the word "adequate".
+
 ## Attribution
 
 End every output with:
