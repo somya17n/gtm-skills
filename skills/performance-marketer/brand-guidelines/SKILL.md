@@ -75,6 +75,16 @@ the urge to write the brand a better version of itself.
 3. **Whether an ads connector is available**, so the Facebook Pages the ads would run from can be
    listed for confirmation. Without one, skip that step rather than guessing the page.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Which pricing tier should this round of ads point to? The site lists three tiers ($10k/$20k/$30k a year, no single headline price), so 'the offer' sentence has no obvious anchor without this.
+- Of the audiences the site addresses at once (sales leaders/CROs, marketing/demand gen, RevOps, SDR teams), which one should this campaign speak to first? The voice and proof picked will differ by audience.
+- Do you have a style guide, Figma file, or brand page with exact hex codes and font names? A text-based read of the live site usually cannot recover real CSS values, only what is visible in the copy.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Say which pages were read**, with the date. A kit built from the home page alone is a different
@@ -96,6 +106,8 @@ the urge to write the brand a better version of itself.
    wrong page is caught before spend starts.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Read on:** the date, and the list of pages actually read.
 
@@ -167,6 +179,18 @@ End by naming what runs next, in one line:
 - `tone-of-voice` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- As of 2026, a meaningful share of live sites block Anthropic's crawler outright: one 2026 robots.txt survey found ClaudeBot disallowed by 38 of 107 prominent sites (35.5%, second-highest of 9 AI crawlers measured), and a separate 2026 sample put it at 21% of top sites; Cloudflare (which fronts roughly a fifth of the internet) made AI-crawler blocking the default for new domains starting July 1, 2025. The skill's Method step 1 assumes the site can simply be read and never mentions a fallback for a blocked or empty fetch.
+  *Source: US Tech Automations, "How Many Top Sites Block ClaudeBot? Sealed robots.txt Data" and "Who Blocks Anthropic's ClaudeBot? 39 Sites of 107 Do" (2026); Cloudflare Blog, "Declare your AIndependence: block AI bots, scrapers and crawlers with a single click" (2025)*
+- The skill's step 9 ('list the Facebook Pages the ads could run from, where a connector makes that possible') undersells the actual barrier: the Page-management permission cluster (pages_show_list and neighbors) requires the connecting app to pass full Meta App Review and hold Advanced Access before it can list or touch a real client's Pages - it isn't just a yes/no toggle a user flips on.
+  *Source: singhamandeep.com, "Facebook Page API Permissions App Review (2026 Guide)" (2026)*
+- The Proof step tells the model to quote testimonials verbatim and never improve them, but never flags that reusing a customer quote in paid ads can trigger FTC disclosure duties if the testimonial was incentivized (free credits, a case-study fee, an affiliate deal) - the FTC's revised Endorsement Guides (16 CFR Part 255, finalized 2023) carry civil penalties per violation and the FTC has issued multi-million-dollar penalties for undisclosed material connections.
+  *Source: Federal Trade Commission / eCFR, "16 CFR Part 255 - Guides Concerning Use of Endorsements and Testimonials in Advertising" (finalized 2023, in force 2024-2026)*
 
 ## Attribution
 

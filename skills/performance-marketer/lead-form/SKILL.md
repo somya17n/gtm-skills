@@ -87,6 +87,16 @@ more expensive than a twenty-dollar lead who answers the phone.
 5. **The form mechanics in `references/paid-social-mechanics.md`** for form types, question types, and
    how the volume-versus-intent dial actually behaves.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Which campaign or ad set (existing or planned) will this form attach to, by name or ID? The Output format requires naming this but the Inputs list never asks for it.
+- How many leads does the current form get per week or month, and roughly what fraction are unreachable or wrong-fit today? Without this the 'volume trade' can only be directional, never sized.
+- What's the brand voice for this form - formal, casual, technical, something else? Method step 3 requires the qualifying question be 'phrased in the brand voice' but nothing in product-context or the Inputs list actually captures it.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Start from what is going wrong.** If junk leads are the complaint, characterise the junk before
@@ -180,6 +190,18 @@ End by naming what runs next, in one line:
 - `lead-management` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta has a native, purpose-built anti-bot lever for lead ads separate from a qualifying question: SMS/OTP phone verification, which requires the submitter to confirm their number before the form completes. The skill's own doctrine says bots and unqualified humans 'submit differently ... and need different friction' but the skill and paid-social-mechanics.md only ever supply the human-fit friction (one qualifying question), never the bot-specific one.
+  *Source: Meta Business Help Center, "Enable the SMS Verification Feature to Help Improve Lead Quality" (facebook.com/business/help/898260175547909); corroborated by Social Media Today, "Meta Adds AI-Powered Updates to Its Lead Gen Ads," Oct 2025.*
+- The skill instructs confirming the real response time 'not the aspiration' but gives no citable reason a business would find compelling to actually speed up rather than just report accurately. A well-established, real study exists: contacting a lead within an hour makes qualifying it about 7x as likely as waiting even one more hour, and about 60x as likely as waiting 24+ hours (1.25 million leads, 29 B2C and 13 B2B US companies).
+  *Source: Oldroyd, McElheran & Elkington, "The Short Life of Online Sales Leads," Harvard Business Review, March 2011 (hbr.org/2011/03/the-short-life-of-online-sales-leads).*
+- On Google Ads lead form assets (the skill isn't restricted to Meta, but paid-social-mechanics.md only covers Meta), the qualifying question isn't only a manual filter: marking a 'preferred' answer auto-tags matching submissions as a qualified lead and creates a separate Google-hosted conversion action ('Lead form - Response qualified'), which can feed back into bidding. The skill's Method treats the qualifying answer purely as something a human reviews later and never mentions wiring it into platform optimization where the platform supports that.
+  *Source: Google Ads Help, "About qualifying responses in lead forms" (support.google.com/google-ads/answer/17050941).*
 
 ## Attribution
 

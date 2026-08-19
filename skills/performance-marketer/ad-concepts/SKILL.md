@@ -79,6 +79,16 @@ a dead angle are still dead.
 5. **The market context in `references/creative-angles.md`** for the funnel-stage and channel mapping,
    so a new angle can be placed rather than just written.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What is your target cost per result (CPA/CPL) and what are you currently paying? Without this, the skill's own 'never judge before 2-3x target CPA' rule and its Test order recommendation are both unenforceable -- the Inputs list never collects cost-per-result at all.
+- What is your total monthly ad budget, and how much of it can you actually dedicate to testing six new angles at once? Six brand-new angles split across a small budget can each fall under Meta's ~50-conversions/week learning-phase threshold, trapping all of them in learning instead of producing a clean test -- the skill has no way to warn about this because it never asks.
+- Which platform(s) and campcampaign objective will these run under (Meta Advantage+ conversions, Google PMax, LinkedIn)? Step 8 asks the writer to name 'what the delivery system learns' from each angle, but that answer is platform- and objective-specific and the skill never asks which one applies.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Confirm the offer is fixed.** A campaign is not the place to renegotiate what is being sold. If
@@ -93,7 +103,9 @@ a dead angle are still dead.
    covers different psychological routes rather than six versions of one.
 6. **For the proof angle, use only verbatim proof from the brand kit.** If there is none, write a
    how-it-works angle instead and say explicitly that proof is missing.
-7. **Draft the ad for each**: primary text under 125 words, headline under 40 characters, description.
+7. **Draft the ad for each**: the hook has to land inside the first ~125 CHARACTERS, which is where
+   Meta truncates the Feed. Total primary text may run longer, but assume everything past that sits
+   behind See more. Headline under 40 characters, then the description.
 8. **Add one line per angle naming what the delivery system learns** about who to find from this ad.
    An angle that teaches the algorithm nothing is a generic angle wearing a costume.
 9. **Run the one-second test on all six.** If a stranger from the WHO group would not recognise the ad
@@ -102,6 +114,8 @@ a dead angle are still dead.
     visibly different humans. If two collapse into one, replace one.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Offer:** the fixed one-line offer these angles all sell.
 
@@ -168,6 +182,18 @@ End by naming what runs next, in one line:
 - `creative-brief` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta's delivery algorithm needs roughly 50 optimization events per ad set within a rolling 7-day window to exit the learning phase, and Meta's own guidance caps ad-set creative count at six (practitioners report 3-5 performs better under real budgets). Launching all six brand-new angles at once inside one ad set on a $5k-15k/month budget routinely spreads spend too thin for any single angle to clear that threshold, trapping every angle in learning simultaneously instead of producing a clean test -- the opposite of what six-angles-at-once is meant to achieve.
+  *Source: Meta Business Help Center learning-phase documentation, as reported in growwithsakib.com's 'Meta Ads Learning Phase, Complete 2026 Guide' and corroborated across multiple 2026 practitioner explainers (e.g. adlibrary.com's 'Meta Ads Learning Phase 50 Events' guide), 2026.*
+- Meta removed most detailed-interest targeting categories starting January 15, 2026 and made Advantage+ Detailed Targeting mandatory-on for conversion and link-click campaigns. This is the specific, dated mechanism behind the skill's Doctrine claim that 'the delivery system now reads the ad itself to decide who should see it' -- that line can now be stated as a dated fact with a citation instead of a vague, timeless assertion, which matters because a reader has no way to tell if it's still true without a date.
+  *Source: Jon Loomer Digital, 'A Guide to Meta Ads Targeting in 2026,' jonloomer.com, 2026.*
+- The skill's rule 'Never judge an angle before it has spent 2 to 3 times the target cost per result' states only the upper spend multiplier. The practitioner source that documents this exact threshold in 2026 always pairs it with a floor: don't judge below roughly 20-30 impressions or before 3-4 days minimum, because under that floor, ordinary variance alone can look like a winning or losing angle. Stating the multiplier alone lets a fast, cheap-CPA account judge an angle off a few hours of freak variance.
+  *Source: Pigeon Digital, 'When to Kill a Facebook Ad: The Decision Tree We Use Inside Client Accounts,' pigeondigital.com, 2026.*
 
 ## Attribution
 

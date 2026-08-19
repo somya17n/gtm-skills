@@ -82,6 +82,16 @@ its rating is the most common way this diagnostic causes harm.
 5. **The ad-group structure**, because ad relevance problems are usually structural - one ad group
    answering several intents.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What date range do the keyword-level export and the business-performance export cover, and does it line up with Google's fixed 90-day window for component comparisons?.
+- Are these campaigns on manual or enhanced CPC, or on automated Smart Bidding (Target CPA/ROAS)? It changes whether a bid-based fix is even on the table and how stale a below-average reading likely is.
+- How much of monthly spend runs through Performance Max or broad-match-heavy campaigns versus standard Search with visible keyword-level Quality Score? The skill can only diagnose the latter.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Rank by business value first.** Work only on keywords the business would miss. A below-average
@@ -172,6 +182,18 @@ End by naming what runs next, in one line:
 - `product-page-optimization` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google's own help documentation states each Quality Score component is rated Above average / Average / Below average by comparison against other advertisers whose ads showed for the exact same search over the trailing 90 days, and confirms the Quality Score number itself is never an auction input; only real-time re-evaluations of the same three signals are used at auction time.
+  *Source: Google Ads Help, "About Quality Score for Search campaigns," support.google.com/google-ads/answer/6167118 (accessed August 2026)*
+- Optmyzr CEO Frederick Vallaeys' 2026 analysis names the exact mechanism behind the skill's own doctrine: accounts running broad match plus Smart Bidding routinely show keywords flagged 'below average' on a component while those same keywords hit target CPA/ROAS with healthy impression share, because the visible score is an aggregate of historical exact-match behavior, not a live per-auction rating.
+  *Source: Optmyzr blog, "Does Quality Score Still Matter in 2026? How to Interpret It in Automation-Heavy Google Ads Accounts," optmyzr.com/blog/google-ads-quality-score (2026)*
+- Performance Max campaigns carry no keyword-level Quality Score at all. Google instead rates individual assets Low/Good/Best and rates each asset group's overall Ad Strength as Poor/Average/Good/Excellent, a different mechanism the skill cannot diagnose with its current method.
+  *Source: Google Ads Help, "About asset group reporting for Performance Max" (support.google.com/google-ads/answer/13872527) and "About Performance Max Ad Strength" (support.google.com/google-ads/answer/14143250), accessed August 2026*
 
 ## Attribution
 

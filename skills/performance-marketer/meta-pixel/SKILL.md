@@ -94,6 +94,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 6. **The mechanics in `references/paid-social-mechanics.md`** for deduplication keys, standard event
    semantics, match quality, and how windows and modelled conversions behave.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What is the click-through vs view-through split for the events you're auditing, pulled from Ads Manager's breakdown menu? (Required by the skill's own rule against merging the two, but never asked for.).
+- Are you running Conversions API through a manual server-side implementation or through Meta's Conversions API Gateway (CAPIG)? The two have structurally different event_id/dedup failure modes, and the skill's dedup check should branch on this but currently doesn't ask.
+- What is your event match quality (EMQ) score for the audited events right now (0-10, or Poor/OK/Good/Great in Events Manager)? Method step 5 requires reporting this as a number but no input collects it.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Assert the input is real.** Zero events, or a 30-day export with fewer days than that, is a
@@ -189,6 +199,18 @@ End by naming what runs next, in one line:
 - `conversion-tracking` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta removed the 8-event manual priority ranking for Aggregated Event Measurement in June 2025 and deleted the standalone AEM configuration tab from Events Manager; all eligible standard and custom web events are now auto-aggregated with no manual list or ranking required. This makes the skill's input #4 ('domain verification and event priority ordering') and the AEM bullet in references/paid-social-mechanics.md stale for most 2026 accounts.
+  *Source: Jon Loomer Digital, "Meta Announces Big Changes to Website Conversion Campaigns" and "The Changes to AEM and Conversion Campaigns," 2025*
+- Meta's own Event Match Quality scoring gives a concrete, sourceable band the skill currently has no threshold for: EMQ is graded 0-10 (or Poor/OK/Good/Great), with 6+ considered 'Good' and 8+ considered 'Great' / optimal for CAPI-driven optimization. The skill's Method step 5 says to 'report it as a number rather than healthy or unhealthy' but has no sourced number to compare against, which is exactly the gap house rule 4b flags as [NEED: source].
+  *Source: CustomerLabs, "What is EMQ Score? How to Score 8+ on Meta CAPI," 2026*
+- Meta's Conversions API Gateway (CAPIG), simplified further by the one-click CAPI setup Meta shipped in April 2026, auto-generates and matches event_id between pixel and server events, so the classic 'mismatched event_id causes double counting' failure the skill's Method step 3 centers on does not occur the same way for CAPIG accounts. The skill has no question distinguishing manual server-side CAPI from CAPIG, so it risks running the wrong diagnostic against an account where Meta generates event_id automatically.
+  *Source: Meta for Developers, "Conversions API Gateway" documentation; Stape.io, "Should I Configure Event Deduplication When Using Meta Conversions API Gateway," 2026*
 
 ## Attribution
 

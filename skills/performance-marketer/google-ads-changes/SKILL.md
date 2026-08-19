@@ -82,6 +82,16 @@ the plan.
 5. **The dependency hierarchy in `references/paid-search-mechanics.md`** for the tracking, serving and
    efficiency ordering.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Which conversion action is currently Primary vs Secondary for everything bidding could optimize toward, and is your $245 CPA figure measured against Add to Cart or against Purchase -- since finding #1 means those two numbers are not the same thing?.
+- What is the re-audit trigger for each finding (the specific event -- new conversion action added, ad group restructure, campaign relaunch -- that makes it stale), not just the date it was pulled?.
+- What are the exact full query strings behind the flagged $640 spend, not just the fragments 'free' and 'jobs' -- a negative can only be scoped safely (phrase/exact, collision-checked) against real queries, not word fragments?.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Separate investigation from execution.** Some findings are not changes at all - they are checks
@@ -107,6 +117,8 @@ the plan.
 10. **Leave every item awaiting item-level approval.** Nothing executes from this skill.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Investigation first:** findings that are checks rather than changes, each with where it has to happen.
 
@@ -176,6 +188,18 @@ End by naming what runs next, in one line:
 - `automation-review` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google's AI Max for Search (keywordless targeting layered onto standard Search campaigns) reached general availability on April 15, 2026 after an 11-month beta. In tested accounts it overlapped with existing Broad Match queries at 49-63%, and one documented account saw AI Max scale into competitor brand terms until they consumed 69% of total Search impressions -- a negative-keyword collision and brand-hijack risk the skill's match-type section doesn't mention at all, because keywordless matching isn't blocked by keyword-based negatives the way broad match is.
+  *Source: Google Ads Help / business.google.com, 'AI Max for Search campaigns' (support.google.com/google-ads/answer/15910187), 2026; overlap and brand-hijack figures reported in PPC Live, 'Google's AI Max for Search: What the Data Actually Shows in 2026', 2026*
+- paid-search-mechanics.md states as an uncited fact that the search-terms report omits low-activity queries 'since 2020.' Google's own help docs confirm this and go further: those omitted low-volume queries aren't just dropped, they're aggregated into intent-based 'search categories' or an 'other queries' bucket inside a separate feature (search terms insights), so the omitted spend is checkable in aggregate even when the literal query strings are hidden.
+  *Source: Google Ads Help, 'About search terms insights' (support.google.com/google-ads/answer/11386930), accessed 2026*
+- paid-search-mechanics.md's 'Duplicate counting' bullet only describes one failure mode (a thank-you-page action plus an imported CRM action double-counting the same event). A more commonly reported version: advertisers mark every stage of a lead-gen funnel (lead=$10, SQL=$20, closed sale=$50) as a Primary conversion action, so Google Ads sums all three to $80 for one $50 sale, teaching value-based Smart Bidding the wrong deal size.
+  *Source: Optmyzr, 'Value-Based Bidding: How It Works, When to Use It, and Why It Fails' (optmyzr.com/blog/value-based-bidding-guide/), 2026*
 
 ## Attribution
 

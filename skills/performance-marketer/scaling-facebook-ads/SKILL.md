@@ -91,6 +91,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 6. **The mechanics in `references/paid-social-mechanics.md`** for what counts as a significant edit
    and why increments avoid the reset.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What is [ad set]'s current daily or lifetime budget? (needed to fill in the Scaling schedule's Budget before/after columns, which the input list never collects).
+- What is your month-one (or first-purchase) customer value? (needed to run the Loop check / profitability-at-scale gate the skill says must run before any scaling is proposed; currently only surfaced via product-context, not the main input list).
+- Is this ad set's budget set manually (ABO) or is it running under Advantage+ / campaign budget optimization? (the 20%-per-day increment model only works on a manual ad-set budget; Meta defaults new Sales/Leads/App campaigns to Advantage+ budget where there is no per-ad-set lever to raise).
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Assert the input is real** and that the window is long enough to contain a judgement. A winner
@@ -183,6 +193,18 @@ End by naming what runs next, in one line:
 - `stockout-alerts` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta's own significant-edit threshold for resetting the ad learning phase is a budget/bid change of more than 20% in a single edit at the campaign or ad set level; this is Meta's own documented mechanic, not the pack's opinion, so the skill's Doctrine/Rules language ('increments of roughly twenty percent') can cite it directly instead of stating it as unsourced pack lore.
+  *Source: Meta Business Help Center, "Significant Edits and Learning Phase" / "Last Significant Edit," corroborated by WordStream, "Facebook Learning Phase" (cites Meta's own documentation on the 20% single-day threshold)*
+- Starting February 2025, Meta merged its manual and Advantage+ campaign build flows into one setup and made AI-driven (Advantage+ campaign) budget optimization the default for new Sales, Leads, and App Promotion campaigns. On an account running this default, there is no per-ad-set daily budget to raise by 20%, Meta's algorithm reallocates spend across ad sets inside the campaign automatically. The skill's entire model assumes ad-set-level manual (ABO) budgets and never asks whether the account is actually running under that structure.
+  *Source: Search Engine Land, "Meta simplifies Advantage+ campaign setup, adds leads campaigns," February 2025*
+- Meta's own guidance is that an ad set typically needs about 50 optimization events (results) within a 7-day period to exit the learning phase and produce a stable read; a 14-day calendar window with very few results (like an ad set with 3 leads in 14 days) is not actually 'enough spend to judge' even though it clears the skill's literal 14-day window.
+  *Source: Tinuiti, "What is the Facebook Learning Phase? [2020 Update]" (cites Meta's own guidance on the ~50-optimization-event/7-day threshold)*
 
 ## Attribution
 

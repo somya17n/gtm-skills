@@ -90,6 +90,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 5. **The prior review** from `.agents/gtm-run-state.md`.
 6. **The delivery hierarchy in `references/paid-search-mechanics.md`**, for ordering the next checks.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Was there a tracking outage or gap in either period (distinct from a deliberate change), and how many hours did it cover? The quality check demands withholding any missing-tracking hours, but the 5 collected inputs only ask about deliberate 'changes,' not passive outages the user might not think to mention.
+- Is the primary conversion action native to Google Ads or imported from GA4 as a key event? This decides whether the Ads-native 1-90 day click-through window or GA4's 30-day acquisition / 90-day other-event lookback governs the conversion-delay assumption.
+- What does Google Ads' own Conversion lag reporting view show as the observed/forecasted lag for this conversion action, rather than a remembered estimate?.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Assert both periods are complete and equal**, in the account timezone. A partial day against a
@@ -178,6 +188,18 @@ End by naming what runs next, in one line:
 - `weekly-report` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google Ads' own UI already computes what this skill asks the user to state from memory: a per-conversion-action 'Conversion lag reporting' view showing the observed lag distribution and a forecasted final conversion count, specifically because CPA looks inflated and ROAS deflated in the days right after a period closes.
+  *Source: Google Ads Help, 'About conversion lag reporting' and 'Find your conversion lag reporting data' (support.google.com/google-ads/answer/9347141 and /9347065), 2026*
+- Google Ads' Change History report holds a 2-year, filterable log of budget, bid-strategy, keyword, conversion-action and status changes, including changes made via API, automated rules, or Google Ads Editor, an objective source the skill never points the user to for its own comparability check.
+  *Source: Google Ads Help, 'About change history' (support.google.com/google-ads/answer/19888), 2026*
+- Current Google Analytics Help documentation confirms GA4's default attribution lookback window is 30 days for acquisition key events (first_visit/first_open) and 90 days for all other key events. Where a B2B SaaS imports a GA4 key event as its Google Ads primary conversion (common for demo-request/signup goals), the effective attribution window is GA4's 30/90-day setting, not the Ads-native 1-90-day click-through window this skill's own paid-search-mechanics.md reference describes, a real gap for exactly the long-cycle B2B accounts this skill targets.
+  *Source: Google Analytics Help, 'Select attribution settings' (support.google.com/analytics/answer/10597962), current as of 2026*
 
 ## Attribution
 

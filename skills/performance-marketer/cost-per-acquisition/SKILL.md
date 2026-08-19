@@ -95,6 +95,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 6. **The mechanics in `references/paid-search-mechanics.md` and `references/paid-social-mechanics.md`**
    for the cause lists on each side and what each signal can and cannot establish.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What was CPA before the change and what is it now, in dollars, and over what exact date range did it move? (the skill jumps straight to platform exports without first pinning down the magnitude and window that actually triggered the request, so 'an equal period before it' is left for the agent to guess).
+- What audiences, customer-match lists, or geographic targets is Google Ads using? (needed to actually test the self-competition/overlap read against Meta's audience - the current input list only asks for this on the Meta side).
+- Were there any recent edits to Meta ad sets beyond new creative - budget changes, targeting changes, bid or optimization-event changes - in the window? (the input list asks for 'creative launch dates' but not edits, and an edit is what resets the learning phase per the skill's own mechanics reference).
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Normalise before comparing.** Convert to one currency, align to one timezone, and state both
@@ -125,6 +135,8 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    `google-ads-changes` and any reallocation to `budget-optimization`.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Scope:** both periods, the currencies and timezones normalised, both attribution windows, and the
 conversion definitions on each side.
@@ -197,6 +209,18 @@ End by naming what runs next, in one line:
 - `daily-ad-check` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta permanently removed the 7-day-view and 28-day-view attribution windows on January 12, 2026, shrinking every account to 7-day click + 1-day view. Accounts that had been using the longer windows saw reported conversions drop 15-40% overnight, and the deprecated windows now return empty data silently with no error - a reporting tool still pointed at them shows blanks, not a warning. Any CPA before/after comparison that straddles that date is comparing two different measurement systems, not two periods of real performance, which is precisely the 'shared external cause' this skill's Method step 3 is supposed to catch before blaming either platform.
+  *Source: Supermetrics Help Docs, 'Facebook Ads: New historical limitations, attribution window and metric removals', Jan 12 2026 (the same dated change is independently described by Conversios.io's 'Meta Attribution Window Changes 2026' and Jetfuel Agency's 'Meta Attribution 2026: 1-Day vs 7-Day (Jan 12 Update)').*
+- Performance Max routinely serves on an advertiser's own branded search queries and claims credit for them, so reported CPA/CAC rises for real (you're now paying for what was free organic traffic) without any bid-strategy or Quality-Score story to explain it. Practitioner benchmarks for B2B SaaS accounts put a healthy branded share of PMax search-term-insights traffic at 8-15%; 25%+ signals severe cannibalization, usually paired with no dedicated brand Search campaign or one funded too thin.
+  *Source: GrowthSpree, 'Branded Search Cannibalization in B2B SaaS Google Ads (2026)', 2026; corroborated by Paid Media World, 'Performance Max Brand Cannibalization: How to Stop Google from Stealing Your Brand Search Revenue', 2026.*
+- Meta's own documentation states the learning-phase exit threshold as roughly 50 optimization events within a rolling 7-day window (it resets if a set later falls below 50 in any 7-day window, it isn't a one-time finish line), with costs running 20-50% higher while an ad set is in that state and most well-funded ad sets exiting within 3-7 days. The skill currently hedges this as an anonymous 'commonly cited figure... treated as an order of magnitude, not a promise,' when it can instead be attributed to Meta directly.
+  *Source: Cometly, 'Facebook Ads Learning Phase Optimization Tips (2026)', citing Meta Business Help Center guidance, cross-checked against Coinis's and Benly.ai's independent 2026 summaries of the same Meta documentation.*
 
 ## Attribution
 

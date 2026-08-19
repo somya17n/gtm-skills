@@ -84,6 +84,16 @@ substantiated is the expensive kind of good writing.
    path 15, sitelink text 25 with 35-character description lines, callout 25. Verify against the
    platform's current documentation before shipping, and say that you did.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What is this ad group's current CPA, CVR or CTR from the last full reporting period, so the new headlines have a real baseline instead of only a character-limit pass?.
+- Is Smart Bidding (Maximize Conversions / Target CPA) already running on this ad group, and how recently did it last change? New assets reset part of the learning period, so judging results during that window is invalid.
+- Which specific claims has legal or brand already ruled out for this offer, if any? The skill assumes this list exists but never actually asks the user to name it.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Read the landing page before writing a word.** List what it actually promises, what it proves,
@@ -108,6 +118,8 @@ substantiated is the expensive kind of good writing.
     what testing is being given up.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Ad group:** name, dominant intent, final URL.
 
@@ -176,6 +188,18 @@ End by naming what runs next, in one line:
 - `ad-copy` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- RSAs with 'Average' Ad Strength outperformed 'Good' and 'Excellent' on CPA and conversion rate, and sentence case beat title case on ROAS, CPA and CTR, across 1M+ ads and 22K+ accounts.
+  *Source: Optmyzr, 'Ad Strength & Creative Study: Data & Learnings From 1M+ Ads', September 2024*
+- Full per-headline and per-description performance stats (impressions, clicks, conversions, cost) for RSAs only became available for dates on or after June 5, 2025, before that, Google only reported combination-level performance, not per-asset.
+  *Source: Google Ads Help, 'About the ad-level asset report for responsive search ads', support.google.com/google-ads/answer/9564897 (checked 2026-08-19)*
+- Headlines under 20 characters ran $9.35 CPA vs $18.27 for longer headlines, with higher CTR (11.77% vs 10.52%) and conversion rate (10.39% vs 8.61%), across roughly 20,000 accounts.
+  *Source: Optmyzr, 'What Actually Drives RSA Performance (Hint: It's Not Ad Strength)', April 2026*
 
 ## Attribution
 

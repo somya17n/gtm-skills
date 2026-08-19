@@ -78,6 +78,16 @@ costume.
 5. **Read access to the platform** for size estimates. Without it, say sizes are unavailable rather
    than estimating them.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What is the target CPA/CPL and the current CPA/CPL on the live campaign - the whole broad-vs-narrow verdict is a cost-efficiency call the skill never grounds in an actual cost target.
+- What does the ad creative or copy actually say - the required broad-comparison reasoning depends on "the creative's own signal" but nothing in the input list collects the creative itself.
+- Is Advantage+ Audience (or Advantage+ Shopping/App) already turned on for the existing ad sets - if broad expansion is already active by default, "go broad" may already be happening and the real lever is elsewhere.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Establish what is actually available today** rather than what a guide from two years ago listed.
@@ -165,6 +175,18 @@ End by naming what runs next, in one line:
 - `customer-segmentation` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta's own testing found that removing detailed targeting exclusions (mandatory for all new campaigns from July 29, 2024, with a January 31, 2025 delivery cutoff for existing campaigns still using them) improved median cost per conversion by 22.6%. The skill's Doctrine section just asserts "Exclusion options were removed" with no number to back the go-broad argument.
+  *Source: Social Media Today, "Meta Removes Detailed Targeting Exclusions From Ad Campaigns," 2024*
+- The interest-category cleanup has a hard, checkable timeline, not a vague "removed regularly": consolidation began June 23, 2025, and any ad set still pointed at a merged/removed interest stopped delivering entirely on January 15, 2026 (that date has now passed as of today). The skill should tell the model to check against this date rather than leaving "retired" undefined.
+  *Source: Conversios.io, "Meta Advantage+ Audience vs Detailed Targeting: 2026 Guide," 2026*
+- Meta's Business Help Center recommends a 1,000-5,000 person seed audience for a quality lookalike (100 is the bare technical minimum, but results are described as unstable below 1,000). The skill's First-party proposals step has no sizing bar at all, so a 200-person list and a 20,000-person list get identical treatment in the output table.
+  *Source: Flighted, "Meta Lookalike Audiences: Complete Guide for 2026," 2026 (citing Meta Business Help Center)*
 
 ## Attribution
 

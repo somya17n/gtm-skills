@@ -82,6 +82,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 6. **The match-type mechanics in `references/paid-search-mechanics.md`**, including close-variant
    behaviour and how negatives interact with a newly promoted keyword.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What conversion volume and CPA does the existing keyword currently have (the one a new promotion would split volume from), not just its match type, so cannibalisation can actually be judged rather than just flagged as a risk?.
+- What is the current ad copy (headline and description) running in the destination ad group, not just its stated promise, so the ad-message fit check in step 7 has something to check against?.
+- What revenue (not just conversion count) did each proven query generate? The skill's own closing line claims promotion should be justified 'by money received rather than a conversion count,' but the input list (item 1) only asks for queries that are 'converting or high-value, with their evidence' - it never operationalises 'evidence' as revenue, so a promotion can still run on raw conversion count despite the skill's stated philosophy.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Check existing coverage first.** If a keyword already serves the query well, the correct output
@@ -171,6 +181,18 @@ End by naming what runs next, in one line:
 - `search-term-report` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google Ads negative keywords do NOT match close variants the way positive keywords do (this asymmetry is undocumented in the skill). A negative match-type keyword only blocks the literal form (e.g. negative broad 'flowers' still lets 'red flower' singular through), so the skill's Method step 2 ('Check the negatives ... a promotion into a blocked ad group looks fine in the account and never serves') can miss the reverse failure: a negative that looks like it should block a promoted keyword's close variant actually doesn't, letting a promotion serve traffic the account meant to exclude, or vice versa look blocked when it isn't.
+  *Source: Google Ads Help, 'About negative keywords' (support.google.com/google-ads/answer/2453972)*
+- Google now withholds roughly 40% of search-term data from the Search Terms Report on privacy grounds (industry analysis found this rises far higher, up to ~85% of spend on some keywords, mostly on broad match). This directly undercuts Input #1 ('the proven queries, from search-term-report ... with their evidence') - a large, systematically-biased share of real converting queries the account already paid for never surfaces as a promotable candidate at all, so 'no proven queries found' can mean 'nothing converted' or 'Google hid it,' and the skill has no way to distinguish the two.
+  *Source: Search Engine Land, 'Google Ads hidden search terms cost advertisers - big time' (2024)*
+- Exact match close variants were expanded to include 'same meaning' paraphrases and implied words (not just plurals/misspellings/word order), so an exact-match keyword can now serve queries the account never tested - e.g. [yosemite camping] serving 'campsites in yosemite'. This is a live, ongoing platform mechanic (Google has widened it multiple times since the 2014 baseline), so the skill's Method step 4 claim that 'exact isolates a proven query' is weaker than it reads and should say exact isolates the query only up to Google's current close-variant definition, with a pointer to check it rather than treating it as fixed.
+  *Source: Google Ads Help, 'Keyword close variants: Definition' (support.google.com/google-ads/answer/9342105)*
 
 ## Attribution
 

@@ -96,6 +96,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    for what impression share and saturation actually indicate, and for the learning-phase cost of a
    large budget change.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What is your month-one (or LTV) customer value, not just your target CAC or ROAS? Without it the prescribed 'projected blended return' column can't be produced in dollars - it silently degrades to a conversion count, and the input list only asks for this via a separate product-context Context step, not the main numbered ask.
+- What minimum number of conversions in the window should count as 'enough volume' for a donor verdict versus 'too new to judge'? The skill states no floor, so the same account gets a different donor list depending on an unstated judgment call each run.
+- Do you have Google's Bid Simulator data or Meta's 'estimated additional results' (or the outcome of any past incremental budget change) for the campaigns you're considering as recipients? Without it, the skill's central marginal-vs-average distinction can't actually be computed and falls back to an average-cost proxy.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Normalise both platforms** to one currency, one timezone and stated windows, and say what was
@@ -197,6 +207,16 @@ End by naming what runs next, in one line:
 - `scaling-facebook-ads` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google Ads' own help page states an official evaluation-volume baseline - 'measuring performance over longer time periods that have at least 30 conversions, such as a month or longer (50 conversions for target ROAS)' - which could fill the undefined 'enough volume' floor this skill currently lacks, properly labelled as a Google-stated baseline rather than an invented number.
+  *Source: Google Ads Help, "About Smart Bidding," support.google.com/google-ads/answer/7065882 (fetched and quoted directly, 2026).*
+- The Meta '20% per edit, no more than daily' budget-increase convention that paid-social-mechanics.md already correctly hedges as 'a convention, not a published threshold' has a specific, verifiable practitioner source available, so the file can cite something concrete instead of an unattributed 'widely used rule of thumb.' The source itself explicitly labels it 'Meta's widely cited guideline,' not an official Meta document, confirming the skill's existing caveat is accurate as written.
+  *Source: ROASPIG Blog, "How Often Should You Increase Budget on Meta Ads?", roaspig.com/blog/budget-increase-frequency-meta-ads/, 2026 (verified by direct fetch).*
 
 ## Attribution
 

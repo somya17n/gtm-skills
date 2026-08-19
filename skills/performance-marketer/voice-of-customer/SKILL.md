@@ -78,6 +78,16 @@ admit anonymously and never say to a salesperson.
 4. **Permission context**: whether these sources are public, and whether the business is willing to
    use a customer's exact words in an ad.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- How will you deliver the raw material: paste the text, share a CSV/export, or give me URLs to fetch? (G2 blocks automated fetching in practice, confirmed by a live 403 during this test; Capterra does not.).
+- Have the customers actually consented to their exact words running in a paid ad, or only to the review being public? Public and ad-ready are different permissions and change whether starred quotes can be used at all.
+- What are you writing next with this: a short ad hook or a full landing page? That decides whether PAINS and buyer-isms alone are enough or the OBJECTIONS bank needs equal depth.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Extract verbatim only.** A cleaned-up quote is a fabricated quote. Preserve spelling, grammar and
@@ -101,6 +111,8 @@ admit anonymously and never say to a salesperson.
    the words appear in an ad rather than after.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Five quote banks** - TRIGGERS, PAINS, DESIRED OUTCOMES, OBJECTIONS, ALTERNATIVES.
 
@@ -164,6 +176,16 @@ End by naming what runs next, in one line:
 - `call-notes` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Reddit's public '.json' endpoint, long used by lightweight scraping tools and manual research workflows to pull thread and comment content without paid API access, was deprecated/restricted around May 2026. Anyone following this skill's instruction to mine 'community threads about the problem' on Reddit now needs Reddit's paid API ($0.24 per 1,000 calls, per Reddit's 2023 pricing overhaul) or accepts ToS risk from a workaround scraper - a cost/friction the skill does not mention at all.
+  *Source: ScrapeBadger, "Reddit API vs Scraping: The Honest 2026 Comparison", 2026 (confirmed by direct fetch of the article)*
+- The FTC's Trade Regulation Rule on the Use of Consumer Reviews and Testimonials took effect October 21, 2024, with penalties up to $51,744 per violation for deceptive or unauthorized use of reviews/testimonials in advertising. The skill's 'permission risk' flag (Method step 9, Output section) names no regulatory stakes at all, just a generic 'needs a check' - so the flag reads as a style nicety rather than the concrete legal exposure it actually is.
+  *Source: Morgan Lewis, "FTC Issues Final Rule on Consumer Reviews and Testimonials", 2024 (rule published in the Federal Register August 22, 2024, effective October 21, 2024)*
 
 ## Attribution
 

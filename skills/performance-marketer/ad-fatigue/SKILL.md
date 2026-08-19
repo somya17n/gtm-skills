@@ -88,6 +88,16 @@ than the "twenty new ads a month" advice assumes. Impatience kills more winners 
 5. **The mechanics in `references/paid-social-mechanics.md`** for why baselines must be per-ad, what a
    significant edit resets, and how fatigue scales with spend rather than days.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Has this ad or its ad set had any edit in the last 14 days - new creative added to the same ad set, a budget or bid change, a targeting change?.
+- Does your export give daily rows, or only a pre-aggregated 14-day total?.
+- What timezone is this export in, and is it the same one your target cost-per-result is tracked in?.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Assert the input is real.** A window shorter than the baseline it is compared against, or a
@@ -173,6 +183,18 @@ End by naming what runs next, in one line:
 - `anomaly-detection` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- AdEspresso's analysis of 500 Facebook campaigns found CTR down 29.72% / CPC up 98.51% at frequency 5, and CTR down 49.87% / CPC up 161.15% at frequency 9, recommending action 'near frequency 5' and never exceeding 10 - this sources the skill's currently-unsourced 4.0/30% threshold.
+  *Source: AdEspresso (Hootsuite), 'Facebook Ads Frequency: 3 Techniques to Fight It,' adespresso.com/blog/facebook-ads-frequency/, original study 2018*
+- Meta's ad retrieval engine (Andromeda), announced via Meta's engineering blog on 2024-12-02 and globally rolled out across Facebook/Instagram/Messenger by October 2025, replaced rule-based audience delivery with per-impression individual-level retrieval - a bigger shift than 'interest categories were retired' and one that further weakens the audience-delivery mental model the reference file still leans on.
+  *Source: Meta Engineering blog (Dec 2024 announcement), corroborated by Atria, 'Meta Andromeda: What It is and Why Your Ads Changed,' tryatria.com/blog/meta-andromeda, 2025-2026*
+- Adding a new ad to an existing ad set restarts the learning phase for the whole ad set, not just the new ad - so 'refreshing' a tired creative by adding it into the same ad set as the ad it's meant to protect resets the baseline for both, which the skill's own reset-trigger list (targeting, optimization event, creative, large budget/bid moves) omits.
+  *Source: Jon Loomer Digital, 'Facebook Ads Edits that Trigger the Learning Phase,' jonloomer.com/facebook-ads-edits-learning-phase/*
 
 ## Attribution
 

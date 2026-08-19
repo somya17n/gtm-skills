@@ -106,6 +106,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    significant edit resets, and why a fatigue baseline has to be the ad's own rather than the
    account average.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Which single conversion event counts as 'the result' when different ad sets optimize toward different events (demo booked vs. trial started vs. purchase) - without naming one, CPR gets compared across ad sets as if it measured the same thing.
+- Do you have an independent count of conversions for the same window from outside the ad platform (CRM entries, orders), so a Pixel/CAPI dedup break can be caught against ground truth instead of only against the platform's own two reporting paths?.
+- Were any campaigns, ad sets, or ads edited - budget, audience, creative, or optimization event - in the last 7 days, and when? A significant edit resets the learning phase, which makes a straight week-over-week comparison unfair to whatever was just changed.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Assert the input is real before analysing it.** Count rows. Zero rows, or zero spend on an
@@ -203,6 +213,18 @@ End by naming what runs next, in one line:
 - `daily-sales-report` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Meta's Andromeda retrieval engine, globally live across Facebook/Instagram/Messenger by October 2025, reads ad creative directly with a deep neural net (running on NVIDIA Grace Hopper and Meta's own MTIA chips) to filter tens of millions of candidate ads down to a few thousand before ranking - matching users to the creative's actual content rather than the advertiser's manual audience selection. This gives the skill's currently unsourced claim 'delivery reads the creative' a named, dated mechanism.
+  *Source: Meta's Andromeda announcement (Dec 2, 2024), as reported in 'What Is Andromeda? Meta's AI Ranking Engine for Advertisers' (AdLibrary, 2026) and 'How Meta's Ads Algorithm Works in 2026: Lattice, UTIS & Andromeda' (Greghal.no, 2026)*
+- Meta reclassified Detailed Targeting inputs as advisory 'suggestions' rather than strict filters in February 2026 (after removing several targeting options outright in January 2026), and made Advantage+ the default for new campaigns that same month. This is more specific and more current than the file's existing hedge ('interest-based micro-targeting reduced'), and it matters operationally: Advantage+ campaigns don't expose the same manual per-ad-set audience control the skill's 'one broad ad set' structure advice assumes.
+  *Source: 'Meta Broad Targeting 2026: Why Advantage+ Audiences Replace Interest Targeting' (Adligator, 2026) and 'Advantage+ Detailed Targeting 2026: Complete Guide' (1ClickReport, 2026)*
+- The concrete, checkable causes of a Pixel/CAPI dedup break: event_id sent on only one side, a casing or whitespace mismatch between the two event_ids, or a GTM Server-Side relay adding latency that pushes the two events past the matching window. The skill's tracking section says a doubled count 'is far more often a dedup break than a doubling of sales' but gives the operator nothing concrete to go check.
+  *Source: 'Meta CAPI Event Deduplication with event_id' (TrackingHippo, 2026) and 'Fix CAPI Event Duplication Without Losing Data' (UseCortana, 2026)*
 
 ## Attribution
 

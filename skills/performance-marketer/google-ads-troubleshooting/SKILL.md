@@ -89,6 +89,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
    new conversion action.
 7. **The blocker hierarchy in `references/paid-search-mechanics.md`**, which defines the order below.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Is the conversion action Primary or Secondary, and is Count set to 'Every' or 'One'? A lead-gen action left on 'Every', or a page-view left as Primary, produces a conversion-count change that looks exactly like a delivery incident but is a configuration artifact - the skill's own reference file calls this 'common and expensive' but the Inputs list never asks about it.
+- What is your target CPA or ROAS, and what is your actual current CPA or ROAS? This decides whether the reported change is even outside a normal range, versus a swing within a target that is still being hit.
+- Do you have Auction Insights / impression-share-lost-to-rank data for this campaign? Without it the Rank level in the Blocker hierarchy can never be checked, only marked withheld, and the skill's own quality check currently has no way to know that.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Establish the window and whether a baseline exists.** Without pre-incident data, say the baseline
@@ -110,6 +120,8 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 9. **Rank the next checks by dependency**, naming the one whose answer changes the most others.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Incident:** what changed, when it started, and whether a pre-incident baseline exists.
 
@@ -183,6 +195,18 @@ End by naming what runs next, in one line:
 - `conversion-funnel` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Starting August 17, 2026, Google Ads changes how Target CPA, Target ROAS, and (for Demand Gen) Target CPC campaigns behave when a campaign is 'Limited by budget': instead of potentially overperforming the target as today, the system will optimize more consistently toward the stated target. It applies to Search, Shopping, Performance Max, Demand Gen and Travel campaigns, and Google states explicitly it will NOT auto-adjust targets or budgets for you. This directly changes what a 'Limited by budget' status reason means on this skill's Budget blocker level for any before/after comparison that spans that date.
+  *Source: Google Ads Help, "Frequently asked questions about changes to Target-based bid strategies," support.google.com/google-ads/answer/17125145, 2026*
+- Google Ads now explicitly labels a search term as 'Private' in Performance Max campaigns once it has been searched by fewer than 50 unique users in a 90-day window, instead of silently dropping it from the report. This gives a real, dated, numeric replacement for the reference file's unsourced line that the report 'omits queries with very low activity, and has done since 2020.'
+  *Source: Search Engine Land, "Google Ads revealing low-volume search terms as 'Private'," Jan 21, 2025*
+- Starting June 2026, Google Ads collapses 'enhanced conversions for web' and 'enhanced conversions for leads' into one account/action-level on/off toggle and removes the old requirement to pick a single implementation method (website tag vs Data Manager vs API). The practitioner gotcha this creates: a conversion action can keep firing and recording a base conversion - looking healthy in Google Ads - even while the enhanced-conversions user-data match is empty, double-hashed, or broken after a site change, because Google Ads does not flag that state as an error. That is exactly the failure mode this skill's destination/tracking check is meant to catch, and the skill's current wording ('a tag that stopped firing') does not cover the case where the tag fires but the match data is silently empty.
+  *Source: Search Engine Land, "Google Ads simplifies enhanced conversions into a single switch," 2026; corroborated by taggrs.io, "Google Enhanced Conversions 2026 update: most agencies still haven't checked if theirs works," 2026*
 
 ## Attribution
 

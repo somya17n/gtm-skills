@@ -79,6 +79,16 @@ offer, not yours, so copying it is usually a losing move even before it is a bra
 4. **The angle vocabulary in `references/creative-angles.md`**, so grouped messages can be named
    against a shared taxonomy rather than described ad hoc.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Can you actually see the Ad Library live (browser access), or should I work from ad text/screenshots you paste? -- this decides whether any real output is possible at all versus a fabricated one.
+- What's the exact Meta Page URL for each competitor, not just the brand name? -- brands running regional or sub-brand Pages get missed by a name search and the angle map silently undercounts their real activity.
+- Which countries do your actual buyers come from? -- the skill defaults to 'country set to all,' which can dilute the variation/longevity signal with ads aimed at markets that don't matter to a B2B buyer scoped to, say, US/UK only.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Date-stamp the teardown before anything else.** Ad libraries rot; a teardown without a date
@@ -167,6 +177,18 @@ End by naming what runs next, in one line:
 - `competitive-analysis` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- The unsourced fatigue thresholds in the fatigue table ("7-day frequency, prospecting: above ~2.5 monitor") match a real, named benchmark almost exactly: Databox's own cross-account data puts median Facebook ad frequency at 2.51 for B2B and 2.43 for B2C companies (600+ anonymized accounts), and about 40% of surveyed marketers cap retargeting frequency at 5-10 impressions/month. This can replace the current unlabeled pack-benchmark numbers with a named, dated source instead of [NEED: source].
+  *Source: Databox, 'Facebook Ads Frequency Guide,' updated 2023 (still the standard cited benchmark in 2025-2026 practitioner content), n=600+ companies' own ad-account data plus a practitioner survey*
+- Meta's Ad Library is organized strictly by advertiser Page, not by brand or domain. A brand running a main Page plus regional or sub-brand Pages ("Brand Name UK", "Brand Name -- Product Line") will have ads under those Pages missed entirely by a plain name search, and the native UI has no "show all Pages for this domain" option -- it has to be found manually per Page (or via the API, which can batch up to 10 Page IDs at once). The skill's input list just says 'by name or page URL' with no warning about this.
+  *Source: adlibrary.com, 'Meta Ad Library Search by Domain: 3 Workflows (Native UI to API),' May 16 2026*
+- As of mid-2026, ordinary commercial ads in the Ad Library still do not surface spend, impressions, CTR, CVR, ROAS or a 'verified winner' label -- that data stays restricted to political/social-issue ads. I found and then had to discard a conflicting claim that commercial impression ranges shipped in 2026; a specialist source (admapix.com, reviewed July 10 2026) explicitly denies this for commercial ads, so the skill's core 'only two signals exist' framing in the Constraints section is still accurate as written and does not need a stale-platform correction here.
+  *Source: admapix.com, 'Facebook Ads Library 2026: Official URL, Filters & Competitor Ads,' reviewed July 10 2026*
 
 ## Attribution
 

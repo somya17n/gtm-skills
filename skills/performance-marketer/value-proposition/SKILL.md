@@ -80,6 +80,16 @@ and say what happens if it fails.
    changes the recommendation.
 5. **Any claim legal or brand has already ruled out.**
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- What is the current CTR or CPA on the ad or page this line is replacing? The skill's own description says to use it 'when an ad earns impressions but no clicks,' but the input list never asks for that baseline, so there's no number to check the new line against later.
+- Which exact placement is this going into (Meta feed ad, Google RSA headline, landing page H1)? The 12-word/one-second test is calibrated to a social feed; a Google RSA headline is capped at 30 characters and a landing page H1 has no such limit, so the same line can pass the test and still not fit, or under-use the room it has.
+- You gave one pain quote, not the 3-5 the skill asks for, is that one representative of your typical buyer, or your most extreme case? The output is materially narrower on one quote and the skill never flags that back to the user, it just runs.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Take one pain at a time** and keep the buyer's own words in view while writing. A promise drifts
@@ -102,6 +112,8 @@ and say what happens if it fails.
    becomes a task rather than a silent downgrade.
 
 ## Output format
+
+**Answer first, and it outranks the running order below.** Open with the single recommendation this run produces, on one line, before any table, draft or method note. If the reader stops after two lines they should still have the decision. House rule 2 governs.
 
 **Offer:** the one-line offer these promises all sell.
 
@@ -166,6 +178,18 @@ End by naming what runs next, in one line:
 - `voice-of-customer` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- A randomized A/B test across 10,000 search-ad keywords found keyword/audience-specific ad copy beat generic copy by +8-9% clicks and +8-12% impressions (with an early round showing +121bps mobile CTR lift, p=0.055). This is a real, citable number the skill's whole doctrine ('narrow promises beat generic ones') currently asserts with zero source, it could replace the unsourced assertion in the Doctrine section.
+  *Source: arXiv paper 2506.17863, "LLMs for Customized Marketing Content Generation and Evaluation at Scale," 2025*
+- Google Ads' official spec caps each Responsive Search Ad headline at 30 characters (up to 15 headlines, 2-3 shown at once). The skill's 12-word cap is calibrated to a feed-ad/caption context; a 12-word promise line ('Matching every invoice line item to your bank feed automatically' = 65 characters) is roughly 2x too long to ever run as a Google RSA headline. The skill never distinguishes channel, so a line that passes its own word-count rule can be structurally unusable on the platform half its target users (B2B SaaS, $5k-50k/month) are running.
+  *Source: Google Ads Help, "About responsive search ads," support.google.com/google-ads/answer/7684791 (accessed 2026)*
+- Meta's Advantage+ Creative 'Text Improvements' enhancement is on by default for new campaigns and re-pairs headline/primary text/description combinations at delivery time based on predicted response, so the exact promise line this skill outputs is not guaranteed to be the line Meta actually serves; in claims-sensitive verticals a re-paired combination can put a restricted claim next to the wrong asset, which is exactly the 'the offer keeps it' risk this skill is built to catch, except the algorithm can undo the fix after the fact.
+  *Source: HyperFX, "Meta Advantage+ Creative Enhancements Issues: How to Disable, Override, and Fix in 2026"; corroborated by SparkUGC and Leapbuzz 2026 guides on Advantage+ Creative default settings*
 
 ## Attribution
 

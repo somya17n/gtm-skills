@@ -85,6 +85,16 @@ degrades delivery.
 5. **The placement specs in `references/ad-placements.md`** for the format and safe areas each
    destination requires.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Which platform(s) and placement(s) will these run in (Meta feed, Stories/Reels, LinkedIn, TikTok, Google Display)? The required dimensions and aspect ratio differ completely and the skill defaults to one 1080x1080 square regardless.
+- What claims or proof points is the business approved to state (specific stats, review scores, guarantees, customer counts)? Needed to actually fill the 'Claim support' column rather than the model guessing what counts as safe.
+- Can you provide real product screenshots or a screen recording to feature, or should visuals be illustration only? For B2B SaaS specifically, real UI screenshots and demo stills are reported to outperform generic illustration, which changes the visual idea in every brief.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Write one image brief per angle**: the single visual idea, the on-image text at eight words
@@ -174,6 +184,18 @@ End by naming what runs next, in one line:
 - `product-photography` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- For 2026, three aspect ratios (1:1, 4:5 for Feed, 9:16 for Stories/Reels/full-screen) cover roughly 90% of Meta ad delivery under Advantage+ Creative, which crops or scales whatever single asset is supplied to fit each placement; supplying only a 1:1 square, as this skill's Method step 3 hardcodes, undersupplies most placements rather than being a safe universal default.
+  *Source: TheOptimizer.io, "Meta Ad Sizes & Dimensions for 2026" (2026); corroborated by Blip, "Meta Ads Placement Customization Guide 2026" (2026)*
+- Meta removed the hard 20% text rejection rule in September 2020 (an image with more text no longer gets disapproved or reach-limited), but images with heavy text overlay still get delivered less by the algorithm, so the skill's 'never exceed eight words' rule is a delivery lever, not a compliance requirement, and reads more authoritatively than it is without that distinction stated.
+  *Source: Adzooma, "Facebook Advertising Removes 20% Text Rule on Images" (2020); Social News Desk, "Facebook's 20% Text Rule Is Gone" (2020)*
+- For B2B SaaS specifically (half this skill's stated audience), UGC/lifestyle-style 'native' creative is reported to underperform; what wins instead is real product screenshots, screen-recording demo stills, and customer logo walls, the opposite of the generic-illustration default this skill's briefs lean toward under its 'no fake interface' rule. The skill never asks whether the user can supply real product UI to feature.
+  *Source: Superscale.ai, "Static ads in 2026: the performance marketer's playbook" (2026); SaaS Hero, "50+ B2B SaaS Ad Examples That Convert in 2026" (2026)*
 
 ## Attribution
 

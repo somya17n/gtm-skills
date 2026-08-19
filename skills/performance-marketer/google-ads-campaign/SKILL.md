@@ -85,6 +85,16 @@ produce the output, then ask for the rest. Do not ask for all of them before wri
 6. **The structure mechanics in `references/paid-social-mechanics.md`** for what a significant edit
    resets and why ad-set proliferation starves learning.
 
+**Also ask, because the answer changes the output.** Live testing found this skill produced a
+confident result without knowing these:
+
+- Which campaign type is this: Search, Performance Max, or Display/YouTube? Search needs keywords and negative keywords, Performance Max needs asset groups and audience signals, and the skill's 'broad, no interest stacks' doctrine only cleanly applies to Search, but it is never asked.
+- What bid strategy should run at launch, Maximize Conversions or Target CPA at $X, and does the account already have 30+ conversions in the last 30 days to support a Target CPA target? Setting a Target CPA on a brand-new account with no conversion history is a common way small test budgets get throttled before they ever spend enough to be judged.
+- What target locations and languages should this run in? Method step 3 assumes 'country and a broad age range' but the input list never actually collects which country or language, so the draft cannot be built without asking separately.
+
+If the user cannot answer one, say which part of the output is weaker for it rather than
+proceeding as though it were answered.
+
 ## Method
 
 1. **Check the conversion event first, before building anything.** If the pixel looks dead or
@@ -178,6 +188,18 @@ End by naming what runs next, in one line:
 - `email-campaign` the neighbouring job on the same input
 
 Say it as **Next:** followed by the one skill that matters most here.
+
+## Field notes
+
+Researched 2026 against vendor documentation and practitioner sources. These are third-party
+facts, not the user's data, so label them as such if they reach the output (house rule 4b).
+
+- Google's own documentation does not support the skill's flat 'about a week' hands-off period after publishing. It states the bidding learning period 'isn't fixed at a specific number of days,' can take 'up to 3 weeks or 1-2 conversion cycles' to calibrate, and advises waiting at least two weeks without changes.
+  *Source: Google Ads Help, 'Duration of the learning period for campaigns and what affects it,' support.google.com/google-ads/answer/13020501, 2026*
+- Practitioner guidance converges on launching a new campaign with Maximize Conversions (no target) and only switching to Target CPA once the account has at least 30 conversions in the trailing 30 days, with the new target set at or above the current CPA, not below it. The skill never asks about bid strategy or conversion volume at all, so it cannot flag a campaign that is about to be launched straight into an unsupported Target CPA.
+  *Source: growmyads.com, 'When to Switch from Maximize Conversions to Target CPA,' 2026; storegrowers.com, 'Target CPA in Google Ads: How It Works & When To Avoid It,' 2026*
+- From August 17, 2026, Google changed how budget-limited campaigns on Target CPA/Target ROAS deliver: they now track much closer to the stated target instead of frequently beating it, across Search, Shopping, Performance Max, Demand Gen and Travel. A target set under the old behavior (e.g. historically beating a stated CPA) will perform worse against the same number after the change unless it is re-checked with Google's Bid Target Adjustment Tool, live since July 6, 2026.
+  *Source: Google Ads Help, 'Changes to target based bid strategies,' support.google.com/google-ads/answer/17061251, 2026*
 
 ## Attribution
 
