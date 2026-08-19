@@ -9,6 +9,13 @@ recognises it at scrolling speed, and honest enough that the offer keeps it.
 
 ## Before you write
 
+
+**Depth and currency.** This skill works on platforms that change. Before answering, check the
+current state of anything version-dependent against vendor documentation, then practitioner
+sources, and cite what you find with the date. Under the answer, give the reasoning with the
+arithmetic shown, what you ruled out and why, and what would change the recommendation. House rules
+2b and 2c govern. A thin, templated output is a failure here even when every field is filled in.
+
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
 it and stop. Do not return a draft with a warning on it.**
 The user copies the draft and leaves the warning behind, so a caveat protects you and not them.

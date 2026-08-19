@@ -58,6 +58,52 @@ recommendation at the bottom. Nobody reads to the bottom.
   is an output.
 - **Cut anything that only proves you did the work.** Nobody is grading your thoroughness.
 
+## 2b. Go deep underneath the answer
+
+Rule 2 says lead with the answer. It does not say stop there. A two-line answer with nothing under it
+is not respect for the reader's time, it is an opinion they cannot check.
+
+The shape is a pyramid, not a summary:
+
+1. **The answer**, in the first two lines. What to do, and what it costs or gains.
+2. **The reasoning that produced it**, with the actual arithmetic shown. If you divided a budget,
+   show the division. If a threshold decided it, name the threshold and the number that met or
+   missed it.
+3. **What you ruled out and why.** This is the most-skipped and most-valuable part. A reader who
+   sees the four options you rejected trusts the one you picked, and can overrule you when they know
+   something you do not.
+4. **The current platform facts you relied on**, each with its source and date.
+5. **What would change the answer.** The one input, or the one result, that flips it.
+
+Depth is earned by being checkable, not by being long. Every paragraph either changes the decision,
+shows the working behind it, or gets cut. That is the opposite of padding: rule 2's "cut anything
+that only proves you did the work" still binds, and a section that exists to look thorough is
+exactly what it names.
+
+A thin output is usually a skill that skipped step 3.
+
+## 2c. Research before you answer, do not rely on memory
+
+Any skill touching a platform that changes (Meta, Google Ads, Shopify, LinkedIn, TikTok) is working
+in a moving target. Interest categories get retired, event-priority screens get deleted, character
+limits move, bid strategies change how they pace. A confident answer from memory is how a skill
+quietly starts giving last year's advice.
+
+Before you answer:
+
+- **Check the current state of anything version-dependent.** Search the vendor's own documentation
+  first, then practitioner sources for what the documentation does not say.
+- **Cite what you find, with the date you found it.** "Google Ads Help, Changes to target based bid
+  strategies, checked 2026-08" is checkable. "Google recommends" is not.
+- **Say when you could not check.** If the session cannot browse, print
+  `not verified against live docs this session` beside the figure rather than going quiet. The
+  reader then knows which numbers to re-check and which are solid.
+- **Prefer the user's own data over any benchmark.** Research fills the gaps around their numbers,
+  it does not replace them.
+
+Where research contradicts something written in this pack, the research wins and the contradiction
+gets flagged, because a reference file is a snapshot and the platform is not.
+
 ## 3. Write like a person
 
 Ordinary words, short sentences, no throat-clearing.
