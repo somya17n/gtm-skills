@@ -88,11 +88,14 @@ tracking release, a price change, or a season.
 
 ## Context
 
-1. **Read `product-context`** for target acquisition cost and month-one customer value, so severity
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for target acquisition cost and month-one customer value, so severity
    can be expressed in money rather than in percentage.
-2. **If `product-context` has not been set up**, ask inline for the target and say severity rests on
-   an inline number.
-
 ## How to run
 
 

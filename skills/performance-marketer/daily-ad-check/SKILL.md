@@ -98,11 +98,14 @@ that does the work.
 
 ## Context
 
-1. **Read `product-context`** for what a customer is worth and what the business can pay to acquire
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for what a customer is worth and what the business can pay to acquire
    one. Without those two numbers every finding below is a percentage with no stakes attached.
-2. **If `product-context` has not been set up**, ask inline for month-one customer value and target
-   cost per result, and say in the output that they were supplied inline rather than stored.
-
 ## How to run
 
 
@@ -115,7 +118,7 @@ State the rest as assumptions, marked as assumptions, and let the user correct t
    enough; this skill never needs write access and should not be given it.
 2. **Last seven complete days and the prior seven**, at campaign, ad set and ad level: spend,
    impressions, frequency, clicks, click-through rate, results, cost per result.
-3. **Target cost per result**, from `product-context` or supplied inline.
+3. **Target cost per result**, from `.agents/product-context.md` or supplied inline.
 4. **Conversion event health**: which events fired in each window, so a reporting break is
    distinguishable from a performance drop.
 5. **The prior run** from `.agents/gtm-run-state.md`, for what was already flagged and what has been

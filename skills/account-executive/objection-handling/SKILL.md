@@ -45,7 +45,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`. If missing, **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
 and run another skill first.** Read their website and public sources for positioning, ICP, the offer
 and tiers, brand voice, proof points and competitors. Ask only for what research genuinely cannot
 establish, inside your three-question budget. Then write what you learned to

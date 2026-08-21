@@ -89,12 +89,15 @@ wrong event is worse than no strategy, because it scales the error.
 
 ## Context
 
-1. **Read `product-context`** for the business outcome that actually matters and what one of them is
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for the business outcome that actually matters and what one of them is
    worth, so a conversion action can be judged against a business definition rather than against its
    own name.
-2. **If `product-context` has not been set up**, ask inline which single action the business would
-   optimise against if it could only pick one, and say it was supplied inline.
-
 ## How to run
 
 
@@ -119,7 +122,7 @@ State the rest as assumptions, marked as assumptions, and let the user correct t
 1. **List every action with its full settings.** An audit that samples the actions cannot conclude
    anything about the ones it skipped, and says so.
 2. **Identify what is actually primary**, and therefore what the bidding is chasing. Compare that
-   against the business definition from `product-context`. A mismatch here outranks every other
+   against the business definition from `.agents/product-context.md`. A mismatch here outranks every other
    finding in this audit.
 3. **Check for duplicate counting**: two actions recording one event, typically a thank-you-page
    action alongside an imported CRM action for the same submission, both marked primary.

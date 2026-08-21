@@ -33,7 +33,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 ## Constraints
 
 > **A lever whose reward rests on a baseline you do not have is a research task, not a priority.**
-> Check the baselines before scoring: where `product-context` records a metric as unmeasured, or the
+> Check the baselines before scoring: where `.agents/product-context.md` records a metric as unmeasured, or the
 > user cannot supply a current figure, **do not score reward** for any lever that depends on it. Score
 > effort and risk, leave reward as `unscoreable: baseline missing`, and place the lever in a separate
 > **Measure first** list with the one number that would unlock it. Scoring reward against an absent
@@ -63,7 +63,12 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed. The parts this skill needs most are the brand voice summary, ICP, and primary color.
 2. Read `references/strategy-frameworks.md` for maturity models, growth lever hierarchies, and ICE scoring templates.
 
 ## Inputs

@@ -28,7 +28,7 @@ read `.agents/product-context.md`, fetch the site or page they named, compute it
 already gave, or look up the platform default. Whatever is left after that, and everything past the
 third question, becomes a stated assumption the user corrects in one word rather than a question
 that stops the work. Number them, and say what you will assume if one goes unanswered.
-This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **No context file, no problem. Build it, do not bounce the user.** If `.agents/product-context.md`
 does not exist, research the company yourself: their site for positioning, offer, tiers, voice and

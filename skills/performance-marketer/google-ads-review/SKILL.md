@@ -87,11 +87,14 @@ delay has passed will be wrong in a predictable direction roughly as often as it
 
 ## Context
 
-1. **Read `product-context`** for the target cost per acquisition or return, and what a customer is
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for the target cost per acquisition or return, and what a customer is
    worth. Without a target, this review describes direction and refuses to call anything healthy.
-2. **If `product-context` has not been set up**, ask inline for the target, and say the verdicts rest
-   on an inline number.
-
 ## How to run
 
 

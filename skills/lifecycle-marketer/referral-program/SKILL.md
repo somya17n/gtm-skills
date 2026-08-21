@@ -42,7 +42,12 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask inline for: what's being sold, the price point, and the business model (subscription, one-time purchase, usage-based).
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed. The parts this skill needs most are what's being sold, the price point, and the business model (subscription, one-time purchase, usage-based).
 2. Read `references/referral-incentive-benchmarks.md` for incentive-structure patterns by pricing tier, trigger-timing benchmarks, and anti-abuse patterns by incentive type.
 
 ## Inputs

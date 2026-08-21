@@ -1,6 +1,6 @@
 # Competitor Profile Extraction Guide
 
-Reference for the `competitor-profiling` skill: what to pull from each page type, and the comparison table format for multi-competitor runs.
+Reference for the `competitive-analysis` skill: what to pull from each page type, and the comparison table format for multi-competitor runs.
 
 ---
 

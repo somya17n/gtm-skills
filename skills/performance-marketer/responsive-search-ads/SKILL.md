@@ -94,11 +94,14 @@ substantiated is the expensive kind of good writing.
 
 ## Context
 
-1. **Read `product-context`** for brand voice, the offer, and the claims the business has already
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for brand voice, the offer, and the claims the business has already
    agreed it can make.
-2. **If `product-context` has not been set up**, ask inline for the offer and the proof behind it, and
-   say in the output that the claims were supplied inline rather than stored.
-
 ## How to run
 
 1. **The ad group and its keywords**, plus the dominant query intent it serves. One intent per ad
