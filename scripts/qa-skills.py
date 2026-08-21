@@ -7,7 +7,7 @@ about, so a failure means a real user-facing defect, not a style nit.
 import re, glob, io, sys, os, collections
 
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-FILES = sorted(glob.glob("skills/*/*/SKILL.md")) + ["skills/product-context/SKILL.md"]
+FILES = sorted(glob.glob("skills/*/*/SKILL.md"))
 
 # A skill teaches Claude the register it writes in, so a tell in the skill becomes a tell
 # in the output. "highest-leverage" is a compound adjective, not the verb. "seamless grey"

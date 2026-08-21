@@ -17,6 +17,13 @@ third question, becomes a stated assumption the user corrects in one word rather
 that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
+**No context file, no problem. Build it, do not bounce the user.** If `.agents/product-context.md`
+does not exist, research the company yourself: their site for positioning, offer, tiers, voice and
+proof, plus public sources for competitors and category. Ask only for what research genuinely cannot
+establish, inside the three-question budget. Write what you learn to `.agents/product-context.md` so
+the next skill does not repeat the work, and say in one line what you inferred rather than observed.
+Never tell the user to go and run a different skill before you can start.
+
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
 em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.

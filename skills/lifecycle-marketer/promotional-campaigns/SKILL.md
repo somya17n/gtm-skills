@@ -1,5 +1,5 @@
 ---
-name: promo-roi
+name: promotional-campaigns
 description: "Measures whether a promotion or discount that already ran added real profit or just pulled demand forward, using a stated baseline-versus-promo-versus-recovery window comparison. Use when a sale just ended, a promo calendar is about to repeat, discount codes are leaking, or revenue rose while profit stayed flat. Boundary: `pricing-strategy` (Experimentation Lead) designs future pricing tiers and price points; this skill measures the after-the-fact impact of a promotion that already happened, not future pricing design."
 ---
 # The Promo Impact Check
@@ -23,6 +23,13 @@ already gave, or look up the platform default. Whatever is left after that, and 
 third question, becomes a stated assumption the user corrects in one word rather than a question
 that stops the work. Number them, and say what you will assume if one goes unanswered.
 This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+
+**No context file, no problem. Build it, do not bounce the user.** If `.agents/product-context.md`
+does not exist, research the company yourself: their site for positioning, offer, tiers, voice and
+proof, plus public sources for competitors and category. Ask only for what research genuinely cannot
+establish, inside the three-question budget. Write what you learn to `.agents/product-context.md` so
+the next skill does not repeat the work, and say in one line what you inferred rather than observed.
+Never tell the user to go and run a different skill before you can start.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no

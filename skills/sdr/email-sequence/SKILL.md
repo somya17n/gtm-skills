@@ -53,7 +53,12 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or ask for the ICP, persona, and product one-liner inline.
+1. Check for `.agents/product-context.md`. If missing, **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+and run another skill first.** Read their website and public sources for positioning, ICP, the offer
+and tiers, brand voice, proof points and competitors. Ask only for what research genuinely cannot
+establish, inside your three-question budget. Then write what you learned to
+`.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+you created it and what you inferred rather than observed. ask for the ICP, persona, and product one-liner inline.
 2. Read `.agents/product-context.md` for the ICP, persona, product one-liner, competitors, and banned-word list. Inputs 2 through 5 below are usually already recorded there: pull them and confirm rather than asking the user to restate them.
 3. Read `references/outreach-cadences.md` for cadence patterns by buyer type, channel mix, personalization layers, and send-day spacing. Output 3 recommends a missing step with a suggested send day, so ground that recommendation in the cadence patterns there rather than inventing an interval.
 

@@ -1,6 +1,6 @@
 ---
 name: keyword-intent
-description: "Groups paid search queries by the answer each searcher actually needs, pricing or comparison or login or category browsing or education, then maps every cluster to one ad-group promise and one page that can honestly deliver it, calling out an intent the site cannot answer as a gap. Use before adding keywords or restructuring Search. Boundary: `onsite-search` tunes on-site search ranking inside your own store, not paid search, and `keyword-expansion` routes proven queries into these clusters."
+description: "Groups paid search queries by the answer each searcher actually needs, pricing or comparison or login or category browsing or education, then maps every cluster to one ad-group promise and one page that can honestly deliver it, calling out an intent the site cannot answer as a gap. Use before adding keywords or restructuring Search. Boundary: site search tunes on-site search ranking inside your own store, not paid search, and `keyword-expansion` routes proven queries into these clusters."
 ---
 # The Search Intent Mapper
 
@@ -25,6 +25,13 @@ already gave, or look up the platform default. Whatever is left after that, and 
 third question, becomes a stated assumption the user corrects in one word rather than a question
 that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
+
+**No context file, no problem. Build it, do not bounce the user.** If `.agents/product-context.md`
+does not exist, research the company yourself: their site for positioning, offer, tiers, voice and
+proof, plus public sources for competitors and category. Ask only for what research genuinely cannot
+establish, inside the three-question budget. Write what you learn to `.agents/product-context.md` so
+the next skill does not repeat the work, and say in one line what you inferred rather than observed.
+Never tell the user to go and run a different skill before you can start.
 
 **Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
 you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
@@ -172,7 +179,7 @@ If any check fails, correct it before returning the output.
 
 End by naming what runs next, in one line:
 
-- `onsite-search` the neighbouring job on the same input
+- `responsive-search-ads` write the ad that delivers the promise each cluster implies
 
 Say it as **Next:** followed by the one skill that matters most here.
 

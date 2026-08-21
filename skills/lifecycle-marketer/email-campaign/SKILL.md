@@ -46,8 +46,12 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`. If missing, ask the user to run `product-context` first, or
-   ask inline for brand voice, ICP, lifecycle stages, and the available channels and integrations.
+1. Check for `.agents/product-context.md`. If missing, **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+and run another skill first.** Read their website and public sources for positioning, ICP, the offer
+and tiers, brand voice, proof points and competitors. Ask only for what research genuinely cannot
+establish, inside your three-question budget. Then write what you learned to
+`.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+you created it and what you inferred rather than observed. ask inline for brand voice, ICP, lifecycle stages, and the available channels and integrations.
 2. Read it for brand voice, the banned-word list, ICP, lifecycle stages, and the north-star metric.
    The banned-word list is binding on every line of copy this skill returns, not advisory.
 3. Read the reference for the mode(s) in play: `references/email-templates.md` for email,
