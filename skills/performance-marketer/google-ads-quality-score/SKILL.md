@@ -83,11 +83,14 @@ its rating is the most common way this diagnostic causes harm.
 
 ## Context
 
-1. **Read `product-context`** for what a conversion is worth, so "a keyword worth keeping" is judged on
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for what a conversion is worth, so "a keyword worth keeping" is judged on
    business value rather than on its rating.
-2. **If `product-context` has not been set up**, ask inline which keywords matter commercially, and say
-   the prioritisation rests on inline inputs.
-
 ## How to run
 
 1. **The keyword-level export** with all three component ratings, not just the composite score.

@@ -47,7 +47,12 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`: if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask inline for: product type (B2B/B2C), core value proposition, and lifecycle stage names in use.
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed. The parts this skill needs most are the product type (B2B/B2C), core value proposition, and lifecycle stage names in use.
 2. Read `references/funnel-benchmarks.md`: specifically the SaaS Product Funnel benchmarks and the Drop-Off Diagnosis Framework (Friction / Motivation / Ability / Timing), and `references/lifecycle-stages.md` for how this business defines its early lifecycle stages, plus
    the **Activation Benchmarks and Time to Value** and **The Aha Moment Is Not the Activation Event**
    sections of `references/funnel-benchmarks.md`.

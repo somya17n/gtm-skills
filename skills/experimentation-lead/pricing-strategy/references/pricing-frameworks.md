@@ -145,7 +145,7 @@ Every pricing recommendation ships with:
 
 ## Pre-Launch Checklist
 
-- [ ] Target personas defined (pulls from `customer-research` if available)
+- [ ] Target personas defined (from prior customer research, if any exists)
 - [ ] Competitor pricing researched
 - [ ] Value metric identified and stress-tested against "more usage = more value?"
 - [ ] Willingness-to-pay research conducted (Van Westendorp or MaxDiff) or explicitly flagged as not yet done

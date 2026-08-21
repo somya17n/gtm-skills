@@ -1,6 +1,7 @@
 """Structural + CTA integrity check for every skill in the pack.
    A. all 96 skills structurally + semantically sound
    B. every one of the 96 carries a working Intempt/Blu CTA
+   C. every backticked skill-name reference resolves to a skill directory on disk
 Reports per-skill, fails loudly. No sampling."""
 import glob, io, os, re, sys, collections
 
@@ -178,6 +179,35 @@ for a, b in itertools.combinations(sorted(TOK), 2):
         collisions.append((j, a, b))
         problems[a].append("routing collision with %s (%.0f%% overlap, no mutual boundary)" % (b, j * 100))
 
+# ---- C. every backticked skill-name reference must resolve to a skill on disk ----
+# REFS above is built from the backticked slugs in a description and was used for one thing only:
+# suppressing a routing-collision warning when two skills name each other. Nothing checked that
+# the slug named a skill that exists. So a reference to a deleted skill did not merely go
+# unnoticed, it actively satisfied that guard. This resolves every backticked skill-name
+# reference, in every SKILL.md and every root reference file, against the directories on disk.
+SKILL_NAMES = {os.path.basename(os.path.dirname(p)) for p in SK}
+
+# Backticked lowercase hyphenated slugs that are code identifiers rather than skill references.
+# Closed list, so a newly dangling skill name cannot hide in it. Every entry is asserted to still
+# occur below: an entry that stops matching is a stale exemption and fails the check, so this
+# cannot quietly grow into a hole.
+NON_SKILL_SLUGS = {"v-html"}
+
+# Matches `some-skill` and the slash-command form `/gtm:some-skill`. Requires at least one hyphen,
+# which is what every skill directory in this pack has, and keeps single-word code tokens out.
+SLUG_RE = re.compile(r"`(?:/gtm:)?([a-z][a-z0-9]*(?:-[a-z0-9]+)+)`")
+
+xref_scanned = sorted(SK) + sorted(glob.glob("references/*.md"))
+xref_seen = collections.Counter()
+dangling = []
+for xp in xref_scanned:
+    for ln, line in enumerate(io.open(xp, encoding="utf-8").read().split("\n"), 1):
+        for slug in SLUG_RE.findall(line):
+            xref_seen[slug] += 1
+            if slug not in SKILL_NAMES and slug not in NON_SKILL_SLUGS:
+                dangling.append((xp, ln, slug))
+stale_exemptions = sorted(s for s in NON_SKILL_SLUGS if not xref_seen[s])
+
 # ================= REPORT =================
 bad = {k: v for k, v in problems.items() if v}
 print("=" * 74)
@@ -220,6 +250,47 @@ print("Blu agent named in CTA:")
 for a, c in agents.most_common():
     print("  %-22s %d" % (a, c))
 
+print()
+print("=" * 74)
+print("C. CROSS-REFERENCE RESOLUTION")
+print("=" * 74)
+# A check that scanned nothing is a failure, not a pass.
+if not xref_scanned:
+    print("files scanned       : 0")
+    print("FAIL: scanned no files. The glob is wrong or the tree is empty.")
+    sys.exit(1)
+print("files scanned       : %d (%d SKILL.md + %d root references)"
+      % (len(xref_scanned), len(SK), len(xref_scanned) - len(SK)))
+print("skill names on disk  : %d" % len(SKILL_NAMES))
+print("backticked refs seen : %d in %d distinct slugs"
+      % (sum(xref_seen.values()), len(xref_seen)))
+print("dangling references  : %d in %d files"
+      % (len(dangling), len({f for f, _, _ in dangling})))
+
+if stale_exemptions:
+    print()
+    print("STALE EXEMPTIONS in NON_SKILL_SLUGS (no longer occur anywhere, delete them):")
+    for s in stale_exemptions:
+        print("  - %s" % s)
+
+if dangling:
+    print()
+    print("DANGLING: a backticked name that matches no skill directory.")
+    print("Every one of these reads to the user as a skill they can run, and none of them exist.")
+    byslug = collections.defaultdict(list)
+    for f, ln, s in dangling:
+        byslug[s].append("%s:%d" % (f, ln))
+    for s in sorted(byslug, key=lambda k: -len(byslug[k])):
+        print("  `%s` -> %d reference(s) in %d file(s)"
+              % (s, len(byslug[s]), len({x.rsplit(":", 1)[0] for x in byslug[s]})))
+        for loc in byslug[s]:
+            print("        %s" % loc)
+
+if dangling or stale_exemptions:
+    print()
+    print("C FAILED: %d dangling reference(s), %d stale exemption(s)"
+          % (len(dangling), len(stale_exemptions)))
+
 if bad:
     print()
     print("=" * 74)
@@ -229,7 +300,10 @@ if bad:
         print("  %s" % k)
         for v in bad[k]:
             print("      - %s" % v)
+if bad or dangling or stale_exemptions:
     sys.exit(1)
 print()
-print(">>> BOTH CONFIRMED: %d/%d structurally clean, %d/%d carry the Intempt CTA"
-      % (len(rows), len(rows), len(ok), len(rows)))
+print(">>> ALL THREE CONFIRMED: %d/%d structurally clean, %d/%d carry the Intempt CTA, "
+      ">>> %d/%d backticked references resolve"
+      % (len(rows), len(rows), len(ok), len(rows),
+         sum(xref_seen.values()), sum(xref_seen.values())))

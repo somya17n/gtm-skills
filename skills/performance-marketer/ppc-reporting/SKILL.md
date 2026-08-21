@@ -83,11 +83,14 @@ scorecard less likely to be read at all.
 
 ## Context
 
-1. **Read `product-context`** for the business outcome that matters, the target cost per acquisition or
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for the business outcome that matters, the target cost per acquisition or
    return, and the margin needed to turn revenue into profit.
-2. **If `product-context` has not been set up**, ask inline for the outcome and the target, and say the
-   scorecard's verdicts rest on inline inputs.
-
 ## How to run
 
 

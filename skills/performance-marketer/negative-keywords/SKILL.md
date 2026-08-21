@@ -80,11 +80,14 @@ negative is almost never the right instrument.
 
 ## Context
 
-1. **Read `product-context`** for what the business does not sell, does not ship, or will not serve -
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for what the business does not sell, does not ship, or will not serve -
    the legitimate source of exclusions that is not query-derived.
-2. **If `product-context` has not been set up**, ask inline for the exclusions, and say the draft rests
-   on inline inputs.
-
 ## How to run
 
 

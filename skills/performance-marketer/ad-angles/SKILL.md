@@ -90,11 +90,14 @@ a dead angle are still dead.
 
 ## Context
 
-1. **Read `product-context`** for the offer, the brand voice, and the proof the business can actually
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for the offer, the brand voice, and the proof the business can actually
    stand behind.
-2. **If `product-context` has not been set up**, ask inline for the offer in one line and whatever
-   proof exists, and say the angles were built on inline inputs.
-
 ## How to run
 
 1. **The offer in one line** - what it is, what it costs, what it gets someone.

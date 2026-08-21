@@ -86,11 +86,14 @@ individual ad noise hides the message-level pattern that is the only thing actua
 
 ## Context
 
-1. **Read `product-context`** for month-one customer value and target cost per result. Without both,
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for month-one customer value and target cost per result. Without both,
    every figure below is a number with no verdict attached.
-2. **If `product-context` has not been set up**, ask inline for both and say the verdicts rest on
-   inline economics.
-
 ## How to run
 
 1. **Read access to the account**, or an export. This read never needs write access.

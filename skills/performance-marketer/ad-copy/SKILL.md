@@ -79,11 +79,14 @@ work; if it fails the one-second test for the WHO, no formula underneath can sav
 
 ## Context
 
-1. **Read `product-context`** for brand voice and the proof the business can stand behind - the input
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for brand voice and the proof the business can stand behind - the input
    that decides whether a proof beat can be written at all.
-2. **If `product-context` has not been set up**, ask inline for the voice and any real proof, and say
-   the drafts rest on inline inputs.
-
 ## How to run
 
 1. **The angle**: WHO, PAIN verbatim where possible, and PROMISE, ideally from `ad-angles` and

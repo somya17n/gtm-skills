@@ -1,6 +1,6 @@
 # GTM Skills
 
-**Your AI go-to-market team.** 90 skills organized around the 8 real jobs on a GTM team, plus 9 store automations that run those skills on a schedule, and every skill builds its own product context, not around tools. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
+**Your AI go-to-market team.** 90 skills organized around the 8 real jobs on a GTM team, not around tools. Nine of the 90 are store automations that run the others on a schedule, and every skill builds its own product context, so there is nothing to set up first. The old stack was a flat directory. This one is a job description with skills behind it, the same way you'd hand a new hire a role, not a folder of prompts.
 
 Not "write me a cold email." Design the system that decides which message to send, to whom, through which channel, and when.
 
@@ -30,11 +30,6 @@ So that's how this is organized. Eight jobs. Five to thirty skills behind each o
 
 90 skills across 8 jobs, including 9 store automations that run on a schedule. Every skill researches and builds its own product context, so there is no setup skill to run first. Each skill includes reference materials with real frameworks, benchmarks, and methodology, not generic advice.
 
-### Foundation
-
-| Skill | What You Get |
-|-------|-------------|
-
 ### Job 1: Brand Designer (5 skills)
 
 `npx skills add sidchaudhary/gtm-skills/skills/brand-designer`
@@ -59,12 +54,13 @@ Runs the flows that fire on their own, welcome, recovery, win-back, so retention
 |-------|-------------|
 | **customer-journey** | Multi-channel automation flows with conditional branching, holdout groups, and channel guardrails. Outputs a complete journey blueprint with node-by-node detail. |
 | **customer-segmentation** | Lifecycle segmentation using a 6-stage model (At Risk to Champions) with RFM scoring and behavioral signals. Tells you who to target and why. |
+| **email-campaign** | Designs a lifecycle campaign end to end, email, SMS or push, and decides whether it runs once or on a cadence, with deliverability and consent gates. |
 | **referral-program** | Designs a customer referral program, trigger moment, two-sided incentive sized against real customer value, tiers, and anti-abuse rules. |
 | **churn-reduction** | Cancel flows, dynamic save offers, churn risk scoring, and dunning sequences, the systemic retention layer, not a one-off email. Now also covers delivery-cycle products: pause/skip vs. cancellation, and frequency mismatch as a churn cause. |
 | **repeat-purchase-rate** *(new)* | Reviews the post-first-purchase repeat-buy flow, reorder prompts, replenishment timing, second-purchase incentives, and names what's blocking a second order. |
 | **promotional-campaigns** *(new)* | Measures the after-the-fact impact of a promotion or discount already run: lift, margin cost, and the post-promo dip, over a stated recovery period. |
 
-### Job 3: Experimentation Lead (10 skills)
+### Job 3: Experimentation Lead (9 skills)
 
 `npx skills add sidchaudhary/gtm-skills/skills/experimentation-lead`
 
@@ -78,7 +74,6 @@ Decides what ships and what dies, with a number attached instead of a gut feelin
 | **pricing-strategy** | Value metric selection, tier structure, price points, and price-increase timing, refuses to guess at your churn or conversion numbers. |
 | **conversion-funnel** | Diagnoses funnel drop-offs against industry benchmarks, identifies root causes, calculates the math to hit your targets, and prioritizes fixes. |
 | **onboarding-flow** | Designs the post-signup activation flow, what happens before the "aha moment," in what order, and how drop-off gets diagnosed. |
-| **site search** *(new)* | Reviews onsite search query logs, zero-result queries, synonym gaps, and merchandising rules, and refuses to run without a real query export. |
 | **paid-media-audit** *(new)* | Triages which ad channels, campaigns, or audiences are wasting spend using ROAS, CAC, and spend concentration. |
 | **checkout-optimization** *(new)* | A direct UX audit of a checkout flow, form fields, payment coverage, trust signals, step count, from a walkthrough or screenshots. |
 | **product-page-optimization** *(new)* | Reviews an existing product detail page and returns a prioritized edit brief, not a new page build. |
@@ -99,11 +94,10 @@ Explains what moved and why, before anyone has to ask.
 | **contribution-margin** *(new)* | Computes CM1/CM2/CM3 contribution margin for a product, order, or SKU set from the cost and revenue inputs you provide right now. |
 | **shipping-cost-analysis** *(new)* | Isolates shipping cost recovery: real carrier cost vs. what's charged, and where a free-shipping threshold sits against median order value. |
 | **inventory-planning** *(new)* | SKU-level stockout and overstock risk from sales velocity, on-hand units, and lead time, with stated days-of-cover thresholds. |
-| **product-catalog-audit** *(new)* | Audits product catalog completeness (titles, attributes, images, descriptions) at SKU scale, not a sampled spot-check. |
 | **ecommerce-returns** *(new)* | Groups structured return and RMA reason codes to specific SKUs and surfaces the highest-volume root causes. |
 | **weekly-report** *(new)* | One weekly operating readout pulled from performance, traffic, lifecycle, inventory, and support exports, what changed, what didn't, and the 3 next actions. |
 
-### Job 5: SDR (11 skills)
+### Job 5: SDR (9 skills)
 
 `npx skills add sidchaudhary/gtm-skills/skills/sdr`
 
@@ -113,6 +107,7 @@ Builds and works the list, so outbound isn't a stale spreadsheet from last quart
 |-------|-------------|
 | **lead-list** | Builds and qualifies a prospect list from your ICP, every lead scored Hot/Warm/Cold/Skip with cited evidence. |
 | **lead-scoring** | Scores an account list against your ICP criteria and returns priority tiers with a one-sentence rationale per account. |
+| **intent-data** | Ranks a batch of intent signals into an ordered outreach list, with the signal, the rationale, and a channel per account. |
 | **cold-email** | Turns prospect research, a trigger signal, and a value prop into a complete cold email body under 120 words. |
 | **cold-email** | Scores five subject line variants against a cold email body and target persona, with a send recommendation. |
 | **email-sequence** | Audits a full cold email sequence, diagnoses each email's specific weakness, and rewrites the three worst-performing ones. |
@@ -122,7 +117,7 @@ Builds and works the list, so outbound isn't a stale spreadsheet from last quart
 | **appointment-setting** | Writes the booking message, reschedule, confirmation, and day-before reminder that gets a warm lead onto a calendar. |
 | **missed-meeting-email** | Writes the 3-stage recovery sequence for a missed meeting, plus when to stop trying based on no-show history. |
 
-### Job 6: Account Executive (8 skills)
+### Job 6: Account Executive (7 skills)
 
 `npx skills add sidchaudhary/gtm-skills/skills/account-executive`
 
@@ -243,6 +238,7 @@ budget, or edit your catalog without you approving it.
 | **margin-monitoring** | Reruns the contribution-margin stack on a cadence and reports *crossings*: which SKUs went unprofitable since last run, split into losing-before-ads vs losing-only-because-of-ads. |
 | **stockout-alerts** | Cross-checks live ad spend against on-hand units and proposes pausing spend on what you can't ship. Matches on the grain the ads target, so a variant ad isn't checked against parent stock. |
 | **shopping-feed** | Runs the feed audit repeatedly and reports the delta, so an overnight disapproval isn't buried under 400 known issues. Separates new from regressed, grouped by cause. |
+| **product-catalog-audit** *(new)* | Audits product catalog completeness (titles, attributes, images, descriptions) at SKU scale, not a sampled spot-check. |
 | **product-launch-tracking** | Watches a new product's first weeks against pre-set signal thresholds and a hard test budget, then closes itself. Won't state a verdict on a sample below your minimum. |
 | **automation-review** | The checker in a maker-checker pair. Reviews another loop's proposal by trying to refute it, and defaults to reject. Catches gates that could never have failed. |
 
@@ -339,14 +335,9 @@ Start a conversation inside the project and ask for what you need.
 
 ---
 
-### Step 3: Set up your product context (2 minutes)
+### Step 3: Your product context (nothing to set up)
 
-There is no setup step. Every skill researches your business itself the first time you run one: it reads your site for positioning, offer, voice and proof, asks at most three things research cannot answer, and saves what it learned to `.agents/the shared context file.md` so the next skill does not repeat the work.
-
-```
-```
-
-Or just say: *"Help me set up my product context."*
+There is no setup step. Every skill researches your business itself the first time you run one: it reads your site for positioning, offer, voice and proof, asks at most three things research cannot answer, and saves what it learned to `.agents/product-context.md` so the next skill does not repeat the work.
 
 ---
 
@@ -444,10 +435,10 @@ No. You need to type sentences. That's it. Claude Code runs in a terminal, but a
 Not necessarily. Claude Code and Cowork work with a regular Claude subscription (Pro at $20/mo, Max at $100/mo). An API key is only needed if you prefer pay-per-use billing.
 
 **Can I use just one skill?**
-Absolutely. Every skill works independently. Use `email-campaign` without ever touching `opportunity-scoring`. The first skill you run builds the shared context file, and every skill after it reads from your business.
+Absolutely. Every skill works independently. Use `email-campaign` without ever touching `opportunity-scoring`. The first skill you run builds the shared context file, and every skill after it reads your business out of that file instead of asking again.
 
 **Can my team use this?**
-Yes. Share the repo. Each person's the shared context file is local to their machine, so the same skills produce output customized to whoever is using them.
+Yes. Share the repo. Each person's context file is local to their machine, so the same skills produce output customized to whoever is using them.
 
 **What if I already use [Klaviyo / HubSpot / Salesforce / etc.]?**
 These skills design the *strategy*, what to build, who to target, what to say. You execute in whatever tools you already use. Skills handle the thinking layer; your existing stack handles the doing layer.
