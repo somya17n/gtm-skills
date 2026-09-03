@@ -60,6 +60,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Inputs
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 3. Ask: "Describe your funnel: stages, current conversion rates, and volume at each stage." If the user does not have an existing funnel, ask: "Describe the funnel you want to design and the business model it serves."
 4. Ask: "What is the bottom-of-funnel target?" (e.g., 100 customers/month, $50K MRR, 500 activations/week)
 
@@ -95,6 +97,11 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
    baseline would need. Never fill the column by comparing to a different stage's benchmark or to a
    general figure, and never leave the row out - a silently missing stage reads as a stage that was
    fine. Read `references/missing-input-protocol.md`.
+
+   **Pull current, sourced benchmarks for the business type - this skill serves ecommerce as much as SaaS, and both sets move year to year.** Name the business type first, use benchmarks current for it, each with a source and a date, and where the reference file is older than the figure you can find, pull the current one and cite it rather than comparing against a number that has drifted.
+   - **Ecommerce** (Visit -> Product View -> Add-to-Cart -> Checkout -> Purchase): session-to-product-view ~45-50%, product-view-to-add-to-cart ~8-10% (add-to-cart rate ~6% average, 7-15% by industry - Food & Bev highest ~10-13%, Apparel ~6-7%), add-to-cart-to-checkout ~30-35%, checkout-to-purchase ~45-55% optimized (20-40% typical). Cart abandonment averages ~70% and is device-split (mobile ~73-75% vs desktop ~65-68%) - report it by device, because a blended cart-abandonment figure hides that mobile is usually the leak. Overall ecommerce conversion ~2.5-3% (top stores 5%+). [2026 sources: mida-app, Triple Whale, Baymard-derived.]
+   - **SaaS** (PLG: Visit -> Signup -> Activated -> Paid; or sales-led: Lead -> MQL -> SQL -> Opportunity -> Closed Won): visitor-to-lead 1.4-2.5% median / 8-15% top quartile (widest spread, start here), MQL-to-SQL 25-40% (below ~15% = a definitions problem, not conversion), demo-to-opportunity 60-80% (elite 90%+). Pick the motion-specific set, never a blended average across PLG and sales-led. [2026 sources: Powered by Search, Growthspree, SaaSHero.]
+   Treat these as current pack benchmarks with the source and date attached, and re-pull them when the run date is well past the date on the figure.
 9. For each red or yellow stage, diagnose the likely cause. The first four categories describe the
    **buyer's** behaviour; the fifth describes **your own organisation**, and without it a
    definitions problem gets mis-diagnosed as a conversion problem and worked on for a quarter.

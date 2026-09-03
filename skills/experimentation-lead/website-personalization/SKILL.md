@@ -80,9 +80,11 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Inputs
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 3. Ask: "What page or touchpoint do you want to personalize?" (homepage, pricing page, email content, in-app banner, product page)
 4. Ask: "Which segments matter most?" If the user is unsure, recommend segments based on the lifecycle model from product context.
-5. Ask: "Describe the current (default) experience on this touchpoint."
+5. **The current (default) experience on this touchpoint - look at it, do not only ask.** Where the touchpoint is a public page, fetch it and read the actual current hero, CTA, and proof, so the variants are designed against what is really on the page rather than a description of it. Ask the user to describe only the parts you cannot reach (logged-in or in-app states). The default matters more than any variant where most traffic cannot be identified, so getting it right starts with seeing it.
 
 ## Process
 

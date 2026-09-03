@@ -87,6 +87,13 @@ offer, not yours, so copying it is usually a losing move even before it is a bra
 
 ## How to run
 
+**Step 0 — Establish a real data source before anything else.** The Ad Library is public, so the
+intake is different: ask whether the user (or you) can **open the live Ad Library in a browser**
+(facebook.com/ads/library — it is a JavaScript app, so a fetch-only agent gets an empty shell), or
+whether the user will **paste real ad text/screenshots per competitor**. Do not run a teardown on
+recalled or hypothetical ads. If neither live browser nor pasted ads is available, say so plainly and
+stop rather than inventing a competitor's creative.
+
 1. **Your offer in one line.**
 2. **Two to five competitors**, by name or page URL. If only one is known, propose adjacent players
    worth adding rather than working from a sample of one.

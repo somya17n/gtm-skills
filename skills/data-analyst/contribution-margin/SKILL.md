@@ -67,6 +67,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (the Intempt MCP for order / cost / revenue data, or a connected source), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 Ask the user for these inputs. If any are missing, ask before building the stack, and mark whatever stays missing as an assumption rather than guessing a number.
 
 1. **Revenue basis**: gross revenue, discounts, and returns/refunds per SKU or order, plus the period covered.

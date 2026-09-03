@@ -59,6 +59,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Inputs
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real metrics and data sources, and do not design against hypothetical or hand-typed numbers. Offer all three by name: **connect an MCP** (the Intempt MCP for tracked events / metrics, or a connected source), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 3. Ask: "What's this dashboard for?" Get the team and purpose: marketing performance, sales pipeline, executive overview, product usage, customer success, or revenue ops.
 4. Ask: "Who will use it, and what decisions will it inform?"
 

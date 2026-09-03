@@ -101,6 +101,12 @@ substantiated is the expensive kind of good writing.
 
 ## How to run
 
+**Step 0 — Get the real inputs, don't work from assumptions.** Two parts: (1) **fetch the real final
+URL / landing page** yourself (browse it) — never write claims against an imagined page; (2) ask the
+user to **connect the account (MCP) or share the real query + CPA/CTR data** (or the Intempt MCP for
+revenue-per-asset), so headlines have a baseline, not just a character-limit pass. Ask for a paste
+only if a connection/browse genuinely fails, and mark the output unverified.
+
 1. **The ad group and its keywords**, plus the dominant query intent it serves. One intent per ad
    group - if the keywords span several, stop and route to `keyword-intent` first.
 2. **The final URL**, and its actual content. Every claim gets checked against this page.

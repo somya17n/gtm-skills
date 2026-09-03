@@ -44,6 +44,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 Ask the user for these inputs. If any are missing, ask before analyzing.
 
 1. **Ad platform export(s)**: campaign, ad set/ad group, ad, product, or landing page level data, with spend, clicks, purchases, revenue, CPA, ROAS, CTR, and CPM where available, for at least 14 days and ideally 30-60 days for stability.
@@ -58,6 +60,12 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 3. For each flagged segment, attribute the likely waste to exactly one layer: ad/creative, audience/targeting, landing or product page, offer/pricing, feed/catalog quality, tracking, or margin/inventory. Don't split the blame across layers without evidence for each.
 4. State the confidence for each attribution as high, medium, or low, based on how much of the relevant data is actually present (margin, landing-page conversion, feed status).
 5. Name every layer the current data can't rule out for each flagged segment, and the single input that would close each gap. A triage that names one cause while three layers remain unmeasured is a guess wearing a diagnosis.
+5a. **Run the market half of the audit - reading only the user's own account is half an audit.** Judge waste against the user's own target (that is the primary verdict), and in the same pass compare their results against the live market so "is this actually bad" has a real answer.
+   - **Pull the live competitor picture from the Meta / Facebook Ad Library.** Using the brand kit's competitor set, actually query the Ad Library (run `meta-ad-library`) for each rival: how many ads they are running, how long the survivors have run, and which offers and angles they are paying to keep live. A CPM or CPC that rose without an account change is usually the auction, not the creative - a competitor entering or scaling - and the Ad Library is where that shows up.
+   - **Search for the current market numbers, do not rely on a static list.** Search blogs, industry reports, and community threads (Reddit r/PPC, r/FacebookAds, r/adops, r/marketing) for what CPM, CPC, CTR, CPA and ROAS are running right now in the user's channel and industry, and cite each with its date. As a starting reference to confirm against (2026): Google median ROAS ~3.3x / Search CPC ~$5.42; Meta median ROAS ~2.2x / CPM ~$14-15 / CPC ~$0.78 / CPA ~$38 (ecom CPA ~$30, apparel CPC ~$0.45). No platform publishes official benchmarks, so treat these as aggregated third-party context. [2026 sources: Triple Whale, Whatagraph, SuperScale.]
+   - **Compare the user's results against both, and report it.** For each channel, put the user's CPM / CPC / CTR / CPA / ROAS beside the current market figure and the competitor activity, so a segment beating its own target but sitting far off the market gets seen, and a cost rise gets blamed on the auction rather than the ad. The target still wins the verdict; the market explains the why. A segment beating its own target is not waste even if it looks high against a blended number.
+   - **Not ecommerce-only:** for a SaaS account the layers stay the same except feed/catalog and inventory, which become the trial/signup flow and seat/plan limits; judge on LTV:CAC and CAC-payback by channel rather than ROAS alone.
+
 6. Rank the action queue by spend at risk, not by how easy the fix looks.
 7. Recommend the smallest reversible next action per segment (pause, cap budget, swap creative, test a new audience) rather than a permanent kill, unless the evidence is high-confidence and severe.
 
@@ -69,6 +77,8 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 
 | Segment | Spend | ROAS/CPA | Likely layer | Confidence | Recommended action |
 |---|---|---|---|---|---|
+
+**vs Market:** per channel, the user's CPM / CPC / CTR / CPA / ROAS beside the current market figure (with its source and date) and a one-line read on competitor Ad Library activity, so the account result is judged against the live market, not only against itself.
 
 **Action queue:** grouped by layer (ads, landing/PDP, offer, feed, tracking, margin/inventory), ranked by spend at risk.
 

@@ -43,6 +43,13 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > limit. "Everyone is full" is the case that has to be designed, not discovered.
 
 
+> **Route to who should actually handle this lead, not just the next rep in rotation - which needs real context on the lead and the team.** Round-robin and territory answer "whose turn is it"; they do not answer "who is best placed to win this one". To route on fit, gather:
+> - **The lead's full information and activity, not just a name.** Firmographics (company, size, industry, role), the source, and the behaviour: pages viewed, product used, content engaged, demo requested, the intent signal that qualified them. Pull this from the CRM and the Intempt MCP where connected.
+> - **The team as people, not slots.** For each eligible rep or SDR, their specialisation: industry or vertical expertise, product line, segment (SMB / mid-market / enterprise), language, region, and where they have won similar deals before. Ask for this or read it from the CRM; a roster of names alone can only support round-robin.
+> - **The brand and ICP context** from the brand kit, so "best fit" is judged against how this business actually segments and sells.
+> Then offer **best-fit / expertise-based** routing: match the lead's information and activity to the rep whose specialisation fits it, and fall back to the ordered method below when fit is a tie or unknown. State the match reason on every assignment ("routed to X: enterprise fintech, matches the lead's segment and the rep's three prior wins in it"), so a human can check the routing rather than trust it blind. Capacity, tie-break and off-hours rules still apply on top of the fit match.
+
+
 > **Map both funnels before optimising either.** The rule and its edge cases are in `references/funnel-benchmarks.md`. Read it and follow it.
 
 
@@ -75,10 +82,12 @@ you created it and what you inferred rather than observed. The parts this skill 
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 Ask the user for these inputs. If any are missing, ask before designing rules around a gap.
 
-1. **Routing method**: round-robin (even rotation), territory-based (region, industry, company size band), account-owner-based (existing relationship takes priority), score-threshold-based (top-scored leads go to a senior rep pool), or a combination.
-2. **The team roster**: names or roles of everyone eligible to receive a lead, and any capacity limits (e.g. a rep capped at 15 open leads before rotation skips them).
+1. **Routing method**: round-robin (even rotation), territory-based (region, industry, company size band), account-owner-based (existing relationship takes priority), score-threshold-based (top-scored leads go to a senior rep pool), **best-fit / expertise-based (match the lead's information and activity to the rep whose specialisation fits it)**, or a combination.
+2. **The team roster as people, not slots**: everyone eligible, each with their specialisation (industry/vertical expertise, product line, segment SMB/mid-market/enterprise, language, region, prior wins in similar deals) so best-fit routing has something to match on, plus any capacity limits (e.g. a rep capped at 15 open leads before rotation skips them). A roster of names alone can only support round-robin.
 3. **Existing-relationship rule**: should a lead ever override the normal method because someone on the team already has a relationship with that account or contact, and if so, how is that checked (CRM account owner field, a manual flag, etc.).
 4. **Business hours and timezone**: since speed-to-lead matters, state whether routing should account for rep working hours or route regardless of time.
 

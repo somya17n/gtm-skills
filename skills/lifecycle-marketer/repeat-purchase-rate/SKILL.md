@@ -44,7 +44,16 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > orders among customers who did reorder. Where neither is available, say the timing finding is
 > unavailable and diagnose only the parts that do not depend on it.
 
+> **Not ecommerce-only - the same audit runs on a SaaS second-value / expansion path.** SaaS has no literal reorder, but the same gap sits between first value and the habit that makes a customer stay and expand. Map the eight stages to the SaaS post-activation lifecycle: welcome and usage/education become onboarding and feature-adoption nudges; replenishment becomes the prompt back to the core action before the habit lapses, timed to the real usage cycle rather than a category guess; cross-sell becomes the expansion or seat-add trigger at the usage signal; win-back becomes the re-activation flow for a dormant account. The message-fit criteria and the never-discount-before-checking-reason-and-timing rule do not change; the outcome metric becomes second-key-action, expansion, or renewal rather than a second order.
+
+> **Learn the techniques that actually raise repeat rate in this market, ground them in the customers' real behaviour, then build a plan - do not stop at auditing the existing flows.**
+> - **Mine what is working now for products like this.** Read competitor and similar-product post-purchase / lifecycle emails (inbox archives such as milled.com and reallygoodemails.com), plus blogs, teardowns and community threads (Reddit for the category) for the specific techniques raising repeat purchase right now: subscribe-and-save, replenishment reminders timed to the cycle, post-purchase education, curated next-best bundles, loyalty tiers, win-back, referral-at-delight. Note which fit this product and buyer, and cite what you found with dates. Treat category repeat-rate figures as dated benchmarks, not a fixed target.
+> - **Ground the plan in the customers' real behaviour, not the flows alone.** Pull the customer website and product activity (via the Intempt MCP where connected): which first products actually lead to a second order, the real gap between first and second purchase, what customers browse or use after buying, and where they go quiet. The plan's timing and next-best-product recommendations come from that observed behaviour, not a category assumption.
+> - **Then suggest a proper plan, not just a list of gaps.** The two or three highest-leverage techniques for this business, sequenced, each mapped to the stage it fills and the customer behaviour it acts on, drawn from the brand kit, the product context, and the real activity above. Say which gap each move closes and how it will be measured.
+
 ## How to run
+
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
 
 Ask the user for these inputs. If any are missing, ask before analyzing.
 

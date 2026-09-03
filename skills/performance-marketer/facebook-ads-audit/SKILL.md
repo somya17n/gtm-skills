@@ -93,6 +93,12 @@ individual ad noise hides the message-level pattern that is the only thing actua
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide
+their real numbers, and do not analyse hypothetical or hand-typed data. Offer all three by name:
+**connect an MCP** (a connected ads account, or the Intempt MCP for customer / conversion / revenue
+data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is
+established; otherwise mark the output illustrative and unverified throughout.
+
 1. **Read access to the account**, or an export. This read never needs write access.
 2. **Last 30 days by ad, sorted by spend**: spend, results, cost per result, click-through, cost per
    thousand impressions, frequency.

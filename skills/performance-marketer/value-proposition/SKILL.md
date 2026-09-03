@@ -122,6 +122,13 @@ and say what happens if it fails.
 
 ## How to run
 
+**Step 0 — Get the real buyer voice, don't invent it.** Phase 1 below is the intake: actively go and
+gather real verbatim buyer language yourself (browse their + competitors' reviews, Reddit/forum
+threads, Meta Ad Library ad comments; for G2's 403, ask the user to paste/export). Where the user has
+support tickets, sales-call notes, or a connected source, ask them to **share it / connect the MCP**.
+Do not build a promise from invented pains; a promise you invented is a guess. Only fall back to
+asking the user to describe the pain if no real material can be gathered, and mark it unverified.
+
 1. **The offer in one line.**
 2. **Three to five verbatim pain quotes**, each with who said it, ideally from `value-proposition`.
    Paraphrased pains produce paraphrased promises.

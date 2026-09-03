@@ -93,6 +93,7 @@ learning reset wearing a growth costume.
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
 
 **The list below is longer than three, and three is the cap.** Most of it you can get without
 asking: read the context file, fetch the URL they named, compute it, or look up the platform
@@ -119,6 +120,21 @@ three questions on what is genuinely left:
 
 If the user cannot answer one, say which part of the output is weaker for it rather than
 proceeding as though it were answered.
+
+## Learn from what is already working, then scale from there
+
+Scaling is not just pacing a budget upward - it is scaling *what has proven it works*, so first learn
+what that is, from two sources:
+
+1. **The user's own account.** Which ad set and, more precisely, which *angle* has earned the raise
+   (enough spend to judge, cost per result at or under target). Scale the proven angle, not the ad set
+   that happens to be spending.
+2. **The market, via the Meta Ad Library.** Browse the live Ad Library for similar companies (chain
+   `meta-ad-library`) and read which angles they have *proven* by the two honest signals - many
+   creative variations and long runtime. Use this to judge whether the user's winner has headroom (the
+   market sustains this angle at scale) or is near saturation (nobody sustains it), and to surface an
+   adjacent proven angle worth testing as the next scale target. This is read-only market intelligence,
+   not a licence to copy their copy.
 
 ## Read the account before you write a scaling rule
 

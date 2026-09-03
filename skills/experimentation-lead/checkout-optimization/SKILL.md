@@ -45,11 +45,24 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > for the traffic split and review the flow on both, reporting friction per device with the split
 > stated. A single finding list implicitly describes whichever device you happened to walk.
 
+
+> **Not ecommerce-only - the same audit runs on a SaaS signup, upgrade, or billing flow.** A SaaS "checkout" is the trial signup, the plan chooser, and the upgrade/payment step, and it fails the same ways: too many form fields, forced account creation before any value is shown, unclear or late pricing, a plan chooser that forces a decision instead of a choice, payment-trust gaps, and unclear error states. Swap the metric - cart abandonment becomes signup or upgrade-flow drop-off, and the not-ready-to-buy share becomes visitors who were only evaluating - and run the same step-by-step walk, device split, subtract-the-non-addressable, and confirmed-versus-observed discipline. Ask whether the flow is a store checkout or a SaaS signup/upgrade and pick the friction set accordingly.
+
 ## How to run
+
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
 
 Ask the user for these inputs. If any are missing, ask before analyzing.
 
-1. **Checkout walkthrough**: screenshots of the cart and every checkout step, on both mobile and desktop if available. Without at least one full pass through the flow, there's nothing to audit.
+1. **The current checkout, exactly as it stands today - ask for all of it before auditing anything.** A screenshot walkthrough of the cart and every checkout step, on both mobile and desktop, is the base, but also capture what each step actually shows right now, because that is what the audit grades - never a platform default you assumed. For each step, get:
+   - every form field, and which are required versus optional
+   - where and when cost appears: is a running total visible from the cart, are shipping and tax shown before or after personal details are entered, is any fee revealed late
+   - guest checkout versus forced account, and how prominent each is
+   - the payment methods offered at the payment step
+   - the trust signals present and where they sit (security badges, return policy, contact info)
+   - discount-code entry, its placement and label
+   - the order confirmation and the error states, if reachable
+   For any step you cannot reach yourself (logged-in pages, the payment page, error states), ask the user to send exactly what it currently shows rather than assuming a default. Without at least one full pass of the real current flow, there is nothing to audit.
 2. **Policy details**: shipping cost and timing rules, tax handling, accepted payment methods, return policy, and whether account creation is required or optional.
 3. **Goal**: what's being optimized for, conversion rate, average order value, support ticket volume, or checkout trust.
 4. **Editability**: whether the checkout can actually be changed, or is locked by the platform (many hosted checkouts limit what can be edited).

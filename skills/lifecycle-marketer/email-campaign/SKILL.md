@@ -58,6 +58,15 @@ you created it and what you inferred rather than observed. ask inline for brand 
    `references/sms-push-compliance.md` for SMS and push, `references/loop-cadence-guide.md` for the
    recurring mode.
 
+> **Ground the campaign in the live inbox and current, sourced benchmarks - not a template.**
+> - **See what is actually landing.** For competitor and category email, read current teardowns and inbox archives (milled.com, reallygoodemails.com) plus the user's own top-performing past sends, so subject lines and structure are informed by what wins in this inbox now, not a generic pattern. Take the competitor set from the brand kit.
+> - **Set expectations from current benchmarks, each sourced.** Across industries: open ~19-21%, CTR ~2.4-4%, unsubscribe ~0.1-0.9%, bounce ~0.5-2.5% (varies by industry - government/nonprofit high, retail lower). The load-bearing one: **automated flows deliver ~3x the click rate and ~13x the placed-order rate of one-off campaigns, and drive ~41% of email revenue from ~5% of sends** - the strongest argument for Mode C and for a triggered lifecycle over a broadcast. Welcome and abandoned-cart click-to-conversion runs high (~9-50%). [2026 sources: Klaviyo, Brevo, WebFX.] Re-pull when the run date is well past these, and never state a benchmark as the user's own number.
+
+> **Map the whole lifecycle and generate the emails for it - signup to champion - not only one campaign.** When the goal is the lifecycle rather than a single send, lay out the full path a customer travels and write the email set for each stage and the key transitions. It works the same for ecommerce and SaaS - only the stage names and triggers change:
+> - **Ecommerce:** subscriber → first-time buyer → repeat → loyal/VIP → at-risk/lapsed. Welcome + first-purchase nudge, post-purchase + review request + cross-sell, replenishment/reorder at the cycle, VIP/loyalty, win-back for lapsed.
+> - **SaaS:** signup → activated → paid → expansion → champion (and at-risk). Welcome + activation nudges toward the aha moment, trial-to-paid conversion, onboarding/feature adoption, expansion/upsell at the usage trigger, advocacy/referral for champions, save/win-back for at-risk.
+> Map each to the `customer-segmentation` lifecycle stages (At Risk, Needs Attention, New Customers, Promising, Regulars, Champions), one flow per stage or transition, each with its trigger, and state which transition each email is trying to cause. Build it as **triggered flows, not broadcasts** (flows outperform one-off campaigns ~3x on clicks and drive the bulk of email revenue), and set one global cross-campaign cap across the whole program so the stages do not stack sends on the same contact.
+
 ## Pick the mode
 
 Ask which is needed. More than one is normal, a welcome flow is usually Mode A plus Mode B, and a

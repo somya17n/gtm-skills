@@ -68,6 +68,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Inputs
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers (baselines, channel performance), and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (the Intempt MCP for customer / conversion / channel data, or a connected source), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 3. Ask: "What's your company stage and size?" Get: revenue range, team size, and growth stage (pre-launch, early traction, scaling, or mature).
 4. Ask: "What's your current biggest challenge?"
 5. Ask: "What channels are you currently using? What's working and what isn't?"

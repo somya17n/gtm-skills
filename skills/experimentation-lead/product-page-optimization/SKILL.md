@@ -25,6 +25,8 @@ Review an existing product detail page against what a real buyer needs to decide
 > is. Apply the stated-versus-revealed rule too, since a reviewer asking for a feature is describing a
 > problem in the vocabulary of a solution they invented.
 
+> **Not ecommerce-only - the same review runs on a SaaS feature, product, or pricing page.** The page may be a store product detail page, or a feature / pricing / product page for a SaaS or any website, and the checks map across: the four above-the-fold questions are identical; "specs, sizing, variants" become plans, tiers, usage limits, integrations, and docs; "delivery and returns" become trial terms, security and compliance, and cancellation; and the reviews to mine are G2, Capterra, and support tickets rather than product reviews. Ask which kind of page it is and pick the decision-support checklist accordingly. The missing-info-versus-weak-copy split and the uncertainty-removed prioritisation do not change.
+
 ## Before you write
 
 **Run the input list below before you write anything. If one of those inputs is missing, ask for
@@ -58,6 +60,8 @@ you created it and what you inferred rather than observed. The parts this skill 
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 Ask the user for these inputs. If any are missing, ask before analyzing.
 
 1. **Product page**: URL or screenshots of the page as it exists today.
@@ -71,6 +75,11 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 2. Check above-the-fold clarity against four specific questions: does it say what the product is, who it's for, why it's different from alternatives, and is the price, offer, and primary CTA visible without scrolling.
 3. Check decision-support elements against what this category actually requires to decide: images/video, specs, sizing or compatibility info, delivery and returns terms, FAQs, and review or proof content. Note which of these are present, missing, or too shallow to answer a real question.
 4. If reviews, support questions, or return reasons were provided, mine them for recurring objections (the same doubt or question appearing more than once), and check whether the page currently answers each one.
+4a. **Compare the page against live competitors and current market quality - never in isolation.** A page can read fine on its own and still lose to what the buyer sees next.
+   - **Fetch competitor PDPs.** Take the competitor set from the brand kit (run `brand-kit` if the space is not defined) and fetch two or three rivals' live product pages in the same category. Name what they show that this page does not (richer imagery, video or AR, review volume, a delivery promise, a size or fit aid) and what this page does better, attributing each point to the page you saw it on.
+   - **Go get the off-page reviews, do not wait for a paste.** The objections that matter sit on Amazon, G2 / Capterra, Reddit, and the rivals' own review sections. Fetch them for this product and the closest competitors, mine them for recurring objections, and apply the customer-voice-bias rule above. Reviews the user happens to paste are a floor, not the source.
+   - **Grade against current, sourced industry benchmarks, each figure dated.** Compare the page to what actually converts in this category now: a good PDP converts ~1.5-3% (top 4-8%); ~93% of buyers cite visual appearance, and richer visuals / video / AR are the highest-impact investment (AR can cut returns ~40%); products with 5+ reviews convert ~270% better than zero (~380% for items over $100); up to ~70% of visitors leave over poor or incomplete product information; buyers scan in an F-pattern, so title, price, primary image, star rating with review count, the variant selector, one primary CTA, and a one-line delivery/returns promise all belong in the first viewport; ~73% of traffic is mobile. [2026 sources: VNTANA, OptiMonk, Luigi's Box, Trellis.] Re-pull these when the run date is well past the source date, and never grade a page against a figure with no source.
+
 5. For every gap found, distinguish whether it's missing information (the fact isn't on the page at all) or weak copy (the fact is there but unclear or unconvincing). These get different fixes.
 6. Prioritize every finding by how much buyer uncertainty it likely removes, not by how easy the fix is to make.
 7. Do not invent a product claim, statistic, or testimonial anywhere in the review or the brief; every claim referenced has to trace back to what the user supplied.

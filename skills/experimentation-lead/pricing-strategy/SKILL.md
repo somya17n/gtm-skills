@@ -56,7 +56,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 4. Ask: "What's your primary value metric today, or what are you considering?" (per user, per usage, flat fee, per feature)
 5. Ask: "What's driving this: new pricing from scratch, a packaging change, or deciding whether to raise prices?"
 6. If raising prices: ask for current conversion rate, monthly churn rate, and how long since the last price change. Don't proceed on assumed numbers. If the user doesn't have them, note that as an open gap in the output rather than inventing a rate.
-7. Ask: "What do competitors charge, and how do they package?" If unknown, offer to research public competitor pricing pages via `WebSearch`/`WebFetch` if competitor names are provided.
+7. **Check competitor pricing against real market data - brand kit baked in, do not wait to be asked.** Take the competitor set from the brand kit (run `brand-kit` if the space is not defined) and fetch their live pricing pages: value metric, tier structure, price points, annual-discount framing, what each tier gates, and whether they anchor with a high tier or a "Talk to Sales". Beyond direct rivals, mine current pricing teardowns, blogs, and community threads (Reddit r/SaaS, r/Entrepreneur, Indie Hackers, pricing-focused blogs) for what companies of the user's type and stage charge now and which packaging is winning. Ground the recommendation in that live landscape, not a guess. Use current, sourced benchmarks where they inform: freemium-to-paid typically ~2-5% (great 8-12%), free-trial ~4-6% (great 10-15%; credit-card-required 25-35% but fewer signups), annual discounts ~20-25% (annual-default toggle lifts annual uptake ~18%), and a pricing page with clear tier differentiation, visible annual framing, a comparison table, and a recommended-plan badge lifts trial/demo conversion ~23%. [2026 sources: Userpilot, Growthspree, Artisan Strategies, SaaS Price Lab.] Re-pull when the run date is well past these. **Competitor pricing anchors packaging and page framing; it does not validate the price LEVEL - that still needs the willingness-to-pay evidence named above.**
 
 ## Process
 
@@ -93,6 +93,7 @@ Then run the nine-question check in `references/house-rules.md`.
 - Does the output separate packaging (answerable now) from price level (needs willingness-to-pay
   evidence), with any unvalidated level labelled and the cheapest evidence path named?
    - No pricing recommendation relies on an assumed conversion rate, churn rate, or willingness-to-pay figure the user didn't provide; anything unknown is in Research Gaps, not filled in
+   - Was competitor pricing actually fetched from the brand-kit set and the live market mined (real pages + current sourced benchmarks), rather than reasoned from memory or skipped because the user did not volunteer competitor names?
    - Tier differentiation uses no more than 2-3 axes
    - A price increase is only recommended if at least two of the three signal categories (market/business/product) are present
    - The value metric passes the "more usage = more value" test from the reference file, or the mismatch is flagged

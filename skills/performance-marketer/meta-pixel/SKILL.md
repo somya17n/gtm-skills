@@ -96,6 +96,12 @@ hypothesis before treating it as good news.
 
 ## How to run
 
+**Step 0 — Actively acquire the real data; don't punt to pastes.** Ask the user to **connect the Meta
+ad account + Events Manager via MCP** (or the Intempt MCP for an independent conversion record) so you
+can pull real event volumes, dedup keys and EMQ yourself, and **check Meta's live current pixel/CAPI
+behaviour** (browse current docs) rather than trusting a stale mechanic. Do not audit hypothetical or
+hand-typed events; never declare tracking healthy on the strength of checks you couldn't run. Ask for
+a pasted export only as a last resort if a connection genuinely fails, and mark the output unverified.
 
 **The list below is longer than three, and three is the cap.** Most of it you can get without
 asking: read the context file, fetch the URL they named, compute it, or look up the platform

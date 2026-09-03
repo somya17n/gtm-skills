@@ -47,6 +47,10 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 >
 > And treat the welcome flow's ~91% open rate as what it is: the highest-attention moment the brand will
 > ever have with that contact, which makes it the wrong place for a generic greeting.
+>
+> **Map the full lifecycle as a connected set of journeys where that is the goal - signup to champion - not one flow in isolation.** The structure-before-copy rule applies to each, and it works the same for ecommerce and SaaS: an ecommerce path (welcome -> first purchase -> post-purchase / review -> replenishment -> VIP -> win-back) and a SaaS path (welcome -> activation -> trial-to-paid -> onboarding / adoption -> expansion -> advocacy, plus a save flow for at-risk) are each a sequence of journeys scoped to the `customer-segmentation` lifecycle stages, sharing **one** global per-contact cap across the whole set. Design the set, then hand each node's copy to `email-campaign`.
+>
+> **These recovery and revenue figures are current pack benchmarks - cite them with a date where they drive a decision** (flows ~41-65% of email revenue from a low single-digit share of sends; cart-abandon single-email ~2-3% versus multi-step email+SMS ~8-12%; welcome ~91% open) [2026 sources: Klaviyo, Omnisend], and re-pull them rather than treating a static number as this business's own.
 
 ## Context
 
@@ -61,6 +65,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 ## Process
 
 5. Read `.agents/product-context.md` to pull ICP, lifecycle stages, and brand voice.
+5a. **Check the real customer-journey data first - how customers actually move from cold to champion - do not design against an assumed path.** Before laying out nodes, pull the user's actual lifecycle data (from the Intempt MCP's lifecycle stages and transition history, or their export) and read the real path: the stage-to-stage transition rates from New Customers through Promising, Regulars and Champions, how long each step actually takes, where the largest drop-off is, and which step most customers never pass. Design the journey against where people actually stall - the node that matters is the one sitting at the real drop-off, not a step in a generic template. Where the transition data is not available, say the journey is designed against an assumed path and every step is a hypothesis until the data confirms it.
 6. Design the entry trigger: which segment or event causes a user to enter the journey.
 7. Map the journey as a node sequence: trigger → delay → message → condition → branch.
 8. For each message node, specify: channel, timing (delay from previous node), and content direction (theme and intent, not full copy).

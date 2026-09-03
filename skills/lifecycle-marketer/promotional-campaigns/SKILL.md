@@ -1,10 +1,25 @@
 ---
 name: promotional-campaigns
-description: "Measures whether a promotion or discount that already ran added real profit or just pulled demand forward, using a stated baseline-versus-promo-versus-recovery window comparison. Use when a sale just ended, a promo calendar is about to repeat, discount codes are leaking, or revenue rose while profit stayed flat. Boundary: `pricing-strategy` (Experimentation Lead) designs future pricing tiers and price points; this skill measures the after-the-fact impact of a promotion that already happened, not future pricing design."
+description: "Builds a promotional campaign per social channel from what is actually working in the market for similar products, and measures whether a promotion that already ran added real profit or just pulled demand forward (baseline-versus-promo-versus-recovery). Use to design a promo grounded in live competitor and market activity, or to grade one after a sale ends, a promo calendar is about to repeat, discount codes are leaking, or revenue rose while profit stayed flat. Boundary: `pricing-strategy` (Experimentation Lead) designs standing pricing tiers and price points; this designs and measures time-boxed promotions."
 ---
 # The Promo Impact Check
 
-Take a promotion that already ran and measure what it actually did to profit, not just to the revenue chart during the sale.
+Two jobs. **Build** a promotion designed from what is actually working in the market for products like this, adapted per social channel; and **measure** one that already ran, for what it did to profit rather than to the revenue chart during the sale.
+
+## Build the promotion (design it before it runs)
+
+When the job is to create a promotion rather than grade one, design it from what is actually working in the market for products in this niche and the same buyer need, and build it per channel - never invent a mechanic from nothing.
+
+1. **Research what is working now for this product's niche and buyer need.** Take the competitor set and category from the brand kit, then look at what similar products are actually running:
+   - **Paid:** the Meta / Facebook Ad Library (run `meta-ad-library`) for the offers and creative rivals are paying to keep live, and how long each has run - a promo running for months is a winning one.
+   - **Organic and social:** TikTok, Instagram and YouTube for the promo formats and hooks landing for similar products right now (bundle, BOGO, first-order, seasonal, launch, giveaway), plus blogs and community threads (Reddit for the category) for the mechanics customers actually respond to and what reads as tired.
+   Cite what you found with dates, and design to beat it, not to copy it.
+2. **Pick the mechanic against margin, not fashion.** Choose the mechanic (percentage, fixed, tiered, BOGO, free shipping, bundle, gift-with-purchase) that fits the goal and the margin, and set a **floor margin** the offer may not cross. Carry the cannibalisation rule from Constraints: a mechanic that costs something other than price (bundle, gift, free shipping) protects the reference price better than a straight discount.
+3. **Build the campaign per social channel it will run on.** For each channel (Instagram, TikTok, Facebook, YouTube, email, on-site), specify the offer as it appears there, the creative direction and format that fits the channel, the hook, the audience and exclusions (exclude recent full-price buyers, protect subscribers where relevant), and the CTA and destination. One promotion adapted per channel, not one asset reposted everywhere.
+4. **Set the guardrails up front:** audience and exclusions, floor margin, the code rules that prevent the leakage the measure mode looks for (single-use, audience-scoped, no stacking, not posted publicly), and the calendar window.
+5. **Hand the copy to the writer and the measurement to yourself.** Route per-channel copy to `email-campaign` / `ad-copy` where full copy is needed, and once the promo has run, measure it with the method below against a clean baseline. A promotion designed without knowing how it will be judged is how the same weak calendar repeats.
+
+The rest of this skill is the **measure** mode: take a promotion that already ran and measure what it actually did to profit, not just to the revenue chart during the sale.
 
 > **Input integrity.** Run the checks in `references/data-input-integrity.md` before computing
 > anything, and report what they found. Each one produces a confident wrong answer rather than
@@ -50,6 +65,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 >   spread and say you did. Where it does not, use the fixed rule and **say it is a fallback**.
 > - **Report the direction of travel alongside the level.** A unit at 1.4x and rising and a unit at 1.9x
 >   and falling need opposite responses, and a level-only test cannot tell them apart.
+
+> **Not ecommerce-only - the same measurement runs on a SaaS promotion.** A SaaS discount (an annual-plan sale, a coupon, a Black-Friday deal, a win-back offer) pulls demand forward exactly the way a store sale does: it can lift signups or renewals during the window and hollow out the weeks after. Swap orders/AOV for new subscriptions, MRR added, and renewals; keep the baseline-versus-promo-versus-recovery windows, the anticipation-dip and seasonality baseline tests, the pull-forward-versus-underperformance distinction, and the margin-given-away check (here the discount's cost against LTV). One addition: a subscription discount usually keeps costing on every future renewal at the discounted price unless it is a one-time coupon, so state whether the discount recurs and cost it across the affected renewals, not just the promo window.
 
 ## How to run
 

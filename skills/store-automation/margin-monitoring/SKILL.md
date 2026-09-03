@@ -57,6 +57,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 1. **The same inputs `contribution-margin` requires**, for the current period: revenue basis, COGS, fee rates, shipping cost, and attributed ad spend per SKU. This loop does not invent a shortcut around missing cost data.
 2. **The CM2 floor** the user treats as unacceptable, as a dollar figure or a percentage. Ask which, and hold to it.
 3. **The cadence**, and whether the period compared is week-over-week or the same period last month. Seasonal catalogs need the latter.
@@ -70,6 +72,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 3. **Run the margin stack via `contribution-margin`'s method, in its exact order,** and inherit its rules without relaxing them. Specifically: discounts and returns subtracted as magnitudes regardless of the export's sign convention, CM1 from product revenue only with customer-paid shipping never folded in, and the fixed per-order fee applied per order rather than per unit.
 4. **Inherit the withholding rule.** For any SKU missing COGS, do not state a CM2%, a breakeven ROAS, or a crossing verdict. A margin crossing computed on an absent cost is fabrication. List those SKUs under missing data instead, and say the crossing is unknown rather than false.
 5. **Evaluate the gate per SKU**: `CM2_now < floor AND CM2_previous >= floor` is a new breach. The reverse is a recovery. Both are reported; a recovery matters because it tells the user a fix worked.
+   **Not store-only.** For a SaaS platform the same crossing loop runs on per-plan or per-segment unit economics instead of per-SKU: recompute the segment's contribution margin (or CAC-payback / gross-margin-per-customer) on a cadence, report which plan/segment crossed the floor since last run, split the cause, withhold where a cost is missing. The SKU becomes the plan or segment; the method does not change.
+
 6. **Split every breach by cause, using CM2 and CM3 separately.** CM2 below floor means the SKU loses money before a single ad runs - a pricing, COGS, fee, or fulfillment problem. CM2 above floor with CM3 below it means acquisition cost is the whole story. These have different owners and different fixes, and merging them sends the user to the wrong one.
 7. **Attribute the movement to a line, not a vibe.** Compare each cost line against last run and name which line moved most: COGS, discount depth, return rate, shipping, fees, or ad spend. If no single line explains it, say the movement is distributed rather than picking one.
 8. **Rank by dollar contribution at risk**, never by margin percentage. Inherit this from `contribution-margin`: a thin-margin SKU carrying the catalog outranks a high-margin SKU selling four units.

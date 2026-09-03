@@ -48,6 +48,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (the Intempt MCP for order / inventory data, or a connected source), **share a CSV / export** (the inventory + sales export), or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+
 
 **Campaign start AND end date** for any planned promotion. The start date is not optional: the
 uplift only applies from that date, and applying it from today produces a run-out date that is too

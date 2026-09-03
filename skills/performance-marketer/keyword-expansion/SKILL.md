@@ -84,6 +84,12 @@ makes performance worse.
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will connect
+their real account, and do not propose promotions against hypothetical or hand-typed data. Offer all
+three by name: **connect an MCP** (Google Ads read access, or the Intempt MCP for revenue-per-query
+data), **share a CSV / export** (the search-terms report + existing keywords/negatives/ad-groups),
+or **paste the real queries and coverage**. Continue only once a real source is established;
+otherwise mark the output illustrative and unverified throughout.
 
 **The list below is longer than three, and three is the cap.** Most of it you can get without
 asking: read the context file, fetch the URL they named, compute it, or look up the platform

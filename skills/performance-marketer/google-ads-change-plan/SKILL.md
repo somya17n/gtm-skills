@@ -91,6 +91,14 @@ the plan.
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will connect
+their real account, and do not sequence changes against hypothetical or hand-typed state. Offer all
+three, by name: **connect an MCP** (Google Ads read access, or the Intempt MCP for conversion/revenue
+data), **share a CSV / export** (the findings export and the account's current-state export), or
+**paste the real figures and exact entity states**. A change with no recorded real prior state has no
+rollback, so continue only once a real source is established; otherwise mark the plan illustrative and
+unverified throughout.
+
 1. **The findings**, from the skills that produced them, each with its date and scope.
 2. **The current state of every entity** an item would touch - exact, not approximate.
 3. **The business target**, currency and conversion delay, which set the measurement windows.

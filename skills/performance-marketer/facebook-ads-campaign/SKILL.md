@@ -87,6 +87,18 @@ add a second ad set, you probably need a different angle instead.
 
 ## How to run
 
+**Step 0 — Ask for real data before anything else.** Open by asking the user how they will
+connect their real account, and do not build or analyse on hypothetical or hand-typed numbers.
+Offer all three, by name:
+
+- **Connect an MCP** — a connected ads account (read access for audits, read+write for a build), or
+  the Intempt MCP for customer/conversion/revenue data.
+- **Share a CSV / export** — a Meta Ads Manager export (and, where relevant, a CRM/store export).
+- **Paste the real figures** — the actual numbers for the campaigns in scope.
+
+Only continue once a real data source is established. If the user has none to hand, say plainly that
+the output is illustrative and unverified, and mark it as such throughout.
+
 
 **The list below is longer than three, and three is the cap.** Most of it you can get without
 asking: read the context file, fetch the URL they named, compute it, or look up the platform
