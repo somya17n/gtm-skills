@@ -33,9 +33,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -143,8 +147,12 @@ proceeding as though it were answered.
    search side, headroom is impression share lost to budget. On the social side, it is audience size
    and frequency well short of saturation. A line at target with no headroom is not a recipient.
 5. **Estimate the marginal cost of the next dollar** for each candidate recipient, and say what that
-   estimate rests on. Where the data cannot support a marginal estimate, say so and mark the
-   recipient's projection as weaker rather than dropping the caveat.
+   estimate rests on. This usually needs Bid Simulator data (Google) or "estimated additional
+   results" (Meta), which most accounts have not pulled. **If that data is not available, say so by
+   name and mark every projection on that recipient "average-cost proxy, not a marginal estimate,"**
+   rather than quietly computing from average cost and presenting it with the same confidence as a
+   real marginal estimate. The two look identical in a table; only the label tells the reader which
+   one they are trusting.
 6. **Model three transfer sizes** - roughly ten, twenty and thirty-five percent of donor spend - each
    with projected conversions and blended return. **Label every projected figure as a projection**,
    with the assumption it rests on.
@@ -223,6 +231,21 @@ Before returning the output, verify:
 
 If any check fails, correct it before returning the output.
 
+## Visual reallocation map (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the ranked lines as a donor-to-recipient flow:
+donors on one side, recipients on the other, with the three transfer sizes shown as bars the reader
+can compare at a glance, each carrying its projected return and its confidence label. Mark
+average-cost-proxy projections visibly differently from true marginal-cost projections so the two
+are never mistaken for each other on the chart. Use only the numbers already ranked and modelled
+above; do not recompute anything for the visual. If your host's artifact tool requires a design step
+first (Claude Code's does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full text output, never instead of it. If
+no such tool is available in this run, skip this step without comment and return the text output
+only. A missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 
@@ -250,6 +273,12 @@ Use the floor in `references/data-input-integrity.md` and **print n next to ever
 `n=10, below the floor, verdict weak`. Where a line is under the floor it goes in a
 too-new-to-judge bucket rather than getting a direction, and the output says how much more data
 would settle it.
+
+**Where the user has not given a volume floor, do not leave it unstated. Use Google's own published
+baseline as the default**: roughly 30 conversions in the window for standard bidding, roughly 50 for
+target ROAS. Label it inline as a Google-stated baseline, not the user's number, and say the user can
+override it with their own threshold. A printed default the reader can argue with beats an implicit
+one nobody can see.
 
 ## Attribution
 
