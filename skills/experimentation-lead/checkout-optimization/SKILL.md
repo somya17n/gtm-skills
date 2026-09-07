@@ -31,9 +31,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -96,11 +100,11 @@ these account for most of the addressable loss and are all cheap to verify:
 
 | Cause | Share of abandoners citing it | What to check |
 |---|---|---|
-| Extra costs too high (shipping, taxes, fees) | ~48% | Are shipping and tax visible before the final step, or revealed late? Late-revealed mandatory cost is also a compliance issue: see the drip-pricing rule in `references/pricing-frameworks.md` |
-| Forced account creation | ~26%, and adds ~34% abandonment on its own | Is guest checkout offered, and is it as prominent as signup rather than buried under it? |
-| Checkout too long or complicated | ~22% | Step count, field count, and how many fields are genuinely required |
-| Payment security not trusted | ~18% | Trust signals at the payment step specifically, not only in the footer |
-| Total cost not shown upfront | ~17% | Is a running total visible from the cart onward? |
+| Extra costs too high (shipping, taxes, fees) | ~48% (Baymard Institute, checkout usability research, cited as a pack benchmark, re-pull if this run is well past that source date) | Are shipping and tax visible before the final step, or revealed late? Late-revealed mandatory cost is also a compliance issue: see the drip-pricing rule in `references/pricing-frameworks.md` |
+| Forced account creation | ~26%, and adds ~34% abandonment on its own (Baymard Institute, cited as a pack benchmark) | Is guest checkout offered, and is it as prominent as signup rather than buried under it? |
+| Checkout too long or complicated | ~22% (Baymard Institute, cited as a pack benchmark) | Step count, field count, and how many fields are genuinely required |
+| Payment security not trusted | ~18% (Baymard Institute, cited as a pack benchmark) | Trust signals at the payment step specifically, not only in the footer |
+| Total cost not shown upfront | ~17% (Baymard Institute, cited as a pack benchmark) | Is a running total visible from the cart onward? |
 
 Forced account creation is the single highest-leverage item on that list relative to effort: it is
 usually a settings change rather than a build, and it carries the largest standalone effect.
@@ -161,6 +165,21 @@ Before returning the output, verify:
 
 If any check fails, correct it before returning the output.
 
+
+## Visual friction board (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the friction table as a status board: one row per
+step of the checkout, mobile and desktop shown as separate columns per the device-split rule above,
+each cell colored by severity and marked confirmed or screenshot-only. This turns "which step, which
+device" into something scanned in seconds instead of cross-referenced across two tables. Use the exact
+findings already produced above; do not re-audit anything for the board. If your host's artifact tool
+requires a design step first (Claude Code's does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full text tables, never instead of them. If no
+such tool is available in this run, skip this step without comment and return the text tables only. A
+missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 
