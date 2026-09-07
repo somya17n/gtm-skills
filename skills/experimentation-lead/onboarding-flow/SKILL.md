@@ -40,9 +40,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -117,6 +121,21 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 11. Design empty states as onboarding opportunities: what the space is for, what it looks like with real data, and one clear primary action, not a dead end.
 12. Design the supporting trigger-based email/notification sequence at a high level (welcome, incomplete-onboarding nudges at 24h/72h, activation celebration, feature discovery at day 3/7/14) and hand off the actual copy to `email-campaign`.
 13. Define the stalled-user threshold (days inactive or % through setup) and the re-engagement tactic for each severity level.
+
+## Visual activation path (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the flow design as a step-by-step path diagram
+(signup to activation, each step marked tracked/partial/not-tracked, the dominant drop-off category
+called out at the step it applies to), since this is fundamentally a path and a diagram shows where
+the aha moment sits relative to the steps before it better than a numbered list. Use the exact flow
+already designed above; do not redesign anything for the diagram. If your host's artifact tool
+requires a design step first (Claude Code's does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full text design, never instead of it. If no
+such tool is available in this run, skip this step without comment and return the text design only. A
+missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 
