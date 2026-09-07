@@ -28,9 +28,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 ## How to run
 
 **Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
@@ -46,6 +50,9 @@ State the rest as assumptions, marked as assumptions, and let the user correct t
 4. **The early-signal thresholds**: minimum sessions before any judgment, plus the CTR and conversion-rate bars to clear. Ask for them. Thresholds copied from another store's launch are worse than no thresholds.
 5. **The pre-launch readiness output**, if `product-launch-checklist` was run, so a weak early result can be checked against a gap that was already known and accepted.
 6. **The ledger**, for the window's start date, spend to date, and prior runs in this window.
+7. **COGS or per-SKU cost lines, if available**, so a scale proposal can state whether margin was
+   actually checked rather than only CTR and conversion. If cost lines are not available, say so up
+   front rather than discovering it only when a scale gate passes.
 
 ## Method
 
@@ -69,7 +76,7 @@ State the rest as assumptions, marked as assumptions, and let the user correct t
    Every recommendation carries its method, its evidence (n, lift, or the winner it is a lookalike of), and a confidence. Where the data to run an algorithm is absent, say which algorithm could not run and what input it needed - do not substitute a hand-picked list and present it as a recommendation. This is a proposal for a human to approve, like every other output of this loop.
 7. **Check stock before proposing any scale.** Scaling spend into thin inventory manufactures the exact problem `stockout-alerts` exists to catch. If on-hand units are not supplied, say scale cannot be recommended without them rather than recommending it anyway.
 8. **Never extend the window.** When the window closes, close the loop: report the final verdict and stop. If the user wants continued monitoring, the product graduates into `daily-sales-report` and `margin-monitoring` as normal catalog, which is the correct home for it.
-9. **State margin, not just ROAS, before proposing scale.** A product clearing its CTR and conversion bars can still be unprofitable; route to `margin-monitoring` when cost lines are available.
+9. **State margin, not just ROAS, before proposing scale.** A product clearing its CTR and conversion bars can still be unprofitable. Where cost lines are available, check margin before proposing scale and route to `margin-monitoring` for the ongoing watch. **Where cost lines are not available, do not propose scale as if margin were fine.** Label the proposal "revenue growth confirmed, margin unconfirmed" and name the missing cost line, so a fast-growing loser cannot get scaled on traffic metrics alone.
 10. **Append to the ledger**: day N of M, spend to date, gate result, and the verdict, so the final window summary is assembled from the run log rather than reconstructed.
 
 ## Output format
@@ -127,11 +134,27 @@ Before returning the output, verify:
 - Any stop proposal names the failure shape and routes to the right skill.
 - Any scale proposal cites confirmed on-hand units and fits the remaining budget.
 - Feed deliverability was considered before concluding demand failure.
+- Where cost lines were not available, was the scale proposal labelled "margin unconfirmed" rather
+  than presented as if profitability had been checked?
 - The window was not extended, and a closing run graduates the product.
 - The run was appended to the ledger with day, spend, and verdict.
 
 If any check fails, correct it before returning the output.
 
+## Visual launch dial (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the launch as a single dial: day N of M and
+spend-to-ceiling as a progress bar, each threshold shown as pass or fail against its bar, and the
+promote-next candidates (when the product is winning) as a small ranked list underneath with each
+one's method and evidence visible. Use only the figures and verdicts already computed above; do not
+recompute anything for the dial. If your host's artifact tool requires a design step first (Claude
+Code's does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full text tables, never instead of them. If
+no such tool is available in this run, skip this step without comment and return the text tables
+only. A missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 
