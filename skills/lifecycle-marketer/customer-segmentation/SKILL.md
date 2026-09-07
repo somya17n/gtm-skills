@@ -26,9 +26,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -55,7 +59,9 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 >
 > **Uneven segment sizes:** treat any single stage holding more than ~35% of the base, or under ~2%, as
 > a signal that a window or threshold is wrong, and say which you suspect. A stated number beats
-> "dramatically uneven", which fires or does not depending on the run.
+> "dramatically uneven", which fires or does not depending on the run. The 35%/2% figures are pack
+> heuristics for what an even-ish six-stage split looks like, not a sourced statistical rule: label
+> them as such inline rather than presenting them as an industry standard.
 
 
 > **Trend needs state, and the first run has none.** The rule and its edge cases are in `references/run-state.md`. Read it and follow it.
@@ -135,6 +141,22 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 ## Output
 
 **Answer first.** Open with the segment that needs action this week and what to do about it. The full segment table goes below. House rule 2 governs, and it outranks the running order below.
+
+## Visual segment map (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the six Intempt lifecycle stages as a segment map
+(each stage sized to its share of the base, flagged if it clears the ~35%/2% uneven-size check, with an
+arrow showing direction of travel between stages where a prior period exists), since the whole method
+here is about where customers sit and where they are moving, and a map shows both at once instead of
+requiring the reader to hold six segment blocks and their transitions in their head. Use the exact
+segments and sizes already computed above; do not recompute anything for the map. If your host's
+artifact tool requires a design step first (Claude Code's does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full segment blocks, never instead of them. If
+no such tool is available in this run, skip this step without comment and return the text segments
+only. A missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 

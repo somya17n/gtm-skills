@@ -31,9 +31,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -66,7 +70,7 @@ Ask the user for these inputs. If any are missing, ask before analyzing.
 ## Method
 
 1. List every flow currently touching a customer after their first purchase against this fixed set of 8 stages: welcome, browse abandonment, cart abandonment, post-purchase, usage/education, replenishment, cross-sell, win-back. Mark each Present, Missing, or Overlapping with another stage.
-2. For replenishable products, compare the replenishment flow's send timing to the stated cycle. Flag it if the send lands more than 20% later than the expected reorder point: reorder point × 1.2. On a 30-day product, that's day 36, so a nudge landing on day 40 is flagged, one landing on day 34 is not. By day 40 the customer has likely reordered elsewhere or decided they don't need it.
+2. For replenishable products, compare the replenishment flow's send timing to the stated cycle. Flag it if the send lands more than 20% later than the expected reorder point: reorder point × 1.2 (a pack heuristic, label it as such; where the observed first-to-second-order gap is available, prefer that real distribution over the fixed 1.2 multiple). On a 30-day product, that's day 36, so a nudge landing on day 40 is flagged, one landing on day 34 is not. By day 40 the customer has likely reordered elsewhere or decided they don't need it.
 3. For non-replenishable products (durable, gifting, one-time), the check is message fit, not timing: is there an actual reason to buy again, a complementary product, an upgrade, a gifting occasion, rather than a generic "come back" nudge.
 4. Score each flow's message against six fit criteria: gives a concrete reason to buy again, includes product education, recommends a specific next-best product (not "shop now"), includes proof, addresses a likely objection, offers customer care. A flow hitting fewer than 3 of 6 is under-built.
 5. Check for message collision: does more than one flow message the same customer inside a 48-hour window. Flag any overlap as an over-messaging risk.
@@ -120,6 +124,21 @@ Before returning the output, verify:
 
 If any check fails, correct it before returning the output.
 
+
+## Visual coverage board (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the flow coverage table as a status board across
+the 8 fixed stages, each colored Present, Missing, or Overlapping, with the message-fit score shown as
+a filled indicator out of 6, so the one or two genuinely missing stages jump out instead of requiring
+a full table read. Use the exact statuses and scores already computed above; do not re-audit anything
+for the board. If your host's artifact tool requires a design step first (Claude Code's does), do that
+step before publishing.
+
+This is additive only. Hand back the link alongside the full coverage table, never instead of it. If
+no such tool is available in this run, skip this step without comment and return the text table only.
+A missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 

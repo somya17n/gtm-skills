@@ -46,9 +46,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -58,7 +62,9 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 >
 > - **Use a band, not a cliff.** Between roughly 1.5x and 2x the norm is *slipping* and gets reported
 >   as a watch item; past 2x is *breached*. The highest-value case is routinely the one sitting at 1.6x,
->   trending, and invisible to a 2x test.
+>   trending, and invisible to a 2x test. These are pack heuristics, not a sourced statistical rule:
+>   label them as such inline, and where the unit's own trailing variability is available, prefer the
+>   variability-based band from the rule below over these fixed multiples.
 > - **Compare each unit against its own variability, not one global number.** A metric that swings 30%
 >   week to week and one that swings 3% cannot share a threshold: the first alarms every week and the
 >   second never alarms at all. Where enough history exists, set the band from the unit's own trailing
@@ -183,6 +189,21 @@ Before returning the output, verify:
 
 If any check fails, correct it before returning the output.
 
+
+## Visual window chart (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the baseline, promo, and recovery windows as a
+bar or line chart with revenue per day across all three, the pull-forward trough shaded where it goes
+negative, since "lifted then craterered" is a shape best seen as a shape, not reconstructed from three
+separate table rows. Use the exact windows and figures already computed above; do not recompute
+anything for the chart. If your host's artifact tool requires a design step first (Claude Code's
+does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full window comparison table, never instead
+of it. If no such tool is available in this run, skip this step without comment and return the text
+table only. A missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 
