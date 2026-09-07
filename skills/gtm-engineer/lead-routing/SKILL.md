@@ -26,9 +26,13 @@ third question, becomes a stated assumption the user corrects in one word rather
 that stops the work. Number them, and say what you will assume if one goes unanswered.
 Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -134,10 +138,24 @@ most skills in this pack:
 - If the team has only one person, does the output say routing logic isn't needed yet, instead of producing rules with nothing to route between?
 
 Then run the nine-question check in `references/house-rules.md`. It covers the rules that
-apply to every skill, so they are not repeated here.
+apply to every skill, so they are not repeated here. If any check fails, correct it before returning
+the output.
 
-Before returning the output, verify:
-If any check fails, correct it before returning the output.
+## Visual routing tree (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the primary rule, tie-break, capacity fallback,
+and off-hours rule as one connected decision tree, ending in the mandatory catch-all, so a reader can
+trace exactly one path for any lead rather than reading four separate prose sections and mentally
+wiring them together. Use the exact rules already designed above; do not redesign the logic for the
+diagram. If your host's artifact tool requires a design step first (Claude Code's does), do that step
+before publishing.
+
+This is additive only. Hand back the link alongside the full text output, never instead of it. If no
+such tool is available in this run, skip this step without comment and return the text output only. A
+missing artifact tool is not a failure and not worth flagging.
+
 ## Chain with
 
 End by naming what runs next, in one line:

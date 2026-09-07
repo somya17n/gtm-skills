@@ -26,9 +26,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -114,7 +118,16 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
      MQL-to-SQL rate, for a stage whose entry criteria were never written down, and for any handoff
      between two teams. It is not fixed by nurture, copy, or UX work: it is routed to whoever owns the
      definition. Say who that is.
-10. Recommend a specific optimization lever for each problem stage, not generic advice, but a concrete action (e.g., "Add social proof on pricing page," "Reduce signup form to email-only," "Add progress indicator to onboarding flow").
+10. **Before naming the lever for the single most-leaking stage, actually look at it rather than
+    inferring the cause from the rate alone.** If a URL is available for that stage's page or flow,
+    fetch it and read what is actually there (form length, copy, proof placement, number of steps),
+    the same actively-looks discipline `checkout-optimization` and `product-page-optimization` already
+    use, so the recommended lever answers what the page shows rather than a plausible guess from the
+    FMAT category alone. Where the stage is not a page (a sales handoff, an internal process) or no
+    URL is reachable, say the lever is inferred from the rate and pattern, not observed, and name what
+    would confirm it. Recommend a specific optimization lever for each problem stage, not generic
+    advice, but a concrete action (e.g., "Add social proof on pricing page," "Reduce signup form to
+    email-only," "Add progress indicator to onboarding flow").
 11. Calculate funnel math: work backward from the bottom-of-funnel target to determine required volume at each stage using current conversion rates.
 12. Re-calculate funnel math using optimized conversion rates (benchmarks) to show the improvement opportunity.
 
@@ -126,6 +139,21 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 - **Drop-off Diagnosis**: For each problem stage: conversion vs benchmark, likely cause (FMAT), evidence, specific optimization action
 - **Funnel Math**: Current: to hit [target] at bottom, need [N] at top. Optimized: with benchmark rates, need only [M] at top.
 - **Optimization Roadmap**: Numbered list, highest impact first. Each item: stage, lever, expected lift, effort level (low/medium/high)
+
+## Visual funnel (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the funnel as an actual funnel chart: each stage
+as a bar sized to its volume, with the drop between stages labelled by percentage and colored by its
+green/yellow/red/deep-red status, so the widest median-to-top spread (the correct place to start) is
+visible as a shape rather than a number buried in a table. Use the exact stages, volumes, and status
+already computed above; do not recompute anything for the chart. If your host's artifact tool requires
+a design step first (Claude Code's does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full text tables, never instead of them. If no
+such tool is available in this run, skip this step without comment and return the text tables only. A
+missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 
