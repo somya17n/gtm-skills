@@ -26,9 +26,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -94,6 +98,22 @@ hand, because hand-entered dates make the velocity read directional at best.
    - Omit deals below 30%
 11. Calculate pipeline coverage ratio: total pipeline value / quota target.
 12. Generate a specific next action recommendation for each deal.
+
+## Visual pipeline board (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the deal-by-deal table as a board grouped by
+forecast category (Commit/Best Case/Pipeline/Omit), each deal card colored by health and flagged with
+its risk signals, with stuck and never-started deals visually separated per the rule above, since a
+weekly pipeline review is scanned for what needs attention, not read top to bottom as a table. Use the
+exact deals and categorizations already computed above; do not recompute anything for the board. If
+your host's artifact tool requires a design step first (Claude Code's does), do that step before
+publishing.
+
+This is additive only. Hand back the link alongside the full text tables, never instead of them. If
+no such tool is available in this run, skip this step without comment and return the text tables
+only. A missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 
