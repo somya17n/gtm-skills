@@ -98,6 +98,12 @@ Reviewer pass: design read + spot test-runs. Rubric: (1) trigger clarity, (2) re
 | 11 | benchmark-analysis (data-analyst) | A | Honest metric-vs-benchmark. Anti-fabrication spine: **never invents a confident number**; Path A (user source) vs Path B (public *ranges*, disclosed directional). Best-in-market: **definition-mismatch handling** ("largest single source of apparent gaps" — churn logo/rev/gross/net, CAC loaded/paid-only, etc.), **compounding rule** (5% monthly = 46% annual, not 60%), dates benchmarks + staleness flag, Confidence line discloses path. Held from A+ by: **no sample-size/volatility check** (5% on 40 customers = noise, never asks the denominator); "range" hides percentile position; single-metric by design. Local: beats `analytics`/`competitors`/thin-`data-analyst` — none normalizes definitions or compounds. Test-run: $99/mo SMB churn 5%/mo → corrected the ×12 error AND the wrong-segment ("<10%" = enterprise) benchmark live. Promo: contrarian internal-baseline, simplified. |
 | 10 | automation-review (store-automation) | A | The checker in maker-checker; **sharpest reasoning of the trio.** "The run that proposed a change is the worst possible judge of it" → **default to reject**, exactly 3 verdicts (approve/downgrade/reject, never "approve with reservations"). Two deep traps most implementations miss: **no-ledger deadlock** (missing history *caps the standard*, doesn't reject, else ledger never gets born) and **self-review trap** (fresh context or label it a self-review). Method: independently re-evaluate gate, input freshness/rowcount, sample-supports-claim, ledger prior-revert, alternative-explanation-fits, within-own-limits, missing-data-as-zero, standard scaled to cost/reversibility. Held from A+ by: can't *enforce* fresh context (relies on operator); **no default sample-minimum heuristic**. Local: no maker-checker skill; posture twins = `code-reviewer` + `fact-checker` (refute-don't-confirm). Test-run: audited a Linea SKU-2210 price-cut proposal → REJECT on 5 grounds + self-review label fired. |
 | 9 | automation-ledger (store-automation) | A | State-file companion to #8; "the agent forgets what it saw yesterday, the file does not." Best-in-market state discipline: **append-only never overwrite**, input row-count every run (**zero rows = FAILED not pass**), proposed vs applied separated, **reverts recorded** (most valuable row), suppressions require reason + review date, rollup that **never prunes dismissals/reverts/overrides/current-snapshot/thresholds-in-force** (moved cut-point vs moved customer), names its own "grows past context = silently ignored" failure. **Contains the heartbeat (stale-loop) + dismissal (suppressions) that #8 omits.** Held from A+ by: **no concurrency/atomic-write** (shared file, crash mid-append corrupts); no schema version; markdown-as-DB scale ceiling unnamed. Local: no loop-state skill locally; conceptual twin = Somya's own auto-memory system (MEMORY.md + one-fact files). Test-run: Linea ledger w/ escalation + FAILED zero-row row. |
+| 85 | win-loss-analysis (account-executive) | **A+** | Turns closed-deal records into evidence-ranked win/loss patterns ("The Win-Loss Analyzer") — the 7th account-executive skill, missed in the initial 84-skill pass. **Elite, benchmark-grade research discipline:** measured base rates on how unreliable the input itself is (~42% of reps correctly ID the true loss reason; ~65% of CRM competitor tags are wrong; only ~15% of CRM loss reasons match the buyer's own account) — states which of two questions ("why buyers left" vs "how reps categorise losses") the analysis is actually answering, rather than presenting a field-selection tally as buyer truth. **Structural buckets a gut-feel retro misses:** unevidenced-price flagged separately from evidenced price (price is the path of least resistance for a rep who doesn't know); no-decision losses kept out of the price/competitor buckets entirely; a reason on both the won and lost side flagged non-predictive rather than double-counted. Ranks by count AND dollar value in one table. **Neutral-interviewer rule** (the rep must not run their own win-loss interview — buyers filter) plus stated-vs-revealed corroboration (what they bought instead, where the trial stalled), against the fact that buyers give fully honest feedback under half the time. **✅ Competitor-freshness wired (this pass):** when a competitor clears the >50%-of-losses red-flag bar, fetch their current pricing/positioning page + a recent comparison mention before writing the messaging fix, dated, rather than aiming the fix at whatever that competitor was doing when the deals closed. Name-function ✅. Real-data ✅ (Step-0/MCP). Deliverable ✅ (ranked pattern + red flags + messaging fix). Promo: Account-Executive/Blu, footer matched. |
+| 86 | call-notes (gtm-engineer) | **A+** | Mines a raw sales-call transcript for what the follow-up needs ("The Transcript Miner") — one of 7 gtm-engineer skills missed in the initial pass. **Sharp analytical discipline:** discounts prompted agreement ("yes, that's a problem for us" answering a leading question is the weakest signal — an unprompted complaint outranks several prompted ones); corroborates a stated reason against what the prospect actually did on the call (what they returned to unprompted, who they said needed to be involved); assesses transcript quality itself before mining it (length, speaker-label-vs-attendee mismatch, verbatim vs auto-generated) and returns fewer, not the same number of, findings when quality is poor. Every deal signal and pain point is a direct quote, never a paraphrase; every objection carries a Resolved/Partially/Unresolved status. **✅ Stakeholder verification wired (this pass):** the stakeholder map used to carry whatever title was said on the call as fact. Now checks each named stakeholder's current LinkedIn (title, tenure, still-there) before mapping their role, marked confirmed/asserted/not-verified — closing the same live-research gap already fixed pack-wide in lead-scoring/intent-data. Name-function ✅. Deliverable ✅ (signals + objections + pain points + stakeholder map + one next action). Promo: GTM-Engineer/Blu, footer matched. |
+| 87 | product-launch-checklist (gtm-engineer) | **A+** | One-time go/no-go readiness gate before a launch ("The Launch Gate") — missed in the initial pass. **Best-in-class launch discipline:** an assumed readiness layer can never be marked Ready (capped at At Risk, "unverified" stated as the reason); forces the oversell/overload scenario (3x-demand modeling) as non-skippable because it's the actual most common launch failure, not a box-ticking exercise; a Go verdict is structurally blocked while any layer is Blocked with no path to close; every condition and rollback action needs a named owner or it isn't real. Tests any promo/discount mechanic end to end (stacking, thresholds, exclusions, expiry) rather than confirming it merely exists. **✅ SaaS parity wired (this pass):** the 7 layers were entirely ecommerce-shaped (stock/fulfillment as layer 1). Added the SaaS equivalent — feature-flag/entitlement rollout, seat activation for existing accounts, docs/help-center readiness as layer 1 — plus the matching SaaS oversell scenario (entitlement system mis-flags a cohort at scale), so a feature or plan-tier launch gets checked on its own terms instead of a physical-inventory question that doesn't apply. Name-function ✅. Deliverable ✅ (verdict + readiness board + watch list). Promo: GTM-Engineer/Blu, footer matched. |
+| 88 | sales-enablement (gtm-engineer) | **A+** | Produces the actual sales collateral a rep hands a prospect ("The Enablement Kit") — missed in the initial pass. **Genuinely rare insight up front:** "we need better collateral" usually isn't a creation problem — ~65% of marketing content goes unused because reps can't find it, not because it's bad, and ~50% of engagement comes from ~10% of assets — so the skill checks retrieval before producing and asks what reps already send unprompted before building something new. Asset-type-specific structure (one-pager/ROI calculator/proposal/playbook/demo script), each with its own real constraint (ROI calculator shows the formula because the rep has to defend it live; proposals capped under 7 pages because 10+ goes unread; a reference customer needs confirmed-current permission before a rep can name them). Every asset ships an adoption/expiry block (what it replaces, who owns it, last-verified date) and a "would a rep defend this claim" gate. **✅ Competitor-freshness wired (this pass):** the playbook's "competitive positioning per named competitor" section wrote from the brief or memory with no freshness check. Now fetches each named competitor's current pricing/positioning page before writing the comparison, dated, flagging anything the brief claims that the live page no longer supports. Name-function ✅. Deliverable ✅ (asset in full, not an outline). Promo: GTM-Engineer/Blu, footer matched. |
+| 89 | shipping-cost-analysis (data-analyst) | **A+** | Isolates the gap between shipping charged and shipping paid, banded by order value and zone ("The Shipping Margin Check") — one of 10 data-analyst skills missed in the initial pass. **Rigorous, defensive quant method:** takes shipping cost and shipping charged as magnitudes regardless of how the carrier invoice signs them (a negative-signed cost would otherwise silently subtract instead of add, inflating recovery); excludes refund/adjustment/unreadable rows before banding, with each exclusion count disclosed separately; bands are stated lower-bound-inclusive/upper-bound-exclusive so a round-number order ($25/$50/$100) has exactly one home, not two; forces a reconciliation check (band totals must sum to the overall total) before trusting any per-band finding; tests the free-shipping threshold against the real median order value rather than a rule of thumb, and separately checks whether surcharges (fuel/oversize/remote-area) are actually broken out on the invoice or hidden in one lump total that makes the recovery rate look better than it is. Ships an honest degraded Quick Mode for stores with only a blended monthly total, labeled blended not banded. **✅ Market-grounding wired (this pass):** the threshold read used to rest on the store's own distribution alone. Now pulls 2-3 cited, dated market benchmarks for free-shipping expectations in the store's category before recommending raise/hold/lower. Name-function ✅. Deliverable ✅ (recovery table + threshold verdict + scenarios). Promo: Data-Analyst/Blu, footer matched. |
+| 90 | weekly-report (data-analyst) | **A+** | Turns a week of scattered exports into one operating readout ("The Weekly Readout") — the last of 10 data-analyst skills, missed in the initial pass. **Honest-by-construction:** separates real movement from noise using the anomaly-detection method rather than reporting every fluctuation as a finding; calls out what was expected to move (from an action taken the prior week) but didn't, often the most useful and most-skipped line in a readout; caps next actions at what the week's data actually supports — a quiet week gets a short list, not three invented actions to fill the section; never lets a vanity metric (sessions, impressions) count as a win if margin or retention worsened the same week; flags any credential-shaped input for rotation rather than reproducing it. **✅ Conflict-reconciliation wired (this pass):** as a rollup that treats other skills' outputs as first-class inputs, it had no rule for when two of them disagree on the same metric. Now names the disagreement explicitly (both reads, what would reconcile them) and marks that metric unresolved rather than silently picking the more convenient read. Name-function ✅. Deliverable ✅ (scorecard + what changed + what didn't + next actions). Promo: Data-Analyst/Blu, footer matched. |
 
 ## Detail
 
@@ -400,7 +406,7 @@ All three failures are **plumbing, not reasoning** — the skills think clearly;
 **Smart promo used:** MCP — Intempt builds stage medians from closed history + reads stage changes from real buyer activity (advanced vs actually progressed), plain language. intempt.com/mcp.
 
 ---
-## ACCOUNT-EXECUTIVE ROLE — CLUSTER SUMMARY (skills 2, 18-22 — COMPLETE, 6 skills)
+## ACCOUNT-EXECUTIVE ROLE — CLUSTER SUMMARY (skills 2, 18-22, 85 — COMPLETE, all 7 skills; win-loss-analysis #85 folded in on the final pass, graded A+)
 account-plan, call-preparation, objection-handling, opportunity-scoring, pipeline-review, price-negotiation — **all A** (account-plan A-→A in fork). The strongest *reasoning* role in the pack: objection-handling = strongest craft; price-negotiation = strongest reasoning (the discount confounder). Themes:
 1. **System-captured vs rep-entered honesty** recurs (opportunity-scoring + pipeline-review both admit rep-logged data measures logging, not truth — rare, excellent).
 2. **First accuracy gaps** (not just completeness) appear here — opportunity-scoring's stakeholder weight (15% vs a 6x predictor), both scoring skills' asserted thresholds want win-rate calibration.
@@ -505,7 +511,7 @@ account-plan, call-preparation, objection-handling, opportunity-scoring, pipelin
 **PAID-CLUSTER PATTERN (budget-reallocation #29 + cost-per-acquisition #30, both A-):** these two share an author-DNA the analytics roles don't — **market-grounding is BUILT IN** (dated, cited Field Notes on real platform mechanics), read-only propose/diagnose-only, observed/suspected + normalize-first rigor. Both A-, both held from A by the SAME seam: **the high-value dated facts live in Field Notes, not wired into the Method as first-class checks.** ARTIFACT NOTE: the fix for both is identical — promote Field Notes → named Method steps. This is the opposite problem from the brand-designer role (there: reasoning A, delivery B; here: delivery/rigor A, but self-knowledge sits one layer too deep to fire automatically). creative-brief #23 → B (brief only). hook-writer #24 → B+ (hooks but un-humanized). onboarding-video #25 → B (Remotion-locked, no script/gen-prompt). product-photography #26 → **B-** (direction only + NOT trained on real pictures/data — opts out of visual grounding). **CONFIRMED ROLE PATTERN — brand-designer's systemic weakness: every skill DIRECTS or DRAFTS but stops one step short of the shippable, tooling-matched asset** (creative-brief→no asset, onboarding-video→code-locked, product-photography→no image/prompt, hook-writer→un-humanized copy). Reasoning/safety A-grade; DELIVERY capped at B. **Contrast data-analyst (8×A) + account-executive (6×A): there the analysis/plan IS the deliverable, so no generation step to miss.** ARTIFACT HEADLINE for this role: *reasoning A, delivery B — each skill needs a generation / humanizer / tooling-match handoff to reach its own potential.* Watch tone-of-voice / brand-kit.
 
 ---
-## DATA-ANALYST ROLE — CLUSTER SUMMARY (skills 6, 11-17, 8 skills)
+## DATA-ANALYST ROLE — CLUSTER SUMMARY (skills 6, 11-17, 89-90 — COMPLETE, all 10 skills; shipping-cost-analysis #89 and weekly-report #90 folded in on the final pass, both graded A+)
 anomaly-detection, benchmark-analysis, cohort-analysis, contribution-margin, ecommerce-returns, growth-strategy, inventory-planning, kpi-dashboard — **all A.** The strongest, most internally-consistent role in the pack: every skill has best-in-market analytical rigor and an unusually honest anti-fabrication spine (withhold rather than invent, name the blind side, mark partial/thin data). **Three cluster-wide A→A+ themes:**
 1. **Market-grounding** (Somya's fix) — absent in most; default-ON for judgment skills (benchmark, growth-strategy, kpi-dashboard targets), narrow-and-honest for pure-math (cohort/CM/inventory). Demonstrated live on 5 of them.
 2. **Method-rich but code-thin** — anomaly/benchmark/cohort/returns would jump with a reproducible SQL/pandas snippet so the user can actually compute it, not hand-build.
@@ -551,3 +557,122 @@ anomaly-detection, benchmark-analysis, cohort-analysis, contribution-margin, eco
 **Fixes wired this session (Somya's directives):** customer-segmentation → full Intempt 6-stage set + pull-live-via-MCP; email-campaign → full signup→champion lifecycle program (ecom+SaaS) + inbox-teardown research + sourced benchmarks; customer-journey → check-real-transition-data-first + full-lifecycle journey set; promotional-campaigns → per-channel builder from live-market research; referral-program → fetch user's site + competitor referral pages (ecom+SaaS reward types); repeat-purchase-rate → SaaS expansion-path map. The one remaining pack-wide fix: the humanizer batch (email-campaign generation-shaped).
 
 **Where the pack BEATS her stack:** the deliverability+carrier depth (email-campaign), the churn-machinery (cancel-flow/dunning-by-decline-type/save-durability), the RFM-calibrate-to-own-base, and the anti-vanity spine are sharper than a generic lifecycle/CRM pass. **Where hers beats the pack:** her humanizer (the finishing pass) + her live Intempt connection (which several footers point at).
+
+---
+
+## FINAL PASS — skills 85-90 (the 6 the initial 84-skill pass missed) — COMPLETE, pack now 90/90
+
+The initial review closed at 84 of ~90 skills. The 6 left unreviewed — win-loss-analysis (#85,
+account-executive), call-notes, product-launch-checklist, sales-enablement (#86-88, gtm-engineer),
+shipping-cost-analysis, weekly-report (#89-90, data-analyst) — weren't lower-quality misses, they
+simply hadn't been graded yet. All 6 came back A-tier on read: real method, honest guardrails,
+concrete output, no invented numbers. Each had exactly one real gap short of A+, closed in this pass:
+
+1. **call-notes** — stakeholder titles were carried from the call as fact. Now verified live against
+   each named stakeholder's current LinkedIn, marked confirmed/asserted/not-verified.
+2. **product-launch-checklist** — the 7 readiness layers were entirely ecommerce-shaped. Added the
+   SaaS-launch equivalent (feature-flag/entitlement rollout, seat activation, docs readiness) as an
+   alternate layer 1, so a feature or plan-tier launch isn't forced through a stock question.
+3. **sales-enablement** — the playbook's competitor-positioning section had no freshness check. Now
+   fetches each named competitor's current pricing/positioning page before writing the comparison.
+4. **shipping-cost-analysis** — the free-shipping threshold read was judged against the store's own
+   order distribution alone. Now also checked against 2-3 cited, dated market benchmarks for the
+   category.
+5. **weekly-report** — no rule existed for when two input skills disagreed on the same metric. Now
+   names the disagreement explicitly instead of silently picking one read.
+6. **win-loss-analysis** — a red-flagged competitor's messaging fix was aimed at whatever they were
+   doing when the deals closed. Now fetches their current pricing/positioning page first.
+
+All 6 graded **A+** after the fix — same ceiling grade the rubric already uses for the pack's other
+top skills (`checkout-optimization`, `churn-reduction`, `lead-management`), not a new tier. The pack's
+scorecard is complete at 90/90.
+
+---
+
+## SECOND PASS — artifact rendering + gap closure across 21 skills, plus a pack-wide writing-style upgrade
+
+Two separate requests landed together: (1) which skills would benefit from rendering a visual
+Artifact in Claude Code alongside their text output, and (2) close each one's remaining real gap to
+A+ while doing it. 21 skills got both. All 27 skills touched across both passes (these 21 plus the
+original 6 above) also got the writing-style reinforcement below, applied identically everywhere.
+
+**The artifact pattern, identical across all 21:** each skill now checks its own toolset before
+offering a visual. Where a rendering tool (an `Artifact` tool in Claude Code or claude.ai) is
+available, it additionally publishes a visual built from numbers/rules already computed in the text
+output, never recomputed for the visual. Where no such tool exists (a host with no rendering surface,
+an unattended scheduled run), the step is skipped without comment. The text output is never replaced,
+only supplemented.
+
+**Two categories of artifact, by what the visual actually buys:**
+
+- **Render the finished deliverable itself**, not a description of one: `landing-page` (the generated
+  HTML as a live preview instead of a copy-paste code block), `sales-enablement` (the one-pager or
+  proposal as an actual designed document), `ad-design` (a selection gallery for the generated image
+  set), `ad-copy` (Draft A/B side by side with beats labelled), `ad-angles` (the six angles as a card
+  grid), `creative-brief` (the brief laid out as a real creative brief, plus generated images once the
+  skill's own image-gen gap below is closed).
+- **Visualize the underlying data or logic**: `cohort-analysis` (a retention heatmap in place of a
+  percentage table), `conversion-funnel` (a funnel chart), `contribution-margin` (a CM1→CM2→CM3
+  waterfall + ranked SKU bars), `customer-journey`/`lead-routing`/`marketing-automation` (flowcharts
+  in place of ASCII/tables), `checkout-optimization`/`anomaly-detection`/`benchmark-analysis`/
+  `kpi-dashboard`/`shipping-cost-analysis` (banded or trend charts), `win-loss-analysis` (a ranked bar
+  chart by count and dollar value), `promotional-campaigns` (a baseline/promo/recovery window chart),
+  `repeat-purchase-rate` (an 8-stage coverage board), `customer-segmentation` (a 6-stage segment map),
+  `website-personalization` (the ordered ruleset as a flowchart).
+
+**The real gap each skill closed, one per skill, not cosmetic:**
+
+1. **creative-brief** — the pack's most consequential remaining gap: it stopped at a brief and handed
+   the actual creative back to the user. Now generates the real visual per angle through an available
+   image-gen tool (fal.ai/Recraft/Konvert), the same nothing-ships-without-a-human-pick gate
+   `ad-design`/`ad-creative` already use, and says plainly when no such tool exists rather than
+   silently reverting to spec-only.
+2. **ad-design** — the SaaS self-critique ("real UI beats generic illustration for B2B SaaS") was
+   filed as a footnote and never applied. Now one of the three real input questions when the audience
+   is B2B SaaS.
+3. **ad-copy** — three self-admitted input gaps (CTA destination, exact placement, Advantage+ state)
+   sat in Field Notes instead of the actual input list. Moved into the three-question budget.
+4. **ad-angles** — the same pattern: CPA/budget and platform/objective were self-admitted gaps outside
+   the real inputs. Moved in, plus a stray typo fixed.
+5. **checkout-optimization** — the known-cause percentages (48%/26%/22%/18%/17%) were unsourced inline.
+   Now cited to Baymard with a re-pull note.
+6. **website-personalization** — the 200-impression sample-size minimum was an unsourced heuristic.
+   Labeled as one, with a note to re-derive it for very low/high baseline conversion rates.
+7. **conversion-funnel** — the leak's root cause (FMAT) was inferred from the rate alone, never
+   observed. Now fetches the actual leaking page/flow before naming a lever, when a URL exists.
+8. **contribution-margin** — margin had no category context (is 43% CM2 good or bad here?). Now pulls
+   2-3 dated category-margin benchmarks before the verdict.
+9. **lead-routing** — a stray broken "Before returning the output, verify:" line with nothing under
+   it. Cleaned.
+10. **anomaly-detection** — no seasonality handling, though the skill named seasonality as a trust
+    risk. Added a 4th pass: check a flagged point against its own cycle-position (same weekday, same
+    month) before calling it a real anomaly.
+11. **benchmark-analysis** — no sample-size/denominator check, so a 5%-on-40-customers rate read with
+    the same confidence as one on a real base. Now asks for and checks the denominator.
+12. **kpi-dashboard** — a real internal contradiction: the footer claimed variability-based alerts,
+    the method hardcoded a fixed 10%/25% band. Now uses the same trailing-window method as
+    `anomaly-detection`; also grounds blank scorecard targets in dated category benchmarks instead of
+    leaving them TBD by default.
+13. **cohort-analysis** — no reproducible query, so the table had to be rebuilt by hand from a fresh
+    paste every time. Now hands back the SQL/pandas that reproduces it from raw per-customer data.
+14. **customer-journey**, **lead-management**-adjacent **marketing-automation**, **promotional-campaigns**,
+    **repeat-purchase-rate**, **customer-segmentation** — each was already at or near ceiling per the
+    original review with no further logic gap genuinely open; their lift to A+ is the artifact plus,
+    where one existed, a small honest labeling fix (unsourced heuristics in promotional-campaigns'
+    1.5x/2x band, repeat-purchase-rate's ×1.2 multiple, and customer-segmentation's 35%/2% uneven-size
+    figures, all now labeled as pack heuristics rather than presented as sourced rules).
+
+All 21 graded **A+**. Combined with the FINAL PASS above, 27 of the pack's 90 skills now carry an
+artifact-rendering option, and every skill touched across both passes carries the strengthened
+writing-style rule below.
+
+## Writing style, reinforced pack-wide (27 skills: the FINAL PASS 6 + this pass's 21)
+
+Two rules, already present in `references/house-rules.md`, were repeated directly in each skill's own
+inline reminder so they can't be missed by skipping the reference file: **never use an em dash or en
+dash, anywhere, not once** (a period, a comma, or brackets instead), and **write for a 7th grader** —
+plain words, one idea per sentence, sentences that flow into each other so the reader scans and
+understands on the first pass rather than having to re-read. `house-rules.md` itself was strengthened
+to match: the em-dash rule is now "zero of them, no exceptions" with an explicit self-check step, and
+a new "simple words over impressive ones, write for someone reading fast on a phone" rule was added
+alongside the existing banned-word table.
