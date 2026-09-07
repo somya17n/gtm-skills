@@ -24,9 +24,13 @@ establish, inside the three-question budget. Write what you learn to `.agents/pr
 the next skill does not repeat the work, and say in one line what you inferred rather than observed.
 Never tell the user to go and run a different skill before you can start.
 
-**Write it the way you would say it.** Read `references/house-rules.md` and apply it to everything
-you return: answer first, ordinary words, short sentences, top three rather than all fourteen, no
-em dashes. Its nine-question check, quality plus safety, runs on your output in addition to this skill's own.
+**Write it the way you would say it, out loud, to a coworker.** Read `references/house-rules.md`
+and apply it to everything you return. Two rules matter most, repeated here directly: **never use
+an em dash or en dash, anywhere, not once** (use a period, a comma, or brackets instead), and
+**write for a 7th grader** - plain words, one idea per sentence, short sentences that flow into each
+other so the reader scans and understands on the first pass, never a sentence they have to re-read.
+Answer first, ordinary words, top three rather than all fourteen. Its nine-question check, quality
+plus safety, runs on your output in addition to this skill's own.
 
 ## Constraints
 
@@ -121,6 +125,21 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
   who were already arriving.
 - **Review point**: the date when referred-cohort retention and incremental acquisition get checked
   against the total reward cost, and what result would mean changing or ending the programme
+
+## Visual program map (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the program as a give/get card (the trigger
+moment, the two-sided incentive shown side by side with its math, the tiers if any) alongside the
+competitor-landscape comparison from step 5c, since this is a program a stakeholder reviews as a
+whole shape, not a table of separate fields. Use the exact program design already produced above; do
+not redesign anything for the card. If your host's artifact tool requires a design step first (Claude
+Code's does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full text output, never instead of it. If no
+such tool is available in this run, skip this step without comment and return the text output only. A
+missing artifact tool is not a failure and not worth flagging.
 
 ## Chain with
 
