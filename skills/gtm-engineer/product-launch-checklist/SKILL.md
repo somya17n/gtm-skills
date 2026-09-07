@@ -126,6 +126,21 @@ Before returning the output, verify:
 If any check fails, correct it before returning the output.
 
 
+## Visual readiness board (only when the tool is actually available)
+
+**Check your own toolset before offering this, don't assume it.** Look at what tools you actually
+have access to in this run. If one of them publishes a rendered visual page (for example, an
+`Artifact` tool in Claude Code or claude.ai), render the readiness board as an actual traffic-light
+status board (each layer colored Ready/At Risk/Blocked, verified-vs-assumed marked distinctly), with
+the watch list shown as a second panel, since a go/no-go checklist is exactly the kind of document
+shared in a launch review meeting and a status board reads faster than a text table in that setting.
+Use the exact statuses already assessed above; do not re-assess anything for the board. If your host's
+artifact tool requires a design step first (Claude Code's does), do that step before publishing.
+
+This is additive only. Hand back the link alongside the full text tables, never instead of them. If
+no such tool is available in this run, skip this step without comment and return the text tables
+only. A missing artifact tool is not a failure and not worth flagging.
+
 ## Chain with
 
 End by naming what runs next, in one line:
