@@ -161,11 +161,12 @@ scaling an ad that is already back in learning is how people conclude that scali
    winner faster is the most expensive output this skill could produce.
 5. **Draft the pause rule**, expressed in the business's own numbers: pause an ad set whose cost per
    result exceeds the target by the agreed multiple over a rolling window.
-6. **Draft the scaling schedule** for the winner: increments of about twenty percent, at most one per
-   day, each with its review date. Show the schedule as dates and amounts, not as a principle.
-7. **Draft the spend guardrail**: an alert when daily account spend exceeds the cap.
-8. **Show every rule exactly as it would be created**, and stop. The user says which to create, by name.
-9. **Say what happens between steps**: no other edits, because each one restarts the clock this
+6. **Branch on the budget structure before drafting any schedule.** The twenty-percent-per-day model is a manual ad-set (ABO) lever. If the account runs Advantage+ / campaign budget optimization - Meta's default for new Sales, Leads and App campaigns since February 2025 (pack benchmark, cite the Field notes source) - there is no per-ad-set budget to step, because Meta reallocates spend across ad sets itself. On that structure, scale at the campaign budget level instead, raise the campaign budget in the same ~20% increments, and move the cost-per-result control rather than an ad-set cap; note that pausing a single ad set inside an Advantage+ campaign changes the whole campaign's learning. Say which structure you assumed and what changes if it is the other one.
+7. **Draft the scaling schedule** for the winner: increments of about twenty percent, at most one per
+   day, each with its review date, applied to whichever budget lever step 6 established. Show the schedule as dates and amounts, not as a principle.
+8. **Draft the spend guardrail**: an alert when daily account spend exceeds the cap.
+9. **Show every rule exactly as it would be created**, and stop. The user says which to create, by name.
+10. **Say what happens between steps**: no other edits, because each one restarts the clock this
    schedule exists to protect.
 
 ## Output format
