@@ -1,6 +1,6 @@
 ---
 name: keyword-expansion
-description: "Gives a proven search query deliberate keyword, ad-group and landing-page coverage without creating duplicates or mixing intents, checking existing coverage first, choosing a match type for the job, and holding the proposal when no page or ad can honestly answer it. Use after a review finds real demand worth owning. Boundary: `search-term-report` classifies the queries and `negative-keywords` handles the losers, while `keyword-intent` decides which cluster a promoted query joins."
+description: "Discovers the adjacent, net-new search keywords worth owning from a proven query (autocomplete, related searches, the search-terms report, competitor ads), then gives each one - the proven query and the discovered terms - deliberate keyword, ad-group and landing-page coverage without creating duplicates or mixing intents, choosing a match type for the job and holding any proposal no page or ad can honestly answer. Use after a review finds real demand worth owning. Boundary: `search-term-report` classifies the queries and `negative-keywords` handles the losers, while `keyword-intent` decides which cluster a promoted query joins."
 ---
 # The Query Promoter
 
@@ -118,6 +118,8 @@ If the user cannot answer one, say which part of the output is weaker for it rat
 proceeding as though it were answered.
 
 ## Method
+
+0. **Discover the net-new keywords worth owning - do not only re-home the one proven query.** The name is expansion, so start by widening the proven query into the adjacent terms that share its intent and that the account does not cover yet. Pull them from real sources, never invent them: the search-terms report for co-occurring and matched queries, Google autocomplete and the "related searches" and "people also search for" sets for the seed, and the competitor keywords visible in their live ads and landing pages (browse them where you can). Group the candidates by the intent they share (hand off to `keyword-intent`), drop anything outside the valid-acquisition intents from `product-context`, and drop anything an existing negative already blocks. Then run the proven query and every discovered term through the checks below. A discovered term with no page or ad that can honestly answer it is held, exactly like a proven one: discovery widens the candidate set, it does not lower the bar. State the source each candidate came from, and mark any term whose volume or intent you could not verify as a hypothesis rather than a promotion.
 
 1. **Check existing coverage first.** If a keyword already serves the query well, the correct output
    is often no change - say so rather than proposing a duplicate.
