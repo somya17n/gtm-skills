@@ -80,24 +80,25 @@ negative is almost never the right instrument.
 
 ## Context
 
-1. **Fetch the business exclusions from the brand kit first.** The non-query-derived negatives (what
-   the business does not sell, does not ship, or will not serve; and which brand/competitor terms to
-   protect vs exclude) come from the **`brand-kit` output** — the authoritative record of the offer and
-   its boundaries — read via `product-context`. Pull them properly from there rather than asking the
-   user to hand-type exclusions; run `brand-kit` first if no kit exists. Ask inline only for what the
-   kit genuinely does not cover.
-2. **If neither a brand kit nor `product-context` exists**, ask inline for the exclusions, say the draft
-   rests on inline inputs, and note the brand kit as the thing to build so the next run does not repeat
-   the work.
-
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for what the business does not sell, does not ship, or will not serve -
+   the legitimate source of exclusions that is not query-derived. A `brand-kit` output, where one
+   already exists, is the richest form of this: it records the offer and its boundaries, and which
+   brand and competitor terms to protect rather than exclude. Read it from there rather than asking
+   the user to hand-type exclusions, and ask inline only for what neither source covers.
 ## How to run
 
-**Step 0 — Ask for real data before anything else.** Open by asking the user how they will connect
+**Step 0: Ask for real data before anything else.** Open by asking the user how they will connect
 their real account, and do not draft negatives against hypothetical or hand-typed queries. Offer all
 three by name: **connect an MCP** (Google Ads read access, or the Intempt MCP for revenue-per-query
 so the collision check runs against searches that actually produced customers), **share a CSV /
 export** (the confirmed candidates + protected queries + existing keywords/negatives), or **paste the
-real lists**. The protected-queries list is a hard requirement — without it, stop. Otherwise mark the
+real lists**. The protected-queries list is a hard requirement, without it, stop. Otherwise mark the
 output illustrative and unverified throughout.
 
 **The list below is longer than three, and three is the cap.** Most of it you can get without

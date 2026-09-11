@@ -19,7 +19,7 @@ read `.agents/product-context.md`, fetch the site or page they named, compute it
 already gave, or look up the platform default. Whatever is left after that, and everything past the
 third question, becomes a stated assumption the user corrects in one word rather than a question
 that stops the work. Number them, and say what you will assume if one goes unanswered.
-This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **No context file, no problem. Build it, do not bounce the user.** If `.agents/product-context.md`
 does not exist, research the company yourself: their site for positioning, offer, tiers, voice and
@@ -61,7 +61,7 @@ plus safety, runs on your output in addition to this skill's own.
 
 ## How to run
 
-**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+**Step 0: Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
 
 1. **The same inputs `contribution-margin` requires**, for the current period: revenue basis, COGS, fee rates, shipping cost, and attributed ad spend per SKU. This loop does not invent a shortcut around missing cost data.
 2. **The CM2 floor** the user treats as unacceptable, as a dollar figure or a percentage. Ask which, and hold to it.

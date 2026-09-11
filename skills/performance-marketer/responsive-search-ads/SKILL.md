@@ -41,8 +41,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > - **Cut the AI tells:** no "unlock", "supercharge", "elevate", "seamless", "leverage", "robust", "streamline", "in today's fast-paced world", "we are excited to", "dive in", "game-changer", "at the end of the day", or "it is not just X, it is Y". No em dashes. No exclamation points unless the voice genuinely uses them.
 > - **Vary the rhythm:** mix short and long sentences. A paragraph where every sentence runs the same length reads as generated. One idea per sentence, plain words a 7th grader would use.
 > - **Say it the way you would to a coworker:** contractions are fine, cut throat-clearing openers ("I wanted to reach out", "I hope this finds you well") and hedging. Specific beats clever.
-> - Keep the banned-word list from `product-context` binding, and never soften a missing number into an adjective.
-> If a `humanizer` or `no-ai-slop` pass is available in this run, put the copy through it as the final step; otherwise apply this pass by hand. Copy that has not been through it is not finished.
+> - Keep the banned-word list from `.agents/product-context.md` binding, and never soften a missing number into an adjective.
+> If a humanizer or no-ai-slop pass is available in this run, put the copy through it as the final step; otherwise apply this pass by hand. Copy that has not been through it is not finished.
 
 ## Stating the character limits honestly
 
@@ -101,15 +101,18 @@ substantiated is the expensive kind of good writing.
 
 ## Context
 
-1. **Read `product-context`** for brand voice, the offer, and the claims the business has already
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for brand voice, the offer, and the claims the business has already
    agreed it can make.
-2. **If `product-context` has not been set up**, ask inline for the offer and the proof behind it, and
-   say in the output that the claims were supplied inline rather than stored.
-
 ## How to run
 
-**Step 0 — Get the real inputs, don't work from assumptions.** Two parts: (1) **fetch the real final
-URL / landing page** yourself (browse it) — never write claims against an imagined page; (2) ask the
+**Step 0: Get the real inputs, don't work from assumptions.** Two parts: (1) **fetch the real final
+URL / landing page** yourself (browse it), never write claims against an imagined page; (2) ask the
 user to **connect the account (MCP) or share the real query + CPA/CTR data** (or the Intempt MCP for
 revenue-per-asset), so headlines have a baseline, not just a character-limit pass. Ask for a paste
 only if a connection/browse genuinely fails, and mark the output unverified.

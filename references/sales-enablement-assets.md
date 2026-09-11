@@ -55,7 +55,7 @@ Sales case studies differ from marketing case studies: marketing tells a story, 
 | Role/title | Common titles and reporting structure |
 | Goals | What success looks like for them specifically |
 | Pains | What frustrates them day to day |
-| Top objections | The 3-5 objections this role raises most (cross-reference `objection-pre-handler` output) |
+| Top objections | The 3-5 objections this role raises most (cross-reference `objection-handling` output) |
 | Evaluation criteria | How they judge solutions |
 | Buying process role | Decision-maker, influencer, blocker, or champion |
 | Messaging angle | The single sentence that resonates most with this persona |

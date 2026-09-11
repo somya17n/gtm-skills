@@ -84,21 +84,24 @@ add a second ad set, you probably need a different angle instead.
 
 ## Context
 
-1. **Read `product-context`** for the target cost per result and what a customer is worth, which
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for the target cost per result and what a customer is worth, which
    together decide whether the proposed test budget can produce signal at all.
-2. **If `product-context` has not been set up**, ask inline for target cost per result, and say the
-   budget recommendation rests on an inline number.
-
 ## How to run
 
-**Step 0 — Ask for real data before anything else.** Open by asking the user how they will
+**Step 0: Ask for real data before anything else.** Open by asking the user how they will
 connect their real account, and do not build or analyse on hypothetical or hand-typed numbers.
 Offer all three, by name:
 
-- **Connect an MCP** — a connected ads account (read access for audits, read+write for a build), or
+- **Connect an MCP**: a connected ads account (read access for audits, read+write for a build), or
   the Intempt MCP for customer/conversion/revenue data.
-- **Share a CSV / export** — a Meta Ads Manager export (and, where relevant, a CRM/store export).
-- **Paste the real figures** — the actual numbers for the campaigns in scope.
+- **Share a CSV / export**: a Meta Ads Manager export (and, where relevant, a CRM/store export).
+- **Paste the real figures**: the actual numbers for the campaigns in scope.
 
 Only continue once a real data source is established. If the user has none to hand, say plainly that
 the output is illustrative and unverified, and mark it as such throughout.

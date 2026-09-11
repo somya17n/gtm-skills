@@ -17,7 +17,7 @@ One file per concern, in `.agents/`, append-only, human-readable markdown.
 |---|---|---|
 | `.agents/store-loop-ledger.md` | `automation-ledger` | Loop runs, flags, changes, dismissals, verdicts |
 | `.agents/gtm-run-state.md` | Whichever skill writes first | Snapshots for trend-bearing skills: pipeline scores, lifecycle stage per account, margin periods, segment memberships |
-| `.agents/product-context.md` | `product-context` | Who the business is. Changes rarely. **Not run state.** |
+| `.agents/product-context.md` | Whichever skill runs first | Who the business is. Changes rarely. **Not run state.** |
 
 Keep the distinction: `product-context.md` is identity, `gtm-run-state.md` is history. Mixing them
 means a positioning change and a weekly score update land in the same file with the same authority.

@@ -1,6 +1,6 @@
 ---
 name: brand-kit
-description: "Reads a public website into a working brand kit, the offer and the proof and the voice and the colour and type, so ads can be written and designed without anyone writing a creative brief first. Use before building any creative, or when ads keep coming out looking like they belong to nobody. Boundary: `tone-of-voice` scores an existing body of writing across six dimensions from samples you supply; this extracts a whole kit from a live site in one pass, and writes nothing back to `product-context`."
+description: "Reads a public website into a working brand kit, the offer and the proof and the voice and the colour and type, so ads can be written and designed without anyone writing a creative brief first. Use before building any creative, or when ads keep coming out looking like they belong to nobody. Boundary: `tone-of-voice` scores an existing body of writing across six dimensions from samples you supply; this extracts a whole kit from a live site in one pass, and writes nothing back to `.agents/product-context.md`."
 ---
 # The Brand Kit Reader
 
@@ -82,9 +82,9 @@ the urge to write the brand a better version of itself.
 
 ## Context
 
-1. **Read `product-context`** if it exists, to compare what the site says against what the business
+1. **Read `.agents/product-context.md`** if it exists, to compare what the site says against what the business
    has already recorded about itself. A disagreement between them is a finding worth reporting.
-2. **This skill writes nothing back to `product-context`.** It produces a kit for review; deciding
+2. **This skill writes nothing back to `.agents/product-context.md`.** It produces a kit for review; deciding
    what becomes canonical is the user's call, not this skill's.
 
 ## How to run
@@ -133,7 +133,7 @@ proceeding as though it were answered.
    and how imagery is treated - photography style, illustration, product-on-white, lifestyle.
 7. **List what the site is silent about that ads will need**: price, shipping, guarantee, returns,
    delivery time, eligibility. These stay as open questions.
-8. **Report any conflict** between the site and `product-context`, without deciding which is right.
+8. **Report any conflict** between the site and `.agents/product-context.md`, without deciding which is right.
 9. **List the Facebook Pages** the ads could run from, where a connector makes that possible, so the
    wrong page is caught before spend starts.
 
@@ -158,7 +158,7 @@ proceeding as though it were answered.
 
 **Open questions:** what ads will need that the site never says. Questions, not guesses.
 
-**Conflicts with `product-context`:** where the site and the stored context disagree, both stated.
+**Conflicts with `.agents/product-context.md`:** where the site and the stored context disagree, both stated.
 
 **Pages to run from:** the Facebook Pages available, for confirmation, or a note that no connector was
 available.
@@ -170,8 +170,8 @@ available.
 - Never answer an open question with a plausible guess - the gaps list is the point.
 - Never write the brand a better version of itself. This is extraction, not improvement.
 - Never build a kit without saying which pages it came from and when.
-- Never resolve a conflict with `product-context` unilaterally - report both.
-- Never write back to `product-context`.
+- Never resolve a conflict with `.agents/product-context.md` unilaterally - report both.
+- Never write back to `.agents/product-context.md`.
 - Never write a kit from a fetch that clearly failed or returned near-empty content. Say the fetch
   failed and stop.
 - Never carry a possibly-incentivized testimonial into an ad recommendation without flagging it for
@@ -200,7 +200,7 @@ Before returning the output, verify:
 - Was any claim rounded, improved, or converted from sentiment into a number? If so, restore it.
 - Are the open questions phrased as questions, with none quietly answered?
 - Does the voice section carry three genuinely verbatim phrases, not paraphrases?
-- Are conflicts with `product-context` reported without being resolved?
+- Are conflicts with `.agents/product-context.md` reported without being resolved?
 - Was any personal data from a team or testimonial page carried through unnecessarily?
 
 If any check fails, correct it before returning the output.

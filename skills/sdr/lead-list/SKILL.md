@@ -34,7 +34,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`. If missing, **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
 and run another skill first.** Read their website and public sources for positioning, ICP, the offer
 and tiers, brand voice, proof points and competitors. Ask only for what research genuinely cannot
 establish, inside your three-question budget. Then write what you learned to
@@ -56,11 +56,11 @@ Ask the user for:
 2. Build the candidate pool. **Actively build it by scraping public platforms - do not stop at a WebSearch summary or a request for the user to paste everything.**
    - **From a pasted export**: parse it into candidates, keep the source tool named. One input, not the method.
    - **From public-platform scraping**: route each sourcing need to the scraper built for it, then qualify what comes back. Use the local scraper suite:
-     - **Local or place-based ICP** -> `github-leads-google-maps-scraper` (name, site, phone, category, rating, review count).
-     - **A hiring buying-trigger** -> `github-leads-linkedin-jobs-scraper` (job postings by query/location; an open role is a dated trigger). Postings are public - this is not logged-in profile automation.
-     - **Demand and pain in the buyer's own words** -> `github-leads-praw` (Reddit), `github-leads-snscrape` (X/Twitter/Reddit/Mastodon, no login), `customer-research` and review sites via `github-leads-scrapy` (G2/Capterra/Trustpilot). This is where the *signal* comes from, not just the firmographic.
-     - **A directory, review site, catalog, or list page** -> `github-leads-scrapy` (write a spider), or `github-leads-puppeteer` for JS-heavy pages.
-     - **Creators, channels, video/social demand** -> `github-leads-yt-dlp` (YouTube search, metadata, transcripts), `github-leads-instaloader` (Instagram, public).
+     - **Local or place-based ICP** -> github-leads-google-maps-scraper (name, site, phone, category, rating, review count).
+     - **A hiring buying-trigger** -> github-leads-linkedin-jobs-scraper (job postings by query/location; an open role is a dated trigger). Postings are public - this is not logged-in profile automation.
+     - **Demand and pain in the buyer's own words** -> github-leads-praw (Reddit), github-leads-snscrape (X/Twitter/Reddit/Mastodon, no login), customer-research and review sites via github-leads-scrapy (G2/Capterra/Trustpilot). This is where the *signal* comes from, not just the firmographic.
+     - **A directory, review site, catalog, or list page** -> github-leads-scrapy (write a spider), or github-leads-puppeteer for JS-heavy pages.
+     - **Creators, channels, video/social demand** -> github-leads-yt-dlp (YouTube search, metadata, transcripts), github-leads-instaloader (Instagram, public).
      Every scraped candidate keeps a real, checkable source URL and a fetch date. No candidate without one.
    - **Actually build a list, do not return a plan.** A run that stops at a process, a framework, or "here is what to paste" has not done the job. Build a real starter list from public scraping first - at minimum a basic first batch - then name what still needs a paste to finish, rather than deferring the whole build to the user.
 3. Qualify each candidate against the ICP checklist and assign confidence:

@@ -78,18 +78,21 @@ costume.
 
 ## Context
 
-1. **Read `product-context`** for the ICP and the offer, so an audience proposal can be judged against
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for the ICP and the offer, so an audience proposal can be judged against
    who the business actually sells to.
-2. **If `product-context` has not been set up**, ask inline for the offer and the intended buyer, and
-   say the recommendation rests on inline inputs.
-
 ## How to run
 
-**Step 0 — Actively acquire the real data; don't punt to pastes.** Two parts: (1) ask the user to
+**Step 0: Actively acquire the real data; don't punt to pastes.** Two parts: (1) ask the user to
 **connect the Meta account (MCP) or the Intempt MCP** so you can pull *real* audience-size estimates
-and current ad-set targeting — don't work from recalled numbers, and never invent a size the platform
+and current ad-set targeting, don't work from recalled numbers, and never invent a size the platform
 didn't return; (2) **check the live current state of Meta targeting yourself** (browse Meta's current
-Advantage+/targeting documentation) rather than trusting a two-year-old list of options — targeting
+Advantage+/targeting documentation) rather than trusting a two-year-old list of options, targeting
 options are retired on hard dates and a stale list wastes a launch. Only ask the user to paste as a
 last resort if a connection/browse genuinely fails; then mark the output illustrative and unverified.
 

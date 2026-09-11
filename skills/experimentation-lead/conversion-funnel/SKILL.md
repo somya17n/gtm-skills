@@ -59,12 +59,17 @@ plus safety, runs on your output in addition to this skill's own.
 
 ## Context
 
-1. Check for `.agents/product-context.md`; if missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed. The parts this skill needs most are the brand voice summary, ICP, and primary color.
 2. Read `references/funnel-benchmarks.md` for industry conversion benchmarks and diagnostic frameworks.
 
 ## Inputs
 
-**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+**Step 0: Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
 
 3. Ask: "Describe your funnel: stages, current conversion rates, and volume at each stage." If the user does not have an existing funnel, ask: "Describe the funnel you want to design and the business model it serves."
 4. Ask: "What is the bottom-of-funnel target?" (e.g., 100 customers/month, $50K MRR, 500 activations/week)

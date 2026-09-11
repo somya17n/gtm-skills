@@ -21,7 +21,7 @@ read `.agents/product-context.md`, fetch the site or page they named, compute it
 already gave, or look up the platform default. Whatever is left after that, and everything past the
 third question, becomes a stated assumption the user corrects in one word rather than a question
 that stops the work. Number them, and say what you will assume if one goes unanswered.
-This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **No context file, no problem. Build it, do not bounce the user.** If `.agents/product-context.md`
 does not exist, research the company yourself: their site for positioning, offer, tiers, voice and
@@ -38,8 +38,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > - **Cut the AI tells:** no "unlock", "supercharge", "elevate", "seamless", "leverage", "robust", "streamline", "in today's fast-paced world", "we are excited to", "dive in", "game-changer", "at the end of the day", or "it is not just X, it is Y". No em dashes. No exclamation points unless the voice genuinely uses them.
 > - **Vary the rhythm:** mix short and long sentences. A paragraph where every sentence runs the same length reads as generated. One idea per sentence, plain words a 7th grader would use.
 > - **Say it the way you would to a coworker:** contractions are fine, cut throat-clearing openers ("I wanted to reach out", "I hope this finds you well") and hedging. Specific beats clever.
-> - Keep the banned-word list from `product-context` binding, and never soften a missing number into an adjective.
-> If a `humanizer` or `no-ai-slop` pass is available in this run, put the copy through it as the final step; otherwise apply this pass by hand. Copy that has not been through it is not finished.
+> - Keep the banned-word list from `.agents/product-context.md` binding, and never soften a missing number into an adjective.
+> If a humanizer or no-ai-slop pass is available in this run, put the copy through it as the final step; otherwise apply this pass by hand. Copy that has not been through it is not finished.
 
 ## Constraints
 

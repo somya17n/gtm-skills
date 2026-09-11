@@ -51,7 +51,12 @@ plus safety, runs on your output in addition to this skill's own.
 
 ## Context
 
-1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed. The parts this skill needs most are the brand voice summary, ICP, and primary color.
 2. Read `references/dashboard-templates.md` for template patterns and metric catalog.
 2a. Read `references/chart-form-and-accessibility.md` before assigning any visualisation type or
     laying out a row. It sets how the form is chosen from the question rather than picked off a
@@ -63,7 +68,7 @@ plus safety, runs on your output in addition to this skill's own.
 
 ## Inputs
 
-**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real metrics and data sources, and do not design against hypothetical or hand-typed numbers. Offer all three by name: **connect an MCP** (the Intempt MCP for tracked events / metrics, or a connected source), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+**Step 0: Ask for real data before anything else.** Open by asking the user how they will provide their real metrics and data sources, and do not design against hypothetical or hand-typed numbers. Offer all three by name: **connect an MCP** (the Intempt MCP for tracked events / metrics, or a connected source), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
 
 3. Ask: "What's this dashboard for?" Get the team and purpose: marketing performance, sales pipeline, executive overview, product usage, customer success, or revenue ops.
 4. Ask: "Who will use it, and what decisions will it inform?"

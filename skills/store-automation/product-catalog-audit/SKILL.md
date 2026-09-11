@@ -1,6 +1,6 @@
 ---
 name: product-catalog-audit
-description: "Audits a whole product catalog export for two things at once: content completeness (missing attributes, thin or empty descriptions, duplicate copy, image gaps) and feed / channel deliverability (disapproval-risk attributes, feed-versus-live-page price and availability mismatches, category mapping, variant-ID confusion), ranked by revenue rather than row count. Runs in either of two modes: a one-time FULL audit of the whole catalogue, or a recurring DELTA watch that reports only what broke since the last run. Use when the catalog has too many SKUs to review page by page, before a marketplace or feed push, when only the best sellers seem to have real content, or on a daily/every-other-day cadence to catch a fresh disapproval before it is buried under a standing backlog. Boundary: this is the single catalog-health skill and it absorbs the former standalone feed watch; there is no separate `shopping-feed` skill."
+description: "Audits a whole product catalog export for two things at once: content completeness (missing attributes, thin or empty descriptions, duplicate copy, image gaps) and feed / channel deliverability (disapproval-risk attributes, feed-versus-live-page price and availability mismatches, category mapping, variant-ID confusion), ranked by revenue rather than row count. Runs in either of two modes: a one-time FULL audit of the whole catalogue, or a recurring DELTA watch that reports only what broke since the last run. Use when the catalog has too many SKUs to review page by page, before a marketplace or feed push, when only the best sellers seem to have real content, or on a daily/every-other-day cadence to catch a fresh disapproval before it is buried under a standing backlog. Boundary: this is the single catalog-health skill and it absorbs the former standalone feed watch; there is no separate shopping-feed skill."
 ---
 # The Catalog Audit
 
@@ -28,7 +28,7 @@ read `.agents/product-context.md`, fetch the site or page they named, compute it
 already gave, or look up the platform default. Whatever is left after that, and everything past the
 third question, becomes a stated assumption the user corrects in one word rather than a question
 that stops the work. Number them, and say what you will assume if one goes unanswered.
-This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **No context file, no problem. Build it, do not bounce the user.** If `.agents/product-context.md`
 does not exist, research the company yourself: their site for positioning, offer, tiers, voice and
@@ -58,7 +58,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## How to run
 
-**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+**Step 0: Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
 
 Ask the user for these inputs. If any are missing, ask before analyzing.
 

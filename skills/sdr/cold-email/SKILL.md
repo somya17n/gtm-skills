@@ -31,8 +31,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > - **Cut the AI tells:** no "unlock", "supercharge", "elevate", "seamless", "leverage", "robust", "streamline", "in today's fast-paced world", "we are excited to", "dive in", "game-changer", "at the end of the day", or "it is not just X, it is Y". No em dashes. No exclamation points unless the voice genuinely uses them.
 > - **Vary the rhythm:** mix short and long sentences. A paragraph where every sentence runs the same length reads as generated. One idea per sentence, plain words a 7th grader would use.
 > - **Say it the way you would to a coworker:** contractions are fine, cut throat-clearing openers ("I wanted to reach out", "I hope this finds you well") and hedging. Specific beats clever.
-> - Keep the banned-word list from `product-context` binding, and never soften a missing number into an adjective.
-> If a `humanizer` or `no-ai-slop` pass is available in this run, put the copy through it as the final step; otherwise apply this pass by hand. Copy that has not been through it is not finished.
+> - Keep the banned-word list from `.agents/product-context.md` binding, and never soften a missing number into an adjective.
+> If a humanizer or no-ai-slop pass is available in this run, put the copy through it as the final step; otherwise apply this pass by hand. Copy that has not been through it is not finished.
 
 ## Constraints
 
@@ -40,7 +40,7 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 
 ## Context
 
-1. Check for `.agents/product-context.md`. If missing, **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
 and run another skill first.** Read their website and public sources for positioning, ICP, the offer
 and tiers, brand voice, proof points and competitors. Ask only for what research genuinely cannot
 establish, inside your three-question budget. Then write what you learned to

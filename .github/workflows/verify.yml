@@ -1,8 +1,8 @@
 name: verify
 
-# The three suites this repo ships were runnable but nothing ran them. An
-# unrun gate teaches the same lesson as an unsatisfiable one: that gates are
-# optional. All three exit non-zero on failure, so they gate directly.
+# The suites this repo ships were runnable but nothing ran them. An unrun gate
+# teaches the same lesson as an unsatisfiable one: that gates are optional.
+# Every one of them exits non-zero on failure, so they gate directly.
 
 on:
   push:
@@ -24,6 +24,16 @@ jobs:
 
       - name: Arithmetic guards still present (10 live fixtures)
         run: python scripts/regression-tests.py
+
+      # qa-skills.py shipped runnable and exits 1 on a finding, but was never a step here, so
+      # "four checks green" only ever meant four green on someone's laptop. It is a gate now.
+      - name: Behavioural QA (first-run defects, every skill)
+        run: python scripts/qa-skills.py
+
+      # A find-and-replace that lands mid-sentence breaks no link and deletes no file, so every
+      # other check passes and the damage ships. 16 files shipped that way in one commit.
+      - name: No splice damage from a find-and-replace
+        run: python scripts/check-splice-damage.py
 
       - name: References resolve, match root, and are cited
         run: bash scripts/check-references.sh

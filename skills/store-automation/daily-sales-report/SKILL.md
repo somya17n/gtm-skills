@@ -19,7 +19,7 @@ read `.agents/product-context.md`, fetch the site or page they named, compute it
 already gave, or look up the platform default. Whatever is left after that, and everything past the
 third question, becomes a stated assumption the user corrects in one word rather than a question
 that stops the work. Number them, and say what you will assume if one goes unanswered.
-This skill is standalone by design: ask inline for what it needs rather than reading a context file.
+Check `.agents/product-context.md` first so you never ask for something already recorded there.
 
 **No context file, no problem. Build it, do not bounce the user.** If `.agents/product-context.md`
 does not exist, research the company yourself: their site for positioning, offer, tiers, voice and
@@ -60,7 +60,7 @@ plus safety, runs on your output in addition to this skill's own.
 
 ## How to run
 
-**Step 0 — Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
+**Step 0: Ask for real data before anything else.** Open by asking the user how they will provide their real numbers/data, and do not analyse hypothetical or hand-typed data. Offer all three by name: **connect an MCP** (a connected account, or the Intempt MCP for customer / conversion / revenue / order data), **share a CSV / export**, or **paste the real figures**. Continue only once a real source is established; otherwise mark the output illustrative and unverified throughout.
 
 **The list below is longer than three, and three is the cap.** Most of it you can get without
 asking: read the context file, fetch the URL they named, compute it, or look up the platform
@@ -81,7 +81,7 @@ State the rest as assumptions, marked as assumptions, and let the user correct t
 3. **On the first run, establish the baseline and flag nothing.** State plainly that run one is a baseline run. Without this, every metric reads as a deviation.
 4. **Compute the trailing mean and deviation per metric** over the window, using the stated method from `anomaly-detection` rather than a gut read. Metrics for an ecommerce store: order count, gross revenue, AOV, refund rate, spend, and blended ROAS.
 
-   **This loop is not store-only — the machinery is metric-agnostic.** For a SaaS platform, run the exact same band-not-cliff, both-conditions, silent-failure, dollars-at-stake logic on the SaaS metric set instead: signups, trial-to-paid conversion, activations, MRR (new / expansion / contraction / churned), net revenue retention, and blended CAC/payback. Ask which the business is (store or SaaS) and pick the metric set accordingly; the method does not change.
+   **This loop is not store-only: the machinery is metric-agnostic.** For a SaaS platform, run the exact same band-not-cliff, both-conditions, silent-failure, dollars-at-stake logic on the SaaS metric set instead: signups, trial-to-paid conversion, activations, MRR (new / expansion / contraction / churned), net revenue retention, and blended CAC/payback. Ask which the business is (store or SaaS) and pick the metric set accordingly; the method does not change.
 5. **Evaluate the gate per metric**: flagged if the value sits outside the confirmed deviation band AND the volume clears the minimum. Both conditions, always. Volume-only or deviation-only flagging is what makes daily reports noisy enough to be ignored.
 6. **Check the three failure shapes a percentage move hides**, each of which can look normal in the aggregate:
    - Spend continued while revenue for that product went to zero.

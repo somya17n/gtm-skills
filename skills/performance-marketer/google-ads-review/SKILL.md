@@ -91,14 +91,17 @@ delay has passed will be wrong in a predictable direction roughly as often as it
 
 ## Context
 
-1. **Read `product-context`** for the target cost per acquisition or return, and what a customer is
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for the target cost per acquisition or return, and what a customer is
    worth. Without a target, this review describes direction and refuses to call anything healthy.
-2. **If `product-context` has not been set up**, ask inline for the target, and say the verdicts rest
-   on an inline number.
-
 ## How to run
 
-**Step 0 — Ask for real data before anything else.** Open by asking the user how they will connect
+**Step 0: Ask for real data before anything else.** Open by asking the user how they will connect
 their real account, and do not review hypothetical or hand-typed data. Offer all three by name:
 **connect an MCP** (Google Ads read access, or the Intempt MCP for independent conversion/revenue
 data), **share a CSV / export** (two complete equal periods in the account timezone), or **paste the

@@ -74,7 +74,12 @@ plus safety, runs on your output in addition to this skill's own.
 
 ## Context
 
-1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed. The parts this skill needs most are the brand voice summary, ICP, and primary color.
 2. Read `references/landing-page-patterns.md` for section patterns, copy frameworks, and conversion best practices.
 
 > **Benchmark and form discipline.** Read the **Conversion Benchmarks**, **Form Length** and **Social

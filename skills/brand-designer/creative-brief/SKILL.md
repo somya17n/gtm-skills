@@ -64,7 +64,12 @@ plus safety, runs on your output in addition to this skill's own.
 >   the CTR trend, because both causes produce the same trend.
 
 ## Context
-1. Check for `.agents/product-context.md`. If missing, ask the user to run `/gtm:product-context` first. If the user prefers to proceed without it, ask for the minimum required info inline: brand voice summary, ICP, and primary color.
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
 2. Read `.agents/product-context.md` for brand voice and design preferences.
 
 ## Inputs
@@ -138,9 +143,9 @@ For each angle:
 skill in the brand-designer role.** After the brief is approved, do not stop at the spec: check your
 own toolset for an image-generation capability (for example, a connected fal.ai, Recraft, or Konvert
 tool). Where one exists, generate the actual visual for each recommended angle, using the brand's real
-colors, fonts, and the angle's own headline and visual direction, exactly the way `ad-creative`
+colors, fonts, and the angle's own headline and visual direction, exactly the way ad-creative
 already does for paid social. Show the generated set for selection before anything is treated as
-final, the same nothing-ships-without-a-human-pick rule `ad-design` and `ad-creative` both use. Where
+final, the same nothing-ships-without-a-human-pick rule `ad-design` and ad-creative both use. Where
 no image-generation tool is available in this run, say so plainly and hand back the brief alone, and
 say "Create this in Studio" as before, rather than silently reverting to spec-only as if that were the
 whole job.

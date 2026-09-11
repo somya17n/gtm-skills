@@ -41,8 +41,8 @@ em dashes. Its nine-question check, quality plus safety, runs on your output in 
 > - **Cut the AI tells:** no "unlock", "supercharge", "elevate", "seamless", "leverage", "robust", "streamline", "in today's fast-paced world", "we are excited to", "dive in", "game-changer", "at the end of the day", or "it is not just X, it is Y". No em dashes. No exclamation points unless the voice genuinely uses them.
 > - **Vary the rhythm:** mix short and long sentences. A paragraph where every sentence runs the same length reads as generated. One idea per sentence, plain words a 7th grader would use.
 > - **Say it the way you would to a coworker:** contractions are fine, cut throat-clearing openers ("I wanted to reach out", "I hope this finds you well") and hedging. Specific beats clever.
-> - Keep the banned-word list from `product-context` binding, and never soften a missing number into an adjective.
-> If a `humanizer` or `no-ai-slop` pass is available in this run, put the copy through it as the final step; otherwise apply this pass by hand. Copy that has not been through it is not finished.
+> - Keep the banned-word list from `.agents/product-context.md` binding, and never soften a missing number into an adjective.
+> If a humanizer or no-ai-slop pass is available in this run, put the copy through it as the final step; otherwise apply this pass by hand. Copy that has not been through it is not finished.
 
 ## Constraints
 
@@ -122,14 +122,17 @@ and say what happens if it fails.
 
 ## Context
 
-1. **Read `product-context`** for what the offer genuinely does, its mechanism, and the proof
+1. **If `.agents/product-context.md` does not exist, build it yourself. Do not tell the user to go
+   and run another skill first.** Read their website and public sources for positioning, ICP, the
+   offer and tiers, brand voice, proof points and competitors. Ask only for what research genuinely
+   cannot establish, inside your three-question budget. Then write what you learned to
+   `.agents/product-context.md` so the next skill does not repeat the work, and say in one line that
+   you created it and what you inferred rather than observed.
+2. **Read `.agents/product-context.md`** for what the offer genuinely does, its mechanism, and the proof
    available - the three things that decide whether a sharpened line is true.
-2. **If `product-context` has not been set up**, ask inline for the offer and its mechanism, and say
-   the believability assessment rests on inline inputs.
-
 ## How to run
 
-**Step 0 — Get the real buyer voice, don't invent it.** Phase 1 below is the intake: actively go and
+**Step 0: Get the real buyer voice, don't invent it.** Phase 1 below is the intake: actively go and
 gather real verbatim buyer language yourself (browse their + competitors' reviews, Reddit/forum
 threads, Meta Ad Library ad comments; for G2's 403, ask the user to paste/export). Where the user has
 support tickets, sales-call notes, or a connected source, ask them to **share it / connect the MCP**.
